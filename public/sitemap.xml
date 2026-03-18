@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
+  <!-- Páginas principales -->
+  <url><loc>https://ingenieriabernal.co/</loc><changefreq>weekly</changefreq><priority>1.0</priority></url>
+  <url><loc>https://ingenieriabernal.co/servicios</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://ingenieriabernal.co/proyectos</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://ingenieriabernal.co/equipo</loc><changefreq>monthly</changefreq><priority>0.85</priority></url>
+  <url><loc>https://ingenieriabernal.co/sobre-mi</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://ingenieriabernal.co/credenciales</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://ingenieriabernal.co/blog</loc><changefreq>weekly</changefreq><priority>0.85</priority></url>
+  <url><loc>https://ingenieriabernal.co/contacto</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://ingenieriabernal.co/cobertura-nacional</loc><changefreq>monthly</changefreq><priority>0.85</priority></url>
+
+  <!-- Base: Eje Cafetero -->
+  <url><loc>https://ingenieriabernal.co/manizales</loc><changefreq>monthly</changefreq><priority>1.0</priority></url>
+  <url><loc>https://ingenieriabernal.co/eje-cafetero</loc><changefreq>monthly</changefreq><priority>0.95</priority></url>
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
+  <!-- Páginas principales -->
+  <url><loc>https://ingenieriabernal.co/</loc><changefreq>weekly</changefreq><priority>1.0</priority></url>
+  <url><loc>https://ingenieriabernal.co/servicios</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://ingenieriabernal.co/proyectos</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://ingenieriabernal.co/equipo</loc><changefreq>monthly</changefreq><priority>0.85</priority></url>
+  <url><loc>https://ingenieriabernal.co/sobre-mi</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://ingenieriabernal.co/credenciales</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://ingenieriabernal.co/blog</loc><changefreq>weekly</changefreq><priority>0.85</priority></url>
+  <url><loc>https://ingenieriabernal.co/contacto</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://ingenieriabernal.co/cobertura-nacional</loc><changefreq>monthly</changefreq><priority>0.85</priority></url>
+
+  <!-- Base: Eje Cafetero -->
+  <url><loc>https://ingenieriabernal.co/manizales</loc><changefreq>monthly</changefreq><priority>1.0</priority></url>
+  <url><loc>https://ingenieriabernal.co/eje-cafetero</loc><changefreq>monthly</changefreq><priority>0.95</priority></url>
+  <url><loc>https://ingenieriabernal.co/palestina-aerocafe</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>
+
+  <!-- Zona Viterbo — clientela directa -->
+  <url><loc>https://ingenieriabernal.co/viterbo-occidente-caldas</loc><changefreq>monthly</changefreq><priority>0.95</priority></url>
+  <url><loc>https://ingenieriabernal.co/alto-occidente-caldas</loc><changefreq>monthly</changefreq><priority>0.85</priority></url>
+
+  <!-- Regional Caldas / Tolima -->
+  <url><loc>https://ingenieriabernal.co/magdalena-medio</loc><changefreq>monthly</changefreq><priority>0.85</priority></url>
+  <url><loc>https://ingenieriabernal.co/norte-tolima</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://ingenieriabernal.co/cerritos-norte-valle</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>
+
+  <!-- +7 zonas alto desarrollo / cero SEO -->
+  <url><loc>https://ingenieriabernal.co/rionegro-oriente-antioquia</loc><changefreq>monthly</changefreq><priority>0.88</priority></url>
+  <url><loc>https://ingenieriabernal.co/sabana-occidente</loc><changefreq>monthly</changefreq><priority>0.88</priority></url>
+  <url><loc>https://ingenieriabernal.co/sabana-norte</loc><changefreq>monthly</changefreq><priority>0.88</priority></url>
+  <url><loc>https://ingenieriabernal.co/boyaca-corredor</loc><changefreq>monthly</changefreq><priority>0.85</priority></url>
+  <url><loc>https://ingenieriabernal.co/huila-neiva</loc><changefreq>monthly</changefreq><priority>0.85</priority></url>
+  <url><loc>https://ingenieriabernal.co/bucaramanga-area</loc><changefreq>monthly</changefreq><priority>0.88</priority></url>
+  <url><loc>https://ingenieriabernal.co/santander-sur</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+
+  <!-- Cobertura nacional amplia -->
+  <url><loc>https://ingenieriabernal.co/antioquia-suroeste</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://ingenieriabernal.co/costa-caribe</loc><changefreq>monthly</changefreq><priority>0.78</priority></url>
+  <url><loc>https://ingenieriabernal.co/llanos-orinoquia</loc><changefreq>monthly</changefreq><priority>0.78</priority></url>
+
+  <!-- Blog articles -->
+  <url><loc>https://ingenieriabernal.co/blog/costos-obras-hidraulicas-colombia-2026</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://ingenieriabernal.co/blog/cambios-normativos-ingenieria-hidraulica-2026</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://ingenieriabernal.co/blog/hec-ras-2d-colombia</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://ingenieriabernal.co/blog/proyectos-regalias-agua-saneamiento</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://ingenieriabernal.co/blog/nsr-10-sistemas-contra-incendios</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+</urlset>  <url><loc>https://ingenieriabernal.co/palestina-aerocafe</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>
+
+  <!-- Zona Viterbo — clientela directa -->
+  <url><loc>https://ingenieriabernal.co/viterbo-occidente-caldas</loc><changefreq>monthly</changefreq><priority>0.95</priority></url>
+  <url><loc>https://ingenieriabernal.co/alto-occidente-caldas</loc><changefreq>monthly</changefreq><priority>0.85</priority></url>
+
+  <!-- Regional Caldas / Tolima -->
+  <url><loc>https://ingenieriabernal.co/magdalena-medio</loc><changefreq>monthly</changefreq><priority>0.85</priority></url>
+  <url><loc>https://ingenieriabernal.co/norte-tolima</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://ingenieriabernal.co/cerritos-norte-valle</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>
+
+  <!-- +7 zonas alto desarrollo / cero SEO -->
+  <url><loc>https://ingenieriabernal.co/rionegro-oriente-antioquia</loc><changefreq>monthly</changefreq><priority>0.88</priority></url>
+  <url><loc>https://ingenieriabernal.co/sabana-occidente</loc><changefreq>monthly</changefreq><priority>0.88</priority></url>
+  <url><loc>https://ingenieriabernal.co/sabana-norte</loc><changefreq>monthly</changefreq><priority>0.88</priority></url>
+  <url><loc>https://ingenieriabernal.co/boyaca-corredor</loc><changefreq>monthly</changefreq><priority>0.85</priority></url>
+  <url><loc>https://ingenieriabernal.co/huila-neiva</loc><changefreq>monthly</changefreq><priority>0.85</priority></url>
+  <url><loc>https://ingenieriabernal.co/bucaramanga-area</loc><changefreq>monthly</changefreq><priority>0.88</priority></url>
+  <url><loc>https://ingenieriabernal.co/santander-sur</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+
+  <!-- Cobertura nacional amplia -->
+  <url><loc>https://ingenieriabernal.co/antioquia-suroeste</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://ingenieriabernal.co/costa-caribe</loc><changefreq>monthly</changefreq><priority>0.78</priority></url>
+  <url><loc>https://ingenieriabernal.co/llanos-orinoquia</loc><changefreq>monthly</changefreq><priority>0.78</priority></url>
+
+  <!-- Blog articles -->
+  <url><loc>https://ingenieriabernal.co/blog/costos-obras-hidraulicas-colombia-2026</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://ingenieriabernal.co/blog/cambios-normativos-ingenieria-hidraulica-2026</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://ingenieriabernal.co/blog/hec-ras-2d-colombia</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://ingenieriabernal.co/blog/proyectos-regalias-agua-saneamiento</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://ingenieriabernal.co/blog/nsr-10-sistemas-contra-incendios</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+</urlset>
