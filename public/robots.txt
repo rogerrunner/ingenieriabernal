@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://ingenieriabernal.co/sitemap.xml
