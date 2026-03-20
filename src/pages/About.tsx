@@ -1,7 +1,7 @@
 import { useEffect } from 'react'
 import { BlueprintBg, Tag, ThinLine, SectionLabel, Btn, Section, useInView } from '../components/ui'
 
-const WA = '573017326991'
+const WA = '573024778910'
 
 const TIMELINE = [
   { year: '2025', title: 'Ing. Residente — Palacio de Justicia La Dorada', company: 'VHZ Ingeniería S.A.S. — Rama Judicial (CE-39-2025)', desc: 'Sep–Nov 2025. Modernización red contra incendios NSR-10.' },
