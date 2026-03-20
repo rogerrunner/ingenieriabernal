@@ -2,7 +2,7 @@ import { useEffect } from 'react'
 import { useRoute } from 'wouter'
 import { BlueprintBg, Tag, ThinLine, SectionLabel, Btn, Section } from '../components/ui'
 
-const WA = '573017326991'
+const WA = '573024778910'
 
 // ─── ARTICLE CONTENT ────────────────────────────────────────────────────────
 const ARTICLES: Record<string, {
