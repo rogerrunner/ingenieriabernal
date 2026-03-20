@@ -149,7 +149,7 @@ export default function Services() {
             BIC — Bernal Ingeniería Consultores ofrece nueve líneas de servicio bajo una sola dirección técnica. Hidráulica, topobatimetría, PTAP/PTAR, gestión del riesgo, formulación de regalías, ambiental y más — sin que el cliente tenga que coordinar múltiples firmas.
           </p>
           <div style={{ display: 'flex', gap: 14, flexWrap: 'wrap' }}>
-            <Btn href="https://wa.me/573017326991?text=Hola%2C%20quiero%20consultar%20sobre%20los%20servicios%20de%20BIC">📱 Consultar servicio específico</Btn>
+            <Btn href="https://wa.me/573024778910?text=Hola%2C%20quiero%20consultar%20sobre%20los%20servicios%20de%20BIC">📱 Consultar servicio específico</Btn>
             <Btn href="/equipo" variant="outline" dark>Ver equipo →</Btn>
           </div>
         </div>
@@ -215,7 +215,7 @@ export default function Services() {
                 ))}
               </div>
 
-              <Btn href={`https://wa.me/573017326991?text=Hola%2C%20necesito%20información%20sobre%20${encodeURIComponent(svc.title)}%20con%20BIC`} style={{ fontSize: 13 }}>
+              <Btn href={`https://wa.me/573024778910?text=Hola%2C%20necesito%20información%20sobre%20${encodeURIComponent(svc.title)}%20con%20BIC`} style={{ fontSize: 13 }}>
                 📱 Cotizar {svc.title} →
               </Btn>
             </div>
