@@ -11,7 +11,7 @@ const STATS = [
 ]
 
 const DIFFERENTIATORS = [
-  { icon: '🔥', title: 'CI NSR-10 Exclusivo', desc: 'Diseño de sistemas contra incendios — rociadores, red húmeda/seca, detección. Servicio que Ingehys no ofrece.' },
+  { icon: '🔥', title: 'CI NSR-10 Exclusivo', desc: 'Diseño de sistemas contra incendios — rociadores, red húmeda/seca, detección. Especialidad exclusiva BIC en el Eje Cafetero.' },
   { icon: '📋', title: 'Regalías MGA-Web', desc: 'Formulación de proyectos de agua y saneamiento para el SGR. Contratos ejecutados en Caldas y Boyacá.' },
   { icon: '🌎', title: 'Internacional / BID-CAF', desc: 'Proyectos en Ecuador y México con Apostille. TOEFL 98/120. Acceso a licitaciones multilaterales.' },
 ]
