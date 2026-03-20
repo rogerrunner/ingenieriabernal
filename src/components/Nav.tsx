@@ -12,7 +12,7 @@ const LINKS = [
   { label: 'Contacto', path: '/contacto' },
 ]
 
-const WA = '573017326991'
+const WA = '573024778910'
 
 export default function Nav() {
   const [scrolled, setScrolled] = useState(false)
