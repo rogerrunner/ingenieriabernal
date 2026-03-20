@@ -51,9 +51,9 @@ export default function Footer() {
             <p style={{ color: 'rgba(255,255,255,0.45)', fontSize: 13, lineHeight: 1.7, marginBottom: 16 }}>
               Hidráulica, geotecnia, arquitectura, ambiental y estructural bajo una sola dirección técnica. Director: Rogerio Bernal Ríos — UNAL · COPNIA 17202-313228.
             </p>
-            <a href="https://wa.me/573017326991?text=Hola%2C%20me%20interesa%20una%20consultoría%20con%20BIC"
+            <a href="https://wa.me/573024778910?text=Hola%2C%20me%20interesa%20una%20consultoría%20con%20BIC"
               style={{ display: 'inline-flex', alignItems: 'center', gap: 8, background: '#17A2B8', color: '#fff', padding: '9px 18px', borderRadius: 2, fontSize: 13, fontWeight: 600, textDecoration: 'none', fontFamily: "'Montserrat', sans-serif" }}>
-              📱 +57 301 732 6991
+              📱 +57 302 477 8910
             </a>
           </div>
 
@@ -86,7 +86,7 @@ export default function Footer() {
             <h4 style={{ color: '#fff', fontFamily: "'Montserrat', sans-serif", fontWeight: 700, fontSize: 12, letterSpacing: '0.1em', textTransform: 'uppercase', marginBottom: 16 }}>Contacto</h4>
             <p style={{ ...lnk, cursor: 'default' }}>Calle 65A #23B-24<br />Manizales, Caldas · Colombia</p>
             <a href="mailto:rbernalr01@gmail.com" style={lnk}>rbernalr01@gmail.com</a>
-            <a href="https://wa.me/573017326991" style={lnk}>+57 301 732 6991</a>
+            <a href="https://wa.me/573024778910" style={lnk}>+57 301 732 6991</a>
             <p style={{ ...lnk, cursor: 'default', marginTop: 12 }}>Lun–Vie 8am–6pm<br />Sábados 9am–1pm</p>
             <div style={{ marginTop: 16 }}>
               {['UNAL Manizales', 'COPNIA', 'TOEFL 98'].map(b => (
