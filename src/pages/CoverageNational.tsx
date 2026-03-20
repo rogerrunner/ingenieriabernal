@@ -146,7 +146,7 @@ export default function CoverageNational() {
             Director: Rogerio Bernal Ríos · UNAL · COPNIA 17202-313228 · Experiencia en Colombia, Ecuador y México
           </p>
           <div style={{ display: 'flex', gap: 14, flexWrap: 'wrap' }}>
-            <Btn href="https://wa.me/573017326991?text=Hola%2C%20tengo%20un%20proyecto%20y%20quiero%20consultar%20con%20BIC">
+            <Btn href="https://wa.me/573024778910?text=Hola%2C%20tengo%20un%20proyecto%20y%20quiero%20consultar%20con%20BIC">
               📱 Consultar desde cualquier ciudad
             </Btn>
             <Btn href="/equipo" variant="outline" dark>Ver equipo BIC →</Btn>
@@ -255,7 +255,7 @@ export default function CoverageNational() {
             respuesta en menos de 24 horas hábiles.
           </p>
           <div style={{ display: 'flex', gap: 14, justifyContent: 'center', flexWrap: 'wrap', marginBottom: 22 }}>
-            <Btn href="https://wa.me/573017326991?text=Hola%2C%20tengo%20un%20proyecto%20y%20quiero%20consultar%20con%20BIC">
+            <Btn href="https://wa.me/573024778910?text=Hola%2C%20tengo%20un%20proyecto%20y%20quiero%20consultar%20con%20BIC">
               📱 WhatsApp — respuesta en menos de 2h
             </Btn>
             <Btn href="/contacto" variant="outline" dark>Formulario de contacto</Btn>
