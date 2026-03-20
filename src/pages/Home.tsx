@@ -1,7 +1,7 @@
 import { useEffect } from 'react'
 import { BlueprintBg, Tag, ThinLine, SectionLabel, Btn, Section, useInView, useCounter } from '../components/ui'
 
-const WA = '573017326991'
+const WA = '573024778910'
 
 const STATS = [
   { value: 10, suffix: '+', label: 'Años de experiencia' },
