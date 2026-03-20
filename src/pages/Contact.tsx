@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react'
 import { BlueprintBg, Tag, ThinLine, SectionLabel, Btn, Section } from '../components/ui'
 
-const WA = '573017326991'
+const WA = '573024778910'
 
 const SERVICES = [
   'Diseño hidrosanitario y contra incendios (NSR-10)',
