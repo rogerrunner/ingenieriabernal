@@ -72,9 +72,7 @@ export default function Team() {
           <SectionLabel>Dirección Técnica</SectionLabel>
           <ThinLine />
           <div style={{ display: 'grid', gridTemplateColumns: 'auto 1fr', gap: '2.5rem', alignItems: 'start', marginTop: '1.5rem' }}>
-            <div style={{ width: 140, height: 175, borderRadius: 8, background: 'linear-gradient(135deg, #003B6F 0%, #17A2B8 100%)', display: 'flex', alignItems: 'center', justifyContent: 'center', flexShrink: 0 }}>
-              <span style={{ color: '#fff', fontSize: '2.5rem', fontFamily: "'Playfair Display', serif", fontWeight: 700 }}>RB</span>
-            </div>
+<img src="/foto-perfil.jpg" alt="Rogerio Bernal Rios" style={{ width: 140, height: 175, borderRadius: 8, objectFit: 'cover', objectPosition: 'center top', flexShrink: 0 }} />>
             <div>
               <div style={{ display: 'flex', alignItems: 'center', gap: '1rem', flexWrap: 'wrap', marginBottom: '0.4rem' }}>
                 <h2 style={{ fontFamily: "'Playfair Display', serif", fontSize: '1.7rem', fontWeight: 700, color: NAVY, margin: 0 }}>
