@@ -3,7 +3,16 @@ import { Link } from 'wouter'
 import { BlueprintBg, Tag, ThinLine, SectionLabel, Btn, Section, useInView } from '../components/ui'
 
 const POSTS = [
-  {
+    {
+          slug: 'suds-sistemas-drenaje-sostenible-colombia',
+              title: 'SUDS en Colombia: Drenaje Sostenible para Ciudades de Montaña',
+                  excerpt: 'Cómo los Sistemas Urbanos de Drenaje Sostenible (SUDS) reducen inundaciones en ciudades colombianas de montaña. Marco normativo vigente, tipologías aplicables y casos reales en el Eje Cafetero.',
+                      category: 'Riesgo Hídrico',
+                          date: 'Marzo 2026',
+                              readTime: '8 min',
+                                  color: '#0077B6',
+                                    },
+                                    {
     slug: 'cambios-normativos-ingenieria-hidraulica-2026',
     title: 'Cambios Normativos en Ingeniería Hidráulica 2026: Oportunidades para Consultores',
     excerpt: 'Análisis de las actualizaciones recientes a la Resolución 0330/2017 y el RAS 2017, y cómo impactan los proyectos de acueducto y saneamiento en Colombia.',
