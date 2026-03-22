@@ -59,10 +59,10 @@ function StatCounter({ value, suffix, label }: { value: number, suffix: string, 
 
 export default function Home() {
   useEffect(() => {
-    document.title = 'BIC — Bernal Ingeniería Consultores | Consultoría Integral Manizales Colombia'
+    document.title = 'BIC Ingeniería | Consultoría Hidráulica Colombia'
     const meta = document.querySelector('meta[name="description"]')
     if (meta) meta.setAttribute('content',
-      'BIC — Bernal Ingeniería Consultores: firma de consultoría integral en Manizales y Colombia. Ingeniería hidráulica, geotecnia, arquitectura, ambiental y estructural. Director Rogerio Bernal Ríos — UNAL · COPNIA 17202-313228.'
+      'Consultoría integral en hidráulica, geotecnia, ambiental y estructural. Más de 10 años de experiencia en Colombia. Rogerio Bernal Ríos, UNAL · COPNIA.'
     )
   }, [])
 
@@ -78,8 +78,8 @@ export default function Home() {
             <Tag style={{ background: 'rgba(23,162,184,0.15)', color: '#17A2B8', border: '1px solid rgba(23,162,184,0.3)', fontSize: 12 }}>UNAL Manizales</Tag>
           </div>
           <h1 style={{ fontFamily: "'Playfair Display', serif", fontWeight: 900, color: '#fff', fontSize: 'clamp(28px, 5vw, 58px)', lineHeight: 1.1, marginBottom: 20 }}>
-            Consultoría Integral<br />
-            de <span style={{ color: '#17A2B8' }}>Ingeniería en Colombia</span>
+            Consultoría en Ingeniería<br />
+            <span style={{ color: '#17A2B8' }}>Hidráulica, Geotecnia y Ambiental en Colombia</span>
           </h1>
           <p style={{ color: 'rgba(255,255,255,0.75)', fontSize: 17, maxWidth: 640, lineHeight: 1.8, marginBottom: 16 }}>
             <strong style={{ color: '#fff' }}>BIC — Bernal Ingeniería Consultores</strong> ofrece hidráulica, geotecnia, arquitectura, ambiental y estructural bajo una sola dirección técnica. Liderado por Rogerio Bernal Ríos, Ing. Civil Esp. UNAL.

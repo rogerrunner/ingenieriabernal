@@ -7,13 +7,9 @@ Disallow: /?s=
 Disallow: /search/
 Disallow: /tmp/
 
-# Crawl delay
-Crawl-delay: 5
-
 # Googlebot específico
 User-agent: Googlebot
 Allow: /
-Crawl-delay: 2
 
 # Sitemap
 Sitemap: https://www.ingenieriabernal.co/sitemap.xml
