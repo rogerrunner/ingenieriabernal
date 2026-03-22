@@ -23,10 +23,30 @@ function ScrollToTop() {
   return null
 }
 
+const BASE_URL = 'https://www.ingenieriabernal.co'
+
+function CanonicalManager() {
+  const [location] = useLocation()
+  useEffect(() => {
+    const url = BASE_URL + location
+    let canonical = document.querySelector('link[rel="canonical"]') as HTMLLinkElement | null
+    if (!canonical) {
+      canonical = document.createElement('link') as HTMLLinkElement
+      canonical.setAttribute('rel', 'canonical')
+      document.head.appendChild(canonical)
+    }
+    canonical.setAttribute('href', url)
+    const ogUrl = document.querySelector('meta[property="og:url"]') as HTMLMetaElement | null
+    if (ogUrl) ogUrl.setAttribute('content', url)
+  }, [location])
+  return null
+}
+
 export default function App() {
   return (
     <>
       <ScrollToTop />
+      <CanonicalManager />
       <Nav />
       <main>
         <Switch>
