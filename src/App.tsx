@@ -16,6 +16,14 @@ import CityPage from './pages/CityPage'
 import CoverageNational from './pages/CoverageNational'
 import BlogDetail from './pages/BlogDetail'
 import NotFound from './pages/NotFound'
+import Bogota from './pages/Bogota'
+import Medellin from './pages/Medellin'
+import Cali from './pages/Cali'
+import ManizalesRegional from './pages/Manizales'
+import Bucaramanga from './pages/Bucaramanga'
+import Barranquilla from './pages/Barranquilla'
+import EjeCafetero from './pages/EjeCafetero'
+import Antioquia from './pages/Antioquia'
 
 function ScrollToTop() {
   const [location] = useLocation()
@@ -185,6 +193,16 @@ export default function App() {
             intro="Regalías petroleras y gasíferas generan inversión permanente en acueductos rurales, saneamiento básico y gestión del riesgo hídrico en llanura aluvial. Municipios como Tocancipá, Aguazul y Tauramena invierten constantemente en infraestructura. Alta demanda de consultores especializados en formulación MGA-Web para el SGR."
             services={['Formulación proyectos regalías MGA-Web','Diseño acueducto y alcantarillado rural','Estudios inundación llanura aluvial','Gestión del riesgo hídrico','Diseño hidrosanitario','Ingeniería ambiental Corporinoquia']}
           />}</Route>
+
+          {/* ── LANDING PAGES REGIONALES — CAPITALES PRINCIPALES ── */}
+          <Route path="/ingenieria-bogota" component={Bogota} />
+          <Route path="/ingenieria-medellin" component={Medellin} />
+          <Route path="/ingenieria-cali" component={Cali} />
+          <Route path="/ingenieria-manizales" component={ManizalesRegional} />
+          <Route path="/ingenieria-bucaramanga" component={Bucaramanga} />
+          <Route path="/ingenieria-barranquilla" component={Barranquilla} />
+          <Route path="/ingenieria-eje-cafetero" component={EjeCafetero} />
+          <Route path="/ingenieria-antioquia" component={Antioquia} />
 
           <Route path="/blog/:slug" component={BlogDetail} />
           <Route component={NotFound} />

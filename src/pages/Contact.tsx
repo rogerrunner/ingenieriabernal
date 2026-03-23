@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react'
 import { BlueprintBg, Tag, ThinLine, SectionLabel, Btn, Section } from '../components/ui'
 
 const WA = '573024778910'
+const WEBHOOK_URL = import.meta.env.VITE_WEBHOOK_URL || 'http://localhost:3001/lead'
 
 const SERVICES = [
   'Diseño hidrosanitario y contra incendios (NSR-10)',
@@ -40,6 +41,26 @@ export default function Contact() {
 
   const sendWA = (e: React.FormEvent) => {
     e.preventDefault()
+
+    // Lead tracking — fire and forget
+    const fullMessage =
+      `${form.service ? `Servicio: ${form.service}. ` : ''}` +
+      `Ciudad: ${form.city || 'Colombia'}. ` +
+      `${form.company ? `Empresa: ${form.company}. ` : ''}` +
+      `${form.message || ''}`
+    fetch(WEBHOOK_URL, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({
+        name: form.name,
+        email: '',
+        phone: '',
+        message: fullMessage.trim(),
+        source: window.location.pathname,
+        page_url: window.location.href,
+      }),
+    }).catch(() => { /* silencioso — no bloquear el flujo WA */ })
+
     const msg = encodeURIComponent(
       `Hola, soy ${form.name}${form.company ? ` de ${form.company}` : ''}, ` +
       `ubicado en ${form.city || 'Colombia'}. ` +
