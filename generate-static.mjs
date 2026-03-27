@@ -1,0 +1,71 @@
+import { readFileSync, writeFileSync, mkdirSync, existsSync } from 'fs';
+import { join, dirname } from 'path';
+import { fileURLToPath } from 'url';
+
+const __dirname = dirname(fileURLToPath(import.meta.url));
+const distDir = join(__dirname, 'dist');
+const indexPath = join(distDir, 'index.html');
+
+if (!existsSync(indexPath)) {
+  console.error('ERROR: dist/index.html no encontrado. Ejecuta vite build primero.');
+  process.exit(1);
+}
+
+const baseHtml = readFileSync(indexPath, 'utf-8');
+
+const routes = [
+  // Páginas principales
+  { path: 'servicios', title: 'Servicios de Ingeniería Hidráulica — BIC Bernal Ingeniería | Manizales', desc: 'Hidrosanitario, CI NSR-10, HEC-RAS 2D, acueducto, alcantarillado, gestión del riesgo, regalías MGA-Web. BIC — Manizales, Eje Cafetero, Colombia.', url: 'https://www.ingenieriabernal.co/servicios' },
+  { path: 'proyectos', title: 'Proyectos Ejecutados — BIC Bernal Ingeniería | Caldas y Colombia', desc: 'Portafolio verificado: Palacio de Justicia La Dorada, Makarí Mall Dosquebradas, EPANET Manizales, torrencialidad Eje Cafetero. BIC — más de 10 años de experiencia.', url: 'https://www.ingenieriabernal.co/proyectos' },
+  { path: 'equipo', title: 'Equipo Consultor — BIC Bernal Ingeniería Consultores | Manizales', desc: 'Rogerio Bernal Ríos, Ing. Civil Esp. Hidráulica UNAL, COPNIA 17202-313228. Equipo multidisciplinario: hidráulica, geotecnia, arquitectura, ambiental.', url: 'https://www.ingenieriabernal.co/equipo' },
+  { path: 'blog', title: 'Blog Ingeniería Hidráulica Colombia — Artículos Técnicos BIC', desc: 'Artículos técnicos: HEC-RAS 2D, NSR-10 sistemas CI, costos obras 2026, regalías MGA-Web, normativa hídrica colombiana. Por Rogerio Bernal Ríos.', url: 'https://www.ingenieriabernal.co/blog' },
+  { path: 'contacto', title: 'Contacto — BIC Bernal Ingeniería Consultores | Manizales, Colombia', desc: 'Contáctenos para proyectos de ingeniería hidráulica, hidrosanitaria y gestión del riesgo. Manizales, Eje Cafetero, Colombia.', url: 'https://www.ingenieriabernal.co/contacto' },
+
+  // Landing pages ciudades / regiones
+  { path: 'ingenieria-hidraulica-manizales', title: 'Ingeniería Hidráulica Manizales — BIC Bernal Ingeniería Consultores', desc: 'Consultoría hidráulica, hidrosanitaria y gestión del riesgo en Manizales y Caldas. EPANET, HEC-RAS 2D, NSR-10. Más de 10 años de experiencia local.', url: 'https://www.ingenieriabernal.co/ingenieria-hidraulica-manizales' },
+  { path: 'ingenieria-hidraulica-eje-cafetero', title: 'Ingeniería Hidráulica Eje Cafetero — BIC Bernal Ingeniería', desc: 'Proyectos hidráulicos en Manizales, Pereira, Armenia y toda la región cafetera. Modelación HEC-RAS, torrencialidad, acueductos rurales.', url: 'https://www.ingenieriabernal.co/ingenieria-hidraulica-eje-cafetero' },
+  { path: 'ingenieria-hidraulica-bogota', title: 'Ingeniería Hidráulica Bogotá — BIC Bernal Ingeniería Consultores', desc: 'Consultoría hidráulica y estructural para proyectos en Bogotá D.C. Diseño hidrosanitario NSR-10, memorias de cálculo, revisión de proyectos.', url: 'https://www.ingenieriabernal.co/ingenieria-hidraulica-bogota' },
+  { path: 'ingenieria-hidraulica-medellin', title: 'Ingeniería Hidráulica Medellín — BIC Bernal Ingeniería Consultores', desc: 'Servicios de ingeniería hidráulica e hidrosanitaria en Medellín y Área Metropolitana. Antioquia. Diseño, modelación y consultoría técnica.', url: 'https://www.ingenieriabernal.co/ingenieria-hidraulica-medellin' },
+  { path: 'ingenieria-hidraulica-pereira', title: 'Ingeniería Hidráulica Pereira — BIC Bernal Ingeniería Consultores', desc: 'Consultoría hidráulica en Pereira y Risaralda. Modelación HEC-RAS, estudios hidrológicos, diseño hidrosanitario NSR-10.', url: 'https://www.ingenieriabernal.co/ingenieria-hidraulica-pereira' },
+  { path: 'ingenieria-hidraulica-armenia', title: 'Ingeniería Hidráulica Armenia — BIC Bernal Ingeniería Consultores', desc: 'Proyectos de ingeniería hidráulica en Armenia y Quindío. Estudios de inundación, modelación hidráulica y diseño hidrosanitario.', url: 'https://www.ingenieriabernal.co/ingenieria-hidraulica-armenia' },
+  { path: 'ingenieria-hidraulica-cali', title: 'Ingeniería Hidráulica Cali — BIC Bernal Ingeniería Consultores', desc: 'Consultoría en ingeniería hidráulica para proyectos en Cali y Valle del Cauca. Modelación hidrodinámica, gestión del riesgo hídrico.', url: 'https://www.ingenieriabernal.co/ingenieria-hidraulica-cali' },
+  { path: 'ingenieria-hidraulica-colombia', title: 'Ingeniería Hidráulica Colombia — BIC Bernal Ingeniería Consultores', desc: 'Consultoría nacional en ingeniería hidráulica: acueductos, alcantarillados, inundaciones, torrencialidad y regalías MGA-Web. BIC — Colombia.', url: 'https://www.ingenieriabernal.co/ingenieria-hidraulica-colombia' },
+
+  // Servicios específicos
+  { path: 'hec-ras-modelacion-hidraulica', title: 'Modelación HEC-RAS 2D Colombia — BIC Bernal Ingeniería Consultores', desc: 'Modelación hidráulica con HEC-RAS 2D para estudios de inundación, torrencialidad y planes de ordenamiento. Expertos certificados en Colombia.', url: 'https://www.ingenieriabernal.co/hec-ras-modelacion-hidraulica' },
+  { path: 'diseno-hidrosanitario-nsr10', title: 'Diseño Hidrosanitario NSR-10 — BIC Bernal Ingeniería | Colombia', desc: 'Diseño de sistemas CI (contraincendio), hidrosanitarios y memorias de cálculo bajo NSR-10 Título I. Edificios, hospitales, centros comerciales.', url: 'https://www.ingenieriabernal.co/diseno-hidrosanitario-nsr10' },
+  { path: 'estudios-inundacion-colombia', title: 'Estudios de Inundación Colombia — BIC Bernal Ingeniería Consultores', desc: 'Estudios de amenaza y riesgo de inundación para POT, licencias ambientales y seguros. Metodología IDEAM, modelación 2D. Cobertura nacional.', url: 'https://www.ingenieriabernal.co/estudios-inundacion-colombia' },
+  { path: 'acueductos-alcantarillados', title: 'Diseño Acueductos y Alcantarillados — BIC Bernal Ingeniería Colombia', desc: 'Diseño y optimización de sistemas de acueducto y alcantarillado bajo RAS 2000. Modelos EPANET, WaterGEMS. Zonas urbanas y rurales de Colombia.', url: 'https://www.ingenieriabernal.co/acueductos-alcantarillados' },
+  { path: 'regalias-mga-web', title: 'Proyectos Regalías MGA-Web — BIC Bernal Ingeniería | Colombia', desc: 'Formulación y estructuración de proyectos de inversión MGA-Web para el Sistema General de Regalías (SGR). Alcaldías, gobernaciones, entidades públicas.', url: 'https://www.ingenieriabernal.co/regalias-mga-web' },
+  { path: 'gestion-riesgo-hidrico', title: 'Gestión del Riesgo Hídrico Colombia — BIC Bernal Ingeniería', desc: 'Planes municipales de gestión del riesgo hídrico, mapas de amenaza, PMGRD. Integración con POT y POMCA. Experiencia Eje Cafetero y Colombia.', url: 'https://www.ingenieriabernal.co/gestion-riesgo-hidrico' },
+
+  // Blog posts
+  { path: 'blog/hec-ras-2d-guia-colombia', title: 'Guía HEC-RAS 2D en Colombia 2026 — BIC Bernal Ingeniería', desc: 'Cómo usar HEC-RAS 2D para estudios de inundación en Colombia: configuración, datos LIDAR, validación y entrega a IDEAM o CAR. Paso a paso.', url: 'https://www.ingenieriabernal.co/blog/hec-ras-2d-guia-colombia' },
+  { path: 'blog/nsr10-sistemas-ci-edificios', title: 'NSR-10 Sistemas CI: Diseño Contraincendio Edificios Colombia — BIC', desc: 'Requisitos NSR-10 Título I para sistemas contraincendio en edificios de Colombia: rociadores, gabinetes, BIE, siamesas. Tabla de aplicación por uso.', url: 'https://www.ingenieriabernal.co/blog/nsr10-sistemas-ci-edificios' },
+  { path: 'blog/costos-obras-hidraulicas-2026', title: 'Costos Obras Hidráulicas Colombia 2026 — BIC Bernal Ingeniería', desc: 'Referencia de costos unitarios para obras hidráulicas en Colombia 2026: tubería, excavación, concreto, equipos hidromecánicos. Fuentes: INVIAS, DNP.', url: 'https://www.ingenieriabernal.co/blog/costos-obras-hidraulicas-2026' },
+  { path: 'blog/mga-web-proyectos-regalias', title: 'MGA-Web: Cómo Formular Proyectos de Regalías en Colombia — BIC', desc: 'Guía práctica para formular proyectos en MGA-Web para el SGR: pasos, errores comunes, indicadores de agua y saneamiento. Actualizado 2026.', url: 'https://www.ingenieriabernal.co/blog/mga-web-proyectos-regalias' },
+  { path: 'blog/epanet-diseno-acueductos', title: 'EPANET para Diseño de Acueductos Colombia — Tutorial BIC', desc: 'Tutorial EPANET para diseño y modelación de acueductos en Colombia: datos de entrada, calibración, análisis de presiones y caudales. Casos reales.', url: 'https://www.ingenieriabernal.co/blog/epanet-diseno-acueductos' },
+  { path: 'blog/torrencialidad-eje-cafetero', title: 'Torrencialidad Eje Cafetero: Amenaza y Gestión del Riesgo — BIC', desc: 'Análisis de torrencialidad en el Eje Cafetero: metodología, modelación con FLO-2D y HEC-RAS, integración con POMCA y POT municipal.', url: 'https://www.ingenieriabernal.co/blog/torrencialidad-eje-cafetero' },
+];
+
+function injectMeta(html, r) {
+  return html
+    .replace(/<title>[^<]*<\/title>/, `<title>${r.title}</title>`)
+    .replace(/<meta name="description" content="[^"]*"/, `<meta name="description" content="${r.desc}"`)
+    .replace(/<link rel="canonical" href="[^"]*"/, `<link rel="canonical" href="${r.url}"`)
+    .replace(/<meta property="og:url" content="[^"]*"/, `<meta property="og:url" content="${r.url}"`)
+    .replace(/<meta property="og:title" content="[^"]*"/, `<meta property="og:title" content="${r.title}"`)
+    .replace(/<meta property="og:description" content="[^"]*"/, `<meta property="og:description" content="${r.desc}"`)
+    .replace(/<meta name="twitter:title" content="[^"]*"/, `<meta name="twitter:title" content="${r.title}"`)
+    .replace(/<meta name="twitter:description" content="[^"]*"/, `<meta name="twitter:description" content="${r.desc}"`);
+}
+
+for (const route of routes) {
+  const html = injectMeta(baseHtml, route);
+  const dir = join(distDir, route.path);
+  mkdirSync(dir, { recursive: true });
+  writeFileSync(join(dir, 'index.html'), html, 'utf-8');
+  console.log(`  ✅ /${route.path}`);
+}
+
+console.log(`\n✅ Pre-rendering completo: ${routes.length} rutas generadas.`);
