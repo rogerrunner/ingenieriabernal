@@ -59,10 +59,10 @@ function StatCounter({ value, suffix, label }: { value: number, suffix: string, 
 
 export default function Home() {
   useEffect(() => {
-    document.title = 'BIC Ingeniería | Consultoría Hidráulica Colombia'
+    document.title = 'BIC Ingeniería | Consultoría Hidráulica Manizales · Colombia'
     const meta = document.querySelector('meta[name="description"]')
     if (meta) meta.setAttribute('content',
-      'Consultoría integral en hidráulica, geotecnia, ambiental y estructural. Más de 10 años de experiencia en Colombia. Rogerio Bernal Ríos, UNAL · COPNIA.'
+      'Consultoría integral en hidráulica, geotecnia, ambiental y estructural. Más de 10 años de experiencia en Colombia.'
     )
   }, [])
 
@@ -74,7 +74,7 @@ export default function Home() {
         <div className="container" style={{ position: 'relative', maxWidth: 960 }}>
           <div style={{ display: 'flex', gap: 8, flexWrap: 'wrap', marginBottom: 20 }}>
             <Tag style={{ background: 'rgba(23,162,184,0.15)', color: '#17A2B8', border: '1px solid rgba(23,162,184,0.3)', fontSize: 12 }}>🇨🇴 Manizales, Colombia</Tag>
-            <Tag style={{ background: 'rgba(23,162,184,0.15)', color: '#17A2B8', border: '1px solid rgba(23,162,184,0.3)', fontSize: 12 }}>COPNIA 17202-313228</Tag>
+            <Tag style={{ background: 'rgba(23,162,184,0.15)', color: '#17A2B8', border: '1px solid rgba(23,162,184,0.3)', fontSize: 12 }}></Tag>
             <Tag style={{ background: 'rgba(23,162,184,0.15)', color: '#17A2B8', border: '1px solid rgba(23,162,184,0.3)', fontSize: 12 }}>UNAL Manizales</Tag>
           </div>
           <h1 style={{ fontFamily: "'Playfair Display', serif", fontWeight: 900, color: '#fff', fontSize: 'clamp(28px, 5vw, 58px)', lineHeight: 1.1, marginBottom: 20 }}>
@@ -212,7 +212,7 @@ export default function Home() {
             <Btn href="/contacto" variant="outline" dark>Formulario de contacto</Btn>
           </div>
           <div style={{ display: 'flex', gap: 8, justifyContent: 'center', flexWrap: 'wrap' }}>
-            {['BIC — Equipo Multidisciplinario', 'UNAL', 'COPNIA 17202-313228', '10+ años', 'Colombia · Ecuador · México'].map(b => (
+            {['BIC — Equipo Multidisciplinario', 'UNAL', '', '10+ años', 'Colombia · Ecuador · México'].map(b => (
               <Tag key={b} style={{ fontSize: 11 }}>{b}</Tag>
             ))}
           </div>

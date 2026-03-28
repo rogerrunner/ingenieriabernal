@@ -36,7 +36,7 @@
   --shadow-hover: 0 16px 40px rgba(0,59,111,0.14);
 }
 
-html { scroll-behavior: smooth; }
+html { scroll-behavior: smooth;  overflow-x: hidden; }
 
 body {
   font-family: var(--font-body);
