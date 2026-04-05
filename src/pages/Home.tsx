@@ -59,10 +59,10 @@ function StatCounter({ value, suffix, label }: { value: number, suffix: string, 
 
 export default function Home() {
   useEffect(() => {
-    document.title = 'BIC Ingeniería | Consultoría Hidráulica Manizales · Colombia'
+    document.title = 'Consultoría Hidráulica Colombia | BIC – Bernal Ingeniería Consultores'
     const meta = document.querySelector('meta[name="description"]')
     if (meta) meta.setAttribute('content',
-      'Consultoría integral en hidráulica, geotecnia, ambiental y estructural. Más de 10 años de experiencia en Colombia.'
+      'Consultoría especializada en hidrología, hidráulica, diseño de acueductos y alcantarillado, modelación HEC-RAS 2D e interventoría técnica en Colombia. Manizales. COPNIA vigente.'
     )
   }, [])
 
@@ -78,11 +78,11 @@ export default function Home() {
             <Tag style={{ background: 'rgba(23,162,184,0.15)', color: '#17A2B8', border: '1px solid rgba(23,162,184,0.3)', fontSize: 12 }}>UNAL Manizales</Tag>
           </div>
           <h1 style={{ fontFamily: "'Playfair Display', serif", fontWeight: 900, color: '#fff', fontSize: 'clamp(28px, 5vw, 58px)', lineHeight: 1.1, marginBottom: 20 }}>
-            Consultoría en Ingeniería<br />
-            <span style={{ color: '#17A2B8' }}>Hidráulica, Geotecnia y Ambiental en Colombia</span>
+            Consultoría en Ingeniería Hidráulica e Hidrológica<br />
+            <span style={{ color: '#17A2B8' }}>para Colombia | BIC</span>
           </h1>
           <p style={{ color: 'rgba(255,255,255,0.75)', fontSize: 17, maxWidth: 640, lineHeight: 1.8, marginBottom: 16 }}>
-            <strong style={{ color: '#fff' }}>BIC — Bernal Ingeniería Consultores</strong> ofrece hidráulica, geotecnia, arquitectura, ambiental y estructural bajo una sola dirección técnica. Liderado por Rogerio Bernal Ríos, Ing. Civil Esp. UNAL.
+            Estudios hidrológicos, diseño de acueductos, modelación HEC-RAS 2D e interventoría técnica. Más de 30 años de experiencia certificada. Manizales, Eje Cafetero y todo Colombia.
           </p>
 
           {/* 3 diferenciadores únicos */}
@@ -99,8 +99,8 @@ export default function Home() {
           </div>
 
           <div style={{ display: 'flex', gap: 14, flexWrap: 'wrap' }}>
-            <Btn href={`https://wa.me/${WA}?text=${encodeURIComponent('Hola, me interesa una consultoría con BIC Bernal Ingeniería. ¿Podríamos conversar?')}`}>
-              📱 Consultar por WhatsApp
+            <Btn href="https://wa.me/573024778910?text=Hola%2C%20quisiera%20información%20sobre%20consultoría%20hidráulica" style={{ background: '#25D366', color: '#fff' }}>
+              📱 Solicitar cotización
             </Btn>
             <Btn href="/servicios" variant="outline" dark>Ver todos los servicios →</Btn>
           </div>
