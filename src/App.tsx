@@ -24,6 +24,15 @@ import Bucaramanga from './pages/Bucaramanga'
 import Barranquilla from './pages/Barranquilla'
 import EjeCafetero from './pages/EjeCafetero'
 import Antioquia from './pages/Antioquia'
+import ServicioEstudiosHidrologicos from './pages/ServicioEstudiosHidrologicos'
+import ServicioModelacionHecRas from './pages/ServicioModelacionHecRas'
+import ServicioAcueductoAlcantarillado from './pages/ServicioAcueductoAlcantarillado'
+import ServicioRedesHidrosanitarias from './pages/ServicioRedesHidrosanitarias'
+import ServicioSistemasContraIncendio from './pages/ServicioSistemasContraIncendio'
+import ServicioInterventoria from './pages/ServicioInterventoria'
+import ServicioRegaliasMga from './pages/ServicioRegaliasMga'
+import ServicioGeotecnia from './pages/ServicioGeotecnia'
+import ServicioAmbiental from './pages/ServicioAmbiental'
 
 function ScrollToTop() {
   const [location] = useLocation()
@@ -203,6 +212,17 @@ export default function App() {
           <Route path="/ingenieria-barranquilla" component={Barranquilla} />
           <Route path="/ingenieria-eje-cafetero" component={EjeCafetero} />
           <Route path="/ingenieria-antioquia" component={Antioquia} />
+
+          {/* ── LANDING PAGES DE SERVICIOS INDIVIDUALES ── */}
+          <Route path="/servicios/estudios-hidrologicos" component={ServicioEstudiosHidrologicos} />
+          <Route path="/servicios/modelacion-hec-ras" component={ServicioModelacionHecRas} />
+          <Route path="/servicios/acueducto-alcantarillado" component={ServicioAcueductoAlcantarillado} />
+          <Route path="/servicios/redes-hidrosanitarias" component={ServicioRedesHidrosanitarias} />
+          <Route path="/servicios/sistemas-contra-incendio" component={ServicioSistemasContraIncendio} />
+          <Route path="/servicios/interventoria" component={ServicioInterventoria} />
+          <Route path="/servicios/regalias-mga" component={ServicioRegaliasMga} />
+          <Route path="/servicios/geotecnia" component={ServicioGeotecnia} />
+          <Route path="/servicios/ambiental" component={ServicioAmbiental} />
 
           <Route path="/blog/:slug" component={BlogDetail} />
           <Route component={NotFound} />

@@ -19,6 +19,8 @@ const SERVICES_SUBMENU = [
   { label: 'Sistemas Contra Incendio NSR-10', path: '/servicios/sistemas-contra-incendio' },
   { label: 'Interventoría Técnica Hidráulica', path: '/servicios/interventoria' },
   { label: 'Formulación Regalías MGA-Web', path: '/servicios/regalias-mga' },
+  { label: 'Estudios Geotécnicos', path: '/servicios/geotecnia' },
+  { label: 'Estudios Ambientales e IRCA', path: '/servicios/ambiental' },
 ]
 
 const WA = '573024778910'
