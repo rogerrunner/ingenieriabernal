@@ -1,5 +1,6 @@
 import { useEffect } from 'react'
 import { useRoute } from 'wouter'
+import articles1 from '../data/articles1'
 import { BlueprintBg, Tag, ThinLine, SectionLabel, Btn, Section } from '../components/ui'
 
 const WA = '573024778910'
@@ -278,6 +279,21 @@ const ARTICLES: Record<string, {
       <p>La normativa hidráulica en Colombia es estable pero su aplicación es cada vez más rigurosa. Los proyectos que no cumplen con RAS 2017, Decreto 1807 y NSR-10 desde el diseño enfrentan observaciones, retrasos en licencias y sobrecostos en obra. Invertir en consultoría técnica de calidad desde la prefactibilidad es la forma más eficiente de evitar estos problemas.</p>
     </>
   },
+  ...articles1,
+}
+
+// ─── SERVICE LINKS PER ARTICLE ──────────────────────────────────────────────
+const SERVICE_LINKS: Record<string, { label: string; href: string }> = {
+  'suds-sistemas-drenaje-sostenible-colombia':       { label: 'Estudios Hidrológicos e Hidráulicos',    href: '/servicios/estudios-hidrologicos' },
+  'cambios-normativos-ingenieria-hidraulica-2026':   { label: 'Ver todos nuestros servicios',           href: '/servicios' },
+  'costos-obras-hidraulicas-colombia-2026':          { label: 'Ver todos nuestros servicios',           href: '/servicios' },
+  'riesgo-hidraulico-ciudades-densas':               { label: 'Estudios Hidrológicos e Hidráulicos',    href: '/servicios/estudios-hidrologicos' },
+  'hec-ras-2d-colombia':                             { label: 'Modelación Hidráulica HEC-RAS 2D',       href: '/servicios/modelacion-hec-ras' },
+  'proyectos-regalias-agua-saneamiento':             { label: 'Formulación MGA / Regalías SGR',         href: '/servicios/regalias-mga' },
+  'nsr-10-sistemas-contra-incendios':                { label: 'Sistemas Contra Incendio NSR-10',        href: '/servicios/sistemas-contra-incendio' },
+  'irca-municipio-colombia':                         { label: 'Acueducto y Alcantarillado',             href: '/servicios/acueducto-alcantarillado' },
+  'mga-web-regalias-agua-potable':                   { label: 'Formulación MGA / Regalías SGR',         href: '/servicios/regalias-mga' },
+  'hec-ras-2d-modelacion-hidraulica-colombia':       { label: 'Modelación Hidráulica HEC-RAS 2D',       href: '/servicios/modelacion-hec-ras' },
 }
 
 // ─── LAYOUT COMPONENTS ──────────────────────────────────────────────────────
@@ -347,6 +363,19 @@ export default function BlogDetail() {
             ? <ArticleBody body={article.body} />
             : <p style={{ color: '#475569', fontSize: 15 }}>Artículo en preparación. Contáctanos para consultas sobre este tema.</p>
           }
+
+          {/* Servicio relacionado */}
+          {article && SERVICE_LINKS[slug] && (
+            <div style={{ background: '#EBF5F9', borderRadius: 8, padding: '1.25rem 1.5rem', marginTop: '2rem', display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexWrap: 'wrap', gap: 12 }}>
+              <div>
+                <p style={{ fontFamily: "'Montserrat', sans-serif", fontWeight: 700, color: '#003B6F', fontSize: 13, margin: '0 0 2px' }}>Servicio relacionado</p>
+                <p style={{ fontFamily: "'Lato', sans-serif", color: '#475569', fontSize: 13, margin: 0 }}>{SERVICE_LINKS[slug].label}</p>
+              </div>
+              <a href={SERVICE_LINKS[slug].href} style={{ fontFamily: "'Montserrat', sans-serif", fontWeight: 700, color: '#17A2B8', fontSize: 13, textDecoration: 'none', whiteSpace: 'nowrap' }}>
+                Ver servicio →
+              </a>
+            </div>
+          )}
 
           {/* Autor */}
           <div style={{ background: '#f0f7fa', borderRadius: 12, padding: '1.5rem 2rem', marginTop: '3rem', display: 'flex', gap: '1.5rem', alignItems: 'flex-start' }}>

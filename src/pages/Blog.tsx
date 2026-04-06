@@ -1,6 +1,14 @@
 import { useState } from 'react'
 import { Link } from 'wouter'
 import { BlueprintBg, Tag, ThinLine, SectionLabel, Btn, Section, useInView } from '../components/ui'
+import SEOHead from '../components/SEOHead'
+
+const seoConfig = {
+  title: 'Blog de Ingeniería Hidráulica en Colombia | BIC Bernal Ingeniería Consultores',
+  description: 'Artículos técnicos sobre normativa hidráulica, costos de obra, modelación HEC-RAS 2D, SUDS y formulación de proyectos de regalías para municipios colombianos. Guías para ingenieros, alcaldes y constructoras del Eje Cafetero.',
+  keywords: ['blog ingeniería hidráulica Colombia', 'artículos técnicos hidráulica', 'normativa RAS 2017', 'HEC-RAS 2D Colombia', 'regalías agua potable municipios'],
+  canonical: 'https://www.ingenieriabernal.co/blog',
+}
 
 const POSTS = [
     {
@@ -66,6 +74,33 @@ const POSTS = [
     readTime: '10 min',
     color: '#B5451B',
   },
+  {
+    slug: 'irca-municipio-colombia',
+    title: 'Cómo bajar el IRCA de un municipio en Colombia: guía técnica para alcaldes y ESP',
+    excerpt: 'Qué es el IRCA, por qué sube, cuáles son las causas más comunes en municipios colombianos y qué pasos concretos puede tomar para reducirlo con respaldo normativo.',
+    category: 'Agua y Saneamiento',
+    date: 'Abril 2026',
+    readTime: '10 min',
+    color: '#0077B6',
+  },
+  {
+    slug: 'mga-web-regalias-agua-potable',
+    title: 'Formulación de proyectos de agua potable con regalías y MGA Web: cómo no perder el cupo',
+    excerpt: 'Guía práctica para alcaldes, secretarios de planeación y gestores del SGR sobre cómo formular proyectos de acueducto en la MGA Web sin cometer los errores que hacen devolver los proyectos.',
+    category: 'Regalías SGR',
+    date: 'Abril 2026',
+    readTime: '11 min',
+    color: '#7B2D8B',
+  },
+  {
+    slug: 'hec-ras-2d-modelacion-hidraulica-colombia',
+    title: 'Contratar modelación hidráulica HEC-RAS 2D en Colombia: qué debe exigirle a su consultor',
+    excerpt: 'Guía técnica para constructoras, promotores e ingenieros sobre qué es la modelación HEC-RAS 2D, cuándo es obligatoria en Colombia y qué debe incluir un modelo bien hecho.',
+    category: 'Software y Modelación',
+    date: 'Abril 2026',
+    readTime: '12 min',
+    color: '#17A2B8',
+  },
 ]
 
 export default function Blog() {
@@ -77,6 +112,7 @@ export default function Blog() {
 
   return (
     <>
+      <SEOHead config={seoConfig} />
       <section style={{ background: '#003B6F', padding: '120px 40px 64px', position: 'relative', overflow: 'hidden' }}>
         <BlueprintBg opacity={0.07} />
         <div className="container" style={{ position: 'relative' }}>

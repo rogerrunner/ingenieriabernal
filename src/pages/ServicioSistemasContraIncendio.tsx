@@ -190,6 +190,25 @@ export default function ServicioSistemasContraIncendio() {
         </div>
       </Section>
 
+      {/* ── ARTÍCULOS RELACIONADOS ── */}
+      <Section bg="#F8FAFC" style={{ padding: '48px 24px' }}>
+        <div className="container" style={{ maxWidth: 860 }}>
+          <p style={{ fontFamily: "'Montserrat', sans-serif", fontWeight: 700, color: '#003B6F', fontSize: 13, letterSpacing: '0.08em', textTransform: 'uppercase', marginBottom: 20 }}>
+            Artículos relacionados
+          </p>
+          <div style={{ display: 'flex', gap: 16, flexWrap: 'wrap' }}>
+            <a href="/blog/nsr-10-sistemas-contra-incendios" style={{ flex: '1 1 260px', background: '#fff', border: '1px solid #E2E8F0', borderRadius: 4, padding: '18px 20px', textDecoration: 'none' }}>
+              <span style={{ fontFamily: "'Playfair Display', serif", fontWeight: 700, color: '#003B6F', fontSize: 15, display: 'block', lineHeight: 1.3 }}>NSR-10 Capítulos J y K: Todo sobre Sistemas Contra Incendios en Colombia</span>
+              <span style={{ fontFamily: "'Lato', sans-serif", color: '#17A2B8', fontSize: 12, marginTop: 8, display: 'block' }}>Leer artículo →</span>
+            </a>
+            <a href="/blog/costos-obras-hidraulicas-colombia-2026" style={{ flex: '1 1 260px', background: '#fff', border: '1px solid #E2E8F0', borderRadius: 4, padding: '18px 20px', textDecoration: 'none' }}>
+              <span style={{ fontFamily: "'Playfair Display', serif", fontWeight: 700, color: '#003B6F', fontSize: 15, display: 'block', lineHeight: 1.3 }}>Costos de Obras Hidráulicas en Colombia 2026: APU y Tendencias</span>
+              <span style={{ fontFamily: "'Lato', sans-serif", color: '#17A2B8', fontSize: 12, marginTop: 8, display: 'block' }}>Leer artículo →</span>
+            </a>
+          </div>
+        </div>
+      </Section>
+
       {/* ── CTA FINAL ── */}
       <Section bg="#17A2B8" style={{ padding: '64px 24px', textAlign: 'center' }}>
         <div style={{ maxWidth: 680, margin: '0 auto' }}>
