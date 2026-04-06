@@ -1,38 +1,39 @@
 import { Route, Switch } from 'wouter'
-import { useEffect } from 'react'
+import { useEffect, lazy, Suspense } from 'react'
 import { useLocation } from 'wouter'
 import Nav from './components/Nav'
 import Footer from './components/Footer'
 import FloatingQuoteButton from './components/FloatingQuoteButton'
 import Home from './pages/Home'
-import Services from './pages/Services'
-import Projects from './pages/Projects'
-import About from './pages/About'
-import Team from './pages/Team'
-import Credentials from './pages/Credentials'
-import Blog from './pages/Blog'
-import Contact from './pages/Contact'
-import CityPage from './pages/CityPage'
-import CoverageNational from './pages/CoverageNational'
-import BlogDetail from './pages/BlogDetail'
 import NotFound from './pages/NotFound'
-import Bogota from './pages/Bogota'
-import Medellin from './pages/Medellin'
-import Cali from './pages/Cali'
-import ManizalesRegional from './pages/Manizales'
-import Bucaramanga from './pages/Bucaramanga'
-import Barranquilla from './pages/Barranquilla'
-import EjeCafetero from './pages/EjeCafetero'
-import Antioquia from './pages/Antioquia'
-import ServicioEstudiosHidrologicos from './pages/ServicioEstudiosHidrologicos'
-import ServicioModelacionHecRas from './pages/ServicioModelacionHecRas'
-import ServicioAcueductoAlcantarillado from './pages/ServicioAcueductoAlcantarillado'
-import ServicioRedesHidrosanitarias from './pages/ServicioRedesHidrosanitarias'
-import ServicioSistemasContraIncendio from './pages/ServicioSistemasContraIncendio'
-import ServicioInterventoria from './pages/ServicioInterventoria'
-import ServicioRegaliasMga from './pages/ServicioRegaliasMga'
-import ServicioGeotecnia from './pages/ServicioGeotecnia'
-import ServicioAmbiental from './pages/ServicioAmbiental'
+
+const Services = lazy(() => import('./pages/Services'))
+const Projects = lazy(() => import('./pages/Projects'))
+const About = lazy(() => import('./pages/About'))
+const Team = lazy(() => import('./pages/Team'))
+const Credentials = lazy(() => import('./pages/Credentials'))
+const Blog = lazy(() => import('./pages/Blog'))
+const Contact = lazy(() => import('./pages/Contact'))
+const CityPage = lazy(() => import('./pages/CityPage'))
+const CoverageNational = lazy(() => import('./pages/CoverageNational'))
+const BlogDetail = lazy(() => import('./pages/BlogDetail'))
+const Bogota = lazy(() => import('./pages/Bogota'))
+const Medellin = lazy(() => import('./pages/Medellin'))
+const Cali = lazy(() => import('./pages/Cali'))
+const ManizalesRegional = lazy(() => import('./pages/Manizales'))
+const Bucaramanga = lazy(() => import('./pages/Bucaramanga'))
+const Barranquilla = lazy(() => import('./pages/Barranquilla'))
+const EjeCafetero = lazy(() => import('./pages/EjeCafetero'))
+const Antioquia = lazy(() => import('./pages/Antioquia'))
+const ServicioEstudiosHidrologicos = lazy(() => import('./pages/ServicioEstudiosHidrologicos'))
+const ServicioModelacionHecRas = lazy(() => import('./pages/ServicioModelacionHecRas'))
+const ServicioAcueductoAlcantarillado = lazy(() => import('./pages/ServicioAcueductoAlcantarillado'))
+const ServicioRedesHidrosanitarias = lazy(() => import('./pages/ServicioRedesHidrosanitarias'))
+const ServicioSistemasContraIncendio = lazy(() => import('./pages/ServicioSistemasContraIncendio'))
+const ServicioInterventoria = lazy(() => import('./pages/ServicioInterventoria'))
+const ServicioRegaliasMga = lazy(() => import('./pages/ServicioRegaliasMga'))
+const ServicioGeotecnia = lazy(() => import('./pages/ServicioGeotecnia'))
+const ServicioAmbiental = lazy(() => import('./pages/ServicioAmbiental'))
 
 function ScrollToTop() {
   const [location] = useLocation()
@@ -66,6 +67,7 @@ export default function App() {
       <CanonicalManager />
       <Nav />
       <main>
+        <Suspense fallback={<div style={{ minHeight: '100vh' }} />}>
         <Switch>
 
           {/* ── PÁGINAS PRINCIPALES ── */}
@@ -227,6 +229,7 @@ export default function App() {
           <Route path="/blog/:slug" component={BlogDetail} />
           <Route component={NotFound} />
         </Switch>
+        </Suspense>
       </main>
       <Footer />
       <FloatingQuoteButton />

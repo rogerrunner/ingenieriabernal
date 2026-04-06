@@ -6,7 +6,7 @@ const SERVICES = [
   { label: 'Acueducto y Alcantarillado', path: '/servicios' },
   { label: 'Gestión del Riesgo / POT', path: '/servicios' },
   { label: 'PTAP y PTAR', path: '/servicios' },
-  { label: 'Topobatimetría', path: '/servicios' }h,
+  { label: 'Topobatimetría', path: '/servicios' },
   { label: 'Regalías MGA-Web', path: '/servicios' },
   { label: 'Ingeniería Ambiental', path: '/servicios' },
   { label: 'Residencia e Interventoría', path: '/servicios' },
