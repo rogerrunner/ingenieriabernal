@@ -34,6 +34,10 @@ const ServicioInterventoria = lazy(() => import('./pages/ServicioInterventoria')
 const ServicioRegaliasMga = lazy(() => import('./pages/ServicioRegaliasMga'))
 const ServicioGeotecnia = lazy(() => import('./pages/ServicioGeotecnia'))
 const ServicioAmbiental = lazy(() => import('./pages/ServicioAmbiental'))
+const RegionalManizales = lazy(() => import('./pages/regional/RegionalManizales'))
+const RegionalPereira = lazy(() => import('./pages/regional/RegionalPereira'))
+const RegionalArmenia = lazy(() => import('./pages/regional/RegionalArmenia'))
+const RegionalEjeCafetero = lazy(() => import('./pages/regional/RegionalEjeCafetero'))
 
 function ScrollToTop() {
   const [location] = useLocation()
@@ -225,6 +229,12 @@ export default function App() {
           <Route path="/servicios/regalias-mga" component={ServicioRegaliasMga} />
           <Route path="/servicios/geotecnia" component={ServicioGeotecnia} />
           <Route path="/servicios/ambiental" component={ServicioAmbiental} />
+
+          {/* ── LANDING PAGES REGIONALES SEO ── */}
+          <Route path="/regional/manizales" component={RegionalManizales} />
+          <Route path="/regional/pereira" component={RegionalPereira} />
+          <Route path="/regional/armenia" component={RegionalArmenia} />
+          <Route path="/regional/eje-cafetero" component={RegionalEjeCafetero} />
 
           <Route path="/blog/:slug" component={BlogDetail} />
           <Route component={NotFound} />
