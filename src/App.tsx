@@ -3,8 +3,9 @@ import { useEffect, lazy, Suspense } from 'react'
 import { useLocation } from 'wouter'
 import Nav from './components/Nav'
 import Footer from './components/Footer'
-import FloatingQuoteButton from './components/FloatingQuoteButton'
 import Home from './pages/Home'
+
+const FloatingQuoteButton = lazy(() => import('./components/FloatingQuoteButton'))
 import NotFound from './pages/NotFound'
 
 const Services = lazy(() => import('./pages/Services'))
@@ -232,7 +233,9 @@ export default function App() {
         </Suspense>
       </main>
       <Footer />
-      <FloatingQuoteButton />
+      <Suspense fallback={null}>
+        <FloatingQuoteButton />
+      </Suspense>
     </>
   )
 }
