@@ -43,6 +43,10 @@ const EstudioSuelosManizales = lazy(() => import('./pages/servicios/EstudioSuelo
 const LicenciaConstruccionManizales = lazy(() => import('./pages/servicios/LicenciaConstruccionManizales'))
 const EstudioSuelosPereira = lazy(() => import('./pages/servicios/EstudioSuelosPereira'))
 const DisenoHidraulicoManizales = lazy(() => import('./pages/servicios/DisenoHidraulicoManizales'))
+const ModelacionHidraulicaManizales = lazy(() => import('./pages/servicios/ModelacionHidraulicaManizales'))
+const EstudioHidrologicoManizales = lazy(() => import('./pages/servicios/EstudioHidrologicoManizales'))
+const InterventoriaHidraulicaManizales = lazy(() => import('./pages/servicios/InterventoriaHidraulicaManizales'))
+const DisenoHidraulicoPereira = lazy(() => import('./pages/servicios/DisenoHidraulicoPereira'))
 
 function ScrollToTop() {
   const [location] = useLocation()
@@ -247,6 +251,10 @@ export default function App() {
           <Route path="/licencia-de-construccion-manizales" component={LicenciaConstruccionManizales} />
           <Route path="/estudio-de-suelos-pereira" component={EstudioSuelosPereira} />
           <Route path="/diseno-hidraulico-manizales" component={DisenoHidraulicoManizales} />
+          <Route path="/modelacion-hidraulica-manizales" component={ModelacionHidraulicaManizales} />
+          <Route path="/estudio-hidrologico-manizales" component={EstudioHidrologicoManizales} />
+          <Route path="/interventoria-hidraulica-manizales" component={InterventoriaHidraulicaManizales} />
+          <Route path="/diseno-hidraulico-pereira" component={DisenoHidraulicoPereira} />
 
           <Route path="/blog/:slug" component={BlogDetail} />
           <Route component={NotFound} />
