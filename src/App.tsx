@@ -47,6 +47,13 @@ const ModelacionHidraulicaManizales = lazy(() => import('./pages/servicios/Model
 const EstudioHidrologicoManizales = lazy(() => import('./pages/servicios/EstudioHidrologicoManizales'))
 const InterventoriaHidraulicaManizales = lazy(() => import('./pages/servicios/InterventoriaHidraulicaManizales'))
 const DisenoHidraulicoPereira = lazy(() => import('./pages/servicios/DisenoHidraulicoPereira'))
+const EstudioInundabilidadPereira = lazy(() => import('./pages/servicios/EstudioInundabilidadPereira'))
+const LicenciaConstruccionPereira = lazy(() => import('./pages/servicios/LicenciaConstruccionPereira'))
+const EstudioSuelosEjeCafetero = lazy(() => import('./pages/servicios/EstudioSuelosEjeCafetero'))
+const ConsultoriaIngenieriaCivilManizales = lazy(() => import('./pages/servicios/ConsultoriaIngenieriaCivilManizales'))
+const GestionRiesgoHidricoManizales = lazy(() => import('./pages/servicios/GestionRiesgoHidricoManizales'))
+const DisenoHidraulicoEjeCafetero = lazy(() => import('./pages/servicios/DisenoHidraulicoEjeCafetero'))
+const TopografiaManizales = lazy(() => import('./pages/servicios/TopografiaManizales'))
 
 function ScrollToTop() {
   const [location] = useLocation()
@@ -255,6 +262,13 @@ export default function App() {
           <Route path="/estudio-hidrologico-manizales" component={EstudioHidrologicoManizales} />
           <Route path="/interventoria-hidraulica-manizales" component={InterventoriaHidraulicaManizales} />
           <Route path="/diseno-hidraulico-pereira" component={DisenoHidraulicoPereira} />
+          <Route path="/estudio-de-inundabilidad-pereira" component={EstudioInundabilidadPereira} />
+          <Route path="/licencia-de-construccion-pereira" component={LicenciaConstruccionPereira} />
+          <Route path="/estudio-de-suelos-eje-cafetero" component={EstudioSuelosEjeCafetero} />
+          <Route path="/consultoria-ingenieria-civil-manizales" component={ConsultoriaIngenieriaCivilManizales} />
+          <Route path="/gestion-riesgo-hidrico-manizales" component={GestionRiesgoHidricoManizales} />
+          <Route path="/diseno-hidraulico-eje-cafetero" component={DisenoHidraulicoEjeCafetero} />
+          <Route path="/topografia-manizales" component={TopografiaManizales} />
 
           <Route path="/blog/:slug" component={BlogDetail} />
           <Route component={NotFound} />
