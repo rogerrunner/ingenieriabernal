@@ -236,6 +236,7 @@ export default function App() {
           <Route path="/ingenieria-antioquia" component={Antioquia} />
 
           {/* ── LANDING PAGES DE SERVICIOS INDIVIDUALES ── */}
+          <Route path="/servicios/estudio-inundabilidad-manizales" component={EstudioInundabilidadManizales} />
           <Route path="/servicios/estudios-hidrologicos" component={ServicioEstudiosHidrologicos} />
           <Route path="/servicios/modelacion-hec-ras" component={ServicioModelacionHecRas} />
           <Route path="/servicios/acueducto-alcantarillado" component={ServicioAcueductoAlcantarillado} />

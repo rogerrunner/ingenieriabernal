@@ -55,6 +55,18 @@
   <url><loc>https://www.ingenieriabernal.co/regional/pereira</loc><lastmod>2026-04-06</lastmod><changefreq>monthly</changefreq><priority>0.90</priority></url>
   <url><loc>https://www.ingenieriabernal.co/regional/armenia</loc><lastmod>2026-04-06</lastmod><changefreq>monthly</changefreq><priority>0.90</priority></url>
   <url><loc>https://www.ingenieriabernal.co/regional/eje-cafetero</loc><lastmod>2026-04-06</lastmod><changefreq>monthly</changefreq><priority>0.92</priority></url>
+  <!-- Servicios sub-páginas -->
+  <url><loc>https://www.ingenieriabernal.co/servicios/estudio-inundabilidad-manizales</loc><lastmod>2026-04-14</lastmod><changefreq>monthly</changefreq><priority>0.90</priority></url>
+  <url><loc>https://www.ingenieriabernal.co/servicios/estudios-hidrologicos</loc><lastmod>2026-04-14</lastmod><changefreq>monthly</changefreq><priority>0.88</priority></url>
+  <url><loc>https://www.ingenieriabernal.co/servicios/modelacion-hec-ras</loc><lastmod>2026-04-14</lastmod><changefreq>monthly</changefreq><priority>0.88</priority></url>
+  <url><loc>https://www.ingenieriabernal.co/servicios/acueducto-alcantarillado</loc><lastmod>2026-04-14</lastmod><changefreq>monthly</changefreq><priority>0.88</priority></url>
+  <url><loc>https://www.ingenieriabernal.co/servicios/redes-hidrosanitarias</loc><lastmod>2026-04-14</lastmod><changefreq>monthly</changefreq><priority>0.88</priority></url>
+  <url><loc>https://www.ingenieriabernal.co/servicios/sistemas-contra-incendio</loc><lastmod>2026-04-14</lastmod><changefreq>monthly</changefreq><priority>0.88</priority></url>
+  <url><loc>https://www.ingenieriabernal.co/servicios/interventoria</loc><lastmod>2026-04-14</lastmod><changefreq>monthly</changefreq><priority>0.88</priority></url>
+  <url><loc>https://www.ingenieriabernal.co/servicios/regalias-mga</loc><lastmod>2026-04-14</lastmod><changefreq>monthly</changefreq><priority>0.88</priority></url>
+  <url><loc>https://www.ingenieriabernal.co/servicios/geotecnia</loc><lastmod>2026-04-14</lastmod><changefreq>monthly</changefreq><priority>0.88</priority></url>
+  <url><loc>https://www.ingenieriabernal.co/servicios/ambiental</loc><lastmod>2026-04-14</lastmod><changefreq>monthly</changefreq><priority>0.88</priority></url>
+
   <!-- Landing pages locales — Manizales -->
   <url><loc>https://www.ingenieriabernal.co/estudio-de-inundabilidad-manizales/</loc><lastmod>2026-04-12</lastmod><changefreq>monthly</changefreq><priority>0.92</priority></url>
   <url><loc>https://www.ingenieriabernal.co/estudio-de-suelos-manizales/</loc><lastmod>2026-04-12</lastmod><changefreq>monthly</changefreq><priority>0.90</priority></url>
