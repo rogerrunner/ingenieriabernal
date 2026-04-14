@@ -85,6 +85,22 @@
   <url><loc>https://www.ingenieriabernal.co/diseno-hidraulico-eje-cafetero/</loc><lastmod>2026-04-13</lastmod><changefreq>monthly</changefreq><priority>0.88</priority></url>
   <url><loc>https://www.ingenieriabernal.co/topografia-manizales/</loc><lastmod>2026-04-13</lastmod><changefreq>monthly</changefreq><priority>0.88</priority></url>
 
+  <!-- Landing pages de servicio (generate-static) -->
+  <url><loc>https://www.ingenieriabernal.co/ingenieria-hidraulica-manizales</loc><lastmod>2026-04-14</lastmod><changefreq>monthly</changefreq><priority>0.85</priority></url>
+  <url><loc>https://www.ingenieriabernal.co/ingenieria-hidraulica-eje-cafetero</loc><lastmod>2026-04-14</lastmod><changefreq>monthly</changefreq><priority>0.85</priority></url>
+  <url><loc>https://www.ingenieriabernal.co/ingenieria-hidraulica-bogota</loc><lastmod>2026-04-14</lastmod><changefreq>monthly</changefreq><priority>0.85</priority></url>
+  <url><loc>https://www.ingenieriabernal.co/ingenieria-hidraulica-medellin</loc><lastmod>2026-04-14</lastmod><changefreq>monthly</changefreq><priority>0.85</priority></url>
+  <url><loc>https://www.ingenieriabernal.co/ingenieria-hidraulica-pereira</loc><lastmod>2026-04-14</lastmod><changefreq>monthly</changefreq><priority>0.85</priority></url>
+  <url><loc>https://www.ingenieriabernal.co/ingenieria-hidraulica-armenia</loc><lastmod>2026-04-14</lastmod><changefreq>monthly</changefreq><priority>0.85</priority></url>
+  <url><loc>https://www.ingenieriabernal.co/ingenieria-hidraulica-cali</loc><lastmod>2026-04-14</lastmod><changefreq>monthly</changefreq><priority>0.85</priority></url>
+  <url><loc>https://www.ingenieriabernal.co/ingenieria-hidraulica-colombia</loc><lastmod>2026-04-14</lastmod><changefreq>monthly</changefreq><priority>0.85</priority></url>
+  <url><loc>https://www.ingenieriabernal.co/hec-ras-modelacion-hidraulica</loc><lastmod>2026-04-14</lastmod><changefreq>monthly</changefreq><priority>0.88</priority></url>
+  <url><loc>https://www.ingenieriabernal.co/diseno-hidrosanitario-nsr10</loc><lastmod>2026-04-14</lastmod><changefreq>monthly</changefreq><priority>0.88</priority></url>
+  <url><loc>https://www.ingenieriabernal.co/estudios-inundacion-colombia</loc><lastmod>2026-04-14</lastmod><changefreq>monthly</changefreq><priority>0.88</priority></url>
+  <url><loc>https://www.ingenieriabernal.co/acueductos-alcantarillados</loc><lastmod>2026-04-14</lastmod><changefreq>monthly</changefreq><priority>0.88</priority></url>
+  <url><loc>https://www.ingenieriabernal.co/regalias-mga-web</loc><lastmod>2026-04-14</lastmod><changefreq>monthly</changefreq><priority>0.88</priority></url>
+  <url><loc>https://www.ingenieriabernal.co/gestion-riesgo-hidrico</loc><lastmod>2026-04-14</lastmod><changefreq>monthly</changefreq><priority>0.88</priority></url>
+
   <!-- Blog articles -->
   <url><loc>https://www.ingenieriabernal.co/blog/suds-sistemas-drenaje-sostenible-colombia</loc><lastmod>2026-03-27</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <url><loc>https://www.ingenieriabernal.co/blog/costos-obras-hidraulicas-colombia-2026</loc><lastmod>2026-03-27</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
@@ -95,4 +111,10 @@
   <url><loc>https://www.ingenieriabernal.co/blog/irca-municipio-colombia</loc><lastmod>2026-04-06</lastmod><changefreq>monthly</changefreq><priority>0.82</priority></url>
   <url><loc>https://www.ingenieriabernal.co/blog/mga-web-regalias-agua-potable</loc><lastmod>2026-04-06</lastmod><changefreq>monthly</changefreq><priority>0.82</priority></url>
   <url><loc>https://www.ingenieriabernal.co/blog/hec-ras-2d-modelacion-hidraulica-colombia</loc><lastmod>2026-04-06</lastmod><changefreq>monthly</changefreq><priority>0.82</priority></url>
+  <url><loc>https://www.ingenieriabernal.co/blog/hec-ras-2d-guia-colombia</loc><lastmod>2026-04-14</lastmod><changefreq>monthly</changefreq><priority>0.75</priority></url>
+  <url><loc>https://www.ingenieriabernal.co/blog/nsr10-sistemas-ci-edificios</loc><lastmod>2026-04-14</lastmod><changefreq>monthly</changefreq><priority>0.75</priority></url>
+  <url><loc>https://www.ingenieriabernal.co/blog/costos-obras-hidraulicas-2026</loc><lastmod>2026-04-14</lastmod><changefreq>monthly</changefreq><priority>0.75</priority></url>
+  <url><loc>https://www.ingenieriabernal.co/blog/mga-web-proyectos-regalias</loc><lastmod>2026-04-14</lastmod><changefreq>monthly</changefreq><priority>0.75</priority></url>
+  <url><loc>https://www.ingenieriabernal.co/blog/epanet-diseno-acueductos</loc><lastmod>2026-04-14</lastmod><changefreq>monthly</changefreq><priority>0.75</priority></url>
+  <url><loc>https://www.ingenieriabernal.co/blog/torrencialidad-eje-cafetero</loc><lastmod>2026-04-14</lastmod><changefreq>monthly</changefreq><priority>0.75</priority></url>
 </urlset>
