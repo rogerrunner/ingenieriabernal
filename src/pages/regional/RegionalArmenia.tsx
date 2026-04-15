@@ -19,7 +19,7 @@ const seoConfig = {
     'redes hidrosanitarias Armenia',
     'modelación hidráulica Armenia',
   ],
-  canonical: 'https://www.ingenieriabernal.co/regional/armenia',
+  canonical: 'https://ingenieriabernal.co/regional/armenia',
 }
 
 const SCHEMA = {
@@ -27,7 +27,7 @@ const SCHEMA = {
   '@type': 'LocalBusiness',
   name: 'BIC – Bernal Ingeniería Consultores',
   description: 'Consultoría en ingeniería hidráulica, sanitaria y formulación de regalías con cobertura en Armenia, Quindío.',
-  url: 'https://www.ingenieriabernal.co',
+  url: 'https://ingenieriabernal.co',
   telephone: '+573024778910',
   email: 'rogeriobernal@ingenieriabernal.co',
   address: {
@@ -37,7 +37,7 @@ const SCHEMA = {
     addressCountry: 'CO',
   },
   areaServed: ['Armenia', 'Quindío', 'Calarcá', 'Montenegro'],
-  hasMap: 'https://www.ingenieriabernal.co/regional/armenia',
+  hasMap: 'https://ingenieriabernal.co/regional/armenia',
 }
 
 const SERVICIOS = [

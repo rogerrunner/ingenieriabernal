@@ -20,7 +20,7 @@ const seoConfig = {
     'amenaza torrencialidad Manizales',
     'mitigación riesgo hídrico',
   ],
-  canonical: 'https://www.ingenieriabernal.co/gestion-riesgo-hidrico-manizales/',
+  canonical: 'https://ingenieriabernal.co/gestion-riesgo-hidrico-manizales/',
 }
 
 const AMENAZAS = [

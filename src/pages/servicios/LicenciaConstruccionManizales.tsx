@@ -22,7 +22,7 @@ const seoConfig = {
     'memoria de cálculo estructural',
     'revisor técnico independiente NSR-10',
   ],
-  canonical: 'https://www.ingenieriabernal.co/licencia-de-construccion-manizales/',
+  canonical: 'https://ingenieriabernal.co/licencia-de-construccion-manizales/',
 }
 
 const DOCUMENTOS_CURIA = [

@@ -51,7 +51,7 @@ export default function RegionalPage({ city, department, description, phone = DE
       '@type': 'LocalBusiness',
       name: 'BIC Bernal Ingeniería Consultores',
       description: `Consultoría en ingeniería hidráulica, hidrología, acueductos y geotecnia en ${city}, ${department}`,
-      url: 'https://www.ingenieriabernal.co',
+      url: 'https://ingenieriabernal.co',
       telephone: `+${phone}`,
       email: 'rbernalr01@gmail.com',
       address: {

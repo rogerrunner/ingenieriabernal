@@ -61,7 +61,7 @@ function ScrollToTop() {
   return null
 }
 
-const BASE_URL = 'https://www.ingenieriabernal.co'
+const BASE_URL = 'https://ingenieriabernal.co'
 
 function CanonicalManager() {
   const [location] = useLocation()

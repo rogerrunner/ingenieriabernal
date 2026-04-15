@@ -22,7 +22,7 @@ const seoConfig = {
     'control calidad obras hidráulicas',
     'interventoría Eje Cafetero',
   ],
-  canonical: 'https://www.ingenieriabernal.co/servicios/interventoria',
+  canonical: 'https://ingenieriabernal.co/servicios/interventoria',
 }
 
 const INCLUYE = [

@@ -22,7 +22,7 @@ const seoConfig = {
     'alcantarillado pluvial',
     'ingeniería sanitaria Colombia',
   ],
-  canonical: 'https://www.ingenieriabernal.co/servicios/acueducto-alcantarillado',
+  canonical: 'https://ingenieriabernal.co/servicios/acueducto-alcantarillado',
 }
 
 const INCLUYE = [

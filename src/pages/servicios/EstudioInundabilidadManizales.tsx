@@ -22,7 +22,7 @@ const seoConfig = {
     'Quebrada Manizales inundación',
     'QGIS hidrología Colombia',
   ],
-  canonical: 'https://www.ingenieriabernal.co/estudio-de-inundabilidad-manizales/',
+  canonical: 'https://ingenieriabernal.co/estudio-de-inundabilidad-manizales/',
 }
 
 const METODOLOGIA = [

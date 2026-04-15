@@ -22,7 +22,7 @@ const seoConfig = {
     'cuenca Río Chinchiná modelación',
     'BIC ingeniería hidráulica',
   ],
-  canonical: 'https://www.ingenieriabernal.co/modelacion-hidraulica-manizales/',
+  canonical: 'https://ingenieriabernal.co/modelacion-hidraulica-manizales/',
 }
 
 const TIPOS = [

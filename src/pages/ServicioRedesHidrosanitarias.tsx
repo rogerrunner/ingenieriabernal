@@ -22,7 +22,7 @@ const seoConfig = {
     'redes hidrosanitarias industriales',
     'diseño hidrosanitario constructoras',
   ],
-  canonical: 'https://www.ingenieriabernal.co/servicios/redes-hidrosanitarias',
+  canonical: 'https://ingenieriabernal.co/servicios/redes-hidrosanitarias',
 }
 
 const INCLUYE = [

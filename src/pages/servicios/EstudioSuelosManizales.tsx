@@ -22,7 +22,7 @@ const seoConfig = {
     'cimentación edificio Manizales',
     'estabilidad taludes Caldas',
   ],
-  canonical: 'https://www.ingenieriabernal.co/estudio-de-suelos-manizales/',
+  canonical: 'https://ingenieriabernal.co/estudio-de-suelos-manizales/',
 }
 
 const PROCESO = [

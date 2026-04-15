@@ -19,7 +19,7 @@ const seoConfig = {
     'consultoría ingeniería Caldas',
     'interventoría hidráulica Manizales',
   ],
-  canonical: 'https://www.ingenieriabernal.co/regional/manizales',
+  canonical: 'https://ingenieriabernal.co/regional/manizales',
 }
 
 const SCHEMA = {
@@ -27,7 +27,7 @@ const SCHEMA = {
   '@type': 'LocalBusiness',
   name: 'BIC – Bernal Ingeniería Consultores',
   description: 'Consultoría en ingeniería hidráulica, sanitaria y ambiental con sede en Manizales, Caldas.',
-  url: 'https://www.ingenieriabernal.co',
+  url: 'https://ingenieriabernal.co',
   telephone: '+573024778910',
   email: 'rogeriobernal@ingenieriabernal.co',
   address: {
@@ -37,7 +37,7 @@ const SCHEMA = {
     addressCountry: 'CO',
   },
   areaServed: ['Manizales', 'Caldas', 'Eje Cafetero'],
-  hasMap: 'https://www.ingenieriabernal.co/regional/manizales',
+  hasMap: 'https://ingenieriabernal.co/regional/manizales',
 }
 
 const SERVICIOS = [

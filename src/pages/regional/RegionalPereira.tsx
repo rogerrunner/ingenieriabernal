@@ -19,7 +19,7 @@ const seoConfig = {
     'ingeniería hidráulica Risaralda',
     'consultoría técnica Pereira',
   ],
-  canonical: 'https://www.ingenieriabernal.co/regional/pereira',
+  canonical: 'https://ingenieriabernal.co/regional/pereira',
 }
 
 const SCHEMA = {
@@ -27,7 +27,7 @@ const SCHEMA = {
   '@type': 'LocalBusiness',
   name: 'BIC – Bernal Ingeniería Consultores',
   description: 'Consultoría en ingeniería hidráulica y sanitaria con presencia en Pereira, Risaralda.',
-  url: 'https://www.ingenieriabernal.co',
+  url: 'https://ingenieriabernal.co',
   telephone: '+573024778910',
   email: 'rogeriobernal@ingenieriabernal.co',
   address: {
@@ -37,7 +37,7 @@ const SCHEMA = {
     addressCountry: 'CO',
   },
   areaServed: ['Pereira', 'Risaralda', 'Dosquebradas', 'La Virginia'],
-  hasMap: 'https://www.ingenieriabernal.co/regional/pereira',
+  hasMap: 'https://ingenieriabernal.co/regional/pereira',
 }
 
 const SERVICIOS = [

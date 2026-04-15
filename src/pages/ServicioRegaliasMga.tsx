@@ -22,7 +22,7 @@ const seoConfig = {
     'formulación proyectos gestión riesgo SGR',
     'MGA Colombia municipios 2025',
   ],
-  canonical: 'https://www.ingenieriabernal.co/servicios/regalias-mga',
+  canonical: 'https://ingenieriabernal.co/servicios/regalias-mga',
 }
 
 const INCLUYE = [

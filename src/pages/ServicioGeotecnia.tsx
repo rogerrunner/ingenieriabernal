@@ -22,7 +22,7 @@ const seoConfig = {
     'análisis de asentamientos',
     'SPT Colombia',
   ],
-  canonical: 'https://www.ingenieriabernal.co/servicios/geotecnia',
+  canonical: 'https://ingenieriabernal.co/servicios/geotecnia',
 }
 
 const INCLUYE = [

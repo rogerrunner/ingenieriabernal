@@ -22,7 +22,7 @@ const seoConfig = {
     'Decreto 1807 2014',
     'RAS 2017 hidrología',
   ],
-  canonical: 'https://www.ingenieriabernal.co/servicios/estudios-hidrologicos',
+  canonical: 'https://ingenieriabernal.co/servicios/estudios-hidrologicos',
 }
 
 const INCLUYE = [

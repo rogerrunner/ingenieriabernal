@@ -22,7 +22,7 @@ const seoConfig = {
     'CORPOCALDAS permisos agua',
     'Decreto 2811 Código recursos naturales',
   ],
-  canonical: 'https://www.ingenieriabernal.co/servicios/ambiental',
+  canonical: 'https://ingenieriabernal.co/servicios/ambiental',
 }
 
 const INCLUYE = [

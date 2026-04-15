@@ -20,7 +20,7 @@ const seoConfig = {
     'asesoría técnica construcción Manizales',
     'COPNIA ingeniero Manizales',
   ],
-  canonical: 'https://www.ingenieriabernal.co/consultoria-ingenieria-civil-manizales/',
+  canonical: 'https://ingenieriabernal.co/consultoria-ingenieria-civil-manizales/',
 }
 
 const SERVICIOS = [

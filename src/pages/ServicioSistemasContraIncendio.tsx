@@ -22,7 +22,7 @@ const seoConfig = {
     'memoria sistema contra incendio licencia',
     'NFPA 13 Colombia',
   ],
-  canonical: 'https://www.ingenieriabernal.co/servicios/sistemas-contra-incendio',
+  canonical: 'https://ingenieriabernal.co/servicios/sistemas-contra-incendio',
 }
 
 const INCLUYE = [

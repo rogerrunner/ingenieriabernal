@@ -22,7 +22,7 @@ const seoConfig = {
     'perfiles hidráulicos',
     'flujo bidimensional',
   ],
-  canonical: 'https://www.ingenieriabernal.co/servicios/modelacion-hec-ras',
+  canonical: 'https://ingenieriabernal.co/servicios/modelacion-hec-ras',
 }
 
 const INCLUYE = [
