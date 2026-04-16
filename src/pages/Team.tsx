@@ -72,7 +72,7 @@ export default function Team() {
           <SectionLabel>Dirección Técnica</SectionLabel>
           <ThinLine />
           <div style={{ display: 'grid', gridTemplateColumns: 'auto 1fr', gap: '2.5rem', alignItems: 'start', marginTop: '1.5rem' }}>
-<img src="/foto-perfil.jpg" alt="Rogerio Bernal Rios" style={{ width: 140, height: 175, borderRadius: 8, objectFit: 'cover', objectPosition: 'center top', flexShrink: 0 }} />
+<img src="/foto-perfil.jpg" alt="Rogerio Bernal Ríos — Ingeniero Hidráulico y Ambiental, UNAL Manizales, COPNIA 17202-313228 CLD" style={{ width: 140, height: 175, borderRadius: 8, objectFit: 'cover', objectPosition: 'center top', flexShrink: 0 }} />
             <div>
               <div style={{ display: 'flex', alignItems: 'center', gap: '1rem', flexWrap: 'wrap', marginBottom: '0.4rem' }}>
                 <h2 style={{ fontFamily: "'Playfair Display', serif", fontSize: '1.7rem', fontWeight: 700, color: NAVY, margin: 0 }}>

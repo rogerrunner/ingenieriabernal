@@ -41,6 +41,47 @@ const PARA_QUIEN = [
   { tipo: 'Interventores técnicos', desc: 'Revisión independiente de modelos hidráulicos entregados por consultores de diseño y verificación de cumplimiento normativo.' },
 ]
 
+const TIPOS_PROYECTO = [
+  { icon: '🏛️', tipo: 'POT y EOT Municipales', desc: 'Componente de amenaza hídrica para planes de ordenamiento territorial: estudios básicos y detallados según Decreto 1807/2014.' },
+  { icon: '🏘️', tipo: 'Licencias Urbanísticas', desc: 'Estudios de riesgo obligatorios para planes parciales, urbanizaciones y construcciones en zonas de expansión con cauces cercanos.' },
+  { icon: '🛣️', tipo: 'Obras Viales e INVÍAS', desc: 'Diseño hidráulico de puentes, box-culverts y obras de drenaje longitudinal y transversal para carreteras y concesiones.' },
+  { icon: '💰', tipo: 'Proyectos de Regalías SGR', desc: 'Componente hidrológico e hidráulico para proyectos de agua y saneamiento formulados en MGA-Web ante el DNP.' },
+  { icon: '🌿', tipo: 'POMCA', desc: 'Modelaciones hidrológicas e hidráulicas para Planes de Ordenación y Manejo de Cuencas Hidrográficas de las CAR.' },
+  { icon: '🏗️', tipo: 'Defensa Civil y Mitigación', desc: 'Diseño de jarillones, diques, rectificaciones de cauces y obras de control de crecientes con comparación de escenarios.' },
+]
+
+const METODOLOGIA = [
+  { paso: '01', titulo: 'Levantamiento topobatimétrico', desc: 'Batimetría del cauce con equipos de precisión y levantamiento topográfico del área de inundación. Se generan secciones transversales y el MDT (Modelo Digital de Terreno) base del modelo.' },
+  { paso: '02', titulo: 'Análisis hidrológico HEC-HMS', desc: 'Cálculo de caudales máximos para períodos de retorno Tr 2.33, 10, 25, 50 y 100 años mediante HEC-HMS. Calibración con registros del IDEAM y correlación regional RAS 2017.' },
+  { paso: '03', titulo: 'Construcción del modelo HEC-RAS', desc: 'Importación del MDT a HEC-GEORAS / RAS Mapper. Definición de condiciones de frontera, coeficientes de Manning según uso del suelo y tipo de cauce, y geometría hidráulica.' },
+  { paso: '04', titulo: 'Calibración y validación', desc: 'Ajuste del modelo con eventos históricos documentados, imágenes satelitales de inundaciones pasadas o cotas de marcas de agua. Verificación de métricas de desempeño (NSE, RMSE).' },
+  { paso: '05', titulo: 'Corrida hidráulica y manchas de inundación', desc: 'Simulación de flujo permanente e impermanente (tránsito de creciente). Exportación de polígonos de inundación y calados para cada período de retorno como shapefiles SIG.' },
+  { paso: '06', titulo: 'Informe técnico y cartografía', desc: 'Elaboración del informe conforme a la Guía Técnica MVCT: memoria de cálculo, planos hidráulicos, mapa de amenaza alta/media/baja, archivos HEC-RAS y capas SIG entregables.' },
+]
+
+const FAQ_HECRAS = [
+  {
+    q: '¿Cuánto cuesta un estudio de modelación HEC-RAS en Colombia?',
+    a: 'Los honorarios dependen de la longitud del tramo, complejidad del cauce y si ya existe topobatimetría. Estudios básicos (municipio pequeño, 2–5 km de cauce, 1D) oscilan entre $8 y $20 millones COP. Modelos 2D para cuencas grandes o planes parciales complejos pueden superar los $40 millones. BIC entrega presupuesto detallado en menos de 24 horas hábiles, sin costo.',
+  },
+  {
+    q: '¿Cuánto tarda un estudio HEC-RAS completo?',
+    a: 'Un modelo 1D para POT o licencia urbanística, cuando ya existe información topohidrológica disponible, puede entregarse en 3 a 5 semanas. Cuando se requiere levantamiento topobatimétrico propio, el plazo típico es de 6 a 10 semanas. Modelos 2D para cuencas grandes con calibración completa: entre 8 y 14 semanas. BIC establece el cronograma detallado en la propuesta.',
+  },
+  {
+    q: '¿Qué información se necesita para iniciar un estudio HEC-RAS?',
+    a: 'Lo mínimo requerido: nombre del cauce, coordenadas del tramo a modelar, objetivo del estudio (POT, licencia, diseño de obra) y si hay topobatimetría disponible. BIC puede realizar el levantamiento topobatimétrico si no existe. Con esa información inicial, se elabora la propuesta técnica y económica en 24 horas.',
+  },
+  {
+    q: '¿Qué diferencia hace usar HEC-RAS 2D en lugar de 1D?',
+    a: 'HEC-RAS 1D es suficiente para cauces bien definidos con planicie de inundación simple: ríos rectos, secciones regulares, llanuras con flujo predominantemente unidimensional. HEC-RAS 2D es obligatorio cuando el flujo se distribuye en múltiples direcciones sobre una planicie: zonas urbanas inundables, confluencias, quebradas en cono de deyección o torrencial, planes parciales con topografía compleja. La malla computacional 2D captura la dinámica real del flujo y produce manchas de amenaza más precisas — lo que reduce el riesgo de litigios por clasificación incorrecta de zonas.',
+  },
+  {
+    q: '¿La modelación HEC-RAS aplica para ríos pequeños o quebradas?',
+    a: 'Sí — la mayoría de los eventos de inundación en Colombia ocurren en quebradas y ríos de cuencas menores de 100 km². HEC-RAS 1D y 2D son aplicables desde cauces de 1 km de longitud. Para quebradas con alta pendiente y comportamiento torrencial (flujo hiperconcentrado), BIC complementa el análisis con metodología de Iber o TETIS para estimar el potencial de daño y las zonas de amenaza alta.',
+  },
+]
+
 export default function ServicioModelacionHecRas() {
   useEffect(() => { window.scrollTo(0, 0) }, [])
 
@@ -154,6 +195,87 @@ export default function ServicioModelacionHecRas() {
         </div>
       </Section>
 
+      {/* ── TIPOS DE PROYECTO ── */}
+      <Section bg="#F8FAFC" style={{ padding: '72px 24px' }}>
+        <div style={{ maxWidth: 900, margin: '0 auto' }}>
+          <SectionLabel>Aplicaciones</SectionLabel>
+          <h2 style={{ fontFamily: "'Playfair Display', serif", fontWeight: 700, color: '#001A33', fontSize: 'clamp(22px, 4vw, 32px)', marginBottom: 8 }}>
+            ¿Para qué tipo de proyectos se requiere HEC-RAS en Colombia?
+          </h2>
+          <ThinLine mb={40} />
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(270px, 1fr))', gap: 20 }}>
+            {TIPOS_PROYECTO.map(t => (
+              <div key={t.tipo} style={{ padding: '20px 22px', background: '#fff', border: '1px solid #E2E8F0', borderRadius: 4, display: 'flex', gap: 14, alignItems: 'flex-start' }}>
+                <span style={{ fontSize: 24, flexShrink: 0 }}>{t.icon}</span>
+                <div>
+                  <h3 style={{ fontFamily: "'Montserrat', sans-serif", fontWeight: 700, fontSize: 13, color: '#001A33', margin: '0 0 6px' }}>{t.tipo}</h3>
+                  <p style={{ fontFamily: "'Lato', sans-serif", color: '#475569', fontSize: 13, lineHeight: 1.6, margin: 0 }}>{t.desc}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </Section>
+
+      {/* ── METODOLOGÍA ── */}
+      <Section bg="#fff" style={{ padding: '72px 24px' }}>
+        <div style={{ maxWidth: 900, margin: '0 auto' }}>
+          <SectionLabel>Proceso de trabajo</SectionLabel>
+          <h2 style={{ fontFamily: "'Playfair Display', serif", fontWeight: 700, color: '#001A33', fontSize: 'clamp(22px, 4vw, 32px)', marginBottom: 8 }}>
+            Metodología: de la topobatimetría al mapa de amenaza
+          </h2>
+          <ThinLine mb={40} />
+          <div style={{ display: 'flex', flexDirection: 'column', gap: 0 }}>
+            {METODOLOGIA.map((m, i) => (
+              <div key={m.paso} style={{ display: 'grid', gridTemplateColumns: '56px 1fr', gap: 20, padding: '20px 0', borderBottom: i < METODOLOGIA.length - 1 ? '1px solid #F1F5F9' : 'none' }}>
+                <div style={{ background: '#003B6F', borderRadius: 8, display: 'flex', alignItems: 'center', justifyContent: 'center', height: 48, fontFamily: "'Montserrat', sans-serif", fontWeight: 800, color: '#17A2B8', fontSize: 16 }}>
+                  {m.paso}
+                </div>
+                <div>
+                  <h3 style={{ fontFamily: "'Montserrat', sans-serif", fontWeight: 700, color: '#001A33', fontSize: 14, margin: '0 0 6px' }}>{m.titulo}</h3>
+                  <p style={{ fontFamily: "'Lato', sans-serif", color: '#475569', fontSize: 14, lineHeight: 1.65, margin: 0 }}>{m.desc}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </Section>
+
+      {/* ── 1D VS 2D ── */}
+      <Section bg="#EEF6FB" style={{ padding: '72px 24px' }}>
+        <div style={{ maxWidth: 900, margin: '0 auto' }}>
+          <SectionLabel>Comparativa técnica</SectionLabel>
+          <h2 style={{ fontFamily: "'Playfair Display', serif", fontWeight: 700, color: '#001A33', fontSize: 'clamp(22px, 4vw, 32px)', marginBottom: 8 }}>
+            HEC-RAS 1D vs 2D: ¿cuál necesita su proyecto?
+          </h2>
+          <ThinLine mb={40} />
+          <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 24 }}>
+            <div style={{ background: '#fff', border: '1px solid #E2E8F0', borderTop: '3px solid #0077B6', borderRadius: 4, padding: 28 }}>
+              <h3 style={{ fontFamily: "'Montserrat', sans-serif", fontWeight: 700, color: '#0077B6', fontSize: 15, marginBottom: 14 }}>HEC-RAS 1D — Flujo unidimensional</h3>
+              <ul style={{ fontFamily: "'Lato', sans-serif", color: '#475569', fontSize: 14, lineHeight: 1.8, paddingLeft: 18, margin: 0 }}>
+                <li>Cauces con sección transversal bien definida</li>
+                <li>Ríos con planicie de inundación simple</li>
+                <li>Tramos rectos sin bifurcaciones complejas</li>
+                <li>POT municipios pequeños con cauces rurales</li>
+                <li>Menor costo y tiempo de elaboración</li>
+                <li>Suficiente para cumplir Decreto 1807 en muchos casos</li>
+              </ul>
+            </div>
+            <div style={{ background: '#fff', border: '1px solid #E2E8F0', borderTop: '3px solid #17A2B8', borderRadius: 4, padding: 28 }}>
+              <h3 style={{ fontFamily: "'Montserrat', sans-serif", fontWeight: 700, color: '#17A2B8', fontSize: 15, marginBottom: 14 }}>HEC-RAS 2D — Flujo bidimensional</h3>
+              <ul style={{ fontFamily: "'Lato', sans-serif", color: '#475569', fontSize: 14, lineHeight: 1.8, paddingLeft: 18, margin: 0 }}>
+                <li>Zonas urbanas con flujo en múltiples direcciones</li>
+                <li>Quebradas torrenciales en conos de deyección</li>
+                <li>Confluencias y bifurcaciones de cauces</li>
+                <li>Planes parciales con topografía compleja</li>
+                <li>Cuencas de gran extensión con llanuras amplias</li>
+                <li>Mayor precisión en manchas de amenaza — menor riesgo de litigios</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </Section>
+
       {/* ── POR QUÉ BIC ── */}
       <Section bg="#001A33" style={{ padding: '72px 24px' }}>
         <BlueprintBg opacity={0.05} />
@@ -183,6 +305,25 @@ export default function ServicioModelacionHecRas() {
                 <p style={{
                   fontFamily: "'Lato', sans-serif", color: 'rgba(255,255,255,0.72)', fontSize: 14, lineHeight: 1.65,
                 }}>{d.desc}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </Section>
+
+      {/* ── FAQ ── */}
+      <Section bg="#F8FAFC" style={{ padding: '72px 24px' }}>
+        <div style={{ maxWidth: 860, margin: '0 auto' }}>
+          <SectionLabel>Preguntas frecuentes</SectionLabel>
+          <h2 style={{ fontFamily: "'Playfair Display', serif", fontWeight: 700, color: '#001A33', fontSize: 'clamp(22px, 4vw, 32px)', marginBottom: 8 }}>
+            Preguntas frecuentes sobre modelación HEC-RAS en Colombia
+          </h2>
+          <ThinLine mb={40} />
+          <div style={{ display: 'flex', flexDirection: 'column', gap: 16 }}>
+            {FAQ_HECRAS.map((faq, i) => (
+              <div key={i} style={{ background: '#fff', border: '1px solid #E2E8F0', borderRadius: 4, padding: '22px 26px' }}>
+                <h3 style={{ fontFamily: "'Montserrat', sans-serif", fontWeight: 700, color: '#001A33', fontSize: 14, margin: '0 0 10px', lineHeight: 1.4 }}>{faq.q}</h3>
+                <p style={{ fontFamily: "'Lato', sans-serif", color: '#475569', fontSize: 14, lineHeight: 1.7, margin: 0 }}>{faq.a}</p>
               </div>
             ))}
           </div>
