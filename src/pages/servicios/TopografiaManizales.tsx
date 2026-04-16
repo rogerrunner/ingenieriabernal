@@ -20,7 +20,7 @@ const seoConfig = {
     'MDT modelo digital terreno Manizales',
     'MAGNA-SIRGAS Colombia topografía',
   ],
-  canonical: 'https://ingenieriabernal.co/topografia-manizales/',
+  canonical: 'https://ingenieriabernal.co/topografia-manizales',
 }
 
 const TIPOS_LEVANTAMIENTO = [
