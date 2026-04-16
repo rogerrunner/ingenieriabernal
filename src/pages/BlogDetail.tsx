@@ -294,6 +294,9 @@ const SERVICE_LINKS: Record<string, { label: string; href: string }> = {
   'irca-municipio-colombia':                         { label: 'Acueducto y Alcantarillado',             href: '/servicios/acueducto-alcantarillado' },
   'mga-web-regalias-agua-potable':                   { label: 'Formulación MGA / Regalías SGR',         href: '/servicios/regalias-mga' },
   'hec-ras-2d-modelacion-hidraulica-colombia':       { label: 'Modelación Hidráulica HEC-RAS 2D',       href: '/servicios/modelacion-hec-ras' },
+  'cuando-se-requiere-hec-ras-colombia':             { label: 'Modelación Hidráulica HEC-RAS 2D',       href: '/servicios/modelacion-hec-ras' },
+  'diseno-redes-hidrosanitarias-nsr-10-colombia':    { label: 'Redes Hidrosanitarias NSR-10',            href: '/servicios/redes-hidrosanitarias' },
+  'estudio-amenaza-inundaciones-pot-colombia':        { label: 'Gestión del Riesgo Hídrico',              href: '/gestion-riesgo-hidrico' },
 }
 
 // ─── LAYOUT COMPONENTS ──────────────────────────────────────────────────────

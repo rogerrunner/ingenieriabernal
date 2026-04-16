@@ -17,15 +17,15 @@ const DIFFERENTIATORS = [
 ]
 
 const SERVICES_PREVIEW = [
-  { icon: '💧', title: 'Hidrosanitario y CI', desc: 'NSR-10 J/K · NTC 1500/1669/2301', href: '/servicios' },
-  { icon: '🌊', title: 'Modelación HEC-RAS 2D', desc: 'Inundaciones · Torrencialidad · Riesgo', href: '/servicios' },
-  { icon: '🔧', title: 'Acueducto y Alcantarillado', desc: 'Res. 0330/2017 · EPANET · RAS 2017', href: '/servicios' },
-  { icon: '⚠️', title: 'Gestión del Riesgo / POT', desc: 'Decreto 1807/2014 · ArcGIS · POMCA', href: '/servicios' },
-  { icon: '🏭', title: 'PTAP y PTAR', desc: 'Plantas tratamiento agua potable y residual', href: '/servicios' },
+  { icon: '💧', title: 'Hidrosanitario y CI', desc: 'NSR-10 J/K · NTC 1500/1669/2301', href: '/servicios/redes-hidrosanitarias' },
+  { icon: '🌊', title: 'Modelación HEC-RAS 2D', desc: 'Inundaciones · Torrencialidad · Riesgo', href: '/servicios/modelacion-hec-ras' },
+  { icon: '🔧', title: 'Acueducto y Alcantarillado', desc: 'Res. 0330/2017 · EPANET · RAS 2017', href: '/servicios/acueducto-alcantarillado' },
+  { icon: '⚠️', title: 'Gestión del Riesgo / POT', desc: 'Decreto 1807/2014 · ArcGIS · POMCA', href: '/gestion-riesgo-hidrico' },
+  { icon: '🏭', title: 'PTAP y PTAR', desc: 'Plantas tratamiento agua potable y residual', href: '/servicios/diseno-acueductos' },
   { icon: '📐', title: 'Topobatimetría', desc: 'Levantamientos · MDT · Secciones HEC-RAS', href: '/servicios' },
-  { icon: '📋', title: 'Regalías MGA-Web', desc: 'Formulación SGR · Municipios · Agua', href: '/servicios' },
-  { icon: '🌿', title: 'Ingeniería Ambiental', desc: 'CAR · CORPOCALDAS · CARDER · EIA', href: '/servicios' },
-  { icon: '🏗️', title: 'Residencia e Interventoría', desc: 'Supervisión técnica obras hidráulicas', href: '/servicios' },
+  { icon: '📋', title: 'Regalías MGA-Web', desc: 'Formulación SGR · Municipios · Agua', href: '/servicios/regalias-mga' },
+  { icon: '🌿', title: 'Ingeniería Ambiental', desc: 'CAR · CORPOCALDAS · CARDER · EIA', href: '/servicios/ambiental' },
+  { icon: '🏗️', title: 'Residencia e Interventoría', desc: 'Supervisión técnica obras hidráulicas', href: '/servicios/interventoria' },
 ]
 
 const CLIENTS = [

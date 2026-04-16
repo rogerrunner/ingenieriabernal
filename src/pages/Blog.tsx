@@ -101,6 +101,33 @@ const POSTS = [
     readTime: '12 min',
     color: '#17A2B8',
   },
+  {
+    slug: 'cuando-se-requiere-hec-ras-colombia',
+    title: '¿Cuándo se requiere modelación hidráulica HEC-RAS en Colombia? Guía normativa completa',
+    excerpt: 'Guía normativa completa sobre cuándo es obligatorio el modelo hidráulico HEC-RAS: POT, licencias de urbanismo, RAS 2017, Decreto 1807/2014 y Ley 1523/2012. Diferencias 1D vs 2D y entregables.',
+    category: 'Software y Modelación',
+    date: 'Abril 2026',
+    readTime: '13 min',
+    color: '#17A2B8',
+  },
+  {
+    slug: 'diseno-redes-hidrosanitarias-nsr-10-colombia',
+    title: 'Diseño de redes hidrosanitarias según NSR-10: requisitos, normas y proceso paso a paso',
+    excerpt: 'Método Hunter, NTC 1500, sistemas de presión y documentos para licencia de construcción. Guía técnica completa para diseño hidrosanitario en Colombia.',
+    category: 'Agua y Saneamiento',
+    date: 'Abril 2026',
+    readTime: '12 min',
+    color: '#0077B6',
+  },
+  {
+    slug: 'estudio-amenaza-inundaciones-pot-colombia',
+    title: 'Estudios de amenaza por inundaciones para planes de ordenamiento territorial (POT) en Colombia',
+    excerpt: 'Decreto 1807/2014 y Ley 388/1997: cómo se hacen los estudios de amenaza hídrica para POT. Metodología HEC-RAS 2D, categorías de amenaza e integración al ordenamiento territorial.',
+    category: 'Riesgo Hídrico',
+    date: 'Abril 2026',
+    readTime: '13 min',
+    color: '#E63946',
+  },
 ]
 
 export default function Blog() {

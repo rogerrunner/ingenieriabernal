@@ -464,6 +464,33 @@ export default function GestionRiesgoHidrico() {
         </div>
       </Section>
 
+      {/* ── SERVICIOS RELACIONADOS ── */}
+      <Section bg="#EFF6FB" style={{ padding: '48px 24px' }}>
+        <div style={{ maxWidth: 860, margin: '0 auto' }}>
+          <p style={{ fontFamily: "'Montserrat', sans-serif", fontWeight: 700, color: '#003B6F', fontSize: 13, letterSpacing: '0.08em', textTransform: 'uppercase', marginBottom: 20 }}>
+            Servicios relacionados
+          </p>
+          <div style={{ display: 'flex', gap: 16, flexWrap: 'wrap' }}>
+            <a href="/servicios/modelacion-hec-ras" style={{ flex: '1 1 220px', background: '#fff', border: '1px solid #E2E8F0', borderRadius: 4, padding: '18px 20px', textDecoration: 'none' }}>
+              <span style={{ fontFamily: "'Playfair Display', serif", fontWeight: 700, color: '#003B6F', fontSize: 14, display: 'block', lineHeight: 1.35 }}>Modelación hidráulica HEC-RAS 2D para manchas de inundación por período de retorno</span>
+              <span style={{ fontFamily: "'Lato', sans-serif", color: '#17A2B8', fontSize: 12, marginTop: 8, display: 'block' }}>Ver servicio →</span>
+            </a>
+            <a href="/servicios/estudios-hidrologicos" style={{ flex: '1 1 220px', background: '#fff', border: '1px solid #E2E8F0', borderRadius: 4, padding: '18px 20px', textDecoration: 'none' }}>
+              <span style={{ fontFamily: "'Playfair Display', serif", fontWeight: 700, color: '#003B6F', fontSize: 14, display: 'block', lineHeight: 1.35 }}>Estudios hidrológicos con HEC-HMS — caudales máximos para períodos de retorno</span>
+              <span style={{ fontFamily: "'Lato', sans-serif", color: '#17A2B8', fontSize: 12, marginTop: 8, display: 'block' }}>Ver servicio →</span>
+            </a>
+            <a href="/servicios/regalias-mga" style={{ flex: '1 1 220px', background: '#fff', border: '1px solid #E2E8F0', borderRadius: 4, padding: '18px 20px', textDecoration: 'none' }}>
+              <span style={{ fontFamily: "'Playfair Display', serif", fontWeight: 700, color: '#003B6F', fontSize: 14, display: 'block', lineHeight: 1.35 }}>Formulación de proyectos de gestión del riesgo en MGA-Web para el SGR</span>
+              <span style={{ fontFamily: "'Lato', sans-serif", color: '#17A2B8', fontSize: 12, marginTop: 8, display: 'block' }}>Ver servicio →</span>
+            </a>
+            <a href="/servicios/geotecnia" style={{ flex: '1 1 220px', background: '#fff', border: '1px solid #E2E8F0', borderRadius: 4, padding: '18px 20px', textDecoration: 'none' }}>
+              <span style={{ fontFamily: "'Playfair Display', serif", fontWeight: 700, color: '#003B6F', fontSize: 14, display: 'block', lineHeight: 1.35 }}>Estudios geotécnicos y de suelos para obras de mitigación y defensas fluviales</span>
+              <span style={{ fontFamily: "'Lato', sans-serif", color: '#17A2B8', fontSize: 12, marginTop: 8, display: 'block' }}>Ver servicio →</span>
+            </a>
+          </div>
+        </div>
+      </Section>
+
       {/* ── CTA FINAL ── */}
       <Section bg="#17A2B8" style={{ padding: '64px 24px', textAlign: 'center' }}>
         <div style={{ maxWidth: 680, margin: '0 auto' }}>
