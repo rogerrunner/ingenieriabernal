@@ -7,7 +7,7 @@ const WA_MSG = encodeURIComponent('Hola, quiero cotizar Sistema Contra Incendio 
 
 const seoConfig = {
   title: 'Sistemas Contra Incendio NSR-10 Colombia | BIC Bernal Ingeniería Consultores',
-  description: 'Diseño de sistemas contra incendio NSR-10 Títulos J y K para edificios, centros comerciales, plantas industriales y bodegas en Colombia. NFPA, rociadores, hidrantes. Director PhD. +30 años.',
+  description: 'Diseño de sistemas contra incendio NSR-10 Títulos J y K para edificios, centros comerciales, plantas industriales y bodegas en Colombia. NFPA, rociadores, hidrantes. COPNIA 17202-313228.',
   keywords: [
     'sistemas contra incendio NSR-10 Colombia',
     'diseño sistema contra incendio Colombia',
@@ -74,8 +74,8 @@ export default function ServicioSistemasContraIncendio() {
             red de hidrantes, sistemas de detección y sistemas especiales de extinción. Nuestros
             diseños están firmados por especialista certificado, incluyen memorias hidráulicas detalladas
             y documentación completa para trámite ante curadurías urbanas, SDSCJ o cualquier entidad
-            competente. Con más de 30 años de experiencia y director PhD, hemos diseñado los sistemas
-            CI de proyectos como el Makarí Mall en Dosquebradas y múltiples edificios en el Eje Cafetero.
+            competente. Rogerio Bernal Ríos, Especialista UNAL con COPNIA 17202-313228, ha diseñado
+            los sistemas CI de proyectos como el Makarí Mall en Dosquebradas y múltiples edificios en el Eje Cafetero.
           </p>
           <div style={{ display: 'flex', gap: 12, flexWrap: 'wrap' }}>
             <Btn href={`https://wa.me/${WA}?text=${WA_MSG}`}>
@@ -168,7 +168,7 @@ export default function ServicioSistemasContraIncendio() {
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(240px, 1fr))', gap: 24 }}>
             {[
               { icon: '🏆', titulo: 'Proyecto Makarí Mall ejecutado', desc: 'Diseño CI verificado en un centro comercial de gran escala en Dosquebradas, Risaralda. Referencia disponible para inspección por parte del contratante.' },
-              { icon: '🎓', titulo: 'Especialista PhD con COPNIA vigente', desc: 'Director con doctorado en ingeniería, tarjeta COPNIA activa y amplio conocimiento de la NSR-10 Títulos J y K y sus referencias NFPA.' },
+              { icon: '🎓', titulo: 'Especialista UNAL · COPNIA 17202-313228', desc: 'Rogerio Bernal Ríos, Especialista en Ingeniería Hidráulica y Ambiental (UNAL), tarjeta COPNIA activa y amplio conocimiento de la NSR-10 Títulos J y K y sus referencias NFPA.' },
               { icon: '📋', titulo: 'Documentación para cualquier curaduría', desc: 'Planos, memorias y especificaciones en formato y detalle requeridos por las 10 principales curadurías urbanas de Colombia.' },
               { icon: '🔗', titulo: 'Diseño integrado con hidrosanitarios', desc: 'BIC diseña simultáneamente las redes hidrosanitarias y el sistema CI, evitando interferencias, optimizando el abastecimiento de agua y reduciendo costos.' },
             ].map(d => (

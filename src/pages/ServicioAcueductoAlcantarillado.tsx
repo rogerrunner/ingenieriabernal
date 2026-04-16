@@ -7,7 +7,7 @@ const WA_MSG = encodeURIComponent('Hola, quiero cotizar Diseño de Acueducto y A
 
 const seoConfig = {
   title: 'Diseño Acueducto y Alcantarillado Colombia | BIC Bernal Ingeniería Consultores',
-  description: 'Diseño de acueductos y alcantarillados para municipios y constructoras en Colombia. RAS 2017, Resolución 0330/2017. Redes de distribución, colectores, PTAP, PTAR. Director PhD. +30 años.',
+  description: 'Diseño de acueductos y alcantarillados para municipios y constructoras en Colombia. RAS 2017, Resolución 0330/2017. Redes de distribución, colectores, PTAP, PTAR. Especialista UNAL. COPNIA 17202-313228.',
   keywords: [
     'diseño acueducto alcantarillado Colombia',
     'diseño acueducto municipal Colombia',
@@ -73,9 +73,9 @@ export default function ServicioAcueductoAlcantarillado() {
             Resolución 0330/2017. Desde la captación hasta la planta de tratamiento, desde los colectores
             sanitarios hasta el emisario final, entregamos documentación técnica completa —memorias,
             planos, presupuestos y especificaciones— apta para licitación, contratación directa y
-            aprobación ante el Ministerio de Vivienda. Nuestro director PhD con más de 30 años de
-            experiencia ha diseñado sistemas de agua en más de 20 municipios del Eje Cafetero y
-            otras regiones de Colombia.
+            aprobación ante el Ministerio de Vivienda. Rogerio Bernal Ríos, Especialista en
+            Ingeniería Hidráulica y Ambiental (UNAL) con matrícula COPNIA 17202-313228, ha diseñado
+            sistemas de agua en más de 20 municipios del Eje Cafetero y otras regiones de Colombia.
           </p>
           <div style={{ display: 'flex', gap: 12, flexWrap: 'wrap' }}>
             <Btn href={`https://wa.me/${WA}?text=${WA_MSG}`}>
@@ -167,7 +167,7 @@ export default function ServicioAcueductoAlcantarillado() {
           <ThinLine mb={40} />
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(240px, 1fr))', gap: 24 }}>
             {[
-              { icon: '🎓', titulo: '+30 años diseñando sistemas de agua', desc: 'Experiencia directa en más de 20 municipios colombianos con proyectos ejecutados y verificables de acueducto, alcantarillado y saneamiento básico.' },
+              { icon: '🎓', titulo: 'Especialista UNAL · COPNIA vigente', desc: 'Rogerio Bernal Ríos, Especialista en Ingeniería Hidráulica y Ambiental (UNAL), con +10 años de experiencia verificable en más de 20 municipios colombianos. Matrícula COPNIA 17202-313228 CLD activa.' },
               { icon: '📜', titulo: 'RAS 2017 y Res. 0330 sin observaciones', desc: 'Diseños estructurados desde el inicio para pasar la revisión técnica del Ministerio de Vivienda, SSPD y entidades financiadoras sin reprocesos.' },
               { icon: '🗺️', titulo: 'Cobertura nacional desde el Eje Cafetero', desc: 'Base en Manizales con desplazamientos a todo el país. Proyectos en Caldas, Risaralda, Quindío, Cundinamarca, Santander, Boyacá y más departamentos.' },
               { icon: '📊', titulo: 'Entrega integral lista para contratar', desc: 'Documentación completa: memorias, planos DWG/PDF, presupuesto con APU, programa de obra y especificaciones técnicas listas para pliegos o acta de inicio.' },
@@ -187,6 +187,56 @@ export default function ServicioAcueductoAlcantarillado() {
               </div>
             ))}
           </div>
+        </div>
+      </Section>
+
+      {/* ── FAQ ── */}
+      <Section bg="#fff" style={{ padding: '72px 24px' }}>
+        <div style={{ maxWidth: 860, margin: '0 auto' }}>
+          <SectionLabel>Preguntas frecuentes</SectionLabel>
+          <h2 style={{
+            fontFamily: "'Playfair Display', serif", fontWeight: 700, color: '#001A33',
+            fontSize: 'clamp(22px, 4vw, 32px)', marginBottom: 8,
+          }}>Preguntas sobre diseño de acueducto y alcantarillado</h2>
+          <ThinLine mb={40} />
+          {[
+            {
+              q: '¿Qué normativa aplica para el diseño de acueductos en Colombia?',
+              a: 'El Reglamento Técnico del Sector de Agua Potable y Saneamiento Básico (RAS 2017), adoptado mediante la Resolución 0330 de 2017 del Ministerio de Vivienda, Ciudad y Territorio, es la norma principal. Complementariamente aplican la Ley 142 de 1994 (servicios públicos domiciliarios) y las guías técnicas del MVCT para diseño de PTAP y PTAR. En zonas rurales aplica la Resolución 844 de 2018.',
+            },
+            {
+              q: '¿Qué diferencia hay entre un acueducto urbano y un acueducto rural?',
+              a: 'Los acueductos urbanos sirven poblaciones superiores a 2.500 habitantes con presiones de servicio, medición individual y continuidad del servicio conforme al RAS 2017 Título B. Los acueductos rurales atienden corregimientos y veredas con dotaciones menores, sistemas de distribución más simples y, en muchos casos, fuente de agua superficial o subterránea de menor caudal. La Resolución 844 de 2018 regula los sistemas rurales de agua potable.',
+            },
+            {
+              q: '¿Cuándo se requiere diseño de PTAP o PTAR?',
+              a: 'Una Planta de Tratamiento de Agua Potable (PTAP) es obligatoria cuando la fuente de captación no cumple los criterios de agua lista para consumo humano del Decreto 1575 de 2007. Una PTAR es obligatoria cuando el efluente del sistema de alcantarillado descarga a una fuente hídrica y debe cumplir los límites de la Resolución 631 de 2015 del MADS. Todo proyecto de saneamiento financiado con recursos públicos o regalías debe incluir el tratamiento correspondiente.',
+            },
+            {
+              q: '¿Cuánto tiempo tarda el diseño de un sistema de acueducto municipal?',
+              a: 'Para un municipio pequeño (hasta 5.000 usuarios), el proceso típicamente toma entre 6 y 10 semanas: 2 semanas de recopilación de datos y visita de campo, 3-4 semanas de cálculos hidráulicos y modelación, y 2-3 semanas de elaboración de planos, memorias y presupuesto. Proyectos que requieren PTAP o diseños de PTAR tienen plazos adicionales de 4-6 semanas por la complejidad del dimensionamiento de unidades de tratamiento.',
+            },
+            {
+              q: '¿Qué documentos entrega BIC al finalizar el diseño?',
+              a: 'La entrega incluye: (1) Memoria hidráulica de cálculo en PDF y Excel, con todo el dimensionamiento documentado; (2) Planos constructivos en DWG y PDF (planimetría general, perfiles de redes, detalles de obras especiales); (3) Especificaciones técnicas de construcción; (4) Presupuesto con análisis de precios unitarios (APU); (5) Programa de obra; (6) Informe técnico ejecutivo con justificación de alternativas. Toda la documentación está firmada y sellada con tarjeta COPNIA.',
+            },
+          ].map(({ q, a }) => (
+            <details key={q} style={{
+              borderBottom: '1px solid #E2E8F0', paddingBottom: 20, marginBottom: 20,
+            }}>
+              <summary style={{
+                fontFamily: "'Montserrat', sans-serif", fontWeight: 700, color: '#002A50',
+                fontSize: 15, cursor: 'pointer', paddingBottom: 12, listStyle: 'none',
+                display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start',
+              }}>
+                {q}
+              </summary>
+              <p style={{
+                fontFamily: "'Lato', sans-serif", color: '#475569', fontSize: 15,
+                lineHeight: 1.75, marginTop: 8,
+              }}>{a}</p>
+            </details>
+          ))}
         </div>
       </Section>
 

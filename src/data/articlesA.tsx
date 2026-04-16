@@ -42,7 +42,7 @@ const articlesA: Record<string, {
       <h2>Cómo seleccionar la firma consultora adecuada</h2>
       <p>Un estudio hidrológico bien hecho requiere experiencia específica en la región, acceso a datos históricos de estaciones del IDEAM, software especializado calibrado y un equipo con formación en hidrología aplicada. Al solicitar propuestas, verifique que la firma pueda mostrar estudios similares realizados en cuencas de la misma región, y que su propuesta incluya un plan de trabajo con fuentes de datos identificadas —no un cronograma genérico.</p>
       <p>Desconfíe de propuestas de muy bajo costo que no especifican la metodología de análisis de frecuencias ni las estaciones del IDEAM que se consultarán. En hidrología, los resultados dependen directamente de la calidad de los datos y del criterio técnico en su interpretación.</p>
-      <p><strong>¿Su municipio o proyecto requiere un estudio hidrológico certificado?</strong> BIC cuenta con 30 años de experiencia en cuencas del Eje Cafetero y ha elaborado estudios para proyectos de acueducto, alcantarillado, licencias ambientales y planes de ordenamiento en Caldas, Risaralda y Quindío. <strong>Contáctenos: ingenieriabernal.co | WhatsApp +57 302 477 8910</strong></p>
+      <p><strong>¿Su municipio o proyecto requiere un estudio hidrológico certificado?</strong> BIC cuenta con más de 10 años de experiencia en cuencas del Eje Cafetero y ha elaborado estudios para proyectos de acueducto, alcantarillado, licencias ambientales y planes de ordenamiento en Caldas, Risaralda y Quindío. <strong>Contáctenos: ingenieriabernal.co | WhatsApp +57 302 477 8910</strong></p>
     </>,
   },
 
@@ -81,7 +81,7 @@ const articlesA: Record<string, {
       <h2>Implicaciones para diseño de infraestructura hidráulica</h2>
       <p>Las condiciones hidrológicas del Eje Cafetero imponen consideraciones de diseño específicas que no se aplican a cuencas de llanura: el tiempo de concentración de las cuencas de montaña es muy corto (2–8 horas para cuencas de 50–200 km²), lo que significa que las crecientes se desarrollan con gran velocidad. Un diseñador que use metodologías calibradas para cuencas planas subestimará los caudales de diseño y expondrá la infraestructura a fallas prematuras.</p>
       <p>Los coeficientes de escorrentía en suelos de ceniza volcánica saturada pueden llegar a 0,8–0,9 durante eventos de lluvia intensa sobre suelo húmedo. El uso de tablas genéricas de coeficientes sin análisis de la condición antecedente de humedad es uno de los errores más comunes y costosos en los estudios hidrológicos de la región.</p>
-      <p><strong>¿Necesita análisis hidrológico específico para cuencas del Eje Cafetero?</strong> BIC cuenta con datos históricos, modelos calibrados y más de tres décadas de experiencia en ríos de Caldas, Risaralda y Quindío. <strong>Contáctenos: ingenieriabernal.co | WhatsApp +57 302 477 8910</strong></p>
+      <p><strong>¿Necesita análisis hidrológico específico para cuencas del Eje Cafetero?</strong> BIC cuenta con datos históricos, modelos calibrados y más de 10 años de experiencia en ríos de Caldas, Risaralda y Quindío. <strong>Contáctenos: ingenieriabernal.co | WhatsApp +57 302 477 8910</strong></p>
     </>,
   },
 

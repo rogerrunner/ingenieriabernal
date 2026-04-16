@@ -7,7 +7,7 @@ const WA_MSG = encodeURIComponent('Hola, quiero cotizar Estudios Hidrológicos')
 
 const seoConfig = {
   title: 'Estudios Hidrológicos Colombia | BIC Bernal Ingeniería Consultores',
-  description: 'Estudios hidrológicos para municipios, constructoras y entidades públicas en Colombia. Análisis de cuencas, curvas IDF, caudales de diseño, periodos de retorno. Director PhD. +30 años experiencia. Eje Cafetero.',
+  description: 'Estudios hidrológicos para municipios, constructoras y entidades públicas en Colombia. Análisis de cuencas, curvas IDF, caudales de diseño, periodos de retorno. COPNIA 17202-313228. Eje Cafetero.',
   keywords: [
     'estudios hidrológicos Colombia',
     'estudio hidrológico municipios',
@@ -72,9 +72,9 @@ export default function ServicioEstudiosHidrologicos() {
             y cumplimiento normativo total. Caracterizamos cuencas hidrográficas, construimos curvas IDF
             con datos certificados del IDEAM, estimamos caudales de diseño bajo el Decreto 1807/2014 y
             el RAS 2017, y entregamos memorias de cálculo aprobables ante planeación municipal, autoridades
-            ambientales y entidades del Sistema General de Regalías. Nuestro director posee doctorado en
-            ingeniería y más de 30 años de experiencia en proyectos hídricos a lo largo de Colombia,
-            garantizando estudios que superan la revisión técnica de cualquier entidad territorial o financiadora.
+            ambientales y entidades del Sistema General de Regalías. Rogerio Bernal Ríos, Especialista
+            en Ingeniería Hidráulica y Ambiental (UNAL), garantiza estudios que superan la revisión
+            técnica de cualquier entidad territorial o financiadora. COPNIA 17202-313228.
           </p>
           <div style={{ display: 'flex', gap: 12, flexWrap: 'wrap' }}>
             <Btn href={`https://wa.me/${WA}?text=${WA_MSG}`}>
@@ -166,7 +166,7 @@ export default function ServicioEstudiosHidrologicos() {
           <ThinLine mb={40} />
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(240px, 1fr))', gap: 24 }}>
             {[
-              { icon: '🎓', titulo: '+30 años de experiencia', desc: 'Director con doctorado en ingeniería y trayectoria verificable en proyectos de infraestructura hídrica en Colombia, México y Ecuador.' },
+              { icon: '🎓', titulo: 'Especialista UNAL · COPNIA vigente', desc: 'Rogerio Bernal Ríos, Especialista en Ingeniería Hidráulica y Ambiental (UNAL), con trayectoria verificable en proyectos de infraestructura hídrica en Colombia, Ecuador y México. COPNIA 17202-313228.' },
               { icon: '📜', titulo: 'Certificación COPNIA y UNAL', desc: 'Profesional con Tarjeta Profesional vigente COPNIA y formación de posgrado en la Universidad Nacional de Colombia.' },
               { icon: '🗺️', titulo: 'Base en el Eje Cafetero', desc: 'Presencia directa en Manizales, Pereira, Armenia y los 18 departamentos del área de influencia. Desplazamientos a todo el país.' },
               { icon: '✅', titulo: 'Aprobación garantizada', desc: 'Estudios diseñados para superar la revisión de planeación municipal, CAR, DNP y entidades financiadoras del SGR.' },

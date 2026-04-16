@@ -7,7 +7,7 @@ const WA_MSG = encodeURIComponent('Hola, quiero cotizar Estudios Geotécnicos y 
 
 const seoConfig = {
   title: 'Estudios Geotécnicos y de Suelos Colombia | BIC Bernal Ingeniería Consultores',
-  description: 'Estudios geotécnicos y de suelos para constructoras, municipios y entidades públicas en Colombia. Capacidad portante, estabilidad de taludes, NSR-10 Título H. Director PhD. +30 años.',
+  description: 'Estudios geotécnicos y de suelos para constructoras, municipios y entidades públicas en Colombia. Capacidad portante, estabilidad de taludes, NSR-10 Título H. Especialista UNAL. COPNIA 17202-313228.',
   keywords: [
     'estudios geotécnicos Colombia',
     'estudio de suelos Colombia',
@@ -74,9 +74,9 @@ export default function ServicioGeotecnia() {
             estabilidad de taludes y recomendamos soluciones de cimentación bajo la NSR-10 Título H.
             Nuestros informes geotécnicos están firmados por especialista con COPNIA vigente y están
             diseñados para superar la revisión técnica de curadurías urbanas, supervisores de obra y
-            entidades financiadoras. Con más de 30 años de experiencia y director PhD, integramos la
-            geotecnia con la ingeniería hidráulica para proyectos donde el comportamiento del suelo
-            es crítico: zonas de ladera, suelos blandos, laderas torrenciales y cauces activos.
+            entidades financiadoras. Rogerio Bernal Ríos, Especialista en Ingeniería Hidráulica y
+            Ambiental (UNAL), integra la geotecnia con la hidráulica fluvial en proyectos donde el
+            comportamiento del suelo es crítico: zonas de ladera, suelos blandos y cauces activos.
           </p>
           <div style={{ display: 'flex', gap: 12, flexWrap: 'wrap' }}>
             <Btn href={`https://wa.me/${WA}?text=${WA_MSG}`}>
@@ -168,7 +168,7 @@ export default function ServicioGeotecnia() {
           <ThinLine mb={40} />
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(240px, 1fr))', gap: 24 }}>
             {[
-              { icon: '🎓', titulo: 'Director PhD con visión integral', desc: 'La formación doctoral permite integrar la geotecnia con la hidráulica fluvial y la gestión del riesgo: fundamental para proyectos en zonas de ladera, cauces y amenaza torrencial.' },
+              { icon: '🎓', titulo: 'Especialista UNAL · COPNIA vigente', desc: 'Rogerio Bernal Ríos integra la geotecnia con la ingeniería hidráulica y la gestión del riesgo: fundamental para proyectos en zonas de ladera, cauces y amenaza torrencial. COPNIA 17202-313228.' },
               { icon: '🌊', titulo: 'Geotecnia + hidráulica en un solo consultor', desc: 'BIC combina el estudio geotécnico con análisis hidrológico e hidráulico, eliminando inconsistencias entre disciplinas y reduciendo costos de coordinación para el cliente.' },
               { icon: '📜', titulo: 'COPNIA vigente — firma profesional válida', desc: 'Todos los informes geotécnicos firmados por profesional legalmente habilitado. Válido para curadurías, INVÍAS, gobernaciones y cualquier entidad territorial o financiadora.' },
               { icon: '⚡', titulo: 'Propuesta en 24 horas', desc: 'Respuesta directa del director técnico. Planificación de campo coordinada con laboratorios aliados en el Eje Cafetero y otras regiones del país.' },

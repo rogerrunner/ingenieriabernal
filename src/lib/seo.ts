@@ -20,8 +20,8 @@ export interface SEOConfig {
 }
 
 export const defaultSEO: SEOConfig = {
-  title: "Rogerio Bernal - Ingeniero Hidráulico Manizales | Consultoría Especializada",
-  description: "Ingeniero Civil especialista en ingeniería hidráulica, modelación HEC-RAS y gestión del riesgo. +10 años de experiencia. Consultoría en Manizales, Caldas y Eje Cafetero.",
+  title: "Ingeniería Hidráulica Colombia | BIC Bernal Ingeniería Consultores",
+  description: "Consultoría especializada en ingeniería hidráulica, diseño hidrosanitario, modelación HEC-RAS 2D, acueductos y gestión del riesgo hídrico en Colombia. Manizales. COPNIA 17202-313228.",
   keywords: [
     "ingeniero hidráulico Manizales",
     "consultor riesgo hidráulico Caldas",
@@ -41,8 +41,8 @@ export const defaultSEO: SEOConfig = {
 
 export const pagesSEO: Record<string, SEOConfig> = {
   home: {
-    title: "Rogerio Bernal - Ingeniero Hidráulico en Manizales | Experto en HEC-RAS",
-    description: "Consultoría integral en ingeniería hidráulica, modelación HEC-RAS 1D/2D, gestión del riesgo y diseño de proyectos de agua. Certificado UNAL & COPNIA. Manizales, Caldas.",
+    title: "Ingeniería Hidráulica Colombia | BIC Bernal Ingeniería Consultores",
+    description: "Consultoría en ingeniería hidráulica, modelación HEC-RAS 2D, diseño hidrosanitario NSR-10, acueductos RAS 2017 y gestión del riesgo hídrico en Colombia. Especialista UNAL · COPNIA vigente.",
     keywords: [
       "ingeniero hidráulico",
       "consultor riesgo",
@@ -60,8 +60,8 @@ export const pagesSEO: Record<string, SEOConfig> = {
     ogType: "website",
   },
   about: {
-    title: "Rogerio Bernal Ríos - Ingeniero Civil Especialista en Hidráulica",
-    description: "Ingeniero Civil de la UNAL con +10 años de experiencia en ingeniería hidráulica, modelación HEC-RAS, gestión del riesgo y ordenamiento territorial. 50+ proyectos en Colombia, México y Ecuador.",
+    title: "Rogerio Bernal Ríos — Ingeniero Hidráulico | BIC Manizales",
+    description: "Ingeniero Civil Especialista en Hidráulica y Ambiental (UNAL). +10 años en modelación HEC-RAS, diseño hidrosanitario y gestión del riesgo. COPNIA 17202-313228. Colombia, Ecuador y México.",
     keywords: [
       "Rogerio Bernal",
       "ingeniero civil",
@@ -77,8 +77,8 @@ export const pagesSEO: Record<string, SEOConfig> = {
     ],
   },
   services: {
-    title: "Servicios de Ingeniería Hidráulica | Diseño, Modelación y Riesgo",
-    description: "Servicios especializados: Diseño hidrosanitario, Modelación HEC-RAS 1D/2D, Estudios de inundación, Gestión del riesgo, Drenaje sostenible, Sistemas contraincendios, RAS 2017.",
+    title: "Servicios Ingeniería Hidráulica Colombia | BIC Bernal Ingeniería",
+    description: "Diseño hidrosanitario NSR-10, modelación HEC-RAS 2D, acueductos RAS 2017, sistemas contra incendios, gestión del riesgo hídrico, regalías MGA-Web. Manizales · Colombia. Cotice hoy.",
     keywords: [
       "diseño hidrosanitario",
       "estudios inundación",
@@ -95,8 +95,8 @@ export const pagesSEO: Record<string, SEOConfig> = {
     ],
   },
   projects: {
-    title: "Proyectos de Ingeniería Hidráulica | Casos de Éxito Comprobados",
-    description: "50+ proyectos completados: Makarí Mall (Dosquebradas), Primavera Real (La Dorada), Guayaquil (Ecuador). Gestión de riesgo, drenaje urbano y diseño hidrosanitario.",
+    title: "Proyectos Ejecutados — Ingeniería Hidráulica | BIC Bernal",
+    description: "Portafolio verificado: Makarí Mall Dosquebradas, Palacio de Justicia La Dorada, EPANET Manizales, torrencialidad 8 municipios Eje Cafetero, Guayaquil Ecuador. +10 años de experiencia.",
     keywords: [
       "proyectos hidráulica",
       "casos éxito",
@@ -127,8 +127,8 @@ export const pagesSEO: Record<string, SEOConfig> = {
     ],
   },
   contact: {
-    title: "Contacto | Agendar Consulta Ingeniería Hidráulica",
-    description: "Contacta a Rogerio Bernal para consultoría en ingeniería hidráulica. Ubicado en Manizales, Caldas. +57 302 477-8910. Primera consulta gratuita.",
+    title: "Contacto — BIC Bernal Ingeniería | Manizales, Colombia",
+    description: "Contáctenos para consultoría en ingeniería hidráulica, hidrosanitaria y gestión del riesgo. Manizales, Caldas. +57 302 477-8910. Primera consulta sin costo. Respuesta en 24 horas.",
     keywords: [
       "contacto",
       "consultoría",
@@ -142,8 +142,8 @@ export const pagesSEO: Record<string, SEOConfig> = {
     ],
   },
   blog: {
-    title: "Blog Técnico | Ingeniería Hidráulica, RAS 2017 y Gestión del Riesgo",
-    description: "Artículos técnicos: Ingeniería hidráulica, gestión del riesgo, costos de obras 2025, normativa RAS 2017, modelación HEC-RAS, drenaje urbano sostenible.",
+    title: "Blog Ingeniería Hidráulica Colombia | BIC Bernal Ingeniería",
+    description: "Artículos técnicos: modelación HEC-RAS 2D, NSR-10 sistemas CI, costos obras 2026, regalías MGA-Web, IRCA municipios, normativa hídrica colombiana. Por Rogerio Bernal Ríos.",
     keywords: [
       "blog",
       "ingeniería hidráulica",
@@ -158,8 +158,8 @@ export const pagesSEO: Record<string, SEOConfig> = {
     ],
   },
   credentials: {
-    title: "Credenciales | Rogerio Bernal - UNAL, COPNIA",
-    description: "Credenciales profesionales: Ingeniero Civil UNAL, Especialista en Ingeniería Hidráulica, Tarjeta COPNIA 17202-313228, Certificaciones en HEC-RAS y modelación hidráulica.",
+    title: "Credenciales Profesionales | Rogerio Bernal — UNAL · COPNIA",
+    description: "Ingeniero Civil UNAL, Especialista en Ingeniería Hidráulica y Ambiental, Tarjeta Profesional COPNIA 17202-313228 CLD vigente. TOEFL 98/120. Experiencia en Colombia, Ecuador y México.",
     keywords: [
       "credenciales",
       "UNAL",

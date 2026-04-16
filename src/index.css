@@ -100,3 +100,10 @@ p { font-family: var(--font-body); }
 /* ── Transitions ── */
 a { transition: color var(--transition); }
 button { font-family: var(--font-heading); }
+
+/* ── Performance: content-visibility for below-fold sections ── */
+/* Tells the browser it can skip rendering off-screen sections until they're near the viewport */
+.below-fold {
+  content-visibility: auto;
+  contain-intrinsic-size: 0 500px; /* estimated height to prevent layout shift */
+}

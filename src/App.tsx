@@ -34,6 +34,10 @@ const ServicioInterventoria = lazy(() => import('./pages/ServicioInterventoria')
 const ServicioRegaliasMga = lazy(() => import('./pages/ServicioRegaliasMga'))
 const ServicioGeotecnia = lazy(() => import('./pages/ServicioGeotecnia'))
 const ServicioAmbiental = lazy(() => import('./pages/ServicioAmbiental'))
+const IngenieriaHidraulicaColombia = lazy(() => import('./pages/IngenieriaHidraulicaColombia'))
+const GestionRiesgoHidrico = lazy(() => import('./pages/GestionRiesgoHidrico'))
+const ServicioDisenoAcueductos = lazy(() => import('./pages/ServicioDisenoAcueductos'))
+const ServicioContraIncendiosNSR10 = lazy(() => import('./pages/ServicioContraIncendiosNSR10'))
 const RegionalManizales = lazy(() => import('./pages/regional/RegionalManizales'))
 const RegionalPereira = lazy(() => import('./pages/regional/RegionalPereira'))
 const RegionalArmenia = lazy(() => import('./pages/regional/RegionalArmenia'))
@@ -235,6 +239,10 @@ export default function App() {
           <Route path="/ingenieria-eje-cafetero" component={EjeCafetero} />
           <Route path="/ingenieria-antioquia" component={Antioquia} />
 
+          {/* ── PÁGINAS DE SERVICIO NACIONALES ── */}
+          <Route path="/ingenieria-hidraulica-colombia" component={IngenieriaHidraulicaColombia} />
+          <Route path="/gestion-riesgo-hidrico" component={GestionRiesgoHidrico} />
+
           {/* ── LANDING PAGES DE SERVICIOS INDIVIDUALES ── */}
           <Route path="/servicios/estudio-inundabilidad-manizales" component={EstudioInundabilidadManizales} />
           <Route path="/servicios/estudios-hidrologicos" component={ServicioEstudiosHidrologicos} />
@@ -246,6 +254,8 @@ export default function App() {
           <Route path="/servicios/regalias-mga" component={ServicioRegaliasMga} />
           <Route path="/servicios/geotecnia" component={ServicioGeotecnia} />
           <Route path="/servicios/ambiental" component={ServicioAmbiental} />
+          <Route path="/servicios/diseno-acueductos" component={ServicioDisenoAcueductos} />
+          <Route path="/servicios/contra-incendios-nsr10" component={ServicioContraIncendiosNSR10} />
 
           {/* ── LANDING PAGES REGIONALES SEO ── */}
           <Route path="/regional/manizales" component={RegionalManizales} />

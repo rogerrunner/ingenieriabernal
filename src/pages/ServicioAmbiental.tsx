@@ -7,7 +7,7 @@ const WA_MSG = encodeURIComponent('Hola, quiero cotizar Estudios Ambientales e I
 
 const seoConfig = {
   title: 'Estudios Ambientales e IRCA Colombia | BIC Bernal Ingeniería Consultores',
-  description: 'Estudios ambientales, cálculo IRCA, permisos de vertimientos, concesiones de agua y trámites ante CAR para proyectos hídricos en Colombia. Director PhD. +30 años. Eje Cafetero.',
+  description: 'Estudios ambientales, cálculo IRCA, permisos de vertimientos, concesiones de agua y trámites ante CAR para proyectos hídricos en Colombia. COPNIA 17202-313228. Eje Cafetero.',
   keywords: [
     'estudios ambientales Colombia',
     'IRCA Colombia agua potable',
@@ -74,8 +74,8 @@ export default function ServicioAmbiental() {
             concesiones de agua ante las CAR, elaboración de Planes de Manejo Ambiental y soporte
             técnico en procesos ante la ANLA. Combinamos el conocimiento hidráulico con el ambiental
             para entregar expedientes técnicos sólidos que superan la revisión de CORPOCALDAS,
-            CARDER, CVC y cualquier otra autoridad ambiental regional. Nuestro director PhD con más
-            de 30 años de experiencia conoce en profundidad los criterios técnicos de cada CAR
+            CARDER, CVC y cualquier otra autoridad ambiental regional. Rogerio Bernal Ríos, Especialista
+            UNAL (COPNIA 17202-313228), conoce en profundidad los criterios técnicos de cada CAR
             del Eje Cafetero y otras regiones donde BIC tiene proyectos activos.
           </p>
           <div style={{ display: 'flex', gap: 12, flexWrap: 'wrap' }}>
@@ -169,7 +169,7 @@ export default function ServicioAmbiental() {
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(240px, 1fr))', gap: 24 }}>
             {[
               { icon: '🌿', titulo: 'Ambiental + hidráulico integrados', desc: 'BIC combina el conocimiento ambiental con la ingeniería hidráulica: los expedientes de vertimientos y concesiones de agua son más sólidos cuando el consultor entiende el comportamiento hídrico del cauce receptor.' },
-              { icon: '🎓', titulo: 'Director PhD — relación con las CAR', desc: '+30 años de proyectos con CORPOCALDAS, CARDER, CVC, CAR Cundinamarca y otras corporaciones. Conocimiento de los criterios técnicos internos que hacen que un expediente sea aprobado o devuelto.' },
+              { icon: '🎓', titulo: 'Especialista UNAL · COPNIA vigente', desc: '+10 años de proyectos con CORPOCALDAS, CARDER, CVC y otras corporaciones. Rogerio Bernal Ríos (COPNIA 17202-313228) conoce los criterios técnicos internos que hacen que un expediente sea aprobado o devuelto.' },
               { icon: '⚡', titulo: 'Agilidad en trámites ambientales', desc: 'Expedientes bien sustentados técnicamente reducen el número de requerimientos y aceleran los tiempos de respuesta de las CAR. Menos viajes, menos reprocesos, más velocidad.' },
               { icon: '📜', titulo: 'Responsabilidad profesional plena', desc: 'Informes firmados por profesional con COPNIA vigente y registro ante la entidad ambiental competente. Respaldo legal y técnico ante cualquier requerimiento posterior.' },
             ].map(d => (

@@ -7,7 +7,7 @@ const WA_MSG = encodeURIComponent('Hola, quiero cotizar Modelación Hidráulica 
 
 const seoConfig = {
   title: 'Modelación Hidráulica HEC-RAS 2D Colombia | BIC Bernal Ingeniería Consultores',
-  description: 'Modelación hidráulica HEC-RAS 1D y 2D para municipios, constructoras y entidades en Colombia. Manchas de inundación, amenaza hídrica Decreto 1807/2014. Director PhD. +30 años. Eje Cafetero.',
+  description: 'Modelación hidráulica HEC-RAS 1D y 2D para municipios, constructoras y entidades en Colombia. Manchas de inundación, amenaza hídrica Decreto 1807/2014. COPNIA 17202-313228. Eje Cafetero.',
   keywords: [
     'modelación hidráulica HEC-RAS 2D Colombia',
     'HEC-RAS 2D Colombia',
@@ -73,8 +73,8 @@ export default function ServicioModelacionHecRas() {
             1807/2014. Nuestros modelos se construyen con topobatimetría de precisión, datos hidrológicos
             calibrados y la versión más reciente de HEC-RAS, entregando mapas de amenaza alta, media y
             baja aceptados por planeación municipal, UNGRD, CAR y financiadoras del SGR. Con más de
-            30 años de experiencia y director PhD, garantizamos modelos que superan la revisión técnica
-            más exigente en cualquier entidad territorial de Colombia.
+            Rogerio Bernal Ríos, Especialista en Ingeniería Hidráulica y Ambiental (UNAL, COPNIA 17202-313228),
+            garantiza modelos que superan la revisión técnica más exigente en cualquier entidad territorial de Colombia.
           </p>
           <div style={{ display: 'flex', gap: 12, flexWrap: 'wrap' }}>
             <Btn href={`https://wa.me/${WA}?text=${WA_MSG}`}>
@@ -166,8 +166,8 @@ export default function ServicioModelacionHecRas() {
           <ThinLine mb={40} />
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(240px, 1fr))', gap: 24 }}>
             {[
-              { icon: '🎓', titulo: 'Director PhD en ingeniería', desc: 'Nivel académico y técnico que garantiza modelos rigurosos, calibrados y documentados con el estándar científico más alto.' },
-              { icon: '🏗️', titulo: '+30 años en proyectos hídricos', desc: 'Proyectos verificables en Dosquebradas, La Dorada, Puerto Boyacá, Viterbo y múltiples municipios del Eje Cafetero y el país.' },
+              { icon: '🎓', titulo: 'Especialista UNAL · COPNIA vigente', desc: 'Rogerio Bernal Ríos, Especialista en Ingeniería Hidráulica y Ambiental (UNAL). Modelos rigurosos, calibrados y documentados. Matrícula COPNIA 17202-313228 CLD activa.' },
+              { icon: '🏗️', titulo: '+10 años en proyectos hídricos', desc: 'Proyectos verificables en Dosquebradas, La Dorada, Puerto Boyacá, Viterbo y múltiples municipios del Eje Cafetero y el país.' },
               { icon: '📜', titulo: 'Certificación COPNIA vigente', desc: 'Tarjeta profesional COPNIA activa. Todos los informes firmados por profesional legalmente habilitado para ejercer en Colombia.' },
               { icon: '⚡', titulo: 'Entrega ágil y comunicación directa', desc: 'Trato directo con el director técnico. Propuesta en 24 h. Modelos entregados con seguimiento permanente hasta aprobación.' },
             ].map(d => (

@@ -7,7 +7,7 @@ const WA_MSG = encodeURIComponent('Hola, quiero cotizar Formulación de Proyecto
 
 const seoConfig = {
   title: 'Formulación Proyectos Regalías MGA-Web Colombia | BIC Bernal Ingeniería Consultores',
-  description: 'Formulación de proyectos de inversión para el Sistema General de Regalías (SGR) en MGA-Web. Agua potable, saneamiento básico, gestión del riesgo. Director PhD. +30 años. Eje Cafetero.',
+  description: 'Formulación de proyectos de inversión para el Sistema General de Regalías (SGR) en MGA-Web. Agua potable, saneamiento básico, gestión del riesgo. COPNIA 17202-313228. Eje Cafetero.',
   keywords: [
     'formulación proyectos regalías MGA-Web Colombia',
     'formulación proyectos SGR agua saneamiento',
@@ -72,8 +72,8 @@ export default function ServicioRegaliasMga() {
             de Regalías (SGR) en la plataforma MGA-Web del DNP: acueductos, alcantarillados, plantas
             de tratamiento, defensas fluviales y gestión del riesgo hídrico. Registramos el BPIN,
             elaboramos fichas técnicas sectoriales, calculamos indicadores costo-eficiencia y
-            acompañamos el proceso ante el OCAD hasta la aprobación. Nuestro director PhD con más
-            de 30 años de experiencia ha formulado proyectos aprobados en municipios de Caldas,
+            acompañamos el proceso ante el OCAD hasta la aprobación. Rogerio Bernal Ríos, Especialista
+            UNAL (COPNIA 17202-313228), ha formulado proyectos aprobados en municipios de Caldas,
             Boyacá, Santander y los Llanos, acumulando un historial verificable de proyectos
             financiados que superaron la revisión técnica del DNP, las contralorías departamentales
             y los OCAD sectoriales.
@@ -169,7 +169,7 @@ export default function ServicioRegaliasMga() {
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(240px, 1fr))', gap: 24 }}>
             {[
               { icon: '✅', titulo: 'Proyectos aprobados verificables', desc: 'Historial real de proyectos aprobados por OCAD en Caldas, Boyacá, Santander y Llanos. Referencias disponibles con contactos de las alcaldías contratantes.' },
-              { icon: '🎓', titulo: 'Formulador con PhD — nivel máximo', desc: 'El nivel académico del director garantiza que los análisis técnicos, la valoración de alternativas y los indicadores económicos superen la revisión del banco de proyectos del DNP.' },
+              { icon: '🎓', titulo: 'Especialista UNAL · COPNIA vigente', desc: 'Rogerio Bernal Ríos, Especialista en Ingeniería Hidráulica y Ambiental (UNAL), garantiza que los análisis técnicos, la valoración de alternativas y los indicadores económicos superen la revisión del banco de proyectos del DNP.' },
               { icon: '⚡', titulo: 'Proceso ágil orientado a aprobación', desc: 'Conocemos los criterios de elegibilidad del DNP y los requerimientos de cada OCAD. Formulamos para que el proyecto sea aprobado en el primer ciclo, sin reprocesos costosos.' },
               { icon: '🔗', titulo: 'Diseños y formulación bajo el mismo techo', desc: 'BIC realiza tanto los estudios técnicos de soporte (hidrología, hidráulica, diseños) como la formulación MGA-Web, garantizando coherencia total entre los componentes del proyecto.' },
             ].map(d => (

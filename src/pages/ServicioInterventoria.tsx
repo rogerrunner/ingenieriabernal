@@ -7,7 +7,7 @@ const WA_MSG = encodeURIComponent('Hola, quiero cotizar Interventoría Técnica 
 
 const seoConfig = {
   title: 'Interventoría Técnica Hidráulica Colombia | BIC Bernal Ingeniería Consultores',
-  description: 'Interventoría técnica de obras hidráulicas, acueductos, alcantarillados y redes hidrosanitarias para municipios, gobernaciones y entidades públicas en Colombia. Director PhD. +30 años.',
+  description: 'Interventoría técnica de obras hidráulicas, acueductos, alcantarillados y redes hidrosanitarias para municipios, gobernaciones y entidades públicas en Colombia. COPNIA 17202-313228.',
   keywords: [
     'interventoría técnica hidráulica Colombia',
     'interventoría obras acueducto alcantarillado',
@@ -73,7 +73,7 @@ export default function ServicioInterventoria() {
             hidrosanitarias y sistemas de drenaje. Verificamos el cumplimiento de los diseños
             aprobados, el RAS 2017 y la Resolución 0330/2017, controlamos la calidad de materiales
             y ejecución en campo, elaboramos informes técnicos periódicos y gestionamos las actas
-            de cobro y el cierre del contrato. Nuestro director PhD con más de 30 años de experiencia
+            de cobro y el cierre del contrato. Rogerio Bernal Ríos, Especialista UNAL (COPNIA 17202-313228),
             ha ejercido interventoría en proyectos financiados por el SGR, alcaldías del Eje Cafetero
             y entidades como la Rama Judicial en La Dorada. Ofrecemos el más alto nivel técnico con
             trato directo y respuesta ágil.
@@ -168,7 +168,7 @@ export default function ServicioInterventoria() {
           <ThinLine mb={40} />
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(240px, 1fr))', gap: 24 }}>
             {[
-              { icon: '🎓', titulo: 'Interventor PhD — máximo nivel técnico', desc: 'Director con doctorado en ingeniería. La interventoría que contratan las entidades más exigentes para garantizar que los contratistas no puedan impugnar conceptos técnicos.' },
+              { icon: '🎓', titulo: 'Especialista UNAL · COPNIA vigente', desc: 'Rogerio Bernal Ríos, Especialista en Ingeniería Hidráulica y Ambiental (UNAL, COPNIA 17202-313228). La interventoría que contratan las entidades más exigentes para garantizar conceptos técnicos inimpugnables.' },
               { icon: '📜', titulo: 'COPNIA vigente — responsabilidad profesional', desc: 'Todos los informes y actas firmados por profesional habilitado, con plena responsabilidad disciplinaria y penal ante el Estado colombiano.' },
               { icon: '⚡', titulo: 'Respuesta ágil en terreno', desc: 'Desplazamientos rápidos desde Manizales a cualquier municipio del Eje Cafetero o el país. Disponibilidad para visitas de emergencia cuando el contratista genera alertas.' },
               { icon: '🔗', titulo: 'Interventoría y diseño bajo el mismo techo', desc: 'Si se requieren ajustes técnicos durante la obra, BIC los tramita internamente sin demoras. Menor tiempo de respuesta y cero inconsistencias entre interventoría y diseño.' },

@@ -82,7 +82,7 @@ export default function Home() {
             <span style={{ color: '#17A2B8' }}>para Colombia | BIC</span>
           </h1>
           <p style={{ color: 'rgba(255,255,255,0.75)', fontSize: 17, maxWidth: 640, lineHeight: 1.8, marginBottom: 16 }}>
-            Estudios hidrológicos, diseño de acueductos, modelación HEC-RAS 2D e interventoría técnica. Más de 30 años de experiencia certificada. Manizales, Eje Cafetero y todo Colombia.
+            Estudios hidrológicos, diseño de acueductos, modelación HEC-RAS 2D e interventoría técnica. +10 años de experiencia verificable. Manizales, Eje Cafetero y todo Colombia.
           </p>
 
           {/* 3 diferenciadores únicos */}

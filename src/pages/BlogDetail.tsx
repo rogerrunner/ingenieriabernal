@@ -325,6 +325,75 @@ export default function BlogDetail() {
       if (meta) meta.setAttribute('content', article.metaDesc)
       const keywords = document.querySelector('meta[name="keywords"]')
       if (keywords) keywords.setAttribute('content', article.keywords)
+
+      // Open Graph
+      const ogTitle = document.querySelector('meta[property="og:title"]') as HTMLMetaElement | null
+      if (ogTitle) ogTitle.setAttribute('content', `${article.title} — BIC Bernal Ingeniería`)
+      const ogDesc = document.querySelector('meta[property="og:description"]') as HTMLMetaElement | null
+      if (ogDesc) ogDesc.setAttribute('content', article.metaDesc)
+      const ogUrl = document.querySelector('meta[property="og:url"]') as HTMLMetaElement | null
+      if (ogUrl) ogUrl.setAttribute('content', `https://ingenieriabernal.co/blog/${slug}`)
+      const ogType = document.querySelector('meta[property="og:type"]') as HTMLMetaElement | null
+      if (ogType) ogType.setAttribute('content', 'article')
+
+      // Canonical
+      let canonical = document.querySelector('link[rel="canonical"]') as HTMLLinkElement | null
+      if (!canonical) {
+        canonical = document.createElement('link') as HTMLLinkElement
+        canonical.setAttribute('rel', 'canonical')
+        document.head.appendChild(canonical)
+      }
+      canonical.setAttribute('href', `https://ingenieriabernal.co/blog/${slug}`)
+
+      // BlogPosting JSON-LD
+      const existingSchema = document.getElementById('blog-schema')
+      if (existingSchema) existingSchema.remove()
+      const schema = document.createElement('script')
+      schema.id = 'blog-schema'
+      schema.type = 'application/ld+json'
+      schema.text = JSON.stringify({
+        '@context': 'https://schema.org',
+        '@type': 'BlogPosting',
+        'headline': article.title,
+        'description': article.metaDesc,
+        'keywords': article.keywords,
+        'url': `https://ingenieriabernal.co/blog/${slug}`,
+        'datePublished': article.date,
+        'dateModified': article.date,
+        'inLanguage': 'es-CO',
+        'author': {
+          '@type': 'Person',
+          '@id': 'https://ingenieriabernal.co/#director',
+          'name': 'Rogerio Bernal Ríos',
+          'url': 'https://ingenieriabernal.co/sobre-mi',
+          'jobTitle': 'Ingeniero Civil — Especialista en Ingeniería Hidráulica y Ambiental',
+        },
+        'publisher': {
+          '@type': 'Organization',
+          '@id': 'https://ingenieriabernal.co/#firma',
+          'name': 'BIC Bernal Ingeniería Consultores',
+          'url': 'https://ingenieriabernal.co',
+          'logo': {
+            '@type': 'ImageObject',
+            'url': 'https://ingenieriabernal.co/favicon.svg',
+          },
+        },
+        'isPartOf': {
+          '@type': 'Blog',
+          'name': 'Blog Técnico — BIC Bernal Ingeniería Consultores',
+          'url': 'https://ingenieriabernal.co/blog',
+        },
+        'mainEntityOfPage': {
+          '@type': 'WebPage',
+          '@id': `https://ingenieriabernal.co/blog/${slug}`,
+        },
+      })
+      document.head.appendChild(schema)
+    }
+
+    return () => {
+      const schema = document.getElementById('blog-schema')
+      if (schema) schema.remove()
     }
   }, [article, slug])
 

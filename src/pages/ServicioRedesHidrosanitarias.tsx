@@ -7,7 +7,7 @@ const WA_MSG = encodeURIComponent('Hola, quiero cotizar Redes Hidrosanitarias pa
 
 const seoConfig = {
   title: 'Redes Hidrosanitarias para Edificaciones | BIC Bernal Ingeniería Consultores',
-  description: 'Diseño de redes hidrosanitarias para edificios residenciales, comerciales e industriales en Colombia. Agua fría, agua caliente, aguas residuales, aguas lluvias. NSR-10, RAS 2017. Director PhD.',
+  description: 'Diseño de redes hidrosanitarias para edificios residenciales, comerciales e industriales en Colombia. Agua fría, agua caliente, aguas residuales, aguas lluvias. NSR-10, RAS 2017. COPNIA 17202-313228.',
   keywords: [
     'redes hidrosanitarias edificaciones Colombia',
     'diseño hidrosanitario edificios',
@@ -73,9 +73,10 @@ export default function ServicioRedesHidrosanitarias() {
             aguas lluvias y sistemas de reutilización. Nuestros diseños cumplen el RAS 2017, la NSR-10
             Título I y la normativa local de cada municipio, entregando planos isométricos, memorias
             de cálculo firmadas por especialista y documentación lista para trámite de licencia de
-            construcción ante la curaduría urbana. Con más de 30 años de experiencia y director PhD,
-            hemos diseñado las instalaciones hidrosanitarias de proyectos emblemáticos como el Makarí
-            Mall en Dosquebradas y múltiples conjuntos residenciales en el Eje Cafetero y Colombia.
+            construcción ante la curaduría urbana. Rogerio Bernal Ríos, Especialista en Ingeniería
+            Hidráulica y Ambiental (UNAL) con matrícula COPNIA 17202-313228, ha diseñado las
+            instalaciones hidrosanitarias del Makarí Mall en Dosquebradas y múltiples conjuntos
+            residenciales en el Eje Cafetero.
           </p>
           <div style={{ display: 'flex', gap: 12, flexWrap: 'wrap' }}>
             <Btn href={`https://wa.me/${WA}?text=${WA_MSG}`}>
@@ -168,7 +169,7 @@ export default function ServicioRedesHidrosanitarias() {
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(240px, 1fr))', gap: 24 }}>
             {[
               { icon: '🏆', titulo: 'Proyectos emblemáticos comprobados', desc: 'Diseño hidrosanitario del Makarí Mall en Dosquebradas, Risaralda, y múltiples proyectos residenciales y comerciales en el Eje Cafetero.' },
-              { icon: '🎓', titulo: 'Director PhD especialista en hidráulica', desc: 'Nivel académico y técnico superior que garantiza diseños sin errores, correctamente dimensionados y aceptados por curadurías y supervisores.' },
+              { icon: '🎓', titulo: 'Especialista UNAL · COPNIA vigente', desc: 'Rogerio Bernal Ríos, Especialista en Ingeniería Hidráulica y Ambiental (UNAL). Diseños correctamente dimensionados y aceptados por curadurías urbanas. Matrícula COPNIA 17202-313228 CLD activa.' },
               { icon: '⚡', titulo: 'Entrega ágil con trato directo', desc: 'Comunicación directa con el director del proyecto. Presupuesto en 24 horas. Planos y memorias en los plazos pactados sin intermediarios.' },
               { icon: '🌐', titulo: 'Cobertura en toda Colombia', desc: 'Servicios para constructoras en Bogotá, Medellín, Cali, Bucaramanga, Barranquilla y todas las capitales con desplazamientos según el alcance.' },
             ].map(d => (
@@ -187,6 +188,56 @@ export default function ServicioRedesHidrosanitarias() {
               </div>
             ))}
           </div>
+        </div>
+      </Section>
+
+      {/* ── FAQ ── */}
+      <Section bg="#fff" style={{ padding: '72px 24px' }}>
+        <div style={{ maxWidth: 860, margin: '0 auto' }}>
+          <SectionLabel>Preguntas frecuentes</SectionLabel>
+          <h2 style={{
+            fontFamily: "'Playfair Display', serif", fontWeight: 700, color: '#001A33',
+            fontSize: 'clamp(22px, 4vw, 32px)', marginBottom: 8,
+          }}>Preguntas sobre diseño hidrosanitario</h2>
+          <ThinLine mb={40} />
+          {[
+            {
+              q: '¿Qué norma regula el diseño hidrosanitario de edificaciones en Colombia?',
+              a: 'El diseño hidrosanitario de edificaciones se rige principalmente por el RAS 2017 (Resolución 0330/2017) para los sistemas de agua potable, y por la NSR-10 Título I para instalaciones internas de acueducto y saneamiento. Adicionalmente, la NTC 1500 (Código Colombiano de Fontanería) establece requisitos para materiales, accesorios y métodos de instalación. Las curadurías urbanas exigen que las memorias estén firmadas por un ingeniero con tarjeta COPNIA vigente.',
+            },
+            {
+              q: '¿Qué documentos entrega el diseño hidrosanitario para licencia de construcción?',
+              a: 'La entrega típica incluye: (1) Planos isométricos de red de agua fría y caliente con diámetros y cotas; (2) Planos de red de aguas residuales y aguas lluvias en cada nivel; (3) Memoria de cálculo con método Hunter, presiones, caudales y verificación de velocidades; (4) Especificaciones técnicas de materiales (PVC, CPVC, PPR según corresponda); (5) Detalles de aparatos sanitarios y puntos de consumo. Todo firmado y sellado con tarjeta COPNIA vigente.',
+            },
+            {
+              q: '¿Es obligatorio un especialista para firmar la memoria hidrosanitaria?',
+              a: 'Sí. La Ley 400 de 1997 y el Decreto 945 de 2017 (que adopta la NSR-10) exigen que las memorias de diseño de instalaciones hidráulicas estén firmadas por un ingeniero con tarjeta profesional COPNIA vigente y experiencia acreditable en el área. Las curadurías urbanas rechazan expedientes de licencia que no cumplan este requisito. BIC entrega toda la documentación firmada y sellada con matrícula COPNIA 17202-313228.',
+            },
+            {
+              q: '¿Qué es el método Hunter y por qué se usa en diseño hidrosanitario?',
+              a: 'El método Hunter es el procedimiento estándar para calcular el caudal de diseño en redes internas de edificios. Se basa en unidades de gasto (UG) asignadas a cada aparato sanitario según su frecuencia de uso, y aplica una curva de probabilidad para determinar el gasto simultáneo máximo probable. Este método evita sobredimensionar las tuberías (mayor costo) o subdimensionarlas (presiones insuficientes en pisos altos). El RAS 2017 y la NSR-10 lo reconocen como método válido para edificaciones residenciales y comerciales.',
+            },
+            {
+              q: '¿Cuánto tarda y cuánto cuesta el diseño hidrosanitario?',
+              a: 'El plazo típico es de 2 a 4 semanas según la complejidad del proyecto (número de pisos, área construida, tipo de edificación). El costo varía según el alcance: un apartamento o casa independiente puede resolverse en una semana; un edificio multifamiliar de 8-12 pisos requiere 3-4 semanas incluyendo memorias completas. Solicite cotización describiendo el tipo de edificación, número de pisos y número de baños — respondemos en menos de 24 horas.',
+            },
+          ].map(({ q, a }) => (
+            <details key={q} style={{
+              borderBottom: '1px solid #E2E8F0', paddingBottom: 20, marginBottom: 20,
+            }}>
+              <summary style={{
+                fontFamily: "'Montserrat', sans-serif", fontWeight: 700, color: '#002A50',
+                fontSize: 15, cursor: 'pointer', paddingBottom: 12, listStyle: 'none',
+                display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start',
+              }}>
+                {q}
+              </summary>
+              <p style={{
+                fontFamily: "'Lato', sans-serif", color: '#475569', fontSize: 15,
+                lineHeight: 1.75, marginTop: 8,
+              }}>{a}</p>
+            </details>
+          ))}
         </div>
       </Section>
 
