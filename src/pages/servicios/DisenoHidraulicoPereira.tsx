@@ -22,7 +22,7 @@ const seoConfig = {
     'BIC ingeniería Pereira',
     'diseño drenaje pluvial Pereira',
   ],
-  canonical: 'https://ingenieriabernal.co/diseno-hidraulico-pereira/',
+  canonical: 'https://ingenieriabernal.co/diseno-hidraulico-pereira',
 }
 
 const SERVICIOS = [

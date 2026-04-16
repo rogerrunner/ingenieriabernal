@@ -24,7 +24,7 @@ const seoConfig = {
     'SewerGEMS alcantarillado',
     'memorias de cálculo hidráulico',
   ],
-  canonical: 'https://ingenieriabernal.co/diseno-hidraulico-manizales/',
+  canonical: 'https://ingenieriabernal.co/diseno-hidraulico-manizales',
 }
 
 const SERVICIOS_HIDRAULICOS = [

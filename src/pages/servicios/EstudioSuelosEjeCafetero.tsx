@@ -20,7 +20,7 @@ const seoConfig = {
     'estudio de suelos cimentación',
     'laboratorio geotécnico Manizales',
   ],
-  canonical: 'https://ingenieriabernal.co/estudio-de-suelos-eje-cafetero/',
+  canonical: 'https://ingenieriabernal.co/estudio-de-suelos-eje-cafetero',
 }
 
 const PROCESO = [
