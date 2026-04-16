@@ -4,6 +4,7 @@
   "installCommand": "npm install",
   "framework": "vite",
   "redirects": [
+    { "source": "/:path*", "has": [{ "type": "host", "value": "www.ingenieriabernal.co" }], "destination": "https://ingenieriabernal.co/:path*", "permanent": true },
     { "source": "/ingenieria-hidraulica-manizales",    "destination": "/ingenieria-manizales",                   "permanent": true },
     { "source": "/ingenieria-hidraulica-eje-cafetero", "destination": "/ingenieria-eje-cafetero",                "permanent": true },
     { "source": "/ingenieria-hidraulica-bogota",       "destination": "/ingenieria-bogota",                      "permanent": true },
