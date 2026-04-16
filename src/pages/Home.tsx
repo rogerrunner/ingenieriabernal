@@ -59,10 +59,10 @@ function StatCounter({ value, suffix, label }: { value: number, suffix: string, 
 
 export default function Home() {
   useEffect(() => {
-    document.title = 'Consultoría Hidráulica Colombia | BIC – Bernal Ingeniería Consultores'
+    document.title = 'Ingeniería Hidráulica y Ambiental en Colombia | BIC – Bernal Ingeniería Consultores'
     const meta = document.querySelector('meta[name="description"]')
     if (meta) meta.setAttribute('content',
-      'Consultoría especializada en hidrología, hidráulica, diseño de acueductos y alcantarillado, modelación HEC-RAS 2D e interventoría técnica en Colombia. Manizales. COPNIA vigente.'
+      'Ingeniero hidráulico en Manizales especializado en modelación HEC-RAS 2D, diseño hidrosanitario NSR-10, acueductos RAS 2017 y gestión del riesgo hídrico. COPNIA 17202-313228 CLD. Cobertura nacional.'
     )
   }, [])
 
@@ -78,8 +78,8 @@ export default function Home() {
             <Tag style={{ background: 'rgba(23,162,184,0.15)', color: '#17A2B8', border: '1px solid rgba(23,162,184,0.3)', fontSize: 12 }}>UNAL Manizales</Tag>
           </div>
           <h1 style={{ fontFamily: "'Playfair Display', serif", fontWeight: 900, color: '#fff', fontSize: 'clamp(28px, 5vw, 58px)', lineHeight: 1.1, marginBottom: 20 }}>
-            Consultoría en Ingeniería Hidráulica e Hidrológica<br />
-            <span style={{ color: '#17A2B8' }}>para Colombia | BIC</span>
+            Ingeniería Hidráulica y Ambiental en Colombia<br />
+            <span style={{ color: '#17A2B8' }}>| BIC — Bernal Ingeniería Consultores</span>
           </h1>
           <p style={{ color: 'rgba(255,255,255,0.75)', fontSize: 17, maxWidth: 640, lineHeight: 1.8, marginBottom: 16 }}>
             Estudios hidrológicos, diseño de acueductos, modelación HEC-RAS 2D e interventoría técnica. +10 años de experiencia verificable. Manizales, Eje Cafetero y todo Colombia.
@@ -99,10 +99,15 @@ export default function Home() {
           </div>
 
           <div style={{ display: 'flex', gap: 14, flexWrap: 'wrap' }}>
-            <Btn href="https://wa.me/573024778910?text=Hola%2C%20quisiera%20información%20sobre%20consultoría%20hidráulica" style={{ background: '#25D366', color: '#fff' }}>
-              📱 Solicitar cotización
+            <Btn href={`https://wa.me/${WA}?text=${encodeURIComponent('Hola, necesito un estudio HEC-RAS. ¿Pueden cotizarme?')}`} style={{ background: '#25D366', color: '#fff' }}>
+              📱 Solicitar estudio HEC-RAS
             </Btn>
-            <Btn href="/servicios" variant="outline" dark>Ver todos los servicios →</Btn>
+            <Btn href={`https://wa.me/${WA}?text=${encodeURIComponent('Hola, quiero cotizar un diseño hidrosanitario con BIC.')}`} variant="outline" dark>
+              💧 Cotizar diseño hidrosanitario
+            </Btn>
+            <Btn href={`https://wa.me/${WA}?text=${encodeURIComponent('Hola, necesito un análisis de riesgo hídrico. ¿Pueden ayudarme?')}`} variant="outline" dark>
+              ⚠️ Consultar análisis de riesgo
+            </Btn>
           </div>
         </div>
       </section>
@@ -111,6 +116,54 @@ export default function Home() {
       <section style={{ background: '#002A50', padding: '40px 40px' }}>
         <div className="container" style={{ display: 'grid', gridTemplateColumns: 'repeat(4, 1fr)', gap: '2rem', maxWidth: 860, margin: '0 auto' }}>
           {STATS.map(s => <StatCounter key={s.label} {...s} />)}
+        </div>
+      </section>
+
+      {/* ── NORMATIVA */}
+      <section style={{ background: '#fff', padding: '44px 40px', borderTop: '1px solid #E2EEF5' }}>
+        <div className="container" style={{ maxWidth: 900 }}>
+          <p style={{ fontFamily: "'Montserrat', sans-serif", fontWeight: 700, color: '#003B6F', fontSize: 12, letterSpacing: '0.1em', textTransform: 'uppercase', marginBottom: 14 }}>
+            Normativa que manejamos
+          </p>
+          <div style={{ display: 'flex', gap: 8, flexWrap: 'wrap' }}>
+            {[
+              'RAS 2017', 'NSR-10 Títulos I/J/K', 'Resolución 0330/2017',
+              'NTC 1500', 'NTC 1669', 'NTC 2301',
+              'Decreto 1807/2014', 'Ley 1523/2012', 'Ley 388/1997',
+              'Decreto 1076/2015', 'Manual MGA-Web DNP', 'POMCA',
+            ].map(n => (
+              <span key={n} style={{ padding: '5px 12px', background: '#EEF4F9', border: '1px solid #D3E6F0', borderRadius: 4, fontFamily: "'Montserrat', sans-serif", fontWeight: 600, fontSize: 12, color: '#003B6F' }}>{n}</span>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ── COBERTURA GEOGRÁFICA */}
+      <section style={{ background: '#F0F7FB', padding: '44px 40px', borderTop: '1px solid #D3E6F0' }}>
+        <div className="container" style={{ maxWidth: 900 }}>
+          <p style={{ fontFamily: "'Montserrat', sans-serif", fontWeight: 700, color: '#003B6F', fontSize: 12, letterSpacing: '0.1em', textTransform: 'uppercase', marginBottom: 14 }}>
+            Cobertura geográfica — Colombia y proyectos internacionales
+          </p>
+          <div style={{ display: 'flex', gap: 10, flexWrap: 'wrap', alignItems: 'center' }}>
+            {[
+              { label: 'Eje Cafetero', flag: '🏔️' },
+              { label: 'Bogotá D.C.', flag: '🏙️' },
+              { label: 'Medellín', flag: '🌆' },
+              { label: 'Cali', flag: '🌇' },
+              { label: 'Barranquilla', flag: '🌊' },
+              { label: 'Bucaramanga', flag: '🏛️' },
+              { label: 'Todo Colombia', flag: '🇨🇴' },
+              { label: 'Ecuador', flag: '🇪🇨' },
+              { label: 'México', flag: '🇲🇽' },
+            ].map(({ label, flag }) => (
+              <span key={label} style={{ padding: '6px 14px', background: '#fff', border: '1px solid #C2DFF0', borderRadius: 20, fontFamily: "'Lato', sans-serif", fontSize: 13, color: '#003B6F', display: 'flex', gap: 6, alignItems: 'center' }}>
+                <span>{flag}</span>{label}
+              </span>
+            ))}
+          </div>
+          <p style={{ fontFamily: "'Lato', sans-serif", color: '#475569', fontSize: 13, marginTop: 14, lineHeight: 1.7 }}>
+            Como <strong>ingeniero hidráulico en Manizales</strong> y <strong>especialista en ingeniería ambiental en Colombia</strong>, BIC opera sin límites geográficos. Proyectos ejecutados en 21 regiones del país, Ecuador y México con Apostille.
+          </p>
         </div>
       </section>
 
