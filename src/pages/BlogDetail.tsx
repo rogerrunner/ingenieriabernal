@@ -1,7 +1,9 @@
 import { useEffect } from 'react'
 import { useRoute } from 'wouter'
 import articles1 from '../data/articles1'
+import SEOHead from '../components/SEOHead'
 import { BlueprintBg, Tag, ThinLine, SectionLabel, Btn, Section } from '../components/ui'
+import { SEOConfig } from '../lib/seo'
 
 const WA = '573024778910'
 
@@ -318,33 +320,17 @@ export default function BlogDetail() {
   const slug = params?.slug || ''
   const article = ARTICLES[slug]
 
+  // SEO configuration for the article
+  const seoConfig: SEOConfig | null = article ? {
+    title: `${article.title} — BIC Bernal Ingeniería Consultores`,
+    description: article.metaDesc,
+    keywords: article.keywords.split(', '),
+    ogType: 'article',
+    canonical: `https://ingenieriabernal.co/blog/${slug}`
+  } : null
+
   useEffect(() => {
     if (article) {
-      document.title = `${article.title} — BIC Bernal Ingeniería Consultores`
-      const meta = document.querySelector('meta[name="description"]')
-      if (meta) meta.setAttribute('content', article.metaDesc)
-      const keywords = document.querySelector('meta[name="keywords"]')
-      if (keywords) keywords.setAttribute('content', article.keywords)
-
-      // Open Graph
-      const ogTitle = document.querySelector('meta[property="og:title"]') as HTMLMetaElement | null
-      if (ogTitle) ogTitle.setAttribute('content', `${article.title} — BIC Bernal Ingeniería`)
-      const ogDesc = document.querySelector('meta[property="og:description"]') as HTMLMetaElement | null
-      if (ogDesc) ogDesc.setAttribute('content', article.metaDesc)
-      const ogUrl = document.querySelector('meta[property="og:url"]') as HTMLMetaElement | null
-      if (ogUrl) ogUrl.setAttribute('content', `https://ingenieriabernal.co/blog/${slug}`)
-      const ogType = document.querySelector('meta[property="og:type"]') as HTMLMetaElement | null
-      if (ogType) ogType.setAttribute('content', 'article')
-
-      // Canonical
-      let canonical = document.querySelector('link[rel="canonical"]') as HTMLLinkElement | null
-      if (!canonical) {
-        canonical = document.createElement('link') as HTMLLinkElement
-        canonical.setAttribute('rel', 'canonical')
-        document.head.appendChild(canonical)
-      }
-      canonical.setAttribute('href', `https://ingenieriabernal.co/blog/${slug}`)
-
       // BlogPosting JSON-LD
       const existingSchema = document.getElementById('blog-schema')
       if (existingSchema) existingSchema.remove()
@@ -363,13 +349,13 @@ export default function BlogDetail() {
         'inLanguage': 'es-CO',
         'author': {
           '@type': 'Person',
-          '@id': 'https://ingenieriabernal.co/#director',
+          '@id': 'https://ingenieriabernal.co/#rogerio',
           'name': 'Rogerio Bernal Ríos',
-          'url': 'https://ingenieriabernal.co/sobre-mi',
+          'url': 'https://ingenieriabernal.co',
           'jobTitle': 'Ingeniero Civil — Especialista en Ingeniería Hidráulica y Ambiental',
         },
         'publisher': {
-          '@type': 'Organization',
+          '@type': 'LocalBusiness',
           '@id': 'https://ingenieriabernal.co/#firma',
           'name': 'BIC Bernal Ingeniería Consultores',
           'url': 'https://ingenieriabernal.co',
@@ -404,6 +390,9 @@ export default function BlogDetail() {
 
   return (
     <>
+      {/* SEO Head */}
+      {seoConfig && <SEOHead config={seoConfig} />}
+
       {/* HERO */}
       <section style={{ background: 'linear-gradient(135deg, #002A50 0%, #003B6F 100%)', padding: '120px 40px 56px', position: 'relative', overflow: 'hidden' }}>
         <BlueprintBg opacity={0.07} />
