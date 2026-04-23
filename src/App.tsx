@@ -58,6 +58,9 @@ const ConsultoriaIngenieriaCivilManizales = lazy(() => import('./pages/servicios
 const GestionRiesgoHidricoManizales = lazy(() => import('./pages/servicios/GestionRiesgoHidricoManizales'))
 const DisenoHidraulicoEjeCafetero = lazy(() => import('./pages/servicios/DisenoHidraulicoEjeCafetero'))
 const TopografiaManizales = lazy(() => import('./pages/servicios/TopografiaManizales'))
+const LicenciaUrbanismo = lazy(() => import('./pages/LicenciaUrbanismo'))
+const ObrasHidraulicasColombia = lazy(() => import('./pages/ObrasHidraulicasColombia'))
+const UrbanizacionColombia = lazy(() => import('./pages/UrbanizacionColombia'))
 
 function ScrollToTop() {
   const [location] = useLocation()
@@ -242,6 +245,9 @@ export default function App() {
           {/* ── PÁGINAS DE SERVICIO NACIONALES ── */}
           <Route path="/ingenieria-hidraulica-colombia" component={IngenieriaHidraulicaColombia} />
           <Route path="/gestion-riesgo-hidrico" component={GestionRiesgoHidrico} />
+          <Route path="/licencia-de-urbanismo" component={LicenciaUrbanismo} />
+          <Route path="/obras-hidraulicas-colombia" component={ObrasHidraulicasColombia} />
+          <Route path="/urbanizacion-colombia" component={UrbanizacionColombia} />
 
           {/* ── LANDING PAGES DE SERVICIOS INDIVIDUALES ── */}
           <Route path="/servicios/estudio-inundabilidad-manizales" component={EstudioInundabilidadManizales} />
