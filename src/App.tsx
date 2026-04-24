@@ -66,6 +66,7 @@ const DisenoCanalesRiego = lazy(() => import('./pages/DisenoCanalesRiego'))
 const EncauzamientoRios = lazy(() => import('./pages/EncauzamientoRios'))
 const PlanParcialColombia = lazy(() => import('./pages/PlanParcialColombia'))
 const IngenieriaHidraulicaManizales = lazy(() => import('./pages/IngenieriaHidraulicaManizales'))
+const EstudiosTorrencialidad = lazy(() => import('./pages/EstudiosTorrencialidad'))
 
 function ScrollToTop() {
   const [location] = useLocation()
@@ -258,6 +259,7 @@ export default function App() {
           <Route path="/encauzamiento-rios-colombia" component={EncauzamientoRios} />
           <Route path="/plan-parcial-colombia" component={PlanParcialColombia} />
           <Route path="/ingenieria-hidraulica-manizales" component={IngenieriaHidraulicaManizales} />
+          <Route path="/estudios-torrencialidad-colombia" component={EstudiosTorrencialidad} />
 
           {/* ── LANDING PAGES DE SERVICIOS INDIVIDUALES ── */}
           <Route path="/servicios/estudio-inundabilidad-manizales" component={EstudioInundabilidadManizales} />
