@@ -62,6 +62,10 @@ const LicenciaUrbanismo = lazy(() => import('./pages/LicenciaUrbanismo'))
 const ObrasHidraulicasColombia = lazy(() => import('./pages/ObrasHidraulicasColombia'))
 const UrbanizacionColombia = lazy(() => import('./pages/UrbanizacionColombia'))
 const BocatomasColombia = lazy(() => import('./pages/BocatomasColombia'))
+const DisenoCanalesRiego = lazy(() => import('./pages/DisenoCanalesRiego'))
+const EncauzamientoRios = lazy(() => import('./pages/EncauzamientoRios'))
+const PlanParcialColombia = lazy(() => import('./pages/PlanParcialColombia'))
+const IngenieriaHidraulicaManizales = lazy(() => import('./pages/IngenieriaHidraulicaManizales'))
 
 function ScrollToTop() {
   const [location] = useLocation()
@@ -250,6 +254,10 @@ export default function App() {
           <Route path="/obras-hidraulicas-colombia" component={ObrasHidraulicasColombia} />
           <Route path="/urbanizacion-colombia" component={UrbanizacionColombia} />
           <Route path="/bocatomas-colombia" component={BocatomasColombia} />
+          <Route path="/diseno-canal-riego-colombia" component={DisenoCanalesRiego} />
+          <Route path="/encauzamiento-rios-colombia" component={EncauzamientoRios} />
+          <Route path="/plan-parcial-colombia" component={PlanParcialColombia} />
+          <Route path="/ingenieria-hidraulica-manizales" component={IngenieriaHidraulicaManizales} />
 
           {/* ── LANDING PAGES DE SERVICIOS INDIVIDUALES ── */}
           <Route path="/servicios/estudio-inundabilidad-manizales" component={EstudioInundabilidadManizales} />
