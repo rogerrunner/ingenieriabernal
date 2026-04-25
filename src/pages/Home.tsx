@@ -1,6 +1,5 @@
 import { useEffect } from 'react'
 import { BlueprintBg, Tag, ThinLine, SectionLabel, Btn, Section, useInView, useCounter } from '../components/ui'
-import SchemaMarkup from '../components/SchemaMarkup'
 
 const WA = '573024778910'
 
@@ -69,7 +68,6 @@ export default function Home() {
 
   return (
     <>
-      <SchemaMarkup type="home" />
       {/* ── HERO */}
       <section style={{ background: 'linear-gradient(135deg, #002A50 0%, #003B6F 60%, #004F96 100%)', padding: '130px 40px 80px', position: 'relative', overflow: 'hidden' }}>
         <BlueprintBg opacity={0.07} />

@@ -1,6 +1,9 @@
 import { useEffect } from 'react'
 import { useRoute } from 'wouter'
 import articles1 from '../data/articles1'
+import articlesB from '../data/articlesB'
+import articlesC from '../data/articlesC'
+import articlesD from '../data/articlesD'
 import SEOHead from '../components/SEOHead'
 import { BlueprintBg, Tag, ThinLine, SectionLabel, Btn, Section } from '../components/ui'
 import { SEOConfig } from '../lib/seo'
@@ -282,6 +285,9 @@ const ARTICLES: Record<string, {
     </>
   },
   ...articles1,
+  ...articlesB,
+  ...articlesC,
+  ...articlesD,
 }
 
 // ─── SERVICE LINKS PER ARTICLE ──────────────────────────────────────────────
@@ -296,6 +302,30 @@ const SERVICE_LINKS: Record<string, { label: string; href: string }> = {
   'irca-municipio-colombia':                         { label: 'Acueducto y Alcantarillado',             href: '/servicios/acueducto-alcantarillado' },
   'mga-web-regalias-agua-potable':                   { label: 'Formulación MGA / Regalías SGR',         href: '/servicios/regalias-mga' },
   'hec-ras-2d-modelacion-hidraulica-colombia':       { label: 'Modelación Hidráulica HEC-RAS 2D',       href: '/servicios/modelacion-hec-ras' },
+  // articlesB
+  'acueducto-rural-colombia':                        { label: 'Acueducto y Alcantarillado',             href: '/servicios/acueducto-alcantarillado' },
+  'ptap-colombia':                                   { label: 'PTAP y PTAR',                            href: '/servicios' },
+  'redes-hidrosanitarias-colombia':                  { label: 'Redes Hidrosanitarias NSR-10',           href: '/servicios/redes-hidrosanitarias' },
+  'sistemas-contra-incendio-nsr10':                  { label: 'Sistemas Contra Incendio NSR-10',        href: '/servicios/sistemas-contra-incendio' },
+  'interventoria-hidraulica-colombia':               { label: 'Residencia e Interventoría',             href: '/servicios/interventoria' },
+  'alcantarillado-pluvial-colombia':                 { label: 'Acueducto y Alcantarillado',             href: '/servicios/acueducto-alcantarillado' },
+  'epanet-colombia-acueducto':                       { label: 'Acueducto y Alcantarillado',             href: '/servicios/acueducto-alcantarillado' },
+  'bocatoma-lateral-colombia':                       { label: 'Diseño de Bocatomas en Colombia',        href: '/bocatomas-colombia' },
+  // articlesC
+  'ras-2000-colombia':                               { label: 'Acueducto y Alcantarillado',             href: '/servicios/acueducto-alcantarillado' },
+  'ley-1523-riesgo-colombia':                        { label: 'Gestión del Riesgo Hídrico',             href: '/gestion-riesgo-hidrico' },
+  'nsr10-titulo-j-incendios-colombia':               { label: 'Sistemas Contra Incendio NSR-10',        href: '/servicios/sistemas-contra-incendio' },
+  'pomca-colombia':                                  { label: 'Gestión del Riesgo Hídrico',             href: '/gestion-riesgo-hidrico' },
+  'decreto-1575-agua-colombia':                      { label: 'Acueducto y Alcantarillado',             href: '/servicios/acueducto-alcantarillado' },
+  'licencia-ambiental-anla-colombia':                { label: 'Ingeniería Ambiental',                   href: '/servicios/ambiental' },
+  'contratacion-publica-ingenieria-colombia':        { label: 'Formulación Regalías MGA-Web',           href: '/servicios/regalias-mga' },
+  // articlesD
+  'riesgo-inundacion-eje-cafetero':                  { label: 'Gestión del Riesgo Hídrico',             href: '/gestion-riesgo-hidrico' },
+  'estabilidad-taludes-eje-cafetero':                { label: 'Gestión del Riesgo de Taludes',          href: '/gestion-riesgo-taludes-colombia' },
+  'regalias-acueducto-colombia':                     { label: 'Formulación Regalías MGA-Web',           href: '/servicios/regalias-mga' },
+  'caso-estudio-acueducto-rural':                    { label: 'Acueducto y Alcantarillado',             href: '/servicios/acueducto-alcantarillado' },
+  'plan-mejoramiento-irca-colombia':                 { label: 'Acueducto y Alcantarillado',             href: '/servicios/acueducto-alcantarillado' },
+  'contratar-consultoria-hidraulica-colombia':       { label: 'Ver todos nuestros servicios',           href: '/servicios' },
 }
 
 // ─── LAYOUT COMPONENTS ──────────────────────────────────────────────────────
