@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react'
 import { BlueprintBg, Tag, ThinLine, SectionLabel, Btn, Section } from '../components/ui'
+import SchemaMarkup from '../components/SchemaMarkup'
 
 const WA = '573024778910'
 const WEBHOOK_URL = import.meta.env.VITE_WEBHOOK_URL || 'http://localhost:3001/lead'
@@ -78,6 +79,7 @@ export default function Contact() {
 
   return (
     <>
+      <SchemaMarkup type="contact" />
       {/* HERO */}
       <section style={{ background: '#003B6F', padding: '120px 40px 60px', position: 'relative', overflow: 'hidden' }}>
         <BlueprintBg opacity={0.07} />
