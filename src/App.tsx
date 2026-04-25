@@ -67,6 +67,15 @@ const EncauzamientoRios = lazy(() => import('./pages/EncauzamientoRios'))
 const PlanParcialColombia = lazy(() => import('./pages/PlanParcialColombia'))
 const IngenieriaHidraulicaManizales = lazy(() => import('./pages/IngenieriaHidraulicaManizales'))
 const EstudiosTorrencialidad = lazy(() => import('./pages/EstudiosTorrencialidad'))
+const ConstruirCercaRioQuebrada = lazy(() => import('./pages/ConstruirCercaRioQuebrada'))
+const IngenieriaProyectosUrbanisticos = lazy(() => import('./pages/IngenieriaProyectosUrbanisticos'))
+const ObrasCivilesHidraulicas = lazy(() => import('./pages/ObrasCivilesHidraulicas'))
+const EstudiosHidrologicosVias = lazy(() => import('./pages/EstudiosHidrologicosVias'))
+const MemoriasHidrosanitarias = lazy(() => import('./pages/MemoriasHidrosanitarias'))
+const EstudiosRequeridosCAR = lazy(() => import('./pages/EstudiosRequeridosCAR'))
+const TengoUnLote = lazy(() => import('./pages/TengoUnLote'))
+const GestionRiesgoTaludes = lazy(() => import('./pages/GestionRiesgoTaludes'))
+const IngenieriaManizalesNacional = lazy(() => import('./pages/IngenieriaManizalesNacional'))
 
 function ScrollToTop() {
   const [location] = useLocation()
@@ -260,6 +269,15 @@ export default function App() {
           <Route path="/plan-parcial-colombia" component={PlanParcialColombia} />
           <Route path="/ingenieria-hidraulica-manizales" component={IngenieriaHidraulicaManizales} />
           <Route path="/estudios-torrencialidad-colombia" component={EstudiosTorrencialidad} />
+          <Route path="/construir-cerca-rio-quebrada-colombia" component={ConstruirCercaRioQuebrada} />
+          <Route path="/ingenieria-proyectos-urbanisticos-colombia" component={IngenieriaProyectosUrbanisticos} />
+          <Route path="/obras-civiles-hidraulicas-colombia" component={ObrasCivilesHidraulicas} />
+          <Route path="/estudios-hidrologicos-vias-colombia" component={EstudiosHidrologicosVias} />
+          <Route path="/memorias-hidrosanitarias-colombia" component={MemoriasHidrosanitarias} />
+          <Route path="/me-pidieron-estudios-en-la-car" component={EstudiosRequeridosCAR} />
+          <Route path="/tengo-un-lote-colombia" component={TengoUnLote} />
+          <Route path="/gestion-riesgo-taludes-colombia" component={GestionRiesgoTaludes} />
+          <Route path="/ingenieria-hidraulica-colombia-desde-manizales" component={IngenieriaManizalesNacional} />
 
           {/* ── LANDING PAGES DE SERVICIOS INDIVIDUALES ── */}
           <Route path="/servicios/estudio-inundabilidad-manizales" component={EstudioInundabilidadManizales} />
