@@ -32,7 +32,7 @@ export default function Contact() {
     document.title = 'Contacto — BIC Bernal Ingeniería Consultores | Manizales'
     const meta = document.querySelector('meta[name="description"]')
     if (meta) meta.setAttribute('content',
-      'Contacta a BIC — Bernal Ingeniería Consultores. Consultoría integral: hidráulica, geotecnia, arquitectura, ambiental y estructural. Manizales y toda Colombia. WhatsApp: +57 301 732 6991.'
+      'Contacta a BIC — Bernal Ingeniería Consultores. Consultoría integral: hidráulica, geotecnia, arquitectura, ambiental y estructural. Manizales y toda Colombia. WhatsApp: +57 302 477 8910.'
     )
   }, [])
 
@@ -166,7 +166,7 @@ export default function Contact() {
               <p style={{ color: '#17A2B8', fontWeight: 700, fontSize: 13, textTransform: 'uppercase', letterSpacing: '0.08em', margin: '0 0 8px' }}>WhatsApp directo</p>
               <a href={`https://wa.me/${WA}`} target="_blank" rel="noreferrer"
                 style={{ color: '#fff', fontWeight: 700, fontSize: 20, textDecoration: 'none', display: 'block', marginBottom: 4 }}>
-                +57 301 732 6991
+                +57 302 477 8910
               </a>
               <p style={{ color: 'rgba(255,255,255,0.6)', fontSize: 13, margin: 0 }}>Rogerio Bernal Ríos — Director General BIC</p>
             </div>
