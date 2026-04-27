@@ -1,6 +1,7 @@
 import { useEffect } from 'react'
 import { useRoute } from 'wouter'
 import articles1 from '../data/articles1'
+import articlesA from '../data/articlesA'
 import articlesB from '../data/articlesB'
 import articlesC from '../data/articlesC'
 import articlesD from '../data/articlesD'
@@ -286,6 +287,7 @@ const ARTICLES: Record<string, {
     </>
   },
   ...articles1,
+  ...articlesA,
   ...articlesB,
   ...articlesC,
   ...articlesD,
