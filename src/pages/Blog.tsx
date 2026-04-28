@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import { Link } from 'wouter'
 import { BlueprintBg, Tag, ThinLine, SectionLabel, Btn, Section, useInView } from '../components/ui'
 import SEOHead from '../components/SEOHead'
@@ -138,6 +138,24 @@ const POSTS = [
 export default function Blog() {
   const [cat, setCat] = useState('Todos')
   const { ref, inView } = useInView(0.05)
+
+  useEffect(() => {
+    const id = 'blog-list-breadcrumb'
+    document.getElementById(id)?.remove()
+    const el = document.createElement('script')
+    el.id = id
+    el.type = 'application/ld+json'
+    el.text = JSON.stringify({
+      '@context': 'https://schema.org',
+      '@type': 'BreadcrumbList',
+      'itemListElement': [
+        { '@type': 'ListItem', 'position': 1, 'name': 'Inicio', 'item': 'https://ingenieriabernal.co' },
+        { '@type': 'ListItem', 'position': 2, 'name': 'Blog', 'item': 'https://ingenieriabernal.co/blog' },
+      ],
+    })
+    document.head.appendChild(el)
+    return () => { document.getElementById(id)?.remove() }
+  }, [])
 
   const cats = ['Todos', ...Array.from(new Set(POSTS.map(p => p.category)))]
   const filtered = cat === 'Todos' ? POSTS : POSTS.filter(p => p.category === cat)

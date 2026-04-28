@@ -1,0 +1,28 @@
+# Ingeniería Bernal — Consultoría Hidráulica e Hidrológica en Colombia
+
+## About
+Ingeniería Bernal (ingenieriabernal.co) es una empresa colombiana especializada en ingeniería hidráulica e hidrológica con sede en el Eje Cafetero. Fundada por el ingeniero Rogerio Bernal, ofrece servicios de consultoría a municipios, constructoras, desarrolladores inmobiliarios y particulares en Colombia.
+
+## Core Services
+- Estudios hidrológicos (Decreto 1807, POMCA)
+- Modelación hidráulica 1D y 2D (HEC-RAS)
+- Diseño de PTAR (plantas tratamiento aguas residuales)
+- Diseño de PTAP (plantas tratamiento agua potable)
+- Concesiones de aguas ante CAR
+- Estudios de riesgo por inundación
+- Diseño de redes hidrosanitarias
+- Topografía e interventoría
+
+## Geographic Coverage
+Colombia — énfasis en: Manizales, Pereira, Armenia, Eje Cafetero, Bogotá, Medellín, Cali
+
+## Regulatory Expertise
+RAS 2000, Decreto 1807 de 2014, Decreto 1076 de 2015, NSR-10, normas ICONTEC, MAVDT, Ministerio de Vivienda
+
+## Blog
+Technical articles on hydraulic engineering in Spanish: https://ingenieriabernal.co/blog
+Topics: HEC-RAS, hidrología urbana, SUDS, PTAR, modelación hidráulica, concesiones de agua, estudios de inundabilidad
+
+## Contact
+WhatsApp: +57 316 288 8989
+Website: https://ingenieriabernal.co

@@ -1,4 +1,4 @@
-import { useEffect } from 'react'
+import { useEffect, useState } from 'react'
 import { BlueprintBg, Tag, ThinLine, SectionLabel, Btn, Section, useInView, useCounter } from '../components/ui'
 import SchemaMarkup from '../components/SchemaMarkup'
 
@@ -59,6 +59,32 @@ function StatCounter({ value, suffix, label }: { value: number, suffix: string, 
 }
 
 export default function Home() {
+  const [qf, setQf] = useState({ name: '', phone: '', service: '', city: '', desc: '' })
+  const setQ = (k: string) => (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) =>
+    setQf(p => ({ ...p, [k]: e.target.value }))
+
+  const sendQuote = (e: React.FormEvent) => {
+    e.preventDefault()
+    const msg = encodeURIComponent(
+      `Hola, soy ${qf.name}. ` +
+      `📱 ${qf.phone}. ` +
+      `Servicio: ${qf.service || 'por definir'}. ` +
+      `Ciudad: ${qf.city}. ` +
+      (qf.desc ? `Proyecto: ${qf.desc}` : '¿Podríamos conversar?')
+    )
+    window.open(`https://wa.me/${WA}?text=${msg}`, '_blank')
+  }
+
+  const qInput: React.CSSProperties = {
+    width: '100%', padding: '11px 14px', borderRadius: 8,
+    border: '1px solid #deedf5', fontSize: 14, boxSizing: 'border-box',
+    outline: 'none', background: '#fff', color: '#2C3E50', fontFamily: "'Lato', sans-serif",
+  }
+  const qLabel: React.CSSProperties = {
+    fontSize: 12, fontWeight: 600, color: '#003B6F', display: 'block', marginBottom: 6,
+    fontFamily: "'Montserrat', sans-serif",
+  }
+
   useEffect(() => {
     document.title = 'Consultoría Hidráulica Colombia | BIC – Bernal Ingeniería Consultores'
     const meta = document.querySelector('meta[name="description"]')
@@ -193,6 +219,66 @@ export default function Home() {
           </div>
           <div style={{ textAlign: 'center' }}>
             <Btn href="/proyectos">Ver portafolio completo →</Btn>
+          </div>
+        </div>
+      </Section>
+
+      {/* ── COTIZACIÓN RÁPIDA */}
+      <Section bg="#F8FAFC" style={{ padding: '72px 40px' }}>
+        <div className="container" style={{ maxWidth: 680 }}>
+          <SectionLabel>Cotización en 60 segundos</SectionLabel>
+          <ThinLine />
+          <h2 style={{ fontFamily: "'Playfair Display', serif", fontWeight: 700, color: '#003B6F', fontSize: 'clamp(22px, 3.5vw, 36px)', margin: '1.2rem 0 0.5rem' }}>
+            Solicita tu cotización gratuita
+          </h2>
+          <p style={{ color: '#475569', fontSize: 15, marginBottom: '2rem', lineHeight: 1.7 }}>
+            Sin compromiso · Primera consulta sin costo · Respuesta en menos de 2 horas hábiles
+          </p>
+          <div style={{ background: '#fff', borderRadius: 16, padding: '2.5rem', border: '1px solid #e0edf5', boxShadow: '0 4px 24px rgba(0,59,111,0.08)', borderTop: '4px solid #17A2B8' }}>
+            <form
+              onSubmit={sendQuote}
+              action="https://ingenieriabernal.co/contacto"
+              style={{ display: 'flex', flexDirection: 'column', gap: 16 }}
+            >
+              <div>
+                <label style={qLabel}>Nombre completo *</label>
+                <input required style={qInput} placeholder="Tu nombre completo" value={qf.name} onChange={setQ('name')} />
+              </div>
+              <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 14 }}>
+                <div>
+                  <label style={qLabel}>WhatsApp / Teléfono *</label>
+                  <input required type="tel" style={qInput} placeholder="Ej. 310 000 0000" value={qf.phone} onChange={setQ('phone')} />
+                </div>
+                <div>
+                  <label style={qLabel}>Tipo de servicio *</label>
+                  <select required style={qInput} value={qf.service} onChange={setQ('service')}>
+                    <option value="">Selecciona...</option>
+                    <option>Estudio hidrológico</option>
+                    <option>Estudio hidráulico</option>
+                    <option>Diseño PTAR</option>
+                    <option>Diseño PTAP</option>
+                    <option>Modelación HEC-RAS</option>
+                    <option>Diseño acueducto/alcantarillado</option>
+                    <option>Otro</option>
+                  </select>
+                </div>
+              </div>
+              <div>
+                <label style={qLabel}>Municipio / Ciudad *</label>
+                <input required style={qInput} placeholder="Ej. Manizales, Bogotá, Pereira..." value={qf.city} onChange={setQ('city')} />
+              </div>
+              <div>
+                <label style={qLabel}>Breve descripción del proyecto</label>
+                <textarea rows={3} style={{ ...qInput, resize: 'vertical' }} placeholder="Tipo, alcance, plazo estimado..." value={qf.desc} onChange={setQ('desc')} />
+              </div>
+              <button type="submit" style={{ padding: '14px', borderRadius: 10, border: 'none', background: '#25D366', color: '#fff', fontWeight: 700, fontSize: 15, cursor: 'pointer', display: 'flex', alignItems: 'center', justifyContent: 'center', gap: 10 }}>
+                <span style={{ fontSize: '1.2rem' }}>📱</span>
+                Enviar por WhatsApp — cotización gratuita
+              </button>
+              <p style={{ fontSize: 12, color: '#888', textAlign: 'center', margin: 0 }}>
+                Se abre WhatsApp con el mensaje prellenado · Sin correos · Sin formularios complejos
+              </p>
+            </form>
           </div>
         </div>
       </Section>
