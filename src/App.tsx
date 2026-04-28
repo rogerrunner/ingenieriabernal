@@ -58,6 +58,11 @@ const ConsultoriaIngenieriaCivilManizales = lazy(() => import('./pages/servicios
 const GestionRiesgoHidricoManizales = lazy(() => import('./pages/servicios/GestionRiesgoHidricoManizales'))
 const DisenoHidraulicoEjeCafetero = lazy(() => import('./pages/servicios/DisenoHidraulicoEjeCafetero'))
 const TopografiaManizales = lazy(() => import('./pages/servicios/TopografiaManizales'))
+const CiudadBogota = lazy(() => import('./pages/servicios/CiudadBogota'))
+const CiudadMedellin = lazy(() => import('./pages/servicios/CiudadMedellin'))
+const CiudadCali = lazy(() => import('./pages/servicios/CiudadCali'))
+const CiudadIbague = lazy(() => import('./pages/servicios/CiudadIbague'))
+const CiudadBucaramanga = lazy(() => import('./pages/servicios/CiudadBucaramanga'))
 const LicenciaUrbanismo = lazy(() => import('./pages/LicenciaUrbanismo'))
 const ObrasHidraulicasColombia = lazy(() => import('./pages/ObrasHidraulicasColombia'))
 const UrbanizacionColombia = lazy(() => import('./pages/UrbanizacionColombia'))
@@ -292,6 +297,13 @@ export default function App() {
           <Route path="/servicios/ambiental" component={ServicioAmbiental} />
           <Route path="/servicios/diseno-acueductos" component={ServicioDisenoAcueductos} />
           <Route path="/servicios/contra-incendios-nsr10" component={ServicioContraIncendiosNSR10} />
+
+          {/* ── LANDING PAGES DE CIUDAD — /servicios/{ciudad} ── */}
+          <Route path="/servicios/bogota" component={CiudadBogota} />
+          <Route path="/servicios/medellin" component={CiudadMedellin} />
+          <Route path="/servicios/cali" component={CiudadCali} />
+          <Route path="/servicios/ibague" component={CiudadIbague} />
+          <Route path="/servicios/bucaramanga" component={CiudadBucaramanga} />
 
           {/* ── LANDING PAGES REGIONALES SEO ── */}
           <Route path="/regional/manizales" component={RegionalManizales} />
