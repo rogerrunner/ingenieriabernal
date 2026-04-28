@@ -20,7 +20,7 @@ const seoConfig = {
     'CARDER permiso construcción',
     'POT Pereira licencia',
   ],
-  canonical: 'https://ingenieriabernal.co/licencia-de-construccion-pereira/',
+  canonical: 'https://ingenieriabernal.co/licencia-de-construccion-pereira',
 }
 
 const DOCUMENTOS = [

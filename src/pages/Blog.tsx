@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import { Link } from 'wouter'
 import { BlueprintBg, Tag, ThinLine, SectionLabel, Btn, Section, useInView } from '../components/ui'
 import SEOHead from '../components/SEOHead'
@@ -128,11 +128,61 @@ const POSTS = [
     readTime: '13 min',
     color: '#E63946',
   },
+  // ── ARTÍCULOS B: Infraestructura agua y saneamiento ─────────────────────
+  { slug: 'acueducto-rural-colombia', title: 'Diseño de acueductos rurales en Colombia: paso a paso según el RAS 2000', excerpt: 'Manual técnico completo para diseñar acueductos rurales: captación, conducción, PTAP y red de distribución según el RAS vigente.', category: 'Agua y Saneamiento', date: 'Abril 2026', readTime: '13 min', color: '#0077B6' },
+  { slug: 'ptap-colombia', title: 'PTAP en Colombia: tecnologías, costos y normativa para plantas de agua potable', excerpt: 'Guía técnica sobre plantas de tratamiento de agua potable en Colombia: tecnologías, diseño, normativa RAS y costos actualizados 2026.', category: 'PTAR y PTAP', date: 'Abril 2026', readTime: '11 min', color: '#003B6F' },
+  { slug: 'redes-hidrosanitarias-colombia', title: 'Diseño de redes hidrosanitarias en Colombia: guía técnica NSR-10', excerpt: 'Cómo diseñar redes de agua potable y alcantarillado sanitario en edificaciones colombianas conforme a la NSR-10 y el RAS 2017.', category: 'Diseño Hidráulico', date: 'Abril 2026', readTime: '10 min', color: '#17A2B8' },
+  { slug: 'sistemas-contra-incendio-nsr10', title: 'Sistemas contra incendio NSR-10 en Colombia: lo que toda constructora debe saber', excerpt: 'Guía práctica sobre el diseño de sistemas de protección contra incendios según la NSR-10 J y K: tipos, requisitos y proceso de aprobación en Bomberos.', category: 'Contra Incendios', date: 'Abril 2026', readTime: '10 min', color: '#B5451B' },
+  { slug: 'interventoria-hidraulica-colombia', title: 'Interventoría de obras hidráulicas en Colombia: funciones, responsabilidades y costos', excerpt: 'Qué hace un interventor en obras de acueducto, alcantarillado y sistemas hídricos. Responsabilidades legales, entregables y tarifas orientativas.', category: 'Interventoría', date: 'Abril 2026', readTime: '9 min', color: '#475569' },
+  { slug: 'alcantarillado-pluvial-colombia', title: 'Diseño de alcantarillado pluvial en Colombia: criterios, cálculo y normativa', excerpt: 'Cómo diseñar redes de alcantarillado pluvial en Colombia conforme al RAS 2017: métodos de cálculo, períodos de retorno y separación de sistemas.', category: 'Agua y Saneamiento', date: 'Abril 2026', readTime: '11 min', color: '#0077B6' },
+  { slug: 'epanet-colombia-acueducto', title: 'EPANET para acueductos en Colombia: cómo modelar y qué exige el RAS 2017', excerpt: 'Guía práctica para usar EPANET en el diseño de redes de distribución de agua potable en Colombia según los criterios del RAS 2017.', category: 'Software y Modelación', date: 'Abril 2026', readTime: '10 min', color: '#17A2B8' },
+  { slug: 'bocatoma-lateral-colombia', title: 'Bocatoma lateral en Colombia: diseño, materiales y tramitación ante la CAR', excerpt: 'Guía de diseño hidráulico para bocatomas laterales en ríos y quebradas colombianas: elementos estructurales, caudal de diseño y permiso de concesión de agua.', category: 'Diseño Hidráulico', date: 'Abril 2026', readTime: '9 min', color: '#003B6F' },
+  // ── ARTÍCULOS C: Normativa y regulación ─────────────────────────────────
+  { slug: 'ras-2000-colombia', title: 'RAS 2017 (Resolución 0330): guía de los cambios más importantes para ingenieros', excerpt: 'Los cambios más relevantes del RAS 2017 frente al RAS 2000 y su impacto en el diseño de acueductos, alcantarillados y plantas de tratamiento.', category: 'Normativa', date: 'Abril 2026', readTime: '10 min', color: '#003B6F' },
+  { slug: 'ley-1523-riesgo-colombia', title: 'Ley 1523 de 2012: guía práctica de gestión del riesgo para municipios colombianos', excerpt: 'Qué exige la Ley 1523 a los municipios colombianos, qué es el Plan Municipal de Gestión del Riesgo y cómo elaborarlo con ingeniería especializada.', category: 'Riesgo Hídrico', date: 'Abril 2026', readTime: '11 min', color: '#E63946' },
+  { slug: 'nsr10-titulo-j-incendios-colombia', title: 'NSR-10 Título J: análisis técnico de los requisitos para sistemas contra incendios', excerpt: 'Análisis técnico detallado de los requisitos del Título J de la NSR-10 para diseño de sistemas de protección contra incendios en Colombia.', category: 'Contra Incendios', date: 'Abril 2026', readTime: '10 min', color: '#B5451B' },
+  { slug: 'pomca-colombia', title: 'POMCA en Colombia: qué es, para qué sirve y cómo impacta su proyecto', excerpt: 'Qué es el Plan de Ordenación y Manejo de Cuencas Hidrográficas, cómo lo elaboran las CAR y cómo afecta los proyectos de construcción y uso del suelo.', category: 'Normativa', date: 'Abril 2026', readTime: '9 min', color: '#17A2B8' },
+  { slug: 'decreto-1575-agua-colombia', title: 'Decreto 1575 de 2007: calidad del agua potable en Colombia y qué exige a los municipios', excerpt: 'Guía técnica sobre el Decreto 1575 para la calidad del agua potable en Colombia: parámetros, responsabilidades y relación con el IRCA.', category: 'Agua y Saneamiento', date: 'Abril 2026', readTime: '9 min', color: '#0077B6' },
+  { slug: 'licencia-ambiental-anla-colombia', title: 'Licencia ambiental ANLA en Colombia: cuándo se necesita y cómo se tramita', excerpt: 'Guía paso a paso para el trámite de licencia ambiental ante la ANLA en Colombia: proyectos obligados, documentos, plazos y costos del EIA.', category: 'Ingeniería Ambiental', date: 'Abril 2026', readTime: '12 min', color: '#2D6A4F' },
+  { slug: 'contratacion-publica-ingenieria-colombia', title: 'Contratación pública para ingeniería en Colombia: SECOP II, RUP y cómo participar', excerpt: 'Guía para ingenieros y consultores que quieren contratar con el Estado colombiano: registro en SECOP II, RUP, modalidades de contratación y documentos clave.', category: 'Sector Público', date: 'Abril 2026', readTime: '11 min', color: '#7B2D8B' },
+  // ── ARTÍCULOS D: Casos y regiones ───────────────────────────────────────
+  { slug: 'riesgo-inundacion-eje-cafetero', title: 'Riesgo de inundación en el Eje Cafetero: causas, zonas críticas y soluciones', excerpt: 'Análisis del riesgo de inundación en Manizales, Pereira y Armenia: cuáles son las quebradas más peligrosas y qué medidas se pueden adoptar.', category: 'Riesgo Hídrico', date: 'Abril 2026', readTime: '10 min', color: '#E63946' },
+  { slug: 'estabilidad-taludes-eje-cafetero', title: 'Estabilidad de taludes en el Eje Cafetero: por qué falla y qué dice la norma', excerpt: 'Los movimientos en masa son la segunda causa de emergencias en el Eje Cafetero. Causas geológicas, normativa NSR-10 y alternativas de estabilización.', category: 'Geotecnia', date: 'Abril 2026', readTime: '9 min', color: '#8B4513' },
+  { slug: 'regalias-acueducto-colombia', title: 'Regalías para acueducto y alcantarillado: cómo acceder al SGR y no perder el cupo', excerpt: 'Guía para alcaldes y secretarías de planeación sobre cómo formular proyectos de agua y saneamiento financiados con regalías del SGR.', category: 'Regalías SGR', date: 'Abril 2026', readTime: '11 min', color: '#7B2D8B' },
+  { slug: 'caso-estudio-acueducto-rural', title: 'Caso de estudio: diseño de acueducto rural para 350 usuarios en Caldas', excerpt: 'Caso real de BIC: diseño de un sistema de acueducto rural en el occidente de Caldas, desde la fuente hasta la red de distribución.', category: 'Casos de Estudio', date: 'Abril 2026', readTime: '10 min', color: '#003B6F' },
+  { slug: 'plan-mejoramiento-irca-colombia', title: 'Plan de mejoramiento de IRCA: cómo elaborarlo y presentarlo ante la Supersalud', excerpt: 'Qué debe incluir un plan de mejoramiento para reducir el IRCA de un municipio colombiano y cómo presentarlo ante la Superintendencia de Salud.', category: 'Agua y Saneamiento', date: 'Abril 2026', readTime: '10 min', color: '#0077B6' },
+  { slug: 'contratar-consultoria-hidraulica-colombia', title: '¿Cómo elegir el consultor hidráulico adecuado para mi proyecto en Colombia?', excerpt: 'Criterios para seleccionar un consultor de ingeniería hidráulica en Colombia: verificación COPNIA, experiencia comprobable, entregables y precios de referencia.', category: 'Consejos para clientes', date: 'Abril 2026', readTime: '8 min', color: '#475569' },
+  { slug: 'bocatoma-caudal-riego-colombia', title: '¿Cuánto caudal necesita una bocatoma para riego en Colombia?', excerpt: 'Cómo calcular el caudal de diseño para una bocatoma de riego: módulo de riego por cultivo, caudal ecológico y tramitación de concesión de aguas ante la CAR.', category: 'Hidráulica', date: 'Abril 2026', readTime: '10 min', color: '#0077B6' },
+  { slug: 'estudio-hidrologico-decreto-1807', title: '¿Qué entrega un estudio hidrológico para el Decreto 1807 en Colombia?', excerpt: 'Contenido mínimo del estudio de amenaza por inundación exigido por el Decreto 1807: qué modela el ingeniero, qué documentos entrega y cuánto cuesta en 2026.', category: 'Estudios Técnicos', date: 'Abril 2026', readTime: '12 min', color: '#E63946' },
+  { slug: 'hec-ras-1d-vs-2d-colombia', title: 'HEC-RAS 1D vs 2D en Colombia: ¿cuál necesita su estudio?', excerpt: 'Diferencias técnicas entre HEC-RAS 1D y 2D para estudios de inundación en Colombia. Cuándo usa cada modelo, qué datos necesita y qué exige el Decreto 1807.', category: 'Modelación Hidráulica', date: 'Abril 2026', readTime: '11 min', color: '#17A2B8' },
+  { slug: 'ptar-industrial-colombia', title: 'PTAR industrial en Colombia: diseño, costos y permisos en 2026', excerpt: 'Tecnologías de tratamiento para aguas residuales industriales en Colombia, costos de construcción por caudal y cómo tramitar el permiso de vertimientos ante la CAR.', category: 'Agua y Saneamiento', date: 'Abril 2026', readTime: '12 min', color: '#003B6F' },
+  { slug: 'ingeniero-hidraulico-para-mi-proyecto', title: 'Cómo contratar un ingeniero hidráulico para su proyecto en Colombia', excerpt: 'Qué servicios ofrece un ingeniero hidráulico, cómo verificar su idoneidad en COPNIA, preguntas clave antes de contratar y qué debe incluir el contrato de consultoría.', category: 'Consultoría', date: 'Abril 2026', readTime: '9 min', color: '#475569' },
+  { slug: 'retiro-quebrada-construccion-colombia', title: '¿Cuántos metros de retiro de quebrada exige la ley en Colombia?', excerpt: 'Distancias de retiro de fuentes hídricas según el Código de Recursos Naturales, el POT municipal y las rondas hídricas delimitadas por las CAR. Qué hacer si su predio está en retiro.', category: 'Normativa', date: 'Abril 2026', readTime: '10 min', color: '#2D6A4F' },
+  { slug: 'que-necesito-para-urbanizar-un-lote-colombia', title: '¿Qué necesito para urbanizar un lote en Colombia en 2026?', excerpt: 'Requisitos para tramitar una licencia de urbanización: estudios técnicos, trámites ante curaduría, empresa de servicios públicos y CAR. Guía actualizada 2026.', category: 'Urbanismo', date: 'Abril 2026', readTime: '13 min', color: '#7B2D8B' },
+  { slug: 'estudios-car-corpocaldas-colombia', title: '¿Qué estudios exige CORPOCALDAS para construir cerca de una fuente hídrica?', excerpt: 'Requisitos técnicos para trámites ante CORPOCALDAS: concesiones de agua, permisos de vertimientos y construcción en rondas hídricas en Caldas. Documentos y plazos.', category: 'Normativa', date: 'Abril 2026', readTime: '11 min', color: '#003B6F' },
 ]
 
 export default function Blog() {
   const [cat, setCat] = useState('Todos')
   const { ref, inView } = useInView(0.05)
+
+  useEffect(() => {
+    const id = 'blog-list-breadcrumb'
+    document.getElementById(id)?.remove()
+    const el = document.createElement('script')
+    el.id = id
+    el.type = 'application/ld+json'
+    el.text = JSON.stringify({
+      '@context': 'https://schema.org',
+      '@type': 'BreadcrumbList',
+      'itemListElement': [
+        { '@type': 'ListItem', 'position': 1, 'name': 'Inicio', 'item': 'https://ingenieriabernal.co' },
+        { '@type': 'ListItem', 'position': 2, 'name': 'Blog', 'item': 'https://ingenieriabernal.co/blog' },
+      ],
+    })
+    document.head.appendChild(el)
+    return () => { document.getElementById(id)?.remove() }
+  }, [])
 
   const cats = ['Todos', ...Array.from(new Set(POSTS.map(p => p.category)))]
   const filtered = cat === 'Todos' ? POSTS : POSTS.filter(p => p.category === cat)

@@ -22,7 +22,7 @@ const seoConfig = {
     'Quebrada Consotá Pereira',
     'QGIS hidrología Risaralda',
   ],
-  canonical: 'https://ingenieriabernal.co/estudio-de-inundabilidad-pereira/',
+  canonical: 'https://ingenieriabernal.co/estudio-de-inundabilidad-pereira',
 }
 
 const METODOLOGIA = [

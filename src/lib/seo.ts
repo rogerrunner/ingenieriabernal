@@ -42,7 +42,7 @@ export const defaultSEO: SEOConfig = {
 export const pagesSEO: Record<string, SEOConfig> = {
   home: {
     title: "Ingeniería Hidráulica Colombia | BIC Bernal Ingeniería Consultores",
-    description: "Consultoría en ingeniería hidráulica, modelación HEC-RAS 2D, diseño hidrosanitario NSR-10, acueductos RAS 2017 y gestión del riesgo hídrico en Colombia. Especialista UNAL · COPNIA vigente.",
+    description: "Consultoría: ingeniería hidráulica, HEC-RAS 2D, hidrosanitario NSR-10, acueductos y riesgo hídrico en Colombia. Especialista UNAL · COPNIA 17202-313228.",
     keywords: [
       "ingeniero hidráulico",
       "consultor riesgo",
@@ -247,6 +247,7 @@ export function generateProfessionalSchema() {
   return {
     "@context": "https://schema.org",
     "@type": "Person",
+    "@id": "https://ingenieriabernal.co/#rogerio",
     "name": "Rogerio Bernal Ríos",
     "jobTitle": "Ingeniero Civil - Especialista en Ingeniería Hidráulica",
     "image": "https://ingenieriabernal.co/rogerio.jpg",
@@ -257,13 +258,27 @@ export function generateProfessionalSchema() {
       "https://www.linkedin.com/in/rogerio-bernal",
       "https://www.researchgate.net/profile/Rogerio-Bernal"
     ],
+    "alumniOf": {
+      "@type": "EducationalOrganization",
+      "name": "Universidad Nacional de Colombia"
+    },
+    "hasCredential": {
+      "@type": "EducationalOccupationalCredential",
+      "name": "Tarjeta Profesional COPNIA",
+      "credentialCategory": "License",
+      "identifier": "17202-313228",
+      "issuingOrganization": {
+        "@type": "Organization",
+        "name": "COPNIA"
+      }
+    },
     "affiliation": {
       "@type": "Organization",
       "name": "Rogerio Bernal - Ingeniería Hidráulica"
     },
     "knowsAbout": [
       "Ingeniería Hidráulica",
-      "Modelación HEC-RAS",
+      "Modelación HEC-RAS 2D",
       "Gestión del Riesgo",
       "Diseño Hidrosanitario",
       "RAS 2017",
@@ -271,7 +286,15 @@ export function generateProfessionalSchema() {
       "Drenaje Urbano",
       "Ordenamiento Territorial",
       "Agua Potable",
-      "Saneamiento Básico"
+      "Saneamiento Básico",
+      "EPANET",
+      "EPASWMM",
+      "HEC-HMS",
+      "Iber",
+      "TETIS",
+      "NSR-10",
+      "Decreto 1807/2014",
+      "MGA-Web"
     ],
     "worksFor": {
       "@type": "Organization",
@@ -306,6 +329,53 @@ export function generateServiceSchema() {
       "areaServed": "Caldas, Colombia"
     },
     "availableLanguage": "es"
+  };
+}
+
+/**
+ * Generate BlogPosting Schema Markup
+ */
+export function generateBlogPostingSchema(params: {
+  title: string;
+  description: string;
+  url: string;
+  datePublished: string;
+  dateModified?: string;
+  image?: string;
+  keywords?: string;
+}) {
+  return {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "headline": params.title,
+    "description": params.description,
+    "keywords": params.keywords || "",
+    "url": params.url,
+    "datePublished": params.datePublished,
+    "dateModified": params.dateModified || params.datePublished,
+    "inLanguage": "es-CO",
+    "image": params.image || "https://ingenieriabernal.co/og-image.png",
+    "author": {
+      "@type": "Person",
+      "@id": "https://ingenieriabernal.co/#rogerio",
+      "name": "Rogerio Bernal Ríos",
+      "url": "https://ingenieriabernal.co",
+      "jobTitle": "Ingeniero Civil — Especialista en Ingeniería Hidráulica y Ambiental"
+    },
+    "publisher": {
+      "@type": "LocalBusiness",
+      "@id": "https://ingenieriabernal.co/#firma",
+      "name": "BIC Bernal Ingeniería Consultores",
+      "url": "https://ingenieriabernal.co",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://ingenieriabernal.co/favicon.svg"
+      }
+    },
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": params.url
+    }
   };
 }
 
@@ -405,7 +475,7 @@ export const localKeywords = {
 /**
  * Meta Tags Helper
  */
-export function generateMetaTags(seo: SEOConfig) {
+export function generateMetaTags(seo: SEOConfig, url?: string) {
   return {
     title: seo.title,
     description: seo.description,
@@ -414,7 +484,7 @@ export function generateMetaTags(seo: SEOConfig) {
     "og:description": seo.description,
     "og:type": seo.ogType || "website",
     "og:image": seo.ogImage || "https://ingenieriabernal.co/og-image.png",
-    "og:url": "https://ingenieriabernal.co",
+    "og:url": url || "https://ingenieriabernal.co",
     "twitter:card": "summary_large_image",
     "twitter:title": seo.title,
     "twitter:description": seo.description,

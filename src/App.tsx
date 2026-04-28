@@ -58,6 +58,28 @@ const ConsultoriaIngenieriaCivilManizales = lazy(() => import('./pages/servicios
 const GestionRiesgoHidricoManizales = lazy(() => import('./pages/servicios/GestionRiesgoHidricoManizales'))
 const DisenoHidraulicoEjeCafetero = lazy(() => import('./pages/servicios/DisenoHidraulicoEjeCafetero'))
 const TopografiaManizales = lazy(() => import('./pages/servicios/TopografiaManizales'))
+const LicenciaUrbanismo = lazy(() => import('./pages/LicenciaUrbanismo'))
+const ObrasHidraulicasColombia = lazy(() => import('./pages/ObrasHidraulicasColombia'))
+const UrbanizacionColombia = lazy(() => import('./pages/UrbanizacionColombia'))
+const BocatomasColombia = lazy(() => import('./pages/BocatomasColombia'))
+const DisenoCanalesRiego = lazy(() => import('./pages/DisenoCanalesRiego'))
+const EncauzamientoRios = lazy(() => import('./pages/EncauzamientoRios'))
+const PlanParcialColombia = lazy(() => import('./pages/PlanParcialColombia'))
+const IngenieriaHidraulicaManizales = lazy(() => import('./pages/IngenieriaHidraulicaManizales'))
+const EstudiosTorrencialidad = lazy(() => import('./pages/EstudiosTorrencialidad'))
+const ConstruirCercaRioQuebrada = lazy(() => import('./pages/ConstruirCercaRioQuebrada'))
+const IngenieriaProyectosUrbanisticos = lazy(() => import('./pages/IngenieriaProyectosUrbanisticos'))
+const ObrasCivilesHidraulicas = lazy(() => import('./pages/ObrasCivilesHidraulicas'))
+const EstudiosHidrologicosVias = lazy(() => import('./pages/EstudiosHidrologicosVias'))
+const MemoriasHidrosanitarias = lazy(() => import('./pages/MemoriasHidrosanitarias'))
+const EstudiosRequeridosCAR = lazy(() => import('./pages/EstudiosRequeridosCAR'))
+const TengoUnLote = lazy(() => import('./pages/TengoUnLote'))
+const GestionRiesgoTaludes = lazy(() => import('./pages/GestionRiesgoTaludes'))
+const IngenieriaManizalesNacional = lazy(() => import('./pages/IngenieriaManizalesNacional'))
+const DisenoPTARColombia = lazy(() => import('./pages/DisenoPTARColombia'))
+const ModelacionHidraulicaColombia = lazy(() => import('./pages/ModelacionHidraulicaColombia'))
+const ConcesionAguasColombia = lazy(() => import('./pages/ConcesionAguasColombia'))
+const DisenoPTAPColombia = lazy(() => import('./pages/DisenoPTAPColombia'))
 
 function ScrollToTop() {
   const [location] = useLocation()
@@ -242,6 +264,28 @@ export default function App() {
           {/* ── PÁGINAS DE SERVICIO NACIONALES ── */}
           <Route path="/ingenieria-hidraulica-colombia" component={IngenieriaHidraulicaColombia} />
           <Route path="/gestion-riesgo-hidrico" component={GestionRiesgoHidrico} />
+          <Route path="/licencia-de-urbanismo" component={LicenciaUrbanismo} />
+          <Route path="/obras-hidraulicas-colombia" component={ObrasHidraulicasColombia} />
+          <Route path="/urbanizacion-colombia" component={UrbanizacionColombia} />
+          <Route path="/bocatomas-colombia" component={BocatomasColombia} />
+          <Route path="/diseno-canal-riego-colombia" component={DisenoCanalesRiego} />
+          <Route path="/encauzamiento-rios-colombia" component={EncauzamientoRios} />
+          <Route path="/plan-parcial-colombia" component={PlanParcialColombia} />
+          <Route path="/ingenieria-hidraulica-manizales" component={IngenieriaHidraulicaManizales} />
+          <Route path="/estudios-torrencialidad-colombia" component={EstudiosTorrencialidad} />
+          <Route path="/construir-cerca-rio-quebrada-colombia" component={ConstruirCercaRioQuebrada} />
+          <Route path="/ingenieria-proyectos-urbanisticos-colombia" component={IngenieriaProyectosUrbanisticos} />
+          <Route path="/obras-civiles-hidraulicas-colombia" component={ObrasCivilesHidraulicas} />
+          <Route path="/estudios-hidrologicos-vias-colombia" component={EstudiosHidrologicosVias} />
+          <Route path="/memorias-hidrosanitarias-colombia" component={MemoriasHidrosanitarias} />
+          <Route path="/me-pidieron-estudios-en-la-car" component={EstudiosRequeridosCAR} />
+          <Route path="/tengo-un-lote-colombia" component={TengoUnLote} />
+          <Route path="/gestion-riesgo-taludes-colombia" component={GestionRiesgoTaludes} />
+          <Route path="/ingenieria-hidraulica-colombia-desde-manizales" component={IngenieriaManizalesNacional} />
+          <Route path="/diseno-ptar-colombia" component={DisenoPTARColombia} />
+          <Route path="/modelacion-hidraulica-colombia" component={ModelacionHidraulicaColombia} />
+          <Route path="/concesion-aguas-colombia" component={ConcesionAguasColombia} />
+          <Route path="/diseno-ptap-colombia" component={DisenoPTAPColombia} />
 
           {/* ── LANDING PAGES DE SERVICIOS INDIVIDUALES ── */}
           <Route path="/servicios/estudio-inundabilidad-manizales" component={EstudioInundabilidadManizales} />

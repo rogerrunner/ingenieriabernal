@@ -20,7 +20,7 @@ const seoConfig = {
     'EPANET acueducto',
     'diseño hidráulico Colombia',
   ],
-  canonical: 'https://ingenieriabernal.co/diseno-hidraulico-eje-cafetero/',
+  canonical: 'https://ingenieriabernal.co/diseno-hidraulico-eje-cafetero',
 }
 
 const SERVICIOS_HIDRAULICOS = [
