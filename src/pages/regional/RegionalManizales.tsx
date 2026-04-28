@@ -19,7 +19,7 @@ const seoConfig = {
     'consultoría ingeniería Caldas',
     'interventoría hidráulica Manizales',
   ],
-  canonical: 'https://www.ingenieriabernal.co/regional/manizales',
+  canonical: 'https://ingenieriabernal.co/regional/manizales',
 }
 
 const SCHEMA = {
@@ -27,7 +27,7 @@ const SCHEMA = {
   '@type': 'LocalBusiness',
   name: 'BIC – Bernal Ingeniería Consultores',
   description: 'Consultoría en ingeniería hidráulica, sanitaria y ambiental con sede en Manizales, Caldas.',
-  url: 'https://www.ingenieriabernal.co',
+  url: 'https://ingenieriabernal.co',
   telephone: '+573024778910',
   email: 'rogeriobernal@ingenieriabernal.co',
   address: {
@@ -37,7 +37,7 @@ const SCHEMA = {
     addressCountry: 'CO',
   },
   areaServed: ['Manizales', 'Caldas', 'Eje Cafetero'],
-  hasMap: 'https://www.ingenieriabernal.co/regional/manizales',
+  hasMap: 'https://ingenieriabernal.co/regional/manizales',
 }
 
 const SERVICIOS = [
@@ -89,8 +89,8 @@ export default function RegionalManizales() {
             BIC tiene su sede en Manizales y lleva más de 10 años ejecutando proyectos de
             ingeniería hidráulica en Caldas. Desde estudios hidrológicos hasta diseño de
             acueductos y alcantarillados, apoyamos alcaldías, constructoras y ESP en la
-            región con el respaldo técnico de un equipo con doctorado en ingeniería y
-            registro COPNIA vigente.
+            región con el respaldo técnico de Rogerio Bernal Ríos, Especialista en Ingeniería
+            Hidráulica y Ambiental (UNAL), COPNIA 17202-313228.
           </p>
           <div style={{ display: 'flex', gap: 12, flexWrap: 'wrap' }}>
             <Btn href={`https://wa.me/${WA}?text=${WA_MSG}`}>
@@ -149,7 +149,7 @@ export default function RegionalManizales() {
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(240px, 1fr))', gap: 20 }}>
             {[
               { icon: '📍', tit: 'Sede en Manizales', txt: 'Disponibilidad para visitas técnicas en cualquier municipio de Caldas sin costos adicionales de desplazamiento.' },
-              { icon: '🎓', tit: 'Director PhD — COPNIA vigente', txt: 'Máximo nivel técnico con responsabilidad profesional registrada ante el Estado colombiano.' },
+              { icon: '🎓', tit: 'Especialista UNAL · COPNIA vigente', txt: 'Rogerio Bernal Ríos, Especialista en Ingeniería Hidráulica y Ambiental (UNAL). Matrícula COPNIA 17202-313228 CLD activa.' },
               { icon: '🏗️', tit: '+10 años en la región', txt: 'Proyectos ejecutados en Manizales, Viterbo, Anserma, La Dorada y municipios del Eje Cafetero.' },
               { icon: '⚡', tit: 'Respuesta en 24 horas', txt: 'Propuesta técnica y económica en 24 horas para proyectos en Caldas y el Eje Cafetero.' },
             ].map(d => (

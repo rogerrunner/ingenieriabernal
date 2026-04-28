@@ -19,7 +19,7 @@ const seoConfig = {
     'consultoría técnica Caldas Risaralda Quindío',
     'gestión riesgo hídrico Eje Cafetero',
   ],
-  canonical: 'https://www.ingenieriabernal.co/regional/eje-cafetero',
+  canonical: 'https://ingenieriabernal.co/regional/eje-cafetero',
 }
 
 const SCHEMA = {
@@ -27,7 +27,7 @@ const SCHEMA = {
   '@type': 'LocalBusiness',
   name: 'BIC – Bernal Ingeniería Consultores',
   description: 'Consultoría integral en ingeniería hidráulica, sanitaria y ambiental para Caldas, Risaralda y Quindío.',
-  url: 'https://www.ingenieriabernal.co',
+  url: 'https://ingenieriabernal.co',
   telephone: '+573024778910',
   email: 'rogeriobernal@ingenieriabernal.co',
   address: {
@@ -37,7 +37,7 @@ const SCHEMA = {
     addressCountry: 'CO',
   },
   areaServed: ['Caldas', 'Risaralda', 'Quindío', 'Eje Cafetero', 'Manizales', 'Pereira', 'Armenia'],
-  hasMap: 'https://www.ingenieriabernal.co/regional/eje-cafetero',
+  hasMap: 'https://ingenieriabernal.co/regional/eje-cafetero',
 }
 
 const SERVICIOS = [

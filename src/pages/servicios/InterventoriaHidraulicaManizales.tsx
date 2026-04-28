@@ -20,7 +20,7 @@ const seoConfig = {
     'Corpocaldas interventoría obras',
     'BIC ingeniería Manizales',
   ],
-  canonical: 'https://www.ingenieriabernal.co/interventoria-hidraulica-manizales/',
+  canonical: 'https://ingenieriabernal.co/interventoria-hidraulica-manizales',
 }
 
 const TIPOS_INTERVENTORIA = [

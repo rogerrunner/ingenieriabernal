@@ -34,6 +34,10 @@ const ServicioInterventoria = lazy(() => import('./pages/ServicioInterventoria')
 const ServicioRegaliasMga = lazy(() => import('./pages/ServicioRegaliasMga'))
 const ServicioGeotecnia = lazy(() => import('./pages/ServicioGeotecnia'))
 const ServicioAmbiental = lazy(() => import('./pages/ServicioAmbiental'))
+const IngenieriaHidraulicaColombia = lazy(() => import('./pages/IngenieriaHidraulicaColombia'))
+const GestionRiesgoHidrico = lazy(() => import('./pages/GestionRiesgoHidrico'))
+const ServicioDisenoAcueductos = lazy(() => import('./pages/ServicioDisenoAcueductos'))
+const ServicioContraIncendiosNSR10 = lazy(() => import('./pages/ServicioContraIncendiosNSR10'))
 const RegionalManizales = lazy(() => import('./pages/regional/RegionalManizales'))
 const RegionalPereira = lazy(() => import('./pages/regional/RegionalPereira'))
 const RegionalArmenia = lazy(() => import('./pages/regional/RegionalArmenia'))
@@ -47,6 +51,35 @@ const ModelacionHidraulicaManizales = lazy(() => import('./pages/servicios/Model
 const EstudioHidrologicoManizales = lazy(() => import('./pages/servicios/EstudioHidrologicoManizales'))
 const InterventoriaHidraulicaManizales = lazy(() => import('./pages/servicios/InterventoriaHidraulicaManizales'))
 const DisenoHidraulicoPereira = lazy(() => import('./pages/servicios/DisenoHidraulicoPereira'))
+const EstudioInundabilidadPereira = lazy(() => import('./pages/servicios/EstudioInundabilidadPereira'))
+const LicenciaConstruccionPereira = lazy(() => import('./pages/servicios/LicenciaConstruccionPereira'))
+const EstudioSuelosEjeCafetero = lazy(() => import('./pages/servicios/EstudioSuelosEjeCafetero'))
+const ConsultoriaIngenieriaCivilManizales = lazy(() => import('./pages/servicios/ConsultoriaIngenieriaCivilManizales'))
+const GestionRiesgoHidricoManizales = lazy(() => import('./pages/servicios/GestionRiesgoHidricoManizales'))
+const DisenoHidraulicoEjeCafetero = lazy(() => import('./pages/servicios/DisenoHidraulicoEjeCafetero'))
+const TopografiaManizales = lazy(() => import('./pages/servicios/TopografiaManizales'))
+const LicenciaUrbanismo = lazy(() => import('./pages/LicenciaUrbanismo'))
+const ObrasHidraulicasColombia = lazy(() => import('./pages/ObrasHidraulicasColombia'))
+const UrbanizacionColombia = lazy(() => import('./pages/UrbanizacionColombia'))
+const BocatomasColombia = lazy(() => import('./pages/BocatomasColombia'))
+const DisenoCanalesRiego = lazy(() => import('./pages/DisenoCanalesRiego'))
+const EncauzamientoRios = lazy(() => import('./pages/EncauzamientoRios'))
+const PlanParcialColombia = lazy(() => import('./pages/PlanParcialColombia'))
+const IngenieriaHidraulicaManizales = lazy(() => import('./pages/IngenieriaHidraulicaManizales'))
+const EstudiosTorrencialidad = lazy(() => import('./pages/EstudiosTorrencialidad'))
+const ConstruirCercaRioQuebrada = lazy(() => import('./pages/ConstruirCercaRioQuebrada'))
+const IngenieriaProyectosUrbanisticos = lazy(() => import('./pages/IngenieriaProyectosUrbanisticos'))
+const ObrasCivilesHidraulicas = lazy(() => import('./pages/ObrasCivilesHidraulicas'))
+const EstudiosHidrologicosVias = lazy(() => import('./pages/EstudiosHidrologicosVias'))
+const MemoriasHidrosanitarias = lazy(() => import('./pages/MemoriasHidrosanitarias'))
+const EstudiosRequeridosCAR = lazy(() => import('./pages/EstudiosRequeridosCAR'))
+const TengoUnLote = lazy(() => import('./pages/TengoUnLote'))
+const GestionRiesgoTaludes = lazy(() => import('./pages/GestionRiesgoTaludes'))
+const IngenieriaManizalesNacional = lazy(() => import('./pages/IngenieriaManizalesNacional'))
+const DisenoPTARColombia = lazy(() => import('./pages/DisenoPTARColombia'))
+const ModelacionHidraulicaColombia = lazy(() => import('./pages/ModelacionHidraulicaColombia'))
+const ConcesionAguasColombia = lazy(() => import('./pages/ConcesionAguasColombia'))
+const DisenoPTAPColombia = lazy(() => import('./pages/DisenoPTAPColombia'))
 
 function ScrollToTop() {
   const [location] = useLocation()
@@ -54,7 +87,7 @@ function ScrollToTop() {
   return null
 }
 
-const BASE_URL = 'https://www.ingenieriabernal.co'
+const BASE_URL = 'https://ingenieriabernal.co'
 
 function CanonicalManager() {
   const [location] = useLocation()
@@ -228,7 +261,34 @@ export default function App() {
           <Route path="/ingenieria-eje-cafetero" component={EjeCafetero} />
           <Route path="/ingenieria-antioquia" component={Antioquia} />
 
+          {/* ── PÁGINAS DE SERVICIO NACIONALES ── */}
+          <Route path="/ingenieria-hidraulica-colombia" component={IngenieriaHidraulicaColombia} />
+          <Route path="/gestion-riesgo-hidrico" component={GestionRiesgoHidrico} />
+          <Route path="/licencia-de-urbanismo" component={LicenciaUrbanismo} />
+          <Route path="/obras-hidraulicas-colombia" component={ObrasHidraulicasColombia} />
+          <Route path="/urbanizacion-colombia" component={UrbanizacionColombia} />
+          <Route path="/bocatomas-colombia" component={BocatomasColombia} />
+          <Route path="/diseno-canal-riego-colombia" component={DisenoCanalesRiego} />
+          <Route path="/encauzamiento-rios-colombia" component={EncauzamientoRios} />
+          <Route path="/plan-parcial-colombia" component={PlanParcialColombia} />
+          <Route path="/ingenieria-hidraulica-manizales" component={IngenieriaHidraulicaManizales} />
+          <Route path="/estudios-torrencialidad-colombia" component={EstudiosTorrencialidad} />
+          <Route path="/construir-cerca-rio-quebrada-colombia" component={ConstruirCercaRioQuebrada} />
+          <Route path="/ingenieria-proyectos-urbanisticos-colombia" component={IngenieriaProyectosUrbanisticos} />
+          <Route path="/obras-civiles-hidraulicas-colombia" component={ObrasCivilesHidraulicas} />
+          <Route path="/estudios-hidrologicos-vias-colombia" component={EstudiosHidrologicosVias} />
+          <Route path="/memorias-hidrosanitarias-colombia" component={MemoriasHidrosanitarias} />
+          <Route path="/me-pidieron-estudios-en-la-car" component={EstudiosRequeridosCAR} />
+          <Route path="/tengo-un-lote-colombia" component={TengoUnLote} />
+          <Route path="/gestion-riesgo-taludes-colombia" component={GestionRiesgoTaludes} />
+          <Route path="/ingenieria-hidraulica-colombia-desde-manizales" component={IngenieriaManizalesNacional} />
+          <Route path="/diseno-ptar-colombia" component={DisenoPTARColombia} />
+          <Route path="/modelacion-hidraulica-colombia" component={ModelacionHidraulicaColombia} />
+          <Route path="/concesion-aguas-colombia" component={ConcesionAguasColombia} />
+          <Route path="/diseno-ptap-colombia" component={DisenoPTAPColombia} />
+
           {/* ── LANDING PAGES DE SERVICIOS INDIVIDUALES ── */}
+          <Route path="/servicios/estudio-inundabilidad-manizales" component={EstudioInundabilidadManizales} />
           <Route path="/servicios/estudios-hidrologicos" component={ServicioEstudiosHidrologicos} />
           <Route path="/servicios/modelacion-hec-ras" component={ServicioModelacionHecRas} />
           <Route path="/servicios/acueducto-alcantarillado" component={ServicioAcueductoAlcantarillado} />
@@ -238,6 +298,8 @@ export default function App() {
           <Route path="/servicios/regalias-mga" component={ServicioRegaliasMga} />
           <Route path="/servicios/geotecnia" component={ServicioGeotecnia} />
           <Route path="/servicios/ambiental" component={ServicioAmbiental} />
+          <Route path="/servicios/diseno-acueductos" component={ServicioDisenoAcueductos} />
+          <Route path="/servicios/contra-incendios-nsr10" component={ServicioContraIncendiosNSR10} />
 
           {/* ── LANDING PAGES REGIONALES SEO ── */}
           <Route path="/regional/manizales" component={RegionalManizales} />
@@ -255,6 +317,13 @@ export default function App() {
           <Route path="/estudio-hidrologico-manizales" component={EstudioHidrologicoManizales} />
           <Route path="/interventoria-hidraulica-manizales" component={InterventoriaHidraulicaManizales} />
           <Route path="/diseno-hidraulico-pereira" component={DisenoHidraulicoPereira} />
+          <Route path="/estudio-de-inundabilidad-pereira" component={EstudioInundabilidadPereira} />
+          <Route path="/licencia-de-construccion-pereira" component={LicenciaConstruccionPereira} />
+          <Route path="/estudio-de-suelos-eje-cafetero" component={EstudioSuelosEjeCafetero} />
+          <Route path="/consultoria-ingenieria-civil-manizales" component={ConsultoriaIngenieriaCivilManizales} />
+          <Route path="/gestion-riesgo-hidrico-manizales" component={GestionRiesgoHidricoManizales} />
+          <Route path="/diseno-hidraulico-eje-cafetero" component={DisenoHidraulicoEjeCafetero} />
+          <Route path="/topografia-manizales" component={TopografiaManizales} />
 
           <Route path="/blog/:slug" component={BlogDetail} />
           <Route component={NotFound} />

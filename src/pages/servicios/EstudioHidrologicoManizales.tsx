@@ -22,7 +22,7 @@ const seoConfig = {
     'POMCA hidrología Corpocaldas',
     'EIA hidrología Colombia',
   ],
-  canonical: 'https://www.ingenieriabernal.co/estudio-hidrologico-manizales/',
+  canonical: 'https://ingenieriabernal.co/estudio-hidrologico-manizales',
 }
 
 const CONTENIDO = [

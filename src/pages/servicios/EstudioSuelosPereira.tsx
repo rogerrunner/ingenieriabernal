@@ -24,7 +24,7 @@ const seoConfig = {
     'CARDER estudio suelos',
     'suelos volcánicos Eje Cafetero',
   ],
-  canonical: 'https://www.ingenieriabernal.co/estudio-de-suelos-pereira/',
+  canonical: 'https://ingenieriabernal.co/estudio-de-suelos-pereira',
 }
 
 const PROCESO = [
