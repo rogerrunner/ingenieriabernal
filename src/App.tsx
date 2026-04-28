@@ -76,6 +76,10 @@ const EstudiosRequeridosCAR = lazy(() => import('./pages/EstudiosRequeridosCAR')
 const TengoUnLote = lazy(() => import('./pages/TengoUnLote'))
 const GestionRiesgoTaludes = lazy(() => import('./pages/GestionRiesgoTaludes'))
 const IngenieriaManizalesNacional = lazy(() => import('./pages/IngenieriaManizalesNacional'))
+const ModelacionHidraulicaColombia = lazy(() => import('./pages/ModelacionHidraulicaColombia'))
+const DisenoPTARColombia = lazy(() => import('./pages/DisenoPTARColombia'))
+const ConcesionAguasColombia = lazy(() => import('./pages/ConcesionAguasColombia'))
+const DisenoPTAPColombia = lazy(() => import('./pages/DisenoPTAPColombia'))
 
 function ScrollToTop() {
   const [location] = useLocation()
@@ -278,6 +282,10 @@ export default function App() {
           <Route path="/tengo-un-lote-colombia" component={TengoUnLote} />
           <Route path="/gestion-riesgo-taludes-colombia" component={GestionRiesgoTaludes} />
           <Route path="/ingenieria-hidraulica-colombia-desde-manizales" component={IngenieriaManizalesNacional} />
+          <Route path="/modelacion-hidraulica-colombia" component={ModelacionHidraulicaColombia} />
+          <Route path="/diseno-ptar-colombia" component={DisenoPTARColombia} />
+          <Route path="/concesion-aguas-colombia" component={ConcesionAguasColombia} />
+          <Route path="/diseno-ptap-colombia" component={DisenoPTAPColombia} />
 
           {/* ── LANDING PAGES DE SERVICIOS INDIVIDUALES ── */}
           <Route path="/servicios/estudio-inundabilidad-manizales" component={EstudioInundabilidadManizales} />

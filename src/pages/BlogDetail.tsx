@@ -339,6 +339,66 @@ const SERVICE_LINKS: Record<string, { label: string; href: string }> = {
   'estudios-car-corpocaldas-colombia':               { label: 'Trámites ante CAR y estudios técnicos',   href: '/servicios/estudios-hidrologicos' },
 }
 
+// ─── RELATED SERVICES PER ARTICLE ───────────────────────────────────────────
+const RELATED_SERVICES: Record<string, { title: string; path: string }[]> = {
+  'hec-ras-1d-vs-2d-colombia': [
+    { title: 'Modelación Hidráulica en Colombia', path: '/modelacion-hidraulica-colombia' },
+    { title: 'Diseño Hidráulico en Manizales', path: '/diseno-hidraulico-manizales' },
+  ],
+  'hec-ras-2d-colombia': [
+    { title: 'Modelación Hidráulica en Colombia', path: '/modelacion-hidraulica-colombia' },
+    { title: 'Estudio de Inundabilidad Manizales', path: '/estudio-de-inundabilidad-manizales' },
+  ],
+  'ptar-industrial-colombia': [
+    { title: 'Diseño de PTAR en Colombia', path: '/diseno-ptar-colombia' },
+    { title: 'Consultoría Ingeniería Civil Manizales', path: '/consultoria-ingenieria-civil-manizales' },
+  ],
+  'estudio-hidrologico-colombia': [
+    { title: 'Estudio Hidrológico Manizales', path: '/estudio-hidrologico-manizales' },
+    { title: 'Modelación Hidráulica Colombia', path: '/modelacion-hidraulica-colombia' },
+  ],
+  'estudio-hidrologico-decreto-1807': [
+    { title: 'Estudio de Inundabilidad Manizales', path: '/estudio-de-inundabilidad-manizales' },
+    { title: 'Gestión Riesgo Hídrico Manizales', path: '/gestion-riesgo-hidrico-manizales' },
+  ],
+  'bocatoma-caudal-riego-colombia': [
+    { title: 'Concesión de Aguas en Colombia', path: '/concesion-aguas-colombia' },
+    { title: 'Diseño Hidráulico Eje Cafetero', path: '/diseno-hidraulico-eje-cafetero' },
+  ],
+  'estudios-car-corpocaldas-colombia': [
+    { title: 'Concesión de Aguas en Colombia', path: '/concesion-aguas-colombia' },
+    { title: 'Consultoría Ingeniería Civil Manizales', path: '/consultoria-ingenieria-civil-manizales' },
+  ],
+  'retiro-quebrada-construccion-colombia': [
+    { title: 'Estudio de Inundabilidad Manizales', path: '/estudio-de-inundabilidad-manizales' },
+    { title: 'Gestión Riesgo Hídrico Manizales', path: '/gestion-riesgo-hidrico-manizales' },
+  ],
+  'que-necesito-para-urbanizar-un-lote-colombia': [
+    { title: 'Licencia de Construcción Manizales', path: '/licencia-de-construccion-manizales' },
+    { title: 'Estudio de Suelos Manizales', path: '/estudio-de-suelos-manizales' },
+  ],
+  'curvas-idf-colombia': [
+    { title: 'Estudio Hidrológico Manizales', path: '/estudio-hidrologico-manizales' },
+    { title: 'Modelación Hidráulica Colombia', path: '/modelacion-hidraulica-colombia' },
+  ],
+  'hec-hms-colombia': [
+    { title: 'Estudio Hidrológico Manizales', path: '/estudio-hidrologico-manizales' },
+    { title: 'Modelación Hidráulica Colombia', path: '/modelacion-hidraulica-colombia' },
+  ],
+  'diseno-canales-colombia': [
+    { title: 'Diseño Hidráulico Manizales', path: '/diseno-hidraulico-manizales' },
+    { title: 'Diseño de PTAP en Colombia', path: '/diseno-ptap-colombia' },
+  ],
+  'aforo-caudales-colombia': [
+    { title: 'Concesión de Aguas en Colombia', path: '/concesion-aguas-colombia' },
+    { title: 'Diseño Hidráulico Eje Cafetero', path: '/diseno-hidraulico-eje-cafetero' },
+  ],
+  'modelacion-1d-2d-colombia': [
+    { title: 'Modelación Hidráulica en Colombia', path: '/modelacion-hidraulica-colombia' },
+    { title: 'Estudio de Inundabilidad Manizales', path: '/estudio-de-inundabilidad-manizales' },
+  ],
+}
+
 // ─── LAYOUT COMPONENTS ──────────────────────────────────────────────────────
 function ArticleBody({ body }: { body: React.ReactNode }) {
   return (
@@ -462,6 +522,22 @@ export default function BlogDetail() {
             ? <ArticleBody body={article.body} />
             : <p style={{ color: '#475569', fontSize: 15 }}>Artículo en preparación. Contáctanos para consultas sobre este tema.</p>
           }
+
+          {/* Servicios relacionados */}
+          {article && RELATED_SERVICES[slug] && (
+            <div style={{ background: '#eef4ff', padding: '1.5rem', borderRadius: '8px', margin: '2rem 0' }}>
+              <h3 style={{ fontSize: '1.1rem', marginBottom: '0.75rem', color: '#1a3c5e', fontFamily: "'Montserrat', sans-serif", fontWeight: 700 }}>Servicios relacionados</h3>
+              <ul style={{ listStyle: 'none', padding: 0, display: 'flex', gap: '1rem', flexWrap: 'wrap', margin: 0 }}>
+                {RELATED_SERVICES[slug].map(s => (
+                  <li key={s.path}>
+                    <a href={s.path} style={{ color: '#2563eb', fontWeight: 500, textDecoration: 'none', padding: '0.4rem 0.8rem', border: '1px solid #2563eb', borderRadius: '4px', display: 'inline-block', fontSize: 14 }}>
+                      {s.title} →
+                    </a>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          )}
 
           {/* Servicio relacionado */}
           {article && SERVICE_LINKS[slug] && (
