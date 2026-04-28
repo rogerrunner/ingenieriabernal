@@ -241,7 +241,7 @@ const articlesD: Record<string, {
 
       <h2>Criterios técnicos de evaluación</h2>
       <ul>
-        <li><strong>Formación y experiencia del director técnico:</strong> Para estudios de hidrología aplicada y diseño de sistemas complejos, la formación de posgrado (maestría o doctorado en hidrología, hidráulica o recursos hídricos) marca una diferencia real en la calidad metodológica de los resultados. El Dr. Rogerio Bernal Ríos, director de BIC, cuenta con formación doctoral en Ingeniería de Recursos Hídricos.</li>
+        <li><strong>Formación y experiencia del director técnico:</strong> Para estudios de hidrología aplicada y diseño de sistemas complejos, la formación de posgrado marca una diferencia real en la calidad metodológica de los resultados. Rogerio Bernal Ríos, director de BIC, cuenta con Especialización en Ingeniería Hidráulica y Ambiental de la Universidad Nacional de Colombia y matrícula profesional COPNIA 17202-313228.</li>
         <li><strong>Software y equipos de campo disponibles:</strong> Verifique que la firma cuente con las licencias o versiones actualizadas del software relevante (HEC-HMS, HEC-RAS, EPANET, ArcGIS/QGIS) y con los equipos de campo necesarios para el proyecto (estación total, GPS RTK, molinete o ADCP para aforos).</li>
         <li><strong>Datos e información regional:</strong> Las mejores firmas consultoras en hidrología tienen acceso a bases de datos propias de estudios anteriores en la región, que complementan la información oficial del IDEAM y aportan conocimiento de campo imposible de obtener sin años de presencia en el territorio.</li>
         <li><strong>Metodología propuesta:</strong> La propuesta técnica debe especificar la metodología de análisis (no solo listar "usaremos HEC-HMS y HEC-RAS"), las estaciones del IDEAM que se consultarán, los métodos de análisis de frecuencias que se aplicarán y los criterios de calibración del modelo.</li>
@@ -250,9 +250,9 @@ const articlesD: Record<string, {
       <h2>Señales de advertencia</h2>
       <p>Desconfíe de propuestas que: no identifican las estaciones del IDEAM a consultar; proponen cronogramas de menos de 4 semanas para un estudio hidrológico completo (tiempo insuficiente para aforos de campo y análisis riguroso); presentan una metodología genérica sin relación con las condiciones específicas del proyecto; o tienen un precio inferior al 50% de las demás propuestas sin justificación técnica.</p>
 
-      <h2>Perfil de BIC: 30 años de experiencia en el Eje Cafetero</h2>
-      <p>BIC – Bernal Ingeniería Consultores tiene más de tres décadas de trayectoria en hidrología e hidráulica aplicada en Colombia, con proyectos en Caldas, Risaralda, Quindío y otras regiones del país. Nuestro director, el Dr. Rogerio Bernal Ríos, PhD(c) en Ingeniería de Recursos Hídricos, combina formación académica de nivel internacional con experiencia práctica en proyectos de acueducto, alcantarillado, gestión del riesgo, formulación SGR y modelación hidráulica avanzada.</p>
-      <p><strong>Antes de contratar, solicite una consulta técnica gratuita con el Dr. Bernal para evaluar los requerimientos específicos de su proyecto sin ningún compromiso.</strong> <strong>Contáctenos: ingenieriabernal.co | WhatsApp +57 302 477 8910</strong></p>
+      <h2>Perfil de BIC: Especialistas en Ingeniería Hidráulica en el Eje Cafetero</h2>
+      <p>BIC – Bernal Ingeniería Consultores cuenta con más de 10 años de trayectoria verificable en hidrología e hidráulica aplicada en Colombia, con proyectos en Caldas, Risaralda, Quindío y otras regiones del país. Su director, Rogerio Bernal Ríos, Ingeniero Civil con Especialización en Ingeniería Hidráulica y Ambiental de la Universidad Nacional de Colombia (COPNIA 17202-313228), combina formación académica de posgrado con experiencia práctica en proyectos de acueducto, alcantarillado, gestión del riesgo, formulación SGR y modelación hidráulica avanzada.</p>
+      <p><strong>Antes de contratar, solicite una consulta técnica gratuita con Rogerio Bernal para evaluar los requerimientos específicos de su proyecto sin ningún compromiso.</strong> <strong>Contáctenos: ingenieriabernal.co | WhatsApp +57 302 477 8910</strong></p>
     </>,
   },
 

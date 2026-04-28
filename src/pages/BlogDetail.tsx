@@ -1,9 +1,37 @@
 import { useEffect } from 'react'
 import { useRoute } from 'wouter'
 import articles1 from '../data/articles1'
+import articlesA from '../data/articlesA'
+import articlesB from '../data/articlesB'
+import articlesC from '../data/articlesC'
+import articlesD from '../data/articlesD'
+import articlesE from '../data/articlesE'
+import SEOHead from '../components/SEOHead'
 import { BlueprintBg, Tag, ThinLine, SectionLabel, Btn, Section } from '../components/ui'
+import { SEOConfig } from '../lib/seo'
 
 const WA = '573024778910'
+
+// ─── SCHEMA HELPERS ─────────────────────────────────────────────────────────
+const MONTH_MAP: Record<string, string> = {
+  Enero: '01', Febrero: '02', Marzo: '03', Abril: '04',
+  Mayo: '05', Junio: '06', Julio: '07', Agosto: '08',
+  Septiembre: '09', Octubre: '10', Noviembre: '11', Diciembre: '12',
+}
+
+function toISODate(d: string): string {
+  const [m, y] = d.split(' ')
+  return `${y}-${MONTH_MAP[m] ?? '01'}-01`
+}
+
+function injectSchema(id: string, data: object) {
+  document.getElementById(id)?.remove()
+  const el = document.createElement('script')
+  el.id = id
+  el.type = 'application/ld+json'
+  el.text = JSON.stringify(data)
+  document.head.appendChild(el)
+}
 
 // ─── ARTICLE CONTENT ────────────────────────────────────────────────────────
 const ARTICLES: Record<string, {
@@ -280,6 +308,34 @@ const ARTICLES: Record<string, {
     </>
   },
   ...articles1,
+  ...articlesA,
+  ...articlesB,
+  ...articlesC,
+  ...articlesD,
+  ...articlesE,
+}
+
+// ─── FAQ DATA FOR SCHEMA ────────────────────────────────────────────────────
+const ARTICLE_FAQS: Record<string, { q: string; a: string }[]> = {
+  'estudio-hidrologico-decreto-1807': [
+    { q: '¿Qué es el Decreto 1807 de 2014?', a: 'El Decreto 1807 de 2014 del Ministerio de Vivienda establece las condiciones para la incorporación en los Planes de Ordenamiento Territorial (POT) de las amenazas por inundación. Para predios en zonas de amenaza media o alta, exige estudios técnicos detallados de amenaza y riesgo como requisito previo para obtener licencias de construcción.' },
+    { q: '¿Qué debe contener el estudio según el Decreto 1807?', a: 'El estudio debe incluir: caracterización de la cuenca hidrográfica, análisis hidrológico con caudales para períodos de retorno de 10, 25, 50 y 100 años, modelación hidráulica con HEC-RAS 1D/2D, definición de la zona de retiro y franja de protección, y recomendaciones de mitigación si hay amenaza residual.' },
+    { q: '¿Qué documentos entrega el ingeniero al finalizar el estudio Decreto 1807?', a: 'Se entrega: informe técnico en PDF (30–80 páginas), memoria de cálculo hidrológico, archivos del modelo hidráulico HEC-RAS, planos y mapas de inundación (Tr25, Tr50, Tr100) en CAD o GIS, y concepto técnico firmado con tarjeta profesional COPNIA, apto para presentación ante la curaduría.' },
+  ],
+  'hec-ras-1d-vs-2d-colombia': [
+    { q: '¿Qué modela HEC-RAS 1D?', a: 'HEC-RAS 1D calcula el perfil de la superficie del agua a lo largo del eje del cauce asumiendo flujo unidireccional. Se construye con secciones transversales del cauce y coeficientes de Manning. Es apropiado para cauces rectos con llanura estrecha, tramos largos y cuando no se dispone de MDT de alta resolución.' },
+    { q: '¿Qué agrega HEC-RAS 2D frente al modelo 1D?', a: 'HEC-RAS 2D resuelve las ecuaciones de Saint-Venant en dos dimensiones sobre una malla de celdas topográfica, permitiendo modelar flujos en todas las direcciones sobre la planicie de inundación. Requiere MDT de alta resolución (LiDAR o fotogrametría con drone) y es 30–60% más costoso que el modelo 1D.' },
+    { q: '¿Qué exige Colombia para estudios de inundación: HEC-RAS 1D o 2D?', a: 'Para Decreto 1807 en amenaza media se acepta HEC-RAS 1D bien justificado. Para amenaza alta o zonas urbanas, las curadorías de Manizales, Pereira y Armenia exigen HEC-RAS 2D con MDT LiDAR. Los POMCA de segunda generación (post 2018) también están estandarizando el uso del modelo 2D.' },
+  ],
+  'retiro-quebrada-construccion-colombia': [
+    { q: '¿Qué pasa si mi predio está dentro del retiro de quebrada?', a: 'Existen tres opciones: 1) Estudio técnico de riesgo (Decreto 1807) que demuestre que el predio no está en amenaza alta para respaldar la viabilidad de la construcción. 2) Obras de mitigación (muros de encauzamiento, gaviones) que reduzcan la amenaza. 3) Restricción absoluta si el predio está en amenaza alta no mitigable, en cuyo caso no se otorgará licencia.' },
+  ],
+  'hec-ras-2d-colombia': [
+    { q: '¿Cuándo se requiere modelación HEC-RAS 2D en Colombia?', a: 'Según el Decreto 1807/2014, la modelación 2D es necesaria cuando el proyecto tiene área mayor a 5 hectáreas en zona con amenaza hídrica, la llanura de inundación tiene ancho mayor a 100 metros, existen estructuras de control hidráulico, o cuando la CAR o Curaduría exigen mapas de profundidad y velocidad por separado.' },
+  ],
+  'hec-ras-2d-modelacion-hidraulica-colombia': [
+    { q: '¿Cuándo es obligatoria la modelación HEC-RAS 2D en Colombia?', a: 'La modelación 2D es obligatoria en Colombia para proyectos en zonas con amenaza hídrica alta, llanuras de inundación amplias, estudios Decreto 1807 para planes parciales o urbanizaciones, y cuando la CAR o la curaduría urbana lo exigen explícitamente como requisito para emitir concepto favorable.' },
+  ],
 }
 
 // ─── SERVICE LINKS PER ARTICLE ──────────────────────────────────────────────
@@ -294,6 +350,39 @@ const SERVICE_LINKS: Record<string, { label: string; href: string }> = {
   'irca-municipio-colombia':                         { label: 'Acueducto y Alcantarillado',             href: '/servicios/acueducto-alcantarillado' },
   'mga-web-regalias-agua-potable':                   { label: 'Formulación MGA / Regalías SGR',         href: '/servicios/regalias-mga' },
   'hec-ras-2d-modelacion-hidraulica-colombia':       { label: 'Modelación Hidráulica HEC-RAS 2D',       href: '/servicios/modelacion-hec-ras' },
+  // articlesB
+  'acueducto-rural-colombia':                        { label: 'Acueducto y Alcantarillado',             href: '/servicios/acueducto-alcantarillado' },
+  'ptap-colombia':                                   { label: 'PTAP y PTAR',                            href: '/servicios' },
+  'redes-hidrosanitarias-colombia':                  { label: 'Redes Hidrosanitarias NSR-10',           href: '/servicios/redes-hidrosanitarias' },
+  'sistemas-contra-incendio-nsr10':                  { label: 'Sistemas Contra Incendio NSR-10',        href: '/servicios/sistemas-contra-incendio' },
+  'interventoria-hidraulica-colombia':               { label: 'Residencia e Interventoría',             href: '/servicios/interventoria' },
+  'alcantarillado-pluvial-colombia':                 { label: 'Acueducto y Alcantarillado',             href: '/servicios/acueducto-alcantarillado' },
+  'epanet-colombia-acueducto':                       { label: 'Acueducto y Alcantarillado',             href: '/servicios/acueducto-alcantarillado' },
+  'bocatoma-lateral-colombia':                       { label: 'Diseño de Bocatomas en Colombia',        href: '/bocatomas-colombia' },
+  // articlesC
+  'ras-2000-colombia':                               { label: 'Acueducto y Alcantarillado',             href: '/servicios/acueducto-alcantarillado' },
+  'ley-1523-riesgo-colombia':                        { label: 'Gestión del Riesgo Hídrico',             href: '/gestion-riesgo-hidrico' },
+  'nsr10-titulo-j-incendios-colombia':               { label: 'Sistemas Contra Incendio NSR-10',        href: '/servicios/sistemas-contra-incendio' },
+  'pomca-colombia':                                  { label: 'Gestión del Riesgo Hídrico',             href: '/gestion-riesgo-hidrico' },
+  'decreto-1575-agua-colombia':                      { label: 'Acueducto y Alcantarillado',             href: '/servicios/acueducto-alcantarillado' },
+  'licencia-ambiental-anla-colombia':                { label: 'Ingeniería Ambiental',                   href: '/servicios/ambiental' },
+  'contratacion-publica-ingenieria-colombia':        { label: 'Formulación Regalías MGA-Web',           href: '/servicios/regalias-mga' },
+  // articlesD
+  'riesgo-inundacion-eje-cafetero':                  { label: 'Gestión del Riesgo Hídrico',             href: '/gestion-riesgo-hidrico' },
+  'estabilidad-taludes-eje-cafetero':                { label: 'Gestión del Riesgo de Taludes',          href: '/gestion-riesgo-taludes-colombia' },
+  'regalias-acueducto-colombia':                     { label: 'Formulación Regalías MGA-Web',           href: '/servicios/regalias-mga' },
+  'caso-estudio-acueducto-rural':                    { label: 'Acueducto y Alcantarillado',             href: '/servicios/acueducto-alcantarillado' },
+  'plan-mejoramiento-irca-colombia':                 { label: 'Acueducto y Alcantarillado',             href: '/servicios/acueducto-alcantarillado' },
+  'contratar-consultoria-hidraulica-colombia':       { label: 'Ver todos nuestros servicios',           href: '/servicios' },
+  // articlesE
+  'bocatoma-caudal-riego-colombia':                  { label: 'Diseño de Bocatomas y Obras Hidráulicas', href: '/servicios/obras-hidraulicas' },
+  'estudio-hidrologico-decreto-1807':                { label: 'Estudios Hidrológicos e Hidráulicos',     href: '/servicios/estudios-hidrologicos' },
+  'hec-ras-1d-vs-2d-colombia':                       { label: 'Modelación Hidráulica HEC-RAS',           href: '/servicios/estudios-hidrologicos' },
+  'ptar-industrial-colombia':                        { label: 'Diseño de PTAR y Saneamiento',            href: '/servicios/ptar-aguas-residuales' },
+  'ingeniero-hidraulico-para-mi-proyecto':           { label: 'Contratar consultoría BIC',               href: '/contacto' },
+  'retiro-quebrada-construccion-colombia':            { label: 'Estudios Hidrológicos Decreto 1807',      href: '/servicios/estudios-hidrologicos' },
+  'que-necesito-para-urbanizar-un-lote-colombia':    { label: 'Memorias Hidrosanitarias',                href: '/servicios/memorias-hidrosanitarias' },
+  'estudios-car-corpocaldas-colombia':               { label: 'Trámites ante CAR y estudios técnicos',   href: '/servicios/estudios-hidrologicos' },
 }
 
 // ─── LAYOUT COMPONENTS ──────────────────────────────────────────────────────
@@ -318,13 +407,85 @@ export default function BlogDetail() {
   const slug = params?.slug || ''
   const article = ARTICLES[slug]
 
+  // SEO configuration for the article
+  const seoConfig: SEOConfig | null = article ? {
+    title: `${article.title} — BIC Bernal Ingeniería Consultores`,
+    description: article.metaDesc,
+    keywords: article.keywords.split(', '),
+    ogType: 'article',
+    canonical: `https://ingenieriabernal.co/blog/${slug}`
+  } : null
+
   useEffect(() => {
+    const SCHEMA_IDS = ['blog-schema', 'blog-schema-article', 'blog-schema-breadcrumb', 'blog-schema-faq']
+    SCHEMA_IDS.forEach(id => document.getElementById(id)?.remove())
+
     if (article) {
-      document.title = `${article.title} — BIC Bernal Ingeniería Consultores`
-      const meta = document.querySelector('meta[name="description"]')
-      if (meta) meta.setAttribute('content', article.metaDesc)
-      const keywords = document.querySelector('meta[name="keywords"]')
-      if (keywords) keywords.setAttribute('content', article.keywords)
+      const iso = toISODate(article.date)
+      const url = `https://ingenieriabernal.co/blog/${slug}`
+
+      // Article schema with Speakable
+      injectSchema('blog-schema-article', {
+        '@context': 'https://schema.org',
+        '@type': 'Article',
+        'headline': article.title,
+        'description': article.metaDesc,
+        'datePublished': iso,
+        'dateModified': iso,
+        'inLanguage': 'es-CO',
+        'author': {
+          '@type': 'Person',
+          'name': 'Rogerio Bernal',
+          'jobTitle': 'Ingeniero Hidráulico e Hidrológico',
+          'url': 'https://ingenieriabernal.co/sobre-nosotros',
+        },
+        'publisher': {
+          '@type': 'Organization',
+          'name': 'Ingeniería Bernal',
+          'url': 'https://ingenieriabernal.co',
+          'logo': {
+            '@type': 'ImageObject',
+            'url': 'https://ingenieriabernal.co/logo.png',
+          },
+        },
+        'mainEntityOfPage': {
+          '@type': 'WebPage',
+          '@id': url,
+        },
+        'speakable': {
+          '@type': 'SpeakableSpecification',
+          'cssSelector': ['h1', '.ab p:first-of-type'],
+        },
+      })
+
+      // BreadcrumbList (3 levels)
+      injectSchema('blog-schema-breadcrumb', {
+        '@context': 'https://schema.org',
+        '@type': 'BreadcrumbList',
+        'itemListElement': [
+          { '@type': 'ListItem', 'position': 1, 'name': 'Inicio', 'item': 'https://ingenieriabernal.co' },
+          { '@type': 'ListItem', 'position': 2, 'name': 'Blog', 'item': 'https://ingenieriabernal.co/blog' },
+          { '@type': 'ListItem', 'position': 3, 'name': article.title, 'item': url },
+        ],
+      })
+
+      // FAQPage (if article has Q&A data)
+      const faqs = ARTICLE_FAQS[slug]
+      if (faqs) {
+        injectSchema('blog-schema-faq', {
+          '@context': 'https://schema.org',
+          '@type': 'FAQPage',
+          'mainEntity': faqs.map(({ q, a }) => ({
+            '@type': 'Question',
+            'name': q,
+            'acceptedAnswer': { '@type': 'Answer', 'text': a },
+          })),
+        })
+      }
+    }
+
+    return () => {
+      SCHEMA_IDS.forEach(id => document.getElementById(id)?.remove())
     }
   }, [article, slug])
 
@@ -335,6 +496,9 @@ export default function BlogDetail() {
 
   return (
     <>
+      {/* SEO Head */}
+      {seoConfig && <SEOHead config={seoConfig} />}
+
       {/* HERO */}
       <section style={{ background: 'linear-gradient(135deg, #002A50 0%, #003B6F 100%)', padding: '120px 40px 56px', position: 'relative', overflow: 'hidden' }}>
         <BlueprintBg opacity={0.07} />

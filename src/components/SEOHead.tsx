@@ -24,7 +24,7 @@ export default function SEOHead({ config }: SEOHeadProps) {
       tag.setAttribute("content", content);
     };
 
-    const metaTags = generateMetaTags(config);
+    const metaTags = generateMetaTags(config, config.canonical);
     Object.entries(metaTags).forEach(([key, value]) => {
       if (key !== "title") {
         updateMetaTag(key, value);

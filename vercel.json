@@ -3,6 +3,21 @@
   "outputDirectory": "dist",
   "installCommand": "npm install",
   "framework": "vite",
+  "redirects": [
+    { "source": "/:path*", "has": [{ "type": "host", "value": "www.ingenieriabernal.co" }], "destination": "https://ingenieriabernal.co/:path*", "permanent": true },
+    { "source": "/ingenieria-hidraulica-manizales",    "destination": "/ingenieria-manizales",                   "permanent": true },
+    { "source": "/ingenieria-hidraulica-eje-cafetero", "destination": "/ingenieria-eje-cafetero",                "permanent": true },
+    { "source": "/ingenieria-hidraulica-bogota",       "destination": "/ingenieria-bogota",                      "permanent": true },
+    { "source": "/ingenieria-hidraulica-medellin",     "destination": "/ingenieria-medellin",                    "permanent": true },
+    { "source": "/ingenieria-hidraulica-cali",         "destination": "/ingenieria-cali",                        "permanent": true },
+    { "source": "/ingenieria-hidraulica-pereira",      "destination": "/regional/pereira",                       "permanent": true },
+    { "source": "/ingenieria-hidraulica-armenia",      "destination": "/regional/armenia",                       "permanent": true },
+    { "source": "/hec-ras-modelacion-hidraulica",      "destination": "/servicios/modelacion-hec-ras",           "permanent": true },
+    { "source": "/diseno-hidrosanitario-nsr10",        "destination": "/servicios/redes-hidrosanitarias",        "permanent": true },
+    { "source": "/estudios-inundacion-colombia",       "destination": "/servicios/estudios-hidrologicos",        "permanent": true },
+    { "source": "/acueductos-alcantarillados",         "destination": "/servicios/acueducto-alcantarillado",     "permanent": true },
+    { "source": "/regalias-mga-web",                   "destination": "/servicios/regalias-mga",                 "permanent": true }
+  ],
   "rewrites": [{ "source": "/(.*)", "destination": "/index.html" }],
   "headers": [
     {
