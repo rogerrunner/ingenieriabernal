@@ -1,6 +1,7 @@
 import { useEffect } from 'react'
 import { useRoute } from 'wouter'
 import articles1 from '../data/articles1'
+import articlesA from '../data/articlesA'
 import articlesB from '../data/articlesB'
 import articlesC from '../data/articlesC'
 import articlesD from '../data/articlesD'
@@ -10,6 +11,27 @@ import { BlueprintBg, Tag, ThinLine, SectionLabel, Btn, Section } from '../compo
 import { SEOConfig } from '../lib/seo'
 
 const WA = '573024778910'
+
+// ─── SCHEMA HELPERS ─────────────────────────────────────────────────────────
+const MONTH_MAP: Record<string, string> = {
+  Enero: '01', Febrero: '02', Marzo: '03', Abril: '04',
+  Mayo: '05', Junio: '06', Julio: '07', Agosto: '08',
+  Septiembre: '09', Octubre: '10', Noviembre: '11', Diciembre: '12',
+}
+
+function toISODate(d: string): string {
+  const [m, y] = d.split(' ')
+  return `${y}-${MONTH_MAP[m] ?? '01'}-01`
+}
+
+function injectSchema(id: string, data: object) {
+  document.getElementById(id)?.remove()
+  const el = document.createElement('script')
+  el.id = id
+  el.type = 'application/ld+json'
+  el.text = JSON.stringify(data)
+  document.head.appendChild(el)
+}
 
 // ─── ARTICLE CONTENT ────────────────────────────────────────────────────────
 const ARTICLES: Record<string, {
@@ -286,10 +308,34 @@ const ARTICLES: Record<string, {
     </>
   },
   ...articles1,
+  ...articlesA,
   ...articlesB,
   ...articlesC,
   ...articlesD,
   ...articlesE,
+}
+
+// ─── FAQ DATA FOR SCHEMA ────────────────────────────────────────────────────
+const ARTICLE_FAQS: Record<string, { q: string; a: string }[]> = {
+  'estudio-hidrologico-decreto-1807': [
+    { q: '¿Qué es el Decreto 1807 de 2014?', a: 'El Decreto 1807 de 2014 del Ministerio de Vivienda establece las condiciones para la incorporación en los Planes de Ordenamiento Territorial (POT) de las amenazas por inundación. Para predios en zonas de amenaza media o alta, exige estudios técnicos detallados de amenaza y riesgo como requisito previo para obtener licencias de construcción.' },
+    { q: '¿Qué debe contener el estudio según el Decreto 1807?', a: 'El estudio debe incluir: caracterización de la cuenca hidrográfica, análisis hidrológico con caudales para períodos de retorno de 10, 25, 50 y 100 años, modelación hidráulica con HEC-RAS 1D/2D, definición de la zona de retiro y franja de protección, y recomendaciones de mitigación si hay amenaza residual.' },
+    { q: '¿Qué documentos entrega el ingeniero al finalizar el estudio Decreto 1807?', a: 'Se entrega: informe técnico en PDF (30–80 páginas), memoria de cálculo hidrológico, archivos del modelo hidráulico HEC-RAS, planos y mapas de inundación (Tr25, Tr50, Tr100) en CAD o GIS, y concepto técnico firmado con tarjeta profesional COPNIA, apto para presentación ante la curaduría.' },
+  ],
+  'hec-ras-1d-vs-2d-colombia': [
+    { q: '¿Qué modela HEC-RAS 1D?', a: 'HEC-RAS 1D calcula el perfil de la superficie del agua a lo largo del eje del cauce asumiendo flujo unidireccional. Se construye con secciones transversales del cauce y coeficientes de Manning. Es apropiado para cauces rectos con llanura estrecha, tramos largos y cuando no se dispone de MDT de alta resolución.' },
+    { q: '¿Qué agrega HEC-RAS 2D frente al modelo 1D?', a: 'HEC-RAS 2D resuelve las ecuaciones de Saint-Venant en dos dimensiones sobre una malla de celdas topográfica, permitiendo modelar flujos en todas las direcciones sobre la planicie de inundación. Requiere MDT de alta resolución (LiDAR o fotogrametría con drone) y es 30–60% más costoso que el modelo 1D.' },
+    { q: '¿Qué exige Colombia para estudios de inundación: HEC-RAS 1D o 2D?', a: 'Para Decreto 1807 en amenaza media se acepta HEC-RAS 1D bien justificado. Para amenaza alta o zonas urbanas, las curadorías de Manizales, Pereira y Armenia exigen HEC-RAS 2D con MDT LiDAR. Los POMCA de segunda generación (post 2018) también están estandarizando el uso del modelo 2D.' },
+  ],
+  'retiro-quebrada-construccion-colombia': [
+    { q: '¿Qué pasa si mi predio está dentro del retiro de quebrada?', a: 'Existen tres opciones: 1) Estudio técnico de riesgo (Decreto 1807) que demuestre que el predio no está en amenaza alta para respaldar la viabilidad de la construcción. 2) Obras de mitigación (muros de encauzamiento, gaviones) que reduzcan la amenaza. 3) Restricción absoluta si el predio está en amenaza alta no mitigable, en cuyo caso no se otorgará licencia.' },
+  ],
+  'hec-ras-2d-colombia': [
+    { q: '¿Cuándo se requiere modelación HEC-RAS 2D en Colombia?', a: 'Según el Decreto 1807/2014, la modelación 2D es necesaria cuando el proyecto tiene área mayor a 5 hectáreas en zona con amenaza hídrica, la llanura de inundación tiene ancho mayor a 100 metros, existen estructuras de control hidráulico, o cuando la CAR o Curaduría exigen mapas de profundidad y velocidad por separado.' },
+  ],
+  'hec-ras-2d-modelacion-hidraulica-colombia': [
+    { q: '¿Cuándo es obligatoria la modelación HEC-RAS 2D en Colombia?', a: 'La modelación 2D es obligatoria en Colombia para proyectos en zonas con amenaza hídrica alta, llanuras de inundación amplias, estudios Decreto 1807 para planes parciales o urbanizaciones, y cuando la CAR o la curaduría urbana lo exigen explícitamente como requisito para emitir concepto favorable.' },
+  ],
 }
 
 // ─── SERVICE LINKS PER ARTICLE ──────────────────────────────────────────────
@@ -371,56 +417,75 @@ export default function BlogDetail() {
   } : null
 
   useEffect(() => {
+    const SCHEMA_IDS = ['blog-schema', 'blog-schema-article', 'blog-schema-breadcrumb', 'blog-schema-faq']
+    SCHEMA_IDS.forEach(id => document.getElementById(id)?.remove())
+
     if (article) {
-      // BlogPosting JSON-LD
-      const existingSchema = document.getElementById('blog-schema')
-      if (existingSchema) existingSchema.remove()
-      const schema = document.createElement('script')
-      schema.id = 'blog-schema'
-      schema.type = 'application/ld+json'
-      schema.text = JSON.stringify({
+      const iso = toISODate(article.date)
+      const url = `https://ingenieriabernal.co/blog/${slug}`
+
+      // Article schema with Speakable
+      injectSchema('blog-schema-article', {
         '@context': 'https://schema.org',
-        '@type': 'BlogPosting',
+        '@type': 'Article',
         'headline': article.title,
         'description': article.metaDesc,
-        'keywords': article.keywords,
-        'url': `https://ingenieriabernal.co/blog/${slug}`,
-        'datePublished': article.date,
-        'dateModified': article.date,
+        'datePublished': iso,
+        'dateModified': iso,
         'inLanguage': 'es-CO',
         'author': {
           '@type': 'Person',
-          '@id': 'https://ingenieriabernal.co/#rogerio',
-          'name': 'Rogerio Bernal Ríos',
-          'url': 'https://ingenieriabernal.co',
-          'jobTitle': 'Ingeniero Civil — Especialista en Ingeniería Hidráulica y Ambiental',
+          'name': 'Rogerio Bernal',
+          'jobTitle': 'Ingeniero Hidráulico e Hidrológico',
+          'url': 'https://ingenieriabernal.co/sobre-nosotros',
         },
         'publisher': {
-          '@type': 'LocalBusiness',
-          '@id': 'https://ingenieriabernal.co/#firma',
-          'name': 'BIC Bernal Ingeniería Consultores',
+          '@type': 'Organization',
+          'name': 'Ingeniería Bernal',
           'url': 'https://ingenieriabernal.co',
           'logo': {
             '@type': 'ImageObject',
-            'url': 'https://ingenieriabernal.co/favicon.svg',
+            'url': 'https://ingenieriabernal.co/logo.png',
           },
-        },
-        'isPartOf': {
-          '@type': 'Blog',
-          'name': 'Blog Técnico — BIC Bernal Ingeniería Consultores',
-          'url': 'https://ingenieriabernal.co/blog',
         },
         'mainEntityOfPage': {
           '@type': 'WebPage',
-          '@id': `https://ingenieriabernal.co/blog/${slug}`,
+          '@id': url,
+        },
+        'speakable': {
+          '@type': 'SpeakableSpecification',
+          'cssSelector': ['h1', '.ab p:first-of-type'],
         },
       })
-      document.head.appendChild(schema)
+
+      // BreadcrumbList (3 levels)
+      injectSchema('blog-schema-breadcrumb', {
+        '@context': 'https://schema.org',
+        '@type': 'BreadcrumbList',
+        'itemListElement': [
+          { '@type': 'ListItem', 'position': 1, 'name': 'Inicio', 'item': 'https://ingenieriabernal.co' },
+          { '@type': 'ListItem', 'position': 2, 'name': 'Blog', 'item': 'https://ingenieriabernal.co/blog' },
+          { '@type': 'ListItem', 'position': 3, 'name': article.title, 'item': url },
+        ],
+      })
+
+      // FAQPage (if article has Q&A data)
+      const faqs = ARTICLE_FAQS[slug]
+      if (faqs) {
+        injectSchema('blog-schema-faq', {
+          '@context': 'https://schema.org',
+          '@type': 'FAQPage',
+          'mainEntity': faqs.map(({ q, a }) => ({
+            '@type': 'Question',
+            'name': q,
+            'acceptedAnswer': { '@type': 'Answer', 'text': a },
+          })),
+        })
+      }
     }
 
     return () => {
-      const schema = document.getElementById('blog-schema')
-      if (schema) schema.remove()
+      SCHEMA_IDS.forEach(id => document.getElementById(id)?.remove())
     }
   }, [article, slug])
 

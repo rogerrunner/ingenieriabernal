@@ -69,6 +69,7 @@ const articlesE: Record<string, {
         <li><strong>Modelación hidráulica:</strong> Cálculo de los niveles de agua (láminas de inundación) y velocidades de flujo para cada período de retorno, usando modelos hidráulicos reconocidos (HEC-RAS 1D/2D, IBER, Mike FLOOD). Los resultados se presentan en mapas de inundación con curvas de nivel y delimitación de la zona inundable.</li>
         <li><strong>Definición de la zona de retiro o franja de protección:</strong> El estudio debe definir la distancia de retiro a la orilla que garantice que la construcción propuesta queda fuera de la lámina de inundación del período de retorno de 100 años (Tr100) con un borde libre mínimo de 0,5 m.</li>
         <li><strong>Evaluación de amenaza por avenida torrencial</strong> (si aplica): Para corrientes con alta pendiente ({'>'}3%) y cuencas con evidencia de arrastre de sedimentos, el decreto exige también modelar el comportamiento de las avenidas torrenciales con el modelo de flujo bimodal (agua + sedimentos).</li>
+        <li><strong>Evaluación de amenaza por avenida torrencial</strong> (si aplica): Para corrientes con alta pendiente (&gt;3%) y cuencas con evidencia de arrastre de sedimentos, el decreto exige también modelar el comportamiento de las avenidas torrenciales con el modelo de flujo bimodal (agua + sedimentos).</li>
         <li><strong>Recomendaciones de mitigación:</strong> Si el predio presenta amenaza residual, el estudio debe proponer medidas de mitigación (muros de contención, jarillones, obras de canalización) y estimar su costo.</li>
       </ul>
 
@@ -105,6 +106,7 @@ const articlesE: Record<string, {
         <li>El cauce es relativamente recto y la llanura de inundación es estrecha y uniforme.</li>
         <li>El flujo en la planicie de inundación sigue predominantemente la dirección del cauce.</li>
         <li>El estudio requiere un tramo largo de río ({'>'}5 km) con muchas secciones transversales.</li>
+        <li>El estudio requiere un tramo largo de río (&gt;5 km) con muchas secciones transversales.</li>
         <li>Se busca un modelo rápido y computacionalmente ligero para análisis de escenarios múltiples.</li>
         <li>Los datos disponibles son secciones transversales levantadas en campo (sin DTM de alta resolución).</li>
       </ul>
@@ -171,6 +173,7 @@ const articlesE: Record<string, {
         <li><strong>PTAR mediana (10–50 m³/día, agroindustria o finca cafetera):</strong> $80.000.000–$300.000.000 COP según tecnología.</li>
         <li><strong>PTAR industrial media (50–500 m³/día):</strong> $300.000.000–$2.000.000.000 COP dependiendo de la complejidad del tratamiento.</li>
         <li><strong>PTAR grande ({'>'}500 m³/día):</strong> {'>'}$2.000.000.000 COP, requiere estudio de factibilidad específico.</li>
+        <li><strong>PTAR grande (&gt;500 m³/día):</strong> &gt;$2.000.000.000 COP, requiere estudio de factibilidad específico.</li>
       </ul>
 
       <h2>Permiso de vertimientos: tramitación ante la CAR</h2>
@@ -280,7 +283,7 @@ const articlesE: Record<string, {
       <h2>2. Estudios técnicos necesarios</h2>
       <p>Para tramitar la <strong>licencia de urbanización</strong> ante la curaduría urbana, se requieren varios estudios técnicos:</p>
       <ul>
-        <li><strong>Levantamiento topográfico:</strong> Plano topográfico del lote con curvas de nivel cada 1 m, linderos y construcciones existentes. Es la base de todos los demás estudios.</li>
+ https://github.com/rogerrunner/ingenieriabernal/pull/7/conflict?name=src%252Fdata%252FarticlesC.tsx&ancestor_oid=87f361fa2c234db1f5bc3e3c064582e3ae18897c&base_oid=0ab30352547e60c9de57c0c51215effef816182a&head_oid=c9414f7817bc1225d09bd8412ad78c68ee594542       <li><strong>Levantamiento topográfico:</strong> Plano topográfico del lote con curvas de nivel cada 1 m, linderos y construcciones existentes. Es la base de todos los demás estudios.</li>
         <li><strong>Estudio de suelos y geotécnico:</strong> Sondeos de suelo, clasificación geotécnica y capacidad portante para el diseño de cimentaciones. Requerido por el Reglamento NSR-10 para proyectos de vivienda.</li>
         <li><strong>Memoria de diseño urbanístico:</strong> Plano del proyecto de urbanización con distribución de lotes, vías, zonas verdes, cesiones (al municipio) y cuadro de áreas. Debe cumplir los porcentajes de cesión establecidos en el POT (típicamente 17–25% del área neta para zonas verdes y equipamientos).</li>
         <li><strong>Memoria hidrosanitaria:</strong> Diseño de las redes de acueducto y alcantarillado del proyecto: dimensionamiento de tuberías, velocidades, presiones y conexión a las redes existentes de la empresa de servicios públicos. Es uno de los estudios más importantes y el que con más frecuencia es devuelto por errores técnicos.</li>
