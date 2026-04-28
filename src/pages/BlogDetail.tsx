@@ -5,6 +5,7 @@ import articlesB from '../data/articlesB'
 import articlesC from '../data/articlesC'
 import articlesD from '../data/articlesD'
 import articlesE from '../data/articlesE'
+import articlesF from '../data/articlesF'
 import SEOHead from '../components/SEOHead'
 import { BlueprintBg, Tag, ThinLine, SectionLabel, Btn, Section } from '../components/ui'
 import { SEOConfig } from '../lib/seo'
@@ -290,6 +291,7 @@ const ARTICLES: Record<string, {
   ...articlesC,
   ...articlesD,
   ...articlesE,
+  ...articlesF,
 }
 
 // ─── SERVICE LINKS PER ARTICLE ──────────────────────────────────────────────
@@ -337,6 +339,17 @@ const SERVICE_LINKS: Record<string, { label: string; href: string }> = {
   'retiro-quebrada-construccion-colombia':            { label: 'Estudios Hidrológicos Decreto 1807',      href: '/servicios/estudios-hidrologicos' },
   'que-necesito-para-urbanizar-un-lote-colombia':    { label: 'Memorias Hidrosanitarias',                href: '/servicios/memorias-hidrosanitarias' },
   'estudios-car-corpocaldas-colombia':               { label: 'Trámites ante CAR y estudios técnicos',   href: '/servicios/estudios-hidrologicos' },
+  // articlesF
+  'cuanto-cuesta-estudio-hidrologico':               { label: 'Estudios Hidrológicos e Hidráulicos',     href: '/servicios/estudios-hidrologicos' },
+  'requisitos-ptar-licencia-construccion':           { label: 'Diseño de Acueducto y Alcantarillado',    href: '/servicios/acueducto-alcantarillado' },
+  'estudio-hidraulico-urbanizacion':                 { label: 'Memorias Hidrosanitarias',                href: '/memorias-hidrosanitarias-colombia' },
+  'calcular-caudal-diseno-alcantarillado':           { label: 'Diseño de Acueducto y Alcantarillado',    href: '/servicios/acueducto-alcantarillado' },
+  'diseno-ptap-municipio-costos':                    { label: 'Acueducto y Alcantarillado',               href: '/servicios/acueducto-alcantarillado' },
+  'modelacion-hec-ras-colombia':                     { label: 'Modelación Hidráulica HEC-RAS 2D',         href: '/servicios/modelacion-hec-ras' },
+  'plan-manejo-aguas-lluvias-colombia':              { label: 'Diseño de Acueducto y Alcantarillado',    href: '/servicios/acueducto-alcantarillado' },
+  'diferencias-ptar-ptap':                           { label: 'Acueducto y Alcantarillado',               href: '/servicios/acueducto-alcantarillado' },
+  'permiso-vertimientos-colombia':                   { label: 'Ingeniería Ambiental',                     href: '/servicios/ambiental' },
+  'estudio-amenaza-inundacion':                      { label: 'Gestión del Riesgo Hídrico',               href: '/gestion-riesgo-hidrico' },
 }
 
 // ─── LAYOUT COMPONENTS ──────────────────────────────────────────────────────
