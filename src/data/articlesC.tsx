@@ -34,7 +34,7 @@ const articlesC: Record<string, {
         <li><strong>Nivel Bajo (I):</strong> Población ≤2.500 hab, capacidad económica baja. Dotaciones y requisitos técnicos mínimos.</li>
         <li><strong>Nivel Medio (II):</strong> Población 2.501–12.500 hab, capacidad económica media.</li>
         <li><strong>Nivel Medio Alto (III):</strong> Población 12.501–60.000 hab, capacidad económica media alta.</li>
-        <li><strong>Nivel Alto (IV):</strong> Población >60.000 hab, capacidad económica alta. Mayores exigencias técnicas, incluido el análisis de confiabilidad del sistema.</li>
+        <li><strong>Nivel Alto (IV):</strong> Población {'>'}60.000 hab, capacidad económica alta. Mayores exigencias técnicas, incluido el análisis de confiabilidad del sistema.</li>
       </ul>
       <p>El nivel de complejidad no solo depende de la población: también considera la capacidad económica del municipio (relacionada con su categoría y su capacidad de pago por el servicio). Un error frecuente es diseñar para el nivel de complejidad incorrecto, lo que lleva a sobredimensionamiento costoso o a sistemas que no cumplen los requisitos mínimos.</p>
 
@@ -172,7 +172,7 @@ const articlesC: Record<string, {
       <h2>Implicaciones para proyectos de captación y acueducto</h2>
       <p>El POMCA es el instrumento que determina la <strong>disponibilidad del recurso hídrico</strong> en la cuenca. Sus implicaciones directas para proyectos de acueducto son:</p>
       <ul>
-        <li><strong>Índice de Uso del Agua (IUA):</strong> El POMCA calcula el porcentaje del caudal medio anual que ya está concesionado o en uso. En cuencas con IUA alto (>50%), las nuevas concesiones de agua son más difíciles de obtener y pueden ser condicionadas o negadas por la CAR.</li>
+        <li><strong>Índice de Uso del Agua (IUA):</strong> El POMCA calcula el porcentaje del caudal medio anual que ya está concesionado o en uso. En cuencas con IUA alto ({'>'}50%), las nuevas concesiones de agua son más difíciles de obtener y pueden ser condicionadas o negadas por la CAR.</li>
         <li><strong>Caudal ecológico:</strong> El POMCA establece el caudal mínimo ecológico que debe mantenerse en el cauce para garantizar el buen estado ecológico. Este caudal no puede ser concesionado y reduce el caudal disponible para la captación.</li>
         <li><strong>Restricciones en zonas de protección:</strong> El POMCA zonifica las áreas de nacimiento y ronda de los ríos como zonas de preservación estricta, donde no se permiten obras de infraestructura permanentes, incluyendo bocatomas.</li>
         <li><strong>Condicionamientos de la CAR:</strong> Cuando el IUA es crítico, la CAR puede imponer condicionamientos como sistemas de recirculación del agua o compensaciones de caudal aguas arriba.</li>
@@ -211,7 +211,7 @@ const articlesC: Record<string, {
         <li><strong>Nivel Bajo (I), ≤2.500 hab:</strong> 1 muestra mensual para coliformes y cloro residual; 1 muestra trimestral para parámetros físicos y químicos básicos.</li>
         <li><strong>Nivel Medio (II), 2.501–12.500 hab:</strong> 2–4 muestras mensuales para microbiológicos; análisis completo semestral.</li>
         <li><strong>Nivel Medio Alto (III), 12.501–60.000 hab:</strong> Muestras semanales para coliformes y cloro en múltiples puntos de la red.</li>
-        <li><strong>Nivel Alto (IV), >60.000 hab:</strong> Muestreo continuo de cloro residual y muestras diarias de coliformes en puntos críticos.</li>
+        <li><strong>Nivel Alto (IV), {'>'}60.000 hab:</strong> Muestreo continuo de cloro residual y muestras diarias de coliformes en puntos críticos.</li>
       </ul>
       <p>Los laboratorios que realizan los análisis deben estar autorizados por el IDEAM. Los resultados deben reportarse periódicamente al <strong>SIVICAP (Sistema de Información de Vigilancia de la Calidad del Agua Potable)</strong> del INS.</p>
 

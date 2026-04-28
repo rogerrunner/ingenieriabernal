@@ -68,7 +68,7 @@ const articlesE: Record<string, {
         <li><strong>Análisis hidrológico:</strong> Estimación de caudales máximos de diseño para períodos de retorno de 10, 25, 50 y 100 años, usando métodos estadísticos (Gumbel, Log-Pearson III) sobre registros de la estación hidrométrica más cercana del IDEAM, o métodos de lluvia-escorrentía (SCS-CN, racional modificado) cuando no hay datos de caudal disponibles.</li>
         <li><strong>Modelación hidráulica:</strong> Cálculo de los niveles de agua (láminas de inundación) y velocidades de flujo para cada período de retorno, usando modelos hidráulicos reconocidos (HEC-RAS 1D/2D, IBER, Mike FLOOD). Los resultados se presentan en mapas de inundación con curvas de nivel y delimitación de la zona inundable.</li>
         <li><strong>Definición de la zona de retiro o franja de protección:</strong> El estudio debe definir la distancia de retiro a la orilla que garantice que la construcción propuesta queda fuera de la lámina de inundación del período de retorno de 100 años (Tr100) con un borde libre mínimo de 0,5 m.</li>
-        <li><strong>Evaluación de amenaza por avenida torrencial</strong> (si aplica): Para corrientes con alta pendiente (>3%) y cuencas con evidencia de arrastre de sedimentos, el decreto exige también modelar el comportamiento de las avenidas torrenciales con el modelo de flujo bimodal (agua + sedimentos).</li>
+        <li><strong>Evaluación de amenaza por avenida torrencial</strong> (si aplica): Para corrientes con alta pendiente ({'>'}3%) y cuencas con evidencia de arrastre de sedimentos, el decreto exige también modelar el comportamiento de las avenidas torrenciales con el modelo de flujo bimodal (agua + sedimentos).</li>
         <li><strong>Recomendaciones de mitigación:</strong> Si el predio presenta amenaza residual, el estudio debe proponer medidas de mitigación (muros de contención, jarillones, obras de canalización) y estimar su costo.</li>
       </ul>
 
@@ -104,7 +104,7 @@ const articlesE: Record<string, {
       <ul>
         <li>El cauce es relativamente recto y la llanura de inundación es estrecha y uniforme.</li>
         <li>El flujo en la planicie de inundación sigue predominantemente la dirección del cauce.</li>
-        <li>El estudio requiere un tramo largo de río (>5 km) con muchas secciones transversales.</li>
+        <li>El estudio requiere un tramo largo de río ({'>'}5 km) con muchas secciones transversales.</li>
         <li>Se busca un modelo rápido y computacionalmente ligero para análisis de escenarios múltiples.</li>
         <li>Los datos disponibles son secciones transversales levantadas en campo (sin DTM de alta resolución).</li>
       </ul>
@@ -170,7 +170,7 @@ const articlesE: Record<string, {
         <li><strong>PTAR pequeña (1–5 m³/día, restaurante o pequeña empresa):</strong> $15.000.000–$50.000.000 COP incluido diseño y construcción.</li>
         <li><strong>PTAR mediana (10–50 m³/día, agroindustria o finca cafetera):</strong> $80.000.000–$300.000.000 COP según tecnología.</li>
         <li><strong>PTAR industrial media (50–500 m³/día):</strong> $300.000.000–$2.000.000.000 COP dependiendo de la complejidad del tratamiento.</li>
-        <li><strong>PTAR grande (>500 m³/día):</strong> >$2.000.000.000 COP, requiere estudio de factibilidad específico.</li>
+        <li><strong>PTAR grande ({'>'}500 m³/día):</strong> {'>'}$2.000.000.000 COP, requiere estudio de factibilidad específico.</li>
       </ul>
 
       <h2>Permiso de vertimientos: tramitación ante la CAR</h2>

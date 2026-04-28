@@ -1,5 +1,6 @@
 import { useEffect } from 'react'
 import SEOHead from '@/components/SEOHead'
+import SchemaMarkup from '@/components/SchemaMarkup'
 import { BlueprintBg, SectionLabel, Btn, Section, Tag } from '@/components/ui'
 
 const WA = '573024778910'
@@ -157,6 +158,17 @@ export default function ServicioModelacionHecRas() {
   return (
     <>
       <SEOHead config={seoConfig} />
+      <SchemaMarkup
+        type="service"
+        serviceName="Modelación Hidráulica HEC-RAS en Colombia"
+        serviceDesc={seoConfig.description}
+        serviceUrl="/servicios/modelacion-hec-ras"
+        faqItems={FAQ}
+        priceSpecification={[
+          { name: 'Estudio hidráulico', minPrice: 4000000, maxPrice: 15000000, description: 'Perfil hidráulico, diseño de estructuras, encauzamiento, socavación en puentes' },
+          { name: 'Modelación HEC-RAS 1D / 2D', minPrice: 5000000, maxPrice: 18000000, description: 'Modelación HEC-RAS 1D y 2D, manchas de inundación, dam break, Decreto 1807/2014' },
+        ]}
+      />
 
       {/* ── HERO ── */}
       <section style={{
@@ -325,6 +337,58 @@ export default function ServicioModelacionHecRas() {
             }}
           >
             📱 Cotizar por WhatsApp
+          </a>
+        </div>
+      </section>
+
+      {/* ── PRECIOS ── */}
+      <section style={{ background: '#f0f9ff', padding: '52px 24px', borderTop: '1px solid #b3e0ea' }}>
+        <div style={{ maxWidth: 880, margin: '0 auto', padding: '0 24px' }}>
+          <SectionLabel>Inversión referencial</SectionLabel>
+          <h2 style={{ fontFamily: "'Playfair Display', serif", fontWeight: 700, fontSize: 'clamp(22px, 3vw, 32px)', marginBottom: 8, color: '#002A50' }}>
+            ¿Cuánto cuesta una modelación hidráulica HEC-RAS?
+          </h2>
+          <p style={{ color: '#555', lineHeight: 1.75, marginBottom: 28, maxWidth: 680 }}>
+            Rangos referenciales para proyectos estándar en Colombia. El precio depende del tipo de modelo, la longitud del tramo y la disponibilidad de topobatimetría.
+          </p>
+          <div style={{ display: 'flex', flexDirection: 'column', gap: 12, marginBottom: 28 }}>
+            <div style={{
+              background: '#fff', border: '1px solid #b3e0ea', borderLeft: '4px solid #17A2B8',
+              borderRadius: 10, padding: '18px 24px',
+              display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexWrap: 'wrap', gap: 12,
+            }}>
+              <div>
+                <p style={{ fontWeight: 700, color: '#002A50', fontSize: 15, margin: 0 }}>Estudio hidráulico</p>
+                <p style={{ color: '#777', fontSize: 13, margin: '3px 0 0' }}>Perfil hidráulico, diseño de estructuras, encauzamiento, socavación en puentes</p>
+              </div>
+              <div style={{ textAlign: 'right' }}>
+                <p style={{ fontFamily: "'Playfair Display', serif", fontWeight: 700, fontSize: 22, color: '#17A2B8', margin: 0 }}>$4M – $15M COP</p>
+                <p style={{ color: '#888', fontSize: 12, margin: '2px 0 0' }}>según alcance y complejidad del tramo</p>
+              </div>
+            </div>
+            <div style={{
+              background: '#fff', border: '1px solid #b3e0ea', borderLeft: '4px solid #17A2B8',
+              borderRadius: 10, padding: '18px 24px',
+              display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexWrap: 'wrap', gap: 12,
+            }}>
+              <div>
+                <p style={{ fontWeight: 700, color: '#002A50', fontSize: 15, margin: 0 }}>Modelación HEC-RAS 1D / 2D</p>
+                <p style={{ color: '#777', fontSize: 13, margin: '3px 0 0' }}>Manchas de inundación, amenaza hídrica Decreto 1807, dam break</p>
+              </div>
+              <div style={{ textAlign: 'right' }}>
+                <p style={{ fontFamily: "'Playfair Display', serif", fontWeight: 700, fontSize: 22, color: '#17A2B8', margin: 0 }}>$5M – $18M COP</p>
+                <p style={{ color: '#888', fontSize: 12, margin: '2px 0 0' }}>según longitud del tramo y tipo de modelo</p>
+              </div>
+            </div>
+          </div>
+          <div style={{ background: '#e6f7ff', borderRadius: 8, padding: '14px 18px', marginBottom: 24, border: '1px solid #b3d9ea' }}>
+            <p style={{ color: '#333', fontSize: 14, lineHeight: 1.7, margin: 0 }}>
+              Los precios varían según la complejidad del proyecto, el municipio y los requerimientos de la autoridad ambiental. <strong>Solicita una cotización sin costo.</strong>
+            </p>
+          </div>
+          <a href={`https://wa.me/${WA}?text=${WA_MSG}`} target="_blank" rel="noopener noreferrer"
+            style={{ display: 'inline-block', padding: '13px 28px', background: '#25D366', color: '#fff', borderRadius: 8, fontWeight: 700, fontSize: 15, textDecoration: 'none' }}>
+            📱 Solicitar cotización sin costo
           </a>
         </div>
       </section>
