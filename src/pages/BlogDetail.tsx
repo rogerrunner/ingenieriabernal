@@ -5,6 +5,7 @@ import articlesB from '../data/articlesB'
 import articlesC from '../data/articlesC'
 import articlesD from '../data/articlesD'
 import articlesE from '../data/articlesE'
+import articlesF from '../data/articlesF'
 import SEOHead from '../components/SEOHead'
 import { BlueprintBg, Tag, ThinLine, SectionLabel, Btn, Section } from '../components/ui'
 import { SEOConfig } from '../lib/seo'
@@ -290,6 +291,7 @@ const ARTICLES: Record<string, {
   ...articlesC,
   ...articlesD,
   ...articlesE,
+  ...articlesF,
 }
 
 // ─── SERVICE LINKS PER ARTICLE ──────────────────────────────────────────────
@@ -337,6 +339,10 @@ const SERVICE_LINKS: Record<string, { label: string; href: string }> = {
   'retiro-quebrada-construccion-colombia':            { label: 'Estudios Hidrológicos Decreto 1807',      href: '/servicios/estudios-hidrologicos' },
   'que-necesito-para-urbanizar-un-lote-colombia':    { label: 'Memorias Hidrosanitarias',                href: '/servicios/memorias-hidrosanitarias' },
   'estudios-car-corpocaldas-colombia':               { label: 'Trámites ante CAR y estudios técnicos',   href: '/servicios/estudios-hidrologicos' },
+  // articlesF
+  'socavacion-puentes-hec18-colombia':               { label: 'Modelación Hidráulica HEC-RAS — Puentes', href: '/servicios/modelacion-hec-ras' },
+  'condicion-aguas-abajo-hec-ras':                   { label: 'Modelación Hidráulica HEC-RAS',           href: '/servicios/modelacion-hec-ras' },
+  'modelacion-avenidas-torrenciales-colombia':        { label: 'Gestión del Riesgo Hídrico y Torrencial', href: '/gestion-riesgo-hidrico' },
 }
 
 // ─── LAYOUT COMPONENTS ──────────────────────────────────────────────────────
