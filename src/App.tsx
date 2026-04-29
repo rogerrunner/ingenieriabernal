@@ -76,6 +76,7 @@ const EstudiosRequeridosCAR = lazy(() => import('./pages/EstudiosRequeridosCAR')
 const TengoUnLote = lazy(() => import('./pages/TengoUnLote'))
 const GestionRiesgoTaludes = lazy(() => import('./pages/GestionRiesgoTaludes'))
 const IngenieriaManizalesNacional = lazy(() => import('./pages/IngenieriaManizalesNacional'))
+const CalculadoraHidraulica = lazy(() => import('./pages/CalculadoraHidraulica'))
 
 function ScrollToTop() {
   const [location] = useLocation()
@@ -316,6 +317,8 @@ export default function App() {
           <Route path="/gestion-riesgo-hidrico-manizales" component={GestionRiesgoHidricoManizales} />
           <Route path="/diseno-hidraulico-eje-cafetero" component={DisenoHidraulicoEjeCafetero} />
           <Route path="/topografia-manizales" component={TopografiaManizales} />
+
+          <Route path="/calculadora-estudios-hidraulicos" component={CalculadoraHidraulica} />
 
           <Route path="/blog/:slug" component={BlogDetail} />
           <Route component={NotFound} />
