@@ -226,6 +226,11 @@ export default function App() {
           <Route path="/servicios/regalias-mga" component={ServicioRegaliasMga} />
           <Route path="/servicios/geotecnia" component={ServicioGeotecnia} />
           <Route path="/servicios/ambiental" component={ServicioAmbiental} />
+          <Route path="/servicios/bogota" component={CiudadBogota} />
+          <Route path="/servicios/medellin" component={CiudadMedellin} />
+          <Route path="/servicios/cali" component={CiudadCali} />
+          <Route path="/servicios/ibague" component={CiudadIbague} />
+          <Route path="/servicios/bucaramanga" component={CiudadBucaramanga} />
 
           <Route path="/blog/:slug" component={BlogDetail} />
           <Route component={NotFound} />
@@ -321,6 +326,11 @@ const DisenoPTARColombia = lazy(() => import('./pages/DisenoPTARColombia'))
 const ModelacionHidraulicaColombia = lazy(() => import('./pages/ModelacionHidraulicaColombia'))
 const ConcesionAguasColombia = lazy(() => import('./pages/ConcesionAguasColombia'))
 const DisenoPTAPColombia = lazy(() => import('./pages/DisenoPTAPColombia'))
+const CiudadBogota = lazy(() => import('./pages/servicios/CiudadBogota'))
+const CiudadMedellin = lazy(() => import('./pages/servicios/CiudadMedellin'))
+const CiudadCali = lazy(() => import('./pages/servicios/CiudadCali'))
+const CiudadIbague = lazy(() => import('./pages/servicios/CiudadIbague'))
+const CiudadBucaramanga = lazy(() => import('./pages/servicios/CiudadBucaramanga'))
 
 function ScrollToTop() {
   const [location] = useLocation()
