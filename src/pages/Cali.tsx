@@ -1,11 +1,12 @@
-import RegionalPage from './RegionalPage'
+import CityPage from './CityPage'
 
 export default function Cali() {
   return (
-    <RegionalPage
+    <CityPage
       city="Cali"
-      department="Valle del Cauca"
-      description="BIC Bernal Ingeniería Consultores en Cali y Valle del Cauca: ingeniería hidráulica, estudios hidrológicos, diseño de acueductos y alcantarillado, geotecnia y PSMV. 10+ años de experiencia en Colombia."
+      dept="Valle del Cauca"
+      intro="Consultoría en ingeniería hidráulica Cali y Valle del Cauca: modelación HEC-RAS 2D para río Cauca y cuencas del Pacífico, diseño hidrosanitario NSR-10 compatible con Emcali, sistemas contra incendios para industria y formulación MGA-Web. Director UNAL · COPNIA 17202-313228 CLD."
+      pageKey="cali"
     />
   )
 }

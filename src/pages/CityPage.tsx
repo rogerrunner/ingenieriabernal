@@ -132,6 +132,54 @@ const DEEP_CONTENT: Record<string, { body: string[], keyFacts: string[], cta: st
     ],
     cta: 'BIC ofrece consultoría integral en Rionegro y el Oriente Antioqueño. Estudios de riesgo, CI NSR-10, modelación HEC-RAS. Primera consulta sin costo.',
   },
+  'bogota': {
+    body: [
+      'Bogotá y la Sabana de Cundinamarca concentran la mayor demanda de consultoría en ingeniería hidráulica de Colombia. La cuenca del río Bogotá — con sus 42 municipios tributarios — enfrenta un desafío permanente de gestión del riesgo hídrico: inundaciones en las llanuras del Magdalena, avenidas torrenciales en quebradas de borde urbano y zonas de expansión que cruzan cotas de amenaza alta según el Decreto 1807/2014. BIC ofrece modelación hidráulica HEC-RAS 1D y 2D calibrada con datos del IDEAM y compatible con los estándares de la Secretaría Distrital de Ambiente y la CAR Cundinamarca.',
+      'El diseño hidrosanitario en Bogotá debe cumplir simultáneamente la NSR-10 Títulos I y J, el RETIE, las normas de la EAAB-ESP y los requisitos de curadurías urbanas con exigencia técnica creciente. Para edificios comerciales, hoteles, centros médicos y proyectos institucionales en Bogotá D.C., BIC elabora las memorias de cálculo hidrosanitario y contra incendios que superan la revisión técnica de las curadurías distritales. La firma COPNIA 17202-313228 CLD de Rogerio Bernal Ríos avala los documentos técnicos ante cualquier entidad pública del distrito.',
+      'En Cundinamarca, municipios como Fusagasugá, Facatativá, Zipaquirá, Mosquera, Madrid y Funza tienen demanda activa de acueductos y alcantarillados bajo Resolución 0330/2017, formulación de proyectos MGA-Web para el SGR y actualización de POT con componente de riesgo hídrico. BIC presta estos servicios sin restricciones geográficas — con propuesta técnica en 24 horas y seguimiento directo del director del proyecto en todas las etapas.',
+      'Los proyectos de infraestructura vial en el corredor Bogotá–Girardot, la Autopista al Llano y la vía Bogotá–Buenaventura generan demanda de modelaciones hidráulicas para puentes, box-culverts y obras de drenaje longitudinal. BIC aplica la metodología del Manual de Drenaje del INVÍAS y el RAS 2017 para garantizar la vida útil de las obras y el cumplimiento de licencias ambientales ante la ANLA y las CAR regionales.',
+    ],
+    keyFacts: [
+      'Cuenca río Bogotá: 42 municipios tributarios — riesgo hídrico permanente en zonas de expansión',
+      'CAR Cundinamarca: estudios de riesgo exigidos para licencias en zonas inundables',
+      'NSR-10 + EAAB + curadurías distritales: diseño hidrosanitario de alta exigencia técnica',
+      'Cundinamarca: municipios con regalías disponibles para proyectos de agua — formulación MGA-Web',
+      'COPNIA 17202-313228 CLD: firma habilitada para documentos técnicos ante entidades distritales',
+    ],
+    cta: 'BIC presta servicios en Bogotá y toda Cundinamarca. Ingeniería hidráulica, diseño hidrosanitario, HEC-RAS y formulación MGA-Web. Primera consulta sin costo.',
+  },
+  'medellin': {
+    body: [
+      'Medellín y el Valle de Aburrá enfrentan uno de los retos de gestión del riesgo hídrico más complejos de Colombia: más de 100 quebradas afluentes al río Medellín en un entorno urbano denso, con avenidas torrenciales que históricamente han generado desastres en Manrique, La Iguaná, La Gabriela y otros barrios de ladera. El AMVA (Área Metropolitana del Valle de Aburrá) exige estudios de amenaza hidráulica para licencias urbanísticas en toda zona con cauces cercanos — bajo los lineamientos del Decreto 1807/2014 y los POT municipales. BIC realiza estas modelaciones HEC-RAS 2D con topobatimetría de precisión y calibración con registros del SIATA.',
+      'El diseño hidrosanitario en Medellín y el Valle de Aburrá debe cumplir los requisitos de EPM — Empresas Públicas de Medellín — para conexiones a redes de acueducto y alcantarillado, además de las curadurías urbanas de Medellín, Bello, Itagüí y Envigado. BIC elabora memorias de cálculo, planos isométricos y especificaciones técnicas compatibles con estos requerimientos, con firma COPNIA y documentación lista para radicación.',
+      'En Antioquia, municipios del Oriente, Urabá, Nordeste y Suroeste tienen proyectos activos de acueductos rurales y urbanos bajo Resolución 0330/2017, así como regalías del SGR disponibles para agua potable y saneamiento básico. BIC formula estos proyectos en MGA-Web y acompaña al municipio desde el diseño hasta la sustentación ante el Órgano Colegiado de Administración y Decisión (OCAD). La experiencia en contratos con alcaldías de Viterbo, Puerto Boyacá y otros municipios similares respalda la capacidad técnica de BIC para este tipo de proyectos.',
+      'Las avenidas torrenciales del Oriente Antioqueño — documentadas en el Plan de Gestión del Riesgo de Desastres de Antioquia y en los PMGRD municipales — requieren modelaciones hidrológicas e hidráulicas con HEC-HMS y HEC-RAS 2D para dimensionar obras de mitigación y actualizar los mapas de riesgo municipal. BIC aplica la metodología FAN (Flujo de Avenidas Torrenciales) recomendada por la UNGRD para caracterizar estos fenómenos y establecer zonas de amenaza alta con criterio técnico verificable.',
+    ],
+    keyFacts: [
+      '+100 quebradas afluentes al río Aburrá — riesgo torrencial en zona urbana densa',
+      'AMVA: exige estudios Decreto 1807 para licencias en zonas con cauces — demanda alta',
+      'EPM: requisitos técnicos específicos para conexiones — BIC conoce los estándares',
+      'Antioquia: municipios con regalías activas para agua potable — formulación MGA-Web',
+      'SIATA: datos hidrológicos disponibles — calibración de modelos con información local',
+    ],
+    cta: 'BIC presta servicios en Medellín, el Valle de Aburrá y toda Antioquia. HEC-RAS 2D, diseño hidrosanitario EPM y formulación MGA-Web. Primera consulta sin costo.',
+  },
+  'cali': {
+    body: [
+      'Cali y el Valle del Cauca tienen una dinámica hidráulica singular: el río Cauca y sus tributarios — río Pance, río Cali, río Jamundí, río Guadalajara — generan zonas de inundación de alta complejidad en una de las ciudades más densas de Colombia. Los planes parciales en el sur de Cali, Palmira, Candelaria y Florida deben incluir estudios de amenaza y riesgo hídrico conforme al Decreto 1807/2014, con modelos HEC-RAS 2D sobre la dinámica del río Cauca. BIC realiza estas modelaciones con datos hidrológicos del IDEAM y topobatimetría de precisión, generando manchas de inundación compatibles con la Secretaría de Planeación Municipal de Cali y la CVC.',
+      'El diseño hidrosanitario en Cali debe cumplir los estándares de Emcali — Empresas Municipales de Cali — para conexiones a las redes de acueducto y alcantarillado, así como los requisitos de las curadurías urbanas del Distrito Especial. Para edificios residenciales, comerciales e industriales en Cali, BIC elabora memorias de cálculo hidrosanitario NSR-10, planos isométricos y especificaciones técnicas con firma COPNIA habilitada para la presentación ante cualquier curaduría del Distrito.',
+      'Las cuencas del Pacífico — Buenaventura, Tumaco, Guapi — tienen proyectos activos de agua potable y saneamiento básico con financiación de regalías SGR y cooperación internacional. BIC puede formular estos proyectos en MGA-Web y desarrollar los estudios técnicos de acueducto y alcantarillado bajo los protocolos del MVCT y la Resolución 0330/2017. La experiencia en formulación de proyectos para municipios pequeños en zonas rurales es un diferenciador clave de BIC en esta región.',
+      'En el norte del Valle y el eje Cali–Cartago, municipios como Tuluá, Buga, Cartago y Zarzal tienen demanda de diseño de sistemas contra incendios NSR-10 para bodegas industriales y complejos comerciales — servicio que no ofrecen la mayoría de firmas consultoras locales del Valle. BIC diseña estos sistemas con criterios NSR-10 Capítulos J y K, NTC 1500 y NTC 1669, entregando documentos listos para presentación ante curaduría, Bomberos del Valle y aseguradoras internacionales.',
+    ],
+    keyFacts: [
+      'Río Cauca: zonas de inundación alta complejidad en Cali, Palmira, Candelaria, Florida',
+      'CVC: autoridad ambiental — estudios hidrológicos e hidráulicos conforme a lineamientos CVC',
+      'Emcali: requisitos técnicos específicos para conexiones acueducto y alcantarillado',
+      'Cuencas del Pacífico: proyectos activos con regalías y cooperación internacional — MGA-Web',
+      'CI NSR-10 para industria en norte del Valle: bodegas y centros comerciales sin competencia local',
+    ],
+    cta: 'BIC presta servicios en Cali, el Valle del Cauca y el Pacífico. HEC-RAS 2D, diseño hidrosanitario, CI NSR-10 y formulación MGA-Web. Primera consulta sin costo.',
+  },
   'sabana-norte': {
     body: [
       'La Sabana Norte de Bogotá — Tocancipá, Zipaquirá, Cajicá, Chía y Sopó — concentra el mayor crecimiento industrial y residencial del norte de Cundinamarca. Tocancipá figura entre los municipios más desarrollados de Colombia según el DNP, con parques industriales activos de empresas como Bavaria, Alpina y decenas de bodegas logísticas. Cada una de estas instalaciones requiere sistemas contra incendios NSR-10 y diseños hidrosanitarios industriales — servicio donde BIC no tiene competencia digital posicionada en la zona.',
