@@ -1,5 +1,6 @@
 import { useEffect } from 'react'
 import SEOHead from '@/components/SEOHead'
+import SchemaMarkup from '@/components/SchemaMarkup'
 import { BlueprintBg, SectionLabel, Btn, Section, Tag } from '@/components/ui'
 
 const WA = '573024778910'
@@ -152,6 +153,16 @@ export default function ServicioEstudiosHidrologicos() {
   return (
     <>
       <SEOHead config={seoConfig} />
+      <SchemaMarkup
+        type="service"
+        serviceName="Estudios Hidrológicos en Colombia"
+        serviceDesc={seoConfig.description}
+        serviceUrl="/servicios/estudios-hidrologicos"
+        faqItems={FAQ}
+        priceSpecification={[
+          { name: 'Estudio hidrológico', minPrice: 3500000, maxPrice: 12000000, description: 'Caudales de diseño, curvas IDF, HEC-HMS, Decreto 1807/2014, concesiones CAR' },
+        ]}
+      />
 
       {/* ── HERO ── */}
       <section style={{
@@ -305,6 +316,44 @@ export default function ServicioEstudiosHidrologicos() {
           <a href={`https://wa.me/${WA}?text=${WA_MSG}`} target="_blank" rel="noopener noreferrer"
             style={{ display: 'inline-block', padding: '12px 28px', background: '#25D366', color: '#fff', borderRadius: 8, fontWeight: 700, fontSize: 15, textDecoration: 'none' }}>
             📱 Cotizar por WhatsApp
+          </a>
+        </div>
+      </section>
+
+      {/* ── PRECIOS ── */}
+      <section style={{ background: '#f0f9ff', padding: '52px 24px', borderTop: '1px solid #b3e0ea' }}>
+        <div style={{ maxWidth: 880, margin: '0 auto', padding: '0 24px' }}>
+          <SectionLabel>Inversión referencial</SectionLabel>
+          <h2 style={{ fontFamily: "'Playfair Display', serif", fontWeight: 700, fontSize: 'clamp(22px, 3vw, 32px)', marginBottom: 8, color: '#002A50' }}>
+            ¿Cuánto cuesta un estudio hidrológico en Colombia?
+          </h2>
+          <p style={{ color: '#555', lineHeight: 1.75, marginBottom: 28, maxWidth: 680 }}>
+            Rangos referenciales para proyectos estándar. El precio exacto se define según el tipo de estudio, la cuenca y la entidad receptora.
+          </p>
+          <div style={{ display: 'flex', flexDirection: 'column', gap: 12, marginBottom: 28 }}>
+            <div style={{
+              background: '#fff', border: '1px solid #b3e0ea', borderLeft: '4px solid #17A2B8',
+              borderRadius: 10, padding: '18px 24px',
+              display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexWrap: 'wrap', gap: 12,
+            }}>
+              <div>
+                <p style={{ fontWeight: 700, color: '#002A50', fontSize: 15, margin: 0 }}>Estudio hidrológico</p>
+                <p style={{ color: '#777', fontSize: 13, margin: '3px 0 0' }}>Diseño de obras, licencias, concesiones CAR, Decreto 1807</p>
+              </div>
+              <div style={{ textAlign: 'right' }}>
+                <p style={{ fontFamily: "'Playfair Display', serif", fontWeight: 700, fontSize: 22, color: '#17A2B8', margin: 0 }}>$3.5M – $12M COP</p>
+                <p style={{ color: '#888', fontSize: 12, margin: '2px 0 0' }}>según complejidad y área de la cuenca</p>
+              </div>
+            </div>
+          </div>
+          <div style={{ background: '#e6f7ff', borderRadius: 8, padding: '14px 18px', marginBottom: 24, border: '1px solid #b3d9ea' }}>
+            <p style={{ color: '#333', fontSize: 14, lineHeight: 1.7, margin: 0 }}>
+              Los precios varían según la complejidad del proyecto, el municipio y los requerimientos de la autoridad ambiental. <strong>Solicita una cotización sin costo.</strong>
+            </p>
+          </div>
+          <a href={`https://wa.me/${WA}?text=${WA_MSG}`} target="_blank" rel="noopener noreferrer"
+            style={{ display: 'inline-block', padding: '13px 28px', background: '#25D366', color: '#fff', borderRadius: 8, fontWeight: 700, fontSize: 15, textDecoration: 'none' }}>
+            📱 Solicitar cotización sin costo
           </a>
         </div>
       </section>

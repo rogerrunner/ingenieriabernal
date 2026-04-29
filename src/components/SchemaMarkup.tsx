@@ -114,15 +114,24 @@ function removeSchema(id: string) {
   if (el) el.remove()
 }
 
+interface PriceSpec {
+  name: string
+  minPrice: number
+  maxPrice: number
+  priceCurrency?: string
+  description?: string
+}
+
 interface Props {
   type: 'home' | 'contact' | 'service'
   serviceName?: string
   serviceDesc?: string
   serviceUrl?: string
   faqItems?: Array<{ q: string; a: string }>
+  priceSpecification?: PriceSpec[]
 }
 
-export default function SchemaMarkup({ type, serviceName, serviceDesc, serviceUrl, faqItems }: Props) {
+export default function SchemaMarkup({ type, serviceName, serviceDesc, serviceUrl, faqItems, priceSpecification }: Props) {
   useEffect(() => {
     // Always inject LocalBusiness on every page
     injectSchema('schema-local-business', LOCAL_BUSINESS_SCHEMA)
@@ -136,7 +145,23 @@ export default function SchemaMarkup({ type, serviceName, serviceDesc, serviceUr
     }
 
     if (type === 'service' && serviceName) {
-      const serviceSchema = {
+      const offers = priceSpecification && priceSpecification.length > 0
+        ? priceSpecification.map(ps => ({
+            '@type': 'Offer',
+            name: ps.name,
+            priceCurrency: ps.priceCurrency || 'COP',
+            priceSpecification: {
+              '@type': 'PriceSpecification',
+              name: ps.name,
+              minPrice: ps.minPrice,
+              maxPrice: ps.maxPrice,
+              priceCurrency: ps.priceCurrency || 'COP',
+              ...(ps.description ? { description: ps.description } : {}),
+            },
+          }))
+        : undefined
+
+      const serviceSchema: Record<string, unknown> = {
         '@context': 'https://schema.org',
         '@type': 'Service',
         name: serviceName,
@@ -156,6 +181,7 @@ export default function SchemaMarkup({ type, serviceName, serviceDesc, serviceUr
         },
         areaServed: { '@type': 'Country', name: 'Colombia' },
       }
+      if (offers) serviceSchema.offers = offers
       injectSchema('schema-service', serviceSchema)
 
       if (faqItems && faqItems.length > 0) {
@@ -178,7 +204,7 @@ export default function SchemaMarkup({ type, serviceName, serviceDesc, serviceUr
       removeSchema('schema-contact-page')
       removeSchema('schema-service')
     }
-  }, [type, serviceName, serviceDesc, serviceUrl])
+  }, [type, serviceName, serviceDesc, serviceUrl, priceSpecification])
 
   return null
 }
