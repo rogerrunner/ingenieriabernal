@@ -1,7 +1,14 @@
 import { useEffect } from 'react'
 import { useRoute } from 'wouter'
 import articles1 from '../data/articles1'
+import articlesB from '../data/articlesB'
+import articlesC from '../data/articlesC'
+import articlesD from '../data/articlesD'
+import articlesE from '../data/articlesE'
+import articlesF from '../data/articlesF'
+import SEOHead from '../components/SEOHead'
 import { BlueprintBg, Tag, ThinLine, SectionLabel, Btn, Section } from '../components/ui'
+import { SEOConfig } from '../lib/seo'
 
 const WA = '573024778910'
 
@@ -280,6 +287,11 @@ const ARTICLES: Record<string, {
     </>
   },
   ...articles1,
+  ...articlesB,
+  ...articlesC,
+  ...articlesD,
+  ...articlesE,
+  ...articlesF,
 }
 
 // ─── SERVICE LINKS PER ARTICLE ──────────────────────────────────────────────
@@ -294,9 +306,50 @@ const SERVICE_LINKS: Record<string, { label: string; href: string }> = {
   'irca-municipio-colombia':                         { label: 'Acueducto y Alcantarillado',             href: '/servicios/acueducto-alcantarillado' },
   'mga-web-regalias-agua-potable':                   { label: 'Formulación MGA / Regalías SGR',         href: '/servicios/regalias-mga' },
   'hec-ras-2d-modelacion-hidraulica-colombia':       { label: 'Modelación Hidráulica HEC-RAS 2D',       href: '/servicios/modelacion-hec-ras' },
-  'cuando-se-requiere-hec-ras-colombia':             { label: 'Modelación Hidráulica HEC-RAS 2D',       href: '/servicios/modelacion-hec-ras' },
-  'diseno-redes-hidrosanitarias-nsr-10-colombia':    { label: 'Redes Hidrosanitarias NSR-10',            href: '/servicios/redes-hidrosanitarias' },
-  'estudio-amenaza-inundaciones-pot-colombia':        { label: 'Gestión del Riesgo Hídrico',              href: '/gestion-riesgo-hidrico' },
+  // articlesB
+  'acueducto-rural-colombia':                        { label: 'Acueducto y Alcantarillado',             href: '/servicios/acueducto-alcantarillado' },
+  'ptap-colombia':                                   { label: 'PTAP y PTAR',                            href: '/servicios' },
+  'redes-hidrosanitarias-colombia':                  { label: 'Redes Hidrosanitarias NSR-10',           href: '/servicios/redes-hidrosanitarias' },
+  'sistemas-contra-incendio-nsr10':                  { label: 'Sistemas Contra Incendio NSR-10',        href: '/servicios/sistemas-contra-incendio' },
+  'interventoria-hidraulica-colombia':               { label: 'Residencia e Interventoría',             href: '/servicios/interventoria' },
+  'alcantarillado-pluvial-colombia':                 { label: 'Acueducto y Alcantarillado',             href: '/servicios/acueducto-alcantarillado' },
+  'epanet-colombia-acueducto':                       { label: 'Acueducto y Alcantarillado',             href: '/servicios/acueducto-alcantarillado' },
+  'bocatoma-lateral-colombia':                       { label: 'Diseño de Bocatomas en Colombia',        href: '/bocatomas-colombia' },
+  // articlesC
+  'ras-2000-colombia':                               { label: 'Acueducto y Alcantarillado',             href: '/servicios/acueducto-alcantarillado' },
+  'ley-1523-riesgo-colombia':                        { label: 'Gestión del Riesgo Hídrico',             href: '/gestion-riesgo-hidrico' },
+  'nsr10-titulo-j-incendios-colombia':               { label: 'Sistemas Contra Incendio NSR-10',        href: '/servicios/sistemas-contra-incendio' },
+  'pomca-colombia':                                  { label: 'Gestión del Riesgo Hídrico',             href: '/gestion-riesgo-hidrico' },
+  'decreto-1575-agua-colombia':                      { label: 'Acueducto y Alcantarillado',             href: '/servicios/acueducto-alcantarillado' },
+  'licencia-ambiental-anla-colombia':                { label: 'Ingeniería Ambiental',                   href: '/servicios/ambiental' },
+  'contratacion-publica-ingenieria-colombia':        { label: 'Formulación Regalías MGA-Web',           href: '/servicios/regalias-mga' },
+  // articlesD
+  'riesgo-inundacion-eje-cafetero':                  { label: 'Gestión del Riesgo Hídrico',             href: '/gestion-riesgo-hidrico' },
+  'estabilidad-taludes-eje-cafetero':                { label: 'Gestión del Riesgo de Taludes',          href: '/gestion-riesgo-taludes-colombia' },
+  'regalias-acueducto-colombia':                     { label: 'Formulación Regalías MGA-Web',           href: '/servicios/regalias-mga' },
+  'caso-estudio-acueducto-rural':                    { label: 'Acueducto y Alcantarillado',             href: '/servicios/acueducto-alcantarillado' },
+  'plan-mejoramiento-irca-colombia':                 { label: 'Acueducto y Alcantarillado',             href: '/servicios/acueducto-alcantarillado' },
+  'contratar-consultoria-hidraulica-colombia':       { label: 'Ver todos nuestros servicios',           href: '/servicios' },
+  // articlesE
+  'bocatoma-caudal-riego-colombia':                  { label: 'Diseño de Bocatomas y Obras Hidráulicas', href: '/servicios/obras-hidraulicas' },
+  'estudio-hidrologico-decreto-1807':                { label: 'Estudios Hidrológicos e Hidráulicos',     href: '/servicios/estudios-hidrologicos' },
+  'hec-ras-1d-vs-2d-colombia':                       { label: 'Modelación Hidráulica HEC-RAS',           href: '/servicios/estudios-hidrologicos' },
+  'ptar-industrial-colombia':                        { label: 'Diseño de PTAR y Saneamiento',            href: '/servicios/ptar-aguas-residuales' },
+  'ingeniero-hidraulico-para-mi-proyecto':           { label: 'Contratar consultoría BIC',               href: '/contacto' },
+  'retiro-quebrada-construccion-colombia':            { label: 'Estudios Hidrológicos Decreto 1807',      href: '/servicios/estudios-hidrologicos' },
+  'que-necesito-para-urbanizar-un-lote-colombia':    { label: 'Memorias Hidrosanitarias',                href: '/servicios/memorias-hidrosanitarias' },
+  'estudios-car-corpocaldas-colombia':               { label: 'Trámites ante CAR y estudios técnicos',   href: '/servicios/estudios-hidrologicos' },
+  // articlesF
+  'cuanto-cuesta-estudio-hidrologico':               { label: 'Estudios Hidrológicos e Hidráulicos',     href: '/servicios/estudios-hidrologicos' },
+  'requisitos-ptar-licencia-construccion':           { label: 'Diseño de Acueducto y Alcantarillado',    href: '/servicios/acueducto-alcantarillado' },
+  'estudio-hidraulico-urbanizacion':                 { label: 'Memorias Hidrosanitarias',                href: '/memorias-hidrosanitarias-colombia' },
+  'calcular-caudal-diseno-alcantarillado':           { label: 'Diseño de Acueducto y Alcantarillado',    href: '/servicios/acueducto-alcantarillado' },
+  'diseno-ptap-municipio-costos':                    { label: 'Acueducto y Alcantarillado',               href: '/servicios/acueducto-alcantarillado' },
+  'modelacion-hec-ras-colombia':                     { label: 'Modelación Hidráulica HEC-RAS 2D',         href: '/servicios/modelacion-hec-ras' },
+  'plan-manejo-aguas-lluvias-colombia':              { label: 'Diseño de Acueducto y Alcantarillado',    href: '/servicios/acueducto-alcantarillado' },
+  'diferencias-ptar-ptap':                           { label: 'Acueducto y Alcantarillado',               href: '/servicios/acueducto-alcantarillado' },
+  'permiso-vertimientos-colombia':                   { label: 'Ingeniería Ambiental',                     href: '/servicios/ambiental' },
+  'estudio-amenaza-inundacion':                      { label: 'Gestión del Riesgo Hídrico',               href: '/gestion-riesgo-hidrico' },
 }
 
 // ─── LAYOUT COMPONENTS ──────────────────────────────────────────────────────
@@ -321,33 +374,17 @@ export default function BlogDetail() {
   const slug = params?.slug || ''
   const article = ARTICLES[slug]
 
+  // SEO configuration for the article
+  const seoConfig: SEOConfig | null = article ? {
+    title: `${article.title} — BIC Bernal Ingeniería Consultores`,
+    description: article.metaDesc,
+    keywords: article.keywords.split(', '),
+    ogType: 'article',
+    canonical: `https://ingenieriabernal.co/blog/${slug}`
+  } : null
+
   useEffect(() => {
     if (article) {
-      document.title = `${article.title} — BIC Bernal Ingeniería Consultores`
-      const meta = document.querySelector('meta[name="description"]')
-      if (meta) meta.setAttribute('content', article.metaDesc)
-      const keywords = document.querySelector('meta[name="keywords"]')
-      if (keywords) keywords.setAttribute('content', article.keywords)
-
-      // Open Graph
-      const ogTitle = document.querySelector('meta[property="og:title"]') as HTMLMetaElement | null
-      if (ogTitle) ogTitle.setAttribute('content', `${article.title} — BIC Bernal Ingeniería`)
-      const ogDesc = document.querySelector('meta[property="og:description"]') as HTMLMetaElement | null
-      if (ogDesc) ogDesc.setAttribute('content', article.metaDesc)
-      const ogUrl = document.querySelector('meta[property="og:url"]') as HTMLMetaElement | null
-      if (ogUrl) ogUrl.setAttribute('content', `https://ingenieriabernal.co/blog/${slug}`)
-      const ogType = document.querySelector('meta[property="og:type"]') as HTMLMetaElement | null
-      if (ogType) ogType.setAttribute('content', 'article')
-
-      // Canonical
-      let canonical = document.querySelector('link[rel="canonical"]') as HTMLLinkElement | null
-      if (!canonical) {
-        canonical = document.createElement('link') as HTMLLinkElement
-        canonical.setAttribute('rel', 'canonical')
-        document.head.appendChild(canonical)
-      }
-      canonical.setAttribute('href', `https://ingenieriabernal.co/blog/${slug}`)
-
       // BlogPosting JSON-LD
       const existingSchema = document.getElementById('blog-schema')
       if (existingSchema) existingSchema.remove()
@@ -366,13 +403,13 @@ export default function BlogDetail() {
         'inLanguage': 'es-CO',
         'author': {
           '@type': 'Person',
-          '@id': 'https://ingenieriabernal.co/#director',
+          '@id': 'https://ingenieriabernal.co/#rogerio',
           'name': 'Rogerio Bernal Ríos',
-          'url': 'https://ingenieriabernal.co/sobre-mi',
+          'url': 'https://ingenieriabernal.co',
           'jobTitle': 'Ingeniero Civil — Especialista en Ingeniería Hidráulica y Ambiental',
         },
         'publisher': {
-          '@type': 'Organization',
+          '@type': 'LocalBusiness',
           '@id': 'https://ingenieriabernal.co/#firma',
           'name': 'BIC Bernal Ingeniería Consultores',
           'url': 'https://ingenieriabernal.co',
@@ -407,6 +444,9 @@ export default function BlogDetail() {
 
   return (
     <>
+      {/* SEO Head */}
+      {seoConfig && <SEOHead config={seoConfig} />}
+
       {/* HERO */}
       <section style={{ background: 'linear-gradient(135deg, #002A50 0%, #003B6F 100%)', padding: '120px 40px 56px', position: 'relative', overflow: 'hidden' }}>
         <BlueprintBg opacity={0.07} />
