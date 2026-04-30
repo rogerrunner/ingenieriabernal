@@ -510,9 +510,19 @@ export default function BlogDetail() {
               BIC opera en todo Colombia. Primera consulta sin costo. Respuesta en menos de 24 horas.
             </p>
             <div style={{ display: 'flex', gap: 12, justifyContent: 'center', flexWrap: 'wrap' }}>
-              <Btn href={`https://wa.me/${WA}?text=${encodeURIComponent('Hola, leí el artículo en ingenieriabernal.co y necesito consultoría técnica.')}`}>
+              <a
+                href={`https://wa.me/${WA}?text=${encodeURIComponent('Hola, leí el artículo en ingenieriabernal.co y necesito consultoría técnica.')}`}
+                target="_blank" rel="noreferrer"
+                style={{
+                  display: 'inline-flex', alignItems: 'center', gap: 8,
+                  padding: '12px 28px', borderRadius: '2px', textDecoration: 'none',
+                  fontFamily: "'Montserrat', sans-serif", fontWeight: 600, fontSize: 13,
+                  letterSpacing: '0.04em', background: '#25D366', color: '#fff',
+                  boxShadow: '0 4px 12px rgba(37,211,102,0.35)',
+                }}
+              >
                 📱 Consultar por WhatsApp
-              </Btn>
+              </a>
               <Btn href="/blog" variant="outline" dark>← Todos los artículos</Btn>
             </div>
           </div>
