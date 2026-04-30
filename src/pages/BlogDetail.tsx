@@ -6,6 +6,7 @@ import articlesC from '../data/articlesC'
 import articlesD from '../data/articlesD'
 import articlesE from '../data/articlesE'
 import articlesF from '../data/articlesF'
+import articlesG from '../data/articlesG'
 import SEOHead from '../components/SEOHead'
 import { BlueprintBg, Tag, ThinLine, SectionLabel, Btn, Section } from '../components/ui'
 import { SEOConfig } from '../lib/seo'
@@ -292,6 +293,7 @@ const ARTICLES: Record<string, {
   ...articlesD,
   ...articlesE,
   ...articlesF,
+  ...articlesG,
 }
 
 // ─── SERVICE LINKS PER ARTICLE ──────────────────────────────────────────────
