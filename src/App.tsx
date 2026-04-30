@@ -85,6 +85,7 @@ const ModelacionHidraulicaColombia = lazy(() => import('./pages/ModelacionHidrau
 const DisenoPTARColombia = lazy(() => import('./pages/DisenoPTARColombia'))
 const ConcesionAguasColombia = lazy(() => import('./pages/ConcesionAguasColombia'))
 const DisenoPTAPColombia = lazy(() => import('./pages/DisenoPTAPColombia'))
+const CalculadoraHidraulica = lazy(() => import('./pages/CalculadoraHidraulica'))
 
 function ScrollToTop() {
   const [location] = useLocation()
@@ -336,6 +337,8 @@ export default function App() {
           <Route path="/gestion-riesgo-hidrico-manizales" component={GestionRiesgoHidricoManizales} />
           <Route path="/diseno-hidraulico-eje-cafetero" component={DisenoHidraulicoEjeCafetero} />
           <Route path="/topografia-manizales" component={TopografiaManizales} />
+
+          <Route path="/calculadora-estudios-hidraulicos" component={CalculadoraHidraulica} />
 
           <Route path="/blog/:slug" component={BlogDetail} />
           <Route component={NotFound} />
