@@ -106,6 +106,38 @@ export default function Contact() {
 
           {/* Formulario */}
           <div style={{ background: '#fff', borderRadius: 16, padding: '2rem', border: '1px solid #e0edf5' }}>
+
+            {/* OPCIÓN RÁPIDA — botón directo sin formulario */}
+            <div style={{ background: '#f0faf4', border: '1px solid #b7e4c7', borderRadius: 12, padding: '1.2rem 1.4rem', marginBottom: '1.5rem' }}>
+              <p style={{ fontFamily: "'Montserrat', sans-serif", fontWeight: 700, fontSize: 12, color: '#1a7a3a', textTransform: 'uppercase', letterSpacing: '0.07em', margin: '0 0 10px' }}>
+                Opción rápida:
+              </p>
+              <a
+                href={`https://wa.me/${WA}?text=${encodeURIComponent('Hola, quisiera información sobre sus servicios de ingeniería. ¿Podríamos conversar?')}`}
+                target="_blank"
+                rel="noreferrer"
+                style={{
+                  display: 'flex', alignItems: 'center', justifyContent: 'center', gap: 10,
+                  padding: '13px 20px', borderRadius: 10,
+                  background: '#25D366', color: '#fff', fontWeight: 700, fontSize: 15,
+                  textDecoration: 'none',
+                }}
+              >
+                <span style={{ fontSize: '1.2rem' }}>💬</span>
+                Escríbenos por WhatsApp
+              </a>
+              <p style={{ fontSize: 12, color: '#666', textAlign: 'center', margin: '8px 0 0' }}>
+                Un clic — sin formulario — respuesta en menos de 2 h hábiles
+              </p>
+            </div>
+
+            {/* Separador */}
+            <div style={{ display: 'flex', alignItems: 'center', gap: 10, marginBottom: '1.5rem' }}>
+              <div style={{ flex: 1, height: 1, background: '#e0edf5' }} />
+              <span style={{ fontSize: 13, color: '#94a3b8', whiteSpace: 'nowrap' }}>O envíanos tu consulta con más detalle</span>
+              <div style={{ flex: 1, height: 1, background: '#e0edf5' }} />
+            </div>
+
             <h2 style={{ fontFamily: "'Playfair Display', serif", fontWeight: 700, color: '#003B6F', fontSize: 22, marginBottom: '1.5rem' }}>
               Cuéntanos tu proyecto
             </h2>
