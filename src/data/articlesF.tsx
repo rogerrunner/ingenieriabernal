@@ -485,6 +485,9 @@ const articlesF: Record<string, {
       <h2>Entregables del estudio de amenaza por inundación</h2>
       <p>Al finalizar, el ingeniero entrega: informe técnico completo en PDF, mapas de amenaza en PDF y SHP, archivos del modelo HEC-RAS (.prj, .g01, .f01), planos de localización y sección hidráulica, y concepto técnico firmado con tarjeta COPNIA vigente.</p>
       <p>En <strong>BIC – Bernal Ingeniería Consultores</strong> elaboramos estudios de amenaza por inundación para predios, municipios y grandes proyectos en todo Colombia. Nuestros estudios son aceptados por curadurías, CAR y planeación municipal en el Eje Cafetero y todo el país. <strong>Solicite cotización en ingenieriabernal.co o al +57 302 477 8910.</strong></p>
+    </>,
+  },
+
   /* ─────────────────────────────────────────────────────────────────────────
      F-01: Socavación de puentes con HEC-18 en Colombia
   ───────────────────────────────────────────────────────────────────────── */
