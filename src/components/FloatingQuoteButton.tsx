@@ -138,9 +138,34 @@ export default function FloatingQuoteButton() {
             </div>
           </div>
 
+          {/* Direct WA button — no form required */}
+          <div style={{ padding: '14px 20px 0' }}>
+            <a
+              href={`https://wa.me/${WA}?text=${encodeURIComponent('Hola, quisiera información sobre sus servicios de ingeniería.')}`}
+              target="_blank"
+              rel="noreferrer"
+              style={{
+                display: 'flex', alignItems: 'center', justifyContent: 'center', gap: 8,
+                width: '100%', padding: '11px', borderRadius: 8,
+                background: '#25D366', color: '#fff', fontWeight: 700, fontSize: 14,
+                textDecoration: 'none', boxSizing: 'border-box',
+              }}
+            >
+              <span>💬</span> Escríbenos por WhatsApp
+            </a>
+            <p style={{ fontSize: 11, color: '#888', textAlign: 'center', margin: '6px 0 12px' }}>
+              Un clic — abre WhatsApp de inmediato
+            </p>
+            <div style={{ display: 'flex', alignItems: 'center', gap: 8, marginBottom: 12 }}>
+              <div style={{ flex: 1, height: 1, background: '#e0edf5' }} />
+              <span style={{ fontSize: 11, color: '#999', whiteSpace: 'nowrap' }}>O envía tu consulta con detalle</span>
+              <div style={{ flex: 1, height: 1, background: '#e0edf5' }} />
+            </div>
+          </div>
+
           {/* Form */}
           {!submitted ? (
-            <form onSubmit={handleSubmit} style={{ padding: '16px 20px' }}>
+            <form onSubmit={handleSubmit} style={{ padding: '0 20px 16px' }}>
               <input
                 required
                 placeholder="Tu nombre *"
