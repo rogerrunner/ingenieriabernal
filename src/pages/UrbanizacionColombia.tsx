@@ -412,6 +412,33 @@ export default function UrbanizacionColombia() {
         </div>
       </Section>
 
+      {/* ── SERVICIOS RELACIONADOS ── */}
+      <Section>
+        <div style={{ maxWidth: 920, margin: '0 auto', padding: '0 24px' }}>
+          <SectionLabel>Servicios relacionados</SectionLabel>
+          <h2 style={{ fontFamily: "'Playfair Display', serif", fontWeight: 700, fontSize: 'clamp(20px, 3vw, 30px)', marginBottom: 24 }}>
+            Otros servicios técnicos para su proyecto
+          </h2>
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))', gap: 14 }}>
+            {[
+              { label: 'Licencia de urbanismo', href: '/licencia-de-urbanismo' },
+              { label: 'Modelación hidráulica HEC-RAS', href: '/modelacion-hidraulica-colombia' },
+              { label: 'Diseño de PTAP Colombia', href: '/diseno-ptap-colombia' },
+              { label: 'Concesión de aguas Colombia', href: '/concesion-aguas-colombia' },
+              { label: 'Bocatomas y captaciones', href: '/bocatomas-colombia' },
+            ].map(s => (
+              <a key={s.label} href={s.href} style={{
+                display: 'block', background: '#f0f9ff', border: '1px solid #b3e0ea',
+                borderRadius: 10, padding: '14px 18px', color: '#003B6F',
+                fontWeight: 600, fontSize: 14, textDecoration: 'none', lineHeight: 1.4,
+              }}>
+                {s.label} →
+              </a>
+            ))}
+          </div>
+        </div>
+      </Section>
+
       {/* ── FAQ ── */}
       <Section style={{ background: '#f8f9fa' }}>
         <div style={{ maxWidth: 860, margin: '0 auto', padding: '0 24px' }}>
