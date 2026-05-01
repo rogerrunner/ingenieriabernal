@@ -276,6 +276,33 @@ export default function DisenoPTAPColombia() {
         </div>
       </Section>
 
+      {/* ── SERVICIOS RELACIONADOS ── */}
+      <Section>
+        <div style={{ maxWidth: 920, margin: '0 auto', padding: '0 24px' }}>
+          <SectionLabel>Servicios relacionados</SectionLabel>
+          <h2 style={{ fontFamily: "'Playfair Display', serif", fontWeight: 700, fontSize: 'clamp(20px, 3vw, 30px)', marginBottom: 24 }}>
+            Otras soluciones de ingeniería sanitaria e hídrica
+          </h2>
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))', gap: 14 }}>
+            {[
+              { label: 'Concesión de aguas Colombia', href: '/concesion-aguas-colombia' },
+              { label: 'Bocatomas y captaciones', href: '/bocatomas-colombia' },
+              { label: 'Diseño de PTAR Colombia', href: '/diseno-ptar-colombia' },
+              { label: 'Canales de conducción', href: '/diseno-canal-riego-colombia' },
+              { label: 'Estudios hidrológicos', href: '/servicios' },
+            ].map(s => (
+              <a key={s.label} href={s.href} style={{
+                display: 'block', background: '#f0f9ff', border: '1px solid #b3e0ea',
+                borderRadius: 10, padding: '14px 18px', color: '#003B6F',
+                fontWeight: 600, fontSize: 14, textDecoration: 'none', lineHeight: 1.4,
+              }}>
+                {s.label} →
+              </a>
+            ))}
+          </div>
+        </div>
+      </Section>
+
       {/* ── FAQ ── */}
       <Section>
         <div style={{ maxWidth: 880, margin: '0 auto', padding: '0 24px' }}>

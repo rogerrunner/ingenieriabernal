@@ -368,6 +368,33 @@ export default function IngenieriaManizalesNacional() {
         </div>
       </Section>
 
+      {/* ── SERVICIOS RELACIONADOS ── */}
+      <Section>
+        <div style={{ maxWidth: 920, margin: '0 auto', padding: '0 24px' }}>
+          <SectionLabel>Servicios relacionados</SectionLabel>
+          <h2 style={{ fontFamily: "'Playfair Display', serif", fontWeight: 700, fontSize: 'clamp(20px, 3vw, 30px)', marginBottom: 24 }}>
+            Portafolio de ingeniería hidráulica desde Manizales
+          </h2>
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))', gap: 14 }}>
+            {[
+              { label: 'Bocatomas y captaciones', href: '/bocatomas-colombia' },
+              { label: 'Encauzamiento de ríos', href: '/encauzamiento-rios-colombia' },
+              { label: 'Modelación hidráulica HEC-RAS', href: '/modelacion-hidraulica-colombia' },
+              { label: 'Concesión de aguas Colombia', href: '/concesion-aguas-colombia' },
+              { label: 'Ingeniería hidráulica Manizales', href: '/ingenieria-hidraulica-manizales' },
+            ].map(s => (
+              <a key={s.label} href={s.href} style={{
+                display: 'block', background: '#f0f9ff', border: '1px solid #b3e0ea',
+                borderRadius: 10, padding: '14px 18px', color: '#003B6F',
+                fontWeight: 600, fontSize: 14, textDecoration: 'none', lineHeight: 1.4,
+              }}>
+                {s.label} →
+              </a>
+            ))}
+          </div>
+        </div>
+      </Section>
+
       {/* ── CTA FINAL ── */}
       <section style={{ background: 'linear-gradient(135deg, #001A33 0%, #003B6F 100%)', padding: '72px 24px', textAlign: 'center', position: 'relative', overflow: 'hidden' }}>
         <BlueprintBg opacity={0.05} />
