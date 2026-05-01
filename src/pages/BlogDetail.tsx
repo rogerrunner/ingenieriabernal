@@ -7,6 +7,7 @@ import articlesD from '../data/articlesD'
 import articlesE from '../data/articlesE'
 import articlesF from '../data/articlesF'
 import articlesG from '../data/articlesG'
+import articlesH from '../data/articlesH'
 import SEOHead from '../components/SEOHead'
 import { BlueprintBg, Tag, ThinLine, SectionLabel, Btn, Section } from '../components/ui'
 import { SEOConfig } from '../lib/seo'
@@ -294,6 +295,7 @@ const ARTICLES: Record<string, {
   ...articlesE,
   ...articlesF,
   ...articlesG,
+  ...articlesH,
 }
 
 // ─── SERVICE LINKS PER ARTICLE ──────────────────────────────────────────────
@@ -352,6 +354,12 @@ const SERVICE_LINKS: Record<string, { label: string; href: string }> = {
   'diferencias-ptar-ptap':                           { label: 'Acueducto y Alcantarillado',               href: '/servicios/acueducto-alcantarillado' },
   'permiso-vertimientos-colombia':                   { label: 'Ingeniería Ambiental',                     href: '/servicios/ambiental' },
   'estudio-amenaza-inundacion':                      { label: 'Gestión del Riesgo Hídrico',               href: '/gestion-riesgo-hidrico' },
+  // articlesH
+  'calculo-caudal-diseno-acueducto-rural-colombia':  { label: 'Diseño de Acueductos Colombia',               href: '/servicios/diseno-acueductos' },
+  'tramitar-concesion-aguas-colombia-guia':           { label: 'Concesión de Aguas Colombia',                 href: '/concesion-aguas-colombia' },
+  'cuanto-cuesta-diseno-acueducto-colombia-2026':     { label: 'Diseño de Acueductos Colombia',               href: '/servicios/diseno-acueductos' },
+  'requisitos-car-acueducto-veredal-colombia':        { label: 'Acueducto y Alcantarillado',                  href: '/servicios/acueducto-alcantarillado' },
+  'como-formular-proyecto-agua-potable-sgr-colombia': { label: 'Formulación Regalías MGA-Web',                href: '/servicios/regalias-mga' },
 }
 
 // ─── LAYOUT COMPONENTS ──────────────────────────────────────────────────────
