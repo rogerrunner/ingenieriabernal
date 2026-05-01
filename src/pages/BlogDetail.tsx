@@ -354,6 +354,12 @@ const SERVICE_LINKS: Record<string, { label: string; href: string }> = {
   'diferencias-ptar-ptap':                           { label: 'Acueducto y Alcantarillado',               href: '/servicios/acueducto-alcantarillado' },
   'permiso-vertimientos-colombia':                   { label: 'Ingeniería Ambiental',                     href: '/servicios/ambiental' },
   'estudio-amenaza-inundacion':                      { label: 'Gestión del Riesgo Hídrico',               href: '/gestion-riesgo-hidrico' },
+  // articlesH
+  'calculo-caudal-diseno-acueducto-rural-colombia':  { label: 'Diseño de Acueductos Colombia',               href: '/servicios/diseno-acueductos' },
+  'tramitar-concesion-aguas-colombia-guia':           { label: 'Concesión de Aguas Colombia',                 href: '/concesion-aguas-colombia' },
+  'cuanto-cuesta-diseno-acueducto-colombia-2026':     { label: 'Diseño de Acueductos Colombia',               href: '/servicios/diseno-acueductos' },
+  'requisitos-car-acueducto-veredal-colombia':        { label: 'Acueducto y Alcantarillado',                  href: '/servicios/acueducto-alcantarillado' },
+  'como-formular-proyecto-agua-potable-sgr-colombia': { label: 'Formulación Regalías MGA-Web',                href: '/servicios/regalias-mga' },
 }
 
 // ─── LAYOUT COMPONENTS ──────────────────────────────────────────────────────
