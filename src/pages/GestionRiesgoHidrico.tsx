@@ -1,5 +1,6 @@
 import { useEffect } from 'react'
 import SEOHead from '@/components/SEOHead'
+import SpeakableSchema from '@/components/SpeakableSchema'
 import { BlueprintBg, ThinLine, SectionLabel, Btn, Section, Tag } from '@/components/ui'
 
 const WA = '573024778910'
@@ -142,6 +143,7 @@ export default function GestionRiesgoHidrico() {
   return (
     <>
       <SEOHead config={seoConfig} />
+      <SpeakableSchema name="Gestión del Riesgo Hídrico Colombia | BIC Bernal Ingeniería" />
 
       {/* ── HERO ── */}
       <section style={{
@@ -159,7 +161,7 @@ export default function GestionRiesgoHidrico() {
             Gestión del Riesgo Hídrico<br />
             <span style={{ color: '#17A2B8' }}>Inundaciones y Torrencialidad en Colombia</span>
           </h1>
-          <p style={{
+          <p className="servicio-intro" style={{
             fontFamily: "'Lato', sans-serif", color: 'rgba(255,255,255,0.82)',
             fontSize: 17, lineHeight: 1.75, maxWidth: 720, marginBottom: 36,
           }}>
@@ -425,7 +427,7 @@ export default function GestionRiesgoHidrico() {
           <ThinLine mb={40} />
           <div style={{ display: 'flex', flexDirection: 'column', gap: 20 }}>
             {FAQS.map((faq) => (
-              <div key={faq.q} style={{
+              <div key={faq.q} className="faq-item" style={{
                 background: '#fff', border: '1px solid #E2E8F0', borderRadius: 4, padding: 28,
               }}>
                 <h3 style={{

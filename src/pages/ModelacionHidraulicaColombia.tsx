@@ -1,5 +1,6 @@
 import { useEffect } from 'react'
 import SEOHead from '@/components/SEOHead'
+import SpeakableSchema from '@/components/SpeakableSchema'
 import { BlueprintBg, ThinLine, SectionLabel, Btn, Section, Tag } from '@/components/ui'
 
 const WA = '573024778910'
@@ -118,6 +119,7 @@ export default function ModelacionHidraulicaColombia() {
   return (
     <>
       <SEOHead config={seoConfig} />
+      <SpeakableSchema name="Modelación Hidráulica en Colombia — HEC-RAS 1D y 2D | BIC Ingeniería" />
 
       {/* ── HERO ── */}
       <section style={{
@@ -134,7 +136,7 @@ export default function ModelacionHidraulicaColombia() {
           }}>
             Modelación Hidráulica en Colombia
           </h1>
-          <p style={{ color: '#17A2B8', fontSize: 'clamp(17px, 2.5vw, 22px)', fontWeight: 600, marginBottom: 20 }}>
+          <p className="servicio-intro" style={{ color: '#17A2B8', fontSize: 'clamp(17px, 2.5vw, 22px)', fontWeight: 600, marginBottom: 20 }}>
             HEC-RAS 1D y 2D para estudios de inundación, licencias de urbanismo y Decreto 1807/2014
           </p>
           <p style={{ color: 'rgba(255,255,255,0.82)', fontSize: 16, lineHeight: 1.8, marginBottom: 32, maxWidth: 760 }}>
@@ -317,7 +319,7 @@ export default function ModelacionHidraulicaColombia() {
           <ThinLine mb={32} />
           <div style={{ display: 'flex', flexDirection: 'column', gap: 18 }}>
             {FAQ.map(item => (
-              <div key={item.q} style={{ background: '#fff', borderRadius: 12, padding: 26, border: '1px solid #e2e8f0' }}>
+              <div key={item.q} className="faq-item" style={{ background: '#fff', borderRadius: 12, padding: 26, border: '1px solid #e2e8f0' }}>
                 <h3 style={{ fontWeight: 700, fontSize: 15, marginBottom: 12, color: '#002A50', lineHeight: 1.4 }}>
                   {item.q}
                 </h3>
