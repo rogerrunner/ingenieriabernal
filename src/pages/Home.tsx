@@ -59,10 +59,10 @@ function StatCounter({ value, suffix, label }: { value: number, suffix: string, 
 
 export default function Home() {
   useEffect(() => {
-    document.title = 'Ingeniería Hidráulica y Ambiental en Colombia | BIC – Bernal Ingeniería Consultores'
+    document.title = 'Ingeniero Hidráulico Manizales — BIC · Ing. Bernal'
     const meta = document.querySelector('meta[name="description"]')
     if (meta) meta.setAttribute('content',
-      'Ingeniero hidráulico en Manizales especializado en modelación HEC-RAS 2D, diseño hidrosanitario NSR-10, acueductos RAS 2017 y gestión del riesgo hídrico. COPNIA 17202-313228 CLD. Cobertura nacional.'
+      'Consultor hidráulico certificado COPNIA en Manizales. Diseño acueductos, PTAP, HEC-RAS, red CI NSR-10. Todo Colombia. Presupuesto sin costo.'
     )
   }, [])
 

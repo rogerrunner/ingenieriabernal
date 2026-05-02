@@ -6,8 +6,8 @@ const WA = '573024778910'
 const WA_MSG = encodeURIComponent('Hola, quiero cotizar Sistema Contra Incendios NSR-10 J y K')
 
 const seoConfig = {
-  title: 'Sistemas Contra Incendios NSR-10 Títulos J y K Colombia | BIC',
-  description: 'Diseño de sistemas contra incendios NSR-10 Títulos J y K para edificios, centros comerciales e industria en Colombia. Rociadores NFPA 13, hidrantes NFPA 14, detección NFPA 72. COPNIA 17202-313228.',
+  title: 'Diseño Red Contra Incendio NSR-10 · Ing. Bernal — BIC',
+  description: 'Diseño hidráulico de redes CI conforme NSR-10 Título J, NFPA 13 y NFPA 14. Memorias de cálculo incluidas. Manizales · Eje Cafetero.',
   keywords: [
     'sistemas contra incendios NSR-10 Colombia',
     'diseño sistema contra incendio NSR-10',
