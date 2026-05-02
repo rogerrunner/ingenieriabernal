@@ -9,6 +9,7 @@ import articlesF from '../data/articlesF'
 import articlesG from '../data/articlesG'
 import articlesH from '../data/articlesH'
 import articlesI from '../data/articlesI'
+import articlesJ from '../data/articlesJ'
 import SEOHead from '../components/SEOHead'
 import { BlueprintBg, Tag, ThinLine, SectionLabel, Btn, Section } from '../components/ui'
 import { SEOConfig } from '../lib/seo'
@@ -298,6 +299,7 @@ const ARTICLES: Record<string, {
   ...articlesG,
   ...articlesH,
   ...articlesI,
+  ...articlesJ,
 }
 
 // ─── SERVICE LINKS PER ARTICLE ──────────────────────────────────────────────
@@ -368,6 +370,12 @@ const SERVICE_LINKS: Record<string, { label: string; href: string }> = {
   'diseno-red-contra-incendio-nsr10-colombia':        { label: 'Sistemas Contra Incendio NSR-10',            href: '/servicios/sistemas-contra-incendio' },
   'que-es-pomca-colombia-para-que-sirve':             { label: 'Gestión del Riesgo Hídrico',                 href: '/gestion-riesgo-hidrico' },
   'interventoria-obras-hidraulicas-colombia':         { label: 'Residencia e Interventoría',                 href: '/servicios/interventoria' },
+  // articlesJ
+  'cuanto-cuesta-ptap-colombia-2026':                 { label: 'Acueducto y Alcantarillado',                  href: '/servicios/acueducto-alcantarillado' },
+  'cuanto-cuesta-ptar-aguas-residuales-colombia':     { label: 'Diseño de PTAR y Saneamiento',                href: '/servicios/ptar-aguas-residuales' },
+  'tramitar-licencia-construccion-acueducto-colombia':{ label: 'Acueducto y Alcantarillado',                  href: '/servicios/acueducto-alcantarillado' },
+  'vida-util-acueducto-rural-colombia':               { label: 'Diseño de Acueductos Colombia',               href: '/servicios/diseno-acueductos' },
+  'que-es-concesion-de-aguas-colombia':               { label: 'Concesión de Aguas Colombia',                 href: '/concesion-aguas-colombia' },
 }
 
 // ─── LAYOUT COMPONENTS ──────────────────────────────────────────────────────
