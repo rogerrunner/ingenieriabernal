@@ -8,6 +8,7 @@ import articlesE from '../data/articlesE'
 import articlesF from '../data/articlesF'
 import articlesG from '../data/articlesG'
 import articlesH from '../data/articlesH'
+import articlesI from '../data/articlesI'
 import SEOHead from '../components/SEOHead'
 import { BlueprintBg, Tag, ThinLine, SectionLabel, Btn, Section } from '../components/ui'
 import { SEOConfig } from '../lib/seo'
@@ -296,6 +297,7 @@ const ARTICLES: Record<string, {
   ...articlesF,
   ...articlesG,
   ...articlesH,
+  ...articlesI,
 }
 
 // ─── SERVICE LINKS PER ARTICLE ──────────────────────────────────────────────
@@ -360,6 +362,12 @@ const SERVICE_LINKS: Record<string, { label: string; href: string }> = {
   'cuanto-cuesta-diseno-acueducto-colombia-2026':     { label: 'Diseño de Acueductos Colombia',               href: '/servicios/diseno-acueductos' },
   'requisitos-car-acueducto-veredal-colombia':        { label: 'Acueducto y Alcantarillado',                  href: '/servicios/acueducto-alcantarillado' },
   'como-formular-proyecto-agua-potable-sgr-colombia': { label: 'Formulación Regalías MGA-Web',                href: '/servicios/regalias-mga' },
+  // articlesI
+  'diferencia-ptap-ptar-colombia':                    { label: 'Diseño de Acueducto y Alcantarillado',       href: '/servicios/acueducto-alcantarillado' },
+  'estudio-inundabilidad-lote-colombia':              { label: 'Gestión del Riesgo Hídrico',                 href: '/gestion-riesgo-hidrico' },
+  'diseno-red-contra-incendio-nsr10-colombia':        { label: 'Sistemas Contra Incendio NSR-10',            href: '/servicios/sistemas-contra-incendio' },
+  'que-es-pomca-colombia-para-que-sirve':             { label: 'Gestión del Riesgo Hídrico',                 href: '/gestion-riesgo-hidrico' },
+  'interventoria-obras-hidraulicas-colombia':         { label: 'Residencia e Interventoría',                 href: '/servicios/interventoria' },
 }
 
 // ─── LAYOUT COMPONENTS ──────────────────────────────────────────────────────
