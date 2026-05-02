@@ -10,6 +10,7 @@ import articlesG from '../data/articlesG'
 import articlesH from '../data/articlesH'
 import articlesI from '../data/articlesI'
 import articlesJ from '../data/articlesJ'
+import articlesK from '../data/articlesK'
 import SEOHead from '../components/SEOHead'
 import { BlueprintBg, Tag, ThinLine, SectionLabel, Btn, Section } from '../components/ui'
 import { SEOConfig } from '../lib/seo'
@@ -300,6 +301,7 @@ const ARTICLES: Record<string, {
   ...articlesH,
   ...articlesI,
   ...articlesJ,
+  ...articlesK,
 }
 
 // ─── SERVICE LINKS PER ARTICLE ──────────────────────────────────────────────
@@ -376,6 +378,12 @@ const SERVICE_LINKS: Record<string, { label: string; href: string }> = {
   'tramitar-licencia-construccion-acueducto-colombia':{ label: 'Acueducto y Alcantarillado',                  href: '/servicios/acueducto-alcantarillado' },
   'vida-util-acueducto-rural-colombia':               { label: 'Diseño de Acueductos Colombia',               href: '/servicios/diseno-acueductos' },
   'que-es-concesion-de-aguas-colombia':               { label: 'Concesión de Aguas Colombia',                 href: '/concesion-aguas-colombia' },
+  // articlesK
+  'acueducto-multiveredal-colombia':                  { label: 'Diseño de Acueductos Colombia',               href: '/servicios/diseno-acueductos' },
+  'estudio-hidrologico-colombia-que-es':              { label: 'Estudios Hidrológicos e Hidráulicos',         href: '/servicios/estudios-hidrologicos' },
+  'proyecto-acueducto-sgr-paso-a-paso':               { label: 'Formulación Regalías MGA-Web',               href: '/servicios/regalias-mga' },
+  'diferencia-bocatoma-captacion-aguas-colombia':     { label: 'Diseño de Bocatomas en Colombia',            href: '/bocatomas-colombia' },
+  'cuando-contratar-ingeniero-hidraulico-colombia':   { label: 'Ver todos nuestros servicios',               href: '/servicios' },
 }
 
 // ─── LAYOUT COMPONENTS ──────────────────────────────────────────────────────
