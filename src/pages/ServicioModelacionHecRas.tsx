@@ -1,5 +1,6 @@
 import { useEffect } from 'react'
 import SEOHead from '@/components/SEOHead'
+import SchemaMarkup from '@/components/SchemaMarkup'
 import { BlueprintBg, ThinLine, SectionLabel, Btn, Section, Tag } from '@/components/ui'
 
 const WA = '573024778910'
@@ -61,6 +62,14 @@ const METODOLOGIA = [
 
 const FAQ_HECRAS = [
   {
+    q: '¿Para qué se usa HEC-RAS en Colombia?',
+    a: 'HEC-RAS se usa en Colombia para elaborar mapas de inundación en POMCA, obtener licencias ambientales para obras cerca de fuentes hídricas, definir franjas de retiro en POT y planes parciales, y diseñar obras de protección contra inundaciones.',
+  },
+  {
+    q: '¿Qué entregables incluye un estudio HEC-RAS?',
+    a: 'Un estudio HEC-RAS profesional incluye: memoria de cálculo con modelos calibrados, mapas de inundación en SIG para períodos de retorno 10, 25, 50 y 100 años, e informe técnico apto para radicación ante la CAR y el municipio.',
+  },
+  {
     q: '¿Cuánto cuesta un estudio de modelación HEC-RAS en Colombia?',
     a: 'Los honorarios dependen de la longitud del tramo, complejidad del cauce y si ya existe topobatimetría. Estudios básicos (municipio pequeño, 2–5 km de cauce, 1D) oscilan entre $8 y $20 millones COP. Modelos 2D para cuencas grandes o planes parciales complejos pueden superar los $40 millones. BIC entrega presupuesto detallado en menos de 24 horas hábiles, sin costo.',
   },
@@ -88,6 +97,13 @@ export default function ServicioModelacionHecRas() {
   return (
     <>
       <SEOHead config={seoConfig} />
+      <SchemaMarkup
+        type="service"
+        serviceName="Modelación HEC-RAS — Estudios de Inundación en Colombia"
+        serviceDesc={seoConfig.description}
+        serviceUrl="/servicios/modelacion-hec-ras"
+        faqItems={FAQ_HECRAS}
+      />
 
       {/* ── HERO ── */}
       <section style={{

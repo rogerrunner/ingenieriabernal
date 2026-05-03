@@ -1,5 +1,6 @@
 import { useEffect } from 'react'
 import SEOHead from '@/components/SEOHead'
+import SchemaMarkup from '@/components/SchemaMarkup'
 import { BlueprintBg, SectionLabel, Btn, Section, Tag } from '@/components/ui'
 
 const WA = '573024778910'
@@ -144,6 +145,13 @@ export default function PlanParcialColombia() {
   return (
     <>
       <SEOHead config={seoConfig} />
+      <SchemaMarkup
+        type="service"
+        serviceName="Plan Parcial Colombia — Formulación y Asesoría Técnica"
+        serviceDesc={seoConfig.description}
+        serviceUrl="/plan-parcial-colombia"
+        faqItems={FAQ}
+      />
 
       {/* ── HERO ── */}
       <section style={{

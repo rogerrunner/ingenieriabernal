@@ -1,5 +1,6 @@
 import { useEffect } from 'react'
 import SEOHead from '@/components/SEOHead'
+import SchemaMarkup from '@/components/SchemaMarkup'
 import { BlueprintBg, ThinLine, SectionLabel, Btn, Section, Tag } from '@/components/ui'
 
 const WA = '573024778910'
@@ -77,12 +78,34 @@ const NORMATIVA_CI = [
   { norma: 'NFPA 2001', aplica: 'Sistemas de extinción por agentes limpios (salas eléctricas, servidores)' },
 ]
 
+const FAQ_CI = [
+  {
+    q: '¿Qué norma rige el diseño de redes contra incendio en Colombia?',
+    a: 'En Colombia el diseño de redes contra incendio está regulado por la NSR-10 Títulos J y K, complementada con NFPA 13 (rociadores), NFPA 14 (gabinetes) y NFPA 20 (bombas contra incendio).',
+  },
+  {
+    q: '¿Cuándo se requiere una red contra incendio según la NSR-10?',
+    a: 'La NSR-10 exige red contra incendio en edificaciones de uso comercial, industrial u hotelero con área mayor a 500 m², edificios de más de 4 pisos, y cualquier instalación que maneje materiales peligrosos o de alta carga combustible.',
+  },
+  {
+    q: '¿Cuánto cuesta el diseño de una red contra incendio?',
+    a: 'El costo del diseño hidráulico de una red contra incendio según NSR-10 varía entre $8 millones y $25 millones COP según el área del proyecto y el sistema requerido (gabinetes, rociadores o mixto). BIC incluye memorias de cálculo y planos listos para trámite de licencia.',
+  },
+]
+
 export default function ServicioContraIncendiosNSR10() {
   useEffect(() => { window.scrollTo(0, 0) }, [])
 
   return (
     <>
       <SEOHead config={seoConfig} />
+      <SchemaMarkup
+        type="service"
+        serviceName="Diseño Red Contra Incendio NSR-10 — NFPA 13/14/20"
+        serviceDesc={seoConfig.description}
+        serviceUrl="/servicios/contra-incendios-nsr10"
+        faqItems={FAQ_CI}
+      />
 
       {/* ── HERO ── */}
       <section style={{

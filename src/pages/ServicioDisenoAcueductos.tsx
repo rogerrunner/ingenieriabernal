@@ -1,5 +1,6 @@
 import { useEffect } from 'react'
 import SEOHead from '@/components/SEOHead'
+import SchemaMarkup from '@/components/SchemaMarkup'
 import { BlueprintBg, ThinLine, SectionLabel, Btn, Section, Tag } from '@/components/ui'
 
 const WA = '573024778910'
@@ -67,12 +68,34 @@ const NORMATIVA = [
   { norma: 'Resolución 844/2018', desc: 'Sistemas de agua potable rurales — MVCT' },
 ]
 
+const FAQ_ACUEDUCTOS = [
+  {
+    q: '¿Cuánto cuesta el diseño de un acueducto rural en Colombia?',
+    a: 'El costo de un diseño de acueducto rural varía entre $15 millones y $45 millones COP según el número de usuarios, la longitud de la red y la complejidad de la fuente. BIC entrega presupuesto personalizado sin costo en 24 horas.',
+  },
+  {
+    q: '¿Qué norma rige el diseño de acueductos en Colombia?',
+    a: 'El Reglamento Técnico del Sector de Agua Potable y Saneamiento Básico — RAS 2017 (Resolución 0330 de 2017) es la norma vigente para el diseño de acueductos en Colombia.',
+  },
+  {
+    q: '¿Cuánto tiempo demora el diseño de un acueducto veredal?',
+    a: 'BIC entrega diseños de acueductos veredales en 3 a 4 semanas una vez firmado el contrato y recibidos los datos de campo (topografía y análisis de agua).',
+  },
+]
+
 export default function ServicioDisenoAcueductos() {
   useEffect(() => { window.scrollTo(0, 0) }, [])
 
   return (
     <>
       <SEOHead config={seoConfig} />
+      <SchemaMarkup
+        type="service"
+        serviceName="Diseño de Acueductos Rurales y Veredales"
+        serviceDesc={seoConfig.description}
+        serviceUrl="/servicios/diseno-acueductos"
+        faqItems={FAQ_ACUEDUCTOS}
+      />
 
       {/* ── HERO ── */}
       <section style={{
