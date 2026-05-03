@@ -30,7 +30,7 @@ const SCHEMA = {
   description: 'Consultoría en ingeniería hidráulica y saneamiento básico en Manizales, Colombia',
   url: 'https://ingenieriabernal.co/ingeniero-hidraulico-manizales',
   telephone: '+573024778910',
-  email: 'robernalri@unal.edu.co',
+  email: 'rogeriobernal@ingenieriabernal.co',
   address: {
     '@type': 'PostalAddress',
     streetAddress: 'Calle 65A #23B-24',
@@ -236,10 +236,10 @@ export default function IngenieroHidraulicoManizales() {
               WhatsApp +57 302 477 8910
             </Btn>
             <Btn
-              href="mailto:robernalri@unal.edu.co"
+              href="mailto:rogeriobernal@ingenieriabernal.co"
               style={{ background: 'transparent', color: '#fff', fontSize: 15, padding: '14px 36px', border: '2px solid rgba(255,255,255,0.7)' }}
             >
-              robernalri@unal.edu.co
+              rogeriobernal@ingenieriabernal.co
             </Btn>
           </div>
           <p style={{

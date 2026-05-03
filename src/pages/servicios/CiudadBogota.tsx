@@ -30,7 +30,7 @@ const SCHEMA = {
   description: 'Consultoría en ingeniería hidráulica e hidrológica en Bogotá y Cundinamarca.',
   url: 'https://ingenieriabernal.co',
   telephone: '+573024778910',
-  email: 'rbernalr01@gmail.com',
+  email: 'rogeriobernal@ingenieriabernal.co',
   address: {
     '@type': 'PostalAddress',
     addressLocality: 'Bogotá',

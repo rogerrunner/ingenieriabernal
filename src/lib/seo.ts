@@ -192,7 +192,7 @@ export function generateLocalBusinessSchema() {
       "addressCountry": "CO"
     },
     "telephone": "+57 302 477-8910",
-    "email": "robernalri@unal.edu.co",
+    "email": "rogeriobernal@ingenieriabernal.co",
     "url": "https://ingenieriabernal.co",
     "priceRange": "$$",
     "areaServed": [
@@ -233,7 +233,7 @@ export function generateLocalBusinessSchema() {
       "@type": "ContactPoint",
       "contactType": "Customer Service",
       "telephone": "+57 302 477-8910",
-      "email": "robernalri@unal.edu.co",
+      "email": "rogeriobernal@ingenieriabernal.co",
       "areaServed": "CO",
       "availableLanguage": ["es"]
     }
@@ -251,7 +251,7 @@ export function generateProfessionalSchema() {
     "name": "Rogerio Bernal Ríos",
     "jobTitle": "Ingeniero Civil - Especialista en Ingeniería Hidráulica",
     "image": "https://ingenieriabernal.co/rogerio.jpg",
-    "email": "robernalri@unal.edu.co",
+    "email": "rogeriobernal@ingenieriabernal.co",
     "telephone": "+57 302 477-8910",
     "url": "https://ingenieriabernal.co",
     "sameAs": [
@@ -321,7 +321,7 @@ export function generateServiceSchema() {
     "provider": {
       "@type": "Person",
       "name": "Rogerio Bernal Ríos",
-      "email": "robernalri@unal.edu.co",
+      "email": "rogeriobernal@ingenieriabernal.co",
       "telephone": "+57 302 477-8910"
     },
     "areaServed": {

@@ -30,7 +30,7 @@ const SCHEMA = {
   description: 'Estudios hidrológicos e hidráulicos en Cali, Valle del Cauca: río Cauca, río Cali, riesgo hídrico y diseño de infraestructura hídrica.',
   url: 'https://ingenieriabernal.co',
   telephone: '+573024778910',
-  email: 'rbernalr01@gmail.com',
+  email: 'rogeriobernal@ingenieriabernal.co',
   address: {
     '@type': 'PostalAddress',
     addressLocality: 'Cali',
