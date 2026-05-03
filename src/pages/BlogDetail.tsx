@@ -14,6 +14,7 @@ import articlesJ from '../data/articlesJ'
 import articlesK from '../data/articlesK'
 import articlesL from '../data/articlesL'
 import articlesM from '../data/articlesM'
+import articlesN from '../data/articlesN'
 import SEOHead from '../components/SEOHead'
 import { BlueprintBg, Tag, ThinLine, SectionLabel, Btn, Section } from '../components/ui'
 import { SEOConfig } from '../lib/seo'
@@ -308,6 +309,7 @@ const ARTICLES: Record<string, {
   ...articlesK,
   ...articlesL,
   ...articlesM,
+  ...articlesN,
 }
 
 // ─── SERVICE LINKS PER ARTICLE ──────────────────────────────────────────────
@@ -399,6 +401,12 @@ const SERVICE_LINKS: Record<string, { label: string; href: string }> = {
   'conexiones-domiciliarias-acueducto-veredal':        { label: 'Acueducto y Alcantarillado',                  href: '/servicios/acueducto-alcantarillado' },
   'irca-calidad-agua-potable-colombia':                { label: 'Acueducto y Alcantarillado',                  href: '/servicios/acueducto-alcantarillado' },
   'mapas-inundacion-colombia-pomca-pot':               { label: 'Modelación Hidráulica HEC-RAS 2D',            href: '/servicios/modelacion-hec-ras' },
+  // articlesN
+  'interventoria-obras-hidraulicas-colombia':          { label: 'Residencia e Interventoría',                  href: '/servicios/interventoria' },
+  'presupuesto-diseno-ptap-veredal-colombia-2026':     { label: 'Acueducto y Alcantarillado',                  href: '/servicios/acueducto-alcantarillado' },
+  'modelacion-hidraulica-pomca-colombia':              { label: 'Modelación Hidráulica HEC-RAS 2D',            href: '/servicios/modelacion-hec-ras' },
+  'indice-edificabilidad-colombia-calculo-ejemplo':    { label: 'Plan Parcial Colombia',                       href: '/plan-parcial-colombia' },
+  'normas-tecnicas-diseno-acueductos-colombia-ras-2017': { label: 'Diseño de Acueductos Colombia',            href: '/servicios/diseno-acueductos' },
 }
 
 // ─── LAYOUT COMPONENTS ──────────────────────────────────────────────────────
