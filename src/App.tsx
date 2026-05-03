@@ -71,6 +71,7 @@ const DisenoCanalesRiego = lazy(() => import('./pages/DisenoCanalesRiego'))
 const EncauzamientoRios = lazy(() => import('./pages/EncauzamientoRios'))
 const PlanParcialColombia = lazy(() => import('./pages/PlanParcialColombia'))
 const IngenieriaHidraulicaManizales = lazy(() => import('./pages/IngenieriaHidraulicaManizales'))
+const IngenieroHidraulicoManizales = lazy(() => import('./pages/IngenieroHidraulicoManizales'))
 const EstudiosTorrencialidad = lazy(() => import('./pages/EstudiosTorrencialidad'))
 const ConstruirCercaRioQuebrada = lazy(() => import('./pages/ConstruirCercaRioQuebrada'))
 const IngenieriaProyectosUrbanisticos = lazy(() => import('./pages/IngenieriaProyectosUrbanisticos'))
@@ -341,6 +342,7 @@ export default function App() {
           <Route path="/gestion-riesgo-hidrico-manizales" component={GestionRiesgoHidricoManizales} />
           <Route path="/diseno-hidraulico-eje-cafetero" component={DisenoHidraulicoEjeCafetero} />
           <Route path="/topografia-manizales" component={TopografiaManizales} />
+          <Route path="/ingeniero-hidraulico-manizales" component={IngenieroHidraulicoManizales} />
 
           <Route path="/calculadora-estudios-hidraulicos" component={CalculadoraHidraulica} />
 
