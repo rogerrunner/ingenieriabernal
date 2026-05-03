@@ -3,7 +3,7 @@ import { BlueprintBg, Tag, ThinLine, SectionLabel, Btn, Section } from '../compo
 import SchemaMarkup from '../components/SchemaMarkup'
 
 const WA = '573024778910'
-const WEBHOOK_URL = import.meta.env.VITE_WEBHOOK_URL || 'http://localhost:3001/lead'
+const WEBHOOK_URL = import.meta.env.VITE_WEBHOOK_URL as string | undefined
 
 const SERVICES = [
   'Diseño hidrosanitario y contra incendios (NSR-10)',
@@ -28,6 +28,7 @@ const CITIES = [
 
 export default function Contact() {
   const [form, setForm] = useState({ name: '', company: '', city: '', service: '', message: '' })
+  const [sent, setSent] = useState(false)
 
   useEffect(() => {
     document.title = 'Contacto — BIC Bernal Ingeniería Consultores | Manizales'
@@ -43,32 +44,37 @@ export default function Contact() {
   const sendWA = (e: React.FormEvent) => {
     e.preventDefault()
 
-    // Lead tracking — fire and forget
-    const fullMessage =
-      `${form.service ? `Servicio: ${form.service}. ` : ''}` +
-      `Ciudad: ${form.city || 'Colombia'}. ` +
-      `${form.company ? `Empresa: ${form.company}. ` : ''}` +
-      `${form.message || ''}`
-    fetch(WEBHOOK_URL, {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({
-        name: form.name,
-        email: '',
-        phone: '',
-        message: fullMessage.trim(),
-        source: window.location.pathname,
-        page_url: window.location.href,
-      }),
-    }).catch(() => { /* silencioso — no bloquear el flujo WA */ })
+    // Lead tracking — solo si el webhook está configurado en producción
+    if (WEBHOOK_URL) {
+      const fullMessage =
+        `${form.service ? `Servicio: ${form.service}. ` : ''}` +
+        `Ciudad: ${form.city || 'Colombia'}. ` +
+        `${form.company ? `Empresa: ${form.company}. ` : ''}` +
+        `${form.message || ''}`
+      fetch(WEBHOOK_URL, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          name: form.name,
+          email: '',
+          phone: '',
+          message: fullMessage.trim(),
+          source: window.location.pathname,
+          page_url: window.location.href,
+        }),
+      }).catch(() => { /* silencioso */ })
+    }
 
     const msg = encodeURIComponent(
-      `Hola, soy ${form.name}${form.company ? ` de ${form.company}` : ''}, ` +
-      `ubicado en ${form.city || 'Colombia'}. ` +
-      `Me interesa consultar con BIC sobre: ${form.service || 'consulta general'}. ` +
-      `${form.message ? `Detalle: ${form.message}` : '¿Podríamos conversar?'}`
+      `Hola Ing. Rogerio, completé el formulario de contacto con los siguientes datos: ` +
+      `Nombre: ${form.name}` +
+      `${form.company ? `, Empresa: ${form.company}` : ''}, ` +
+      `Ciudad: ${form.city || 'Colombia'}, ` +
+      `Servicio: ${form.service || 'consulta general'}, ` +
+      `Mensaje: ${form.message || '¿Podríamos conversar?'}`
     )
     window.open(`https://wa.me/${WA}?text=${msg}`, '_blank')
+    setSent(true)
   }
 
   const input = {
@@ -138,6 +144,24 @@ export default function Contact() {
               <div style={{ flex: 1, height: 1, background: '#e0edf5' }} />
             </div>
 
+            {sent ? (
+              <div style={{ textAlign: 'center', padding: '2rem 1rem' }}>
+                <div style={{ fontSize: 48, marginBottom: 16 }}>✅</div>
+                <h2 style={{ fontFamily: "'Playfair Display', serif", fontWeight: 700, color: '#003B6F', fontSize: 22, marginBottom: 12 }}>
+                  ¡Mensaje enviado!
+                </h2>
+                <p style={{ color: '#475569', fontSize: 15, lineHeight: 1.7, marginBottom: 20 }}>
+                  Se abrió WhatsApp con tu consulta prellenada. Si no se abrió automáticamente, escríbenos directo al <strong>+57 302 477 8910</strong>.
+                </p>
+                <button
+                  onClick={() => setSent(false)}
+                  style={{ padding: '10px 24px', borderRadius: 8, border: '1px solid #003B6F', background: 'transparent', color: '#003B6F', fontWeight: 600, fontSize: 14, cursor: 'pointer' }}
+                >
+                  Enviar otra consulta
+                </button>
+              </div>
+            ) : (
+            <>
             <h2 style={{ fontFamily: "'Playfair Display', serif", fontWeight: 700, color: '#003B6F', fontSize: 22, marginBottom: '1.5rem' }}>
               Cuéntanos tu proyecto
             </h2>
@@ -191,6 +215,8 @@ export default function Contact() {
                 Se abre WhatsApp con el mensaje completo prellenado · Respuesta en menos de 2 horas hábiles
               </p>
             </form>
+            </>
+            )}
           </div>
 
           {/* Info lateral */}

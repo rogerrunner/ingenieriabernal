@@ -6,6 +6,7 @@ import articlesC from '../data/articlesC'
 import articlesD from '../data/articlesD'
 import articlesE from '../data/articlesE'
 import articlesF from '../data/articlesF'
+import articlesA from '../data/articlesA'
 import articlesG from '../data/articlesG'
 import articlesH from '../data/articlesH'
 import articlesI from '../data/articlesI'
@@ -294,6 +295,7 @@ const ARTICLES: Record<string, {
     </>
   },
   ...articles1,
+  ...articlesA,
   ...articlesB,
   ...articlesC,
   ...articlesD,
@@ -345,13 +347,13 @@ const SERVICE_LINKS: Record<string, { label: string; href: string }> = {
   'plan-mejoramiento-irca-colombia':                 { label: 'Acueducto y Alcantarillado',             href: '/servicios/acueducto-alcantarillado' },
   'contratar-consultoria-hidraulica-colombia':       { label: 'Ver todos nuestros servicios',           href: '/servicios' },
   // articlesE
-  'bocatoma-caudal-riego-colombia':                  { label: 'Diseño de Bocatomas y Obras Hidráulicas', href: '/servicios/obras-hidraulicas' },
+  'bocatoma-caudal-riego-colombia':                  { label: 'Diseño de Bocatomas y Obras Hidráulicas', href: '/obras-hidraulicas-colombia' },
   'estudio-hidrologico-decreto-1807':                { label: 'Estudios Hidrológicos e Hidráulicos',     href: '/servicios/estudios-hidrologicos' },
   'hec-ras-1d-vs-2d-colombia':                       { label: 'Modelación Hidráulica HEC-RAS',           href: '/servicios/estudios-hidrologicos' },
-  'ptar-industrial-colombia':                        { label: 'Diseño de PTAR y Saneamiento',            href: '/servicios/ptar-aguas-residuales' },
+  'ptar-industrial-colombia':                        { label: 'Diseño de PTAR y Saneamiento',            href: '/diseno-ptar-colombia' },
   'ingeniero-hidraulico-para-mi-proyecto':           { label: 'Contratar consultoría BIC',               href: '/contacto' },
   'retiro-quebrada-construccion-colombia':            { label: 'Estudios Hidrológicos Decreto 1807',      href: '/servicios/estudios-hidrologicos' },
-  'que-necesito-para-urbanizar-un-lote-colombia':    { label: 'Memorias Hidrosanitarias',                href: '/servicios/memorias-hidrosanitarias' },
+  'que-necesito-para-urbanizar-un-lote-colombia':    { label: 'Memorias Hidrosanitarias',                href: '/memorias-hidrosanitarias-colombia' },
   'estudios-car-corpocaldas-colombia':               { label: 'Trámites ante CAR y estudios técnicos',   href: '/servicios/estudios-hidrologicos' },
   // articlesF
   'cuanto-cuesta-estudio-hidrologico':               { label: 'Estudios Hidrológicos e Hidráulicos',     href: '/servicios/estudios-hidrologicos' },

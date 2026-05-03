@@ -6,8 +6,8 @@ const WA = '573024778910'
 const WA_MSG = encodeURIComponent('Hola, quiero cotizar Sistema Contra Incendio NSR-10')
 
 const seoConfig = {
-  title: 'Sistemas Contra Incendio NSR-10 Colombia | BIC Bernal Ingeniería Consultores',
-  description: 'Diseño de sistemas contra incendio NSR-10 Títulos J y K para edificios, centros comerciales, plantas industriales y bodegas en Colombia. NFPA, rociadores, hidrantes. COPNIA 17202-313228.',
+  title: 'Diseño Red Contra Incendio NSR-10 Manizales | Memorias de Cálculo · BIC',
+  description: 'Diseño hidráulico de sistemas CI conforme NSR-10 Título J y NFPA 13/14. Memorias de cálculo incluidas. Proyectos en Manizales y Eje Cafetero. Cotice gratis.',
   keywords: [
     'sistemas contra incendio NSR-10 Colombia',
     'diseño sistema contra incendio Colombia',
@@ -61,8 +61,8 @@ export default function ServicioSistemasContraIncendio() {
             fontFamily: "'Playfair Display', serif", fontWeight: 700, color: '#fff',
             fontSize: 'clamp(28px, 5vw, 44px)', lineHeight: 1.2, marginBottom: 24,
           }}>
-            Sistemas Contra Incendio NSR-10<br />
-            <span style={{ color: '#17A2B8' }}>para Edificios, Industria y Entidades en Colombia</span>
+            Diseño Red Contra Incendio NSR-10<br />
+            <span style={{ color: '#17A2B8' }}>Manizales · Memorias de Cálculo para Licencia</span>
           </h1>
           <p style={{
             fontFamily: "'Lato', sans-serif", color: 'rgba(255,255,255,0.82)',

@@ -7,7 +7,7 @@ const WA = '573024778910'
 const WA_MSG = encodeURIComponent('Hola, necesito cotizar el diseño de una bocatoma. ¿Pueden ayudarme con más información?')
 
 const seoConfig = {
-  title: 'Diseño de Bocatomas en Colombia — Ingeniería Hidráulica Especializada | BIC',
+  title: 'Bocatomas Colombia: Diseño Lateral, Frontal y de Fondo · Permisos CAR | BIC',
   description: 'BIC diseña bocatomas laterales, frontales, de fondo y sumergidas en Colombia. Análisis hidrológico, modelación HEC-RAS, memoria de cálculo COPNIA y permisos CAR para acueductos, riego e industria. Cotización en 24 horas.',
   keywords: [
     'diseño de bocatoma Colombia',
