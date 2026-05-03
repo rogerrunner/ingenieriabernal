@@ -30,7 +30,7 @@ const SCHEMA = {
   description: 'Estudios hidráulicos en Bucaramanga, Santander y el Área Metropolitana: cañones, taludes, riesgo hídrico CDMB y diseño de infraestructura hídrica.',
   url: 'https://ingenieriabernal.co',
   telephone: '+573024778910',
-  email: 'rbernalr01@gmail.com',
+  email: 'rogeriobernal@ingenieriabernal.co',
   address: {
     '@type': 'PostalAddress',
     addressLocality: 'Bucaramanga',

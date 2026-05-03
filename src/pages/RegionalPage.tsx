@@ -53,7 +53,7 @@ export default function RegionalPage({ city, department, description, phone = DE
       description: `Consultoría en ingeniería hidráulica, hidrología, acueductos y geotecnia en ${city}, ${department}`,
       url: 'https://ingenieriabernal.co',
       telephone: `+${phone}`,
-      email: 'rbernalr01@gmail.com',
+      email: 'rogeriobernal@ingenieriabernal.co',
       address: {
         '@type': 'PostalAddress',
         addressLocality: city,

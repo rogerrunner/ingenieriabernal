@@ -1,7 +1,7 @@
 import { useState } from 'react'
 
 const WA = '573024778910'
-const EMAIL = 'rogeriobernal921@gmail.com'
+const EMAIL = 'rogeriobernal@ingenieriabernal.co'
 
 const SERVICES_PRICING = [
   { id: 'consulta', label: 'Consulta técnica (1 h online)', price: '$250.000 COP', detail: 'Revisión de caso, orientación normativa y hoja de ruta para su proyecto.' },

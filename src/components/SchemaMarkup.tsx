@@ -13,7 +13,7 @@ const LOCAL_BUSINESS_SCHEMA = {
   image: BASE_URL + '/og-default.jpg',
   description: 'Consultoría en ingeniería hidráulica y saneamiento básico. Diseño de acueductos, PTAP, modelación HEC-RAS, redes contra incendio NSR-10 y proyectos SGR. Manizales, Colombia. Egresados UNAL — COPNIA 17202-313228.',
   telephone: '+573024778910',
-  email: 'robernalri@unal.edu.co',
+  email: 'rogeriobernal@ingenieriabernal.co',
   foundingDate: '2015',
   numberOfEmployees: { '@type': 'QuantitativeValue', value: 5 },
   founder: {
@@ -210,12 +210,6 @@ export default function SchemaMarkup({ type, serviceName, serviceDesc, serviceUr
       }
     }
 
-    return () => {
-      removeSchema('schema-local-business')
-      removeSchema('schema-faq')
-      removeSchema('schema-contact-page')
-      removeSchema('schema-service')
-    }
   }, [type, serviceName, serviceDesc, serviceUrl, priceSpecification])
 
   return null

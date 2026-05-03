@@ -30,7 +30,7 @@ const SCHEMA = {
   description: 'Consultoría en ingeniería hidráulica en Medellín, Antioquia y el Área Metropolitana del Valle de Aburrá.',
   url: 'https://ingenieriabernal.co',
   telephone: '+573024778910',
-  email: 'rbernalr01@gmail.com',
+  email: 'rogeriobernal@ingenieriabernal.co',
   address: {
     '@type': 'PostalAddress',
     addressLocality: 'Medellín',

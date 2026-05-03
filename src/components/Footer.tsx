@@ -85,7 +85,7 @@ export default function Footer() {
           <div>
             <h4 style={{ color: '#fff', fontFamily: "'Montserrat', sans-serif", fontWeight: 700, fontSize: 12, letterSpacing: '0.1em', textTransform: 'uppercase', marginBottom: 16 }}>Contacto</h4>
             <p style={{ ...lnk, cursor: 'default' }}>Calle 65A #23B-24<br />Manizales, Caldas · Colombia</p>
-            <a href="mailto:rbernalr01@gmail.com" style={lnk}>rbernalr01@gmail.com</a>
+            <a href="mailto:rogeriobernal@ingenieriabernal.co" style={lnk}>rogeriobernal@ingenieriabernal.co</a>
             <a href="https://wa.me/573024778910" style={lnk}>+57 302 477 8910</a>
             <p style={{ ...lnk, cursor: 'default', marginTop: 12 }}>Lun–Vie 8am–6pm<br />Sábados 9am–1pm</p>
             <div style={{ marginTop: 16 }}>

@@ -234,8 +234,8 @@ export default function Contact() {
             {/* Email */}
             <div style={{ background: '#fff', borderRadius: 12, padding: '1.5rem', border: '1px solid #e0edf5' }}>
               <p style={{ color: '#003B6F', fontWeight: 700, fontSize: 13, textTransform: 'uppercase', letterSpacing: '0.08em', margin: '0 0 8px' }}>Correo electrónico</p>
-              <a href="mailto:rbernalr01@gmail.com" style={{ color: '#17A2B8', fontWeight: 600, fontSize: 15, textDecoration: 'none' }}>
-                rbernalr01@gmail.com
+              <a href="mailto:rogeriobernal@ingenieriabernal.co" style={{ color: '#17A2B8', fontWeight: 600, fontSize: 15, textDecoration: 'none' }}>
+                rogeriobernal@ingenieriabernal.co
               </a>
             </div>
 
