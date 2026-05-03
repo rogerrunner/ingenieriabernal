@@ -6,8 +6,8 @@ const WA = '573024778910'
 const WA_MSG = encodeURIComponent('Hola, tengo un terreno en suelo de expansión urbana y quiero información sobre planes parciales. ¿Pueden asesorarme?')
 
 const seoConfig = {
-  title: 'Formulación de Planes Parciales en Colombia — Consultoría Técnica | BIC',
-  description: 'BIC formula y tramita planes parciales en Colombia. Suelo de expansión urbana, cargas y beneficios, coordinación POT y curaduría. Para propietarios de terrenos, promotores inmobiliarios y fiduciarias. Cotización sin costo.',
+  title: 'Plan Parcial Colombia — Asesoría Técnica · BIC',
+  description: 'Asesoría en planes parciales de ordenamiento territorial. Ing. Rogerio Bernal — Manizales. Cumplimiento POT. Cotice sin costo.',
   keywords: [
     'plan parcial Colombia',
     'formulación plan parcial Colombia',
@@ -158,7 +158,7 @@ export default function PlanParcialColombia() {
             fontFamily: "'Playfair Display', serif", fontWeight: 700, color: '#fff',
             fontSize: 'clamp(26px, 4.5vw, 46px)', lineHeight: 1.2, marginBottom: 20,
           }}>
-            Formulación de Planes Parciales en Colombia
+            Plan Parcial Colombia — Asesoría Técnica y Formulación
           </h1>
           <p style={{ color: '#90CDF4', fontSize: 'clamp(16px, 2.2vw, 20px)', fontWeight: 600, marginBottom: 20 }}>
             Del suelo bruto al decreto de adopción — consultoría técnica especializada en Ley 388/97

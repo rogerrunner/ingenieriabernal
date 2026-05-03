@@ -6,8 +6,8 @@ const WA = '573024778910'
 const WA_MSG = encodeURIComponent('Hola, quiero cotizar Modelación Hidráulica HEC-RAS 2D')
 
 const seoConfig = {
-  title: 'Modelación Hidráulica HEC-RAS 2D Colombia | BIC Bernal Ingeniería Consultores',
-  description: 'Modelación hidráulica HEC-RAS 1D y 2D para municipios, constructoras y entidades en Colombia. Manchas de inundación, amenaza hídrica Decreto 1807/2014. COPNIA 17202-313228. Eje Cafetero.',
+  title: 'Modelación HEC-RAS — Estudios de Inundabilidad · BIC',
+  description: 'Estudios de inundabilidad y modelación hidráulica HEC-RAS 1D/2D. Apto POMCA, licencias ambientales. Manizales, Colombia.',
   keywords: [
     'modelación hidráulica HEC-RAS 2D Colombia',
     'HEC-RAS 2D Colombia',
