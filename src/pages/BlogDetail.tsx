@@ -12,6 +12,7 @@ import articlesI from '../data/articlesI'
 import articlesJ from '../data/articlesJ'
 import articlesK from '../data/articlesK'
 import articlesL from '../data/articlesL'
+import articlesM from '../data/articlesM'
 import SEOHead from '../components/SEOHead'
 import { BlueprintBg, Tag, ThinLine, SectionLabel, Btn, Section } from '../components/ui'
 import { SEOConfig } from '../lib/seo'
@@ -304,6 +305,7 @@ const ARTICLES: Record<string, {
   ...articlesJ,
   ...articlesK,
   ...articlesL,
+  ...articlesM,
 }
 
 // ─── SERVICE LINKS PER ARTICLE ──────────────────────────────────────────────
@@ -389,6 +391,12 @@ const SERVICE_LINKS: Record<string, { label: string; href: string }> = {
   // articlesL
   'costo-estudio-hec-ras-colombia-2026':              { label: 'Modelación Hidráulica HEC-RAS 2D',            href: '/servicios/modelacion-hec-ras' },
   'documentos-para-contratar-diseno-acueducto-veredal': { label: 'Diseño de Acueductos Colombia',            href: '/servicios/diseno-acueductos' },
+  // articlesM
+  'caudales-diseno-acueducto-ras-2017':               { label: 'Diseño de Acueductos Colombia',               href: '/servicios/diseno-acueductos' },
+  'materiales-tuberia-acueducto-rural-colombia':       { label: 'Diseño de Acueductos Colombia',               href: '/servicios/diseno-acueductos' },
+  'conexiones-domiciliarias-acueducto-veredal':        { label: 'Acueducto y Alcantarillado',                  href: '/servicios/acueducto-alcantarillado' },
+  'irca-calidad-agua-potable-colombia':                { label: 'Acueducto y Alcantarillado',                  href: '/servicios/acueducto-alcantarillado' },
+  'mapas-inundacion-colombia-pomca-pot':               { label: 'Modelación Hidráulica HEC-RAS 2D',            href: '/servicios/modelacion-hec-ras' },
 }
 
 // ─── LAYOUT COMPONENTS ──────────────────────────────────────────────────────
