@@ -11,6 +11,7 @@ import articlesH from '../data/articlesH'
 import articlesI from '../data/articlesI'
 import articlesJ from '../data/articlesJ'
 import articlesK from '../data/articlesK'
+import articlesL from '../data/articlesL'
 import SEOHead from '../components/SEOHead'
 import { BlueprintBg, Tag, ThinLine, SectionLabel, Btn, Section } from '../components/ui'
 import { SEOConfig } from '../lib/seo'
@@ -302,6 +303,7 @@ const ARTICLES: Record<string, {
   ...articlesI,
   ...articlesJ,
   ...articlesK,
+  ...articlesL,
 }
 
 // ─── SERVICE LINKS PER ARTICLE ──────────────────────────────────────────────
@@ -384,6 +386,9 @@ const SERVICE_LINKS: Record<string, { label: string; href: string }> = {
   'proyecto-acueducto-sgr-paso-a-paso':               { label: 'Formulación Regalías MGA-Web',               href: '/servicios/regalias-mga' },
   'diferencia-bocatoma-captacion-aguas-colombia':     { label: 'Diseño de Bocatomas en Colombia',            href: '/bocatomas-colombia' },
   'cuando-contratar-ingeniero-hidraulico-colombia':   { label: 'Ver todos nuestros servicios',               href: '/servicios' },
+  // articlesL
+  'costo-estudio-hec-ras-colombia-2026':              { label: 'Modelación Hidráulica HEC-RAS 2D',            href: '/servicios/modelacion-hec-ras' },
+  'documentos-para-contratar-diseno-acueducto-veredal': { label: 'Diseño de Acueductos Colombia',            href: '/servicios/diseno-acueductos' },
 }
 
 // ─── LAYOUT COMPONENTS ──────────────────────────────────────────────────────
