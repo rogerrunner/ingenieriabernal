@@ -6,8 +6,8 @@ const WA = '573024778910'
 const WA_MSG = encodeURIComponent('Hola, quiero contratar un ingeniero hidráulico en Manizales')
 
 const seoConfig = {
-  title: 'Ingeniero Hidráulico Manizales — Ing. Rogerio Bernal · BIC',
-  description: 'Consultor hidráulico certificado COPNIA en Manizales. Diseño acueductos, PTAP, HEC-RAS, redes CI NSR-10. Proyectos en Caldas y Eje Cafetero. Cotice sin costo.',
+  title: 'Ingeniero Hidráulico Manizales — Rogerio Bernal COPNIA',
+  description: 'Servicios de ingeniería hidráulica en Manizales y Caldas. Diseño acueductos, PTAR, hidrosanitarias. COPNIA 17202-313228. Consulta sin costo.',
   keywords: [
     'ingeniero hidráulico Manizales',
     'consultor hidráulico Manizales',

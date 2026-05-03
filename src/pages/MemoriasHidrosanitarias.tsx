@@ -6,8 +6,8 @@ const WA = '573024778910'
 const WA_MSG = encodeURIComponent('Hola, necesito memorias de cálculo hidrosanitarias para un proyecto de construcción — licencia, curaduría o ESP. ¿Pueden elaborarlas?')
 
 const seoConfig = {
-  title: 'Memorias de Cálculo Hidrosanitarias Colombia — Licencia de Construcción y ESP | BIC',
-  description: 'BIC elabora memorias de cálculo hidrosanitarias para licencias de construcción en Colombia: diseño de redes de agua potable, alcantarillado sanitario y aguas lluvias conforme al RAS 2017 y NTC 1500. Firma COPNIA vigente. Aceptadas por curaderías y ESP en todo el país.',
+  title: 'Memorias Hidrosanitarias Colombia — NSR-10 RAS | BIC',
+  description: 'Memorias de cálculo hidrosanitarias para licencias de construcción. NSR-10, RAS 2017. Manizales y Eje Cafetero. Ing. Bernal COPNIA. Cotiza ya.',
   keywords: [
     'memorias de cálculo hidrosanitarias Colombia',
     'diseño hidrosanitario licencia construcción',

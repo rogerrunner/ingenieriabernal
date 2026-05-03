@@ -7,8 +7,8 @@ const WA = '573024778910'
 const WA_MSG = encodeURIComponent('Hola, quiero cotizar Diseño de Acueducto — sistema de agua potable')
 
 const seoConfig = {
-  title: 'Diseño de Acueductos Rurales y Veredales · BIC Colombia',
-  description: 'Diseño de sistemas de acueducto rural según RAS 2017. Ing. Bernal — Manizales, Caldas. Proyectos en Eje Cafetero y SGR. ¡Cotice hoy!',
+  title: 'Diseño Acueductos Colombia 2026 — Ing. Bernal | BIC',
+  description: 'Diseño de sistemas de acueducto con RAS 2017 en Caldas y Eje Cafetero. COPNIA 17202-313228. Entrega en 4 semanas. Solicita tu cotización.',
   keywords: [
     'diseño acueducto Colombia',
     'diseño sistema acueducto municipal',
