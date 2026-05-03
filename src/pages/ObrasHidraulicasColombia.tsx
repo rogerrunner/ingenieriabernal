@@ -6,8 +6,8 @@ const WA = '573024778910'
 const WA_MSG = encodeURIComponent('Hola, necesito consultoría en obras hidráulicas: bocatoma / canal / encauzamiento / protección fluvial')
 
 const seoConfig = {
-  title: 'Obras Hidráulicas Colombia: Bocatomas, Canales, Encauzamiento | BIC',
-  description: 'BIC diseña obras hidráulicas en Colombia: bocatomas, canales de conducción, encauzamientos, diques y protección fluvial. Modelación HEC-RAS 2D, memorias de cálculo firmadas COPNIA. Municipios, ESP, constructoras y proyectos regalías SGR.',
+  title: 'Obras Hidráulicas Colombia — Diseño y Construcción | BIC',
+  description: 'Diseño y consultoría de obras hidráulicas en Colombia. Acueductos, alcantarillados, PTAP. Ing. Bernal COPNIA. Caldas y Eje Cafetero.',
   keywords: [
     'obras hidráulicas Colombia',
     'diseño bocatoma Colombia',

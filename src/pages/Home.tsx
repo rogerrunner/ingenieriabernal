@@ -60,10 +60,10 @@ function StatCounter({ value, suffix, label }: { value: number, suffix: string, 
 
 export default function Home() {
   useEffect(() => {
-    document.title = 'Ingeniero Hidráulico Manizales — BIC · Ing. Bernal'
+    document.title = 'Ingeniero Hidráulico Colombia — BIC · Ing. Bernal COPNIA'
     const meta = document.querySelector('meta[name="description"]')
     if (meta) meta.setAttribute('content',
-      'Consultor hidráulico certificado COPNIA en Manizales. Diseño acueductos, PTAP, HEC-RAS, red CI NSR-10. Todo Colombia. Presupuesto sin costo.'
+      'Consultoría en diseño de acueductos, PTAR y obras hidráulicas en Colombia. COPNIA 17202-313228. Eje Cafetero y nacional. Solicita cotización.'
     )
   }, [])
 

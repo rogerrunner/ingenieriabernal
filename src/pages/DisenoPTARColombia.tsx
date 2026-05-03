@@ -7,8 +7,8 @@ const WA = '573024778910'
 const WA_MSG = encodeURIComponent('Hola, necesito cotizar el diseño de una PTAR en Colombia. ¿Pueden ayudarme?')
 
 const seoConfig = {
-  title: 'Diseño de PTAR en Colombia — Plantas de Tratamiento Aguas Residuales | BIC',
-  description: 'BIC diseña plantas de tratamiento de aguas residuales (PTAR) municipales e industriales en Colombia. RAS 2017, PSMV, vertimientos CAR. Memoria de cálculo COPNIA. Cotice en 24 horas.',
+  title: 'Diseño PTAR Colombia — Plantas Tratamiento Aguas | BIC',
+  description: 'Diseño de PTAR y sistemas de tratamiento de aguas residuales. RAS 2017, NSR-10. Caldas y Eje Cafetero. Ing. Bernal COPNIA. Cotiza sin costo.',
   keywords: [
     'diseño PTAR Colombia',
     'planta tratamiento aguas residuales Colombia',

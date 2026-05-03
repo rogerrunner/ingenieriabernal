@@ -6,8 +6,8 @@ const WA = '573024778910'
 const WA_MSG = encodeURIComponent('Hola, quiero cotizar Interventoría Técnica Hidráulica')
 
 const seoConfig = {
-  title: 'Interventoría Técnica Hidráulica Colombia | BIC Bernal Ingeniería Consultores',
-  description: 'Interventoría técnica de obras hidráulicas, acueductos, alcantarillados y redes hidrosanitarias para municipios, gobernaciones y entidades públicas en Colombia. COPNIA 17202-313228.',
+  title: 'Interventoría Obras Hidráulicas Colombia — COPNIA | BIC',
+  description: 'Interventoría técnica de obras de acueducto, PTAP y redes hidrosanitarias. Ing. Rogerio Bernal, COPNIA Caldas. Consulta gratis hoy.',
   keywords: [
     'interventoría técnica hidráulica Colombia',
     'interventoría obras acueducto alcantarillado',
