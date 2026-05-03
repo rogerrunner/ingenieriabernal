@@ -1,6 +1,7 @@
 import { useEffect } from 'react'
 import SEOHead from '@/components/SEOHead'
 import SpeakableSchema from '@/components/SpeakableSchema'
+import SchemaMarkup from '@/components/SchemaMarkup'
 import { BlueprintBg, ThinLine, SectionLabel, Btn, Section, Tag } from '@/components/ui'
 
 const WA = '573024778910'
@@ -127,12 +128,34 @@ const ARTICULOS = [
   { href: '/blog/bocatoma-caudal-riego-colombia', title: 'Bocatoma y Caudal para Riego en Colombia' },
 ]
 
+const FAQ_PTAP = [
+  {
+    q: '¿Cuánto cuesta el diseño de una PTAP en Colombia?',
+    a: 'El diseño de una PTAP para comunidades rurales oscila entre $12 millones y $35 millones COP según la capacidad de tratamiento y la tecnología seleccionada (filtración lenta, rápida, desinfección UV o cloración). BIC da presupuesto sin costo.',
+  },
+  {
+    q: '¿Qué es una PTAP y para qué sirve?',
+    a: 'Una PTAP (Planta de Tratamiento de Agua Potable) es el conjunto de procesos físicos, químicos y biológicos que convierten el agua cruda de una fuente hídrica en agua apta para consumo humano, cumpliendo los parámetros del Decreto 1575 de 2007.',
+  },
+  {
+    q: '¿Cuánto tiempo tarda el diseño de una PTAP?',
+    a: 'El diseño completo de una PTAP, incluyendo memoria de cálculo, planos y presupuesto APU, se entrega en 3 a 4 semanas desde la firma del contrato y recepción de los análisis de calidad de agua.',
+  },
+]
+
 export default function DisenoPTAPColombia() {
   useEffect(() => { window.scrollTo(0, 0) }, [])
 
   return (
     <>
       <SEOHead config={seoConfig} />
+      <SchemaMarkup
+        type="service"
+        serviceName="Diseño de PTAP — Planta de Tratamiento de Agua Potable"
+        serviceDesc={seoConfig.description}
+        serviceUrl="/diseno-ptap-colombia"
+        faqItems={FAQ_PTAP}
+      />
       <SpeakableSchema name="Diseño de PTAP en Colombia — Plantas de Tratamiento Agua Potable | BIC" />
 
       {/* ── HERO ── */}
