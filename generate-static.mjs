@@ -238,8 +238,20 @@ const routes = [
   { path: 'blog/modelacion-1d-2d-colombia', title: 'Modelación hidráulica 1D vs 2D en Colombia: guía técnica para tomar la decisión correcta | BIC', desc: 'Comparación técnica entre modelación hidráulica 1D (HEC-RAS, ISIS) y 2D (HEC-RAS 2D, MIKE FLOOD) para proyectos colombianos: criterios de selección, costos y resultados.', url: 'https://ingenieriabernal.co/blog/modelacion-1d-2d-colombia' },
 ];
 
+// Páginas con noindex (thin content — duplican contenido de páginas de mayor valor)
+const NOINDEX_PATHS = new Set([
+  'ingenieria-bogota', 'ingenieria-medellin', 'ingenieria-cali',
+  'ingenieria-manizales', 'ingenieria-bucaramanga', 'ingenieria-barranquilla',
+  'ingenieria-eje-cafetero', 'ingenieria-antioquia',
+]);
+
+// Páginas redirigidas (canonical apunta a la URL definitiva)
+const REDIRECT_PAGES = {
+  'servicios/acueducto-alcantarillado': 'https://ingenieriabernal.co/servicios/diseno-acueductos',
+};
+
 function injectMeta(html, r) {
-  return html
+  let result = html
     .replace(/<title>[^<]*<\/title>/, `<title>${r.title}</title>`)
     .replace(/<meta name="description" content="[^"]*"/, `<meta name="description" content="${r.desc}"`)
     .replace(/<link rel="canonical" href="[^"]*"/, `<link rel="canonical" href="${r.url}"`)
@@ -248,6 +260,26 @@ function injectMeta(html, r) {
     .replace(/<meta property="og:description" content="[^"]*"/, `<meta property="og:description" content="${r.desc}"`)
     .replace(/<meta name="twitter:title" content="[^"]*"/, `<meta name="twitter:title" content="${r.title}"`)
     .replace(/<meta name="twitter:description" content="[^"]*"/, `<meta name="twitter:description" content="${r.desc}"`);
+
+  // Noindex para páginas de thin content
+  if (NOINDEX_PATHS.has(r.path)) {
+    result = result.replace(/<meta name="robots" content="[^"]*"/, '<meta name="robots" content="noindex, follow"');
+  }
+
+  return result;
+}
+
+// Redireccionamientos: crear HTML con meta refresh + canonical a la URL definitiva
+for (const [fromPath, toUrl] of Object.entries(REDIRECT_PAGES)) {
+  const dir = join(distDir, fromPath);
+  mkdirSync(dir, { recursive: true });
+  const redirectHtml = baseHtml
+    .replace(/<title>[^<]*<\/title>/, `<title>Redirigiendo…</title>`)
+    .replace(/<meta name="robots" content="[^"]*"/, '<meta name="robots" content="noindex, follow"')
+    .replace(/<link rel="canonical" href="[^"]*"/, `<link rel="canonical" href="${toUrl}"`)
+    .replace('</head>', `  <meta http-equiv="refresh" content="0;url=${toUrl}">\n</head>`);
+  writeFileSync(join(dir, 'index.html'), redirectHtml, 'utf-8');
+  console.log(`  ↪️  /${fromPath} → ${toUrl}`);
 }
 
 for (const route of routes) {
@@ -255,7 +287,8 @@ for (const route of routes) {
   const dir = join(distDir, route.path);
   mkdirSync(dir, { recursive: true });
   writeFileSync(join(dir, 'index.html'), html, 'utf-8');
-  console.log(`  ✅ /${route.path}`);
+  const marker = NOINDEX_PATHS.has(route.path) ? '🚫' : '✅';
+  console.log(`  ${marker} /${route.path}`);
 }
 
 console.log(`\n✅ Pre-rendering completo: ${routes.length} rutas generadas.`);

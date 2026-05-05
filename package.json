@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "dev": "vite",
-    "build": "vite build && node generate-static.mjs && npx tsx generate-static-content.tsx",
+    "build": "vite build && node generate-static.mjs && npx tsx generate-static-content.tsx && npx tsx generate-ssr-pages.tsx",
     "preview": "vite preview"
   },
   "dependencies": {

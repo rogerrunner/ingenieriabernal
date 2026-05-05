@@ -1,4 +1,4 @@
-import { Route, Switch } from 'wouter'
+import { Route, Switch, Redirect } from 'wouter'
 import { useEffect, lazy, Suspense } from 'react'
 import { useLocation } from 'wouter'
 import Nav from './components/Nav'
@@ -302,7 +302,10 @@ export default function App() {
           <Route path="/servicios/estudio-inundabilidad-manizales" component={EstudioInundabilidadManizales} />
           <Route path="/servicios/estudios-hidrologicos" component={ServicioEstudiosHidrologicos} />
           <Route path="/servicios/modelacion-hec-ras" component={ServicioModelacionHecRas} />
-          <Route path="/servicios/acueducto-alcantarillado" component={ServicioAcueductoAlcantarillado} />
+          {/* Consolidación: acueducto-alcantarillado → diseno-acueductos (evita canibalización) */}
+          <Route path="/servicios/acueducto-alcantarillado">
+            <Redirect to="/servicios/diseno-acueductos" />
+          </Route>
           <Route path="/servicios/redes-hidrosanitarias" component={ServicioRedesHidrosanitarias} />
           <Route path="/servicios/sistemas-contra-incendio" component={ServicioSistemasContraIncendio} />
           <Route path="/servicios/interventoria" component={ServicioInterventoria} />

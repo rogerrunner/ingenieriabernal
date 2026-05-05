@@ -69,15 +69,10 @@
   <url><loc>https://ingenieriabernal.co/costa-caribe</loc><lastmod>2026-04-15</lastmod><changefreq>monthly</changefreq><priority>0.78</priority></url>
   <url><loc>https://ingenieriabernal.co/llanos-orinoquia</loc><lastmod>2026-04-15</lastmod><changefreq>monthly</changefreq><priority>0.78</priority></url>
 
-  <!-- Ciudades principales -->
-  <url><loc>https://ingenieriabernal.co/ingenieria-bogota</loc><lastmod>2026-04-15</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
-  <url><loc>https://ingenieriabernal.co/ingenieria-medellin</loc><lastmod>2026-04-15</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
-  <url><loc>https://ingenieriabernal.co/ingenieria-cali</loc><lastmod>2026-04-15</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
-  <url><loc>https://ingenieriabernal.co/ingenieria-manizales</loc><lastmod>2026-04-15</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
-  <url><loc>https://ingenieriabernal.co/ingenieria-bucaramanga</loc><lastmod>2026-04-15</lastmod><changefreq>monthly</changefreq><priority>0.88</priority></url>
-  <url><loc>https://ingenieriabernal.co/ingenieria-barranquilla</loc><lastmod>2026-04-15</lastmod><changefreq>monthly</changefreq><priority>0.88</priority></url>
-  <url><loc>https://ingenieriabernal.co/ingenieria-eje-cafetero</loc><lastmod>2026-04-15</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
-  <url><loc>https://ingenieriabernal.co/ingenieria-antioquia</loc><lastmod>2026-04-15</lastmod><changefreq>monthly</changefreq><priority>0.88</priority></url>
+  <!-- Ciudades principales — noindex: consolidadas en páginas de mayor valor -->
+  <!-- /ingenieria-bogota, /ingenieria-medellin, /ingenieria-cali, /ingenieria-manizales,
+       /ingenieria-bucaramanga, /ingenieria-barranquilla, /ingenieria-eje-cafetero,
+       /ingenieria-antioquia — removidas del sitemap (noindex por thin content) -->
 
   <!-- Páginas regionales SEO -->
   <url><loc>https://ingenieriabernal.co/regional/manizales</loc><lastmod>2026-04-15</lastmod><changefreq>monthly</changefreq><priority>0.92</priority></url>
@@ -89,7 +84,7 @@
   <url><loc>https://ingenieriabernal.co/servicios/estudio-inundabilidad-manizales</loc><lastmod>2026-04-15</lastmod><changefreq>monthly</changefreq><priority>0.90</priority></url>
   <url><loc>https://ingenieriabernal.co/servicios/estudios-hidrologicos</loc><lastmod>2026-04-15</lastmod><changefreq>monthly</changefreq><priority>0.88</priority></url>
   <url><loc>https://ingenieriabernal.co/servicios/modelacion-hec-ras</loc><lastmod>2026-04-24</lastmod><changefreq>monthly</changefreq><priority>0.91</priority></url>
-  <url><loc>https://ingenieriabernal.co/servicios/acueducto-alcantarillado</loc><lastmod>2026-04-15</lastmod><changefreq>monthly</changefreq><priority>0.88</priority></url>
+  <!-- /servicios/acueducto-alcantarillado — redirigida a /servicios/diseno-acueductos (consolidación) -->
   <url><loc>https://ingenieriabernal.co/servicios/redes-hidrosanitarias</loc><lastmod>2026-04-15</lastmod><changefreq>monthly</changefreq><priority>0.88</priority></url>
   <url><loc>https://ingenieriabernal.co/servicios/sistemas-contra-incendio</loc><lastmod>2026-05-03</lastmod><changefreq>monthly</changefreq><priority>0.88</priority></url>
   <url><loc>https://ingenieriabernal.co/servicios/interventoria</loc><lastmod>2026-04-15</lastmod><changefreq>monthly</changefreq><priority>0.88</priority></url>
@@ -238,5 +233,26 @@
   <url><loc>https://ingenieriabernal.co/blog/ronda-hidrica-colombia</loc><lastmod>2026-05-03</lastmod><changefreq>monthly</changefreq><priority>0.82</priority></url>
   <url><loc>https://ingenieriabernal.co/blog/aforo-caudales-colombia</loc><lastmod>2026-05-03</lastmod><changefreq>monthly</changefreq><priority>0.82</priority></url>
   <url><loc>https://ingenieriabernal.co/blog/modelacion-1d-2d-colombia</loc><lastmod>2026-05-03</lastmod><changefreq>monthly</changefreq><priority>0.82</priority></url>
+  <url><loc>https://ingenieriabernal.co/blog/indice-edificabilidad-colombia-calculo-ejemplo</loc><lastmod>2026-05-03</lastmod><changefreq>monthly</changefreq><priority>0.84</priority></url>
+  <url><loc>https://ingenieriabernal.co/blog/modelacion-hidraulica-pomca-colombia</loc><lastmod>2026-05-03</lastmod><changefreq>monthly</changefreq><priority>0.83</priority></url>
+  <url><loc>https://ingenieriabernal.co/blog/normas-tecnicas-diseno-acueductos-colombia-ras-2017</loc><lastmod>2026-05-03</lastmod><changefreq>monthly</changefreq><priority>0.83</priority></url>
+  <url><loc>https://ingenieriabernal.co/blog/presupuesto-diseno-ptap-veredal-colombia-2026</loc><lastmod>2026-05-03</lastmod><changefreq>monthly</changefreq><priority>0.83</priority></url>
+
+  <!-- Batch O — Week 3 articles: CI + ambiental -->
+  <url><loc>https://ingenieriabernal.co/blog/cuanto-cuesta-sistema-contra-incendios-nsr10-colombia</loc><lastmod>2026-05-04</lastmod><changefreq>monthly</changefreq><priority>0.85</priority></url>
+  <url><loc>https://ingenieriabernal.co/blog/tramites-licencia-ambiental-construccion-colombia</loc><lastmod>2026-05-04</lastmod><changefreq>monthly</changefreq><priority>0.84</priority></url>
+
+  <!-- Articles de articles1.tsx faltantes -->
+  <url><loc>https://ingenieriabernal.co/blog/cuando-se-requiere-hec-ras-colombia</loc><lastmod>2026-05-04</lastmod><changefreq>monthly</changefreq><priority>0.83</priority></url>
+  <url><loc>https://ingenieriabernal.co/blog/diseno-redes-hidrosanitarias-nsr-10-colombia</loc><lastmod>2026-05-04</lastmod><changefreq>monthly</changefreq><priority>0.83</priority></url>
+  <url><loc>https://ingenieriabernal.co/blog/estudio-amenaza-inundaciones-pot-colombia</loc><lastmod>2026-05-04</lastmod><changefreq>monthly</changefreq><priority>0.83</priority></url>
+
+  <!-- Páginas de servicio por ciudad faltantes -->
+  <url><loc>https://ingenieriabernal.co/servicios/bogota</loc><lastmod>2026-05-04</lastmod><changefreq>monthly</changefreq><priority>0.82</priority></url>
+  <url><loc>https://ingenieriabernal.co/servicios/medellin</loc><lastmod>2026-05-04</lastmod><changefreq>monthly</changefreq><priority>0.82</priority></url>
+  <url><loc>https://ingenieriabernal.co/servicios/cali</loc><lastmod>2026-05-04</lastmod><changefreq>monthly</changefreq><priority>0.80</priority></url>
+  <url><loc>https://ingenieriabernal.co/servicios/bucaramanga</loc><lastmod>2026-05-04</lastmod><changefreq>monthly</changefreq><priority>0.80</priority></url>
+  <url><loc>https://ingenieriabernal.co/servicios/ibague</loc><lastmod>2026-05-04</lastmod><changefreq>monthly</changefreq><priority>0.78</priority></url>
+  <url><loc>https://ingenieriabernal.co/calculadora-estudios-hidraulicos</loc><lastmod>2026-05-04</lastmod><changefreq>monthly</changefreq><priority>0.75</priority></url>
 
 </urlset>

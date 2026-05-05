@@ -34,6 +34,10 @@ export default function RegionalPage({ city, department, description, phone = DE
   useEffect(() => {
     document.title = `Ingeniería Hidráulica ${city} | BIC Ingeniería Consultores`
 
+    // Noindex: estas páginas tienen contenido genérico por ciudad → evitar canibalización SEO
+    const robotsMeta = document.querySelector('meta[name="robots"]')
+    if (robotsMeta) robotsMeta.setAttribute('content', 'noindex, follow')
+
     const meta = document.querySelector('meta[name="description"]')
     if (meta) meta.setAttribute('content', description)
 
