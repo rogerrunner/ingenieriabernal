@@ -20,23 +20,23 @@ const __dirname = dirname(fileURLToPath(import.meta.url))
 const distDir = join(__dirname, 'dist')
 
 // ─── Importar páginas de servicio ────────────────────────────────────────────
-// (imports directos — no lazy — para que renderToStaticMarkup funcione)
-import ServicioEstudiosHidrologicos from '@/pages/ServicioEstudiosHidrologicos'
-import ServicioModelacionHecRas from '@/pages/ServicioModelacionHecRas'
-import ServicioDisenoAcueductos from '@/pages/ServicioDisenoAcueductos'
-import ServicioRedesHidrosanitarias from '@/pages/ServicioRedesHidrosanitarias'
-import ServicioSistemasContraIncendio from '@/pages/ServicioSistemasContraIncendio'
-import ServicioInterventoria from '@/pages/ServicioInterventoria'
-import ServicioRegaliasMga from '@/pages/ServicioRegaliasMga'
-import ServicioGeotecnia from '@/pages/ServicioGeotecnia'
-import ServicioAmbiental from '@/pages/ServicioAmbiental'
-import ServicioContraIncendiosNSR10 from '@/pages/ServicioContraIncendiosNSR10'
-import IngenieriaHidraulicaColombia from '@/pages/IngenieriaHidraulicaColombia'
-import ModelacionHidraulicaColombia from '@/pages/ModelacionHidraulicaColombia'
-import GestionRiesgoHidrico from '@/pages/GestionRiesgoHidrico'
-import PlanParcialColombia from '@/pages/PlanParcialColombia'
-import BocatomasColombia from '@/pages/BocatomasColombia'
-import DisenoAlcantarilladoColombia from '@/pages/DisenoAlcantarilladoColombia'
+// (imports directos con rutas relativas — tsx no siempre resuelve @ alias)
+import ServicioEstudiosHidrologicos from './src/pages/ServicioEstudiosHidrologicos'
+import ServicioModelacionHecRas from './src/pages/ServicioModelacionHecRas'
+import ServicioDisenoAcueductos from './src/pages/ServicioDisenoAcueductos'
+import ServicioRedesHidrosanitarias from './src/pages/ServicioRedesHidrosanitarias'
+import ServicioSistemasContraIncendio from './src/pages/ServicioSistemasContraIncendio'
+import ServicioInterventoria from './src/pages/ServicioInterventoria'
+import ServicioRegaliasMga from './src/pages/ServicioRegaliasMga'
+import ServicioGeotecnia from './src/pages/ServicioGeotecnia'
+import ServicioAmbiental from './src/pages/ServicioAmbiental'
+import ServicioContraIncendiosNSR10 from './src/pages/ServicioContraIncendiosNSR10'
+import IngenieriaHidraulicaColombia from './src/pages/IngenieriaHidraulicaColombia'
+import ModelacionHidraulicaColombia from './src/pages/ModelacionHidraulicaColombia'
+import GestionRiesgoHidrico from './src/pages/GestionRiesgoHidrico'
+import PlanParcialColombia from './src/pages/PlanParcialColombia'
+import BocatomasColombia from './src/pages/BocatomasColombia'
+import DisenoAlcantarilladoColombia from './src/pages/DisenoAlcantarilladoColombia'
 
 // ─── Mapa de rutas a componentes ─────────────────────────────────────────────
 const PAGES: Record<string, React.ComponentType> = {
