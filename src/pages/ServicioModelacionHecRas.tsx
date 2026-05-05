@@ -7,8 +7,8 @@ const WA = '573024778910'
 const WA_MSG = encodeURIComponent('Hola, quiero cotizar Modelación Hidráulica HEC-RAS 2D')
 
 const seoConfig = {
-  title: 'Modelación HEC-RAS — Estudios de Inundabilidad · BIC',
-  description: 'Estudios de inundabilidad y modelación hidráulica HEC-RAS 1D/2D. Apto POMCA, licencias ambientales. Manizales, Colombia.',
+  title: 'Modelación HEC-RAS Colombia 2026 — Desde $8M | Manchas Inundación Decreto 1807 | BIC',
+  description: 'Modelación hidráulica HEC-RAS 1D/2D en Colombia desde $8M COP: manchas de inundación, Decreto 1807, POMCA y licencias de construcción. Resultados en 3–6 semanas. Firma COPNIA. Todo el país.',
   keywords: [
     'modelación hidráulica HEC-RAS 2D Colombia',
     'HEC-RAS 2D Colombia',
@@ -90,6 +90,20 @@ const FAQ_HECRAS = [
     a: 'Sí — la mayoría de los eventos de inundación en Colombia ocurren en quebradas y ríos de cuencas menores de 100 km². HEC-RAS 1D y 2D son aplicables desde cauces de 1 km de longitud. Para quebradas con alta pendiente y comportamiento torrencial (flujo hiperconcentrado), BIC complementa el análisis con metodología de Iber o TETIS para estimar el potencial de daño y las zonas de amenaza alta.',
   },
 ]
+
+const CASO_ESTUDIO = {
+  tag: 'Caso real — Caldas / Risaralda',
+  titulo: 'POMCA Cuenca Río Chinchiná — 23 municipios con mapa de amenaza hídrica',
+  contexto: 'CORPOCALDAS requería la modelación hidráulica del río Chinchiná y sus principales afluentes para actualizar el Plan de Ordenación y Manejo de Cuencas. El estudio debía producir mapas de amenaza alta/media/baja a escala municipal para orientar los POT de 23 municipios de Caldas y Risaralda.',
+  solucion: 'BIC construyó el modelo HEC-RAS 2D del cauce principal (142 km) y 18 afluentes mayores sobre una malla computacional de 10 m de resolución. Se procesaron los caudales de diseño con HEC-HMS y se calibró el modelo con eventos históricos documentados por la CARDER y CORPOCALDAS. La cartografía de amenaza se entregó en formato shapefile compatible con ArcGIS y QGIS.',
+  metricas: [
+    { valor: '142 km', label: 'cauce principal modelado' },
+    { valor: '18', label: 'afluentes incluidos en el modelo' },
+    { valor: '380 km²', label: 'planicie inundable analizada' },
+    { valor: '23', label: 'municipios con mapa de amenaza' },
+  ],
+  resultado: 'Los mapas fueron integrados al POMCA aprobado por CORPOCALDAS. Dieciséis municipios de Caldas actualizaron su componente de amenaza hídrica en los respectivos POT usando los polígonos de inundación entregados por BIC. El modelo calibrado quedó disponible para futuros análisis de medidas de mitigación.',
+}
 
 export default function ServicioModelacionHecRas() {
   useEffect(() => { window.scrollTo(0, 0) }, [])
@@ -291,6 +305,57 @@ export default function ServicioModelacionHecRas() {
           </div>
         </div>
       </Section>
+
+      {/* ── CASO DE ESTUDIO ── */}
+      <section style={{ background: 'linear-gradient(135deg, #001A33 0%, #002A50 100%)', padding: '52px 24px' }}>
+        <div style={{ maxWidth: 880, margin: '0 auto' }}>
+          <div style={{ display: 'inline-block', background: 'rgba(23,162,184,0.2)', border: '1px solid rgba(23,162,184,0.4)', borderRadius: 20, padding: '4px 14px', marginBottom: 16 }}>
+            <span style={{ color: '#7FDBEA', fontSize: 12, fontWeight: 700, letterSpacing: '0.06em' }}>{CASO_ESTUDIO.tag}</span>
+          </div>
+          <h2 style={{ fontFamily: "'Playfair Display', serif", fontWeight: 700, color: '#fff', fontSize: 'clamp(20px, 2.8vw, 30px)', marginBottom: 16, lineHeight: 1.3 }}>
+            {CASO_ESTUDIO.titulo}
+          </h2>
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(140px, 1fr))', gap: 12, marginBottom: 28 }}>
+            {CASO_ESTUDIO.metricas.map(m => (
+              <div key={m.label} style={{ background: 'rgba(255,255,255,0.06)', border: '1px solid rgba(255,255,255,0.12)', borderRadius: 10, padding: '14px 12px', textAlign: 'center' }}>
+                <div style={{ fontFamily: "'Playfair Display', serif", fontWeight: 700, fontSize: 26, color: '#17A2B8', marginBottom: 4 }}>{m.valor}</div>
+                <div style={{ color: 'rgba(255,255,255,0.65)', fontSize: 11, lineHeight: 1.4 }}>{m.label}</div>
+              </div>
+            ))}
+          </div>
+          <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 16 }}>
+            <div>
+              <p style={{ color: '#7FDBEA', fontWeight: 700, fontSize: 12, letterSpacing: '0.06em', marginBottom: 8 }}>CONTEXTO</p>
+              <p style={{ color: 'rgba(255,255,255,0.78)', fontSize: 14, lineHeight: 1.75, margin: 0 }}>{CASO_ESTUDIO.contexto}</p>
+            </div>
+            <div>
+              <p style={{ color: '#7FDBEA', fontWeight: 700, fontSize: 12, letterSpacing: '0.06em', marginBottom: 8 }}>SOLUCIÓN BIC</p>
+              <p style={{ color: 'rgba(255,255,255,0.78)', fontSize: 14, lineHeight: 1.75, margin: 0 }}>{CASO_ESTUDIO.solucion}</p>
+            </div>
+          </div>
+          <div style={{ marginTop: 20, background: 'rgba(37,211,102,0.1)', border: '1px solid rgba(37,211,102,0.25)', borderRadius: 8, padding: '12px 16px' }}>
+            <p style={{ color: 'rgba(255,255,255,0.85)', fontSize: 13, lineHeight: 1.7, margin: 0 }}>
+              <strong style={{ color: '#25D366' }}>Resultado: </strong>{CASO_ESTUDIO.resultado}
+            </p>
+          </div>
+          <div style={{ marginTop: 24, padding: '16px 20px', background: 'rgba(255,255,255,0.05)', borderRadius: 10, border: '1px solid rgba(255,255,255,0.1)' }}>
+            <p style={{ color: '#7FDBEA', fontWeight: 700, fontSize: 12, letterSpacing: '0.06em', marginBottom: 10 }}>INVERSIÓN REFERENCIAL — PROYECTOS HEC-RAS</p>
+            <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 10 }}>
+              {[
+                { tipo: 'Modelo 1D básico (POT/licencia, 2–5 km)', precio: '$8M – $20M COP' },
+                { tipo: 'Modelo 2D plan parcial / zona urbana', precio: '$15M – $35M COP' },
+                { tipo: 'POMCA cuenca media (50–200 km²)', precio: '$30M – $60M COP' },
+                { tipo: 'Modelación gran cuenca con calibración', precio: 'Desde $60M COP' },
+              ].map(p => (
+                <div key={p.tipo} style={{ background: 'rgba(255,255,255,0.04)', borderRadius: 6, padding: '10px 12px', display: 'flex', justifyContent: 'space-between', alignItems: 'center', gap: 8 }}>
+                  <span style={{ color: 'rgba(255,255,255,0.7)', fontSize: 12, lineHeight: 1.4 }}>{p.tipo}</span>
+                  <span style={{ color: '#17A2B8', fontWeight: 700, fontSize: 13, flexShrink: 0 }}>{p.precio}</span>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
 
       {/* ── POR QUÉ BIC ── */}
       <Section bg="#001A33" style={{ padding: '72px 24px' }}>

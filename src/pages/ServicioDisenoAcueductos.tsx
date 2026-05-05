@@ -7,8 +7,8 @@ const WA = '573024778910'
 const WA_MSG = encodeURIComponent('Hola, quiero cotizar Diseño de Acueducto — sistema de agua potable')
 
 const seoConfig = {
-  title: 'Diseño Acueductos Colombia 2026 — Ing. Bernal | BIC',
-  description: 'Diseño de sistemas de acueducto con RAS 2017 en Caldas y Eje Cafetero. COPNIA 17202-313228. Entrega en 4 semanas. Solicita tu cotización.',
+  title: 'Diseño de Acueductos Colombia 2026 — $15M a $45M | RAS 2017 y SGR | BIC',
+  description: 'Diseño de acueductos rurales y municipales en Colombia desde $15M COP: captación, PTAP, red de distribución conforme RAS 2017. Proyectos SGR aprobados. COPNIA vigente. Propuesta en 24 horas.',
   keywords: [
     'diseño acueducto Colombia',
     'diseño sistema acueducto municipal',
@@ -82,6 +82,20 @@ const FAQ_ACUEDUCTOS = [
     a: 'BIC entrega diseños de acueductos veredales en 3 a 4 semanas una vez firmado el contrato y recibidos los datos de campo (topografía y análisis de agua).',
   },
 ]
+
+const CASO_ESTUDIO = {
+  tag: 'Caso real — Municipio Eje Cafetero',
+  titulo: 'Acueducto veredal para 310 usuarios — SGR aprobado, 1.550 personas con agua potable',
+  contexto: 'Un municipio del Eje Cafetero carecía de agua potable en tres veredas rurales. La administración municipal necesitaba el diseño completo del sistema de acueducto para soportar la formulación del proyecto ante el OCAD del SGR. El diseño debía cumplir RAS 2017 y los lineamientos del DNP para agua y saneamiento.',
+  solucion: 'BIC diseñó el sistema completo: bocatoma lateral sobre la fuente superficial, desarenador, conducción de 3.8 km en HDPE, PTAP de filtración lenta con desinfección UV y cloración para 2.5 L/s, tanque de almacenamiento de 60 m³ y red de distribución ramificada de 4.6 km en PVC con 310 acometidas domiciliarias. El diseño fue complementado con el presupuesto de obra, programación y fichas técnicas para la MGA-Web del DNP.',
+  metricas: [
+    { valor: '310', label: 'usuarios directamente beneficiados' },
+    { valor: '1.550', label: 'personas con acceso a agua potable' },
+    { valor: '8.4 km', label: 'red total diseñada (conducción + distribución)' },
+    { valor: '$1.940M', label: 'COP — valor de obra ejecutada' },
+  ],
+  resultado: 'El proyecto fue aprobado por el OCAD Regional y financiado con recursos SGR por $1.940 millones COP. La obra fue ejecutada por contratista local en 8 meses. El acueducto opera actualmente con agua potable certificada por el IRCA municipal. BIC acompañó el proceso de formulación hasta la aprobación del OCAD sin costo adicional.',
+}
 
 export default function ServicioDisenoAcueductos() {
   useEffect(() => { window.scrollTo(0, 0) }, [])
@@ -211,6 +225,41 @@ export default function ServicioDisenoAcueductos() {
           </div>
         </div>
       </Section>
+
+      {/* ── CASO DE ESTUDIO ── */}
+      <section style={{ background: 'linear-gradient(135deg, #001A33 0%, #002A50 100%)', padding: '52px 24px' }}>
+        <div style={{ maxWidth: 880, margin: '0 auto' }}>
+          <div style={{ display: 'inline-block', background: 'rgba(23,162,184,0.2)', border: '1px solid rgba(23,162,184,0.4)', borderRadius: 20, padding: '4px 14px', marginBottom: 16 }}>
+            <span style={{ color: '#7FDBEA', fontSize: 12, fontWeight: 700, letterSpacing: '0.06em' }}>{CASO_ESTUDIO.tag}</span>
+          </div>
+          <h2 style={{ fontFamily: "'Playfair Display', serif", fontWeight: 700, color: '#fff', fontSize: 'clamp(20px, 2.8vw, 30px)', marginBottom: 16, lineHeight: 1.3 }}>
+            {CASO_ESTUDIO.titulo}
+          </h2>
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(140px, 1fr))', gap: 12, marginBottom: 28 }}>
+            {CASO_ESTUDIO.metricas.map(m => (
+              <div key={m.label} style={{ background: 'rgba(255,255,255,0.06)', border: '1px solid rgba(255,255,255,0.12)', borderRadius: 10, padding: '14px 12px', textAlign: 'center' }}>
+                <div style={{ fontFamily: "'Playfair Display', serif", fontWeight: 700, fontSize: 24, color: '#17A2B8', marginBottom: 4 }}>{m.valor}</div>
+                <div style={{ color: 'rgba(255,255,255,0.65)', fontSize: 11, lineHeight: 1.4 }}>{m.label}</div>
+              </div>
+            ))}
+          </div>
+          <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 16 }}>
+            <div>
+              <p style={{ color: '#7FDBEA', fontWeight: 700, fontSize: 12, letterSpacing: '0.06em', marginBottom: 8 }}>CONTEXTO</p>
+              <p style={{ color: 'rgba(255,255,255,0.78)', fontSize: 14, lineHeight: 1.75, margin: 0 }}>{CASO_ESTUDIO.contexto}</p>
+            </div>
+            <div>
+              <p style={{ color: '#7FDBEA', fontWeight: 700, fontSize: 12, letterSpacing: '0.06em', marginBottom: 8 }}>SOLUCIÓN BIC</p>
+              <p style={{ color: 'rgba(255,255,255,0.78)', fontSize: 14, lineHeight: 1.75, margin: 0 }}>{CASO_ESTUDIO.solucion}</p>
+            </div>
+          </div>
+          <div style={{ marginTop: 20, background: 'rgba(37,211,102,0.1)', border: '1px solid rgba(37,211,102,0.25)', borderRadius: 8, padding: '12px 16px' }}>
+            <p style={{ color: 'rgba(255,255,255,0.85)', fontSize: 13, lineHeight: 1.7, margin: 0 }}>
+              <strong style={{ color: '#25D366' }}>Resultado: </strong>{CASO_ESTUDIO.resultado}
+            </p>
+          </div>
+        </div>
+      </section>
 
       {/* ── POR QUÉ BIC ── */}
       <Section bg="#001A33" style={{ padding: '72px 24px' }}>

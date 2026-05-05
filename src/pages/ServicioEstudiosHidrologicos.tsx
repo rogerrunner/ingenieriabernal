@@ -7,8 +7,8 @@ const WA = '573024778910'
 const WA_MSG = encodeURIComponent('Hola, necesito un estudio hidrológico. ¿Pueden asesorarme sobre el alcance y el costo?')
 
 const seoConfig = {
-  title: 'Estudios Hidrológicos en Colombia — Caudales, IDF, HEC-HMS | BIC',
-  description: 'BIC realiza estudios hidrológicos en Colombia para permisos CAR, licencias de construcción, diseño de obras y proyectos SGR. Caudales de diseño, curvas IDF, HEC-HMS, Decreto 1807/2014. Firma COPNIA. Cotización en 24 horas.',
+  title: 'Estudios Hidrológicos Colombia 2026 — Desde $3.5M | Decreto 1807 y CAR | BIC',
+  description: 'Estudios hidrológicos en Colombia desde $3.5M COP: caudales de diseño, Decreto 1807 para licencias de construcción, concesiones CAR, POMCA y proyectos SGR. Firma COPNIA. Propuesta en 24 horas. Todo el país.',
   keywords: [
     'estudio hidrológico Colombia',
     'estudios hidrológicos para CAR Colombia',
@@ -147,6 +147,20 @@ const CLIENTES = [
   { tipo: 'Interventores y Revisores', desc: 'Revisión independiente de estudios presentados por terceros, validación de memorias.' },
 ]
 
+const CASO_ESTUDIO = {
+  tag: 'Caso real — Eje Cafetero',
+  titulo: 'Plan parcial en zona con amenaza hídrica — 340 viviendas aprobadas',
+  contexto: 'Una promotora inmobiliaria adquirió un predio de 22 ha en zona de expansión urbana en el Eje Cafetero. El curador urbano exigió un estudio de detalle Decreto 1807/2014 porque el predio colinda con una quebrada de alto régimen torrencial. Sin el estudio, el plan parcial no podía iniciar trámite.',
+  solucion: 'BIC realizó el levantamiento topobatimétrico del cauce (4.2 km), construyó el modelo hidrológico HEC-HMS con datos del IDEAM y el modelo hidráulico HEC-RAS 2D con malla de 5 m para delimitar la mancha de inundación para T=50 y T=100 años. El informe determinó que el 62% del predio quedaba fuera de la zona inundable.',
+  metricas: [
+    { valor: '22 ha', label: 'área total del predio analizado' },
+    { valor: '62%', label: 'del predio fuera de zona inundable' },
+    { valor: '3 semanas', label: 'desde contrato hasta entrega del informe' },
+    { valor: '340 viviendas', label: 'plan parcial aprobado por el curador' },
+  ],
+  resultado: 'El curador urbano aprobó el plan parcial con las condiciones del estudio. La promotora diseñó la urbanización respetando la zona de retiro del cauce delimitada por BIC. El informe fue aceptado sin observaciones en primera revisión.',
+}
+
 export default function ServicioEstudiosHidrologicos() {
   useEffect(() => { window.scrollTo(0, 0) }, [])
 
@@ -261,6 +275,41 @@ export default function ServicioEstudiosHidrologicos() {
           </div>
         </div>
       </Section>
+
+      {/* ── CASO DE ESTUDIO ── */}
+      <section style={{ background: 'linear-gradient(135deg, #001A33 0%, #002A50 100%)', padding: '52px 24px' }}>
+        <div style={{ maxWidth: 880, margin: '0 auto' }}>
+          <div style={{ display: 'inline-block', background: 'rgba(23,162,184,0.2)', border: '1px solid rgba(23,162,184,0.4)', borderRadius: 20, padding: '4px 14px', marginBottom: 16 }}>
+            <span style={{ color: '#7FDBEA', fontSize: 12, fontWeight: 700, letterSpacing: '0.06em' }}>{CASO_ESTUDIO.tag}</span>
+          </div>
+          <h2 style={{ fontFamily: "'Playfair Display', serif", fontWeight: 700, color: '#fff', fontSize: 'clamp(20px, 2.8vw, 30px)', marginBottom: 16, lineHeight: 1.3 }}>
+            {CASO_ESTUDIO.titulo}
+          </h2>
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(140px, 1fr))', gap: 12, marginBottom: 28 }}>
+            {CASO_ESTUDIO.metricas.map(m => (
+              <div key={m.label} style={{ background: 'rgba(255,255,255,0.06)', border: '1px solid rgba(255,255,255,0.12)', borderRadius: 10, padding: '14px 12px', textAlign: 'center' }}>
+                <div style={{ fontFamily: "'Playfair Display', serif", fontWeight: 700, fontSize: 26, color: '#17A2B8', marginBottom: 4 }}>{m.valor}</div>
+                <div style={{ color: 'rgba(255,255,255,0.65)', fontSize: 11, lineHeight: 1.4 }}>{m.label}</div>
+              </div>
+            ))}
+          </div>
+          <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 16 }}>
+            <div>
+              <p style={{ color: '#7FDBEA', fontWeight: 700, fontSize: 12, letterSpacing: '0.06em', marginBottom: 8 }}>CONTEXTO</p>
+              <p style={{ color: 'rgba(255,255,255,0.78)', fontSize: 14, lineHeight: 1.75, margin: 0 }}>{CASO_ESTUDIO.contexto}</p>
+            </div>
+            <div>
+              <p style={{ color: '#7FDBEA', fontWeight: 700, fontSize: 12, letterSpacing: '0.06em', marginBottom: 8 }}>SOLUCIÓN BIC</p>
+              <p style={{ color: 'rgba(255,255,255,0.78)', fontSize: 14, lineHeight: 1.75, margin: 0 }}>{CASO_ESTUDIO.solucion}</p>
+            </div>
+          </div>
+          <div style={{ marginTop: 20, background: 'rgba(37,211,102,0.1)', border: '1px solid rgba(37,211,102,0.25)', borderRadius: 8, padding: '12px 16px' }}>
+            <p style={{ color: 'rgba(255,255,255,0.85)', fontSize: 13, lineHeight: 1.7, margin: 0 }}>
+              <strong style={{ color: '#25D366' }}>Resultado: </strong>{CASO_ESTUDIO.resultado}
+            </p>
+          </div>
+        </div>
+      </section>
 
       {/* ── PROCESO ── */}
       <Section style={{ background: '#f8f9fa' }}>
@@ -413,6 +462,28 @@ export default function ServicioEstudiosHidrologicos() {
                 fontWeight: 600, fontSize: 14, textDecoration: 'none', lineHeight: 1.4,
               }}>
                 {s.label} →
+              </a>
+            ))}
+          </div>
+        </div>
+      </Section>
+
+      {/* ── ARTÍCULOS RELACIONADOS ── */}
+      <Section bg="#F8FAFC" style={{ padding: '48px 24px' }}>
+        <div style={{ maxWidth: 860, margin: '0 auto' }}>
+          <p style={{ fontFamily: "'Montserrat', sans-serif", fontWeight: 700, color: '#003B6F', fontSize: 13, letterSpacing: '0.08em', textTransform: 'uppercase', marginBottom: 20 }}>
+            Artículos técnicos relacionados
+          </p>
+          <div style={{ display: 'flex', gap: 16, flexWrap: 'wrap' }}>
+            {[
+              { href: '/blog/cuanto-cuesta-estudio-hidrologico', title: '¿Cuánto cuesta un estudio hidrológico en Colombia 2025?' },
+              { href: '/blog/estudio-hidrologico-colombia', title: '¿Qué es un estudio hidrológico y cuándo es obligatorio?' },
+              { href: '/blog/estudio-hidrologico-decreto-1807', title: 'Estudio hidrológico para el Decreto 1807: qué incluye' },
+              { href: '/blog/hec-ras-1d-vs-2d-colombia', title: 'HEC-RAS 1D vs 2D: ¿cuál elegir para su proyecto?' },
+            ].map(a => (
+              <a key={a.href} href={a.href} style={{ flex: '1 1 260px', background: '#fff', border: '1px solid #E2E8F0', borderRadius: 4, padding: '18px 20px', textDecoration: 'none' }}>
+                <span style={{ fontFamily: "'Playfair Display', serif", fontWeight: 700, color: '#003B6F', fontSize: 14, display: 'block', lineHeight: 1.35 }}>{a.title}</span>
+                <span style={{ fontFamily: "'Lato', sans-serif", color: '#17A2B8', fontSize: 12, marginTop: 8, display: 'block' }}>Leer artículo →</span>
               </a>
             ))}
           </div>
