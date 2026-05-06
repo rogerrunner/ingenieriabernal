@@ -32,6 +32,7 @@ const ServicioRedesHidrosanitarias = lazy(() => import('./pages/ServicioRedesHid
 const ServicioSistemasContraIncendio = lazy(() => import('./pages/ServicioSistemasContraIncendio'))
 const ServicioInterventoria = lazy(() => import('./pages/ServicioInterventoria'))
 const ServicioRegaliasMga = lazy(() => import('./pages/ServicioRegaliasMga'))
+const ConsultoriaMunicipiosSGR = lazy(() => import('./pages/ConsultoriaMunicipiosSGR'))
 const ServicioGeotecnia = lazy(() => import('./pages/ServicioGeotecnia'))
 const ServicioAmbiental = lazy(() => import('./pages/ServicioAmbiental'))
 const IngenieriaHidraulicaColombia = lazy(() => import('./pages/IngenieriaHidraulicaColombia'))
@@ -313,6 +314,7 @@ export default function App() {
           </Route>
           <Route path="/servicios/interventoria" component={ServicioInterventoria} />
           <Route path="/servicios/regalias-mga" component={ServicioRegaliasMga} />
+          <Route path="/consultoria-municipios-sgr" component={ConsultoriaMunicipiosSGR} />
           <Route path="/servicios/geotecnia" component={ServicioGeotecnia} />
           <Route path="/servicios/ambiental" component={ServicioAmbiental} />
           <Route path="/servicios/diseno-acueductos" component={ServicioDisenoAcueductos} />
