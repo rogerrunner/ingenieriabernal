@@ -216,6 +216,18 @@ export default function CityPage({ city, dept, intro, services, pageKey }: Props
     if (meta) meta.setAttribute('content',
       `BIC — Bernal Ingeniería Consultores en ${city}, ${dept}: hidráulica, geotecnia, arquitectura, ambiental y estructural. Director Rogerio Bernal Ríos — UNAL · COPNIA 17202-313228. 10+ años, Colombia.`
     )
+    // Canonical URL
+    let canonical = document.querySelector("link[rel='canonical']")
+    if (!canonical) {
+      canonical = document.createElement('link')
+      canonical.setAttribute('rel', 'canonical')
+      document.head.appendChild(canonical)
+    }
+    canonical.setAttribute('href', `https://ingenieriabernal.co${window.location.pathname}`)
+    return () => {
+      // Clean up canonical on unmount so it doesn't leak to next page
+      document.querySelector("link[rel='canonical']")?.remove()
+    }
   }, [city, dept])
 
   return (
@@ -293,7 +305,7 @@ export default function CityPage({ city, dept, intro, services, pageKey }: Props
         <div className="container">
           <SectionLabel>Equipo BIC en {city}</SectionLabel>
           <ThinLine />
-          <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '2.5rem', alignItems: 'center', marginTop: '1.5rem' }}>
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: '2.5rem', alignItems: 'center', marginTop: '1.5rem' }}>
             <div>
               <h2 style={{ fontFamily: "'Playfair Display', serif", fontWeight: 700, color: '#003B6F', fontSize: 'clamp(18px, 2.5vw, 24px)', marginBottom: '1rem' }}>
                 Un equipo completo.<br />Un solo interlocutor técnico.

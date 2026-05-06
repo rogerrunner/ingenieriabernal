@@ -2,6 +2,7 @@
 const articlesB: Record<string, {
   title: string; date: string; readTime: string; category: string
   metaDesc: string; keywords: string; body: React.ReactNode
+  faqItems?: Array<{ q: string; a: string }>
 }> = {
 
   'acueducto-rural-colombia': {
@@ -177,6 +178,24 @@ const articlesB: Record<string, {
       <p>El sistema de protección contra incendio debe ser aprobado por la Curaduría Urbana como parte del proceso de licencia de construcción, y posteriormente verificado por el Cuerpo de Bomberos local antes del permiso de ocupación. Los documentos requeridos incluyen: planos de la red con isométricos, memoria de cálculo hidráulico, ficha técnica de los rociadores, bomba y cisterna, y certificado de que los materiales cumplen con los estándares NFPA referenciados.</p>
       <p><strong>BIC diseña sistemas contra incendio con rigor hidráulico y cumplimiento total del NSR-10 Título J y las normas NFPA para edificaciones en Colombia.</strong> <strong>Contáctenos: ingenieriabernal.co | WhatsApp +57 302 477 8910</strong></p>
     </>,
+    faqItems: [
+      {
+        q: '¿Qué norma rige el diseño de sistemas contra incendio en Colombia?',
+        a: 'En Colombia, los sistemas contra incendio se diseñan bajo el NSR-10 Título J (Requisitos de Protección contra Incendios en Edificaciones), complementado con las normas NFPA: NFPA 13 para rociadores automáticos, NFPA 14 para sistemas de tuberías verticales e hidrantes, NFPA 20 para bombas contra incendio y NFPA 72 para detección y alarmas. El NSR-10 es el marco obligatorio; las normas NFPA se aplican como referencia técnica.'
+      },
+      {
+        q: '¿Cuánto cuesta un diseño de sistema contra incendio NSR-10 en Colombia?',
+        a: 'El costo varía según el área y complejidad del edificio. Para proyectos residenciales o comerciales de hasta 5.000 m², el rango típico es de $3 a $8 millones COP. Para edificios de mayor envergadura o sistemas con rociadores en toda la edificación, el diseño puede costar entre $8 y $20 millones. El diseño siempre incluye memoria de cálculo hidráulico firmada por ingeniero COPNIA.'
+      },
+      {
+        q: '¿Un sistema contra incendio NSR-10 requiere curaduría urbana?',
+        a: 'Sí. En Colombia, el sistema de protección contra incendio debe presentarse ante la Curaduría Urbana como parte del proceso de licencia de construcción. Los documentos requeridos incluyen planos de la red CI, isométricos, memoria de cálculo hidráulico, fichas técnicas de rociadores, bomba y cisterna, y certificación de materiales conforme a NFPA. Después, el Cuerpo de Bomberos verifica el sistema antes del permiso de ocupación.'
+      },
+      {
+        q: '¿Qué edificios en Colombia están obligados a tener sistema contra incendio?',
+        a: 'Según el NSR-10 Título J, están obligadas las edificaciones de más de 3 pisos o más de 500 m² de área construida, hospitales y clínicas, centros comerciales, hoteles, bodegas industriales, edificios de parqueo y cualquier edificación de uso público con más de 50 personas. Las pymes e industrias también deben cumplir cuando almacenan materiales peligrosos o tienen cargas de fuego significativas.'
+      },
+    ],
   },
 
   'interventoria-hidraulica-colombia': {

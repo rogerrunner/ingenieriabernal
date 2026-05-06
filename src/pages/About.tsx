@@ -36,6 +36,13 @@ export default function About() {
     if (meta) meta.setAttribute('content',
       'Rogerio Bernal Ríos — Director General de BIC. Ing. Civil Especialista en Hidráulica y Ambiental UNAL. COPNIA 17202-313228. 10+ años, Colombia, Ecuador y México.'
     )
+    let canonical = document.querySelector("link[rel='canonical']")
+    if (!canonical) {
+      canonical = document.createElement('link')
+      canonical.setAttribute('rel', 'canonical')
+      document.head.appendChild(canonical)
+    }
+    canonical.setAttribute('href', 'https://ingenieriabernal.co/sobre-mi')
   }, [])
 
   return (
@@ -43,7 +50,7 @@ export default function About() {
       {/* HERO */}
       <section style={{ background: 'linear-gradient(135deg, #002A50 0%, #003B6F 100%)', padding: '120px 40px 64px', position: 'relative', overflow: 'hidden' }}>
         <BlueprintBg opacity={0.07} />
-        <div className="container" style={{ position: 'relative', display: 'grid', gridTemplateColumns: '1.4fr 1fr', gap: 60, alignItems: 'center', maxWidth: 1000 }}>
+        <div className="container" style={{ position: 'relative', display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: 60, alignItems: 'center', maxWidth: 1000 }}>
           <div>
             <SectionLabel>Director General — BIC</SectionLabel>
             <h1 style={{ fontFamily: "'Playfair Display', serif", fontWeight: 900, color: '#fff', fontSize: 'clamp(28px, 4.5vw, 50px)', lineHeight: 1.15, margin: '12px 0 8px' }}>

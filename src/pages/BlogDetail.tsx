@@ -15,6 +15,7 @@ import articlesK from '../data/articlesK'
 import articlesL from '../data/articlesL'
 import articlesM from '../data/articlesM'
 import articlesN from '../data/articlesN'
+import articlesO from '../data/articlesO'
 import SEOHead from '../components/SEOHead'
 import { BlueprintBg, Tag, ThinLine, SectionLabel, Btn, Section } from '../components/ui'
 import { SEOConfig } from '../lib/seo'
@@ -25,6 +26,7 @@ const WA = '573024778910'
 const ARTICLES: Record<string, {
   title: string; date: string; readTime: string; category: string
   metaDesc: string; keywords: string; body: React.ReactNode
+  faqItems?: Array<{ q: string; a: string }>
 }> = {
 
     'suds-sistemas-drenaje-sostenible-colombia': {
@@ -310,6 +312,7 @@ const ARTICLES: Record<string, {
   ...articlesL,
   ...articlesM,
   ...articlesN,
+  ...articlesO,
 }
 
 // ─── SERVICE LINKS PER ARTICLE ──────────────────────────────────────────────
@@ -407,6 +410,9 @@ const SERVICE_LINKS: Record<string, { label: string; href: string }> = {
   'modelacion-hidraulica-pomca-colombia':              { label: 'Modelación Hidráulica HEC-RAS 2D',            href: '/servicios/modelacion-hec-ras' },
   'indice-edificabilidad-colombia-calculo-ejemplo':    { label: 'Plan Parcial Colombia',                       href: '/plan-parcial-colombia' },
   'normas-tecnicas-diseno-acueductos-colombia-ras-2017': { label: 'Diseño de Acueductos Colombia',            href: '/servicios/diseno-acueductos' },
+  // articlesO
+  'cuanto-cuesta-sistema-contra-incendios-nsr10-colombia': { label: 'Sistemas Contra Incendio NSR-10',        href: '/servicios/sistemas-contra-incendio' },
+  'tramites-licencia-ambiental-construccion-colombia': { label: 'Ingeniería Ambiental y Trámites CAR',        href: '/servicios/ambiental' },
 }
 
 // ─── LAYOUT COMPONENTS ──────────────────────────────────────────────────────
@@ -486,11 +492,32 @@ export default function BlogDetail() {
         },
       })
       document.head.appendChild(schema)
+
+      // FAQ JSON-LD (when article has faqItems)
+      const existingFaq = document.getElementById('blog-faq-schema')
+      if (existingFaq) existingFaq.remove()
+      if (article.faqItems && article.faqItems.length > 0) {
+        const faqSchema = document.createElement('script')
+        faqSchema.id = 'blog-faq-schema'
+        faqSchema.type = 'application/ld+json'
+        faqSchema.text = JSON.stringify({
+          '@context': 'https://schema.org',
+          '@type': 'FAQPage',
+          mainEntity: article.faqItems.map(({ q, a }) => ({
+            '@type': 'Question',
+            name: q,
+            acceptedAnswer: { '@type': 'Answer', text: a },
+          })),
+        })
+        document.head.appendChild(faqSchema)
+      }
     }
 
     return () => {
       const schema = document.getElementById('blog-schema')
       if (schema) schema.remove()
+      const faqSchema = document.getElementById('blog-faq-schema')
+      if (faqSchema) faqSchema.remove()
     }
   }, [article, slug])
 

@@ -4,6 +4,7 @@ import QuoteFormInline from '../components/QuoteFormInline'
 const articlesF: Record<string, {
   title: string; date: string; readTime: string; category: string
   metaDesc: string; keywords: string; body: React.ReactNode
+  faqItems?: Array<{ q: string; a: string }>
 }> = {
 
   'cuanto-cuesta-estudio-hidrologico': {
@@ -51,6 +52,24 @@ const articlesF: Record<string, {
       <p>Compare al menos dos o tres propuestas. Desconfíe de estudios a precios muy bajos (menos de $1.500.000 COP para un Decreto 1807) que probablemente no incluyen modelación hidráulica real ni planos de inundación. Una propuesta seria siempre especifica el alcance, los entregables y el plazo de entrega antes de firmar el contrato.</p>
       <p>En <strong>BIC – Bernal Ingeniería Consultores</strong>, elaboramos estudios hidrológicos para el Decreto 1807, concesiones de agua, diseño de acueductos y vías en todo Colombia. Nuestros estudios son aceptados por curadurías, CAR y ESP en el Eje Cafetero y el país. <strong>Solicite su propuesta en ingenieriabernal.co o al WhatsApp +57 302 477 8910.</strong> Entregamos propuesta técnica y económica en 24 horas hábiles sin costo.</p>
     </>,
+    faqItems: [
+      {
+        q: '¿Cuánto cuesta un estudio hidrológico básico en Colombia?',
+        a: 'Un estudio hidrológico básico (caudales de diseño, curvas IDF, HEC-HMS) para un proyecto pequeño cuesta entre $3 y $8 millones COP. Para cuencas de más de 100 km² o con modelación HEC-RAS 2D, el rango es de $8 a $25 millones. BIC entrega propuesta técnica y económica gratuita en 24 horas hábiles.'
+      },
+      {
+        q: '¿Qué incluye un estudio hidrológico para el Decreto 1807?',
+        a: 'Un estudio Decreto 1807 incluye: análisis de amenaza por inundación y movimientos en masa, modelación hidráulica HEC-RAS (1D o 2D), mapas de zonificación de amenaza, caudales de diseño para diferentes períodos de retorno (10, 25, 50, 100 años), y concepto técnico firmado por ingeniero COPNIA vigente. Es obligatorio para licencias de construcción en zonas de amenaza media o alta.'
+      },
+      {
+        q: '¿Cuánto tiempo tarda en entregarse un estudio hidrológico?',
+        a: 'El tiempo de entrega depende de la complejidad: estudios básicos tardan 5 a 10 días hábiles; estudios con modelación HEC-RAS 2D y mapas de inundación entre 10 y 20 días hábiles; proyectos de gran escala para SGR o POMCA pueden tomar 30 o más días. BIC siempre especifica el plazo en la propuesta antes de iniciar.'
+      },
+      {
+        q: '¿Puedo contratar un estudio hidrológico con una firma fuera de mi ciudad?',
+        a: 'Sí. BIC opera 100% en modalidad remota desde Manizales para proyectos en todo Colombia. Los estudios hidrológicos no requieren visita al sitio cuando se dispone de información cartográfica, hidrológica y de inundaciones actualizada. Las visitas al sitio se cotizan por separado cuando el cliente las requiere o cuando la zona no tiene cartografía suficiente.'
+      },
+    ],
   },
 
   'requisitos-ptar-licencia-construccion': {

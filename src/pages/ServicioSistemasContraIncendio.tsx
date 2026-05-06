@@ -6,8 +6,8 @@ const WA = '573024778910'
 const WA_MSG = encodeURIComponent('Hola, quiero cotizar Sistema Contra Incendio NSR-10')
 
 const seoConfig = {
-  title: 'Diseño Red Contra Incendio NSR-10 Manizales | Memorias de Cálculo · BIC',
-  description: 'Diseño hidráulico de sistemas CI conforme NSR-10 Título J y NFPA 13/14. Memorias de cálculo incluidas. Proyectos en Manizales y Eje Cafetero. Cotice gratis.',
+  title: 'Diseño Sistema Contra Incendio NSR-10 Colombia | Memorias de Cálculo · BIC',
+  description: 'Diseño hidráulico de sistemas contra incendios conforme NSR-10 Título J y NFPA 13/14 para proyectos en todo Colombia. Memorias de cálculo, rociadores y red de hidrantes. Cotice gratis.',
   keywords: [
     'sistemas contra incendio NSR-10 Colombia',
     'diseño sistema contra incendio Colombia',

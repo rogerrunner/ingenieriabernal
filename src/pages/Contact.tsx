@@ -36,6 +36,13 @@ export default function Contact() {
     if (meta) meta.setAttribute('content',
       'Contacta a BIC — Bernal Ingeniería Consultores. Consultoría integral: hidráulica, geotecnia, arquitectura, ambiental y estructural. Manizales y toda Colombia. WhatsApp: +57 302 477 8910.'
     )
+    let canonical = document.querySelector("link[rel='canonical']")
+    if (!canonical) {
+      canonical = document.createElement('link')
+      canonical.setAttribute('rel', 'canonical')
+      document.head.appendChild(canonical)
+    }
+    canonical.setAttribute('href', 'https://ingenieriabernal.co/contacto')
   }, [])
 
   const set = (k: string) => (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) =>

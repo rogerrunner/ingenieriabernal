@@ -8,8 +8,8 @@ const WA = '573024778910'
 const WA_MSG = encodeURIComponent('Hola, necesito cotizar el diseño de una PTAP en Colombia. ¿Pueden ayudarme?')
 
 const seoConfig = {
-  title: 'Diseño PTAP — Plantas Tratamiento Agua Potable · BIC',
-  description: 'Diseño de PTAP para comunidades rurales y municipios pequeños. Norma RAS 2017. Proyectos en Caldas desde 2010. Presupuesto sin costo.',
+  title: 'Diseño PTAP Colombia | Plantas de Tratamiento Agua Potable · BIC',
+  description: 'Diseño de PTAP para acueductos rurales y municipios en todo Colombia. Norma RAS 2017. Plantas convencionales, compactas y de filtración lenta. Presupuesto sin costo en 24 h.',
   keywords: [
     'diseño PTAP Colombia',
     'planta tratamiento agua potable Colombia',

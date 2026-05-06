@@ -43,4 +43,4 @@ Reemplazar foto placeholder: subir `foto-perfil.jpg` (400×500px mínimo) a la c
 
 ---
 
-**Contacto:** rbernalr01@gmail.com · +57 301 732 6991 · COPNIA 17202-313228
+**Contacto:** rogeriobernal921@gmail.com · +57 302 477 8910 · COPNIA 17202-313228

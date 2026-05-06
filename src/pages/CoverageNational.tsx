@@ -216,7 +216,7 @@ export default function CoverageNational() {
         <div className="container" style={{ maxWidth: 900 }}>
           <SectionLabel>La ventaja del consultor vs la constructora</SectionLabel>
           <ThinLine />
-          <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '2.5rem', marginTop: '1.5rem' }}>
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(260px, 1fr))', gap: '2.5rem', marginTop: '1.5rem' }}>
             <div style={{ background: '#fff', borderRadius: 12, padding: '1.8rem', border: '1px solid #deedf5' }}>
               <h3 style={{ fontFamily: "'Montserrat', sans-serif", color: '#475569', fontWeight: 700, fontSize: '0.9rem', marginBottom: '1rem', textTransform: 'uppercase', letterSpacing: '0.08em' }}>
                 Constructora local

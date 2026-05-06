@@ -44,6 +44,13 @@ export default function Team() {
     if (meta) meta.setAttribute('content',
       'Equipo multidisciplinario BIC: hidráulica, geotecnia, arquitectura, ambiental y estructural. Director Rogerio Bernal Ríos — UNAL · COPNIA 17202-313228. Manizales y Colombia.'
     )
+    let canonical = document.querySelector("link[rel='canonical']")
+    if (!canonical) {
+      canonical = document.createElement('link')
+      canonical.setAttribute('rel', 'canonical')
+      document.head.appendChild(canonical)
+    }
+    canonical.setAttribute('href', 'https://ingenieriabernal.co/equipo')
   }, [])
 
   return (

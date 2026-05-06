@@ -60,11 +60,18 @@ function StatCounter({ value, suffix, label }: { value: number, suffix: string, 
 
 export default function Home() {
   useEffect(() => {
-    document.title = 'Ingeniero Hidráulico Colombia — BIC · Ing. Bernal COPNIA'
+    document.title = 'BIC Ingeniería Hidráulica Colombia | Acueductos · HEC-RAS 2D · PTAR'
     const meta = document.querySelector('meta[name="description"]')
     if (meta) meta.setAttribute('content',
-      'Consultoría en diseño de acueductos, PTAR y obras hidráulicas en Colombia. COPNIA 17202-313228. Eje Cafetero y nacional. Solicita cotización.'
+      'Ingeniería hidráulica y ambiental en todo Colombia. Diseño de acueductos, modelación HEC-RAS 2D, PTAR/PTAP, gestión del riesgo y sistemas contra incendios. COPNIA. Cotización en 24 h.'
     )
+    let canonical = document.querySelector("link[rel='canonical']")
+    if (!canonical) {
+      canonical = document.createElement('link')
+      canonical.setAttribute('rel', 'canonical')
+      document.head.appendChild(canonical)
+    }
+    canonical.setAttribute('href', 'https://ingenieriabernal.co/')
   }, [])
 
   return (
@@ -101,14 +108,11 @@ export default function Home() {
           </div>
 
           <div style={{ display: 'flex', gap: 14, flexWrap: 'wrap' }}>
-            <Btn href={`https://wa.me/${WA}?text=${encodeURIComponent('Hola, necesito un estudio HEC-RAS. ¿Pueden cotizarme?')}`} style={{ background: '#25D366', color: '#fff' }}>
-              📱 Solicitar estudio HEC-RAS
+            <Btn href={`https://wa.me/${WA}?text=${encodeURIComponent('Hola, me gustaría una consulta con BIC sobre mi proyecto. ¿Podemos hablar?')}`} style={{ background: '#25D366', color: '#fff' }}>
+              📱 Consulta gratuita por WhatsApp
             </Btn>
-            <Btn href={`https://wa.me/${WA}?text=${encodeURIComponent('Hola, quiero cotizar un diseño hidrosanitario con BIC.')}`} variant="outline" dark>
-              💧 Cotizar diseño hidrosanitario
-            </Btn>
-            <Btn href={`https://wa.me/${WA}?text=${encodeURIComponent('Hola, necesito un análisis de riesgo hídrico. ¿Pueden ayudarme?')}`} variant="outline" dark>
-              ⚠️ Consultar análisis de riesgo
+            <Btn href="/contacto" variant="outline" dark>
+              ✉️ Describir mi proyecto
             </Btn>
           </div>
         </div>

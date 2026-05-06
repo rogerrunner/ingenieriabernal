@@ -202,7 +202,7 @@ export default function GestionRiesgoHidrico() {
             fontSize: 'clamp(22px, 4vw, 32px)', marginBottom: 8,
           }}>¿Qué es la Gestión del Riesgo Hídrico?</h2>
           <ThinLine mb={24} />
-          <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 32 }}>
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: 32 }}>
             <div>
               <p style={{ fontFamily: "'Lato', sans-serif", color: '#475569', fontSize: 15, lineHeight: 1.8, marginBottom: 16 }}>
                 El riesgo hídrico es la probabilidad de que una comunidad, una infraestructura o un proyecto

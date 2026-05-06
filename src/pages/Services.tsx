@@ -130,6 +130,13 @@ export default function Services() {
     if (meta) meta.setAttribute('content',
       'BIC ofrece consultoría integral: diseños hidrosanitarios NSR-10, modelación HEC-RAS 2D, acueducto y alcantarillado Res. 0330/2017, PTAP y PTAR, topobatimetría, gestión del riesgo, formulación regalías MGA-Web e interventoría. Manizales, Eje Cafetero y Colombia.'
     )
+    let canonical = document.querySelector("link[rel='canonical']")
+    if (!canonical) {
+      canonical = document.createElement('link')
+      canonical.setAttribute('rel', 'canonical')
+      document.head.appendChild(canonical)
+    }
+    canonical.setAttribute('href', 'https://ingenieriabernal.co/servicios')
   }, [])
 
   const svc = SERVICES.find(s => s.id === active) || SERVICES[0]

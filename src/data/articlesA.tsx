@@ -2,6 +2,7 @@
 const articlesA: Record<string, {
   title: string; date: string; readTime: string; category: string
   metaDesc: string; keywords: string; body: React.ReactNode
+  faqItems?: Array<{ q: string; a: string }>
 }> = {
 
   'estudio-hidrologico-colombia': {
@@ -44,6 +45,20 @@ const articlesA: Record<string, {
       <p>Desconfíe de propuestas de muy bajo costo que no especifican la metodología de análisis de frecuencias ni las estaciones del IDEAM que se consultarán. En hidrología, los resultados dependen directamente de la calidad de los datos y del criterio técnico en su interpretación.</p>
       <p><strong>¿Su municipio o proyecto requiere un estudio hidrológico certificado?</strong> BIC cuenta con más de 10 años de experiencia en cuencas del Eje Cafetero y ha elaborado estudios para proyectos de acueducto, alcantarillado, licencias ambientales y planes de ordenamiento en Caldas, Risaralda y Quindío. <strong>Contáctenos: ingenieriabernal.co | WhatsApp +57 302 477 8910</strong></p>
     </>,
+    faqItems: [
+      {
+        q: '¿Cuándo es obligatorio un estudio hidrológico en Colombia?',
+        a: 'En Colombia, un estudio hidrológico es obligatorio en varios casos: (1) para obtener licencia de construcción en predios en zonas de amenaza de inundación o movimientos en masa, según el Decreto 1807 de 2014; (2) para obtener concesión de agua ante la CAR correspondiente; (3) para el diseño de acueductos y sistemas de riego que capten de fuentes superficiales; (4) para proyectos de infraestructura como vías, puentes y urbanizaciones que requieren análisis de drenaje; (5) para formulación de proyectos ante el SGR (Sistema General de Regalías).'
+      },
+      {
+        q: '¿Qué información necesita una firma para realizar un estudio hidrológico?',
+        a: 'La información básica que necesita una firma consultora incluye: localización del predio o área del proyecto (coordenadas o shapefile), área de la cuenca tributaria, nombre de la corriente hídrica más cercana, descripción del proyecto (tipo de obra, área construida, uso del suelo) y el objetivo del estudio (concesión, licencia de construcción, diseño de alcantarillado, etc.). Con esta información, BIC puede entregar una propuesta técnica y económica en 24 horas hábiles.'
+      },
+      {
+        q: '¿Qué es el caudal de diseño y cómo se calcula en Colombia?',
+        a: 'El caudal de diseño es el valor de flujo máximo que una obra hidráulica debe manejar con seguridad para un período de retorno dado. En Colombia se calcula mediante métodos estadísticos de análisis de frecuencias (Gumbel, Pearson III, Log-Pearson III) a partir de datos históricos de estaciones del IDEAM, complementados con métodos de transformación lluvia-escorrentía como HEC-HMS o el método racional para cuencas pequeñas. Los períodos de retorno típicos son 10, 25, 50 y 100 años según el tipo de obra.'
+      },
+    ],
   },
 
   'crecientes-eje-cafetero-colombia': {
