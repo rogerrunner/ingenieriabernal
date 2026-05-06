@@ -4,6 +4,7 @@ import { useLocation } from 'wouter'
 import Nav from './components/Nav'
 import Footer from './components/Footer'
 import FloatingQuoteButton from './components/FloatingQuoteButton'
+import USWelcomeBanner from './components/USWelcomeBanner'
 import Home from './pages/Home'
 import NotFound from './pages/NotFound'
 
@@ -121,6 +122,7 @@ export default function App() {
     <>
       <ScrollToTop />
       <CanonicalManager />
+      <USWelcomeBanner />
       <Nav />
       <main>
         <Suspense fallback={<div style={{ minHeight: '100vh' }} />}>
@@ -357,10 +359,4 @@ export default function App() {
           <Route path="/blog/:slug" component={BlogDetail} />
           <Route component={NotFound} />
         </Switch>
-        </Suspense>
-      </main>
-      <Footer />
-      <FloatingQuoteButton />
-    </>
-  )
-}
+        </Suspe
