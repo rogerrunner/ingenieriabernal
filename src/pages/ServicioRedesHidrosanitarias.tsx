@@ -1,13 +1,14 @@
 import { useEffect } from 'react'
 import SEOHead from '@/components/SEOHead'
+import SchemaMarkup from '@/components/SchemaMarkup'
 import { BlueprintBg, ThinLine, SectionLabel, Btn, Section, Tag } from '@/components/ui'
 
 const WA = '573024778910'
-const WA_MSG = encodeURIComponent('Hola, quiero cotizar Redes Hidrosanitarias para Edificaciones')
+const WA_MSG = encodeURIComponent('Hola, necesito diseño de redes hidrosanitarias para mi proyecto. ¿Me asesoran sobre el alcance y el costo?')
 
 const seoConfig = {
-  title: 'Redes Hidrosanitarias para Edificaciones | BIC Bernal Ingeniería Consultores',
-  description: 'Diseño de redes hidrosanitarias para edificios residenciales, comerciales e industriales en Colombia. Agua fría, agua caliente, aguas residuales, aguas lluvias. NSR-10, RAS 2017. COPNIA 17202-313228.',
+  title: 'Redes Hidrosanitarias Colombia 2026 — Desde $3M | NSR-10 y RAS 2017 | BIC',
+  description: 'Diseño de redes hidrosanitarias para edificaciones en Colombia desde $3M COP: agua fría, agua caliente, aguas residuales y lluvias — NSR-10 y RAS 2017. Memorias de cálculo para licencia. Firma COPNIA. Propuesta en 24 h.',
   keywords: [
     'redes hidrosanitarias edificaciones Colombia',
     'diseño hidrosanitario edificios',
@@ -39,6 +40,12 @@ const PARA_QUIEN = [
   { tipo: 'Propietarios y desarrolladores de edificios comerciales', desc: 'Centros comerciales, hoteles, clínicas, colegios y edificios de oficinas que requieren redes hidrosanitarias con alta eficiencia y cumplimiento normativo.' },
   { tipo: 'Constructoras de proyectos industriales', desc: 'Naves industriales, bodegas de logística, parques empresariales y plantas de producción con demandas especiales de agua industrial y disposición de aguas residuales.' },
   { tipo: 'Profesionales que tramitan licencias de construcción', desc: 'Arquitectos, ingenieros y maestros de obra que necesitan la memoria hidrosanitaria firmada por especialista para completar el expediente de licencia.' },
+]
+
+const FAQ_RHS = [
+  { q: '¿Cuánto cuesta el diseño de redes hidrosanitarias en Colombia?', a: 'El costo depende del tipo de edificación y el número de pisos. Para una vivienda unifamiliar o dúplex, el diseño hidrosanitario completo (agua fría, agua caliente, aguas residuales y lluvias) oscila entre $3M y $6M COP. Para un edificio de 5–10 pisos, entre $6M y $15M COP. Para proyectos comerciales o industriales el rango es $10M–$25M COP. BIC entrega propuesta detallada en menos de 24 horas.' },
+  { q: '¿Qué normas rigen el diseño hidrosanitario en Colombia?', a: 'El diseño hidrosanitario en Colombia se rige por la NSR-10 Título D (instalaciones hidráulicas y sanitarias), el RAS 2017 (Reglamento Técnico del Sector de Agua Potable) y la NTC 1500 (Código Colombiano de Fontanería). Para redes de aguas lluvias urbanas aplica también el Manual de Drenaje Urbano del INVIAS. BIC aplica todas estas normas en sus diseños.' },
+  { q: '¿Qué incluye la memoria de cálculo hidrosanitaria?', a: 'La memoria de cálculo incluye: caudales de demanda por tipo de aparato sanitario, cálculo de redes de presión (agua fría y caliente), red de aguas residuales con pendientes y diámetros, sistema de aguas lluvias y canales, especificaciones técnicas de materiales y planos en AutoCAD con plantas y cortes. Es el documento exigido por las curadurías urbanas para la licencia de construcción.' },
 ]
 
 export default function ServicioRedesHidrosanitarias() {
@@ -150,6 +157,53 @@ export default function ServicioRedesHidrosanitarias() {
                 <p style={{
                   fontFamily: "'Lato', sans-serif", color: '#475569', fontSize: 14, lineHeight: 1.6,
                 }}>{p.desc}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </Section>
+
+      {/* ── INVERSIÓN REFERENCIAL ── */}
+      <Section bg="#fff" style={{ padding: '64px 24px' }}>
+        <div style={{ maxWidth: 900, margin: '0 auto' }}>
+          <SectionLabel>Inversión referencial</SectionLabel>
+          <h2 style={{ fontFamily: "'Playfair Display', serif", fontWeight: 700, color: '#001A33', fontSize: 'clamp(22px, 4vw, 30px)', marginBottom: 8 }}>
+            ¿Cuánto cuesta el diseño de redes hidrosanitarias?
+          </h2>
+          <ThinLine mb={32} />
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(220px, 1fr))', gap: 16, marginBottom: 20 }}>
+            {[
+              { cat: 'Vivienda unifamiliar', precio: '$3M – $6M COP', detalle: 'Agua fría, caliente, aguas residuales y lluvias. Hasta 3 pisos. Memorias y planos para licencia.' },
+              { cat: 'Edificio residencial 5–10 pisos', precio: '$6M – $15M COP', detalle: 'Redes completas, cisterna, sistema de bombeo. Planos AutoCAD para curaduría.' },
+              { cat: 'Comercial / industrial', precio: '$10M – $25M COP', detalle: 'Proyectos complejos: redes industriales, sistemas de reutilización de aguas lluvias, plantas de tratamiento.' },
+            ].map(r => (
+              <div key={r.cat} style={{ background: '#F8FAFC', border: '1px solid #E2E8F0', borderTop: '3px solid #17A2B8', borderRadius: 4, padding: '18px 20px' }}>
+                <p style={{ fontFamily: "'Montserrat', sans-serif", fontWeight: 700, color: '#001A33', fontSize: 13, marginBottom: 10 }}>{r.cat}</p>
+                <p style={{ fontFamily: "'Playfair Display', serif", fontWeight: 700, color: '#17A2B8', fontSize: 18, marginBottom: 8 }}>{r.precio}</p>
+                <p style={{ fontFamily: "'Lato', sans-serif", color: '#475569', fontSize: 13, lineHeight: 1.6, margin: 0 }}>{r.detalle}</p>
+              </div>
+            ))}
+          </div>
+          <p style={{ fontFamily: "'Lato', sans-serif", color: '#64748B', fontSize: 13, lineHeight: 1.6 }}>
+            Rangos referenciales. El precio final depende de la complejidad del sistema, el número de pisos y la norma aplicable. <strong>BIC envía propuesta técnica y económica en menos de 24 horas sin costo.</strong>
+          </p>
+          <div style={{ marginTop: 20 }}><Btn href={`https://wa.me/${WA}?text=${WA_MSG}`}>📱 Solicitar cotización gratuita</Btn></div>
+        </div>
+      </Section>
+
+      {/* ── FAQ ── */}
+      <Section bg="#F8FAFC" style={{ padding: '64px 24px' }}>
+        <div style={{ maxWidth: 860, margin: '0 auto' }}>
+          <SectionLabel>Preguntas frecuentes</SectionLabel>
+          <h2 style={{ fontFamily: "'Playfair Display', serif", fontWeight: 700, color: '#001A33', fontSize: 'clamp(22px, 4vw, 30px)', marginBottom: 8 }}>
+            Preguntas frecuentes sobre diseño hidrosanitario
+          </h2>
+          <ThinLine mb={36} />
+          <div style={{ display: 'flex', flexDirection: 'column', gap: 14 }}>
+            {FAQ_RHS.map((faq: any, i: number) => (
+              <div key={i} style={{ background: '#fff', border: '1px solid #E2E8F0', borderRadius: 4, padding: '20px 24px' }}>
+                <h3 style={{ fontFamily: "'Montserrat', sans-serif", fontWeight: 700, color: '#001A33', fontSize: 14, margin: '0 0 8px', lineHeight: 1.4 }}>{faq.q}</h3>
+                <p style={{ fontFamily: "'Lato', sans-serif", color: '#475569', fontSize: 14, lineHeight: 1.7, margin: 0 }}>{faq.a}</p>
               </div>
             ))}
           </div>

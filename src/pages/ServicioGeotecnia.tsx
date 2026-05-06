@@ -1,13 +1,14 @@
 import { useEffect } from 'react'
 import SEOHead from '@/components/SEOHead'
+import SchemaMarkup from '@/components/SchemaMarkup'
 import { BlueprintBg, ThinLine, SectionLabel, Btn, Section, Tag } from '@/components/ui'
 
 const WA = '573024778910'
-const WA_MSG = encodeURIComponent('Hola, quiero cotizar Estudios Geotécnicos y de Suelos')
+const WA_MSG = encodeURIComponent('Hola, quiero cotizar un Estudio Geotécnico / Estudio de Suelos. ¿Me pueden asesorar sobre el alcance y el costo?')
 
 const seoConfig = {
-  title: 'Estudios Geotécnicos y de Suelos Colombia | BIC Bernal Ingeniería Consultores',
-  description: 'Estudios geotécnicos y de suelos para constructoras, municipios y entidades públicas en Colombia. Capacidad portante, estabilidad de taludes, NSR-10 Título H. Especialista UNAL. COPNIA 17202-313228.',
+  title: 'Estudios Geotécnicos Colombia 2026 — Desde $8M | NSR-10 Título H | BIC',
+  description: 'Estudios geotécnicos y de suelos en Colombia desde $8M COP: capacidad portante, estabilidad de taludes, SPT, NSR-10 Título H — Categorías Baja, Media y Alta. Firma COPNIA. Propuesta en 24 horas. Eje Cafetero y todo el país.',
   keywords: [
     'estudios geotécnicos Colombia',
     'estudio de suelos Colombia',
@@ -24,6 +25,13 @@ const seoConfig = {
   ],
   canonical: 'https://ingenieriabernal.co/servicios/geotecnia',
 }
+
+const FAQ_GEO = [
+  { q: '¿Cuánto cuesta un estudio geotécnico en Colombia en 2026?', a: 'El costo depende de la categoría NSR-10 y del tamaño del proyecto. Para una vivienda unifamiliar o edificio hasta 5 pisos (Cat. Baja o Media), un estudio básico con apiques y laboratorio oscila entre $8M y $20M COP. Para edificios de 6–12 pisos o conjuntos con sótano, el rango sube a $20M–$45M COP. Para proyectos de Categoría Alta (>12 pisos, centros comerciales, hoteles) con exploración profunda, geofísica y diseño de pilotes, el rango es $80M–$120M COP. BIC envía propuesta detallada en menos de 24 horas sin costo.' },
+  { q: '¿Cuándo es obligatorio el estudio de suelos para licencia de construcción?', a: 'En Colombia es obligatorio para toda edificación que requiera licencia de construcción ante la curaduría urbana (NSR-10 Título H). Para viviendas unifamiliares en zonas de amenaza sísmica baja puede aplicarse el procedimiento simplificado. Para edificios de más de 2 pisos, proyectos de más de 500 m², o predios en zonas de ladera o amenaza sísmica media-alta, el estudio geotécnico completo es siempre exigido.' },
+  { q: '¿Qué diferencia hay entre Categoría Baja, Media y Alta en la NSR-10?', a: 'La NSR-10 clasifica las edificaciones según su altura, uso y zona sísmica. Categoría Baja: hasta 2 pisos en zonas de amenaza baja. Categoría Media: edificios hasta 5 pisos o usos especiales. Categoría Alta: edificios de 6 o más pisos, centros comerciales, hospitales, hoteles o cualquier edificación en zona de amenaza sísmica alta independiente de su altura. La categoría define la profundidad de exploración, el número de sondeos y los ensayos de laboratorio requeridos.' },
+  { q: '¿Cuánto tiempo toma un estudio geotécnico?', a: 'Para proyectos de Categoría Baja o Media, el tiempo total (campo + laboratorio + informe) es de 3 a 5 semanas. Para Categoría Alta con exploración profunda y geofísica, el proceso completo toma entre 6 y 10 semanas. BIC coordina directamente con el operador de campo y el laboratorio para optimizar tiempos sin sacrificar calidad.' },
+]
 
 const INCLUYE = [
   { icon: '🔩', titulo: 'Exploración del subsuelo', desc: 'Programación y supervisión de sondeos de penetración estándar (SPT), apiques, perforaciones con recuperación de muestras inalteradas y ensayos de penetración estática (CPT) según la NSR-10 Título H y el NSR-10 A.10.' },
@@ -47,6 +55,18 @@ export default function ServicioGeotecnia() {
   return (
     <>
       <SEOHead config={seoConfig} />
+      <SchemaMarkup
+        type="service"
+        serviceName="Estudios Geotécnicos y de Suelos — NSR-10 Título H"
+        serviceDesc={seoConfig.description}
+        serviceUrl="/servicios/geotecnia"
+        faqItems={FAQ_GEO}
+        priceSpecification={[
+          { name: 'Estudio geotécnico Cat. Baja/Media (hasta 5 pisos)', minPrice: 8000000, maxPrice: 20000000, description: 'Apiques, laboratorio básico, capacidad portante, cimentación superficial' },
+          { name: 'Estudio geotécnico Cat. Media-Alta (6–12 pisos)', minPrice: 20000000, maxPrice: 45000000, description: 'SPT, laboratorio completo, asentamientos, diseño de cimentación' },
+          { name: 'Estudio geotécnico Cat. Alta (>12 pisos / comercial)', minPrice: 80000000, maxPrice: 120000000, description: 'SPT/barreno, geofísica MASW/SEV, triaxiales, diseño de pilotes y muros' },
+        ]}
+      />
 
       {/* ── HERO ── */}
       <section style={{
@@ -150,6 +170,56 @@ export default function ServicioGeotecnia() {
                 <p style={{
                   fontFamily: "'Lato', sans-serif", color: '#475569', fontSize: 14, lineHeight: 1.6,
                 }}>{p.desc}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </Section>
+
+      {/* ── INVERSIÓN REFERENCIAL ── */}
+      <Section bg="#fff" style={{ padding: '64px 24px' }}>
+        <div style={{ maxWidth: 900, margin: '0 auto' }}>
+          <SectionLabel>Inversión referencial</SectionLabel>
+          <h2 style={{ fontFamily: "'Playfair Display', serif", fontWeight: 700, color: '#001A33', fontSize: 'clamp(22px, 4vw, 30px)', marginBottom: 8 }}>
+            ¿Cuánto cuesta un estudio geotécnico en Colombia?
+          </h2>
+          <ThinLine mb={32} />
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(240px, 1fr))', gap: 16, marginBottom: 20 }}>
+            {[
+              { cat: 'Cat. Baja / Media', sub: 'Hasta 5 pisos · Vivienda', precio: '$8M – $20M COP', detalle: 'Apiques, SPT básico, laboratorio estándar, capacidad portante, cimentación superficial.' },
+              { cat: 'Cat. Media / Alta', sub: '6–12 pisos · Conjuntos', precio: '$20M – $45M COP', detalle: 'SPT profundo, laboratorio completo, asentamientos, diseño de cimentación profunda.' },
+              { cat: 'Cat. Alta', sub: '>12 pisos · Comercial · SGR', precio: '$80M – $120M COP', detalle: 'Barreno, MASW, SEV, triaxiales CU, análisis sísmico, diseño pilotes y muros.' },
+            ].map(r => (
+              <div key={r.cat} style={{ background: '#F8FAFC', border: '1px solid #E2E8F0', borderTop: '3px solid #17A2B8', borderRadius: 4, padding: '20px 22px' }}>
+                <p style={{ fontFamily: "'Montserrat', sans-serif", fontWeight: 700, color: '#001A33', fontSize: 13, marginBottom: 2 }}>{r.cat}</p>
+                <p style={{ fontFamily: "'Lato', sans-serif", color: '#64748B', fontSize: 12, marginBottom: 12 }}>{r.sub}</p>
+                <p style={{ fontFamily: "'Playfair Display', serif", fontWeight: 700, color: '#17A2B8', fontSize: 20, marginBottom: 10 }}>{r.precio}</p>
+                <p style={{ fontFamily: "'Lato', sans-serif", color: '#475569', fontSize: 13, lineHeight: 1.6, margin: 0 }}>{r.detalle}</p>
+              </div>
+            ))}
+          </div>
+          <p style={{ fontFamily: "'Lato', sans-serif", color: '#64748B', fontSize: 13, lineHeight: 1.6, marginTop: 8 }}>
+            Rangos referenciales. El precio exacto depende de la categoría NSR-10, el número de sondeos requeridos, la profundidad de exploración y la complejidad del proyecto. <strong>BIC envía propuesta técnica y económica detallada en menos de 24 horas sin costo.</strong>
+          </p>
+          <div style={{ marginTop: 20 }}>
+            <Btn href={`https://wa.me/${WA}?text=${WA_MSG}`}>📱 Solicitar cotización gratuita en 24 h</Btn>
+          </div>
+        </div>
+      </Section>
+
+      {/* ── FAQ ── */}
+      <Section bg="#F8FAFC" style={{ padding: '64px 24px' }}>
+        <div style={{ maxWidth: 860, margin: '0 auto' }}>
+          <SectionLabel>Preguntas frecuentes</SectionLabel>
+          <h2 style={{ fontFamily: "'Playfair Display', serif", fontWeight: 700, color: '#001A33', fontSize: 'clamp(22px, 4vw, 30px)', marginBottom: 8 }}>
+            Preguntas frecuentes sobre estudios geotécnicos
+          </h2>
+          <ThinLine mb={36} />
+          <div style={{ display: 'flex', flexDirection: 'column', gap: 14 }}>
+            {FAQ_GEO.map((faq, i) => (
+              <div key={i} style={{ background: '#fff', border: '1px solid #E2E8F0', borderRadius: 4, padding: '20px 24px' }}>
+                <h3 style={{ fontFamily: "'Montserrat', sans-serif", fontWeight: 700, color: '#001A33', fontSize: 14, margin: '0 0 8px', lineHeight: 1.4 }}>{faq.q}</h3>
+                <p style={{ fontFamily: "'Lato', sans-serif", color: '#475569', fontSize: 14, lineHeight: 1.7, margin: 0 }}>{faq.a}</p>
               </div>
             ))}
           </div>

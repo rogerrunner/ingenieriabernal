@@ -7,8 +7,8 @@ const WA = '573024778910'
 const WA_MSG = encodeURIComponent('Hola, quiero cotizar Sistema Contra Incendios NSR-10 J y K')
 
 const seoConfig = {
-  title: 'Diseño Red Contra Incendio NSR-10 · Ing. Bernal — BIC',
-  description: 'Diseño hidráulico de redes CI conforme NSR-10 Título J, NFPA 13 y NFPA 14. Memorias de cálculo incluidas. Manizales · Eje Cafetero.',
+  title: 'Diseño Contra Incendios NSR-10 Colombia 2026 — Desde $4M | NFPA 13/14 | BIC',
+  description: 'Diseño hidráulico de sistemas contra incendios NSR-10 Título J y K en Colombia desde $4M COP: rociadores NFPA 13, hidrantes NFPA 14, memorias de cálculo para licencia. Modalidad remota. Propuesta en 24 h.',
   keywords: [
     'sistemas contra incendios NSR-10 Colombia',
     'diseño sistema contra incendio NSR-10',
@@ -244,6 +244,36 @@ export default function ServicioContraIncendiosNSR10() {
         </div>
       </Section>
 
+      {/* ── INVERSIÓN REFERENCIAL ── */}
+      <Section bg="#fff" style={{ padding: '64px 24px' }}>
+        <div style={{ maxWidth: 900, margin: '0 auto' }}>
+          <SectionLabel>Inversión referencial</SectionLabel>
+          <h2 style={{ fontFamily: "'Playfair Display', serif", fontWeight: 700, color: '#001A33', fontSize: 'clamp(22px, 4vw, 30px)', marginBottom: 8 }}>
+            ¿Cuánto cuesta el diseño de sistemas contra incendios NSR-10?
+          </h2>
+          <ThinLine mb={32} />
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(220px, 1fr))', gap: 16, marginBottom: 20 }}>
+            {[
+              { cat: 'Edificio residencial (4–10 pisos)', precio: '$4M – $10M COP', detalle: 'Red de hidrantes NFPA 14, rociadores en zonas de riesgo, memoria de cálculo para licencia.' },
+              { cat: 'Centro comercial / bodega logística', precio: '$10M – $25M COP', detalle: 'Sistema completo: rociadores NFPA 13, hidrantes, bomba CI NFPA 20, detección NFPA 72.' },
+              { cat: 'Proyecto industrial / hospitalario', precio: '$15M – $40M COP', detalle: 'Sistemas especiales de extinción, agentes limpios, riesgo extraordinario. Diseño a medida.' },
+            ].map(r => (
+              <div key={r.cat} style={{ background: '#F8FAFC', border: '1px solid #E2E8F0', borderTop: '3px solid #17A2B8', borderRadius: 4, padding: '18px 20px' }}>
+                <p style={{ fontFamily: "'Montserrat', sans-serif", fontWeight: 700, color: '#001A33', fontSize: 13, marginBottom: 10 }}>{r.cat}</p>
+                <p style={{ fontFamily: "'Playfair Display', serif", fontWeight: 700, color: '#17A2B8', fontSize: 18, marginBottom: 8 }}>{r.precio}</p>
+                <p style={{ fontFamily: "'Lato', sans-serif", color: '#475569', fontSize: 13, lineHeight: 1.6, margin: 0 }}>{r.detalle}</p>
+              </div>
+            ))}
+          </div>
+          <p style={{ fontFamily: "'Lato', sans-serif", color: '#64748B', fontSize: 13, lineHeight: 1.6 }}>
+            Rangos referenciales. El precio varía según el tipo de edificación, el área y el sistema exigido por la NSR-10. <strong>BIC responde con propuesta técnica y económica en menos de 24 horas sin costo.</strong>
+          </p>
+          <div style={{ marginTop: 20 }}>
+            <Btn href={`https://wa.me/${WA}?text=${WA_MSG}`}>📱 Cotizar sistema CI en 24 horas</Btn>
+          </div>
+        </div>
+      </Section>
+
       {/* ── FAQ ── */}
       <Section bg="#fff" style={{ padding: '72px 24px' }}>
         <div style={{ maxWidth: 860, margin: '0 auto' }}>
@@ -306,6 +336,10 @@ export default function ServicioContraIncendiosNSR10() {
             </a>
             <a href="/blog/costos-obras-hidraulicas-colombia-2026" style={{ flex: '1 1 260px', background: '#fff', border: '1px solid #E2E8F0', borderRadius: 4, padding: '18px 20px', textDecoration: 'none' }}>
               <span style={{ fontFamily: "'Playfair Display', serif", fontWeight: 700, color: '#003B6F', fontSize: 15, display: 'block', lineHeight: 1.3 }}>Costos de Obras Hidráulicas en Colombia 2026</span>
+              <span style={{ fontFamily: "'Lato', sans-serif", color: '#17A2B8', fontSize: 12, marginTop: 8, display: 'block' }}>Leer artículo →</span>
+            </a>
+            <a href="/blog/cuanto-cuesta-sistema-contra-incendios-nsr10-colombia" style={{ flex: '1 1 260px', background: '#fff', border: '1px solid #E2E8F0', borderRadius: 4, padding: '18px 20px', textDecoration: 'none' }}>
+              <span style={{ fontFamily: "'Playfair Display', serif", fontWeight: 700, color: '#003B6F', fontSize: 15, display: 'block', lineHeight: 1.3 }}>¿Cuánto cuesta un sistema contra incendios NSR-10 en Colombia?</span>
               <span style={{ fontFamily: "'Lato', sans-serif", color: '#17A2B8', fontSize: 12, marginTop: 8, display: 'block' }}>Leer artículo →</span>
             </a>
           </div>

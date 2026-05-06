@@ -1,13 +1,14 @@
 import { useEffect } from 'react'
 import SEOHead from '@/components/SEOHead'
+import SchemaMarkup from '@/components/SchemaMarkup'
 import { BlueprintBg, ThinLine, SectionLabel, Btn, Section, Tag } from '@/components/ui'
 
 const WA = '573024778910'
-const WA_MSG = encodeURIComponent('Hola, quiero cotizar Estudios Ambientales e IRCA')
+const WA_MSG = encodeURIComponent('Hola, necesito un Estudio Ambiental o trámite ante la CAR. ¿Me asesoran sobre el alcance y costo?')
 
 const seoConfig = {
-  title: 'Estudios Ambientales e IRCA Colombia | BIC Bernal Ingeniería Consultores',
-  description: 'Estudios ambientales, cálculo IRCA, permisos de vertimientos, concesiones de agua y trámites ante CAR para proyectos hídricos en Colombia. COPNIA 17202-313228. Eje Cafetero.',
+  title: 'Estudios Ambientales Colombia 2026 — Desde $3M | Permisos CAR y ANLA | BIC',
+  description: 'Estudios ambientales, cálculo IRCA, permisos de vertimientos y concesiones de agua ante CAR en Colombia desde $3M COP. Trámites ANLA. Firma COPNIA. Propuesta en 24 horas. Eje Cafetero y todo el país.',
   keywords: [
     'estudios ambientales Colombia',
     'IRCA Colombia agua potable',
@@ -39,6 +40,12 @@ const PARA_QUIEN = [
   { tipo: 'Constructoras y promotores de proyectos', desc: 'Permisos ambientales para obras lineales, plantas industriales, proyectos de vivienda con afectación de cauces y cualquier intervención que requiera manejo de agua o vertimientos.' },
   { tipo: 'Entidades públicas con proyectos de infraestructura', desc: 'PMA y trámites ambientales para obras de INVÍAS, gobernaciones, municipios y entidades del orden nacional que ejecutan proyectos hídricos o de infraestructura con componente ambiental.' },
   { tipo: 'Operadores de sistemas de agua y saneamiento', desc: 'Monitoreo de calidad del agua, elaboración de informes de calidad para la Secretaría de Salud, gestión del IRCA y formulación de planes de mejoramiento de la prestación del servicio.' },
+]
+
+const FAQ_AMB = [
+  { q: '¿Cuánto cuesta un permiso de vertimientos ante la CAR en Colombia?', a: 'El trámite de permiso de vertimientos incluye el diagnóstico de vertimiento, la caracterización de agua residual en laboratorio acreditado y la radicación ante la autoridad ambiental competente. El costo de consultoría para la elaboración del expediente oscila entre $4M y $12M COP según la complejidad del proyecto. BIC gestiona el proceso completo ante Corpocaldas, Carder, Cornare y otras CAR del país.' },
+  { q: '¿Qué es el IRCA y quién lo calcula?', a: 'El IRCA (Índice de Riesgo de la Calidad del Agua) es el indicador establecido en el Decreto 1575/2007 para evaluar la calidad del agua potable en Colombia. Debe ser calculado por el prestador del servicio de acueducto con base en análisis de laboratorio acreditado. BIC realiza el cálculo, la interpretación y la presentación ante el municipio o la Secretaría de Salud.' },
+  { q: '¿Qué estudios ambientales se requieren para un proyecto de construcción?', a: 'Depende del tipo y escala del proyecto. Para la mayoría de construcciones urbanas se requiere la gestión de permisos de vertimiento de aguas residuales y el plan de manejo ambiental de obra. Para proyectos con captaciones de agua superficial o subterránea se requiere concesión de aguas ante la CAR. Para proyectos de impacto regional (>1.000 viviendas, vías, plantas industriales) puede requerirse licencia ambiental ante la ANLA.' },
 ]
 
 export default function ServicioAmbiental() {
@@ -150,6 +157,54 @@ export default function ServicioAmbiental() {
                 <p style={{
                   fontFamily: "'Lato', sans-serif", color: '#475569', fontSize: 14, lineHeight: 1.6,
                 }}>{p.desc}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </Section>
+
+      {/* ── INVERSIÓN REFERENCIAL ── */}
+      <Section bg="#fff" style={{ padding: '64px 24px' }}>
+        <div style={{ maxWidth: 900, margin: '0 auto' }}>
+          <SectionLabel>Inversión referencial</SectionLabel>
+          <h2 style={{ fontFamily: "'Playfair Display', serif", fontWeight: 700, color: '#001A33', fontSize: 'clamp(22px, 4vw, 30px)', marginBottom: 8 }}>
+            ¿Cuánto cuestan los estudios y trámites ambientales?
+          </h2>
+          <ThinLine mb={32} />
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(220px, 1fr))', gap: 16, marginBottom: 20 }}>
+            {[
+              { cat: 'Concesiones y permisos CAR', precio: '$3M – $10M COP', detalle: 'Concesión de aguas superficiales o subterráneas. Permiso de vertimientos. Elaboración y radicación completa.' },
+              { cat: 'Plan de manejo ambiental de obra', precio: '$4M – $12M COP', detalle: 'Diagnóstico ambiental, fichas de manejo, seguimiento durante la construcción.' },
+              { cat: 'IRCA y calidad de agua potable', precio: '$2M – $6M COP', detalle: 'Cálculo IRCA, interpretación y reporte ante Secretaría de Salud y municipio.' },
+              { cat: 'EIA y licencia ambiental ANLA', precio: 'Desde $15M COP', detalle: 'Proyectos de gran escala. Estudios de línea base, zonificación ambiental y plan de manejo.' },
+            ].map(r => (
+              <div key={r.cat} style={{ background: '#F8FAFC', border: '1px solid #E2E8F0', borderTop: '3px solid #17A2B8', borderRadius: 4, padding: '18px 20px' }}>
+                <p style={{ fontFamily: "'Montserrat', sans-serif", fontWeight: 700, color: '#001A33', fontSize: 13, marginBottom: 10 }}>{r.cat}</p>
+                <p style={{ fontFamily: "'Playfair Display', serif", fontWeight: 700, color: '#17A2B8', fontSize: 18, marginBottom: 8 }}>{r.precio}</p>
+                <p style={{ fontFamily: "'Lato', sans-serif", color: '#475569', fontSize: 13, lineHeight: 1.6, margin: 0 }}>{r.detalle}</p>
+              </div>
+            ))}
+          </div>
+          <p style={{ fontFamily: "'Lato', sans-serif", color: '#64748B', fontSize: 13, lineHeight: 1.6 }}>
+            Rangos referenciales. El costo varía según la CAR competente, el tipo de trámite y la complejidad del proyecto. <strong>BIC envía propuesta detallada en menos de 24 horas sin costo.</strong>
+          </p>
+          <div style={{ marginTop: 20 }}><Btn href={`https://wa.me/${WA}?text=${WA_MSG}`}>📱 Solicitar cotización gratuita</Btn></div>
+        </div>
+      </Section>
+
+      {/* ── FAQ ── */}
+      <Section bg="#F8FAFC" style={{ padding: '64px 24px' }}>
+        <div style={{ maxWidth: 860, margin: '0 auto' }}>
+          <SectionLabel>Preguntas frecuentes</SectionLabel>
+          <h2 style={{ fontFamily: "'Playfair Display', serif", fontWeight: 700, color: '#001A33', fontSize: 'clamp(22px, 4vw, 30px)', marginBottom: 8 }}>
+            Preguntas frecuentes sobre estudios ambientales en Colombia
+          </h2>
+          <ThinLine mb={36} />
+          <div style={{ display: 'flex', flexDirection: 'column', gap: 14 }}>
+            {FAQ_AMB.map((faq: any, i: number) => (
+              <div key={i} style={{ background: '#fff', border: '1px solid #E2E8F0', borderRadius: 4, padding: '20px 24px' }}>
+                <h3 style={{ fontFamily: "'Montserrat', sans-serif", fontWeight: 700, color: '#001A33', fontSize: 14, margin: '0 0 8px', lineHeight: 1.4 }}>{faq.q}</h3>
+                <p style={{ fontFamily: "'Lato', sans-serif", color: '#475569', fontSize: 14, lineHeight: 1.7, margin: 0 }}>{faq.a}</p>
               </div>
             ))}
           </div>

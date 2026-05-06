@@ -1,13 +1,14 @@
 import { useEffect } from 'react'
 import SEOHead from '@/components/SEOHead'
+import SchemaMarkup from '@/components/SchemaMarkup'
 import { BlueprintBg, ThinLine, SectionLabel, Btn, Section, Tag } from '@/components/ui'
 
 const WA = '573024778910'
-const WA_MSG = encodeURIComponent('Hola, quiero cotizar Formulación de Proyectos de Regalías MGA-Web')
+const WA_MSG = encodeURIComponent('Hola, necesito formular un proyecto de regalías en MGA-Web. ¿Me asesoran sobre el proceso y el costo?')
 
 const seoConfig = {
-  title: 'Formulación Proyectos Regalías MGA-Web Colombia | BIC Bernal Ingeniería Consultores',
-  description: 'Formulación de proyectos de inversión para el Sistema General de Regalías (SGR) en MGA-Web. Agua potable, saneamiento básico, gestión del riesgo. COPNIA 17202-313228. Eje Cafetero.',
+  title: 'Formulación Proyectos Regalías MGA 2026 — Desde $8M | SGR Colombia | BIC',
+  description: 'Formulación de proyectos de inversión en MGA-Web para el SGR en Colombia desde $8M COP: agua potable, saneamiento básico, gestión del riesgo. Contrato verificable Alcaldía Puerto Boyacá. COPNIA vigente. Entrega en 15 días.',
   keywords: [
     'formulación proyectos regalías MGA-Web Colombia',
     'formulación proyectos SGR agua saneamiento',
@@ -39,6 +40,12 @@ const PARA_QUIEN = [
   { tipo: 'Gobernaciones y entidades departamentales', desc: 'Proyectos de mayor inversión para sistemas regionales de acueducto, optimización de PTAP/PTAR y planes departamentales de agua que requieren aprobación del OCAD Departamental.' },
   { tipo: 'Gestores de proyectos del SGR', desc: 'Profesionales contratados por alcaldías o gobernaciones que necesitan soporte técnico especializado en los componentes de agua, hidráulica y riesgo de proyectos MGA en tramitación.' },
   { tipo: 'Entidades públicas con regalías indirectas', desc: 'Universidades públicas, hospitales y otras entidades beneficiarias de regalías para ciencia, tecnología e innovación que formulan proyectos con componente hídrico o ambiental.' },
+]
+
+const FAQ_REG = [
+  { q: '¿Cuánto cuesta formular un proyecto en MGA-Web para el SGR?', a: 'El costo de la consultoría para formular un proyecto de inversión en MGA-Web depende de la complejidad del proyecto y el sector. Para proyectos de agua potable y saneamiento básico (acueductos y alcantarillados municipales), el rango típico es $8M–$20M COP. Proyectos más complejos (gestión del riesgo, vías terciarias con impacto hídrico) pueden superar los $25M COP. BIC entrega propuesta en 48 horas.' },
+  { q: '¿Qué proyectos se pueden financiar con regalías del SGR?', a: 'El Sistema General de Regalías financia proyectos de inversión en infraestructura, educación, salud, agua potable y saneamiento, vivienda, gestión del riesgo y competitividad. BIC se especializa en proyectos hídricos: diseño y construcción de acueductos rurales, alcantarillados, plantas de tratamiento (PTAP/PTAR), mitigación de riesgos hídricos y estudios de ordenamiento de cuencas.' },
+  { q: '¿Qué garantías ofrece BIC en la formulación de proyectos SGR?', a: 'BIC cuenta con proyectos formulados y aprobados verificables, incluyendo el contrato con la Alcaldía de Puerto Boyacá (contrato 621/2021). Cada proyecto se formula siguiendo la metodología MGA-Web del DNP y las guías sectoriales del Ministerio de Vivienda. BIC acompaña al municipio durante todo el ciclo: formulación, radicación, presentación ante el OCAD y ajustes hasta aprobación.' },
 ]
 
 export default function ServicioRegaliasMga() {
@@ -150,6 +157,53 @@ export default function ServicioRegaliasMga() {
                 <p style={{
                   fontFamily: "'Lato', sans-serif", color: '#475569', fontSize: 14, lineHeight: 1.6,
                 }}>{p.desc}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </Section>
+
+      {/* ── INVERSIÓN REFERENCIAL ── */}
+      <Section bg="#fff" style={{ padding: '64px 24px' }}>
+        <div style={{ maxWidth: 900, margin: '0 auto' }}>
+          <SectionLabel>Inversión referencial</SectionLabel>
+          <h2 style={{ fontFamily: "'Playfair Display', serif", fontWeight: 700, color: '#001A33', fontSize: 'clamp(22px, 4vw, 30px)', marginBottom: 8 }}>
+            ¿Cuánto cuesta formular un proyecto de regalías?
+          </h2>
+          <ThinLine mb={32} />
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(220px, 1fr))', gap: 16, marginBottom: 20 }}>
+            {[
+              { cat: 'Agua potable y saneamiento SGR', precio: '$8M – $20M COP', detalle: 'Formulación completa en MGA-Web para acueductos rurales o alcantarillados municipales.' },
+              { cat: 'Gestión del riesgo hídrico SGR', precio: '$12M – $28M COP', detalle: 'Proyectos de mitigación, obras de protección fluvial y planes de reducción del riesgo.' },
+              { cat: 'Acompañamiento hasta OCAD', precio: '$5M – $15M COP', detalle: 'Ajustes a observaciones, presentación ante el OCAD y seguimiento hasta aprobación.' },
+            ].map(r => (
+              <div key={r.cat} style={{ background: '#F8FAFC', border: '1px solid #E2E8F0', borderTop: '3px solid #17A2B8', borderRadius: 4, padding: '18px 20px' }}>
+                <p style={{ fontFamily: "'Montserrat', sans-serif", fontWeight: 700, color: '#001A33', fontSize: 13, marginBottom: 10 }}>{r.cat}</p>
+                <p style={{ fontFamily: "'Playfair Display', serif", fontWeight: 700, color: '#17A2B8', fontSize: 18, marginBottom: 8 }}>{r.precio}</p>
+                <p style={{ fontFamily: "'Lato', sans-serif", color: '#475569', fontSize: 13, lineHeight: 1.6, margin: 0 }}>{r.detalle}</p>
+              </div>
+            ))}
+          </div>
+          <p style={{ fontFamily: "'Lato', sans-serif", color: '#64748B', fontSize: 13, lineHeight: 1.6 }}>
+            Rangos referenciales. El costo exacto depende del sector, la complejidad del proyecto y el monto de la inversión. <strong>BIC responde con propuesta en 48 horas sin costo.</strong>
+          </p>
+          <div style={{ marginTop: 20 }}><Btn href={`https://wa.me/${WA}?text=${WA_MSG}`}>📱 Consultar disponibilidad y costos</Btn></div>
+        </div>
+      </Section>
+
+      {/* ── FAQ ── */}
+      <Section bg="#F8FAFC" style={{ padding: '64px 24px' }}>
+        <div style={{ maxWidth: 860, margin: '0 auto' }}>
+          <SectionLabel>Preguntas frecuentes</SectionLabel>
+          <h2 style={{ fontFamily: "'Playfair Display', serif", fontWeight: 700, color: '#001A33', fontSize: 'clamp(22px, 4vw, 30px)', marginBottom: 8 }}>
+            Preguntas frecuentes sobre formulación de proyectos regalías SGR
+          </h2>
+          <ThinLine mb={36} />
+          <div style={{ display: 'flex', flexDirection: 'column', gap: 14 }}>
+            {FAQ_REG.map((faq: any, i: number) => (
+              <div key={i} style={{ background: '#fff', border: '1px solid #E2E8F0', borderRadius: 4, padding: '20px 24px' }}>
+                <h3 style={{ fontFamily: "'Montserrat', sans-serif", fontWeight: 700, color: '#001A33', fontSize: 14, margin: '0 0 8px', lineHeight: 1.4 }}>{faq.q}</h3>
+                <p style={{ fontFamily: "'Lato', sans-serif", color: '#475569', fontSize: 14, lineHeight: 1.7, margin: 0 }}>{faq.a}</p>
               </div>
             ))}
           </div>

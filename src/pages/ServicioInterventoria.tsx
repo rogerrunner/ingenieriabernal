@@ -1,13 +1,14 @@
 import { useEffect } from 'react'
 import SEOHead from '@/components/SEOHead'
+import SchemaMarkup from '@/components/SchemaMarkup'
 import { BlueprintBg, ThinLine, SectionLabel, Btn, Section, Tag } from '@/components/ui'
 
 const WA = '573024778910'
-const WA_MSG = encodeURIComponent('Hola, quiero cotizar Interventoría Técnica Hidráulica')
+const WA_MSG = encodeURIComponent('Hola, necesito interventoría técnica para una obra hidráulica. ¿Me asesoran sobre el alcance y el costo?')
 
 const seoConfig = {
-  title: 'Interventoría Obras Hidráulicas Colombia — COPNIA | BIC',
-  description: 'Interventoría técnica de obras de acueducto, PTAP y redes hidrosanitarias. Ing. Rogerio Bernal, COPNIA Caldas. Consulta gratis hoy.',
+  title: 'Interventoría Obras Hidráulicas Colombia 2026 — Desde $5M | COPNIA | BIC',
+  description: 'Interventoría técnica de obras hidráulicas en Colombia desde $5M COP: acueductos, alcantarillados, PTAP y redes hidrosanitarias. Ing. Rogerio Bernal, COPNIA vigente. Informe ejecutivo semanal. Propuesta en 24 h.',
   keywords: [
     'interventoría técnica hidráulica Colombia',
     'interventoría obras acueducto alcantarillado',
@@ -39,6 +40,12 @@ const PARA_QUIEN = [
   { tipo: 'Gobernaciones y entidades departamentales', desc: 'Supervisión técnica de obras de mayor escala: sistemas regionales de acueducto, defensas fluviales, canales de riego y proyectos de infraestructura hídrica departamental.' },
   { tipo: 'Empresas de Servicios Públicos (ESP)', desc: 'Control técnico de contratos de expansión de redes, reposición de tuberías, optimización de PTAP/PTAR y obras de mejoramiento de la prestación del servicio.' },
   { tipo: 'Contratistas que requieren aval técnico externo', desc: 'Revisión independiente de diseños propios o del contratante antes de ejecutar obra, para evitar reprocesos y garantizar el recibo satisfactorio de la interventoría oficial.' },
+]
+
+const FAQ_INT = [
+  { q: '¿Cuánto cuesta la interventoría de obras hidráulicas en Colombia?', a: 'El costo de la interventoría depende del valor de la obra y su duración. Para contratos públicos, la interventoría suele representar entre el 5% y el 10% del valor del contrato de obra. Para una obra de $200M–$500M COP (acueducto rural o alcantarillado municipal), la interventoría técnica oscila entre $12M y $40M COP. Para obras menores o revisiones puntuales, los honorarios pueden partir desde $5M COP. BIC envía propuesta en 24 horas.' },
+  { q: '¿Qué hace un interventor técnico en una obra hidráulica?', a: 'El interventor técnico verifica que la obra se ejecute conforme a los diseños, las especificaciones técnicas y las normas colombianas (RAS 2017, NSR-10, INVIAS). Sus funciones incluyen: revisión de materiales, supervisión de pruebas hidrostáticas, control de avance físico y financiero, elaboración de actas de avance, verificación de ensayos de laboratorio y concepto técnico para pago de actas parciales y acta de recibo final.' },
+  { q: '¿Cuándo es obligatoria la interventoría en obras públicas de agua potable?', a: 'En Colombia, la Ley 1474 de 2011 (Estatuto Anticorrupción) y la Ley 80 de 1993 establecen que los contratos de obra pública superiores a 5.000 SMMLV (aproximadamente $720M COP en 2026) requieren obligatoriamente interventoría externa contratada de forma independiente. Para contratos menores, la entidad puede designar un supervisor interno, aunque muchas alcaldías prefieren contratar interventoría externa especializada para obras hidráulicas.' },
 ]
 
 export default function ServicioInterventoria() {
@@ -150,6 +157,53 @@ export default function ServicioInterventoria() {
                 <p style={{
                   fontFamily: "'Lato', sans-serif", color: '#475569', fontSize: 14, lineHeight: 1.6,
                 }}>{p.desc}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </Section>
+
+      {/* ── INVERSIÓN REFERENCIAL ── */}
+      <Section bg="#fff" style={{ padding: '64px 24px' }}>
+        <div style={{ maxWidth: 900, margin: '0 auto' }}>
+          <SectionLabel>Inversión referencial</SectionLabel>
+          <h2 style={{ fontFamily: "'Playfair Display', serif", fontWeight: 700, color: '#001A33', fontSize: 'clamp(22px, 4vw, 30px)', marginBottom: 8 }}>
+            ¿Cuánto cuesta la interventoría de obras hidráulicas?
+          </h2>
+          <ThinLine mb={32} />
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(220px, 1fr))', gap: 16, marginBottom: 20 }}>
+            {[
+              { cat: 'Revisión técnica / obra menor', precio: '$5M – $15M COP', detalle: 'Supervisión puntual, informes técnicos y actas de entrega. Ideal para contratos de hasta $200M COP.' },
+              { cat: 'Acueducto / alcantarillado municipal', precio: '$15M – $50M COP', detalle: 'Supervisión permanente en campo, informes semanales, control de materiales y pruebas hidrostáticas.' },
+              { cat: 'Contratos SGR (grandes obras)', precio: 'Desde $30M COP', detalle: 'Interventoría técnica, financiera y administrativa. Obligatoria para contratos > 5.000 SMMLV.' },
+            ].map(r => (
+              <div key={r.cat} style={{ background: '#F8FAFC', border: '1px solid #E2E8F0', borderTop: '3px solid #17A2B8', borderRadius: 4, padding: '18px 20px' }}>
+                <p style={{ fontFamily: "'Montserrat', sans-serif", fontWeight: 700, color: '#001A33', fontSize: 13, marginBottom: 10 }}>{r.cat}</p>
+                <p style={{ fontFamily: "'Playfair Display', serif", fontWeight: 700, color: '#17A2B8', fontSize: 18, marginBottom: 8 }}>{r.precio}</p>
+                <p style={{ fontFamily: "'Lato', sans-serif", color: '#475569', fontSize: 13, lineHeight: 1.6, margin: 0 }}>{r.detalle}</p>
+              </div>
+            ))}
+          </div>
+          <p style={{ fontFamily: "'Lato', sans-serif", color: '#64748B', fontSize: 13, lineHeight: 1.6 }}>
+            El costo de interventoría suele representar el 5–10% del valor del contrato de obra. <strong>BIC envía propuesta técnica y económica en menos de 24 horas sin costo.</strong>
+          </p>
+          <div style={{ marginTop: 20 }}><Btn href={`https://wa.me/${WA}?text=${WA_MSG}`}>📱 Solicitar cotización de interventoría</Btn></div>
+        </div>
+      </Section>
+
+      {/* ── FAQ ── */}
+      <Section bg="#F8FAFC" style={{ padding: '64px 24px' }}>
+        <div style={{ maxWidth: 860, margin: '0 auto' }}>
+          <SectionLabel>Preguntas frecuentes</SectionLabel>
+          <h2 style={{ fontFamily: "'Playfair Display', serif", fontWeight: 700, color: '#001A33', fontSize: 'clamp(22px, 4vw, 30px)', marginBottom: 8 }}>
+            Preguntas frecuentes sobre interventoría técnica
+          </h2>
+          <ThinLine mb={36} />
+          <div style={{ display: 'flex', flexDirection: 'column', gap: 14 }}>
+            {FAQ_INT.map((faq: any, i: number) => (
+              <div key={i} style={{ background: '#fff', border: '1px solid #E2E8F0', borderRadius: 4, padding: '20px 24px' }}>
+                <h3 style={{ fontFamily: "'Montserrat', sans-serif", fontWeight: 700, color: '#001A33', fontSize: 14, margin: '0 0 8px', lineHeight: 1.4 }}>{faq.q}</h3>
+                <p style={{ fontFamily: "'Lato', sans-serif", color: '#475569', fontSize: 14, lineHeight: 1.7, margin: 0 }}>{faq.a}</p>
               </div>
             ))}
           </div>

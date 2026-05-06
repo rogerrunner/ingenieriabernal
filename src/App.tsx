@@ -307,7 +307,10 @@ export default function App() {
             <Redirect to="/servicios/diseno-acueductos" />
           </Route>
           <Route path="/servicios/redes-hidrosanitarias" component={ServicioRedesHidrosanitarias} />
-          <Route path="/servicios/sistemas-contra-incendio" component={ServicioSistemasContraIncendio} />
+          {/* Consolidación: sistemas-contra-incendio → contra-incendios-nsr10 (evita canibalización) */}
+          <Route path="/servicios/sistemas-contra-incendio">
+            <Redirect to="/servicios/contra-incendios-nsr10" />
+          </Route>
           <Route path="/servicios/interventoria" component={ServicioInterventoria} />
           <Route path="/servicios/regalias-mga" component={ServicioRegaliasMga} />
           <Route path="/servicios/geotecnia" component={ServicioGeotecnia} />
