@@ -11,7 +11,7 @@ const articlesJ: Record<string, {
     date: 'Mayo 2026',
     readTime: '11 min',
     category: 'Agua y Saneamiento',
-    metaDesc: 'Guía de costos de PTAP en Colombia 2026: desde sistemas compactos hasta plantas municipales. Incluye rangos por capacidad, factores que afectan el precio y cómo presupuestar.',
+    metaDesc: 'Costos reales de PTAP en Colombia 2026: sistemas compactos y plantas municipales. Rangos por capacidad y factores que afectan el precio. Cotice hoy.',
     keywords: 'costo PTAP Colombia 2026, precio planta tratamiento agua potable Colombia, cuánto vale una PTAP, presupuesto PTAP municipio Colombia, RAS Título C costos Colombia',
     body: <>
       <p>Una de las preguntas más frecuentes que reciben alcaldes, secretarios de planeación y promotores de proyectos de agua potable en Colombia es: <em>¿cuánto cuesta una planta de tratamiento de agua potable (PTAP)?</em> La respuesta honesta es: depende, y depende de varios factores que explicaremos con detalle. Esta guía le da rangos reales de costos para 2026, los factores que determinan el precio final y cómo estructurar un presupuesto confiable para su proyecto.</p>

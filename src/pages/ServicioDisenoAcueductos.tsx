@@ -7,8 +7,8 @@ const WA = '573024778910'
 const WA_MSG = encodeURIComponent('Hola, quiero cotizar Diseño de Acueducto — sistema de agua potable')
 
 const seoConfig = {
-  title: 'Diseño de Acueductos Colombia 2026 — $15M a $45M | RAS 2017 y SGR | BIC',
-  description: 'Diseño de acueductos rurales y municipales en Colombia desde $15M COP: captación, PTAP, red de distribución conforme RAS 2017. Proyectos SGR aprobados. COPNIA vigente. Propuesta en 24 horas.',
+  title: 'Diseño de Acueductos y Sistemas de Bombeo | Colombia',
+  description: 'Diseño de acueductos rurales, municipales y sistemas de bombeo en Colombia. RAS 2017 y SGR. Calarcá, Cartago y Eje Cafetero. COPNIA vigente. Propuesta en 24 h.',
   keywords: [
     'diseño acueducto Colombia',
     'diseño sistema acueducto municipal',
@@ -97,8 +97,32 @@ const CASO_ESTUDIO = {
   resultado: 'Ambos proyectos son verificables. El contrato con la Alcaldía de Puerto Boyacá (Boyacá) puede consultarse en SECOP I. BIC cuenta con experiencia acreditada en diseño de acueductos rurales y formulación MGA-Web para el SGR en Caldas, Risaralda, Quindío y Boyacá.',
 }
 
+const SCHEMA = {
+  '@context': 'https://schema.org',
+  '@type': 'Service',
+  name: 'Diseño de Acueductos y Sistemas de Bombeo',
+  description: 'Diseño de acueductos rurales, municipales y sistemas de bombeo en Colombia. RAS 2017 y SGR. Calarcá, Cartago y Eje Cafetero.',
+  url: 'https://ingenieriabernal.co/servicios/diseno-acueductos',
+  serviceType: 'Diseño de Acueductos y Sistemas de Bombeo',
+  areaServed: ['Colombia', 'Eje Cafetero', 'Quindío', 'Valle del Cauca', 'Caldas', 'Risaralda'],
+  provider: {
+    '@type': 'LocalBusiness',
+    name: 'Bernal Ingeniería Consultores — BIC',
+    url: 'https://ingenieriabernal.co',
+    telephone: '+573024778910',
+  },
+}
+
 export default function ServicioDisenoAcueductos() {
-  useEffect(() => { window.scrollTo(0, 0) }, [])
+  useEffect(() => {
+    window.scrollTo(0, 0)
+    const s = document.createElement('script')
+    s.type = 'application/ld+json'
+    s.id = 'schema-diseno-acueductos'
+    s.textContent = JSON.stringify(SCHEMA)
+    document.head.appendChild(s)
+    return () => { document.getElementById('schema-diseno-acueductos')?.remove() }
+  }, [])
 
   return (
     <>

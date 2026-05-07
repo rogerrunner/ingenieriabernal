@@ -179,7 +179,7 @@ const articlesN: Record<string, {
     date: 'Mayo 2026',
     readTime: '8 min',
     category: 'PTAP / Costos',
-    metaDesc: 'Rangos de precio reales para diseño de PTAP veredal en Colombia 2026. Qué factores determinan el costo, tabla por capacidad (500–2000 personas), qué incluye el diseño completo y fondos disponibles SGR y MinVivienda.',
+    metaDesc: 'Precio del diseño de PTAP veredal en Colombia 2026. Tabla por capacidad (500–2000 personas), qué incluye el diseño y fondos disponibles SGR y MinVivienda.',
     keywords: 'cuánto cuesta diseño PTAP veredal Colombia, precio diseño planta tratamiento agua potable rural, costo PTAP rural Colombia 2026',
     body: <>
       <p>Una de las preguntas más frecuentes que reciben los consultores de ingeniería hidráulica en Colombia es: <em>"¿Cuánto vale el diseño de una planta de tratamiento de agua potable para nuestra vereda?"</em> La respuesta honesta es que el precio varía enormemente — desde $12 millones hasta más de $60 millones de pesos — dependiendo de factores que muchos proponentes desconocen. Este artículo explica esos factores y entrega rangos reales basados en proyectos ejecutados en el Eje Cafetero y otras regiones de Colombia.</p>

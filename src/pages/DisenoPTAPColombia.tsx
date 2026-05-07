@@ -8,8 +8,8 @@ const WA = '573024778910'
 const WA_MSG = encodeURIComponent('Hola, necesito cotizar el diseño de una PTAP en Colombia. ¿Pueden ayudarme?')
 
 const seoConfig = {
-  title: 'Diseño PTAP Colombia — RAS 2017, COPNIA | BIC',
-  description: 'Diseño de PTAP para municipios en Colombia. RAS 2017, Res. 0330/2017. Memoria COPNIA, trámite CAR. Eje Cafetero y todo el país. Presupuesto sin costo.',
+  title: 'Diseño Plantas de Tratamiento de Agua | Ingeniería Bernal',
+  description: 'Diseñamos PTAP para municipios, veredas y proyectos en Colombia y Ecuador. RAS 2017, Res. 0330/2017. Eje Cafetero y todo el país. Cotice sin costo.',
   keywords: [
     'diseño PTAP Colombia',
     'planta tratamiento agua potable Colombia',
@@ -143,8 +143,32 @@ const FAQ_PTAP = [
   },
 ]
 
+const SCHEMA = {
+  '@context': 'https://schema.org',
+  '@type': 'Service',
+  name: 'Diseño de Plantas de Tratamiento de Agua Potable (PTAP)',
+  description: 'Diseño de PTAP para municipios, veredas y proyectos en Colombia y Ecuador. RAS 2017, Res. 0330/2017. Eje Cafetero y todo el país.',
+  url: 'https://ingenieriabernal.co/diseno-ptap-colombia',
+  serviceType: 'Diseño de Plantas de Tratamiento de Agua Potable',
+  areaServed: ['Colombia', 'Ecuador', 'Eje Cafetero', 'Caldas', 'Risaralda', 'Quindío'],
+  provider: {
+    '@type': 'LocalBusiness',
+    name: 'Bernal Ingeniería Consultores — BIC',
+    url: 'https://ingenieriabernal.co',
+    telephone: '+573024778910',
+  },
+}
+
 export default function DisenoPTAPColombia() {
-  useEffect(() => { window.scrollTo(0, 0) }, [])
+  useEffect(() => {
+    window.scrollTo(0, 0)
+    const s = document.createElement('script')
+    s.type = 'application/ld+json'
+    s.id = 'schema-ptap-colombia'
+    s.textContent = JSON.stringify(SCHEMA)
+    document.head.appendChild(s)
+    return () => { document.getElementById('schema-ptap-colombia')?.remove() }
+  }, [])
 
   return (
     <>

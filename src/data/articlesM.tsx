@@ -11,7 +11,7 @@ const articlesM: Record<string, {
     date: 'Mayo 2026',
     readTime: '7 min',
     category: 'Acueductos / Normativa',
-    metaDesc: 'Guía práctica para calcular QMD, QMMD y QMH en acueductos rurales según el RAS 2017. Fórmulas, factores de mayoración y ejemplos de cálculo para ingenieros y técnicos.',
+    metaDesc: 'Cómo calcular QMD, QMMD y QMH en acueductos rurales según el RAS 2017. Fórmulas, factores de mayoración K1 y K2, y ejemplo numérico completo.',
     keywords: 'caudales de diseño acueducto RAS 2017, QMD QMMD QMH acueducto rural, factores mayoración K1 K2 Colombia',
     body: <>
       <p>Antes de dimensionar una sola tubería, un tanque o una planta de tratamiento, el diseñador de un acueducto necesita responder una pregunta fundamental: ¿cuánta agua debe suministrar el sistema? La respuesta no es una cifra única sino tres caudales interdependientes — QMD, QMMD y QMH — que el <strong>RAS 2017 (Resolución 0330)</strong> define con precisión. Calcularlos mal es la causa más frecuente de acueductos sobredimensionados (que desperdician inversión) o subdimensionados (que fallan en las horas pico). Este artículo explica el procedimiento completo con un ejemplo numérico aplicable a cualquier sistema veredal.</p>

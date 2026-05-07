@@ -168,6 +168,134 @@ const articlesO: Record<string, {
     ],
   },
 
+  'estudio-suelos-torres-edificios-colombia': {
+    title: 'Estudio de Suelos para Torres y Edificios en Colombia: ¿Qué incluye y cuánto cuesta?',
+    date: 'Mayo 2026',
+    readTime: '9 min',
+    category: 'Geotecnia',
+    metaDesc: 'Qué incluye el estudio de suelos para torres y edificios en Colombia. NSR-10 Título H, tipos de ensayos, plazos y costos reales 2026. Pereira, Eje Cafetero y todo el país.',
+    keywords: 'estudio de suelos torres Colombia, estudio geotécnico edificios Colombia, NSR-10 Título H estudio suelos, costo estudio suelos torre apartamentos Pereira, estudio suelos licencia construcción Colombia',
+    body: <>
+      <p>Antes de tramitar la licencia de construcción de una torre de apartamentos o un edificio de más de dos pisos en Colombia, la Curaduría Urbana exige un <strong>estudio de suelos</strong> firmado por un ingeniero civil o geotecnista con tarjeta profesional COPNIA vigente. Este documento no es un trámite burocrático: es la base técnica sobre la que se diseña la cimentación, y cuando se omite o se hace a la ligera, las consecuencias aparecen en obra — asentamientos diferenciales, grietas estructurales, o peor, inestabilidad total del edificio.</p>
+
+      <h2>¿Qué exige la NSR-10 Título H para edificios?</h2>
+      <p>La <strong>NSR-10 Título H — Estudios Geotécnicos</strong> es la norma que regula los estudios de suelos en Colombia. Sus requisitos mínimos varían según la magnitud del proyecto:</p>
+      <ul>
+        <li><strong>Edificios hasta 3 pisos sobre terreno plano:</strong> apiques (calicatas) de al menos 1.5 m de profundidad, ensayos de clasificación de suelos, capacidad portante y recomendación de cimentación.</li>
+        <li><strong>Torres de 4 a 6 pisos:</strong> sondeos SPT (Standard Penetration Test) a profundidades de 8 a 12 m, ensayos de laboratorio (granulometría, Atterberg, compresión simple) y análisis de asentamientos.</li>
+        <li><strong>Torres de 7 pisos o más:</strong> sondeos SPT profundos (15–25 m), análisis de asentamientos con consolidación, evaluación sísmica del sitio (microzonificación) y, en muchos casos, recomendación de pilotes u otros sistemas de cimentación profunda.</li>
+      </ul>
+      <p>En ciudades como Pereira y Manizales — ubicadas en zona de amenaza sísmica alta — la NSR-10 exige además un <strong>estudio de microzonificación sísmica o análisis de sitio</strong> para proyectos estratégicos o de alta ocupación.</p>
+
+      <h2>Tipos de exploración del subsuelo</h2>
+      <p>El estudio de suelos para un edificio urbano en Colombia combina normalmente:</p>
+      <ul>
+        <li><strong>Apiques o calicatas:</strong> excavaciones manuales de 1 a 3 m que permiten inspeccionar directamente el suelo y tomar muestras inalteradas. Son el primer paso para proyectos de poca altura.</li>
+        <li><strong>Sondeos SPT:</strong> perforaciones con recuperación de muestras cada 1.5 m usando un martillo estándar de 63.5 kg y una caída de 76 cm. El número de golpes (N-SPT) es el parámetro más usado en Colombia para estimar la densidad relativa de arenas y la resistencia al corte de arcillas.</li>
+        <li><strong>Ensayos de laboratorio:</strong> sobre las muestras recuperadas se realizan ensayos de clasificación (USCS), límites de Atterberg, granulometría, humedad natural, densidad, compresión simple y, en suelos blandos, consolidación y corte directo.</li>
+        <li><strong>Nivel freático:</strong> la profundidad del nivel freático es crítica para el diseño de sótanos, excavaciones y cimentaciones sobre arcillas blandas. Se mide in-situ con piezómetros o durante la perforación.</li>
+      </ul>
+
+      <h2>¿Qué contiene el informe geotécnico?</h2>
+      <p>El informe que recibe el contratista y que se presenta ante la Curaduría incluye:</p>
+      <ol>
+        <li>Descripción del perfil estratigráfico del subsuelo.</li>
+        <li>Resultados de todos los ensayos in-situ y de laboratorio.</li>
+        <li>Parámetros de resistencia y deformabilidad para el diseño.</li>
+        <li>Capacidad portante admisible para el tipo de cimentación recomendado.</li>
+        <li>Estimación de asentamientos totales y diferenciales.</li>
+        <li>Recomendaciones de cimentación: zapatas corridas, losa de cimentación, pilotes o caissons.</li>
+        <li>Firma y sello del ingeniero especialista COPNIA.</li>
+      </ol>
+
+      <h2>Plazos y costos reales en 2026</h2>
+      <p>El plazo de ejecución de un estudio de suelos para una torre en el Eje Cafetero varía entre <strong>2 y 4 semanas</strong>: 3 a 5 días de exploración de campo, 1 a 2 semanas de ensayos de laboratorio y 3 a 5 días de elaboración del informe. Los rangos de costo en 2026 para Colombia son:</p>
+      <ul>
+        <li><strong>Estudio básico (edificio 3–5 pisos, 2 sondeos SPT):</strong> desde $5 millones hasta $12 millones COP.</li>
+        <li><strong>Estudio completo (torre 6–12 pisos, 3–5 sondeos SPT + laboratorio):</strong> desde $15 millones hasta $35 millones COP.</li>
+        <li><strong>Estudio con pilotes (torre alta o suelos blandos):</strong> desde $25 millones hasta $60 millones COP, incluyendo la recomendación de cimentación profunda.</li>
+      </ul>
+      <p>En proyectos en Pereira, Armenia y Manizales, BIC elabora presupuestos personalizados en menos de 24 horas. Primera consulta sin costo.</p>
+
+      <p><strong>¿Necesita el estudio de suelos para su proyecto en el Eje Cafetero o cualquier ciudad de Colombia?</strong> Contáctenos hoy: <strong>ingenieriabernal.co | WhatsApp +57 302 477 8910</strong></p>
+    </>,
+    faqItems: [
+      {
+        q: '¿Es obligatorio el estudio de suelos para obtener la licencia de construcción?',
+        a: 'Sí. La NSR-10 Título H establece la obligatoriedad del estudio geotécnico para cualquier edificación que requiera licencia de construcción, excepto para obras muy sencillas de un piso en terreno conocido. La Curaduría Urbana exige el informe geotécnico firmado por ingeniero COPNIA como parte del expediente de licencia.'
+      },
+      {
+        q: '¿Cuántos sondeos SPT necesita mi torre de apartamentos?',
+        a: 'El número mínimo de sondeos depende del área del lote y la variabilidad del suelo. La NSR-10 Tabla H.3-1 establece que para áreas entre 200 y 1000 m², son necesarios al menos 2 sondeos; para áreas mayores de 1000 m², al menos 3 sondeos. En terrenos con variabilidad geológica conocida o rellenos, se recomienda un sondeo adicional para cada 500 m² de área.'
+      },
+      {
+        q: '¿El estudio de suelos sirve para toda la vida del edificio?',
+        a: 'El informe geotécnico tiene vigencia indefinida para el proyecto para el que fue elaborado, siempre que no hayan cambiado las condiciones del subsuelo (rellenos nuevos, excavaciones vecinas, inundaciones). Si el proyecto cambia de uso, se aumenta el número de pisos o hay modificaciones estructurales significativas, es recomendable actualizar el estudio.'
+      },
+    ],
+  },
+
+  'diseno-aguas-lluvias-cubierta-colegio-colombia': {
+    title: 'Diseño de Aguas Lluvias para Cubiertas de Colegios y Edificios en Colombia',
+    date: 'Mayo 2026',
+    readTime: '8 min',
+    category: 'Redes Hidrosanitarias',
+    metaDesc: 'Cómo se diseña el sistema de aguas lluvias para cubiertas de colegios y edificios en Colombia. RAS 2017, NSR-10, curvas IDF y método Racional. Manizales y Eje Cafetero.',
+    keywords: 'diseño aguas lluvias cubierta colegio Colombia, sistema aguas lluvia cubierta edificio NSR-10, bajantes aguas lluvias colegio Colombia, diseño hidrosanitario colegios Colombia, aguas lluvias cubierta Manizales',
+    body: <>
+      <p>El diseño del sistema de aguas lluvias de un colegio o edificio educativo en Colombia tiene particularidades que lo diferencian de una vivienda o edificio residencial: cubiertas de gran área, múltiples patios internos, alturas variables y requisitos de la Curaduría Urbana y el Ministerio de Educación Nacional. Un sistema mal diseñado — con bajantes subdimensionados o canales con pendientes insuficientes — se convierte en fuente de filtraciones, daños en aulas y accidentes por acumulación de agua en zonas de circulación de niños.</p>
+
+      <h2>Normas aplicables al diseño de aguas lluvias en colegios</h2>
+      <p>En Colombia, el diseño de redes de aguas lluvias para edificaciones educativas se rige principalmente por:</p>
+      <ul>
+        <li><strong>RAS 2017 — Título D (Sistemas de Drenaje Pluvial):</strong> define los criterios de diseño para redes pluviales internas, incluidas las cubiertas de edificios.</li>
+        <li><strong>NSR-10 Título I (Instalaciones Hidráulicas):</strong> regula los diámetros mínimos de bajantes de aguas lluvias, las pendientes de canales y canaletas, y la conexión con la red pública.</li>
+        <li><strong>Norma Técnica Colombiana NTC 1500:</strong> código de fontanería para edificaciones, con criterios de diseño para sistemas internos de agua lluvia.</li>
+        <li><strong>Normativa de la empresa de servicios públicos local (ESP):</strong> cada municipio puede tener requisitos específicos para la conexión a la red de alcantarillado pluvial o para sistemas de retención.</li>
+      </ul>
+
+      <h2>Metodología de cálculo: del área de cubierta al diámetro de bajante</h2>
+      <p>El proceso de diseño sigue estos pasos:</p>
+      <ol>
+        <li><strong>Determinación de la intensidad de diseño:</strong> se usan las curvas Intensidad-Duración-Frecuencia (IDF) del IDEAM para la estación meteorológica más cercana. Para un colegio, el período de retorno típico es de <strong>5 a 10 años</strong>.</li>
+        <li><strong>Cálculo del caudal pluvial por el método Racional:</strong> Q = C × I × A / 360, donde C es el coeficiente de escorrentía (para cubiertas de concreto o teja: 0.90–0.95), I es la intensidad en mm/h y A es el área tributaria en hectáreas.</li>
+        <li><strong>Diseño de canaletas y canales:</strong> se dimensionan las canaletas perimetrales y los canales internos de la cubierta usando la ecuación de Manning para flujo a superficie libre. La pendiente mínima recomendada es del 0.5%.</li>
+        <li><strong>Dimensionamiento de bajantes:</strong> el RAS 2017 y la NTC 1500 establecen las tablas de capacidad de bajantes circulares PVC según el área de cubierta y la intensidad de diseño local. Para Manizales (alta pluviosidad), las intensidades son significativamente más altas que para Bogotá.</li>
+        <li><strong>Diseño de la red horizontal de conexión:</strong> colectores enterrados o en superficie que conectan las bases de los bajantes con la caja de inspección o el punto de entrega a la red pública.</li>
+      </ol>
+
+      <h2>Particularidades del diseño en colegios</h2>
+      <p>Los proyectos educativos presentan desafíos específicos que el diseñador debe prever:</p>
+      <ul>
+        <li><strong>Cubiertas complejas con múltiples aguas:</strong> los colegios suelen tener cubiertas de varias pendientes, patios techados y corredores cubiertos. Cada tramo de cubierta tiene su propia área tributaria y debe conectarse a un bajante específico.</li>
+        <li><strong>Patios internos sin conexión a bajante visible:</strong> los patios pueden tener sumideros enterrados que conectan a la red interna de aguas lluvias del edificio. Estos sumideros deben tener rejas y sifones para evitar malos olores y obstrucciones.</li>
+        <li><strong>Zonas de circulación:</strong> las canalizaciones superficiales en zonas de circulación de estudiantes deben estar cubiertas con rejillas galvanizadas o de acero inoxidable y tener acceso para mantenimiento.</li>
+        <li><strong>Memoria de cálculo para licencia:</strong> la Curaduría Urbana exige la memoria hidrosanitaria firmada por ingeniero COPNIA que documente el cálculo de cada bajante, canaleta y colector, con las curvas IDF utilizadas y los caudales de diseño.</li>
+      </ul>
+
+      <h2>¿Cuándo se requiere tanque de retención de aguas lluvias?</h2>
+      <p>Algunas curadurías y ESP municipales — especialmente en ciudades con alta impermeabilización urbana como Manizales, Pereira o Bogotá — exigen que los proyectos grandes (colegios, centros comerciales, conjuntos de más de 50 viviendas) incluyan un <strong>tanque de retención de aguas lluvias</strong> que amortigüe los picos de caudal antes de descargar a la red pública. Este tanque puede ser de concreto, plástico o modular, y se diseña para retener la diferencia entre el caudal generado por el proyecto y el que habría con el terreno sin impermeabilizar.</p>
+
+      <p>En BIC diseñamos la red completa de aguas lluvias para colegios y edificaciones en Colombia. Elaboramos la memoria de cálculo con curvas IDF IDEAM, planos en planta y corte, y firmo el documento para trámite de licencia. Primera consulta sin costo.</p>
+
+      <p><strong>¿Su colegio o proyecto educativo necesita diseño de aguas lluvias en Manizales, Pereira o Armenia?</strong> Escriba a <strong>WhatsApp +57 302 477 8910 | ingenieriabernal.co</strong></p>
+    </>,
+    faqItems: [
+      {
+        q: '¿Qué periodo de retorno se usa para el diseño de aguas lluvias en un colegio?',
+        a: 'Para edificaciones educativas, el RAS 2017 recomienda un período de retorno de 5 a 10 años para el diseño de la red interna de aguas lluvias. Si el colegio se ubica en zona de amenaza de inundación alta o si la red pública tiene historial de desbordamientos, se puede aumentar a 25 años para garantizar la protección de los ocupantes.'
+      },
+      {
+        q: '¿Cuánto cuesta el diseño hidrosanitario de un colegio en Colombia?',
+        a: 'El costo del diseño de redes hidrosanitarias (agua, residuales y lluvias) para un colegio en Colombia varía entre $8 millones y $25 millones COP, dependiendo del área construida, la complejidad de las cubiertas y si se requiere memoria de cálculo para licencia de construcción. En BIC elaboramos propuesta personalizada en 24 horas.'
+      },
+      {
+        q: '¿La memoria de aguas lluvias va separada de la memoria hidrosanitaria?',
+        a: 'Generalmente la memoria de aguas lluvias se incluye como un capítulo dentro de la memoria hidrosanitaria general del proyecto. En algunos municipios, la empresa de servicios públicos puede exigir un documento separado que demuestre el manejo de las aguas lluvias y su conexión al sistema de alcantarillado pluvial o su retención en el predio.'
+      },
+    ],
+  },
+
 }
 
 export default articlesO

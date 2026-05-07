@@ -7,8 +7,8 @@ const WA = '573024778910'
 const WA_MSG = encodeURIComponent('Hola, necesito cotizar una modelación hidráulica en Colombia. ¿Pueden ayudarme?')
 
 const seoConfig = {
-  title: 'Modelación Hidráulica Colombia — HEC-RAS 2D | BIC',
-  description: 'Modelación hidráulica HEC-RAS 1D y 2D en Colombia para estudios de inundación y Dec. 1807. Resultados verificables. COPNIA vigente. Cotice en 24 horas.',
+  title: 'Modelación Hidráulica de Ríos y Quebradas | Colombia',
+  description: 'Modelación hidráulica HEC-RAS de quebradas y ríos en Colombia. Espolones, encauzamiento y Dec. 1807. Putumayo, Eje Cafetero y todo el país. Cotice ya.',
   keywords: [
     'modelación hidráulica Colombia',
     'HEC-RAS 2D Colombia',
@@ -113,8 +113,32 @@ const ARTICULOS = [
   { href: '/blog/modelacion-1d-2d-colombia', title: 'Modelación 1D y 2D en Colombia' },
 ]
 
+const SCHEMA = {
+  '@context': 'https://schema.org',
+  '@type': 'Service',
+  name: 'Modelación Hidráulica de Ríos y Quebradas — HEC-RAS',
+  description: 'Modelación hidráulica HEC-RAS de quebradas y ríos en Colombia. Espolones, encauzamiento y Dec. 1807. Putumayo, Eje Cafetero y todo el país.',
+  url: 'https://ingenieriabernal.co/modelacion-hidraulica-colombia',
+  serviceType: 'Modelación Hidráulica HEC-RAS',
+  areaServed: ['Colombia', 'Putumayo', 'Eje Cafetero', 'Cundinamarca', 'Antioquia', 'Caldas'],
+  provider: {
+    '@type': 'LocalBusiness',
+    name: 'Bernal Ingeniería Consultores — BIC',
+    url: 'https://ingenieriabernal.co',
+    telephone: '+573024778910',
+  },
+}
+
 export default function ModelacionHidraulicaColombia() {
-  useEffect(() => { window.scrollTo(0, 0) }, [])
+  useEffect(() => {
+    window.scrollTo(0, 0)
+    const s = document.createElement('script')
+    s.type = 'application/ld+json'
+    s.id = 'schema-modelacion-hidraulica'
+    s.textContent = JSON.stringify(SCHEMA)
+    document.head.appendChild(s)
+    return () => { document.getElementById('schema-modelacion-hidraulica')?.remove() }
+  }, [])
 
   return (
     <>

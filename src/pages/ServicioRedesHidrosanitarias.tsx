@@ -6,8 +6,8 @@ const WA = '573024778910'
 const WA_MSG = encodeURIComponent('Hola, quiero cotizar Redes Hidrosanitarias para Edificaciones')
 
 const seoConfig = {
-  title: 'Redes Hidrosanitarias Edificaciones — NSR-10 | BIC',
-  description: 'Diseño de redes hidrosanitarias para edificios en Colombia. Agua fría, caliente, residuales y lluvias. NSR-10, RAS 2017. COPNIA 17202-313228. Cotiza hoy.',
+  title: 'Diseño Redes Aguas Lluvias Cubiertas y Colegios | BIC',
+  description: 'Diseño de redes de aguas lluvias para cubiertas, colegios y edificaciones en Colombia. NSR-10, RAS 2017. Manizales y Eje Cafetero. COPNIA. Cotice ya.',
   keywords: [
     'redes hidrosanitarias edificaciones Colombia',
     'diseño hidrosanitario edificios',
@@ -41,8 +41,32 @@ const PARA_QUIEN = [
   { tipo: 'Profesionales que tramitan licencias de construcción', desc: 'Arquitectos, ingenieros y maestros de obra que necesitan la memoria hidrosanitaria firmada por especialista para completar el expediente de licencia.' },
 ]
 
+const SCHEMA = {
+  '@context': 'https://schema.org',
+  '@type': 'Service',
+  name: 'Diseño de Redes de Aguas Lluvias para Cubiertas y Colegios',
+  description: 'Diseño de redes de aguas lluvias para cubiertas, colegios y edificaciones en Colombia. NSR-10, RAS 2017. Manizales y Eje Cafetero.',
+  url: 'https://ingenieriabernal.co/servicios/redes-hidrosanitarias',
+  serviceType: 'Diseño Redes Aguas Lluvias y Hidrosanitarias',
+  areaServed: ['Colombia', 'Eje Cafetero', 'Manizales', 'Caldas', 'Pereira', 'Armenia'],
+  provider: {
+    '@type': 'LocalBusiness',
+    name: 'Bernal Ingeniería Consultores — BIC',
+    url: 'https://ingenieriabernal.co',
+    telephone: '+573024778910',
+  },
+}
+
 export default function ServicioRedesHidrosanitarias() {
-  useEffect(() => { window.scrollTo(0, 0) }, [])
+  useEffect(() => {
+    window.scrollTo(0, 0)
+    const s = document.createElement('script')
+    s.type = 'application/ld+json'
+    s.id = 'schema-redes-hidrosanitarias'
+    s.textContent = JSON.stringify(SCHEMA)
+    document.head.appendChild(s)
+    return () => { document.getElementById('schema-redes-hidrosanitarias')?.remove() }
+  }, [])
 
   return (
     <>

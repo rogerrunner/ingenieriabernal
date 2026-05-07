@@ -417,6 +417,9 @@ const SERVICE_LINKS: Record<string, { label: string; href: string }> = {
   'cuando-se-requiere-hec-ras-colombia':               { label: 'Modelación Hidráulica HEC-RAS 2D',            href: '/servicios/modelacion-hec-ras' },
   'diseno-redes-hidrosanitarias-nsr-10-colombia':      { label: 'Diseño Redes Hidrosanitarias NSR-10',         href: '/servicios/redes-hidrosanitarias' },
   'estudio-amenaza-inundaciones-pot-colombia':         { label: 'Modelación Hidráulica HEC-RAS 2D',            href: '/servicios/modelacion-hec-ras' },
+  // leads mayo 2026
+  'estudio-suelos-torres-edificios-colombia':          { label: 'Estudios Geotécnicos y de Suelos',           href: '/servicios/geotecnia' },
+  'diseno-aguas-lluvias-cubierta-colegio-colombia':   { label: 'Redes Aguas Lluvias y Hidrosanitarias',      href: '/servicios/redes-hidrosanitarias' },
 }
 
 // Canonical override: estos artículos apuntan su canonical a la página de servicio

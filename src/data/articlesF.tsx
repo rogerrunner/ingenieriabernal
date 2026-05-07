@@ -317,7 +317,7 @@ const articlesF: Record<string, {
     date: 'Abril 2026',
     readTime: '10 min',
     category: 'Agua y Saneamiento',
-    metaDesc: '¿Cuándo exige Colombia un plan de manejo de aguas lluvias? Normas aplicables (RAS 2017, SUDS, POT), qué contiene el plan y en qué tipos de proyectos es obligatorio.',
+    metaDesc: 'Cuándo exige Colombia un plan de manejo de aguas lluvias. RAS 2017, SUDS y POT. Obligatorio en colegios, cubiertas y urbanizaciones. Cotice ya.',
     keywords: 'plan manejo aguas lluvias Colombia, cuándo se requiere plan aguas lluvia Colombia, plan manejo aguas lluvias urbanización Colombia, SUDS plan aguas lluvias Colombia',
     body: <>
       <p>Cada vez más curadurías, empresas de servicios públicos y oficinas de planeación municipal en Colombia están exigiendo un <strong>plan de manejo de aguas lluvias</strong> como requisito para otorgar licencias de construcción, licencias de urbanismo o conceptos de factibilidad de servicios públicos. Pero muchos promotores y constructoras no saben exactamente cuándo aplica este requisito, qué norma lo exige ni qué debe contener ese plan. En este artículo lo aclaramos.</p>

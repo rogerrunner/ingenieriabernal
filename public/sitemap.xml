@@ -238,9 +238,11 @@
   <url><loc>https://ingenieriabernal.co/blog/normas-tecnicas-diseno-acueductos-colombia-ras-2017</loc><lastmod>2026-05-03</lastmod><changefreq>monthly</changefreq><priority>0.83</priority></url>
   <url><loc>https://ingenieriabernal.co/blog/presupuesto-diseno-ptap-veredal-colombia-2026</loc><lastmod>2026-05-03</lastmod><changefreq>monthly</changefreq><priority>0.83</priority></url>
 
-  <!-- Batch O — Week 3 articles: CI + ambiental -->
+  <!-- Batch O — Week 3 articles: CI + ambiental + suelos + aguas lluvias -->
   <url><loc>https://ingenieriabernal.co/blog/cuanto-cuesta-sistema-contra-incendios-nsr10-colombia</loc><lastmod>2026-05-04</lastmod><changefreq>monthly</changefreq><priority>0.85</priority></url>
   <url><loc>https://ingenieriabernal.co/blog/tramites-licencia-ambiental-construccion-colombia</loc><lastmod>2026-05-04</lastmod><changefreq>monthly</changefreq><priority>0.84</priority></url>
+  <url><loc>https://ingenieriabernal.co/blog/estudio-suelos-torres-edificios-colombia</loc><lastmod>2026-05-07</lastmod><changefreq>monthly</changefreq><priority>0.87</priority></url>
+  <url><loc>https://ingenieriabernal.co/blog/diseno-aguas-lluvias-cubierta-colegio-colombia</loc><lastmod>2026-05-07</lastmod><changefreq>monthly</changefreq><priority>0.86</priority></url>
 
   <!-- Articles de articles1.tsx faltantes -->
   <url><loc>https://ingenieriabernal.co/blog/cuando-se-requiere-hec-ras-colombia</loc><lastmod>2026-05-04</lastmod><changefreq>monthly</changefreq><priority>0.83</priority></url>

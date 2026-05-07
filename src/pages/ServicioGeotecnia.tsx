@@ -6,8 +6,8 @@ const WA = '573024778910'
 const WA_MSG = encodeURIComponent('Hola, quiero cotizar Estudios Geotécnicos y de Suelos')
 
 const seoConfig = {
-  title: 'Estudios Geotécnicos Colombia — NSR-10 | BIC',
-  description: 'Estudios geotécnicos y de suelos en Colombia. Capacidad portante, estabilidad de taludes, NSR-10 Título H. COPNIA 17202-313228. Especialista UNAL. Cotiza hoy.',
+  title: 'Estudio de Suelos para Construcción | Eje Cafetero y Colombia',
+  description: 'Estudio de suelos para licencia de construcción en Pereira, Eje Cafetero y Colombia. Torres, edificios y obras. NSR-10 Título H. COPNIA. Cotiza hoy.',
   keywords: [
     'estudios geotécnicos Colombia',
     'estudio de suelos Colombia',
@@ -41,8 +41,32 @@ const PARA_QUIEN = [
   { tipo: 'Interventores y revisores técnicos', desc: 'Revisión de estudios geotécnicos presentados por contratistas. Verificación de la exploración mínima requerida, ensayos realizados y parámetros utilizados en el diseño de cimentaciones.' },
 ]
 
+const SCHEMA = {
+  '@context': 'https://schema.org',
+  '@type': 'Service',
+  name: 'Estudio de Suelos y Geotecnia para Construcción',
+  description: 'Estudio de suelos para licencia de construcción en Pereira, Eje Cafetero y Colombia. Torres, edificios y obras. NSR-10 Título H.',
+  url: 'https://ingenieriabernal.co/servicios/geotecnia',
+  serviceType: 'Estudio de Suelos y Geotecnia',
+  areaServed: ['Colombia', 'Eje Cafetero', 'Pereira', 'Manizales', 'Armenia', 'Risaralda'],
+  provider: {
+    '@type': 'LocalBusiness',
+    name: 'Bernal Ingeniería Consultores — BIC',
+    url: 'https://ingenieriabernal.co',
+    telephone: '+573024778910',
+  },
+}
+
 export default function ServicioGeotecnia() {
-  useEffect(() => { window.scrollTo(0, 0) }, [])
+  useEffect(() => {
+    window.scrollTo(0, 0)
+    const s = document.createElement('script')
+    s.type = 'application/ld+json'
+    s.id = 'schema-geotecnia'
+    s.textContent = JSON.stringify(SCHEMA)
+    document.head.appendChild(s)
+    return () => { document.getElementById('schema-geotecnia')?.remove() }
+  }, [])
 
   return (
     <>

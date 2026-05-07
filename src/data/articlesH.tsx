@@ -381,7 +381,7 @@ const articlesH: Record<string, {
     date: 'Mayo 2026',
     readTime: '10 min',
     category: 'Costos y Presupuestos',
-    metaDesc: 'Rangos de precio reales para diseño de acueductos en Colombia: desde estudios básicos hasta diseños integrales para parcelaciones y municipios. Factores que afectan el costo.',
+    metaDesc: 'Rangos de precio para diseño de acueductos en Colombia 2026: desde estudios básicos hasta diseños integrales municipales. Calarcá, Cartago y Eje Cafetero.',
     keywords: 'costo diseño acueducto Colombia 2026, precio diseño acueducto rural Colombia, diseño acueducto parcelación costo, honorarios ingeniería acueducto Colombia, presupuesto diseño acueducto municipio',
     body: <>
       <p>La primera pregunta que hace casi cualquier alcalde, promotor de parcelación o gerente de empresa de servicios públicos cuando comienza a pensar en un acueducto es: "¿cuánto me cuesta el diseño?". La respuesta honesta es que el rango de precios en Colombia en 2026 va desde menos de $4 millones COP para estudios puntuales hasta $80 millones o más para un diseño integral de acueducto municipal. La diferencia no es arbitraria: depende de factores concretos que este artículo explica con precisión.</p>
