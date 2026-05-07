@@ -6,8 +6,8 @@ const WA = '573024778910'
 const WA_MSG = encodeURIComponent('Hola, quiero cotizar un Estudio de Inundabilidad en Manizales')
 
 const seoConfig = {
-  title: 'Estudio de Inundabilidad en Manizales | BIC Ingeniería',
-  description: 'Estudios de inundabilidad en Manizales con modelación HEC-RAS 2D. Requerido por Corpocaldas, POMCA y POT. Solicite cotización: +57 302 477 8910',
+  title: 'Estudio Inundabilidad Manizales — HEC-RAS | BIC',
+  description: 'Estudios de inundabilidad en Manizales con HEC-RAS 2D. Requerido por Corpocaldas, POMCA y POT. COPNIA vigente. Solicite cotización: +57 302 477 8910',
   keywords: [
     'estudio de inundabilidad Manizales',
     'modelación HEC-RAS 2D Manizales',

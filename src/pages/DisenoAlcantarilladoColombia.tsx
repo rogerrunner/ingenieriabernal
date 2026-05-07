@@ -6,8 +6,8 @@ const WA = '573024778910'
 const WA_MSG = encodeURIComponent('Hola, necesito cotizar el diseño de alcantarillado en Colombia. ¿Pueden ayudarme?')
 
 const seoConfig = {
-  title: 'Diseño de Alcantarillado Colombia | Redes Sanitarias y Pluviales | BIC',
-  description: 'Diseño de redes de alcantarillado sanitario y pluvial en Colombia. Cumplimiento RAS 2017, NTC 1339. Memoria de cálculo, planos AutoCAD, EPANET. Ing. Rogerio Bernal — Manizales.',
+  title: 'Diseño de Alcantarillado Colombia — RAS 2017 | BIC',
+  description: 'Diseño alcantarillado sanitario y pluvial en Colombia. RAS 2017, NTC 1339, EPANET. Memoria COPNIA, planos AutoCAD. Ing. Rogerio Bernal, Manizales. Cotiza hoy.',
   keywords: [
     'diseño de alcantarillado Colombia',
     'alcantarillado sanitario Colombia',

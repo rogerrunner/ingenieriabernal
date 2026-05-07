@@ -6,8 +6,8 @@ const WA = '573024778910'
 const WA_MSG = encodeURIComponent('Hola, quiero cotizar Redes Hidrosanitarias para Edificaciones')
 
 const seoConfig = {
-  title: 'Redes Hidrosanitarias para Edificaciones | BIC Bernal Ingeniería Consultores',
-  description: 'Diseño de redes hidrosanitarias para edificios residenciales, comerciales e industriales en Colombia. Agua fría, agua caliente, aguas residuales, aguas lluvias. NSR-10, RAS 2017. COPNIA 17202-313228.',
+  title: 'Redes Hidrosanitarias Edificaciones — NSR-10 | BIC',
+  description: 'Diseño de redes hidrosanitarias para edificios en Colombia. Agua fría, caliente, residuales y lluvias. NSR-10, RAS 2017. COPNIA 17202-313228. Cotiza hoy.',
   keywords: [
     'redes hidrosanitarias edificaciones Colombia',
     'diseño hidrosanitario edificios',

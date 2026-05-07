@@ -6,8 +6,8 @@ const WA = '573024778910'
 const WA_MSG = encodeURIComponent('Hola, quiero información sobre los estudios técnicos para tramitar licencia de urbanismo en Colombia')
 
 const seoConfig = {
-  title: 'Licencia de Urbanismo Colombia: Estudios Técnicos Requeridos | BIC',
-  description: 'BIC prepara todos los estudios técnicos para tramitar su licencia de urbanismo en Colombia: hidrosanitario, riesgo hídrico Decreto 1807, acueducto y alcantarillado. Urbanizaciones residenciales, comerciales e industriales. Propuesta en 24 horas.',
+  title: 'Licencia de Urbanismo Colombia — Decreto 1807 | BIC',
+  description: 'BIC prepara estudios para licencia de urbanismo en Colombia: hidrosanitario, riesgo hídrico Dec. 1807, acueducto y alcantarillado. COPNIA. Propuesta en 24 horas.',
   keywords: [
     'licencia de urbanismo Colombia',
     'trámite licencia urbanismo',

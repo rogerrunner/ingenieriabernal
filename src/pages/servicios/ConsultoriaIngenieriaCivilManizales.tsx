@@ -7,7 +7,7 @@ const WA_MSG = encodeURIComponent('Hola, quiero información sobre Consultoría 
 
 const seoConfig = {
   title: 'Consultoría Ingeniería Civil Manizales | BIC',
-  description: 'Consultoría integral de ingeniería civil en Manizales: estudios técnicos, diseño, interventoría y gestión de proyectos. +57 302 477 8910',
+  description: 'Consultoría integral de ingeniería civil en Manizales: estudios técnicos, diseño, interventoría y proyectos. COPNIA vigente. Cotiza sin costo. +57 302 477 8910',
   keywords: [
     'consultoría ingeniería civil Manizales',
     'consultor ingeniería Caldas',

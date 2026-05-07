@@ -6,8 +6,8 @@ const WA = '573024778910'
 const WA_MSG = encodeURIComponent('Hola, quiero cotizar Estudios Geotécnicos y de Suelos')
 
 const seoConfig = {
-  title: 'Estudios Geotécnicos y de Suelos Colombia | BIC Bernal Ingeniería Consultores',
-  description: 'Estudios geotécnicos y de suelos para constructoras, municipios y entidades públicas en Colombia. Capacidad portante, estabilidad de taludes, NSR-10 Título H. Especialista UNAL. COPNIA 17202-313228.',
+  title: 'Estudios Geotécnicos Colombia — NSR-10 | BIC',
+  description: 'Estudios geotécnicos y de suelos en Colombia. Capacidad portante, estabilidad de taludes, NSR-10 Título H. COPNIA 17202-313228. Especialista UNAL. Cotiza hoy.',
   keywords: [
     'estudios geotécnicos Colombia',
     'estudio de suelos Colombia',

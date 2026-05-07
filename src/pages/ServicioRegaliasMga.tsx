@@ -6,8 +6,8 @@ const WA = '573024778910'
 const WA_MSG = encodeURIComponent('Hola, quiero cotizar Formulación de Proyectos de Regalías MGA-Web')
 
 const seoConfig = {
-  title: 'Formulación Proyectos Regalías MGA-Web Colombia | BIC Bernal Ingeniería Consultores',
-  description: 'Formulación de proyectos de inversión para el Sistema General de Regalías (SGR) en MGA-Web. Agua potable, saneamiento básico, gestión del riesgo. COPNIA 17202-313228. Eje Cafetero.',
+  title: 'Regalías MGA-Web Colombia — Agua Potable | BIC',
+  description: 'Formulación de proyectos SGR en MGA-Web: agua potable, saneamiento básico y gestión del riesgo. COPNIA 17202-313228. Eje Cafetero. Cotiza sin costo.',
   keywords: [
     'formulación proyectos regalías MGA-Web Colombia',
     'formulación proyectos SGR agua saneamiento',

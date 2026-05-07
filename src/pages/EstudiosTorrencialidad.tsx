@@ -6,8 +6,8 @@ const WA = '573024778910'
 const WA_MSG = encodeURIComponent('Hola, necesito un estudio de torrencialidad. ¿Pueden asesorarme sobre el alcance y costo?')
 
 const seoConfig = {
-  title: 'Estudios de Torrencialidad en Colombia — Amenaza Torrencial y Flujos de Escombros | BIC',
-  description: 'BIC realiza estudios de torrencialidad en Colombia: mapas de amenaza torrencial, modelación de flujos de escombros (FLO-2D, RAMMS), delimitación de retiros y planes de gestión del riesgo. Decreto 1807/2014, Ley 1523/2012. Cobertura nacional. Cotización en 24 h.',
+  title: 'Estudios de Torrencialidad Colombia — FLO-2D | BIC',
+  description: 'Estudios de torrencialidad en Colombia: amenaza torrencial, FLO-2D, delimitación retiros. Dec. 1807/2014. COPNIA vigente. Cotización en 24 horas.',
   keywords: [
     'estudio de torrencialidad Colombia',
     'amenaza torrencial Colombia',

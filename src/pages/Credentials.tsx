@@ -2,7 +2,7 @@ import { BlueprintBg, Tag, ThinLine, SectionLabel, Btn, Section, useInView } fro
 import SEOHead from '../components/SEOHead'
 
 const seoConfig = {
-  title: 'Credenciales | Ingeniero Hidráulico Manizales — BIC Bernal Ingeniería Consultores',
+  title: 'Credenciales Rogerio Bernal — COPNIA, UNAL | BIC',
   description: 'Rogerio Bernal Ríos — ingeniero hidráulico en Manizales, especialista en ingeniería ambiental, consultor HEC-RAS Colombia. COPNIA 17202-313228 CLD. UNAL Manizales. Proyectos ejecutados verificables.',
   keywords: ['ingeniero hidráulico Manizales', 'especialista ingeniería ambiental Colombia', 'consultor HEC-RAS Colombia', 'COPNIA ingeniero civil Manizales', 'credenciales ingeniería hidráulica'],
   canonical: 'https://ingenieriabernal.co/credenciales',

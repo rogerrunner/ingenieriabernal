@@ -7,8 +7,8 @@ const WA = '573024778910'
 const WA_MSG = encodeURIComponent('Hola, necesito un estudio hidrológico. ¿Pueden asesorarme sobre el alcance y el costo?')
 
 const seoConfig = {
-  title: 'Estudios Hidrológicos en Colombia — Caudales, IDF, HEC-HMS | BIC',
-  description: 'BIC realiza estudios hidrológicos en Colombia para permisos CAR, licencias de construcción, diseño de obras y proyectos SGR. Caudales de diseño, curvas IDF, HEC-HMS, Decreto 1807/2014. Firma COPNIA. Cotización en 24 horas.',
+  title: 'Estudios Hidrológicos Colombia — HEC-HMS | BIC',
+  description: 'Estudios hidrológicos en Colombia para CAR, licencias y SGR. Caudales IDF, HEC-HMS, Dec. 1807/2014. COPNIA vigente. Cotización en 24 horas.',
   keywords: [
     'estudio hidrológico Colombia',
     'estudios hidrológicos para CAR Colombia',

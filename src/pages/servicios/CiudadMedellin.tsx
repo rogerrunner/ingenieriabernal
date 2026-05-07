@@ -6,7 +6,7 @@ const WA = '573024778910'
 const WA_MSG = encodeURIComponent('Hola, quiero cotizar un proyecto de ingeniería hidráulica en Medellín')
 
 const seoConfig = {
-  title: 'Ingeniero hidráulico en Medellín — Ingeniería Bernal',
+  title: 'Ingeniero Hidráulico en Medellín — COPNIA | BIC',
   description: 'Ingeniero hidráulico en Medellín y Antioquia: estudios hidrológicos, modelación HEC-RAS, riesgo hídrico cerros y quebradas, diseño acueductos, planes parciales AMVA. BIC · COPNIA · UNAL.',
   keywords: [
     'ingeniero hidráulico Medellín',

@@ -4,7 +4,7 @@ import { BlueprintBg, Tag, ThinLine, SectionLabel, Btn, Section, useInView } fro
 import SEOHead from '../components/SEOHead'
 
 const seoConfig = {
-  title: 'Blog de Ingeniería Hidráulica en Colombia | BIC Bernal Ingeniería Consultores',
+  title: 'Blog Ingeniería Hidráulica Colombia — COPNIA | BIC',
   description: 'Artículos técnicos sobre normativa hidráulica, costos de obra, modelación HEC-RAS 2D, SUDS y formulación de proyectos de regalías para municipios colombianos. Guías para ingenieros, alcaldes y constructoras del Eje Cafetero.',
   keywords: ['blog ingeniería hidráulica Colombia', 'artículos técnicos hidráulica', 'normativa RAS 2017', 'HEC-RAS 2D Colombia', 'regalías agua potable municipios'],
   canonical: 'https://ingenieriabernal.co/blog',

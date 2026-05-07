@@ -6,8 +6,8 @@ const WA = '573024778910'
 const WA_MSG = encodeURIComponent('Hola, necesito estudios de gestión de riesgo en taludes o deslizamientos. ¿Pueden ayudarme?')
 
 const seoConfig = {
-  title: 'Gestión de Riesgo en Taludes Colombia — Estabilidad, Deslizamientos y Amenaza | BIC',
-  description: 'BIC elabora estudios de gestión de riesgo en taludes para Colombia: análisis de estabilidad, zonificación de amenaza por movimientos en masa, Plan de Emergencias y diseño de obras de estabilización. Manizales, Eje Cafetero, zonas andinas y todo el país.',
+  title: 'Gestión Riesgo Taludes Colombia — Deslizamientos | BIC',
+  description: 'Estudios de riesgo en taludes en Colombia: estabilidad, zonificación, deslizamientos. COPNIA vigente. Manizales, Eje Cafetero y todo el país. Cotiza hoy.',
   keywords: [
     'gestión de riesgo taludes Colombia',
     'estabilidad de taludes Colombia',

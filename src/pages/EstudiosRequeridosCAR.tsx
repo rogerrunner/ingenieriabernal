@@ -6,8 +6,8 @@ const WA = '573024778910'
 const WA_MSG = encodeURIComponent('Hola, la CAR me pidió unos estudios técnicos y no sé exactamente qué necesito. ¿Pueden orientarme y elaborarlos?')
 
 const seoConfig = {
-  title: 'Me Pidieron Estudios en la CAR Colombia — ¿Qué Necesito y Cómo Obtenerlos? | BIC',
-  description: 'Si la CAR le pidió estudios para una concesión de aguas, permiso de vertimiento, ocupación de cauce o plan de manejo ambiental, BIC los elabora. Eje Cafetero (CORPOCALDAS, CARDER, CRQ) y todo Colombia. Propuesta técnica en 24 horas.',
+  title: 'Estudios CAR Colombia — Concesión, Cauce, Permiso | BIC',
+  description: 'La CAR le pide estudios de concesión, cauce o vertimiento — BIC los elabora. CORPOCALDAS, CARDER, CRQ. Propuesta técnica en 24 horas. Consulta sin costo.',
   keywords: [
     'estudios requeridos por la CAR Colombia',
     'me pidieron estudios en la CAR',

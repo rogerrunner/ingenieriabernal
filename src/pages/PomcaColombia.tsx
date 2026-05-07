@@ -6,8 +6,8 @@ const WA = '573024778910'
 const WA_MSG = encodeURIComponent('Hola, necesito información sobre formulación de POMCA en Colombia. ¿Pueden ayudarme?')
 
 const seoConfig = {
-  title: 'POMCA Colombia — Plan de Ordenación y Manejo de Cuencas | BIC',
-  description: 'Formulación y ajuste de POMCA en Colombia. Fase diagnóstico, prospectiva, zonificación ambiental. Decreto 1076/2015, Ley 388/1997. Consultoría especializada desde Manizales.',
+  title: 'POMCA Colombia — Formulación Dec. 1076 | BIC',
+  description: 'Formulación y ajuste de POMCA en Colombia. Diagnóstico, prospectiva, zonificación. Dec. 1076/2015. COPNIA vigente. Consultoría Manizales. Cotiza sin costo.',
   keywords: [
     'POMCA Colombia',
     'plan ordenación manejo cuencas Colombia',

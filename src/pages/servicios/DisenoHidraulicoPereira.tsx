@@ -6,8 +6,8 @@ const WA = '573024778910'
 const WA_MSG = encodeURIComponent('Hola, quiero cotizar un Diseño Hidráulico en Pereira')
 
 const seoConfig = {
-  title: 'Diseño Hidráulico en Pereira | BIC Ingeniería',
-  description: 'Diseño hidráulico en Pereira: redes de acueducto, alcantarillado, canales. Cumplimos RAS 2000 y normativa CARDER. +57 302 477 8910',
+  title: 'Diseño Hidráulico en Pereira — COPNIA | BIC',
+  description: 'Diseño hidráulico en Pereira: redes de acueducto, alcantarillado, canales. RAS 2017 y normativa CARDER. COPNIA vigente. Cotiza hoy. +57 302 477 8910',
   keywords: [
     'diseño hidráulico Pereira',
     'diseño acueducto Pereira',

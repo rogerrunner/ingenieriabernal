@@ -7,8 +7,8 @@ const WA = '573024778910'
 const WA_MSG = encodeURIComponent('Hola, necesito cotizar el diseño de un canal de riego o conducción. ¿Pueden asesorarme?')
 
 const seoConfig = {
-  title: 'Diseño de Canales de Riego en Colombia — Ingeniería Hidráulica | BIC',
-  description: 'BIC diseña canales de riego, conducción y drenaje en Colombia. Canales revestidos, en tierra y entubados con cálculo hidráulico, obras de arte y memoria COPNIA. Distritos de riego, municipios y agroindustria. Cotización en 24 horas.',
+  title: 'Diseño de Canales de Riego Colombia — COPNIA | BIC',
+  description: 'Diseño de canales de riego y conducción en Colombia. Revestidos y en tierra, cálculo hidráulico, memoria COPNIA. Agroindustria y distritos. Cotiza sin costo.',
   keywords: [
     'diseño canal de riego Colombia',
     'canal de conducción Colombia ingeniería',

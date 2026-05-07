@@ -6,8 +6,8 @@ const WA = '573024778910'
 const WA_MSG = encodeURIComponent('Hola, quiero cotizar un Estudio Hidrológico en Manizales')
 
 const seoConfig = {
-  title: 'Estudio Hidrológico en Manizales | BIC Ingeniería',
-  description: 'Estudios hidrológicos en Manizales: caudales de diseño, curvas IDF, períodos de retorno. Cumplimiento RAS 2000 y EIA. +57 302 477 8910',
+  title: 'Estudio Hidrológico en Manizales — COPNIA | BIC',
+  description: 'Estudios hidrológicos en Manizales: caudales de diseño, curvas IDF, períodos de retorno. RAS 2017 y EIA. COPNIA vigente. Cotiza hoy. +57 302 477 8910',
   keywords: [
     'estudio hidrológico Manizales',
     'curvas IDF Manizales IDEAM',

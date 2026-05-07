@@ -6,8 +6,8 @@ const WA = '573024778910'
 const WA_MSG = encodeURIComponent('Hola, necesito consultoría en ingeniería hidráulica para un proyecto en Colombia')
 
 const seoConfig = {
-  title: 'Ingeniería Hidráulica Colombia | BIC Bernal Ingeniería Consultores',
-  description: 'Consultoría especializada en ingeniería hidráulica para proyectos en Colombia. Modelación HEC-RAS 2D, diseño hidrosanitario NSR-10, acueductos RAS 2017, riesgo hídrico Decreto 1807, regalías MGA-Web. COPNIA 17202-313228. Atención nacional.',
+  title: 'Ingeniería Hidráulica Colombia — COPNIA 2026 | BIC',
+  description: 'Ingeniería hidráulica para Colombia: HEC-RAS 2D, hidrosanitario NSR-10, acueductos RAS 2017, riesgo hídrico Dec. 1807, regalías MGA-Web. COPNIA 17202-313228.',
   keywords: [
     'ingeniería hidráulica Colombia',
     'consultoría hidráulica Colombia',

@@ -6,8 +6,8 @@ const WA = '573024778910'
 const WA_MSG = encodeURIComponent('Hola, quiero cotizar Diseño de Acueducto y Alcantarillado')
 
 const seoConfig = {
-  title: 'Diseño Acueducto y Alcantarillado Colombia | BIC Bernal Ingeniería Consultores',
-  description: 'Diseño de acueductos y alcantarillados para municipios y constructoras en Colombia. RAS 2017, Resolución 0330/2017. Redes de distribución, colectores, PTAP, PTAR. Especialista UNAL. COPNIA 17202-313228.',
+  title: 'Diseño Acueducto y Alcantarillado Colombia | BIC',
+  description: 'Diseño de acueductos y alcantarillados para municipios en Colombia. RAS 2017, Res. 0330/2017, EPANET, PTAP, PTAR. COPNIA 17202-313228. Cotiza sin costo.',
   keywords: [
     'diseño acueducto alcantarillado Colombia',
     'diseño acueducto municipal Colombia',

@@ -125,7 +125,7 @@ export default function Services() {
   const [active, setActive] = useState('hidrosanitario')
 
   useEffect(() => {
-    document.title = 'Servicios de Consultoría Integral — BIC Bernal Ingeniería Consultores'
+    document.title = 'Servicios Ingeniería Hidráulica — COPNIA | BIC'
     const meta = document.querySelector('meta[name="description"]')
     if (meta) meta.setAttribute('content',
       'BIC ofrece consultoría integral: diseños hidrosanitarios NSR-10, modelación HEC-RAS 2D, acueducto y alcantarillado Res. 0330/2017, PTAP y PTAR, topobatimetría, gestión del riesgo, formulación regalías MGA-Web e interventoría. Manizales, Eje Cafetero y Colombia.'

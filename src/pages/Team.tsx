@@ -39,7 +39,7 @@ const advantages = [
 
 export default function Team() {
   useEffect(() => {
-    document.title = 'Equipo Consultor — BIC Bernal Ingeniería Consultores | Manizales'
+    document.title = 'Equipo Consultor BIC — COPNIA, Manizales | BIC'
     const meta = document.querySelector('meta[name="description"]')
     if (meta) meta.setAttribute('content',
       'Equipo multidisciplinario BIC: hidráulica, geotecnia, arquitectura, ambiental y estructural. Director Rogerio Bernal Ríos — UNAL · COPNIA 17202-313228. Manizales y Colombia.'

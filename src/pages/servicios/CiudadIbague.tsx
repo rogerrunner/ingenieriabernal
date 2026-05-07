@@ -6,7 +6,7 @@ const WA = '573024778910'
 const WA_MSG = encodeURIComponent('Hola, quiero cotizar una consultoría hidráulica en Ibagué')
 
 const seoConfig = {
-  title: 'Consultoría hidráulica en Ibagué — Ingeniería Bernal',
+  title: 'Ingeniería Hidráulica Ibagué — COPNIA | BIC',
   description: 'Consultoría hidráulica en Ibagué y Tolima: estudios hidrológicos río Combeima y Coello, riesgo hídrico POT, diseño acueductos, alcantarillado y trámites CORTOLIMA. BIC · COPNIA · UNAL.',
   keywords: [
     'consultoría hidráulica Ibagué',

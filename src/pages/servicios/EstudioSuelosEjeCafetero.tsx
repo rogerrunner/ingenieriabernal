@@ -6,8 +6,8 @@ const WA = '573024778910'
 const WA_MSG = encodeURIComponent('Hola, quiero cotizar un Estudio de Suelos en el Eje Cafetero')
 
 const seoConfig = {
-  title: 'Estudio de Suelos Eje Cafetero | BIC Ingeniería',
-  description: 'Estudios de suelos en el Eje Cafetero: Manizales, Pereira y Armenia. Suelos volcánicos y cenizas del Quindío. NSR-10. +57 302 477 8910',
+  title: 'Estudio de Suelos Eje Cafetero — NSR-10 | BIC',
+  description: 'Estudios de suelos en el Eje Cafetero: Manizales, Pereira y Armenia. Suelos volcánicos, NSR-10. COPNIA vigente. Cotiza hoy. +57 302 477 8910',
   keywords: [
     'estudio de suelos Eje Cafetero',
     'estudio geotécnico Manizales Pereira Armenia',

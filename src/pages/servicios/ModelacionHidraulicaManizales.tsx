@@ -6,8 +6,8 @@ const WA = '573024778910'
 const WA_MSG = encodeURIComponent('Hola, quiero cotizar una Modelación Hidráulica en Manizales')
 
 const seoConfig = {
-  title: 'Modelación Hidráulica en Manizales | BIC Ingeniería',
-  description: 'Modelación hidráulica 1D y 2D en Manizales con HEC-RAS. Análisis de inundaciones, socavación y diseño de obras. +57 302 477 8910',
+  title: 'Modelación Hidráulica Manizales — HEC-RAS | BIC',
+  description: 'Modelación hidráulica HEC-RAS 1D y 2D en Manizales. Inundaciones, socavación y diseño de obras. COPNIA vigente. Cotiza hoy. +57 302 477 8910',
   keywords: [
     'modelación hidráulica Manizales',
     'HEC-RAS 1D 2D Manizales',

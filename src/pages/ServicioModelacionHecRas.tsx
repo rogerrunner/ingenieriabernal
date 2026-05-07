@@ -7,8 +7,8 @@ const WA = '573024778910'
 const WA_MSG = encodeURIComponent('Hola, quiero cotizar Modelación Hidráulica HEC-RAS 2D')
 
 const seoConfig = {
-  title: 'Modelación HEC-RAS — Estudios de Inundabilidad · BIC',
-  description: 'Estudios de inundabilidad y modelación hidráulica HEC-RAS 1D/2D. Apto POMCA, licencias ambientales. Manizales, Colombia.',
+  title: 'Modelación HEC-RAS Colombia — Inundabilidad | BIC',
+  description: 'Estudios de inundabilidad y modelación HEC-RAS 1D/2D para Dec. 1807, POMCA y licencias ambientales. COPNIA vigente. Manizales y Colombia. Cotiza hoy.',
   keywords: [
     'modelación hidráulica HEC-RAS 2D Colombia',
     'HEC-RAS 2D Colombia',

@@ -111,7 +111,7 @@ export default function CalculadoraHidraulica() {
   const [showResult, setShowResult] = useState(false)
 
   useEffect(() => {
-    document.title = 'Calculadora de Costos — Estudios Hidráulicos | Ingeniería Bernal'
+    document.title = 'Calculadora Estudios Hidráulicos Colombia | BIC'
     const desc = document.querySelector('meta[name="description"]')
     if (desc) desc.setAttribute('content', 'Estime el costo de su estudio hidráulico en Colombia en segundos. Ingrese tipo de estudio, área y complejidad para obtener un rango de precios en COP y tiempo de entrega.')
   }, [])

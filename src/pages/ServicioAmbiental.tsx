@@ -6,8 +6,8 @@ const WA = '573024778910'
 const WA_MSG = encodeURIComponent('Hola, quiero cotizar Estudios Ambientales e IRCA')
 
 const seoConfig = {
-  title: 'Estudios Ambientales e IRCA Colombia | BIC Bernal Ingeniería Consultores',
-  description: 'Estudios ambientales, cálculo IRCA, permisos de vertimientos, concesiones de agua y trámites ante CAR para proyectos hídricos en Colombia. COPNIA 17202-313228. Eje Cafetero.',
+  title: 'Estudios Ambientales e IRCA Colombia — COPNIA | BIC',
+  description: 'Estudios ambientales, cálculo IRCA, permisos de vertimientos y concesiones de agua ante CAR en Colombia. COPNIA 17202-313228. Eje Cafetero. Cotiza hoy.',
   keywords: [
     'estudios ambientales Colombia',
     'IRCA Colombia agua potable',

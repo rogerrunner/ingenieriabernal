@@ -6,8 +6,8 @@ const WA = '573024778910'
 const WA_MSG = encodeURIComponent('Hola, quiero cotizar un proyecto de ingeniería hidráulica en Pereira')
 
 const seoConfig = {
-  title: 'Ingeniería Hidráulica Pereira | BIC Bernal Ingeniería Consultores',
-  description: 'Consultoría en ingeniería hidráulica y sanitaria en Pereira y Risaralda. Diseño de acueductos, redes contra incendio y modelaciones HEC-RAS para sector público y privado.',
+  title: 'Ingeniería Hidráulica Pereira — COPNIA | BIC',
+  description: 'Consultoría en ingeniería hidráulica en Pereira y Risaralda. Acueductos, CI NSR-10 y HEC-RAS. COPNIA vigente. Sector público y privado. Cotiza hoy.',
   keywords: [
     'ingeniería hidráulica Pereira',
     'consultoría acueductos Pereira',
