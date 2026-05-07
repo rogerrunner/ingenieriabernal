@@ -117,7 +117,7 @@ const SERVICES_NATIONAL = [
 
 export default function CoverageNational() {
   useEffect(() => {
-    document.title = 'Cobertura Nacional — BIC Bernal Ingeniería Consultores | Colombia'
+    document.title = 'Cobertura Nacional — Ingeniería Hidráulica | BIC'
     const meta = document.querySelector('meta[name="description"]')
     if (meta) meta.setAttribute('content',
       'BIC — Bernal Ingeniería Consultores opera en todo Colombia: Nariño, Cauca, Valle, Chocó, Córdoba, Bolívar, Atlántico, Magdalena, Cesar, Santander, Arauca, Casanare, Meta, Putumayo, Caquetá, Cundinamarca y más. Consultoría integral hidráulica, geotecnia, arquitectura, ambiental y estructural.'

@@ -6,8 +6,8 @@ const WA = '573024778910'
 const WA_MSG = encodeURIComponent('Hola, quiero información sobre Gestión del Riesgo Hídrico en Manizales')
 
 const seoConfig = {
-  title: 'Gestión del Riesgo Hídrico Manizales | BIC Ingeniería',
-  description: 'Gestión del riesgo por inundaciones y avenidas torrenciales en Manizales y Caldas. Planes de contingencia y mitigación. +57 302 477 8910',
+  title: 'Gestión Riesgo Hídrico Manizales — Dec. 1807 | BIC',
+  description: 'Gestión del riesgo por inundaciones y avenidas torrenciales en Manizales y Caldas. COPNIA vigente. Planes de contingencia. Cotiza hoy. +57 302 477 8910',
   keywords: [
     'gestión del riesgo hídrico Manizales',
     'inundaciones Manizales',

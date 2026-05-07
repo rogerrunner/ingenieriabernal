@@ -6,8 +6,8 @@ const WA = '573024778910'
 const WA_MSG = encodeURIComponent('Hola, necesito ingeniería para un proyecto urbanístico — diseño hidráulico, hidrosanitario y estudios técnicos. ¿Pueden ayudarme?')
 
 const seoConfig = {
-  title: 'Ingeniería para Proyectos Urbanísticos en Colombia — Hidráulica, Hidrosanitario y Estudios | BIC',
-  description: 'BIC diseña las redes hidrosanitarias, el sistema de drenaje pluvial y los estudios de amenaza hídrica para proyectos urbanísticos en Colombia. Memorias de cálculo firmadas, planos constructivos y acompañamiento hasta la licencia. Manizales, Eje Cafetero y todo el país.',
+  title: 'Ingeniería Proyectos Urbanísticos Colombia | BIC',
+  description: 'BIC diseña redes hidrosanitarias, drenaje pluvial y estudios de amenaza para urbanísticos en Colombia. Memorias COPNIA. Eje Cafetero y todo el país. Cotiza hoy.',
   keywords: [
     'ingeniería proyectos urbanísticos Colombia',
     'diseño hidráulico urbanización Colombia',

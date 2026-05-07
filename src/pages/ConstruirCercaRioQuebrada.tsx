@@ -6,8 +6,8 @@ const WA = '573024778910'
 const WA_MSG = encodeURIComponent('Hola, quiero construir cerca a un río o quebrada y necesito orientación sobre los estudios y permisos requeridos.')
 
 const seoConfig = {
-  title: 'Construir Cerca a un Río o Quebrada en Colombia — Permisos, Estudios y Ronda Hídrica | BIC',
-  description: 'Si quiere construir cerca a un río, quebrada o canal en Colombia, necesita estudio de ronda hídrica, zonificación de amenaza y permiso de ocupación de cauce. BIC elabora todos los estudios requeridos por la CAR y la curaduría. Manizales, Eje Cafetero y todo Colombia.',
+  title: 'Construir cerca a Río o Quebrada Colombia | BIC',
+  description: 'Para construir cerca a un río o quebrada en Colombia necesita ronda hídrica y amenaza. BIC elabora los estudios para la CAR. COPNIA. Cotice hoy.',
   keywords: [
     'construir cerca a un río Colombia',
     'construir cerca a una quebrada',

@@ -6,8 +6,8 @@ const WA = '573024778910'
 const WA_MSG = encodeURIComponent('Hola, quiero cotizar un Diseño Hidráulico en el Eje Cafetero')
 
 const seoConfig = {
-  title: 'Diseño Hidráulico Eje Cafetero | BIC Ingeniería',
-  description: 'Diseño hidráulico en Caldas, Risaralda y Quindío. Redes de acueducto, alcantarillado y estructuras. BIC cubre todo el Eje Cafetero. +57 302 477 8910',
+  title: 'Diseño Hidráulico Eje Cafetero — COPNIA | BIC',
+  description: 'Diseño hidráulico en Caldas, Risaralda y Quindío. Redes de acueducto, alcantarillado y estructuras. BIC cubre todo el Eje Cafetero. COPNIA. +57 302 477 8910',
   keywords: [
     'diseño hidráulico Eje Cafetero',
     'diseño acueducto Caldas Risaralda Quindío',

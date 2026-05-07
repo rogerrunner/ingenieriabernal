@@ -7,8 +7,8 @@ const WA = '573024778910'
 const WA_MSG = encodeURIComponent('Hola, necesito información sobre encauzamiento de ríos o protección fluvial. ¿Pueden asesorarme?')
 
 const seoConfig = {
-  title: 'Encauzamiento de Ríos y Quebradas en Colombia — Ingeniería Fluvial | BIC',
-  description: 'BIC diseña obras de encauzamiento fluvial en Colombia: rectificación de cauces, muros laterales, espigones y revestimientos. Modelación HEC-RAS 2D, permiso CAR. Para municipios con ríos en zona urbana, vías y predios ribereños.',
+  title: 'Encauzamiento de Ríos Colombia — HEC-RAS 2D | BIC',
+  description: 'Diseño de encauzamiento fluvial en Colombia: muros, espigones, revestimientos. Modelación HEC-RAS 2D, permiso CAR. COPNIA vigente. Cotización en 24 horas.',
   keywords: [
     'encauzamiento de ríos Colombia',
     'encauzamiento fluvial Colombia ingeniería',

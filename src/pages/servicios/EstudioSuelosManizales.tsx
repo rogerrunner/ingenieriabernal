@@ -6,7 +6,7 @@ const WA = '573024778910'
 const WA_MSG = encodeURIComponent('Hola, quiero cotizar un Estudio de Suelos en Manizales')
 
 const seoConfig = {
-  title: 'Estudio de Suelos en Manizales | BIC Ingeniería',
+  title: 'Estudio de Suelos en Manizales — NSR-10 | BIC',
   description: 'Realizamos estudios de suelos en Manizales según NSR-10. Informe geotécnico completo para licencia de construcción. Solicite cotización: +57 302 477 8910',
   keywords: [
     'estudio de suelos Manizales',

@@ -7,8 +7,8 @@ const WA = '573024778910'
 const WA_MSG = encodeURIComponent('Hola, tengo un terreno en suelo de expansión urbana y quiero información sobre planes parciales. ¿Pueden asesorarme?')
 
 const seoConfig = {
-  title: 'Plan Parcial Colombia — Asesoría Técnica · BIC',
-  description: 'Asesoría en planes parciales de ordenamiento territorial. Ing. Rogerio Bernal — Manizales. Cumplimiento POT. Cotice sin costo.',
+  title: 'Plan Parcial Colombia — Formulación POT, COPNIA | BIC',
+  description: 'BIC formula y tramita planes parciales en Colombia. Suelo expansión urbana, cargas y beneficios, coordinación POT y curaduría. COPNIA vigente. Cotización sin costo.',
   keywords: [
     'plan parcial Colombia',
     'formulación plan parcial Colombia',

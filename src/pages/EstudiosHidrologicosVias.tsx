@@ -6,8 +6,8 @@ const WA = '573024778910'
 const WA_MSG = encodeURIComponent('Hola, necesito estudios hidrológicos para un proyecto vial — drenaje transversal, alcantarillas o diseño hidráulico de vía. ¿Pueden ayudarme?')
 
 const seoConfig = {
-  title: 'Estudios Hidrológicos para Vías en Colombia — Drenaje Vial, INVIAS y Proyectos 4G | BIC',
-  description: 'BIC elabora estudios hidrológicos e hidráulicos para vías en Colombia: diseño de drenaje transversal y longitudinal, alcantarillas, box culvert y obras de protección. Metodología INVIAS, HEC-HMS, HEC-RAS. Memorias de cálculo firmadas COPNIA para proyectos nacionales, departamentales y municipales.',
+  title: 'Estudios Hidrológicos Vías Colombia — INVIAS | BIC',
+  description: 'Estudios hidrológicos para vías en Colombia. Drenaje INVIAS, box culvert, HEC-RAS. Memorias COPNIA para proyectos nacionales y departamentales. Cotiza hoy.',
   keywords: [
     'estudios hidrológicos vías Colombia',
     'drenaje vial Colombia diseño',

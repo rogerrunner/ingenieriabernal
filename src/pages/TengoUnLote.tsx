@@ -6,8 +6,8 @@ const WA = '573024778910'
 const WA_MSG = encodeURIComponent('Hola, tengo un lote y quiero construir. No sé qué estudios de ingeniería necesito. ¿Pueden orientarme?')
 
 const seoConfig = {
-  title: 'Tengo un Lote y Quiero Construir — ¿Qué Estudios de Ingeniería Necesito? | BIC',
-  description: 'Si tiene un lote en Colombia y quiere construir, BIC le dice exactamente qué estudios técnicos necesita: ronda hídrica, amenaza sísmica, estudio de suelos, hidrosanitario y más. Orientación gratuita en 24 horas. Eje Cafetero y todo Colombia.',
+  title: 'Tengo un Lote — ¿Qué Estudios Necesito? | BIC',
+  description: 'BIC le dice qué estudios necesita su lote en Colombia: ronda hídrica, suelos, hidrosanitario. Orientación gratuita. COPNIA vigente. Eje Cafetero y Colombia.',
   keywords: [
     'tengo un lote quiero construir Colombia',
     'que estudios necesito para construir',

@@ -6,8 +6,8 @@ const WA = '573024778910'
 const WA_MSG = encodeURIComponent('Hola, quiero cotizar un proyecto de ingeniería hidráulica en Manizales')
 
 const seoConfig = {
-  title: 'Ingeniería Hidráulica Manizales | BIC Bernal Ingeniería Consultores',
-  description: 'BIC tiene su sede en Manizales. Estudios hidrológicos, diseño de acueductos, alcantarillados y modelación HEC-RAS para alcaldías, constructoras y ESP en Caldas y Eje Cafetero.',
+  title: 'Ingeniería Hidráulica Manizales — COPNIA | BIC',
+  description: 'BIC con sede en Manizales: estudios hidrológicos, acueductos, alcantarillados y modelación HEC-RAS. COPNIA vigente. Caldas y Eje Cafetero. Cotiza hoy.',
   keywords: [
     'ingeniería hidráulica Manizales',
     'consultoría hidráulica Manizales',

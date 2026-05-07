@@ -6,7 +6,7 @@ const WA = '573024778910'
 const WA_MSG = encodeURIComponent('Hola, quiero cotizar un estudio hidrológico o hidráulico en Cali')
 
 const seoConfig = {
-  title: 'Estudios hidrológicos e hidráulicos en Cali | BIC Ingeniería',
+  title: 'Ingeniería Hidráulica Cali — COPNIA, HEC-RAS | BIC',
   description: 'Estudios hidrológicos e hidráulicos en Cali y Valle del Cauca: modelación río Cauca y río Cali, riesgo hídrico POT, diseño acueductos y alcantarillado, CVC. BIC · COPNIA · UNAL.',
   keywords: [
     'estudios hidrológicos Cali',

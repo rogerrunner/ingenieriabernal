@@ -6,8 +6,8 @@ const WA = '573024778910'
 const WA_MSG = encodeURIComponent('Hola, quiero cotizar un levantamiento topográfico en Manizales')
 
 const seoConfig = {
-  title: 'Topografía en Manizales | BIC Ingeniería',
-  description: 'Levantamientos topográficos en Manizales para diseño hidráulico, licencias de construcción y estudios de suelos. +57 302 477 8910',
+  title: 'Topografía en Manizales — Diseño Hidráulico | BIC',
+  description: 'Levantamientos topográficos en Manizales para diseño hidráulico, licencias de construcción y estudios de suelos. COPNIA. Cotiza hoy. +57 302 477 8910',
   keywords: [
     'topografía Manizales',
     'levantamiento topográfico Manizales',

@@ -6,8 +6,8 @@ const WA = '573024778910'
 const WA_MSG = encodeURIComponent('Hola, quiero cotizar un proyecto de ingeniería hidráulica en Bogotá')
 
 const seoConfig = {
-  title: 'Consultoría hidráulica e hidrológica en Bogotá | BIC Ingeniería',
-  description: 'Consultoría hidráulica e hidrológica en Bogotá y Cundinamarca: POT, estudios de inundación río Bogotá, diseño de acueductos, planes parciales y riesgo hídrico. BIC · COPNIA · UNAL.',
+  title: 'Ingeniería Hidráulica Bogotá — COPNIA | BIC',
+  description: 'Consultoría hidráulica en Bogotá y Cundinamarca: inundación río Bogotá, acueductos, planes parciales y riesgo hídrico POT. BIC · COPNIA · UNAL. Cotiza hoy.',
   keywords: [
     'consultoría hidráulica Bogotá',
     'ingeniería hidráulica Bogotá',

@@ -6,7 +6,7 @@ const WA = '573024778910'
 const WA_MSG = encodeURIComponent('Hola, quiero asesoría para una Licencia de Construcción en Pereira')
 
 const seoConfig = {
-  title: 'Licencia de Construcción Pereira: Documentos Técnicos | BIC',
+  title: 'Licencia de Construcción Pereira — COPNIA | BIC',
   description: 'BIC prepara estudios técnicos para licencia de construcción en Pereira: suelos, estructural, planos. Curadurías de Pereira. +57 302 477 8910',
   keywords: [
     'licencia de construcción Pereira',

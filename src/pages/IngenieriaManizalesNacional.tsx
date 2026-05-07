@@ -6,8 +6,8 @@ const WA = '573024778910'
 const WA_MSG = encodeURIComponent('Hola, necesito ingeniería hidráulica para un proyecto en Colombia. Encontré a BIC en Manizales y quiero cotizar.')
 
 const seoConfig = {
-  title: 'Ingeniería Hidráulica en Colombia desde Manizales — BIC Bernal Ingeniería | Nacional',
-  description: 'BIC Bernal Ingeniería Consultores opera desde Manizales con ingeniería hidráulica para toda Colombia. Hidrología, HEC-RAS 2D, bocatomas, encauzamientos, PTAR y estudios ambientales para proyectos en Bogotá, Medellín, Cali, Barranquilla y todo el país. Graduados UN Manizales, 15+ años de experiencia.',
+  title: 'Ingeniería Hidráulica Colombia desde Manizales | BIC',
+  description: 'BIC opera desde Manizales con ingeniería hidráulica para toda Colombia. HEC-RAS 2D, bocatomas, PTAR. COPNIA 17202-313228. UNAL, 15 años de experiencia.',
   keywords: [
     'ingeniería hidráulica Colombia desde Manizales',
     'consultoría hidráulica nacional Colombia',

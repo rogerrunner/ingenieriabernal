@@ -6,8 +6,8 @@ const WA = '573024778910'
 const WA_MSG = encodeURIComponent('Hola, quiero cotizar una Interventoría Hidráulica en Manizales')
 
 const seoConfig = {
-  title: 'Interventoría Hidráulica en Manizales | BIC Ingeniería',
-  description: 'Interventoría técnica de obras hidráulicas en Manizales y Caldas. Acueductos, alcantarillados, canales. RAS 2000. +57 302 477 8910',
+  title: 'Interventoría Hidráulica Manizales — COPNIA | BIC',
+  description: 'Interventoría técnica de obras hidráulicas en Manizales y Caldas. Acueductos, alcantarillados, canales. RAS 2017. COPNIA vigente. Cotiza hoy. +57 302 477 8910',
   keywords: [
     'interventoría hidráulica Manizales',
     'interventoría obras acueducto Caldas',

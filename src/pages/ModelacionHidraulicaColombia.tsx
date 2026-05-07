@@ -7,8 +7,8 @@ const WA = '573024778910'
 const WA_MSG = encodeURIComponent('Hola, necesito cotizar una modelación hidráulica en Colombia. ¿Pueden ayudarme?')
 
 const seoConfig = {
-  title: 'Modelación Hidráulica en Colombia — HEC-RAS 1D y 2D | BIC Ingeniería',
-  description: 'BIC realiza modelación hidráulica con HEC-RAS 1D y 2D para estudios de inundación, licencias de urbanismo y Decreto 1807 en Colombia. Resultados verificables. Cotice en 24 horas.',
+  title: 'Modelación Hidráulica Colombia — HEC-RAS 2D | BIC',
+  description: 'Modelación hidráulica HEC-RAS 1D y 2D en Colombia para estudios de inundación y Dec. 1807. Resultados verificables. COPNIA vigente. Cotice en 24 horas.',
   keywords: [
     'modelación hidráulica Colombia',
     'HEC-RAS 2D Colombia',

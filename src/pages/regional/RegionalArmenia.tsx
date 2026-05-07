@@ -6,8 +6,8 @@ const WA = '573024778910'
 const WA_MSG = encodeURIComponent('Hola, quiero cotizar un proyecto de ingeniería hidráulica en Armenia')
 
 const seoConfig = {
-  title: 'Ingeniería Hidráulica Armenia | BIC Bernal Ingeniería Consultores',
-  description: 'Consultoría hidráulica en Armenia y Quindío. Estudios hidráulicos, formulación de proyectos de regalías (MGA-Web) y diseño de redes hidrosanitarias con cumplimiento RAS 2000.',
+  title: 'Ingeniería Hidráulica Armenia — COPNIA | BIC',
+  description: 'Consultoría hidráulica en Armenia y Quindío. Estudios hidráulicos, regalías MGA-Web y redes hidrosanitarias RAS 2017. COPNIA vigente. Cotiza sin costo hoy.',
   keywords: [
     'ingeniería hidráulica Armenia',
     'consultoría hidráulica Armenia',

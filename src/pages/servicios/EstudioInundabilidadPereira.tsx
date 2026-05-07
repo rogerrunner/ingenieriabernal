@@ -6,8 +6,8 @@ const WA = '573024778910'
 const WA_MSG = encodeURIComponent('Hola, quiero cotizar un Estudio de Inundabilidad en Pereira')
 
 const seoConfig = {
-  title: 'Estudio de Inundabilidad en Pereira | BIC Ingeniería',
-  description: 'Estudios de inundabilidad en Pereira con HEC-RAS 2D. Requerido por CARDER, POT Pereira y licencias de construcción. +57 302 477 8910',
+  title: 'Estudio Inundabilidad Pereira — HEC-RAS 2D | BIC',
+  description: 'Estudios de inundabilidad en Pereira con HEC-RAS 2D. CARDER, POT Pereira y licencias de construcción. COPNIA vigente. Cotiza hoy. +57 302 477 8910',
   keywords: [
     'estudio de inundabilidad Pereira',
     'modelación HEC-RAS 2D Pereira',

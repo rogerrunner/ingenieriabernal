@@ -7,8 +7,8 @@ const WA = '573024778910'
 const WA_MSG = encodeURIComponent('Hola, necesito un estudio de gestión del riesgo hídrico para mi proyecto')
 
 const seoConfig = {
-  title: 'Gestión del Riesgo Hídrico Colombia | BIC Bernal Ingeniería',
-  description: 'Estudios de amenaza y riesgo por inundación y avenidas torrenciales en Colombia. Decreto 1807/2014, Ley 1523/2012, PMGR municipales, mapas de amenaza hídrica. COPNIA vigente.',
+  title: 'Gestión del Riesgo Hídrico Colombia — Dec. 1807 | BIC',
+  description: 'Estudios de amenaza y riesgo por inundación en Colombia. Dec. 1807/2014, Ley 1523/2012, PMGR municipales. COPNIA 17202-313228 vigente. Cotiza sin costo.',
   keywords: [
     'gestión del riesgo hídrico Colombia',
     'estudio amenaza inundación Colombia',

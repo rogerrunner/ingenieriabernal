@@ -6,7 +6,7 @@ const WA = '573024778910'
 const WA_MSG = encodeURIComponent('Hola, quiero cotizar estudios hidráulicos en Bucaramanga')
 
 const seoConfig = {
-  title: 'Estudios hidráulicos en Bucaramanga | BIC Ingeniería',
+  title: 'Ingeniería Hidráulica Bucaramanga — COPNIA | BIC',
   description: 'Estudios hidráulicos en Bucaramanga y Santander: cañones, taludes, gestión del riesgo CDMB, diseño acueductos, planes parciales Área Metropolitana. BIC · COPNIA · UNAL.',
   keywords: [
     'estudios hidráulicos Bucaramanga',

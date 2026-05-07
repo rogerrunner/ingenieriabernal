@@ -6,8 +6,8 @@ const WA = '573024778910'
 const WA_MSG = encodeURIComponent('Hola, quiero cotizar un proyecto de ingeniería hidráulica en el Eje Cafetero')
 
 const seoConfig = {
-  title: 'Consultoría Hidráulica Eje Cafetero | BIC Bernal Ingeniería Consultores',
-  description: 'BIC opera en todo el Eje Cafetero — Caldas, Risaralda y Quindío. Consultoría integral en ingeniería hidráulica, sanitaria y ambiental para infraestructura pública y privada.',
+  title: 'Consultoría Hidráulica Eje Cafetero — COPNIA | BIC',
+  description: 'BIC opera en todo el Eje Cafetero — Caldas, Risaralda y Quindío. Ingeniería hidráulica, sanitaria y ambiental. COPNIA vigente. Solicita cotización sin costo.',
   keywords: [
     'consultoría hidráulica Eje Cafetero',
     'estudios hidrológicos Eje Cafetero',

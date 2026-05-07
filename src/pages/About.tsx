@@ -31,7 +31,7 @@ export default function About() {
   const { ref, inView } = useInView(0.05)
 
   useEffect(() => {
-    document.title = 'Director — Rogerio Bernal Ríos | BIC Bernal Ingeniería Consultores'
+    document.title = 'Rogerio Bernal Ríos — Director BIC, COPNIA | BIC'
     const meta = document.querySelector('meta[name="description"]')
     if (meta) meta.setAttribute('content',
       'Rogerio Bernal Ríos — Director General de BIC. Ing. Civil Especialista en Hidráulica y Ambiental UNAL. COPNIA 17202-313228. 10+ años, Colombia, Ecuador y México.'

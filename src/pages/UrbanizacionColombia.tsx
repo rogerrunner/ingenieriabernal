@@ -6,8 +6,8 @@ const WA = '573024778910'
 const WA_MSG = encodeURIComponent('Hola, quiero información sobre ingeniería para mi proyecto de urbanización en Colombia')
 
 const seoConfig = {
-  title: 'Ingeniería para Urbanizaciones en Colombia | BIC Bernal Ingeniería',
-  description: 'BIC diseña las redes hidrosanitarias, estudios de riesgo hídrico y sistemas contra incendios para urbanizaciones en Colombia. Conjuntos residenciales, parques industriales, centros comerciales. Resolución 0330/2017, Decreto 1807/2014. Cotice en 24 horas.',
+  title: 'Urbanizaciones Colombia — Diseño Hidráulico | BIC',
+  description: 'BIC diseña redes hidrosanitarias, riesgo hídrico y CI para urbanizaciones en Colombia. Res. 0330/2017, Dec. 1807. COPNIA vigente. Cotice en 24 horas.',
   keywords: [
     'urbanización Colombia ingeniería',
     'cómo hacer una urbanización en Colombia',

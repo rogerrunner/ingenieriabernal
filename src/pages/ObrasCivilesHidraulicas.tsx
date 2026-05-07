@@ -6,8 +6,8 @@ const WA = '573024778910'
 const WA_MSG = encodeURIComponent('Hola, necesito cotizar obras civiles hidráulicas — diseño o interventoría. ¿Pueden ayudarme?')
 
 const seoConfig = {
-  title: 'Obras Civiles Hidráulicas en Colombia — Diseño, Modelación e Interventoría | BIC',
-  description: 'BIC diseña y hace interventoría de obras civiles hidráulicas en Colombia: encauzamientos, diques, gaviones, disipadores de energía, box culvert, alcantarillas y estructuras de control de crecientes. HEC-RAS 2D, planos AutoCAD, firma COPNIA. Eje Cafetero y todo el país.',
+  title: 'Obras Civiles Hidráulicas Colombia — COPNIA | BIC',
+  description: 'Diseño e interventoría de obras civiles hidráulicas en Colombia: encauzamientos, diques, gaviones. HEC-RAS 2D, firma COPNIA. Eje Cafetero y Colombia. Cotiza.',
   keywords: [
     'obras civiles hidráulicas Colombia',
     'diseño obras hidráulicas Colombia',
