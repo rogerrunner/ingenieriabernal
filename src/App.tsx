@@ -93,6 +93,7 @@ const ServicioAcueductoQuindio = lazy(() => import('./pages/ServicioAcueductoQui
 const ServicioEstudioSuelosPereira = lazy(() => import('./pages/ServicioEstudioSuelosPereira'))
 const ServicioPTAPColombia = lazy(() => import('./pages/ServicioPTAPColombia'))
 const ServicioAguasLluviasManizales = lazy(() => import('./pages/ServicioAguasLluviasManizales'))
+const HydraulicEngineerEnglish = lazy(() => import('./pages/HydraulicEngineerEnglish'))
 
 function ScrollToTop() {
   const [location] = useLocation()
@@ -355,6 +356,7 @@ export default function App() {
           <Route path="/ingeniero-hidraulico-manizales" component={IngenieroHidraulicoManizales} />
 
           <Route path="/calculadora-estudios-hidraulicos" component={CalculadoraHidraulica} />
+          <Route path="/hydraulic-engineering-consulting" component={HydraulicEngineerEnglish} />
 
           {/* ── PÁGINAS GEOGRÁFICAS DE SERVICIO — mayo 2026 ── */}
           <Route path="/modelacion-hidraulica-putumayo" component={ServicioModelacionHidraulicaPutumayo} />
