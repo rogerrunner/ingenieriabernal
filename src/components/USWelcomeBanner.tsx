@@ -19,8 +19,6 @@ export default function USWelcomeBanner() {
     setVisible(false)
   }
 
-  if (!visible) return null
-
   return (
     <div
       role="banner"
@@ -39,6 +37,11 @@ export default function USWelcomeBanner() {
         lineHeight: 1.4,
         flexWrap: 'wrap',
         minHeight: '2.4rem',
+        overflow: 'hidden',
+        maxHeight: visible ? '6rem' : '0',
+        paddingTop: visible ? '0.55rem' : '0',
+        paddingBottom: visible ? '0.55rem' : '0',
+        transition: 'none',
       }}
     >
       {/* Message + CTA */}

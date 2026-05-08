@@ -14,9 +14,9 @@ const LINKS = [
 const SERVICES_SUBMENU = [
   { label: 'Estudios Hidrológicos', path: '/servicios/estudios-hidrologicos' },
   { label: 'Modelación HEC-RAS 2D', path: '/servicios/modelacion-hec-ras' },
-  { label: 'Diseño Acueducto y Alcantarillado', path: '/servicios/acueducto-alcantarillado' },
+  { label: 'Diseño Acueducto y Alcantarillado', path: '/servicios/diseno-acueductos' },
   { label: 'Redes Hidrosanitarias', path: '/servicios/redes-hidrosanitarias' },
-  { label: 'Sistemas Contra Incendio NSR-10', path: '/servicios/sistemas-contra-incendio' },
+  { label: 'Sistemas Contra Incendio NSR-10', path: '/servicios/contra-incendios-nsr10' },
   { label: 'Interventoría Técnica Hidráulica', path: '/servicios/interventoria' },
   { label: 'Formulación Regalías MGA-Web', path: '/servicios/regalias-mga' },
   { label: 'Estudios Geotécnicos', path: '/servicios/geotecnia' },

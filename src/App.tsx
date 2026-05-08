@@ -28,9 +28,7 @@ const EjeCafetero = lazy(() => import('./pages/EjeCafetero'))
 const Antioquia = lazy(() => import('./pages/Antioquia'))
 const ServicioEstudiosHidrologicos = lazy(() => import('./pages/ServicioEstudiosHidrologicos'))
 const ServicioModelacionHecRas = lazy(() => import('./pages/ServicioModelacionHecRas'))
-const ServicioAcueductoAlcantarillado = lazy(() => import('./pages/ServicioAcueductoAlcantarillado'))
 const ServicioRedesHidrosanitarias = lazy(() => import('./pages/ServicioRedesHidrosanitarias'))
-const ServicioSistemasContraIncendio = lazy(() => import('./pages/ServicioSistemasContraIncendio'))
 const ServicioInterventoria = lazy(() => import('./pages/ServicioInterventoria'))
 const ServicioRegaliasMga = lazy(() => import('./pages/ServicioRegaliasMga'))
 const ConsultoriaMunicipiosSGR = lazy(() => import('./pages/ConsultoriaMunicipiosSGR'))
@@ -310,15 +308,7 @@ export default function App() {
           <Route path="/servicios/estudio-inundabilidad-manizales" component={EstudioInundabilidadManizales} />
           <Route path="/servicios/estudios-hidrologicos" component={ServicioEstudiosHidrologicos} />
           <Route path="/servicios/modelacion-hec-ras" component={ServicioModelacionHecRas} />
-          {/* Consolidación: acueducto-alcantarillado → diseno-acueductos (evita canibalización) */}
-          <Route path="/servicios/acueducto-alcantarillado">
-            <Redirect to="/servicios/diseno-acueductos" />
-          </Route>
           <Route path="/servicios/redes-hidrosanitarias" component={ServicioRedesHidrosanitarias} />
-          {/* Consolidación: sistemas-contra-incendio → contra-incendios-nsr10 (evita canibalización) */}
-          <Route path="/servicios/sistemas-contra-incendio">
-            <Redirect to="/servicios/contra-incendios-nsr10" />
-          </Route>
           <Route path="/servicios/interventoria" component={ServicioInterventoria} />
           <Route path="/servicios/regalias-mga" component={ServicioRegaliasMga} />
           <Route path="/consultoria-municipios-sgr" component={ConsultoriaMunicipiosSGR} />

@@ -16,7 +16,9 @@
     { "source": "/diseno-hidrosanitario-nsr10",        "destination": "/servicios/redes-hidrosanitarias",        "permanent": true },
     { "source": "/estudios-inundacion-colombia",       "destination": "/servicios/estudios-hidrologicos",        "permanent": true },
     { "source": "/acueductos-alcantarillados",         "destination": "/servicios/acueducto-alcantarillado",     "permanent": true },
-    { "source": "/regalias-mga-web",                   "destination": "/servicios/regalias-mga",                 "permanent": true }
+    { "source": "/regalias-mga-web",                   "destination": "/servicios/regalias-mga",                 "permanent": true },
+    { "source": "/servicios/acueducto-alcantarillado", "destination": "/servicios/diseno-acueductos",            "permanent": true },
+    { "source": "/servicios/sistemas-contra-incendio", "destination": "/servicios/contra-incendios-nsr10",       "permanent": true }
   ],
   "rewrites": [
     { "source": "/BingSiteAuth.xml", "destination": "/BingSiteAuth.xml" },

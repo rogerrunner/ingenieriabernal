@@ -78,7 +78,7 @@ export default function Home() {
     <>
       <SchemaMarkup type="home" />
       {/* ── HERO */}
-      <section style={{ background: 'linear-gradient(135deg, #002A50 0%, #003B6F 60%, #004F96 100%)', padding: '130px 40px 80px', position: 'relative', overflow: 'hidden' }}>
+      <section style={{ background: 'linear-gradient(135deg, #002A50 0%, #003B6F 60%, #004F96 100%)', padding: 'clamp(90px, 12vw, 130px) 20px 60px', position: 'relative', overflow: 'hidden' }}>
         <BlueprintBg opacity={0.07} />
         <div className="container" style={{ position: 'relative', maxWidth: 960 }}>
           <div style={{ display: 'flex', gap: 8, flexWrap: 'wrap', marginBottom: 20 }}>
@@ -101,7 +101,7 @@ export default function Home() {
                 <span style={{ fontSize: '1.3rem', flexShrink: 0 }}>{d.icon}</span>
                 <div>
                   <p style={{ color: '#17A2B8', fontWeight: 700, fontSize: 12, margin: '0 0 3px' }}>{d.title}</p>
-                  <p style={{ color: 'rgba(255,255,255,0.6)', fontSize: 11, margin: 0, lineHeight: 1.5 }}>{d.desc}</p>
+                  <p style={{ color: 'rgba(255,255,255,0.6)', fontSize: 12, margin: 0, lineHeight: 1.5 }}>{d.desc}</p>
                 </div>
               </div>
             ))}
@@ -120,7 +120,7 @@ export default function Home() {
 
       {/* ── STATS */}
       <section style={{ background: '#002A50', padding: '40px 40px' }}>
-        <div className="container" style={{ display: 'grid', gridTemplateColumns: 'repeat(4, 1fr)', gap: '2rem', maxWidth: 860, margin: '0 auto' }}>
+        <div className="container" style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(160px, 1fr))', gap: '2rem', maxWidth: 860, margin: '0 auto' }}>
           {STATS.map(s => <StatCounter key={s.label} {...s} />)}
         </div>
       </section>
@@ -240,7 +240,7 @@ export default function Home() {
             {PROJECTS_PREVIEW.map(p => (
               <div key={p.title} style={{ background: '#fff', border: '1px solid #e0edf5', borderRadius: 10, padding: '1.4rem', borderLeft: `4px solid #17A2B8` }}>
                 <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', marginBottom: 8 }}>
-                  <Tag style={{ fontSize: 11, background: '#f0f7fa', color: '#003B6F', border: '1px solid #deedf5' }}>{p.dept} · {p.year}</Tag>
+                  <Tag style={{ fontSize: 12, background: '#f0f7fa', color: '#003B6F', border: '1px solid #deedf5' }}>{p.dept} · {p.year}</Tag>
                 </div>
                 <h3 style={{ fontFamily: "'Montserrat', sans-serif", fontWeight: 700, fontSize: 14, color: '#003B6F', margin: '0 0 4px' }}>{p.title}</h3>
                 <p style={{ fontSize: 12, color: '#17A2B8', fontWeight: 600, margin: '0 0 6px' }}>{p.type}</p>
@@ -272,7 +272,7 @@ export default function Home() {
           </div>
           <div style={{ display: 'flex', gap: 8, justifyContent: 'center', flexWrap: 'wrap' }}>
             {['BIC — Equipo Multidisciplinario', 'UNAL', '', '10+ años', 'Colombia · Ecuador · México'].map(b => (
-              <Tag key={b} style={{ fontSize: 11 }}>{b}</Tag>
+              <Tag key={b} style={{ fontSize: 12 }}>{b}</Tag>
             ))}
           </div>
         </div>
