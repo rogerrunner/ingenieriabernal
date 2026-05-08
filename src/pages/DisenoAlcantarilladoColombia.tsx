@@ -277,7 +277,7 @@ export default function DisenoAlcantarilladoColombia() {
           </h2>
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))', gap: 14 }}>
             {[
-              { label: 'Diseño de acueducto Colombia', href: '/servicios/acueducto-alcantarillado' },
+              { label: 'Diseño de acueducto Colombia', href: '/servicios/diseno-acueductos' },
               { label: 'Diseño de PTAR Colombia', href: '/diseno-ptar-colombia' },
               { label: 'Urbanizaciones Colombia', href: '/urbanizacion-colombia' },
               { label: 'Licencia de urbanismo', href: '/licencia-de-urbanismo' },

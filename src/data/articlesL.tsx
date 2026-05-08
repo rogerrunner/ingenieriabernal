@@ -39,6 +39,7 @@ const articlesL: Record<string, {
       <p>Con base en proyectos ejecutados en el Eje Cafetero y el resto del país, los rangos típicos para 2026 son:</p>
       <div style={{overflowX:'auto'}}>
         <table style={{width:'100%',borderCollapse:'collapse',fontSize:'0.95rem'}}>
+                    <caption style={{position:'absolute',left:'-9999px'}}>Rangos precio estudio HEC-RAS Colombia 2026</caption>
           <thead>
             <tr style={{background:'#EBF5F9'}}>
               <th style={{padding:'8px 12px',textAlign:'left',borderBottom:'2px solid #003B6F'}}>Tipo de estudio</th>
@@ -140,6 +141,7 @@ const articlesL: Record<string, {
       <h2>Resumen: ¿qué consigue quién y en cuánto tiempo?</h2>
       <div style={{overflowX:'auto'}}>
         <table style={{width:'100%',borderCollapse:'collapse',fontSize:'0.95rem'}}>
+                    <caption style={{position:'absolute',left:'-9999px'}}>Comparativa documentos acueducto veredal Colombia</caption>
           <thead>
             <tr style={{background:'#EBF5F9'}}>
               <th style={{padding:'8px 12px',textAlign:'left',borderBottom:'2px solid #003B6F'}}>Documento</th>

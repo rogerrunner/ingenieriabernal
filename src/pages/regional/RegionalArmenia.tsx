@@ -42,12 +42,12 @@ const SCHEMA = {
 
 const SERVICIOS = [
   { nombre: 'Estudios Hidrológicos', href: '/servicios/estudios-hidrologicos', desc: 'Análisis de cuencas, curvas IDF y caudales de diseño para proyectos en el Quindío.' },
-  { nombre: 'Diseño Acueducto y Alcantarillado', href: '/servicios/acueducto-alcantarillado', desc: 'Diseño bajo RAS 2000/2017 y Resolución 0330/2017 para municipios y ESP quindíanos.' },
+  { nombre: 'Diseño Acueducto y Alcantarillado', href: '/servicios/diseno-acueductos', desc: 'Diseño bajo RAS 2000/2017 y Resolución 0330/2017 para municipios y ESP quindíanos.' },
   { nombre: 'Formulación Proyectos Regalías (MGA-Web)', href: '/servicios/regalias-mga', desc: 'Estructuración de proyectos de agua potable y saneamiento para el SGR en Armenia y Quindío.' },
   { nombre: 'Redes Hidrosanitarias', href: '/servicios/redes-hidrosanitarias', desc: 'Diseño de instalaciones hidrosanitarias NSR-10 para edificaciones residenciales y comerciales en Armenia.' },
   { nombre: 'Modelación HEC-RAS', href: '/servicios/modelacion-hec-ras', desc: 'Manchas de inundación y estudios de amenaza hídrica para el POT de Armenia y municipios del Quindío.' },
   { nombre: 'Estudios Geotécnicos', href: '/servicios/geotecnia', desc: 'Análisis de suelos para fundaciones y estabilidad de taludes en el Quindío.' },
-  { nombre: 'Sistemas Contra Incendio NSR-10', href: '/servicios/sistemas-contra-incendio', desc: 'Diseño de redes CI para proyectos comerciales e industriales en Armenia.' },
+  { nombre: 'Sistemas Contra Incendio NSR-10', href: '/servicios/contra-incendios-nsr10', desc: 'Diseño de redes CI para proyectos comerciales e industriales en Armenia.' },
   { nombre: 'Estudios Ambientales', href: '/servicios/ambiental', desc: 'Permisos de vertimientos, concesiones de agua y trámites ante CRQ (Corporación Autónoma Regional del Quindío).' },
 ]
 

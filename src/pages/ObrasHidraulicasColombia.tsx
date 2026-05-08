@@ -373,6 +373,7 @@ export default function ObrasHidraulicasColombia() {
           </h2>
           <div style={{ overflowX: 'auto' }}>
             <table style={{ width: '100%', borderCollapse: 'collapse', fontSize: 14 }}>
+                            <caption style={{position:'absolute',left:'-9999px'}}>Normativa obras hidraulicas Colombia</caption>
               <thead>
                 <tr style={{ background: '#002A50', color: '#fff' }}>
                   <th style={{ padding: '12px 16px', textAlign: 'left', fontWeight: 700 }}>Norma</th>

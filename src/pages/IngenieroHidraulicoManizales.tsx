@@ -48,10 +48,10 @@ const SCHEMA = {
 }
 
 const SERVICIOS = [
-  { nombre: 'Diseño de Acueductos Rurales y Veredales', href: '/servicios/acueducto-alcantarillado', desc: 'Sistemas de agua potable bajo RAS 2017 y Resolución 0330/2017 para comunidades veredales, municipios y ESP de Caldas.' },
-  { nombre: 'Diseño de PTAP para Comunidades Pequeñas', href: '/servicios/acueducto-alcantarillado', desc: 'Plantas de tratamiento de agua potable dimensionadas para acueductos rurales con caudales menores a 5 L/s.' },
+  { nombre: 'Diseño de Acueductos Rurales y Veredales', href: '/servicios/diseno-acueductos', desc: 'Sistemas de agua potable bajo RAS 2017 y Resolución 0330/2017 para comunidades veredales, municipios y ESP de Caldas.' },
+  { nombre: 'Diseño de PTAP para Comunidades Pequeñas', href: '/servicios/diseno-acueductos', desc: 'Plantas de tratamiento de agua potable dimensionadas para acueductos rurales con caudales menores a 5 L/s.' },
   { nombre: 'Modelación HEC-RAS 1D/2D', href: '/servicios/modelacion-hec-ras', desc: 'Estudios de inundabilidad, manchas de amenaza hídrica y socavación para POT, POMCA y licencias ambientales en Caldas.' },
-  { nombre: 'Redes Contra Incendio NSR-10 / NFPA', href: '/servicios/sistemas-contra-incendio', desc: 'Diseño de sistemas CI bajo NSR-10 Título J, NFPA 13 y NFPA 14 para edificaciones residenciales, comerciales e industriales.' },
+  { nombre: 'Redes Contra Incendio NSR-10 / NFPA', href: '/servicios/contra-incendios-nsr10', desc: 'Diseño de sistemas CI bajo NSR-10 Título J, NFPA 13 y NFPA 14 para edificaciones residenciales, comerciales e industriales.' },
   { nombre: 'Formulación de Proyectos SGR (MGA-Web)', href: '/servicios/regalias-mga', desc: 'Estructuración de proyectos de agua potable y saneamiento básico para el Sistema General de Regalías en municipios de Caldas y el Eje Cafetero.' },
   { nombre: 'Estudios Hidrológicos para POMCA y Licencias', href: '/servicios/estudios-hidrologicos', desc: 'Análisis de cuencas, curvas IDF, caudales de diseño y períodos de retorno exigidos por CORPOCALDAS y autoridades ambientales.' },
 ]

@@ -20,7 +20,7 @@ const DIFFERENTIATORS = [
 const SERVICES_PREVIEW = [
   { icon: '💧', title: 'Hidrosanitario y CI', desc: 'NSR-10 J/K · NTC 1500/1669/2301', href: '/servicios/redes-hidrosanitarias' },
   { icon: '🌊', title: 'Modelación HEC-RAS 2D', desc: 'Inundaciones · Torrencialidad · Riesgo', href: '/servicios/modelacion-hec-ras' },
-  { icon: '🔧', title: 'Acueducto y Alcantarillado', desc: 'Res. 0330/2017 · EPANET · RAS 2017', href: '/servicios/acueducto-alcantarillado' },
+  { icon: '🔧', title: 'Acueducto y Alcantarillado', desc: 'Res. 0330/2017 · EPANET · RAS 2017', href: '/servicios/diseno-acueductos' },
   { icon: '⚠️', title: 'Gestión del Riesgo / POT', desc: 'Decreto 1807/2014 · ArcGIS · POMCA', href: '/gestion-riesgo-hidrico' },
   { icon: '🏭', title: 'PTAP y PTAR', desc: 'Plantas tratamiento agua potable y residual', href: '/servicios/diseno-acueductos' },
   { icon: '📐', title: 'Topobatimetría', desc: 'Levantamientos · MDT · Secciones HEC-RAS', href: '/servicios' },
@@ -250,6 +250,32 @@ export default function Home() {
           </div>
           <div style={{ textAlign: 'center' }}>
             <Btn href="/proyectos">Ver portafolio completo →</Btn>
+          </div>
+        </div>
+      </Section>
+
+      {/* ── COBERTURA NACIONAL */}
+      <Section bg="#F0F7FB" style={{ padding: '56px 40px' }}>
+        <div style={{ maxWidth: 960, margin: '0 auto' }}>
+          <SectionLabel>Cobertura nacional</SectionLabel>
+          <h2 style={{ fontFamily: "'Playfair Display', serif", fontWeight: 700, color: '#003B6F', fontSize: 'clamp(20px, 3vw, 30px)', margin: '1.2rem 0 2rem' }}>
+            Ingeniería hidráulica en las principales ciudades de Colombia
+          </h2>
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(200px, 1fr))', gap: 12 }}>
+            {[
+              { city: 'Bogotá', href: '/ingenieria-bogota' },
+              { city: 'Medellín', href: '/ingenieria-medellin' },
+              { city: 'Cali', href: '/ingenieria-cali' },
+              { city: 'Manizales', href: '/ingenieria-manizales' },
+              { city: 'Bucaramanga', href: '/ingenieria-bucaramanga' },
+              { city: 'Barranquilla', href: '/ingenieria-barranquilla' },
+              { city: 'Eje Cafetero', href: '/ingenieria-eje-cafetero' },
+              { city: 'Antioquia', href: '/ingenieria-antioquia' },
+            ].map(({ city, href }) => (
+              <a key={href} href={href} style={{ display: 'block', background: '#fff', border: '1px solid #D3E6F0', borderRadius: 6, padding: '14px 18px', textDecoration: 'none', color: '#003B6F', fontFamily: "'Montserrat', sans-serif", fontWeight: 600, fontSize: 14, transition: 'border-color 0.2s' }}>
+                {city}
+              </a>
+            ))}
           </div>
         </div>
       </Section>

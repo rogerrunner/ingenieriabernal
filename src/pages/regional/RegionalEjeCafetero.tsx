@@ -43,9 +43,9 @@ const SCHEMA = {
 const SERVICIOS = [
   { nombre: 'Estudios Hidrológicos', href: '/servicios/estudios-hidrologicos', desc: 'Análisis de cuencas, curvas IDF, caudales de diseño y estudios de frecuencias para proyectos en los tres departamentos.' },
   { nombre: 'Modelación HEC-RAS', href: '/servicios/modelacion-hec-ras', desc: 'Modelación hidráulica 1D y 2D para amenaza hídrica, inundaciones y torrencialidad en la región andina cafetera.' },
-  { nombre: 'Diseño Acueducto y Alcantarillado', href: '/servicios/acueducto-alcantarillado', desc: 'Sistemas de agua potable y saneamiento bajo RAS 2017 para municipios, ESP y constructoras del Eje.' },
+  { nombre: 'Diseño Acueducto y Alcantarillado', href: '/servicios/diseno-acueductos', desc: 'Sistemas de agua potable y saneamiento bajo RAS 2017 para municipios, ESP y constructoras del Eje.' },
   { nombre: 'Redes Hidrosanitarias', href: '/servicios/redes-hidrosanitarias', desc: 'Diseño de instalaciones hidrosanitarias NSR-10 para proyectos residenciales, comerciales e industriales.' },
-  { nombre: 'Sistemas Contra Incendio NSR-10', href: '/servicios/sistemas-contra-incendio', desc: 'Diseño de redes CI para centros comerciales, bodegas e industrias en Caldas, Risaralda y Quindío.' },
+  { nombre: 'Sistemas Contra Incendio NSR-10', href: '/servicios/contra-incendios-nsr10', desc: 'Diseño de redes CI para centros comerciales, bodegas e industrias en Caldas, Risaralda y Quindío.' },
   { nombre: 'Interventoría Técnica Hidráulica', href: '/servicios/interventoria', desc: 'Supervisión técnica de contratos de obra para entidades públicas y privadas en toda la región.' },
   { nombre: 'Formulación Proyectos Regalías (MGA-Web)', href: '/servicios/regalias-mga', desc: 'Estructuración de proyectos SGR en agua potable, saneamiento y gestión del riesgo para municipios del Eje Cafetero.' },
   { nombre: 'Estudios Ambientales', href: '/servicios/ambiental', desc: 'Permisos ambientales y trámites ante CORPOCALDAS, CARDER y CRQ para proyectos hídricos en la región.' },

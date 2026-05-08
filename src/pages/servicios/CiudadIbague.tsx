@@ -67,7 +67,7 @@ const SERVICIOS = [
   },
   {
     nombre: 'Diseño acueducto y alcantarillado',
-    href: '/servicios/acueducto-alcantarillado',
+    href: '/servicios/diseno-acueductos',
     desc: 'Diseño de sistemas de agua potable y saneamiento bajo Res. 0330/2017 para municipios y proyectos privados en el Tolima, coordinando con IBAL Ibagué y ESP municipales.',
   },
   {

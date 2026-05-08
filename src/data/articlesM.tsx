@@ -134,6 +134,7 @@ const articlesM: Record<string, {
       <h2>Tabla comparativa de materiales</h2>
       <div style={{overflowX:'auto'}}>
         <table style={{width:'100%',borderCollapse:'collapse',fontSize:'0.95rem'}}>
+                    <caption style={{position:'absolute',left:'-9999px'}}>Tabla comparativa materiales tuberia acueducto</caption>
           <thead>
             <tr style={{background:'#EBF5F9'}}>
               <th style={{padding:'8px 12px',textAlign:'left',borderBottom:'2px solid #003B6F'}}>Material</th>
@@ -262,6 +263,7 @@ const articlesM: Record<string, {
       <h2>Niveles de riesgo IRCA y su significado</h2>
       <div style={{overflowX:'auto'}}>
         <table style={{width:'100%',borderCollapse:'collapse',fontSize:'0.95rem'}}>
+                    <caption style={{position:'absolute',left:'-9999px'}}>Niveles de riesgo IRCA calidad agua potable Colombia</caption>
           <thead>
             <tr style={{background:'#EBF5F9'}}>
               <th style={{padding:'8px 12px',textAlign:'left',borderBottom:'2px solid #003B6F'}}>Nivel</th>

@@ -42,7 +42,7 @@ const SCHEMA = {
 
 const SERVICIOS = [
   { nombre: 'Estudios Hidrológicos', href: '/servicios/estudios-hidrologicos', desc: 'Análisis de cuencas, curvas IDF y caudales de diseño para cuencas caldenses.' },
-  { nombre: 'Diseño Acueducto y Alcantarillado', href: '/servicios/acueducto-alcantarillado', desc: 'Diseño bajo RAS 2017 y Resolución 0330/2017 para municipios y ESP de Caldas.' },
+  { nombre: 'Diseño Acueducto y Alcantarillado', href: '/servicios/diseno-acueductos', desc: 'Diseño bajo RAS 2017 y Resolución 0330/2017 para municipios y ESP de Caldas.' },
   { nombre: 'Modelación HEC-RAS', href: '/servicios/modelacion-hec-ras', desc: 'Manchas de inundación y amenaza hídrica para el POT de Manizales y municipios vecinos.' },
   { nombre: 'Redes Hidrosanitarias', href: '/servicios/redes-hidrosanitarias', desc: 'Diseño de instalaciones hidrosanitarias para proyectos residenciales y comerciales en Manizales.' },
   { nombre: 'Interventoría Técnica Hidráulica', href: '/servicios/interventoria', desc: 'Supervisión técnica de contratos de obra financiados con SGR o recursos propios.' },

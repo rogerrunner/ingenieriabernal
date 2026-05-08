@@ -238,7 +238,7 @@ const RELACIONADOS = [
   { href: '/gestion-riesgo-hidrico', label: '⚠️ Gestión del riesgo hídrico Decreto 1807' },
   { href: '/ingenieria-proyectos-urbanisticos-colombia', label: '🏗️ Ingeniería para proyectos urbanísticos' },
   { href: '/servicios/redes-hidrosanitarias', label: '💧 Redes hidrosanitarias' },
-  { href: '/servicios/acueducto-alcantarillado', label: '🔧 Acueducto y alcantarillado' },
+  { href: '/servicios/diseno-acueductos', label: '🔧 Acueducto y alcantarillado' },
 ]
 
 export default function LicenciaUrbanismo() {
@@ -471,6 +471,7 @@ export default function LicenciaUrbanismo() {
           </h2>
           <div style={{ overflowX: 'auto' }}>
             <table style={{ width: '100%', borderCollapse: 'collapse', fontSize: 14 }}>
+                            <caption style={{position:'absolute',left:'-9999px'}}>Normativa licencias de urbanismo Colombia</caption>
               <thead>
                 <tr style={{ background: '#002A50', color: '#fff' }}>
                   <th style={{ padding: '12px 16px', textAlign: 'left', fontWeight: 700 }}>Norma</th>

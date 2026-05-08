@@ -41,8 +41,8 @@ const SCHEMA = {
 }
 
 const SERVICIOS = [
-  { nombre: 'Diseño Acueducto y Alcantarillado', href: '/servicios/acueducto-alcantarillado', desc: 'Sistemas de agua potable y saneamiento bajo RAS 2017 para municipios y ESP de Risaralda.' },
-  { nombre: 'Sistemas Contra Incendio NSR-10', href: '/servicios/sistemas-contra-incendio', desc: 'Diseño de redes CI para centros comerciales, plantas industriales y bodegas en Pereira.' },
+  { nombre: 'Diseño Acueducto y Alcantarillado', href: '/servicios/diseno-acueductos', desc: 'Sistemas de agua potable y saneamiento bajo RAS 2017 para municipios y ESP de Risaralda.' },
+  { nombre: 'Sistemas Contra Incendio NSR-10', href: '/servicios/contra-incendios-nsr10', desc: 'Diseño de redes CI para centros comerciales, plantas industriales y bodegas en Pereira.' },
   { nombre: 'Modelación HEC-RAS', href: '/servicios/modelacion-hec-ras', desc: 'Estudios de inundación y manchas de amenaza hídrica para el POT de Pereira y municipios risaraldenses.' },
   { nombre: 'Redes Hidrosanitarias', href: '/servicios/redes-hidrosanitarias', desc: 'Diseño de instalaciones hidrosanitarias para proyectos residenciales, comerciales e industriales en Risaralda.' },
   { nombre: 'Estudios Hidrológicos', href: '/servicios/estudios-hidrologicos', desc: 'Análisis de cuencas, curvas IDF y caudales de diseño para proyectos en Risaralda.' },

@@ -29,6 +29,7 @@ const articlesN: Record<string, {
       <h2>Diferencia entre interventoría y supervisión</h2>
       <p>Confundir estos dos conceptos tiene consecuencias jurídicas y financieras:</p>
       <table style={{width:'100%',borderCollapse:'collapse',fontSize:14,marginBottom:'1.2rem'}}>
+                <caption style={{position:'absolute',left:'-9999px'}}>Diferencias interventoria y supervision de obra</caption>
         <thead>
           <tr style={{background:'#003B6F',color:'#fff'}}>
             <th style={{padding:'8px 12px',textAlign:'left'}}>Aspecto</th>
@@ -82,6 +83,7 @@ const articlesN: Record<string, {
       <h2>Entregables típicos de una interventoría hidráulica</h2>
       <p>El contrato de interventoría debe especificar claramente qué documentos debe producir el interventor. Los entregables estándar incluyen:</p>
       <table style={{width:'100%',borderCollapse:'collapse',fontSize:14,marginBottom:'1.2rem'}}>
+                <caption style={{position:'absolute',left:'-9999px'}}>Entregables interventoria hidraulica Colombia</caption>
         <thead>
           <tr style={{background:'#003B6F',color:'#fff'}}>
             <th style={{padding:'8px 12px',textAlign:'left'}}>Entregable</th>
@@ -126,6 +128,7 @@ const articlesN: Record<string, {
       <h2>¿Cuánto cuesta la interventoría de una obra hidráulica?</h2>
       <p>El honorario de interventoría se expresa usualmente como un porcentaje del valor del contrato de obra vigilado. Los rangos habituales en Colombia para obras de acueducto y alcantarillado son:</p>
       <table style={{width:'100%',borderCollapse:'collapse',fontSize:14,marginBottom:'1.2rem'}}>
+                <caption style={{position:'absolute',left:'-9999px'}}>Costos interventoria obras hidraulicas 2026</caption>
         <thead>
           <tr style={{background:'#003B6F',color:'#fff'}}>
             <th style={{padding:'8px 12px',textAlign:'left'}}>Valor de la obra</th>
@@ -197,6 +200,7 @@ const articlesN: Record<string, {
 
       <h2>Tabla de rangos de precio por capacidad (2026)</h2>
       <table style={{width:'100%',borderCollapse:'collapse',fontSize:14,marginBottom:'1.2rem'}}>
+                <caption style={{position:'absolute',left:'-9999px'}}>Rangos precio diseno PTAP veredal 2026</caption>
         <thead>
           <tr style={{background:'#003B6F',color:'#fff'}}>
             <th style={{padding:'8px 12px',textAlign:'left'}}>Población a servir</th>
@@ -311,6 +315,7 @@ const articlesN: Record<string, {
 
       <h2>Mapas de amenaza por inundación: períodos de retorno</h2>
       <table style={{width:'100%',borderCollapse:'collapse',fontSize:14,marginBottom:'1.2rem'}}>
+                <caption style={{position:'absolute',left:'-9999px'}}>Mapas amenaza inundacion periodos de retorno POMCA</caption>
         <thead>
           <tr style={{background:'#003B6F',color:'#fff'}}>
             <th style={{padding:'8px 12px',textAlign:'left'}}>Período de retorno</th>
@@ -390,6 +395,7 @@ const articlesN: Record<string, {
 
       <h2>Diferencia entre índice básico, máximo e índice en altura</h2>
       <table style={{width:'100%',borderCollapse:'collapse',fontSize:14,marginBottom:'1.2rem'}}>
+                <caption style={{position:'absolute',left:'-9999px'}}>Indices edificabilidad basico maximo en altura</caption>
         <thead>
           <tr style={{background:'#003B6F',color:'#fff'}}>
             <th style={{padding:'8px 12px',textAlign:'left'}}>Tipo</th>
@@ -420,6 +426,7 @@ const articlesN: Record<string, {
       <h2>Ejemplo de cálculo para un lote en suelo urbano en Manizales</h2>
       <p>Suponga un lote de <strong>500 m²</strong> ubicado en un polígono de tratamiento de <em>Consolidación con Densificación Moderada</em> en Manizales, con los siguientes parámetros urbanísticos según el POT vigente:</p>
       <table style={{width:'100%',borderCollapse:'collapse',fontSize:14,marginBottom:'1.2rem'}}>
+                <caption style={{position:'absolute',left:'-9999px'}}>Ejemplo calculo indice edificabilidad lote</caption>
         <thead>
           <tr style={{background:'#003B6F',color:'#fff'}}>
             <th style={{padding:'8px 12px',textAlign:'left'}}>Parámetro</th>
@@ -497,6 +504,7 @@ const articlesN: Record<string, {
       <h2>Clasificación por nivel de complejidad del sistema</h2>
       <p>Una de las principales innovaciones del RAS respecto a normativas anteriores es la clasificación del sistema según el <strong>nivel de complejidad</strong>, que determina los parámetros de diseño aplicables:</p>
       <table style={{width:'100%',borderCollapse:'collapse',fontSize:14,marginBottom:'1.2rem'}}>
+                <caption style={{position:'absolute',left:'-9999px'}}>Clasificacion nivel complejidad acueducto RAS 2017</caption>
         <thead>
           <tr style={{background:'#003B6F',color:'#fff'}}>
             <th style={{padding:'8px 12px',textAlign:'left'}}>Nivel de complejidad</th>
@@ -532,6 +540,7 @@ const articlesN: Record<string, {
       <h2>Parámetros clave del RAS 2017 Título B</h2>
       <h3>Dotación neta según nivel de complejidad</h3>
       <table style={{width:'100%',borderCollapse:'collapse',fontSize:14,marginBottom:'1.2rem'}}>
+                <caption style={{position:'absolute',left:'-9999px'}}>Parametros diseno acueducto RAS 2017 Titulo B</caption>
         <thead>
           <tr style={{background:'#003B6F',color:'#fff'}}>
             <th style={{padding:'8px 12px',textAlign:'left'}}>Nivel</th>
@@ -566,6 +575,7 @@ const articlesN: Record<string, {
       <h3>Coeficientes de variación de consumo</h3>
       <p>Sobre la dotación media diaria (QMD) se aplican los siguientes coeficientes para obtener los caudales de diseño:</p>
       <table style={{width:'100%',borderCollapse:'collapse',fontSize:14,marginBottom:'1.2rem'}}>
+                <caption style={{position:'absolute',left:'-9999px'}}>Coeficientes variacion consumo acueducto RAS 2017</caption>
         <thead>
           <tr style={{background:'#003B6F',color:'#fff'}}>
             <th style={{padding:'8px 12px',textAlign:'left'}}>Coeficiente</th>
@@ -601,6 +611,7 @@ const articlesN: Record<string, {
 
       <h2>Comparación RAS 2000 vs. RAS 2017: principales cambios</h2>
       <table style={{width:'100%',borderCollapse:'collapse',fontSize:14,marginBottom:'1.2rem'}}>
+                <caption style={{position:'absolute',left:'-9999px'}}>Comparacion RAS 2000 vs RAS 2017 cambios</caption>
         <thead>
           <tr style={{background:'#003B6F',color:'#fff'}}>
             <th style={{padding:'8px 12px',textAlign:'left'}}>Aspecto</th>

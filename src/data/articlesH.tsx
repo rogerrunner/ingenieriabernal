@@ -530,7 +530,7 @@ const articlesH: Record<string, {
 
       <p><strong>En BIC preparamos todos los estudios técnicos requeridos por CORPOCALDAS, CARDER, CVC y las demás CAR para tramitar la concesión de aguas de su acueducto veredal o comunitario.</strong> También elaboramos los diseños según el RAS 2017 con firma COPNIA. <strong>Contáctenos: ingenieriabernal.co | WhatsApp +57 302 477 8910</strong></p>
 
-      <p>Para entender el proceso completo de tramitación ante la CAR, vea nuestra guía de <a href="/blog/tramitar-concesion-aguas-colombia-guia" style={{color:'#17A2B8'}}>cómo tramitar una concesión de aguas en Colombia</a>. Si además necesita diseño del sistema, consulte el <a href="/servicios/acueducto-alcantarillado" style={{color:'#17A2B8'}}>servicio de diseño de acueductos y alcantarillados de BIC</a>.</p>
+      <p>Para entender el proceso completo de tramitación ante la CAR, vea nuestra guía de <a href="/blog/tramitar-concesion-aguas-colombia-guia" style={{color:'#17A2B8'}}>cómo tramitar una concesión de aguas en Colombia</a>. Si además necesita diseño del sistema, consulte el <a href="/servicios/diseno-acueductos" style={{color:'#17A2B8'}}>servicio de diseño de acueductos y alcantarillados de BIC</a>.</p>
     </>,
   },
 

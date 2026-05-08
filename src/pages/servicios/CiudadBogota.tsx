@@ -62,7 +62,7 @@ const SERVICIOS = [
   },
   {
     nombre: 'Diseño acueducto y alcantarillado',
-    href: '/servicios/acueducto-alcantarillado',
+    href: '/servicios/diseno-acueductos',
     desc: 'Diseño de redes de agua potable y saneamiento bajo Res. 0330/2017 y normas EAAB para proyectos en Bogotá y municipios de Cundinamarca.',
   },
   {
