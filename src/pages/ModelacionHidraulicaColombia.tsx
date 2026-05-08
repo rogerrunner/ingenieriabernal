@@ -7,23 +7,97 @@ const WA = '573024778910'
 const WA_MSG = encodeURIComponent('Hola, necesito cotizar una modelación hidráulica en Colombia. ¿Pueden ayudarme?')
 
 const seoConfig = {
-  title: 'Modelación Hidráulica de Ríos y Quebradas | Colombia',
-  description: 'Modelación hidráulica HEC-RAS de quebradas y ríos en Colombia. Espolones, encauzamiento y Dec. 1807. Putumayo, Eje Cafetero y todo el país. Cotice ya.',
+  title: 'Modelación Hidráulica Colombia — HEC-RAS, HEC-HMS | BIC',
+  description: 'Modelación hidráulica de ríos y quebradas en Colombia. HEC-RAS 2D, HEC-HMS, SWMM. Estudios de inundación, amenaza hídrica, manejo de cuencas. COPNIA. Consulta.',
   keywords: [
     'modelación hidráulica Colombia',
     'HEC-RAS 2D Colombia',
-    'HEC-RAS 1D Colombia',
+    'HEC-HMS Colombia',
+    'SWMM Colombia',
     'estudio inundación Colombia',
     'modelación HEC-RAS Manizales',
     'modelación hidráulica Decreto 1807',
     'modelo hidráulico bidimensional Colombia',
-    'HEC-HMS Colombia',
     'estudio amenaza hídrica Colombia',
     'ingeniería hidráulica computacional',
-    'modelación ríos Colombia',
+    'delimitación ronda hídrica Colombia',
+    'amenaza torrencial quebradas Colombia',
+    'modelación hidráulica Putumayo',
     'licencia urbanismo inundación',
   ],
   canonical: 'https://ingenieriabernal.co/modelacion-hidraulica-colombia',
+}
+
+const SOFTWARE = [
+  { tag: 'HEC-RAS 2D', org: 'USACE', desc: 'Modelación bidimensional de flujo en llanuras de inundación — estándar internacional, aceptado por ANLA y CAR en Colombia.' },
+  { tag: 'HEC-HMS', org: 'USACE', desc: 'Hidrología de cuencas, hidrogramas de creciente para caudales de diseño por período de retorno.' },
+  { tag: 'SWMM', org: 'EPA', desc: 'Modelación de redes de drenaje urbano y alcantarillado pluvial. Simulación dinámica de inundaciones en áreas urbanas.' },
+  { tag: 'ArcGIS / QGIS', org: 'SIG', desc: 'Procesamiento de DEM, curvas de nivel, delimitación de cuencas y cartografía de amenaza a escala de detalle.' },
+  { tag: 'HEC-RAS 1D', org: 'USACE', desc: 'Análisis de flujo en cauces encauzados con sección transversal definida. Para puentes, box culverts y canales.' },
+  { tag: 'Métodos estadísticos', org: 'IDEAM', desc: 'Análisis de frecuencias Gumbel, Log-Pearson III. Curvas IDF regionales. Racional Modificado, SCS CN.' },
+]
+
+const ESTUDIOS = [
+  { ico: '🌊', nombre: 'Estudio de inundación con períodos de retorno', desc: 'Simulación para Tr = 2.33, 5, 10, 25, 50, 100 y 500 años. Mapas de profundidad y velocidad para licencias de urbanismo y POT.' },
+  { ico: '📏', nombre: 'Delimitación de ronda hídrica', desc: 'Conforme al Decreto 2245/2017. Zona de protección ambiental del cauce — requerida para licencias de construcción cerca de fuentes hídricas.' },
+  { ico: '⛰️', nombre: 'Amenaza torrencial en quebradas de montaña', desc: 'Modelación especializada para cuencas andinas con alta pendiente. Evaluación de flujos de lodo, caudales extremos y amenaza de avenidas torrenciales.' },
+  { ico: '🚰', nombre: 'Hidrología para acueductos', desc: 'Caudales de captación, análisis de estiaje y variabilidad estacional. Estudio de rendimiento hídrico de la fuente para concesión de aguas.' },
+  { ico: '🌉', nombre: 'Hidrología para infraestructura', desc: 'Diseño de puentes, box culverts, alcantarillas y estructuras de cruce. Caudales de diseño conforme a normas INVIAS.' },
+  { ico: '🏞️', nombre: 'Sedimentación y transporte de sólidos', desc: 'Modelos de balance sedimentario en reservorios y bocatomas. Estimación de vida útil y estrategias de manejo.' },
+]
+
+const REGIONES = [
+  { region: 'Cuencas andinas', depts: 'Caldas, Risaralda, Quindío, Antioquia, Nariño', nota: 'Alta variabilidad altitudinal, ríos encañonados y quebradas torrenciales.' },
+  { region: 'Piedemonte amazónico', depts: 'Putumayo, Caquetá', nota: 'Alta variabilidad pluviométrica, llanuras inundables, cuencas sin registros históricos — trabajamos con imágenes satelitales y DEM disponibles.' },
+  { region: 'Llanuras orientales', depts: 'Meta, Casanare', nota: 'Crecientes de larga duración, modelación de planos de inundación extensos.' },
+  { region: 'Costa Pacífico y Caribe', depts: 'Nariño, Chocó, Atlántico', nota: 'Cuencas cortas y de alta respuesta, influencia mareal en tramos bajos.' },
+]
+
+const PRECIOS_MOD = [
+  { servicio: 'Estudio hidrológico básico (caudales de diseño)', rango: '$5M – $10M COP' },
+  { servicio: 'Modelación HEC-RAS 1D cuenca simple', rango: '$8M – $15M COP' },
+  { servicio: 'Modelación HEC-RAS 2D con mapas de inundación', rango: '$15M – $30M COP' },
+  { servicio: 'Estudio integral para licencia ambiental ANLA/CAR', rango: '$20M – $45M COP' },
+  { servicio: 'Delimitación de ronda hídrica (Decreto 2245)', rango: '$6M – $14M COP' },
+]
+
+const FAQ_SCHEMA_MOD = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: [
+    {
+      '@type': 'Question',
+      name: '¿Pueden hacer modelación para proyectos en el Putumayo o regiones remotas?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Sí. Trabajamos con imágenes satelitales, DEM disponibles (SRTM, ALOS, LiDAR) y coordinamos con profesionales locales para topografía cuando se requiere. El lead del Putumayo es un ejemplo de nuestro alcance nacional.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: '¿Los estudios de modelación hidráulica son aceptados por la ANLA y las CAR?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Sí, nuestros informes siguen los lineamientos del IDEAM, ANLA y USACE, y están firmados por ingeniero con matrícula vigente COPNIA. Hemos acompañado exitosamente trámites ante CORPOCALDAS, CRQ, CARDER y otras corporaciones.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: '¿Cuánto demora un estudio de inundación con HEC-RAS?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Entre 3 y 8 semanas según la complejidad de la cuenca y la disponibilidad de información topobatimétrica y datos IDEAM.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: '¿BIC trabaja con datos del IDEAM?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Sí, utilizamos registros históricos de estaciones hidrometeorológicas del IDEAM y los integramos en los modelos hidrológicos HEC-HMS para la construcción de hidrogramas de diseño por período de retorno.',
+      },
+    },
+  ],
 }
 
 const SERVICIOS = [
@@ -82,6 +156,22 @@ const PROCESO = [
 
 const FAQ = [
   {
+    q: '¿Pueden hacer modelación para proyectos en el Putumayo o regiones remotas?',
+    a: 'Sí. Trabajamos con imágenes satelitales, DEM disponibles (SRTM, ALOS, LiDAR) y coordinamos con profesionales locales para topografía cuando se requiere. El alcance de BIC es nacional — hemos atendido consultas desde Putumayo, Caquetá, Meta y otras regiones de difícil acceso.',
+  },
+  {
+    q: '¿Los estudios de modelación hidráulica son aceptados por la ANLA y las CAR?',
+    a: 'Sí, nuestros informes siguen los lineamientos técnicos del IDEAM, ANLA y USACE. Están firmados por ingeniero con matrícula COPNIA vigente. Hemos acompañado trámites ante CORPOCALDAS, CRQ, CARDER, CORPOAMAZONIA y otras corporaciones con resultados satisfactorios.',
+  },
+  {
+    q: '¿Cuánto demora un estudio de inundación con HEC-RAS?',
+    a: 'Entre 3 y 8 semanas según la complejidad de la cuenca y la disponibilidad de información topobatimétrica e hidrometeorológica. Para proyectos con urgencia de radicación, BIC puede entregar resultados preliminares en 3-4 semanas.',
+  },
+  {
+    q: '¿BIC trabaja con datos del IDEAM?',
+    a: 'Sí, utilizamos registros históricos de estaciones hidrometeorológicas del IDEAM y los integramos en los modelos hidrológicos HEC-HMS para construir hidrogramas de diseño por período de retorno (Tr 5, 10, 25, 50, 100 y 500 años). También trabajamos con curvas IDF regionales cuando los registros son insuficientes.',
+  },
+  {
     q: '¿Cuándo se requiere modelación hidráulica HEC-RAS 2D en Colombia?',
     a: 'La modelación 2D es necesaria cuando el proyecto se ubica en zona con amenaza hídrica media o alta, el área supera 5 hectáreas, la llanura de inundación tiene ancho mayor a 100 metros, o cuando la Curaduría Urbana o la CAR exigen mapas separados de profundidad y velocidad del flujo. Para licencias de urbanismo bajo Decreto 1807/2014, las Curadurías de Manizales, Pereira y Armenia exigen el modelo 2D como estándar.',
   },
@@ -137,7 +227,15 @@ export default function ModelacionHidraulicaColombia() {
     s.id = 'schema-modelacion-hidraulica'
     s.textContent = JSON.stringify(SCHEMA)
     document.head.appendChild(s)
-    return () => { document.getElementById('schema-modelacion-hidraulica')?.remove() }
+    const sf = document.createElement('script')
+    sf.type = 'application/ld+json'
+    sf.id = 'schema-modelacion-faq'
+    sf.textContent = JSON.stringify(FAQ_SCHEMA_MOD)
+    document.head.appendChild(sf)
+    return () => {
+      document.getElementById('schema-modelacion-hidraulica')?.remove()
+      document.getElementById('schema-modelacion-faq')?.remove()
+    }
   }, [])
 
   return (
@@ -180,6 +278,38 @@ export default function ModelacionHidraulicaColombia() {
         </div>
       </section>
 
+      {/* ── QUÉ ES Y CUÁNDO SE NECESITA ── */}
+      <Section style={{ background: '#f0f9ff', borderBottom: '1px solid #b3e0ea' }}>
+        <div style={{ maxWidth: 880, margin: '0 auto', padding: '0 24px' }}>
+          <SectionLabel>Marco regulatorio</SectionLabel>
+          <h2 style={{ fontFamily: "'Playfair Display', serif", fontWeight: 700, fontSize: 'clamp(22px, 3vw, 34px)', marginBottom: 16 }}>
+            ¿Qué es la modelación hidráulica y cuándo se necesita?
+          </h2>
+          <ThinLine mb={20} />
+          <p style={{ color: '#333', fontSize: 15, lineHeight: 1.85, marginBottom: 16, maxWidth: 820 }}>
+            La modelación hidráulica simula el comportamiento del agua en ríos, quebradas y sistemas de drenaje bajo distintos escenarios de lluvia y caudal. Es requerida en Colombia por:
+          </p>
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: 12 }}>
+            {[
+              'Licencias ambientales (ANLA, CAR) para proyectos que intervengan cauces o rondas hídricas',
+              'POMCA — Plan de Ordenación y Manejo de Cuenca Hidrográfica',
+              'Planes de Gestión del Riesgo Municipal (PGRM) y revisión de POT',
+              'Estudios de amenaza hídrica para licencias de urbanismo bajo Decreto 1807/2014',
+              'Proyectos de encauzamiento, protección de riberas y diseño de puentes',
+              'Estudios hidrológicos para obras de drenaje vial (INVIAS) y pluviales',
+            ].map(item => (
+              <div key={item} style={{
+                background: '#fff', border: '1px solid #b3e0ea', borderRadius: 10,
+                padding: '12px 16px', display: 'flex', gap: 10, alignItems: 'flex-start',
+              }}>
+                <span style={{ color: '#17A2B8', fontWeight: 900, flexShrink: 0, marginTop: 1 }}>›</span>
+                <p style={{ color: '#444', fontSize: 13, lineHeight: 1.65, margin: 0 }}>{item}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </Section>
+
       {/* ── MÉTRICAS ── */}
       <section style={{ background: '#f0f9ff', borderBottom: '1px solid #b3e0ea' }}>
         <div style={{ maxWidth: 920, margin: '0 auto', padding: '32px 24px' }}>
@@ -219,6 +349,107 @@ export default function ModelacionHidraulicaColombia() {
                 <div style={{ fontSize: 28, marginBottom: 8 }}>{s.icon}</div>
                 <h3 style={{ fontWeight: 700, fontSize: 16, color: '#002A50', marginBottom: 10 }}>{s.titulo}</h3>
                 <p style={{ color: '#555', fontSize: 14, lineHeight: 1.75, margin: 0 }}>{s.desc}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </Section>
+
+      {/* ── SOFTWARE Y METODOLOGÍAS ── */}
+      <Section style={{ background: '#f8f9fa' }}>
+        <div style={{ maxWidth: 960, margin: '0 auto', padding: '0 24px' }}>
+          <SectionLabel>Herramientas computacionales</SectionLabel>
+          <h2 style={{ fontFamily: "'Playfair Display', serif", fontWeight: 700, fontSize: 'clamp(22px, 3vw, 34px)', marginBottom: 12 }}>
+            Software y metodologías BIC
+          </h2>
+          <ThinLine mb={28} />
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(260px, 1fr))', gap: 16 }}>
+            {SOFTWARE.map(s => (
+              <div key={s.tag} style={{
+                background: '#fff', border: '1px solid #e2e8f0', borderRadius: 12, padding: '18px 20px',
+              }}>
+                <div style={{ display: 'flex', gap: 10, alignItems: 'center', marginBottom: 8 }}>
+                  <span style={{ background: '#003B6F', color: '#fff', borderRadius: 6, padding: '3px 10px', fontSize: 12, fontWeight: 700 }}>{s.tag}</span>
+                  <span style={{ background: '#e6f7ff', color: '#17A2B8', borderRadius: 6, padding: '3px 8px', fontSize: 11, fontWeight: 600 }}>{s.org}</span>
+                </div>
+                <p style={{ color: '#555', fontSize: 13, lineHeight: 1.7, margin: 0 }}>{s.desc}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </Section>
+
+      {/* ── ESTUDIOS ── */}
+      <Section>
+        <div style={{ maxWidth: 960, margin: '0 auto', padding: '0 24px' }}>
+          <SectionLabel>Tipos de estudio</SectionLabel>
+          <h2 style={{ fontFamily: "'Playfair Display', serif", fontWeight: 700, fontSize: 'clamp(22px, 3vw, 34px)', marginBottom: 12 }}>
+            Estudios que realizamos
+          </h2>
+          <ThinLine mb={28} />
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: 20 }}>
+            {ESTUDIOS.map(e => (
+              <div key={e.nombre} style={{
+                background: '#fff', border: '1px solid #e2e8f0', borderRadius: 14,
+                padding: '22px 24px', borderTop: '4px solid #17A2B8',
+              }}>
+                <div style={{ fontSize: 26, marginBottom: 8 }}>{e.ico}</div>
+                <h3 style={{ fontWeight: 700, fontSize: 14, color: '#002A50', marginBottom: 8 }}>{e.nombre}</h3>
+                <p style={{ color: '#555', fontSize: 13, lineHeight: 1.7, margin: 0 }}>{e.desc}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </Section>
+
+      {/* ── ALCANCE NACIONAL ── */}
+      <Section style={{ background: '#f8f9fa' }}>
+        <div style={{ maxWidth: 960, margin: '0 auto', padding: '0 24px' }}>
+          <SectionLabel>Alcance geográfico</SectionLabel>
+          <h2 style={{ fontFamily: "'Playfair Display', serif", fontWeight: 700, fontSize: 'clamp(22px, 3vw, 34px)', marginBottom: 12 }}>
+            Alcance nacional — regiones atendidas
+          </h2>
+          <p style={{ color: '#555', fontSize: 14, lineHeight: 1.75, marginBottom: 28, maxWidth: 820 }}>
+            Trabajamos de forma remota con DEM disponibles (SRTM, ALOS, LiDAR) o con levantamiento topográfico propio coordinado en campo. El lead reciente desde el Putumayo confirma nuestro alcance nacional.
+          </p>
+          <ThinLine mb={24} />
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(240px, 1fr))', gap: 16 }}>
+            {REGIONES.map(r => (
+              <div key={r.region} style={{
+                background: '#fff', border: '1px solid #e2e8f0', borderRadius: 12,
+                padding: '18px 20px', borderLeft: '4px solid #17A2B8',
+              }}>
+                <h3 style={{ fontWeight: 700, fontSize: 14, color: '#002A50', marginBottom: 4 }}>{r.region}</h3>
+                <p style={{ fontSize: 12, color: '#17A2B8', fontWeight: 600, marginBottom: 8 }}>{r.depts}</p>
+                <p style={{ color: '#666', fontSize: 13, lineHeight: 1.65, margin: 0 }}>{r.nota}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </Section>
+
+      {/* ── PRECIOS ── */}
+      <Section>
+        <div style={{ maxWidth: 860, margin: '0 auto', padding: '0 24px' }}>
+          <SectionLabel>Inversión referencial</SectionLabel>
+          <h2 style={{ fontFamily: "'Playfair Display', serif", fontWeight: 700, fontSize: 'clamp(22px, 3vw, 34px)', marginBottom: 12 }}>
+            Precios orientativos 2026
+          </h2>
+          <ThinLine mb={20} />
+          <p style={{ color: '#666', fontSize: 14, lineHeight: 1.7, marginBottom: 24 }}>
+            Los precios varían según la extensión de la cuenca, disponibilidad de MDT LiDAR y datos del IDEAM, y los entregables requeridos. Propuesta detallada en menos de 24 horas.
+          </p>
+          <div style={{ display: 'flex', flexDirection: 'column', gap: 10 }}>
+            {PRECIOS_MOD.map(p => (
+              <div key={p.servicio} style={{
+                display: 'grid', gridTemplateColumns: '1fr auto', gap: 16, alignItems: 'center',
+                background: '#fff', borderRadius: 10, padding: '14px 20px', border: '1px solid #e2e8f0',
+              }}>
+                <p style={{ color: '#333', fontSize: 14, fontWeight: 500, margin: 0 }}>{p.servicio}</p>
+                <div style={{
+                  background: '#003B6F', color: '#fff', borderRadius: 6,
+                  padding: '6px 14px', fontWeight: 700, fontSize: 13, whiteSpace: 'nowrap',
+                }}>{p.rango}</div>
               </div>
             ))}
           </div>

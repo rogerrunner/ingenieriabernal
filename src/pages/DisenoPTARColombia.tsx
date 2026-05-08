@@ -7,23 +7,89 @@ const WA = '573024778910'
 const WA_MSG = encodeURIComponent('Hola, necesito cotizar el diseño de una PTAR en Colombia. ¿Pueden ayudarme?')
 
 const seoConfig = {
-  title: 'Diseño PTAR Colombia | Plantas de Tratamiento Aguas Residuales · BIC',
-  description: 'Diseño de PTAR y sistemas de tratamiento de aguas residuales para municipios y proyectos en todo Colombia. RAS 2017. Lodos activados, UASB, filtros biológicos. Cotiza sin costo.',
+  title: 'Diseño PTAR PTAP Colombia — RAS 2017 Permisos CAR | BIC',
+  description: 'Diseño de plantas de tratamiento de aguas residuales y potables en Colombia. RAS 2017, permisos CAR, SGR. BIC COPNIA. Desde $10M COP. Consulta sin costo.',
   keywords: [
     'diseño PTAR Colombia',
+    'diseño PTAP Colombia',
     'planta tratamiento aguas residuales Colombia',
     'PTAR municipal Colombia',
-    'PTAR industrial Colombia',
+    'PTAP filtración lenta Colombia',
     'diseño PTAR Manizales',
     'diseño PTAR Eje Cafetero',
     'planta tratamiento aguas residuales RAS 2017',
     'PSMV plan saneamiento manejo vertimientos',
     'permiso vertimientos CAR Colombia',
     'ingeniería sanitaria Colombia',
-    'PTAR aguas residuales domésticas',
+    'PTAR lagunas estabilización Colombia',
+    'PTAP comunidades rurales Colombia',
     'consultor diseño PTAR Colombia',
   ],
   canonical: 'https://ingenieriabernal.co/diseno-ptar-colombia',
+}
+
+const TECNOLOGIAS = [
+  { ico: '🏞️', nombre: 'Lagunas de estabilización', desc: 'Facultativas, anaerobias y de maduración. Bajo costo de construcción y operación, sin energía eléctrica. Ideal para comunidades rurales y municipios hasta 5.000 hab.' },
+  { ico: '⚗️', nombre: 'Reactores UASB', desc: 'Alta eficiencia en remoción de materia orgánica para caudales medianos. Genera biogás aprovechable. Menor huella de suelo que sistemas de lagunas.' },
+  { ico: '🌿', nombre: 'Filtros biológicos y lechos de secado', desc: 'Filtros percoladores para remoción biológica secundaria. Lechos de secado para estabilización y deshidratación de lodos antes de disposición final.' },
+  { ico: '🔄', nombre: 'Lodos activados', desc: 'Sistema convencional de alta eficiencia para caudales mediados y grandes. Requiere energía eléctrica y operación técnica cualificada.' },
+  { ico: '🌱', nombre: 'Humedales artificiales (wetlands)', desc: 'Tratamiento sostenible integrado al paisaje. Flujo subsuperficial o superficial. Adecuado para efluentes secundarios o comunidades con énfasis ecológico.' },
+  { ico: '📦', nombre: 'PTAR compactas prefabricadas', desc: 'Sistemas modulares para condominios y conjuntos residenciales rurales. Instalación rápida, huella reducida, operación simplificada.' },
+  { ico: '🔧', nombre: 'Pretratamiento', desc: 'Cribas, desarenadores y sedimentadores primarios. Protegen las unidades biológicas y mejoran la eficiencia global del sistema.' },
+]
+
+const PRECIOS_PTAR = [
+  { servicio: 'PTAR veredal 50–200 usuarios (lagunas)', rango: '$12M – $22M COP' },
+  { servicio: 'PTAR municipal 200–1.000 hab', rango: '$18M – $40M COP' },
+  { servicio: 'PTAR para condominio/conjunto residencial', rango: '$8M – $18M COP' },
+  { servicio: 'PTAP veredal filtración lenta', rango: '$10M – $20M COP' },
+  { servicio: 'PTAP municipal RAS 2017', rango: '$15M – $35M COP' },
+]
+
+const TRAMITES = [
+  { ico: '📋', titulo: 'Permiso de vertimientos ante CAR', desc: 'Documentación técnica completa para CORPOCALDAS, CRQ, CORPOAMAZONIA, CVC, CAR Cundinamarca y otras corporaciones del país.' },
+  { ico: '🏛️', titulo: 'Certificado de viabilidad SSPD', desc: 'Viabilidad técnica para acueductos rurales ante la Superintendencia de Servicios Públicos Domiciliarios.' },
+  { ico: '💰', titulo: 'Formulación en MGA-Web SGR', desc: 'Formulación completa del proyecto de inversión en la MGA-Web del DNP para financiación con regalías (OCAD regional, OCAD paz o fondo CTel).' },
+  { ico: '🔍', titulo: 'Acompañamiento en auditorías', desc: 'Respuesta a observaciones técnicas de la CAR, visitas de seguimiento y soporte durante todo el proceso hasta la expedición del permiso.' },
+]
+
+const FAQ_SCHEMA = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: [
+    {
+      '@type': 'Question',
+      name: '¿Cuántos usuarios necesitan PTAR?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Desde 10 conexiones la CAR puede exigirlo. Comunidades rurales con vertimiento a fuente hídrica deben diseñar y construir sistema de tratamiento conforme a la Resolución 0631/2015 del MADS.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: '¿Cuánto demora el diseño de una PTAR?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Entre 3 y 6 semanas según complejidad. Para regalías SGR, el diseño debe estar aprobado por la entidad ejecutora antes de formular el proyecto en MGA-Web.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: '¿BIC trabaja en todo Colombia?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Sí. Hemos ejecutado proyectos en Caldas, Eje Cafetero, Putumayo, Antioquia y otras regiones. La mayor parte del trabajo de diseño se realiza de forma remota con visitas de campo puntuales.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: '¿Pueden formular el proyecto en el MGA-Web?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Sí, acompañamos la formulación completa del proyecto de inversión en la MGA-Web del DNP para financiación con regalías, incluyendo diseños técnicos, presupuesto APU y todos los módulos requeridos.',
+      },
+    },
+  ],
 }
 
 const TIPOS = [
@@ -95,6 +161,22 @@ const NORMATIVA = [
 
 const FAQ = [
   {
+    q: '¿Cuántos usuarios necesitan PTAR?',
+    a: 'Desde 10 conexiones la CAR puede exigirlo. Comunidades rurales con vertimiento a fuente hídrica deben diseñar y construir sistema de tratamiento conforme a la Resolución 0631/2015 del MADS.',
+  },
+  {
+    q: '¿Cuánto demora el diseño de una PTAR o PTAP?',
+    a: 'Entre 3 y 6 semanas según complejidad. Para regalías SGR, el diseño debe estar aprobado por la entidad ejecutora antes de formular el proyecto en MGA-Web. Para proyectos urgentes, BIC puede entregar avances en 2 semanas.',
+  },
+  {
+    q: '¿BIC trabaja en todo Colombia o solo en el Eje Cafetero?',
+    a: 'Sí, trabajamos en todo el territorio nacional. Hemos ejecutado proyectos en Caldas, Eje Cafetero, Putumayo, Antioquia y otras regiones. La mayor parte del diseño se realiza de forma remota, con visitas de campo para levantamientos topográficos y caracterización de fuentes cuando es necesario.',
+  },
+  {
+    q: '¿Pueden formular el proyecto en el MGA-Web para regalías?',
+    a: 'Sí, acompañamos la formulación completa del proyecto de inversión en la MGA-Web del DNP para financiación con regalías (OCAD regional, OCAD paz o fondo CTel). Esto incluye diseños técnicos aprobados, presupuesto APU, plan de adquisiciones, indicadores y todos los módulos requeridos por el sistema.',
+  },
+  {
     q: '¿Cuánto cuesta el diseño de una PTAR en Colombia?',
     a: 'El costo depende del caudal de diseño, la tecnología seleccionada, si existe información de campo disponible y los entregables requeridos. Para una PTAR municipal de 2 a 10 L/s (1.000 a 5.000 habitantes), el diseño completo con alternativas tecnológicas, memorias de cálculo y planos oscila entre $18 y $45 millones COP. Para plantas industriales el rango varía según la complejidad del efluente. BIC envía propuesta detallada en menos de 24 horas.',
   },
@@ -123,7 +205,15 @@ const ARTICULOS = [
 ]
 
 export default function DisenoPTARColombia() {
-  useEffect(() => { window.scrollTo(0, 0) }, [])
+  useEffect(() => {
+    window.scrollTo(0, 0)
+    const s = document.createElement('script')
+    s.type = 'application/ld+json'
+    s.id = 'schema-ptar-faq'
+    s.textContent = JSON.stringify(FAQ_SCHEMA)
+    document.head.appendChild(s)
+    return () => { document.getElementById('schema-ptar-faq')?.remove() }
+  }, [])
 
   return (
     <>
@@ -166,6 +256,23 @@ export default function DisenoPTARColombia() {
         </div>
       </section>
 
+      {/* ── QUÉ ES UNA PTAR ── */}
+      <Section style={{ background: '#f0f9ff', borderBottom: '1px solid #b3e0ea' }}>
+        <div style={{ maxWidth: 880, margin: '0 auto', padding: '0 24px' }}>
+          <SectionLabel>Marco regulatorio</SectionLabel>
+          <h2 style={{ fontFamily: "'Playfair Display', serif", fontWeight: 700, fontSize: 'clamp(22px, 3vw, 34px)', marginBottom: 16 }}>
+            ¿Qué es una PTAR y cuándo se necesita en Colombia?
+          </h2>
+          <ThinLine mb={24} />
+          <p style={{ color: '#333', fontSize: 15, lineHeight: 1.85, marginBottom: 16, maxWidth: 800 }}>
+            Una Planta de Tratamiento de Aguas Residuales (PTAR) es requerida por la <strong>Resolución 0631/2015 del MADS</strong> para todo vertimiento a cuerpos hídricos superficiales o subterráneos. Las Corporaciones Autónomas Regionales (CAR) como CORPOCALDAS, CRQ, CORPOAMAZONIA, CVC y otras exigen diseño profesional firmado por ingeniero con matrícula vigente del COPNIA para otorgar el permiso de vertimientos.
+          </p>
+          <p style={{ color: '#333', fontSize: 15, lineHeight: 1.85, maxWidth: 800 }}>
+            Desde comunidades rurales de 10 conexiones hasta municipios de 20.000 habitantes, pasando por conjuntos residenciales campestres, campamentos y plantas agroindustriales — cualquier proyecto que descargue aguas residuales a un cuerpo de agua o suelo debe contar con sistema de tratamiento diseñado bajo el <strong>RAS 2017 (Resolución 0330 del MVCT)</strong> y el Decreto 1076/2015.
+          </p>
+        </div>
+      </Section>
+
       {/* ── TIPOS ── */}
       <Section>
         <div style={{ maxWidth: 960, margin: '0 auto', padding: '0 24px' }}>
@@ -193,8 +300,33 @@ export default function DisenoPTARColombia() {
         </div>
       </Section>
 
-      {/* ── PROCESO ── */}
+      {/* ── TECNOLOGÍAS ── */}
       <Section style={{ background: '#f8f9fa' }}>
+        <div style={{ maxWidth: 960, margin: '0 auto', padding: '0 24px' }}>
+          <SectionLabel>Tecnologías disponibles</SectionLabel>
+          <h2 style={{ fontFamily: "'Playfair Display', serif", fontWeight: 700, fontSize: 'clamp(22px, 3vw, 34px)', marginBottom: 12 }}>
+            Tecnologías de tratamiento que diseña BIC
+          </h2>
+          <ThinLine mb={32} />
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(260px, 1fr))', gap: 18 }}>
+            {TECNOLOGIAS.map(t => (
+              <div key={t.nombre} style={{
+                background: '#fff', border: '1px solid #e2e8f0', borderRadius: 12,
+                padding: '20px 22px', display: 'flex', gap: 14, alignItems: 'flex-start',
+              }}>
+                <span style={{ fontSize: 26, flexShrink: 0, marginTop: 2 }}>{t.ico}</span>
+                <div>
+                  <h3 style={{ fontWeight: 700, fontSize: 14, color: '#002A50', marginBottom: 6 }}>{t.nombre}</h3>
+                  <p style={{ color: '#555', fontSize: 13, lineHeight: 1.7, margin: 0 }}>{t.desc}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </Section>
+
+      {/* ── PROCESO ── */}
+      <Section style={{ background: '#fff' }}>
         <div style={{ maxWidth: 880, margin: '0 auto', padding: '0 24px' }}>
           <SectionLabel>Metodología de diseño</SectionLabel>
           <h2 style={{ fontFamily: "'Playfair Display', serif", fontWeight: 700, fontSize: 'clamp(22px, 3vw, 34px)', marginBottom: 8 }}>
@@ -231,6 +363,90 @@ export default function DisenoPTARColombia() {
                     </div>
                   </div>
                 </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </Section>
+
+      {/* ── PTAP ── */}
+      <Section style={{ background: '#f0f9ff', borderTop: '1px solid #b3e0ea' }}>
+        <div style={{ maxWidth: 960, margin: '0 auto', padding: '0 24px' }}>
+          <SectionLabel>Agua potable rural</SectionLabel>
+          <h2 style={{ fontFamily: "'Playfair Display', serif", fontWeight: 700, fontSize: 'clamp(22px, 3vw, 34px)', marginBottom: 12 }}>
+            PTAP — Plantas de Tratamiento de Agua Potable
+          </h2>
+          <ThinLine mb={24} />
+          <p style={{ color: '#333', fontSize: 15, lineHeight: 1.85, marginBottom: 28, maxWidth: 820 }}>
+            Diseñamos PTAP para comunidades rurales y municipios menores bajo el <strong>RAS 2017 Título C</strong>. Desde filtración lenta en arena para acueductos veredales hasta plantas convencionales para municipios de hasta 20.000 habitantes.
+          </p>
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(240px, 1fr))', gap: 18 }}>
+            {[
+              { ico: '🏖️', nombre: 'Filtración lenta en arena', desc: 'Ideal para fuentes superficiales limpias y comunidades menores de 500 usuarios. Sin energía eléctrica, operación sencilla, bajo costo O&M.' },
+              { ico: '💧', nombre: 'Filtración rápida + coagulación', desc: 'Para caudales mayores o fuentes con turbiedad variable. Incluye floculación, sedimentación y filtros rápidos.' },
+              { ico: '☀️', nombre: 'Desinfección', desc: 'Cloración por goteo, desinfección UV y cloración automática según capacidad del acueducto y disponibilidad de energía.' },
+              { ico: '🏛️', nombre: 'PTAP convencional municipal', desc: 'Para municipios hasta 20.000 hab. Diseño conforme a RAS 2017 con memorias de cálculo firmadas y expediente para SSPD.' },
+            ].map(t => (
+              <div key={t.nombre} style={{
+                background: '#fff', border: '1px solid #b3e0ea', borderRadius: 12,
+                padding: '20px 22px', display: 'flex', gap: 14, alignItems: 'flex-start',
+              }}>
+                <span style={{ fontSize: 26, flexShrink: 0, marginTop: 2 }}>{t.ico}</span>
+                <div>
+                  <h3 style={{ fontWeight: 700, fontSize: 14, color: '#002A50', marginBottom: 6 }}>{t.nombre}</h3>
+                  <p style={{ color: '#555', fontSize: 13, lineHeight: 1.7, margin: 0 }}>{t.desc}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </Section>
+
+      {/* ── PRECIOS ── */}
+      <Section>
+        <div style={{ maxWidth: 860, margin: '0 auto', padding: '0 24px' }}>
+          <SectionLabel>Inversión referencial</SectionLabel>
+          <h2 style={{ fontFamily: "'Playfair Display', serif", fontWeight: 700, fontSize: 'clamp(22px, 3vw, 34px)', marginBottom: 12 }}>
+            Precios orientativos 2026
+          </h2>
+          <ThinLine mb={24} />
+          <p style={{ color: '#666', fontSize: 14, lineHeight: 1.7, marginBottom: 24 }}>
+            Precios incluyen memorias de cálculo, planos constructivos, especificaciones técnicas y APU. <strong>No incluyen construcción.</strong> Cada proyecto recibe propuesta detallada en menos de 24 horas.
+          </p>
+          <div style={{ display: 'flex', flexDirection: 'column', gap: 10 }}>
+            {PRECIOS_PTAR.map(p => (
+              <div key={p.servicio} style={{
+                display: 'grid', gridTemplateColumns: '1fr auto', gap: 16, alignItems: 'center',
+                background: '#fff', borderRadius: 10, padding: '14px 20px', border: '1px solid #e2e8f0',
+              }}>
+                <p style={{ color: '#333', fontSize: 14, fontWeight: 500, margin: 0 }}>{p.servicio}</p>
+                <div style={{
+                  background: '#003B6F', color: '#fff', borderRadius: 6,
+                  padding: '6px 14px', fontWeight: 700, fontSize: 13, whiteSpace: 'nowrap',
+                }}>{p.rango}</div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </Section>
+
+      {/* ── PERMISOS Y TRÁMITES ── */}
+      <Section style={{ background: '#f8f9fa' }}>
+        <div style={{ maxWidth: 960, margin: '0 auto', padding: '0 24px' }}>
+          <SectionLabel>Trámites ambientales</SectionLabel>
+          <h2 style={{ fontFamily: "'Playfair Display', serif", fontWeight: 700, fontSize: 'clamp(22px, 3vw, 34px)', marginBottom: 12 }}>
+            Permisos y trámites que acompañamos
+          </h2>
+          <ThinLine mb={32} />
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(260px, 1fr))', gap: 20 }}>
+            {TRAMITES.map(t => (
+              <div key={t.titulo} style={{
+                background: '#fff', border: '1px solid #e2e8f0', borderRadius: 14,
+                padding: 24, borderLeft: '4px solid #17A2B8',
+              }}>
+                <div style={{ fontSize: 26, marginBottom: 10 }}>{t.ico}</div>
+                <h3 style={{ fontWeight: 700, fontSize: 15, color: '#002A50', marginBottom: 8 }}>{t.titulo}</h3>
+                <p style={{ color: '#555', fontSize: 13, lineHeight: 1.75, margin: 0 }}>{t.desc}</p>
               </div>
             ))}
           </div>
