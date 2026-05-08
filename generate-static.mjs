@@ -245,9 +245,9 @@ const routes = [
   { path: 'blog/tramites-licencia-ambiental-construccion-colombia', title: 'Trámites ambientales antes de construir en Colombia: guía para promotores y constructores | BIC', desc: 'Guía práctica sobre qué trámites ambientales son obligatorios antes de construir en Colombia: concesiones de agua, permisos de vertimientos, licencias ambientales ANLA y estudios Decreto 1807.', url: 'https://ingenieriabernal.co/blog/tramites-licencia-ambiental-construccion-colombia' },
 ];
 
-// Páginas con noindex (thin content — duplican contenido de páginas de mayor valor)
+// Páginas con noindex (thin content — usan RegionalPage sin contenido profundo)
+// ingenieria-bogota, ingenieria-medellin, ingenieria-cali tienen CityPage + DEEP_CONTENT (600+ words) → indexables
 const NOINDEX_PATHS = new Set([
-  'ingenieria-bogota', 'ingenieria-medellin', 'ingenieria-cali',
   'ingenieria-manizales', 'ingenieria-bucaramanga', 'ingenieria-barranquilla',
   'ingenieria-eje-cafetero', 'ingenieria-antioquia',
 ]);
