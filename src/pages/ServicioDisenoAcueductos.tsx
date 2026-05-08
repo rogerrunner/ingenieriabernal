@@ -84,17 +84,17 @@ const FAQ_ACUEDUCTOS = [
 ]
 
 const CASO_ESTUDIO = {
-  tag: 'Caso real — Municipio Eje Cafetero',
-  titulo: 'Acueducto veredal para 310 usuarios — SGR aprobado, 1.550 personas con agua potable',
-  contexto: 'Un municipio del Eje Cafetero carecía de agua potable en tres veredas rurales. La administración municipal necesitaba el diseño completo del sistema de acueducto para soportar la formulación del proyecto ante el OCAD del SGR. El diseño debía cumplir RAS 2017 y los lineamientos del DNP para agua y saneamiento.',
-  solucion: 'BIC diseñó el sistema completo: bocatoma lateral sobre la fuente superficial, desarenador, conducción de 3.8 km en HDPE, PTAP de filtración lenta con desinfección UV y cloración para 2.5 L/s, tanque de almacenamiento de 60 m³ y red de distribución ramificada de 4.6 km en PVC con 310 acometidas domiciliarias. El diseño fue complementado con el presupuesto de obra, programación y fichas técnicas para la MGA-Web del DNP.',
+  tag: 'Referencias verificables — Proyectos ejecutados',
+  titulo: 'Diseño de acueducto rural y formulación SGR — proyectos reales con contrato',
+  contexto: 'Dos proyectos representativos ejecutados por BIC: diseño completo del acueducto Guaduales para la Alcaldía de Santa Rosa de Cabal (Risaralda, 2020), y formulación del proyecto de agua potable ante el OCAD SGR para la Alcaldía de Puerto Boyacá — Contrato No. 621 de 2021, verificable en SECOP I.',
+  solucion: 'En Santa Rosa de Cabal, BIC diseñó la red de distribución del acueducto conforme al RAS 2017. En Puerto Boyacá, BIC formuló el proyecto de agua potable en MGA-Web del DNP, elaboró los estudios técnicos de soporte y acompañó la presentación ante el OCAD. El contrato (621/2021) es de consulta pública en el SECOP I.',
   metricas: [
-    { valor: '310', label: 'usuarios directamente beneficiados' },
-    { valor: '1.550', label: 'personas con acceso a agua potable' },
-    { valor: '8.4 km', label: 'red total diseñada (conducción + distribución)' },
-    { valor: '$1.940M', label: 'COP — valor de obra ejecutada' },
+    { valor: '2020', label: 'Diseño acueducto Santa Rosa de Cabal' },
+    { valor: '621/2021', label: 'Contrato verificable Alcaldía Puerto Boyacá' },
+    { valor: 'SECOP I', label: 'Contrato de consulta pública' },
+    { valor: '+10 años', label: 'Experiencia en proyectos de agua y saneamiento' },
   ],
-  resultado: 'El proyecto fue aprobado por el OCAD Regional y financiado con recursos SGR por $1.940 millones COP. La obra fue ejecutada por contratista local en 8 meses. El acueducto opera actualmente con agua potable certificada por el IRCA municipal. BIC acompañó el proceso de formulación hasta la aprobación del OCAD sin costo adicional.',
+  resultado: 'Ambos proyectos son verificables. El contrato con la Alcaldía de Puerto Boyacá (Boyacá) puede consultarse en SECOP I. BIC cuenta con experiencia acreditada en diseño de acueductos rurales y formulación MGA-Web para el SGR en Caldas, Risaralda, Quindío y Boyacá.',
 }
 
 export default function ServicioDisenoAcueductos() {

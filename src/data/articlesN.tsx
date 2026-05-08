@@ -7,7 +7,7 @@ const articlesN: Record<string, {
   metaDesc: string; keywords: string; body: React.ReactNode
 }> = {
 
-  'interventoria-obras-hidraulicas-colombia': {
+  'interventoria-hidraulica-obligaciones-costos-colombia': {
     title: 'Interventoría de obras hidráulicas en Colombia: obligaciones, costos y entregables',
     date: 'Mayo 2026',
     readTime: '8 min',

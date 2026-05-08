@@ -405,7 +405,7 @@ const SERVICE_LINKS: Record<string, { label: string; href: string }> = {
   'irca-calidad-agua-potable-colombia':                { label: 'Acueducto y Alcantarillado',                  href: '/servicios/acueducto-alcantarillado' },
   'mapas-inundacion-colombia-pomca-pot':               { label: 'Modelación Hidráulica HEC-RAS 2D',            href: '/servicios/modelacion-hec-ras' },
   // articlesN
-  'interventoria-obras-hidraulicas-colombia':          { label: 'Residencia e Interventoría',                  href: '/servicios/interventoria' },
+  'interventoria-hidraulica-obligaciones-costos-colombia': { label: 'Residencia e Interventoría',             href: '/servicios/interventoria' },
   'presupuesto-diseno-ptap-veredal-colombia-2026':     { label: 'Acueducto y Alcantarillado',                  href: '/servicios/acueducto-alcantarillado' },
   'modelacion-hidraulica-pomca-colombia':              { label: 'Modelación Hidráulica HEC-RAS 2D',            href: '/servicios/modelacion-hec-ras' },
   'indice-edificabilidad-colombia-calculo-ejemplo':    { label: 'Plan Parcial Colombia',                       href: '/plan-parcial-colombia' },
@@ -413,6 +413,17 @@ const SERVICE_LINKS: Record<string, { label: string; href: string }> = {
   // articlesO
   'cuanto-cuesta-sistema-contra-incendios-nsr10-colombia': { label: 'Sistemas Contra Incendio NSR-10',        href: '/servicios/sistemas-contra-incendio' },
   'tramites-licencia-ambiental-construccion-colombia': { label: 'Ingeniería Ambiental y Trámites CAR',        href: '/servicios/ambiental' },
+  // articles1 — nuevas rutas prerenderizadas
+  'cuando-se-requiere-hec-ras-colombia':               { label: 'Modelación Hidráulica HEC-RAS 2D',            href: '/servicios/modelacion-hec-ras' },
+  'diseno-redes-hidrosanitarias-nsr-10-colombia':      { label: 'Diseño Redes Hidrosanitarias NSR-10',         href: '/servicios/redes-hidrosanitarias' },
+  'estudio-amenaza-inundaciones-pot-colombia':         { label: 'Modelación Hidráulica HEC-RAS 2D',            href: '/servicios/modelacion-hec-ras' },
+}
+
+// Canonical override: estos artículos apuntan su canonical a la página de servicio
+// para consolidar autoridad en la página transaccional (fix cannibalization HEC-RAS)
+const CANONICAL_OVERRIDES: Record<string, string> = {
+  'cuando-se-requiere-hec-ras-colombia': 'https://ingenieriabernal.co/servicios/modelacion-hec-ras',
+  'estudio-amenaza-inundaciones-pot-colombia': 'https://ingenieriabernal.co/servicios/modelacion-hec-ras',
 }
 
 // ─── LAYOUT COMPONENTS ──────────────────────────────────────────────────────
@@ -443,7 +454,7 @@ export default function BlogDetail() {
     description: article.metaDesc,
     keywords: article.keywords.split(', '),
     ogType: 'article',
-    canonical: `https://ingenieriabernal.co/blog/${slug}`
+    canonical: CANONICAL_OVERRIDES[slug] ?? `https://ingenieriabernal.co/blog/${slug}`
   } : null
 
   useEffect(() => {

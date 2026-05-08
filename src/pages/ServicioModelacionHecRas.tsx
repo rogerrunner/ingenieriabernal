@@ -91,6 +91,21 @@ const FAQ_HECRAS = [
   },
 ]
 
+const CASO_ESTUDIO = {
+  tag: 'Referencia verificable — Eje Cafetero',
+  titulo: 'Análisis de torrencialidad e inundaciones — 8 municipios del Eje Cafetero (HEC-RAS 2D)',
+  contexto: 'EJE GROUP S.A.S. requería la modelación hidráulica HEC-RAS 2D para análisis de amenaza por torrencialidad e inundación en 8 municipios del Eje Cafetero. El alcance incluía cartografía de amenaza hídrica y evaluación conforme al RAS 2017 para soporte de decisiones de ordenamiento territorial.',
+  solucion: 'BIC ejecutó el proyecto durante 8 meses (2021–2022): modelación HEC-RAS 2D de los cauces principales afectados, cálculo de caudales de diseño por el método racional modificado e HEC-HMS, y generación de mapas de amenaza alta/media/baja para los períodos de retorno de 10, 50 y 100 años. Entrega en formato shapefile compatible con ArcGIS y QGIS.',
+  metricas: [
+    { valor: '8', label: 'municipios Eje Cafetero analizados' },
+    { valor: '8 meses', label: 'duración del proyecto (2021–2022)' },
+    { valor: 'HEC-RAS 2D', label: 'software de modelación utilizado' },
+    { valor: 'RAS 2017', label: 'normativa técnica aplicada' },
+  ],
+  resultado: 'Mapas de amenaza hídrica entregados a EJE GROUP S.A.S. para 8 municipios del Eje Cafetero. Proyecto de modelación HEC-RAS 2D ejecutado por BIC conforme a los lineamientos del RAS 2017 y el Decreto 1807/2014. Referenciable ante EJE GROUP S.A.S. (Pereira, Risaralda).',
+}
+
+
 export default function ServicioModelacionHecRas() {
   useEffect(() => { window.scrollTo(0, 0) }, [])
 

@@ -18,7 +18,10 @@
     { "source": "/acueductos-alcantarillados",         "destination": "/servicios/acueducto-alcantarillado",     "permanent": true },
     { "source": "/regalias-mga-web",                   "destination": "/servicios/regalias-mga",                 "permanent": true }
   ],
-  "rewrites": [{ "source": "/(.*)", "destination": "/index.html" }],
+  "rewrites": [
+    { "source": "/BingSiteAuth.xml", "destination": "/BingSiteAuth.xml" },
+    { "source": "/(.*)", "destination": "/index.html" }
+  ],
   "headers": [
     {
       "source": "/(.*)",

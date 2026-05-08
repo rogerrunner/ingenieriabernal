@@ -359,4 +359,10 @@ export default function App() {
           <Route path="/blog/:slug" component={BlogDetail} />
           <Route component={NotFound} />
         </Switch>
-        </Suspe
+        </Suspense>
+      </main>
+      <Footer />
+      <FloatingQuoteButton />
+    </>
+  )
+}
