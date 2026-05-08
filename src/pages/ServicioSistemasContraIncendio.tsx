@@ -6,8 +6,8 @@ const WA = '573024778910'
 const WA_MSG = encodeURIComponent('Hola, quiero cotizar Sistema Contra Incendio NSR-10')
 
 const seoConfig = {
-  title: 'Sistemas Contra Incendio NSR-10 Colombia | BIC',
-  description: 'Diseño hidráulico CI conforme NSR-10 Título J, NFPA 13 y NFPA 14. Memorias COPNIA incluidas. Manizales, Eje Cafetero y Colombia. Cotice gratis.',
+  title: 'Diseño Sistemas Contra Incendio Colombia — NSR-10 Título J | BIC',
+  description: 'Diseño de sistemas contra incendio para edificaciones en Colombia. NSR-10 Título J, NFPA 13/14. Redes sprinklers, hidrantes, BIE. COPNIA. Solicita cotización.',
   keywords: [
     'sistemas contra incendio NSR-10 Colombia',
     'diseño sistema contra incendio Colombia',
@@ -40,6 +40,21 @@ const PARA_QUIEN = [
   { tipo: 'Entidades públicas y hospitales', desc: 'Instituciones educativas, hospitales, clínicas, entidades gubernamentales y equipamientos colectivos que requieren cumplimiento estricto de NSR-10 Título J para su licencia de funcionamiento.' },
   { tipo: 'Interventores y revisores de licencias', desc: 'Revisión técnica de diseños CI presentados ante la curaduría. Verificación de cumplimiento normativo NSR-10 y NFPA antes de la aprobación del permiso de construcción.' },
 ]
+
+const FAQ_CI = [
+  { q: '¿Cuándo es obligatorio el diseño de sistema CI en Colombia?', a: 'La NSR-10 Título J exige sistema CI en edificaciones con más de 5 pisos, bodegas mayores a 2.000 m², centros comerciales, hoteles, hospitales y edificaciones industriales de riesgo alto. La curaduría urbana verifica el diseño antes de expedir la licencia de construcción.' },
+  { q: '¿Qué diferencia hay entre sprinklers y la red de mangueras (BIE)?', a: 'Los sprinklers son automáticos: se activan individualmente por calor directo y controlan el fuego sin intervención humana. Las BIE (Bocas de Incendio Equipadas) son manuales: los ocupantes o bomberos las usan activamente durante un incendio. La mayoría de edificios medianos requieren ambos sistemas.' },
+  { q: '¿El diseño incluye la aprobación ante el Cuerpo de Bomberos?', a: 'Sí. BIC gestiona la revisión del diseño ante Bomberos y la curaduría correspondiente, que es requisito para obtener la licencia de construcción o el permiso de ocupación.' },
+  { q: '¿Pueden diseñar el sistema CI de un edificio ya construido para regularizar?', a: 'Sí. Diseñamos para edificaciones existentes que necesiten regularizar su situación constructiva o que estén ampliando. Realizamos visita diagnóstica previa.' },
+]
+
+const listStyle: React.CSSProperties = {
+  fontFamily: "'Lato', sans-serif", color: '#475569', fontSize: 15,
+  lineHeight: 1.8, paddingLeft: 0, listStyle: 'none', margin: 0,
+}
+const liStyle: React.CSSProperties = {
+  paddingLeft: 20, position: 'relative', marginBottom: 6,
+}
 
 export default function ServicioSistemasContraIncendio() {
   useEffect(() => { window.scrollTo(0, 0) }, [])
@@ -98,6 +113,31 @@ export default function ServicioSistemasContraIncendio() {
         </div>
       </div>
 
+      {/* ── QUÉ EXIGE NSR-10 ── */}
+      <Section bg="#fff" style={{ padding: '72px 24px' }}>
+        <div style={{ maxWidth: 900, margin: '0 auto' }}>
+          <SectionLabel>Marco normativo</SectionLabel>
+          <h2 style={{
+            fontFamily: "'Playfair Display', serif", fontWeight: 700, color: '#001A33',
+            fontSize: 'clamp(22px, 4vw, 32px)', marginBottom: 8,
+          }}>¿Qué exige la NSR-10 para sistemas contra incendio?</h2>
+          <ThinLine mb={32} />
+          <ul style={listStyle}>
+            {[
+              'NSR-10 Título J: "Requisitos de protección contra incendios en edificaciones"',
+              'Obligatorio para: edificios > 5 pisos, bodegas > 2.000 m², centros comerciales, hospitales, hoteles, industrias de riesgo alto',
+              'Requiere diseño firmado por ingeniero COPNIA para aprobación en curaduría',
+              'Componentes: red húmeda/seca, sprinklers, hidrantes, extintores, señalización',
+            ].map(item => (
+              <li key={item} style={liStyle}>
+                <span style={{ position: 'absolute', left: 0, color: '#17A2B8', fontWeight: 700 }}>›</span>
+                {item}
+              </li>
+            ))}
+          </ul>
+        </div>
+      </Section>
+
       {/* ── QUÉ INCLUYE ── */}
       <Section bg="#F8FAFC" style={{ padding: '72px 24px' }}>
         <div style={{ maxWidth: 900, margin: '0 auto' }}>
@@ -127,8 +167,97 @@ export default function ServicioSistemasContraIncendio() {
         </div>
       </Section>
 
-      {/* ── PARA QUIÉN ── */}
+      {/* ── SISTEMAS CI QUE DISEÑA BIC ── */}
       <Section bg="#fff" style={{ padding: '72px 24px' }}>
+        <div style={{ maxWidth: 900, margin: '0 auto' }}>
+          <SectionLabel>Tipologías de sistema</SectionLabel>
+          <h2 style={{
+            fontFamily: "'Playfair Display', serif", fontWeight: 700, color: '#001A33',
+            fontSize: 'clamp(22px, 4vw, 32px)', marginBottom: 8,
+          }}>Sistemas CI que diseña BIC</h2>
+          <ThinLine mb={32} />
+          <div style={{ display: 'flex', flexDirection: 'column', gap: 16 }}>
+            {[
+              { num: '1', titulo: 'Red contra incendio húmeda', desc: 'Tubería permanentemente presurizada; sprinklers automáticos NFPA 13; para edificios residenciales, oficinas y comercio.' },
+              { num: '2', titulo: 'Red contra incendio seca', desc: 'Tubería sin agua; activación por válvula manual o automática; para bodegas, parqueaderos cubiertos, zonas con riesgo de congelamiento.' },
+              { num: '3', titulo: 'Gabinetes y mangueras (BIE)', desc: 'Bocas de Incendio Equipadas para uso manual; según NSR-10 J.5.' },
+              { num: '4', titulo: 'Sistemas de hidrantes', desc: 'Red urbana o predial; distanciamiento y presiones según NSR-10 J.3.' },
+              { num: '5', titulo: 'Detección y alarma', desc: 'Integración con sistemas automáticos de detección de humo/calor.' },
+            ].map(s => (
+              <div key={s.num} style={{
+                display: 'flex', gap: 20, alignItems: 'flex-start',
+                background: '#F8FAFC', border: '1px solid #E2E8F0', borderRadius: 4, padding: '18px 22px',
+              }}>
+                <span style={{
+                  fontFamily: "'Playfair Display', serif", fontWeight: 700, color: '#17A2B8',
+                  fontSize: 28, lineHeight: 1, minWidth: 32,
+                }}>{s.num}</span>
+                <div>
+                  <p style={{ fontFamily: "'Montserrat', sans-serif", fontWeight: 700, color: '#001A33', fontSize: 14, marginBottom: 4 }}>{s.titulo}</p>
+                  <p style={{ fontFamily: "'Lato', sans-serif", color: '#475569', fontSize: 14, lineHeight: 1.6, margin: 0 }}>{s.desc}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </Section>
+
+      {/* ── METODOLOGÍA DE DISEÑO BIC ── */}
+      <Section bg="#F8FAFC" style={{ padding: '72px 24px' }}>
+        <div style={{ maxWidth: 900, margin: '0 auto' }}>
+          <SectionLabel>Proceso técnico</SectionLabel>
+          <h2 style={{
+            fontFamily: "'Playfair Display', serif", fontWeight: 700, color: '#001A33',
+            fontSize: 'clamp(22px, 4vw, 32px)', marginBottom: 8,
+          }}>Metodología de diseño BIC</h2>
+          <ThinLine mb={32} />
+          <ul style={listStyle}>
+            {[
+              'Clasificación del riesgo del edificio (ordinario, especial, extra)',
+              'Cálculo hidráulico de caudales y presiones (método de densidad/área)',
+              'Diseño de la red de distribución (ramales, malla, árbol)',
+              'Dimensionamiento del tanque de reserva y cuarto de bombas CI',
+              'Selección de bomba principal + bomba jockey (presurización)',
+              'Memorias de cálculo para aprobación en curaduría y Bomberos',
+              'Planos de redes en planta y corte, detalles de conexiones',
+            ].map(item => (
+              <li key={item} style={liStyle}>
+                <span style={{ position: 'absolute', left: 0, color: '#17A2B8', fontWeight: 700 }}>›</span>
+                {item}
+              </li>
+            ))}
+          </ul>
+        </div>
+      </Section>
+
+      {/* ── NORMATIVA Y ESTÁNDARES ── */}
+      <Section bg="#fff" style={{ padding: '72px 24px' }}>
+        <div style={{ maxWidth: 900, margin: '0 auto' }}>
+          <SectionLabel>Referencias técnicas</SectionLabel>
+          <h2 style={{
+            fontFamily: "'Playfair Display', serif", fontWeight: 700, color: '#001A33',
+            fontSize: 'clamp(22px, 4vw, 32px)', marginBottom: 8,
+          }}>Normativa y estándares aplicables</h2>
+          <ThinLine mb={32} />
+          <ul style={listStyle}>
+            {[
+              'NSR-10 Título J — Colombia (obligatoria)',
+              'NFPA 13: Instalación de sistemas de sprinklers',
+              'NFPA 14: Sistemas de mangueras y gabinetes',
+              'NFPA 20: Bombas centrífugas para protección contra incendio',
+              'Conceptos del Cuerpo de Bomberos locales',
+            ].map(item => (
+              <li key={item} style={liStyle}>
+                <span style={{ position: 'absolute', left: 0, color: '#17A2B8', fontWeight: 700 }}>›</span>
+                {item}
+              </li>
+            ))}
+          </ul>
+        </div>
+      </Section>
+
+      {/* ── PARA QUIÉN ── */}
+      <Section bg="#F8FAFC" style={{ padding: '72px 24px' }}>
         <div style={{ maxWidth: 900, margin: '0 auto' }}>
           <SectionLabel>Clientes objetivo</SectionLabel>
           <h2 style={{
@@ -139,7 +268,7 @@ export default function ServicioSistemasContraIncendio() {
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(260px, 1fr))', gap: 20 }}>
             {PARA_QUIEN.map((p) => (
               <div key={p.tipo} style={{
-                padding: 24, background: '#F8FAFC',
+                padding: 24, background: '#fff',
                 borderLeft: '3px solid #17A2B8', borderRadius: '0 4px 4px 0',
               }}>
                 <h3 style={{
@@ -149,6 +278,54 @@ export default function ServicioSistemasContraIncendio() {
                 <p style={{
                   fontFamily: "'Lato', sans-serif", color: '#475569', fontSize: 14, lineHeight: 1.6,
                 }}>{p.desc}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </Section>
+
+      {/* ── PRECIOS ORIENTATIVOS 2026 ── */}
+      <Section bg="#fff" style={{ padding: '64px 24px' }}>
+        <div style={{ maxWidth: 900, margin: '0 auto' }}>
+          <SectionLabel>Inversión referencial</SectionLabel>
+          <h2 style={{ fontFamily: "'Playfair Display', serif", fontWeight: 700, color: '#001A33', fontSize: 'clamp(22px, 4vw, 30px)', marginBottom: 8 }}>
+            Precios orientativos 2026
+          </h2>
+          <ThinLine mb={32} />
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(220px, 1fr))', gap: 16, marginBottom: 20 }}>
+            {[
+              { cat: 'Edificio residencial 5-8 pisos', precio: '$4M – $10M COP', detalle: 'Diseño completo de red húmeda con sprinklers, hidrantes y documentación para curaduría.' },
+              { cat: 'Bodega industrial hasta 5.000 m²', precio: '$6M – $14M COP', detalle: 'Sistema mixto húmedo/seco, cálculo NFPA 13, memorias hidráulicas y planos de instalación.' },
+              { cat: 'Centro comercial o hotel', precio: '$12M – $30M COP', detalle: 'Diseño completo: sprinklers ESFR, BIE, hidrantes, detección y gestión ante Bomberos.' },
+              { cat: 'Gestión curaduría + Bomberos', precio: 'Incluida', detalle: 'La gestión de aprobación ante curaduría urbana y Cuerpo de Bomberos está incluida en los honorarios.' },
+            ].map(r => (
+              <div key={r.cat} style={{ background: '#F8FAFC', border: '1px solid #E2E8F0', borderTop: '3px solid #17A2B8', borderRadius: 4, padding: '18px 20px' }}>
+                <p style={{ fontFamily: "'Montserrat', sans-serif", fontWeight: 700, color: '#001A33', fontSize: 13, marginBottom: 10 }}>{r.cat}</p>
+                <p style={{ fontFamily: "'Playfair Display', serif", fontWeight: 700, color: '#17A2B8', fontSize: 18, marginBottom: 8 }}>{r.precio}</p>
+                <p style={{ fontFamily: "'Lato', sans-serif", color: '#475569', fontSize: 13, lineHeight: 1.6, margin: 0 }}>{r.detalle}</p>
+              </div>
+            ))}
+          </div>
+          <p style={{ fontFamily: "'Lato', sans-serif", color: '#64748B', fontSize: 13, lineHeight: 1.6 }}>
+            El costo de instalación (materiales + mano de obra) es independiente del diseño. <strong>BIC envía propuesta técnica en menos de 24 horas sin costo.</strong>
+          </p>
+          <div style={{ marginTop: 20 }}><Btn href={`https://wa.me/${WA}?text=${WA_MSG}`}>📱 Solicitar cotización CI</Btn></div>
+        </div>
+      </Section>
+
+      {/* ── FAQ ── */}
+      <Section bg="#F8FAFC" style={{ padding: '64px 24px' }}>
+        <div style={{ maxWidth: 860, margin: '0 auto' }}>
+          <SectionLabel>Preguntas frecuentes</SectionLabel>
+          <h2 style={{ fontFamily: "'Playfair Display', serif", fontWeight: 700, color: '#001A33', fontSize: 'clamp(22px, 4vw, 30px)', marginBottom: 8 }}>
+            Preguntas frecuentes sobre sistemas CI
+          </h2>
+          <ThinLine mb={36} />
+          <div style={{ display: 'flex', flexDirection: 'column', gap: 14 }}>
+            {FAQ_CI.map((faq: any, i: number) => (
+              <div key={i} style={{ background: '#fff', border: '1px solid #E2E8F0', borderRadius: 4, padding: '20px 24px' }}>
+                <h3 style={{ fontFamily: "'Montserrat', sans-serif", fontWeight: 700, color: '#001A33', fontSize: 14, margin: '0 0 8px', lineHeight: 1.4 }}>{faq.q}</h3>
+                <p style={{ fontFamily: "'Lato', sans-serif", color: '#475569', fontSize: 14, lineHeight: 1.7, margin: 0 }}>{faq.a}</p>
               </div>
             ))}
           </div>

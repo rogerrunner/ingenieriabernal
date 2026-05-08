@@ -7,8 +7,8 @@ const WA = '573024778910'
 const WA_MSG = encodeURIComponent('Hola, necesito interventoría técnica para una obra hidráulica. ¿Me asesoran sobre el alcance y el costo?')
 
 const seoConfig = {
-  title: 'Interventoría Obras Hidráulicas Colombia 2026 — Desde $5M | COPNIA | BIC',
-  description: 'Interventoría técnica de obras hidráulicas en Colombia desde $5M COP: acueductos, alcantarillados, PTAP y redes hidrosanitarias. Ing. Rogerio Bernal, COPNIA vigente. Informe ejecutivo semanal. Propuesta en 24 h.',
+  title: 'Interventoría Obras Hidráulicas Colombia — COPNIA | BIC',
+  description: 'Interventoría técnica de obras hidráulicas en Colombia. Control de calidad, presupuesto y cronograma. COPNIA certificado. Acueductos, alcantarillados, PTAR. Consulta.',
   keywords: [
     'interventoría técnica hidráulica Colombia',
     'interventoría obras acueducto alcantarillado',
@@ -46,7 +46,19 @@ const FAQ_INT = [
   { q: '¿Cuánto cuesta la interventoría de obras hidráulicas en Colombia?', a: 'El costo de la interventoría depende del valor de la obra y su duración. Para contratos públicos, la interventoría suele representar entre el 5% y el 10% del valor del contrato de obra. Para una obra de $200M–$500M COP (acueducto rural o alcantarillado municipal), la interventoría técnica oscila entre $12M y $40M COP. Para obras menores o revisiones puntuales, los honorarios pueden partir desde $5M COP. BIC envía propuesta en 24 horas.' },
   { q: '¿Qué hace un interventor técnico en una obra hidráulica?', a: 'El interventor técnico verifica que la obra se ejecute conforme a los diseños, las especificaciones técnicas y las normas colombianas (RAS 2017, NSR-10, INVIAS). Sus funciones incluyen: revisión de materiales, supervisión de pruebas hidrostáticas, control de avance físico y financiero, elaboración de actas de avance, verificación de ensayos de laboratorio y concepto técnico para pago de actas parciales y acta de recibo final.' },
   { q: '¿Cuándo es obligatoria la interventoría en obras públicas de agua potable?', a: 'En Colombia, la Ley 1474 de 2011 (Estatuto Anticorrupción) y la Ley 80 de 1993 establecen que los contratos de obra pública superiores a 5.000 SMMLV (aproximadamente $720M COP en 2026) requieren obligatoriamente interventoría externa contratada de forma independiente. Para contratos menores, la entidad puede designar un supervisor interno, aunque muchas alcaldías prefieren contratar interventoría externa especializada para obras hidráulicas.' },
+  { q: '¿La interventoría es obligatoria para obras con recursos de regalías (SGR)?', a: 'Sí. La Ley 1474/2011 exige interventoría independiente para contratos de obra pública que superen el mínimo legal. BIC puede actuar como interventor con toda la documentación exigida por Colombia Compra Eficiente.' },
+  { q: '¿Puede BIC hacer interventoría a obras que ellos mismos diseñaron?', a: 'No directamente. La interventoría debe ser independiente del diseñador y constructor. Si BIC hizo el diseño, la interventoría la ejerce otra firma. Sin embargo, BIC puede actuar como supervisor técnico del contratante (gerencia del proyecto).' },
+  { q: '¿Qué documentos entrega BIC al final de la interventoría?', a: 'Informe final de obra, bitácora completa, actas de recibo, memoria de materiales utilizados, registro fotográfico y acta de liquidación técnica.' },
+  { q: '¿Trabajan en licitaciones públicas de municipios pequeños?', a: 'Sí. Tenemos experiencia en interventorías de proyectos SGR en municipios del Eje Cafetero, Caldas, Risaralda y a nivel nacional.' },
 ]
+
+const listStyle: React.CSSProperties = {
+  fontFamily: "'Lato', sans-serif", color: '#475569', fontSize: 15,
+  lineHeight: 1.8, paddingLeft: 0, listStyle: 'none', margin: 0,
+}
+const liStyle: React.CSSProperties = {
+  paddingLeft: 20, position: 'relative', marginBottom: 6,
+}
 
 export default function ServicioInterventoria() {
   useEffect(() => { window.scrollTo(0, 0) }, [])
@@ -106,6 +118,32 @@ export default function ServicioInterventoria() {
         </div>
       </div>
 
+      {/* ── QUÉ ES LA INTERVENTORÍA ── */}
+      <Section bg="#fff" style={{ padding: '72px 24px' }}>
+        <div style={{ maxWidth: 900, margin: '0 auto' }}>
+          <SectionLabel>Definición técnica</SectionLabel>
+          <h2 style={{
+            fontFamily: "'Playfair Display', serif", fontWeight: 700, color: '#001A33',
+            fontSize: 'clamp(22px, 4vw, 32px)', marginBottom: 8,
+          }}>¿Qué es la interventoría de obras hidráulicas?</h2>
+          <ThinLine mb={32} />
+          <ul style={listStyle}>
+            {[
+              'Control técnico, administrativo y financiero de proyectos de infraestructura hídrica',
+              'Verificación de calidad constructiva según especificaciones y normativa',
+              'Supervisión de cumplimiento de cronograma y presupuesto',
+              'Representación del contratante ante el constructor',
+              'Obligatoria en contratos con recursos públicos (Ley 80/1993)',
+            ].map(item => (
+              <li key={item} style={liStyle}>
+                <span style={{ position: 'absolute', left: 0, color: '#17A2B8', fontWeight: 700 }}>›</span>
+                {item}
+              </li>
+            ))}
+          </ul>
+        </div>
+      </Section>
+
       {/* ── QUÉ INCLUYE ── */}
       <Section bg="#F8FAFC" style={{ padding: '72px 24px' }}>
         <div style={{ maxWidth: 900, margin: '0 auto' }}>
@@ -132,6 +170,63 @@ export default function ServicioInterventoria() {
               </div>
             ))}
           </div>
+        </div>
+      </Section>
+
+      {/* ── ALCANCE INTERVENTORÍA BIC ── */}
+      <Section bg="#fff" style={{ padding: '72px 24px' }}>
+        <div style={{ maxWidth: 900, margin: '0 auto' }}>
+          <SectionLabel>Detalle operativo</SectionLabel>
+          <h2 style={{
+            fontFamily: "'Playfair Display', serif", fontWeight: 700, color: '#001A33',
+            fontSize: 'clamp(22px, 4vw, 32px)', marginBottom: 8,
+          }}>Alcance de la interventoría BIC</h2>
+          <ThinLine mb={32} />
+          <ul style={listStyle}>
+            {[
+              'Revisión de planos y memorias técnicas antes de iniciar obra',
+              'Visitas de campo periódicas con informes de seguimiento',
+              'Control de materiales: ensayos de laboratorio, especificaciones técnicas',
+              'Verificación de pendientes, diámetros y cotas de instalación',
+              'Control de pruebas hidráulicas (presión y exfiltración en tuberías)',
+              'Elaboración de actas de obra, bitácora y libro de interventoría',
+              'Liquidación técnica del contrato',
+              'Informes mensuales al contratante con registro fotográfico',
+            ].map(item => (
+              <li key={item} style={liStyle}>
+                <span style={{ position: 'absolute', left: 0, color: '#17A2B8', fontWeight: 700 }}>›</span>
+                {item}
+              </li>
+            ))}
+          </ul>
+        </div>
+      </Section>
+
+      {/* ── PROYECTOS TÍPICOS ── */}
+      <Section bg="#F8FAFC" style={{ padding: '72px 24px' }}>
+        <div style={{ maxWidth: 900, margin: '0 auto' }}>
+          <SectionLabel>Experiencia BIC</SectionLabel>
+          <h2 style={{
+            fontFamily: "'Playfair Display', serif", fontWeight: 700, color: '#001A33',
+            fontSize: 'clamp(22px, 4vw, 32px)', marginBottom: 8,
+          }}>Proyectos típicos de interventoría BIC</h2>
+          <ThinLine mb={32} />
+          <ul style={listStyle}>
+            {[
+              'Sistemas de acueducto veredal (captación, conducción, distribución)',
+              'Plantas de tratamiento de agua potable y residual',
+              'Redes de alcantarillado sanitario y pluvial',
+              'Obras de protección ribereña y control de erosión',
+              'Obras complementarias en proyectos viales (alcantarillas, cunetas)',
+              'Embalses y presas pequeñas',
+              'Sistemas de riego agropecuario',
+            ].map(item => (
+              <li key={item} style={liStyle}>
+                <span style={{ position: 'absolute', left: 0, color: '#17A2B8', fontWeight: 700 }}>›</span>
+                {item}
+              </li>
+            ))}
+          </ul>
         </div>
       </Section>
 
@@ -163,19 +258,46 @@ export default function ServicioInterventoria() {
         </div>
       </Section>
 
-      {/* ── INVERSIÓN REFERENCIAL ── */}
+      {/* ── MARCO LEGAL ── */}
+      <Section bg="#F8FAFC" style={{ padding: '72px 24px' }}>
+        <div style={{ maxWidth: 900, margin: '0 auto' }}>
+          <SectionLabel>Normativa colombiana</SectionLabel>
+          <h2 style={{
+            fontFamily: "'Playfair Display', serif", fontWeight: 700, color: '#001A33',
+            fontSize: 'clamp(22px, 4vw, 32px)', marginBottom: 8,
+          }}>Marco legal de la interventoría en Colombia</h2>
+          <ThinLine mb={32} />
+          <ul style={listStyle}>
+            {[
+              'Ley 80/1993 y Ley 1150/2008 — contratación estatal',
+              'Ley 1474/2011 — Estatuto Anticorrupción: obligatoriedad interventoría',
+              'Ley 400/1997 y NSR-10 — supervisión estructural',
+              'COPNIA: responsabilidad ética y legal del interventor certificado',
+              'Resolución 0330/2017 (RAS 2017): requisitos técnicos de supervisión',
+            ].map(item => (
+              <li key={item} style={liStyle}>
+                <span style={{ position: 'absolute', left: 0, color: '#17A2B8', fontWeight: 700 }}>›</span>
+                {item}
+              </li>
+            ))}
+          </ul>
+        </div>
+      </Section>
+
+      {/* ── PRECIOS ORIENTATIVOS 2026 ── */}
       <Section bg="#fff" style={{ padding: '64px 24px' }}>
         <div style={{ maxWidth: 900, margin: '0 auto' }}>
           <SectionLabel>Inversión referencial</SectionLabel>
           <h2 style={{ fontFamily: "'Playfair Display', serif", fontWeight: 700, color: '#001A33', fontSize: 'clamp(22px, 4vw, 30px)', marginBottom: 8 }}>
-            ¿Cuánto cuesta la interventoría de obras hidráulicas?
+            Precios orientativos 2026
           </h2>
           <ThinLine mb={32} />
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(220px, 1fr))', gap: 16, marginBottom: 20 }}>
             {[
-              { cat: 'Revisión técnica / obra menor', precio: '$5M – $15M COP', detalle: 'Supervisión puntual, informes técnicos y actas de entrega. Ideal para contratos de hasta $200M COP.' },
-              { cat: 'Acueducto / alcantarillado municipal', precio: '$15M – $50M COP', detalle: 'Supervisión permanente en campo, informes semanales, control de materiales y pruebas hidrostáticas.' },
-              { cat: 'Contratos SGR (grandes obras)', precio: 'Desde $30M COP', detalle: 'Interventoría técnica, financiera y administrativa. Obligatoria para contratos > 5.000 SMMLV.' },
+              { cat: 'Interventoría acueducto veredal (3 meses)', precio: '$8M – $20M COP', detalle: 'Control técnico, visitas periódicas e informes de seguimiento para sistemas de captación, conducción y distribución.' },
+              { cat: 'Interventoría alcantarillado urbano (4 meses)', precio: '$12M – $30M COP', detalle: 'Supervisión de redes sanitarias y pluviales, pruebas hidráulicas, actas de avance y control de materiales.' },
+              { cat: 'Interventoría PTAR pequeña (4-6 meses)', precio: '$15M – $35M COP', detalle: 'Control técnico y financiero de plantas de tratamiento de aguas residuales de pequeña y mediana escala.' },
+              { cat: 'Supervisión técnica puntual (visitas)', precio: '$500K – $1.5M COP/visita', detalle: 'Visitas de diagnóstico, conceptos técnicos puntuales y elaboración de informes específicos.' },
             ].map(r => (
               <div key={r.cat} style={{ background: '#F8FAFC', border: '1px solid #E2E8F0', borderTop: '3px solid #17A2B8', borderRadius: 4, padding: '18px 20px' }}>
                 <p style={{ fontFamily: "'Montserrat', sans-serif", fontWeight: 700, color: '#001A33', fontSize: 13, marginBottom: 10 }}>{r.cat}</p>
@@ -185,7 +307,7 @@ export default function ServicioInterventoria() {
             ))}
           </div>
           <p style={{ fontFamily: "'Lato', sans-serif", color: '#64748B', fontSize: 13, lineHeight: 1.6 }}>
-            El costo de interventoría suele representar el 5–10% del valor del contrato de obra. <strong>BIC envía propuesta técnica y económica en menos de 24 horas sin costo.</strong>
+            Los honorarios son proporcionales al valor y complejidad del contrato. <strong>BIC envía propuesta técnica y económica en menos de 24 horas sin costo.</strong>
           </p>
           <div style={{ marginTop: 20 }}><Btn href={`https://wa.me/${WA}?text=${WA_MSG}`}>📱 Solicitar cotización de interventoría</Btn></div>
         </div>
@@ -218,14 +340,14 @@ export default function ServicioInterventoria() {
           <h2 style={{
             fontFamily: "'Playfair Display', serif", fontWeight: 700, color: '#fff',
             fontSize: 'clamp(22px, 4vw, 32px)', marginBottom: 8,
-          }}>¿Por qué BIC?</h2>
+          }}>¿Por qué elegir BIC como interventor?</h2>
           <ThinLine mb={40} />
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(240px, 1fr))', gap: 24 }}>
             {[
-              { icon: '🎓', titulo: 'Especialista UNAL · COPNIA vigente', desc: 'Rogerio Bernal Ríos, Especialista en Ingeniería Hidráulica y Ambiental (UNAL, COPNIA 17202-313228). La interventoría que contratan las entidades más exigentes para garantizar conceptos técnicos inimpugnables.' },
-              { icon: '📜', titulo: 'COPNIA vigente — responsabilidad profesional', desc: 'Todos los informes y actas firmados por profesional habilitado, con plena responsabilidad disciplinaria y penal ante el Estado colombiano.' },
-              { icon: '⚡', titulo: 'Respuesta ágil en terreno', desc: 'Desplazamientos rápidos desde Manizales a cualquier municipio del Eje Cafetero o el país. Disponibilidad para visitas de emergencia cuando el contratista genera alertas.' },
-              { icon: '🔗', titulo: 'Interventoría y diseño bajo el mismo techo', desc: 'Si se requieren ajustes técnicos durante la obra, BIC los tramita internamente sin demoras. Menor tiempo de respuesta y cero inconsistencias entre interventoría y diseño.' },
+              { icon: '🎓', titulo: 'COPNIA 17202-313228 — certificación vigente', desc: 'Rogerio Bernal Ríos, Especialista en Ingeniería Hidráulica y Ambiental (UNAL). Tarjeta profesional activa con plena responsabilidad disciplinaria y penal ante el Estado colombiano.' },
+              { icon: '🏛️', titulo: 'Experiencia SGR y MinVivienda', desc: 'Interventorías en proyectos financiados con regalías (SGR) y MinVivienda. Formatos, informes y actas ajustados a los requerimientos de Colombia Compra Eficiente y las entidades de control.' },
+              { icon: '📚', titulo: 'Conocimiento profundo RAS 2017 y NSR-10', desc: 'Dominio de la normativa técnica colombiana: RAS 2017, NSR-10 y normativa ambiental. Informes claros para contratantes públicos y privados sin ambigüedades ni observaciones de entes de control.' },
+              { icon: '🗺️', titulo: 'Desplazamiento nacional', desc: 'Disponibilidad para desplazamiento a cualquier municipio del país. Alcaldías del Eje Cafetero, Caldas, Risaralda y más de 20 municipios en Colombia han contratado con BIC.' },
             ].map(d => (
               <div key={d.titulo} style={{
                 background: 'rgba(255,255,255,0.05)', border: '1px solid rgba(23,162,184,0.2)',
