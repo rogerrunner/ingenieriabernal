@@ -6,8 +6,8 @@ const WA = '573024778910'
 const WA_MSG = encodeURIComponent('Hola, necesito cotizar el diseño de alcantarillado en Colombia. ¿Pueden ayudarme?')
 
 const seoConfig = {
-  title: 'Diseño de Alcantarillado Colombia — RAS 2017 | BIC',
-  description: 'Diseño alcantarillado sanitario y pluvial en Colombia. RAS 2017, NTC 1339, EPANET. Memoria COPNIA, planos AutoCAD. Ing. Rogerio Bernal, Manizales. Cotiza hoy.',
+  title: 'Diseño Alcantarillado Colombia — RAS 2017 Separado Combinado | BIC',
+  description: 'Diseño de redes de alcantarillado sanitario y pluvial en Colombia. RAS 2017, EPANET, SWMM. Sistemas separados y combinados. COPNIA certificado. Cotiza.',
   keywords: [
     'diseño de alcantarillado Colombia',
     'alcantarillado sanitario Colombia',
@@ -24,6 +24,29 @@ const seoConfig = {
   ],
   canonical: 'https://ingenieriabernal.co/diseno-alcantarillado-colombia',
 }
+
+const SISTEMAS = [
+  {
+    sistema: 'Alcantarillado sanitario',
+    desc: 'Recolección de aguas residuales domésticas e industriales hacia la PTAR. Tuberías PVC, GRP o concreto; cámaras de inspección cada 80–120 m; verificación de velocidades mínimas 0,6 m/s.',
+  },
+  {
+    sistema: 'Alcantarillado pluvial',
+    desc: 'Drenaje de aguas lluvias hacia cuerpos receptores o sistemas de infiltración. Colectores, cunetas, sumideros y box culvert. Cálculo por método racional o SCS-CN con curvas IDF del IDEAM.',
+  },
+  {
+    sistema: 'Sistema separado',
+    desc: 'Redes independientes para aguas residuales y aguas lluvias. Recomendado por el RAS 2017 para nuevas urbanizaciones y desarrollos; evita sobrecarga hidráulica en eventos de lluvia intensa.',
+  },
+  {
+    sistema: 'Sistema combinado',
+    desc: 'Red única que transporta AR y AP. Utilizado en rehabilitación de redes existentes en zonas urbanas consolidadas donde separar las redes no es viable técnica o económicamente.',
+  },
+  {
+    sistema: 'Conexión a PTAR',
+    desc: 'Integración del diseño de alcantarillado con la planta de tratamiento de aguas residuales. BIC puede incluir el diseño de la PTAR complementaria para cumplir los criterios de vertimiento.',
+  },
+]
 
 const TIPOS = [
   {
@@ -92,6 +115,13 @@ const NORMATIVA = [
   { codigo: 'NSR-10 (Título D)', descripcion: 'Diseño estructural de pozos, cámaras de inspección y estructuras de concreto del sistema de alcantarillado' },
 ]
 
+const PRECIOS_ALCANTARILLADO = [
+  { servicio: 'Red sanitaria barrio 50 viviendas', rango: '$8M – $18M COP' },
+  { servicio: 'Red pluvial vía urbana (500 m)', rango: '$5M – $12M COP' },
+  { servicio: 'Diseño integral urbanización 100 viviendas', rango: '$20M – $45M COP' },
+  { servicio: 'Plan maestro de alcantarillado municipal', rango: '$30M – $80M COP' },
+]
+
 const FAQ = [
   {
     q: '¿Cuánto cuesta el diseño de un sistema de alcantarillado en Colombia?',
@@ -105,7 +135,62 @@ const FAQ = [
     q: '¿Se puede diseñar el alcantarillado pluvial y sanitario por separado?',
     a: 'Sí, y en Colombia el RAS 2017 recomienda los sistemas separados (sanitario y pluvial independientes) para nuevas urbanizaciones y desarrollos, porque los sistemas combinados generan problemas de capacidad hidráulica en eventos de lluvia intensa. Sin embargo, en municipios con red existente combinada, BIC analiza la viabilidad técnica de conectarse a la red existente o diseñar una solución separada según los criterios de la ESP local. Para urbanizaciones nuevas, siempre se diseñan sistemas separados.',
   },
+  {
+    q: '¿Cuál es la diferencia entre alcantarillado sanitario y pluvial?',
+    a: 'El sanitario conduce aguas residuales domésticas o industriales hacia la PTAR. El pluvial conduce las aguas lluvias hacia cuerpos de agua o infiltración. El RAS 2017 recomienda sistemas separados en nuevos desarrollos.',
+  },
+  {
+    q: '¿Cuándo se usa un sistema combinado?',
+    a: 'En zonas urbanas consolidadas donde es costoso separar las redes. BIC evalúa la viabilidad técnica y económica de cada opción antes de recomendar el sistema más adecuado.',
+  },
+  {
+    q: '¿Incluyen el diseño de la PTAR en el mismo contrato?',
+    a: 'Sí. BIC puede incluir el diseño de la planta de tratamiento de aguas residuales complementaria para cumplir con los requisitos de vertimiento establecidos en la Resolución 0631/2015.',
+  },
+  {
+    q: '¿Trabajan con municipios pequeños para mejorar redes existentes?',
+    a: 'Sí. Tenemos experiencia en rehabilitación y ampliación de redes en municipios del Eje Cafetero con financiación SGR y MinVivienda. BIC elabora el diagnóstico hidráulico y las alternativas de mejora con presupuesto APU.',
+  },
 ]
+
+const FAQ_SCHEMA = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: [
+    {
+      '@type': 'Question',
+      name: '¿Cuál es la diferencia entre alcantarillado sanitario y pluvial?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'El sanitario conduce aguas residuales domésticas o industriales hacia la PTAR. El pluvial conduce las aguas lluvias hacia cuerpos de agua o infiltración. El RAS 2017 recomienda sistemas separados en nuevos desarrollos.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: '¿Cuándo se usa un sistema combinado?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'En zonas urbanas consolidadas donde es costoso separar las redes. BIC evalúa la viabilidad técnica y económica de cada opción.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: '¿Incluyen el diseño de la PTAR en el mismo contrato?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Sí. BIC puede incluir el diseño de la planta de tratamiento complementaria para cumplir con los requisitos de vertimiento.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: '¿Trabajan con municipios pequeños para mejorar redes existentes?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Sí. Tenemos experiencia en rehabilitación y ampliación de redes en municipios del Eje Cafetero con financiación SGR y MinVivienda.',
+      },
+    },
+  ],
+}
 
 const ARTICULOS = [
   { href: '/blog/alcantarillado-pluvial-colombia', title: 'Diseño de Alcantarillado Pluvial en Colombia: Normativa y Cálculo' },
@@ -115,6 +200,14 @@ const ARTICULOS = [
 
 export default function DisenoAlcantarilladoColombia() {
   useEffect(() => { window.scrollTo(0, 0) }, [])
+
+  useEffect(() => {
+    const s = document.createElement('script')
+    s.type = 'application/ld+json'
+    s.text = JSON.stringify(FAQ_SCHEMA)
+    document.head.appendChild(s)
+    return () => { document.head.removeChild(s) }
+  }, [])
 
   return (
     <>
@@ -177,6 +270,25 @@ export default function DisenoAlcantarilladoColombia() {
                   <p style={{ fontSize: 12, fontWeight: 700, color: '#003B6F', marginBottom: 4 }}>APLICA PARA</p>
                   <p style={{ fontSize: 13, color: '#444', margin: 0, lineHeight: 1.6 }}>{t.aplica}</p>
                 </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </Section>
+
+      {/* ── SISTEMAS ── */}
+      <Section>
+        <div style={{ maxWidth: 960, margin: '0 auto', padding: '0 24px' }}>
+          <SectionLabel>Tipos de sistema</SectionLabel>
+          <h2 style={{ fontFamily: "'Playfair Display', serif", fontWeight: 700, fontSize: 'clamp(22px, 3vw, 34px)', marginBottom: 12 }}>
+            Sistemas de alcantarillado que diseñamos
+          </h2>
+          <ThinLine mb={32} />
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(260px, 1fr))', gap: 20 }}>
+            {SISTEMAS.map(s => (
+              <div key={s.sistema} style={{ background: '#fff', border: '1px solid #e2e8f0', borderRadius: 12, padding: '20px 22px', borderTop: '3px solid #17A2B8' }}>
+                <h3 style={{ fontWeight: 700, fontSize: 15, color: '#002A50', marginBottom: 10 }}>{s.sistema}</h3>
+                <p style={{ color: '#555', fontSize: 14, lineHeight: 1.7, margin: 0 }}>{s.desc}</p>
               </div>
             ))}
           </div>
@@ -249,6 +361,30 @@ export default function DisenoAlcantarilladoColombia() {
               </div>
             ))}
           </div>
+        </div>
+      </Section>
+
+      {/* ── PRECIOS ORIENTATIVOS ── */}
+      <Section>
+        <div style={{ maxWidth: 860, margin: '0 auto', padding: '0 24px' }}>
+          <SectionLabel>Tarifas de referencia</SectionLabel>
+          <h2 style={{ fontFamily: "'Playfair Display', serif", fontWeight: 700, fontSize: 'clamp(22px, 3vw, 34px)', marginBottom: 8 }}>
+            Precios orientativos 2026
+          </h2>
+          <p style={{ color: '#555', lineHeight: 1.7, marginBottom: 24, maxWidth: 720 }}>
+            Incluye memorias de cálculo, planos constructivos, especificaciones y APU. Precios en COP.
+          </p>
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: 16, marginBottom: 20 }}>
+            {PRECIOS_ALCANTARILLADO.map(p => (
+              <div key={p.servicio} style={{ background: '#fff', border: '1px solid #e2e8f0', borderRadius: 10, padding: '18px 22px', borderLeft: '4px solid #17A2B8' }}>
+                <p style={{ fontWeight: 700, fontSize: 14, color: '#002A50', marginBottom: 6 }}>{p.servicio}</p>
+                <p style={{ fontSize: 20, fontWeight: 900, color: '#17A2B8', margin: 0 }}>{p.rango}</p>
+              </div>
+            ))}
+          </div>
+          <p style={{ color: '#777', fontSize: 13, fontStyle: 'italic', lineHeight: 1.6 }}>
+            BIC envía propuesta técnica y económica detallada en menos de 24 horas sin costo.
+          </p>
         </div>
       </Section>
 

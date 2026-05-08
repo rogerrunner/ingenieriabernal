@@ -6,8 +6,8 @@ const WA = '573024778910'
 const WA_MSG = encodeURIComponent('Hola, necesito consultoría en obras hidráulicas: bocatoma / canal / encauzamiento / protección fluvial')
 
 const seoConfig = {
-  title: 'Obras Hidráulicas Colombia — Diseño y Construcción | BIC',
-  description: 'Diseño y consultoría de obras hidráulicas en Colombia. Acueductos, alcantarillados, PTAP. Ing. Bernal COPNIA. Caldas y Eje Cafetero.',
+  title: 'Diseño Obras Hidráulicas Colombia — Canales, Diques, Gaviones | BIC',
+  description: 'Diseño de obras hidráulicas en Colombia: canales, diques, gaviones, disipadores. RAS 2017, NSR-10. Proyectos viales e hídricos. COPNIA. Solicita cotización.',
   keywords: [
     'obras hidráulicas Colombia',
     'diseño bocatoma Colombia',
@@ -153,6 +153,15 @@ const NORMATIVA = [
   { norma: 'NSR-10 — Título A, C, D', aplicacion: 'Diseño estructural de obras en concreto: barrajes, muros de encauzamiento, cámaras' },
   { norma: 'Ley 1523/2012', aplicacion: 'Gestión del riesgo en municipios — obras de protección contra inundaciones y torrentes' },
   { norma: 'Decreto 1807/2014', aplicacion: 'Estudios de amenaza hídrica para licencias de urbanismo con obras de mitigación' },
+  { norma: 'Guías IDEAM', aplicacion: 'Metodologías para estudios hidrológicos y análisis de caudales de diseño en Colombia' },
+  { norma: 'ANLA/CAR — Licenciamiento', aplicacion: 'Permiso de ocupación de cauce para obras en cauces naturales según escala del proyecto' },
+]
+
+const PRECIOS_HIDRAULICA = [
+  { servicio: 'Diseño de canal rural (500 m)', rango: '$4M – $10M COP' },
+  { servicio: 'Box culvert o alcantarilla vial', rango: '$3M – $8M COP' },
+  { servicio: 'Protección ribereña con gaviones (200 m)', rango: '$5M – $12M COP' },
+  { servicio: 'Diseño integral acueducto + obras de captación', rango: '$15M – $40M COP' },
 ]
 
 const FAQ = [
@@ -188,7 +197,62 @@ const FAQ = [
     q: '¿En qué regiones de Colombia trabaja BIC para obras hidráulicas?',
     a: 'BIC tiene base en Manizales y atiende proyectos en todo el territorio colombiano. Ha ejecutado proyectos en Caldas, Risaralda, Valle del Cauca, Boyacá, Cundinamarca, Magdalena y en Ecuador. Para proyectos que requieren visita de campo, BIC coordina el desplazamiento directamente con el cliente. Los diseños, memorias de cálculo y modelos hidráulicos se elaboran en Manizales y se entregan digitalmente con todos los soportes técnicos.',
   },
+  {
+    q: '¿Necesito licencia ambiental para construir una obra hidráulica?',
+    a: 'Sí. Las obras que ocupan cauces naturales requieren Permiso de Ocupación de Cauce ante la CAR o ANLA según la escala del proyecto. BIC prepara todos los estudios técnicos y memorias requeridas para este trámite.',
+  },
+  {
+    q: '¿Pueden diseñar la obra y supervisar la construcción?',
+    a: 'Sí. BIC ofrece diseño técnico completo más interventoría y supervisión de obra, ya sea como un paquete integral o por separado según las necesidades del cliente.',
+  },
+  {
+    q: '¿Hacen estudios hidrológicos para el diseño?',
+    a: 'Sí. Toda obra hidráulica requiere análisis de caudales de diseño (periodos de retorno Tr 25, 50 o 100 años). BIC elabora el estudio hidrológico integrado con el diseño hidráulico.',
+  },
+  {
+    q: '¿Trabajan en todo Colombia?',
+    a: 'Sí. Proyectos ejecutados en Caldas, Eje Cafetero, Antioquia, Putumayo y en todo el territorio nacional. Los costos de desplazamiento se incluyen en la propuesta según la ubicación.',
+  },
 ]
+
+const FAQ_SCHEMA = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: [
+    {
+      '@type': 'Question',
+      name: '¿Necesito licencia ambiental para construir una obra hidráulica?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Sí. Las obras que ocupan cauces naturales requieren Permiso de Ocupación de Cauce ante la CAR o ANLA según la escala del proyecto. BIC prepara todos los estudios técnicos y memorias requeridas para este trámite.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: '¿Pueden diseñar la obra y supervisar la construcción?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Sí. BIC ofrece diseño técnico completo más interventoría y supervisión de obra, ya sea como un paquete integral o por separado según las necesidades del cliente.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: '¿Hacen los estudios hidrológicos necesarios para el diseño?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Sí. Toda obra hidráulica requiere análisis de caudales de diseño (periodos de retorno Tr 25, 50 o 100 años). BIC elabora el estudio hidrológico integrado con el diseño hidráulico.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: '¿En qué regiones de Colombia trabaja BIC?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'BIC tiene proyectos en Caldas, Risaralda, Quindío, Antioquia, Putumayo y en general en todo el territorio nacional. Los costos de desplazamiento se incluyen en la propuesta según la ubicación.',
+      },
+    },
+  ],
+}
 
 const RELACIONADOS = [
   { href: '/bocatomas-colombia', label: '🔵 Diseño de bocatomas en Colombia' },
@@ -201,6 +265,14 @@ const RELACIONADOS = [
 
 export default function ObrasHidraulicasColombia() {
   useEffect(() => { window.scrollTo(0, 0) }, [])
+
+  useEffect(() => {
+    const s = document.createElement('script')
+    s.type = 'application/ld+json'
+    s.text = JSON.stringify(FAQ_SCHEMA)
+    document.head.appendChild(s)
+    return () => { document.head.removeChild(s) }
+  }, [])
 
   return (
     <>
@@ -251,6 +323,29 @@ export default function ObrasHidraulicasColombia() {
           ))}
         </div>
       </section>
+
+      {/* ── QUÉ SON OBRAS HIDRÁULICAS ── */}
+      <Section>
+        <div style={{ maxWidth: 900, margin: '0 auto', padding: '0 24px' }}>
+          <SectionLabel>Conceptos clave</SectionLabel>
+          <h2 style={{ fontFamily: "'Playfair Display', serif", fontWeight: 700, fontSize: 'clamp(22px, 3vw, 32px)', marginBottom: 20 }}>
+            ¿Qué son las obras hidráulicas?
+          </h2>
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(260px, 1fr))', gap: 16 }}>
+            {[
+              { icon: '🏗️', text: 'Estructuras para control, conducción y almacenamiento del agua' },
+              { icon: '🛡️', text: 'Obras de protección contra erosión e inundaciones en zonas ribereñas' },
+              { icon: '💧', text: 'Infraestructura para el aprovechamiento hídrico en acueductos y riego' },
+              { icon: '🛣️', text: 'Componente esencial en proyectos viales, mineros y agropecuarios' },
+            ].map(item => (
+              <div key={item.text} style={{ display: 'flex', gap: 14, alignItems: 'flex-start', background: '#f0f9ff', borderRadius: 10, padding: '16px 18px', border: '1px solid #b3e0ea' }}>
+                <span style={{ fontSize: 22, flexShrink: 0 }}>{item.icon}</span>
+                <p style={{ margin: 0, color: '#003B6F', fontSize: 14, lineHeight: 1.65 }}>{item.text}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </Section>
 
       {/* ── TIPOS DE OBRAS ── */}
       <Section>
@@ -390,6 +485,30 @@ export default function ObrasHidraulicasColombia() {
               </tbody>
             </table>
           </div>
+        </div>
+      </Section>
+
+      {/* ── PRECIOS ORIENTATIVOS ── */}
+      <Section>
+        <div style={{ maxWidth: 860, margin: '0 auto', padding: '0 24px' }}>
+          <SectionLabel>Tarifas de referencia</SectionLabel>
+          <h2 style={{ fontFamily: "'Playfair Display', serif", fontWeight: 700, fontSize: 'clamp(22px, 3vw, 32px)', marginBottom: 8 }}>
+            Precios orientativos 2026
+          </h2>
+          <p style={{ color: '#555', lineHeight: 1.7, marginBottom: 24, maxWidth: 720 }}>
+            Rangos aproximados en COP. El valor final depende de topografía, geología y requerimientos de licencia ambiental.
+          </p>
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: 16, marginBottom: 20 }}>
+            {PRECIOS_HIDRAULICA.map(p => (
+              <div key={p.servicio} style={{ background: '#fff', border: '1px solid #e2e8f0', borderRadius: 10, padding: '18px 22px', borderLeft: '4px solid #17A2B8' }}>
+                <p style={{ fontWeight: 700, fontSize: 14, color: '#002A50', marginBottom: 6 }}>{p.servicio}</p>
+                <p style={{ fontSize: 20, fontWeight: 900, color: '#17A2B8', margin: 0 }}>{p.rango}</p>
+              </div>
+            ))}
+          </div>
+          <p style={{ color: '#777', fontSize: 13, fontStyle: 'italic', lineHeight: 1.6 }}>
+            Tiempos estimados: 2–6 semanas según complejidad. BIC envía propuesta técnica y económica detallada en menos de 24 horas sin costo.
+          </p>
         </div>
       </Section>
 
