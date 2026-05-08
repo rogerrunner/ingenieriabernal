@@ -419,6 +419,24 @@ export default function ServicioDisenoAcueductos() {
         </div>
       </Section>
 
+      {/* ── TAMBIÉN DISPONIBLE EN ── */}
+      <Section bg="#eef6fb" style={{ padding: '36px 24px' }}>
+        <div style={{ maxWidth: 860, margin: '0 auto' }}>
+          <p style={{ fontFamily: "'Montserrat', sans-serif", fontWeight: 700, color: '#003B6F', fontSize: 12, letterSpacing: '0.07em', textTransform: 'uppercase', marginBottom: 14 }}>
+            También disponible en:
+          </p>
+          <div style={{ display: 'flex', gap: 12, flexWrap: 'wrap' }}>
+            <a href="/acueducto-quindio" style={{
+              display: 'inline-block', background: '#fff', border: '1px solid #b3d4e8',
+              borderRadius: 8, padding: '12px 18px', color: '#003B6F',
+              fontWeight: 600, fontSize: 14, textDecoration: 'none',
+            }}>
+              Diseño de acueductos en el Quindío →
+            </a>
+          </div>
+        </div>
+      </Section>
+
       {/* ── CTA FINAL ── */}
       <Section bg="#17A2B8" style={{ padding: '64px 24px', textAlign: 'center' }}>
         <div style={{ maxWidth: 680, margin: '0 auto' }}>

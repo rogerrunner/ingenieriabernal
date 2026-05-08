@@ -374,6 +374,24 @@ export default function DisenoPTAPColombia() {
         </div>
       </Section>
 
+      {/* ── TAMBIÉN DISPONIBLE EN ── */}
+      <Section style={{ background: '#eef6fb' }}>
+        <div style={{ maxWidth: 880, margin: '0 auto', padding: '0 24px' }}>
+          <p style={{ fontFamily: "'Montserrat', sans-serif", fontWeight: 700, color: '#003B6F', fontSize: 12, letterSpacing: '0.07em', textTransform: 'uppercase', marginBottom: 14 }}>
+            También disponible en:
+          </p>
+          <div style={{ display: 'flex', gap: 12, flexWrap: 'wrap' }}>
+            <a href="/ptap-municipios-colombia" style={{
+              display: 'inline-block', background: '#fff', border: '1px solid #b3d4e8',
+              borderRadius: 8, padding: '12px 18px', color: '#003B6F',
+              fontWeight: 600, fontSize: 14, textDecoration: 'none',
+            }}>
+              PTAP para municipios con regalías SGR →
+            </a>
+          </div>
+        </div>
+      </Section>
+
       {/* ── CTA FINAL ── */}
       <section style={{
         background: 'linear-gradient(135deg, #001A33 0%, #003B6F 100%)',

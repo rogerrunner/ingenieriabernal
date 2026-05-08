@@ -400,6 +400,16 @@ export default function ModelacionHidraulicaColombia() {
               Formulario de contacto
             </a>
           </div>
+          <div style={{ marginTop: 32, paddingTop: 24, borderTop: '1px solid rgba(255,255,255,0.15)' }}>
+            <p style={{ color: 'rgba(255,255,255,0.55)', fontSize: 12, marginBottom: 10, textTransform: 'uppercase', letterSpacing: '0.06em' }}>
+              También disponible en:
+            </p>
+            <a href="/modelacion-hidraulica-putumayo" style={{
+              color: '#7FDBEA', fontWeight: 600, fontSize: 14, textDecoration: 'underline',
+            }}>
+              Modelación hidráulica en el Putumayo →
+            </a>
+          </div>
         </div>
       </section>
     </>

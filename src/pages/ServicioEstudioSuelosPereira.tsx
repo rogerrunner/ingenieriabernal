@@ -1,369 +1,155 @@
 import { useEffect } from 'react'
 import SEOHead from '@/components/SEOHead'
-import SchemaMarkup from '@/components/SchemaMarkup'
 import { BlueprintBg, ThinLine, SectionLabel, Btn, Section, Tag } from '@/components/ui'
 
 const WA = '573024778910'
-const WA_MSG = encodeURIComponent('Hola, quiero cotizar Estudio de Suelos en Pereira')
+const WA_MSG = encodeURIComponent('Hola, necesito estudio de suelos o geotecnia en Pereira. ¿Pueden ayudarme?')
 
 const seoConfig = {
-  title: 'Estudio de Suelos para Torres y Edificios en Pereira y Risaralda | BIC',
-  description: 'Estudios geotécnicos NSR-10 para edificios, torres y proyectos de construcción en Pereira, Dosquebradas y Risaralda. Sondeos SPT, capacidad portante, cimentaciones.',
+  title: 'Estudio de Suelos en Pereira | Geotecnia BIC',
+  description: 'Estudios geotécnicos para construcción en Pereira y Risaralda. NSR-10 Título H. Sondeos SPT, apiques. BIC, COPNIA vigente. Presupuesto en 24 h.',
   keywords: [
     'estudio de suelos Pereira',
+    'geotecnia Pereira',
     'estudio geotécnico Pereira',
-    'sondeo SPT Risaralda',
+    'NSR-10 Pereira',
+    'estudio suelos licencia Pereira',
+    'sondeos SPT Pereira',
     'capacidad portante Pereira',
-    'cimentación edificio Pereira',
-    'NSR-10 Título H Pereira',
-    'estudio suelos Dosquebradas',
-    'geotecnia Eje Cafetero',
-    'pilotes Pereira edificio',
-    'estudio geotécnico torre Pereira',
+    'estudio suelos Risaralda',
+    'geotecnia Dosquebradas',
+    'ingeniero geotécnico Pereira',
   ],
-  canonical: 'https://ingenieriabernal.co/servicios/estudio-suelos-pereira',
+  canonical: 'https://ingenieriabernal.co/geotecnia-pereira',
+}
+
+const SCHEMA = {
+  '@context': 'https://schema.org',
+  '@type': 'Service',
+  name: 'Estudio de Suelos y Geotecnia en Pereira',
+  description: 'Estudios geotécnicos para construcción en Pereira y Risaralda. NSR-10 Título H. Sondeos SPT, apiques. COPNIA vigente.',
+  url: 'https://ingenieriabernal.co/geotecnia-pereira',
+  serviceType: 'Estudios Geotécnicos y de Suelos',
+  areaServed: ['Pereira', 'Risaralda', 'Dosquebradas', 'Santa Rosa de Cabal', 'Eje Cafetero', 'Colombia'],
+  provider: {
+    '@type': 'LocalBusiness',
+    name: 'Bernal Ingeniería Consultores — BIC',
+    url: 'https://ingenieriabernal.co',
+    telephone: '+573024778910',
+  },
 }
 
 const INCLUYE = [
   {
     icon: '🔩',
-    titulo: 'Exploración geotécnica — sondeos SPT',
-    desc: 'Perforación de sondeos con recuperación de muestras alteradas e inalteradas. Ensayo de Penetración Estándar (SPT) cada metro hasta la profundidad de diseño (mínimo 10 m para edificios de 2–5 pisos, 20 m para estructuras altas). Nivel freático y descripción estratigráfica USCS conforme a NSR-10 Título H.',
+    titulo: 'Sondeos SPT y apiques',
+    desc: 'Programación y supervisión de sondeos de penetración estándar (SPT), apiques explorativos y perforaciones con recuperación de muestras inalteradas para determinar el perfil geotécnico del subsuelo. Todos los trabajos se ejecutan conforme a la NSR-10 Título H y los criterios del INVIAS para obras de infraestructura en Pereira y Risaralda.',
   },
   {
     icon: '🧪',
-    titulo: 'Ensayos de laboratorio',
-    desc: 'Clasificación de suelos (granulometría, límites de Atterberg), contenido de humedad, peso unitario, ensayo de compresión inconfinada (UCS) en arcillas, ensayo triaxial CU para suelos saturados. Análisis de colapso en suelos volcánicos de cenizas del Eje Cafetero (colapsibles bajo saturación).',
+    titulo: 'Ensayos de laboratorio geotécnico',
+    desc: 'Interpretación de ensayos sobre muestras de suelo: clasificación USCS, límites de Atterberg, granulometría, humedad natural, densidad seca, compresión inconfinada y corte directo. Los resultados alimentan el diseño de cimentaciones y las recomendaciones para el tipo de fundación más adecuado para el proyecto en Pereira.',
   },
   {
     icon: '📐',
-    titulo: 'Análisis de capacidad portante',
-    desc: 'Cálculo de capacidad portante última y admisible para cimentaciones superficiales (zapatas corridas, aisladas y combinadas) y profundas (pilotes y caissons). Métodos: Terzaghi, Meyerhof, Vesic. Correlaciones SPT para suelos areno-arcillosos del Valle del Cauca y Risaralda.',
+    titulo: 'Diseño de cimentaciones',
+    desc: 'Recomendaciones de cimentación superficial (zapatas, vigas de amarre, losa de cimentación) o profunda (pilotes, micropilotes) con cálculo de la capacidad portante neta admisible. Verificación del asentamiento tolerable conforme a la NSR-10 E.3 para garantizar la estabilidad estructural de edificaciones en Pereira y Dosquebradas.',
   },
   {
-    icon: '🏗️',
-    titulo: 'Diseño y recomendación de cimentación',
-    desc: 'Recomendación técnica del tipo de cimentación más adecuado para el proyecto según la estratigrafía, las cargas de la estructura y las condiciones de sismicidad. Predimensionamiento de zapatas, vigas de amarre, pilotes o caissons conforme a NSR-10 Capítulo B.6.',
+    icon: '⛰️',
+    titulo: 'Estabilidad de taludes y ladera',
+    desc: 'Análisis de estabilidad de taludes para obras de corte y relleno en Pereira: factores de seguridad estático y pseudoestático con métodos de Bishop o Janbu. Recomendaciones de tratamiento (cunetas, subdrenajes, muros de contención, vegetación) y concepto de riesgo por movimiento en masa para curadurías.',
   },
-  {
-    icon: '🌋',
-    titulo: 'Análisis sísmico — zona cafetera',
-    desc: 'Pereira y Dosquebradas están en zona de amenaza sísmica alta (NSR-10). El estudio incluye análisis de amplificación de ondas sísmicas en el perfil de suelo, clasificación del perfil sísmico (SA a SF según NSR-10 Tabla A.2.4-1) y coeficientes de sitio Fa y Fv para el diseño estructural.',
-  },
-  {
-    icon: '📋',
-    titulo: 'Informe geotécnico completo',
-    desc: 'Informe NSR-10 Título H con: resumen ejecutivo, descripción del área, trabajo de campo, ensayos de laboratorio, análisis de capacidad portante, análisis sísmico, perfil de suelo y recomendaciones de cimentación. Firmado por ingeniero con tarjeta COPNIA vigente apto para trámite de licencia.',
-  },
-]
-
-const TIPOS_CIMENTACION = [
-  {
-    tipo: 'Cimentación superficial (zapatas)',
-    cuando: 'Edificios de 2–8 pisos sobre suelos firmes o medianamente compactos con capacidad portante admisible > 8 t/m². En Pereira, aplica en estratos de arenas densas o arcillas de baja plasticidad por encima de los 3–5 m.',
-    desc: 'Zapatas aisladas para columnas, corridas para muros de carga. Se verifican asentamientos totales (< 25 mm) y diferenciales (< 20 mm) conforme a NSR-10 C.9.',
-  },
-  {
-    tipo: 'Pilotes de concreto (vaciados in situ)',
-    cuando: 'Torres de 9–20 pisos, estructuras sobre suelos blandos o rellenos antrópicos en los primeros 5–8 m. Frecuente en zonas de depósito fluvio-volcánico de la cuenca del río Otún en Pereira.',
-    desc: 'Pilotes perforados de diámetro 30–60 cm con longitudes de 8–20 m. Capacidad por punta y fricción lateral conforme a NSR-10 C.10. Pruebas de carga estática o dinámica (PDA) para verificación.',
-  },
-  {
-    tipo: 'Caissons o pilas de gran diámetro',
-    cuando: 'Cimientos de puentes, estructuras industriales o edificios con cargas muy altas donde la roca o estrato portante se encuentra a más de 15 m. También en laderas de Dosquebradas con presencia de roca meteorizada.',
-    desc: 'Excavación manual o mecánica de diámetros > 80 cm. Requieren inspección visual del fondo para verificar el estrato de apoyo. Altas capacidades portantes (> 100 t/caisson).',
-  },
-  {
-    tipo: 'Losa de cimentación',
-    cuando: 'Estructuras con cargas uniformemente distribuidas sobre suelos de baja capacidad portante donde la zapata individual ocuparía más del 50% del área de planta. También en estructuras con sótano que requieren impermeabilización integral.',
-    desc: 'Diseño por control de asentamientos diferenciales y verificación de presión de contacto. Puede combinarse con pilotes (losa-pilote) para estructuras de alta carga en suelos blandos de Pereira.',
-  },
-]
-
-const CONTEXTO_PEREIRA = [
-  { icon: '🌋', titulo: 'Suelos volcánicos de cenizas en el Eje Cafetero', desc: 'Pereira y Dosquebradas están sobre un perfil de suelo derivado de cenizas volcánicas de los volcanes Cerro Bravo y Nevado del Ruiz. Estos suelos tienen características especiales: alta deformabilidad cuando se saturan, colapsibilidad y sensibilidad sísmica. El NSR-10 exige tratamiento especial para estas condiciones.' },
-  { icon: '📍', titulo: 'Alta sismicidad — zona cafetera', desc: 'Pereira se encuentra en zona de amenaza sísmica alta según el Decreto 340/2012 y la NSR-10. El diseño de cimentaciones debe considerar los coeficientes de sitio Fa y Fv que amplifican la aceleración espectral de diseño según el perfil de suelo determinado en el estudio geotécnico.' },
-  { icon: '🏗️', titulo: 'Torres residenciales en expansión', desc: 'La expansión inmobiliaria de Pereira (Pinares, Circunvalar, Cuba, Belmonte) genera alta demanda de estudios geotécnicos para proyectos de 2 a 20 pisos. BIC realiza estudios desde predios de 150 m² (vivienda unifamiliar) hasta proyectos multifamiliares de gran escala.' },
-  { icon: '⚠️', titulo: 'Dosquebradas: laderas y rellenos antrópicos', desc: 'El municipio de Dosquebradas tiene sectores con rellenos de laderas y suelos de origen residual que requieren exploración más profunda y análisis de estabilidad de taludes asociados a la cimentación. BIC integra el análisis de estabilidad de talud con el diseño geotécnico de la cimentación.' },
-]
-
-const COSTOS_2026 = [
-  { tipo: 'Vivienda unifamiliar 1–2 pisos', sondeos: '1–2 sondeos SPT (6–8 m)', plazo: '2–3 semanas', rango: '$3–6 millones COP' },
-  { tipo: 'Edificio 3–6 pisos', sondeos: '3–4 sondeos SPT (10–12 m)', plazo: '3–4 semanas', rango: '$8–15 millones COP' },
-  { tipo: 'Torre 7–15 pisos', sondeos: '4–6 sondeos SPT (15–20 m)', plazo: '4–6 semanas', rango: '$15–28 millones COP' },
-  { tipo: 'Torre > 15 pisos o proyecto especial', sondeos: '6–8+ sondeos SPT + ensayos especiales', plazo: '6–10 semanas', rango: 'Consultar' },
 ]
 
 const FAQ = [
   {
-    q: '¿Cuántos sondeos necesito para mi proyecto en Pereira?',
-    a: 'El NSR-10 Título H establece el número mínimo de sondeos según el área de la edificación y el nivel de exploración requerido. Como referencia: viviendas unifamiliares (< 200 m² de construcción) requieren mínimo 1 sondeo; edificios de 3–6 pisos entre 3 y 4 sondeos; torres de 7 o más pisos entre 4 y 6 sondeos con profundidades mayores. BIC determina el programa de exploración óptimo en la propuesta técnica.',
+    q: '¿Cuánto cuesta un estudio de suelos en Pereira?',
+    a: 'El costo de un estudio de suelos en Pereira depende del tipo de obra, el número de sondeos y los ensayos de laboratorio requeridos. Para una vivienda unifamiliar de 1 a 2 pisos, el costo oscila entre $4 y $8 millones COP (apiques + laboratorio básico). Para edificios de 5 o más pisos, el rango es $12 a $30 millones incluyendo SPT y ensayos completos. BIC envía presupuesto en menos de 24 horas.',
   },
   {
-    q: '¿Cuánto demora un estudio de suelos en Pereira?',
-    a: 'Un estudio geotécnico estándar para edificio de 3–6 pisos en Pereira tarda entre 3 y 4 semanas desde la orden de inicio: 1 semana para el trabajo de campo (sondeos, muestras), 1 semana para ensayos de laboratorio y 1–2 semanas para el análisis y elaboración del informe. Para proyectos urgentes con priorización de laboratorio, BIC puede entregar en 2 semanas. Las torres de más de 10 pisos requieren 5–8 semanas por la mayor profundidad de exploración.',
+    q: '¿Por qué Pereira necesita estudios de suelos especializados?',
+    a: 'Pereira se asienta sobre suelos de origen volcánico (cenizas volcánicas del Eje Cafetero) con alta variabilidad lateral, susceptibles a licuefacción en zonas de ladera y con comportamiento complejo bajo cargas dinámicas (sismo). Además, la expansión urbana en laderas del Río Otún y zonas de expansión como el Parque Industrial y el corredor Cerritos genera demanda constante de estudios geotécnicos para licencias de construcción y planes parciales.',
   },
   {
-    q: '¿Qué incluye el informe geotécnico para radicación de licencia en Pereira?',
-    a: 'El informe geotécnico para trámite de licencia de construcción en Pereira debe cumplir los requisitos del NSR-10 Título H y la Curaduría Urbana Municipal. Incluye: memoria descriptiva del área, programa de exploración con registros de campo, resultados de ensayos de laboratorio, perfiles estratigráficos, análisis de capacidad portante, clasificación del perfil sísmico (Tabla A.2.4-1 NSR-10), recomendaciones de cimentación y planos de ubicación de sondeos. Firmado y sellado por ingeniero con tarjeta profesional COPNIA activa.',
+    q: '¿Cuántos sondeos se necesitan para un lote en Pereira?',
+    a: 'La NSR-10 Título H establece el mínimo de sondeos según el área del lote y el nivel de complejidad del proyecto. Para lotes menores a 500 m², generalmente se realizan 2 a 3 apiques o sondeos. Para edificaciones de 5 o más pisos, se recomiendan al menos 4 a 6 sondeos SPT distribuidos en la huella del edificio. BIC dimensiona el programa de exploración de acuerdo con el tipo de obra y las exigencias de la curaduría.',
   },
   {
-    q: '¿Por qué los suelos de Pereira necesitan tratamiento especial?',
-    a: 'Pereira se encuentra sobre un perfil de suelo formado por cenizas volcánicas del Nevado del Ruiz y cerros aledaños. Estos suelos tienen características atípicas: son porosos y livianos cuando están en estado natural, pero colapsan (reducen volumen bruscamente) cuando se saturan bajo carga. Además, la zona es de alta sismicidad (NSR-10). El estudio geotécnico en Pereira debe identificar estas condiciones especiales y diseñar la cimentación considerando tanto la colapsibilidad como la amplificación sísmica del perfil.',
-  },
-  {
-    q: '¿Cuándo se necesitan pilotes en lugar de zapatas en Pereira?',
-    a: 'Se recomienda cimentación profunda (pilotes) en Pereira cuando: la capacidad portante del suelo superficial es insuficiente para las cargas del edificio (< 5 t/m² para cargas de torre), existe relleno antrópico en los primeros metros, el perfil muestra suelos blandos o colapsibles hasta más de 5 m de profundidad, o el edificio supera los 8–10 pisos con cargas elevadas en columnas. Los pilotes perforados vaciados in situ (diámetros 35–50 cm) son la solución más común en Pereira para torres residenciales.',
-  },
-  {
-    q: '¿BIC realiza estudios de suelos en Dosquebradas y otros municipios de Risaralda?',
-    a: 'Sí. BIC realiza estudios geotécnicos en todos los municipios de Risaralda: Dosquebradas, Santa Rosa de Cabal, La Virginia, Marsella, Quinchía, Santuario y Belén de Umbría. También en municipios limítrofes del Eje Cafetero (Caldas y Quindío). Los desplazamientos de campo se incluyen en el presupuesto según la ubicación del predio.',
+    q: '¿BIC puede hacer el estudio de suelos y el diseño hidrosanitario en el mismo contrato?',
+    a: 'Sí. Una de las ventajas de contratar BIC es que en un mismo equipo está disponible la geotecnia, los diseños hidrosanitarios y las memorias hidráulicas que exigen las curadurías y el Amco para licencias en Pereira y el Área Metropolitana. Esto reduce el tiempo de trámite y evita inconsistencias entre estudios de diferentes firmas.',
   },
 ]
 
 export default function ServicioEstudioSuelosPereira() {
-  useEffect(() => { window.scrollTo(0, 0) }, [])
-
   useEffect(() => {
-    const schema = {
-      '@context': 'https://schema.org',
-      '@type': 'Service',
-      name: 'Estudio de Suelos y Geotecnia — Pereira y Risaralda',
-      description: seoConfig.description,
-      url: 'https://ingenieriabernal.co/servicios/estudio-suelos-pereira',
-      serviceType: 'Estudio Geotécnico NSR-10',
-      provider: {
-        '@type': 'ProfessionalService',
-        name: 'BIC Bernal Ingeniería Consultores',
-        url: 'https://ingenieriabernal.co',
-        telephone: '+573024778910',
-      },
-      areaServed: [
-        { '@type': 'City', name: 'Pereira' },
-        { '@type': 'AdministrativeArea', name: 'Risaralda' },
-        { '@type': 'City', name: 'Dosquebradas' },
-        { '@type': 'AdministrativeArea', name: 'Eje Cafetero' },
-      ],
-    }
-    let el = document.getElementById('schema-service-geo')
-    if (!el) {
-      el = document.createElement('script')
-      el.id = 'schema-service-geo'
-      el.setAttribute('type', 'application/ld+json')
-      document.head.appendChild(el)
-    }
-    el.textContent = JSON.stringify(schema)
-    return () => { document.getElementById('schema-service-geo')?.remove() }
+    window.scrollTo(0, 0)
+    const s = document.createElement('script')
+    s.type = 'application/ld+json'
+    s.id = 'schema-geotecnia-pereira'
+    s.textContent = JSON.stringify(SCHEMA)
+    document.head.appendChild(s)
+    return () => { document.getElementById('schema-geotecnia-pereira')?.remove() }
   }, [])
 
   return (
     <>
       <SEOHead config={seoConfig} />
-      <SchemaMarkup
-        type="service"
-        serviceName="Estudio de Suelos y Geotecnia — Pereira y Risaralda"
-        serviceDesc={seoConfig.description}
-        serviceUrl="/servicios/estudio-suelos-pereira"
-        faqItems={FAQ}
-      />
 
       {/* ── HERO ── */}
       <section style={{
-        background: 'linear-gradient(135deg, #001A33 0%, #002A50 60%, #003B6F 100%)',
+        background: 'linear-gradient(135deg, #001A33 0%, #002A50 55%, #003B6F 100%)',
         paddingTop: 120, paddingBottom: 80,
         position: 'relative', overflow: 'hidden',
       }}>
         <BlueprintBg opacity={0.07} />
-        <div style={{ maxWidth: 900, margin: '0 auto', padding: '0 24px', position: 'relative' }}>
-          <SectionLabel light>Servicio especializado — Pereira y Risaralda</SectionLabel>
+        <div style={{ maxWidth: 920, margin: '0 auto', padding: '0 24px', position: 'relative' }}>
+          <SectionLabel light>Geotecnia · Pereira · Risaralda</SectionLabel>
           <h1 style={{
             fontFamily: "'Playfair Display', serif", fontWeight: 700, color: '#fff',
-            fontSize: 'clamp(28px, 5vw, 44px)', lineHeight: 1.2, marginBottom: 24,
+            fontSize: 'clamp(26px, 4.5vw, 46px)', lineHeight: 1.2, marginBottom: 20,
           }}>
-            Estudio de Suelos y Geotecnia para Edificios en Pereira
+            Estudio de Suelos en Pereira
           </h1>
-          <p style={{
-            fontFamily: "'Lato', sans-serif", color: 'rgba(255,255,255,0.82)',
-            fontSize: 17, lineHeight: 1.75, maxWidth: 720, marginBottom: 36,
-          }}>
-            BIC realiza estudios geotécnicos conforme al NSR-10 Título H para edificios,
-            torres residenciales y proyectos de construcción en Pereira, Dosquebradas y
-            Risaralda. Sondeos SPT, ensayos de laboratorio, análisis de capacidad portante,
-            clasificación sísmica del perfil de suelo y recomendación de cimentación
-            (zapatas, pilotes, caissons). Informes aptos para Curaduría Urbana y licencias
-            de construcción. Ingeniero COPNIA vigente.
+          <p style={{ color: '#17A2B8', fontSize: 'clamp(16px, 2.2vw, 20px)', fontWeight: 600, marginBottom: 20 }}>
+            Estudios geotécnicos y de suelos para licencia de construcción — NSR-10 Título H
           </p>
-          <div style={{ display: 'flex', gap: 12, flexWrap: 'wrap' }}>
-            <Btn href={`https://wa.me/${WA}?text=${WA_MSG}`}>
-              📱 Solicitar estudio de suelos en Pereira
-            </Btn>
-            <Btn variant="outline" href="/servicios/geotecnia" dark>
-              Ver servicio de geotecnia nacional →
-            </Btn>
+          <p style={{ color: 'rgba(255,255,255,0.82)', fontSize: 16, lineHeight: 1.8, marginBottom: 28, maxWidth: 760 }}>
+            BIC Bernal Ingeniería Consultores realiza estudios de suelos y geotecnia en Pereira,
+            Dosquebradas, Santa Rosa de Cabal y el Área Metropolitana del Centro Occidente (AMCO).
+            Estudios para licencia de construcción, planes parciales, obras de infraestructura y
+            análisis de estabilidad de taludes. Firma COPNIA 17202-313228 con experiencia verificada
+            en el Eje Cafetero desde 2010.
+          </p>
+          <div style={{ display: 'flex', gap: 12, flexWrap: 'wrap', marginBottom: 24 }}>
+            <Btn href={`https://wa.me/${WA}?text=${WA_MSG}`}>📱 Cotizar estudio de suelos</Btn>
+            <Btn variant="outline" href="/servicios/geotecnia" dark>Ver servicio nacional</Btn>
+          </div>
+          <div style={{ display: 'flex', gap: 8, flexWrap: 'wrap' }}>
+            {['NSR-10 H', 'SPT', 'Cimentaciones', 'Taludes', 'AMCO', 'COPNIA'].map(t => (
+              <Tag key={t} style={{ background: 'rgba(23,162,184,0.15)', color: '#7FDBEA', border: '1px solid rgba(23,162,184,0.3)', fontSize: 11 }}>{t}</Tag>
+            ))}
           </div>
         </div>
       </section>
 
-      {/* ── TAGS ── */}
-      <div style={{ background: '#0A2540', padding: '14px 24px', borderBottom: '1px solid rgba(23,162,184,0.15)' }}>
-        <div style={{ maxWidth: 900, margin: '0 auto', display: 'flex', gap: 8, flexWrap: 'wrap', alignItems: 'center' }}>
-          <span style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 11, color: 'rgba(255,255,255,0.5)', marginRight: 4 }}>Cobertura:</span>
-          {['Pereira', 'Dosquebradas', 'Risaralda', 'NSR-10 Título H', 'SPT', 'COPNIA'].map(t => (
-            <Tag key={t}>{t}</Tag>
-          ))}
-        </div>
-      </div>
-
-      {/* ── ENLACE INTERNO ── */}
-      <div style={{ background: '#EEF6FB', padding: '18px 24px', borderBottom: '1px solid #D1E9F5' }}>
-        <div style={{ maxWidth: 900, margin: '0 auto' }}>
-          <p style={{ fontFamily: "'Lato', sans-serif", fontSize: 14, color: '#475569', margin: 0 }}>
-            Página especializada para Pereira y Risaralda.{' '}
-            <a href="/servicios/geotecnia" style={{ color: '#17A2B8', fontWeight: 700, textDecoration: 'none' }}>
-              Ver página principal del servicio de Geotecnia en Colombia →
-            </a>
-          </p>
-        </div>
-      </div>
-
-      {/* ── QUÉ INCLUYE ── */}
-      <Section bg="#F8FAFC" style={{ padding: '72px 24px' }}>
-        <div style={{ maxWidth: 900, margin: '0 auto' }}>
-          <SectionLabel>Alcance del servicio</SectionLabel>
-          <h2 style={{
-            fontFamily: "'Playfair Display', serif", fontWeight: 700, color: '#001A33',
-            fontSize: 'clamp(22px, 4vw, 32px)', marginBottom: 8,
-          }}>¿Qué incluye el estudio de suelos NSR-10 en Pereira?</h2>
-          <ThinLine mb={40} />
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: 24 }}>
-            {INCLUYE.map((item) => (
-              <div key={item.titulo} style={{
-                background: '#fff', border: '1px solid #E2E8F0', borderRadius: 4,
-                padding: 28, borderTop: '3px solid #17A2B8',
-              }}>
-                <div style={{ fontSize: 28, marginBottom: 12 }}>{item.icon}</div>
-                <h3 style={{
-                  fontFamily: "'Montserrat', sans-serif", fontWeight: 700, color: '#001A33',
-                  fontSize: 14, marginBottom: 10,
-                }}>{item.titulo}</h3>
-                <p style={{
-                  fontFamily: "'Lato', sans-serif", color: '#475569', fontSize: 14, lineHeight: 1.65,
-                }}>{item.desc}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </Section>
-
-      {/* ── TIPOS DE CIMENTACIÓN ── */}
-      <Section bg="#fff" style={{ padding: '72px 24px' }}>
-        <div style={{ maxWidth: 900, margin: '0 auto' }}>
-          <SectionLabel>Recomendaciones técnicas</SectionLabel>
-          <h2 style={{
-            fontFamily: "'Playfair Display', serif", fontWeight: 700, color: '#001A33',
-            fontSize: 'clamp(22px, 4vw, 32px)', marginBottom: 8,
-          }}>Tipos de cimentación para edificios en Pereira: ¿cuál aplica?</h2>
-          <ThinLine mb={40} />
-          <div style={{ display: 'flex', flexDirection: 'column', gap: 20 }}>
-            {TIPOS_CIMENTACION.map((t) => (
-              <div key={t.tipo} style={{ background: '#F8FAFC', border: '1px solid #E2E8F0', borderRadius: 4, padding: 24 }}>
-                <h3 style={{ fontFamily: "'Montserrat', sans-serif", fontWeight: 700, color: '#002A50', fontSize: 15, marginBottom: 6 }}>{t.tipo}</h3>
-                <p style={{ fontFamily: "'Lato', sans-serif", color: '#17A2B8', fontSize: 13, fontStyle: 'italic', marginBottom: 8, lineHeight: 1.5 }}><strong>Cuándo aplica:</strong> {t.cuando}</p>
-                <p style={{ fontFamily: "'Lato', sans-serif", color: '#475569', fontSize: 14, lineHeight: 1.6, margin: 0 }}>{t.desc}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </Section>
-
-      {/* ── CONTEXTO PEREIRA ── */}
-      <Section bg="#F8FAFC" style={{ padding: '72px 24px' }}>
-        <div style={{ maxWidth: 900, margin: '0 auto' }}>
-          <SectionLabel>Contexto geotécnico regional</SectionLabel>
-          <h2 style={{
-            fontFamily: "'Playfair Display', serif", fontWeight: 700, color: '#001A33',
-            fontSize: 'clamp(22px, 4vw, 32px)', marginBottom: 8,
-          }}>Suelos de Pereira y Risaralda: qué debe saber antes de construir</h2>
-          <ThinLine mb={40} />
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(270px, 1fr))', gap: 20 }}>
-            {CONTEXTO_PEREIRA.map(c => (
-              <div key={c.titulo} style={{ padding: '20px 22px', background: '#fff', border: '1px solid #E2E8F0', borderRadius: 4, display: 'flex', gap: 14, alignItems: 'flex-start' }}>
-                <span style={{ fontSize: 24, flexShrink: 0 }}>{c.icon}</span>
-                <div>
-                  <h3 style={{ fontFamily: "'Montserrat', sans-serif", fontWeight: 700, fontSize: 13, color: '#001A33', margin: '0 0 6px' }}>{c.titulo}</h3>
-                  <p style={{ fontFamily: "'Lato', sans-serif", color: '#475569', fontSize: 13, lineHeight: 1.6, margin: 0 }}>{c.desc}</p>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </Section>
-
-      {/* ── TABLA DE COSTOS ── */}
-      <Section bg="#fff" style={{ padding: '72px 24px' }}>
-        <div style={{ maxWidth: 900, margin: '0 auto' }}>
-          <SectionLabel>Referencia de costos 2026</SectionLabel>
-          <h2 style={{ fontFamily: "'Playfair Display', serif", fontWeight: 700, color: '#001A33', fontSize: 'clamp(22px, 4vw, 32px)', marginBottom: 8 }}>
-            Costos orientativos de estudios de suelos en Pereira 2026
+      {/* ── INCLUYE ── */}
+      <Section>
+        <div style={{ maxWidth: 960, margin: '0 auto', padding: '0 24px' }}>
+          <SectionLabel>¿Qué incluye?</SectionLabel>
+          <h2 style={{ fontFamily: "'Playfair Display', serif", fontWeight: 700, fontSize: 'clamp(22px, 3vw, 32px)', marginBottom: 12 }}>
+            Alcance del estudio geotécnico en Pereira
           </h2>
-          <ThinLine mb={40} />
-          <div style={{ overflowX: 'auto' }}>
-            <table style={{ width: '100%', borderCollapse: 'collapse', fontFamily: "'Lato', sans-serif", fontSize: 14 }}>
-              <thead>
-                <tr style={{ background: '#003B6F', color: '#fff' }}>
-                  <th style={{ padding: '12px 16px', textAlign: 'left', fontFamily: "'Montserrat', sans-serif", fontWeight: 700, fontSize: 12 }}>Tipo de proyecto</th>
-                  <th style={{ padding: '12px 16px', textAlign: 'left', fontFamily: "'Montserrat', sans-serif", fontWeight: 700, fontSize: 12 }}>Exploración mínima</th>
-                  <th style={{ padding: '12px 16px', textAlign: 'left', fontFamily: "'Montserrat', sans-serif", fontWeight: 700, fontSize: 12 }}>Plazo entrega</th>
-                  <th style={{ padding: '12px 16px', textAlign: 'left', fontFamily: "'Montserrat', sans-serif", fontWeight: 700, fontSize: 12 }}>Rango orientativo</th>
-                </tr>
-              </thead>
-              <tbody>
-                {COSTOS_2026.map((row, i) => (
-                  <tr key={row.tipo} style={{ background: i % 2 === 0 ? '#F8FAFC' : '#fff', borderBottom: '1px solid #E2E8F0' }}>
-                    <td style={{ padding: '12px 16px', color: '#001A33', fontWeight: 600 }}>{row.tipo}</td>
-                    <td style={{ padding: '12px 16px', color: '#475569' }}>{row.sondeos}</td>
-                    <td style={{ padding: '12px 16px', color: '#475569' }}>{row.plazo}</td>
-                    <td style={{ padding: '12px 16px', color: '#17A2B8', fontWeight: 700 }}>{row.rango}</td>
-                  </tr>
-                ))}
-              </tbody>
-            </table>
-            <p style={{ fontFamily: "'Lato', sans-serif", fontSize: 12, color: '#94A3B8', marginTop: 12 }}>
-              * Costos orientativos 2026. El presupuesto definitivo depende del número de sondeos, profundidad, ensayos especiales requeridos y ubicación del predio. BIC entrega cotización exacta en &lt; 24 horas.
-            </p>
-          </div>
-        </div>
-      </Section>
-
-      {/* ── POR QUÉ BIC ── */}
-      <Section bg="#001A33" style={{ padding: '72px 24px' }}>
-        <BlueprintBg opacity={0.05} />
-        <div style={{ maxWidth: 900, margin: '0 auto', position: 'relative' }}>
-          <SectionLabel light>Diferenciadores BIC</SectionLabel>
-          <h2 style={{
-            fontFamily: "'Playfair Display', serif", fontWeight: 700, color: '#fff',
-            fontSize: 'clamp(22px, 4vw, 32px)', marginBottom: 8,
-          }}>¿Por qué contratar BIC para su estudio de suelos en Pereira?</h2>
-          <ThinLine mb={40} />
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(240px, 1fr))', gap: 24 }}>
-            {[
-              { icon: '🎓', titulo: 'Especialista UNAL · COPNIA vigente', desc: 'Ingeniero Rogerio Bernal Ríos, Especialista en Ingeniería Hidráulica y Ambiental (UNAL) con formación geotécnica. Tarjeta COPNIA 17202-313228 CLD activa. Informes firmados y aceptados por Curadurías Urbanas.' },
-              { icon: '🌋', titulo: 'Experiencia en suelos volcánicos Eje Cafetero', desc: 'Conocimiento específico de los perfiles de suelo de cenizas volcánicas del Eje Cafetero: colapsibilidad, susceptibilidad sísmica y comportamiento bajo carga. Criterios NSR-10 aplicados a la geología local de Pereira y Dosquebradas.' },
-              { icon: '🏗️', titulo: 'Proyectos en Dosquebradas verificables', desc: 'BIC ejecutó el diseño hidrosanitario y sistemas contra incendios del Makarí Mall en Dosquebradas. Presencia activa en Pereira, Dosquebradas y el Eje Cafetero con referencias disponibles.' },
-              { icon: '⚡', titulo: 'Entrega ágil · Propuesta en 24 horas', desc: 'Proceso claro: propuesta técnica y económica en 24 horas, inicio de campo dentro de 5 días hábiles, entrega del informe en 3–6 semanas según el alcance. Comunicación directa con el director técnico.' },
-            ].map(d => (
-              <div key={d.titulo} style={{
-                background: 'rgba(255,255,255,0.05)', border: '1px solid rgba(23,162,184,0.2)',
-                borderRadius: 4, padding: 28,
+          <ThinLine mb={36} />
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(260px, 1fr))', gap: 20 }}>
+            {INCLUYE.map(s => (
+              <div key={s.titulo} style={{
+                background: '#fff', border: '1px solid #e2e8f0', borderRadius: 12,
+                padding: 24, borderLeft: '4px solid #17A2B8',
               }}>
-                <div style={{ fontSize: 30, marginBottom: 12 }}>{d.icon}</div>
-                <h3 style={{
-                  fontFamily: "'Montserrat', sans-serif", fontWeight: 700, color: '#17A2B8',
-                  fontSize: 14, marginBottom: 8,
-                }}>{d.titulo}</h3>
-                <p style={{
-                  fontFamily: "'Lato', sans-serif", color: 'rgba(255,255,255,0.72)', fontSize: 14, lineHeight: 1.65,
-                }}>{d.desc}</p>
+                <div style={{ fontSize: 24, marginBottom: 8 }}>{s.icon}</div>
+                <h3 style={{ fontWeight: 700, fontSize: 15, color: '#002A50', marginBottom: 8 }}>{s.titulo}</h3>
+                <p style={{ color: '#555', fontSize: 14, lineHeight: 1.7, margin: 0 }}>{s.desc}</p>
               </div>
             ))}
           </div>
@@ -371,71 +157,85 @@ export default function ServicioEstudioSuelosPereira() {
       </Section>
 
       {/* ── FAQ ── */}
-      <Section bg="#F8FAFC" style={{ padding: '72px 24px' }}>
-        <div style={{ maxWidth: 860, margin: '0 auto' }}>
+      <Section style={{ background: '#f8f9fa' }}>
+        <div style={{ maxWidth: 860, margin: '0 auto', padding: '0 24px' }}>
           <SectionLabel>Preguntas frecuentes</SectionLabel>
-          <h2 style={{ fontFamily: "'Playfair Display', serif", fontWeight: 700, color: '#001A33', fontSize: 'clamp(22px, 4vw, 32px)', marginBottom: 8 }}>
-            Preguntas frecuentes — estudios de suelos en Pereira
+          <h2 style={{ fontFamily: "'Playfair Display', serif", fontWeight: 700, fontSize: 'clamp(22px, 3vw, 32px)', marginBottom: 8 }}>
+            Estudio de suelos en Pereira — lo que más preguntan
           </h2>
-          <ThinLine mb={40} />
-          <div style={{ display: 'flex', flexDirection: 'column', gap: 16 }}>
-            {FAQ.map((faq, i) => (
-              <div key={i} style={{ background: '#fff', border: '1px solid #E2E8F0', borderRadius: 4, padding: '22px 26px' }}>
-                <h3 style={{ fontFamily: "'Montserrat', sans-serif", fontWeight: 700, color: '#001A33', fontSize: 14, margin: '0 0 10px', lineHeight: 1.4 }}>{faq.q}</h3>
-                <p style={{ fontFamily: "'Lato', sans-serif", color: '#475569', fontSize: 14, lineHeight: 1.7, margin: 0 }}>{faq.a}</p>
+          <ThinLine mb={32} />
+          <div style={{ display: 'flex', flexDirection: 'column', gap: 18 }}>
+            {FAQ.map(item => (
+              <div key={item.q} style={{ background: '#fff', borderRadius: 12, padding: 24, border: '1px solid #e2e8f0' }}>
+                <h3 style={{ fontWeight: 700, fontSize: 15, marginBottom: 10, color: '#002A50', lineHeight: 1.4 }}>{item.q}</h3>
+                <p style={{ color: '#555', lineHeight: 1.8, fontSize: 14, margin: 0 }}>{item.a}</p>
               </div>
             ))}
           </div>
         </div>
       </Section>
 
-      {/* ── SERVICIOS RELACIONADOS ── */}
-      <Section bg="#EFF6FB" style={{ padding: '48px 24px' }}>
-        <div style={{ maxWidth: 860, margin: '0 auto' }}>
-          <p style={{ fontFamily: "'Montserrat', sans-serif", fontWeight: 700, color: '#003B6F', fontSize: 13, letterSpacing: '0.08em', textTransform: 'uppercase', marginBottom: 20 }}>
-            Servicios relacionados
+      {/* ── TAMBIÉN DISPONIBLE EN ── */}
+      <Section style={{ background: '#eef6fb' }}>
+        <div style={{ maxWidth: 860, margin: '0 auto', padding: '0 24px' }}>
+          <p style={{ fontFamily: "'Montserrat', sans-serif", fontWeight: 700, color: '#003B6F', fontSize: 12, letterSpacing: '0.07em', textTransform: 'uppercase', marginBottom: 14 }}>
+            Servicio nacional de geotecnia
           </p>
-          <div style={{ display: 'flex', gap: 16, flexWrap: 'wrap' }}>
-            <a href="/servicios/geotecnia" style={{ flex: '1 1 220px', background: '#fff', border: '1px solid #E2E8F0', borderRadius: 4, padding: '18px 20px', textDecoration: 'none' }}>
-              <span style={{ fontFamily: "'Playfair Display', serif", fontWeight: 700, color: '#003B6F', fontSize: 14, display: 'block', lineHeight: 1.35 }}>Estudios geotécnicos y de suelos — página nacional</span>
-              <span style={{ fontFamily: "'Lato', sans-serif", color: '#17A2B8', fontSize: 12, marginTop: 8, display: 'block' }}>Ver servicio →</span>
-            </a>
-            <a href="/gestion-riesgo-taludes-colombia" style={{ flex: '1 1 220px', background: '#fff', border: '1px solid #E2E8F0', borderRadius: 4, padding: '18px 20px', textDecoration: 'none' }}>
-              <span style={{ fontFamily: "'Playfair Display', serif", fontWeight: 700, color: '#003B6F', fontSize: 14, display: 'block', lineHeight: 1.35 }}>Gestión del riesgo de taludes e inestabilidad de ladera</span>
-              <span style={{ fontFamily: "'Lato', sans-serif", color: '#17A2B8', fontSize: 12, marginTop: 8, display: 'block' }}>Ver servicio →</span>
-            </a>
-            <a href="/servicios/modelacion-hec-ras" style={{ flex: '1 1 220px', background: '#fff', border: '1px solid #E2E8F0', borderRadius: 4, padding: '18px 20px', textDecoration: 'none' }}>
-              <span style={{ fontFamily: "'Playfair Display', serif", fontWeight: 700, color: '#003B6F', fontSize: 14, display: 'block', lineHeight: 1.35 }}>Modelación HEC-RAS — estudios de inundabilidad para licencias</span>
-              <span style={{ fontFamily: "'Lato', sans-serif", color: '#17A2B8', fontSize: 12, marginTop: 8, display: 'block' }}>Ver servicio →</span>
-            </a>
-          </div>
+          <a href="/servicios/geotecnia" style={{
+            display: 'inline-block', background: '#fff', border: '1px solid #b3d4e8',
+            borderRadius: 8, padding: '14px 20px', color: '#003B6F',
+            fontWeight: 600, fontSize: 14, textDecoration: 'none',
+          }}>
+            Ver estudios geotécnicos Colombia — todas las regiones →
+          </a>
         </div>
       </Section>
 
       {/* ── CTA FINAL ── */}
-      <Section bg="#17A2B8" style={{ padding: '64px 24px', textAlign: 'center' }}>
-        <div style={{ maxWidth: 680, margin: '0 auto' }}>
+      <section style={{
+        background: 'linear-gradient(135deg, #001A33 0%, #003B6F 100%)',
+        padding: '72px 24px', textAlign: 'center',
+        position: 'relative', overflow: 'hidden',
+      }}>
+        <BlueprintBg opacity={0.05} />
+        <div style={{ position: 'relative', maxWidth: 720, margin: '0 auto' }}>
+          <div style={{ fontSize: 40, marginBottom: 16 }}>⛰️</div>
           <h2 style={{
-            fontFamily: "'Playfair Display', serif", fontWeight: 700, color: '#fff',
-            fontSize: 'clamp(22px, 4vw, 34px)', marginBottom: 16,
+            fontFamily: "'Playfair Display', serif", fontWeight: 700,
+            color: '#fff', fontSize: 'clamp(22px, 3.5vw, 36px)', marginBottom: 16, lineHeight: 1.25,
           }}>
-            ¿Necesita estudio de suelos en Pereira o Risaralda?
+            ¿Necesita estudio de suelos<br />en Pereira o Risaralda?
           </h2>
-          <p style={{
-            fontFamily: "'Lato', sans-serif", color: 'rgba(255,255,255,0.9)',
-            fontSize: 16, lineHeight: 1.7, marginBottom: 32,
-          }}>
-            Indíquenos la dirección del predio, el número de pisos proyectados y si tiene
-            planos del proyecto. Le respondemos con propuesta técnica y presupuesto en menos de 24 horas.
+          <p style={{ color: 'rgba(255,255,255,0.82)', fontSize: 16, lineHeight: 1.8, marginBottom: 32 }}>
+            Indíquenos el tipo de obra, la dirección del lote y el número de pisos proyectado.
+            BIC le envía propuesta técnica en menos de 24 horas.
           </p>
-          <Btn
-            href={`https://wa.me/${WA}?text=${WA_MSG}`}
-            style={{ background: '#fff', color: '#17A2B8', fontSize: 15, padding: '14px 36px' }}
-          >
-            📱 Solicitar estudio de suelos en Pereira
-          </Btn>
+          <div style={{ display: 'flex', gap: 14, justifyContent: 'center', flexWrap: 'wrap' }}>
+            <a
+              href={`https://wa.me/${WA}?text=${WA_MSG}`}
+              target="_blank" rel="noopener noreferrer"
+              style={{
+                display: 'inline-block', padding: '15px 36px',
+                background: '#25D366', color: '#fff',
+                borderRadius: 8, fontWeight: 700, fontSize: 16, textDecoration: 'none',
+              }}
+            >
+              📱 Cotizar por WhatsApp · +57 302 477 8910
+            </a>
+            <a
+              href="/contacto"
+              style={{
+                display: 'inline-block', padding: '15px 36px',
+                background: 'transparent', color: '#fff',
+                borderRadius: 8, fontWeight: 700, fontSize: 16,
+                textDecoration: 'none', border: '2px solid rgba(255,255,255,0.4)',
+              }}
+            >
+              Formulario de contacto
+            </a>
+          </div>
         </div>
-      </Section>
+      </section>
     </>
   )
 }

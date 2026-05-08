@@ -1,367 +1,195 @@
 import { useEffect } from 'react'
 import SEOHead from '@/components/SEOHead'
-import SchemaMarkup from '@/components/SchemaMarkup'
 import { BlueprintBg, ThinLine, SectionLabel, Btn, Section, Tag } from '@/components/ui'
 
 const WA = '573024778910'
-const WA_MSG = encodeURIComponent('Hola, quiero cotizar Diseño de Redes de Aguas Lluvias en Manizales')
+const WA_MSG = encodeURIComponent('Hola, necesito diseño de red de aguas lluvias en Manizales. ¿Pueden ayudarme?')
 
 const seoConfig = {
-  title: 'Diseño Redes Aguas Lluvias en Manizales y Caldas | BIC',
-  description: 'Diseño de redes pluviales para cubiertas, colegios e industria en Manizales y Caldas. Curvas IDF, método Racional, NSR-10, tanques de retención. Cotice hoy.',
+  title: 'Diseño Aguas Lluvias en Manizales | BIC',
+  description: 'Diseño de redes de aguas lluvias para cubiertas, colegios y urbanizaciones en Manizales. NSR-10, RAS 2017. BIC, COPNIA vigente. Cotice hoy.',
   keywords: [
     'diseño aguas lluvias Manizales',
+    'red aguas lluvias Manizales',
+    'drenaje pluvial Manizales',
+    'diseño hidrosanitario Manizales',
+    'aguas lluvias cubierta Manizales',
+    'drenaje colegio Manizales',
+    'NSR-10 aguas lluvias Manizales',
     'redes pluviales Manizales',
-    'aguas lluvias colegio Manizales',
-    'diseño alcantarillado pluvial Caldas',
-    'curvas IDF Manizales IDEAM',
-    'tanque retención aguas lluvias',
-    'método racional hidrología Manizales',
-    'NSR-10 aguas lluvias Colombia',
-    'drenaje pluvial industrial Manizales',
-    'ingeniería pluvial Eje Cafetero',
+    'ingeniero hidrosanitario Manizales',
+    'diseño aguas lluvias Caldas',
   ],
-  canonical: 'https://ingenieriabernal.co/servicios/aguas-lluvias-manizales',
+  canonical: 'https://ingenieriabernal.co/aguas-lluvias-manizales',
 }
 
-const INCLUYE = [
-  {
-    icon: '🌧️',
-    titulo: 'Análisis hidrológico — Curvas IDF',
-    desc: 'Determinación de la intensidad de diseño usando las curvas Intensidad-Duración-Frecuencia (IDF) del IDEAM para la estación meteorológica más representativa de Manizales. Períodos de retorno Tr = 5, 10, 25 años según el tipo de infraestructura. Manizales tiene intensidades de diseño de 50–140 mm/h para 60 min de duración.',
+const SCHEMA = {
+  '@context': 'https://schema.org',
+  '@type': 'Service',
+  name: 'Diseño de Redes de Aguas Lluvias en Manizales',
+  description: 'Diseño de redes de aguas lluvias para cubiertas, colegios y urbanizaciones en Manizales y Caldas. NSR-10, RAS 2017. COPNIA vigente.',
+  url: 'https://ingenieriabernal.co/aguas-lluvias-manizales',
+  serviceType: 'Diseño de Redes de Aguas Lluvias',
+  areaServed: ['Manizales', 'Caldas', 'Eje Cafetero', 'Colombia'],
+  provider: {
+    '@type': 'LocalBusiness',
+    name: 'Bernal Ingeniería Consultores — BIC',
+    url: 'https://ingenieriabernal.co',
+    telephone: '+573024778910',
   },
+}
+
+const SERVICIOS = [
   {
-    icon: '📐',
-    titulo: 'Cálculo de caudales — Método Racional y SCS',
-    desc: 'Método Racional (Q = C·i·A) para áreas de cubierta, patios y lotes de pequeña extensión (< 5 ha). Método SCS-CN para cuencas urbanas e industriales más grandes, considerando CN según uso del suelo y cobertura. Caudales de diseño verificados contra el RAS 2017 Título D y las normas municipales de CHEC/Aguas de Manizales.',
+    icon: '🏫',
+    titulo: 'Aguas lluvias para colegios e instituciones',
+    desc: 'Diseño del sistema de recolección y conducción de aguas lluvias para colegios, hospitales, clínicas y edificios institucionales en Manizales. Cálculo de caudal pluvial con las curvas IDF del IDEAM para Manizales, diseño de bajantes, canales de cubierta, cajas de inspección y conexión a la red pública de alcantarillado pluvial conforme al RAS 2017.',
   },
   {
     icon: '🏗️',
-    titulo: 'Diseño de redes de alcantarillado pluvial',
-    desc: 'Diseño hidráulico de colectores pluviales: diámetros (PVC, concreto), pendientes mínimas y máximas, cámaras de inspección, sumideros, conexiones de entrega. Verificación de velocidades de autolimpieza (> 0.6 m/s) y no erosión (< 5 m/s). Conforme al RAS 2017 Título D y MAVDT Res. 0330/2017.',
+    titulo: 'Drenaje pluvial para urbanizaciones y planes parciales',
+    desc: 'Diseño del sistema de drenaje pluvial para urbanizaciones residenciales, planes parciales y desarrollos industriales en Manizales y el Eje Cafetero. Cálculo de caudales con el método racional o el método hidrogramas SCS según la extensión de la cuenca, diseño de colectores pluviales, box culverts y estructuras de disipación de energía.',
   },
   {
-    icon: '🏠',
-    titulo: 'Cubiertas de edificios e instituciones',
-    desc: 'Diseño de canaletas, bajantes y colectores enterrados para cubiertas de colegios, hospitales, bodegas e industria. Cálculo de áreas de captación, coeficientes de escorrentía (0.90–0.95 en cubiertas impermeables), selección de canaletas (semicirculares, rectangulares), bajantes y puntos de descarga.',
+    icon: '🏢',
+    titulo: 'Redes pluviales para edificios y centros comerciales',
+    desc: 'Diseño de la red interna de aguas lluvias para edificios residenciales, comerciales e industriales en Manizales. Dimensionamiento de bajantes de aguas lluvias, canales de cubierta, filtros de arena, sumideros y conexiones a red exterior. Cumplimiento de la NSR-10 Título I y el manual de diseño del Municipio de Manizales.',
   },
   {
-    icon: '💧',
-    titulo: 'Tanques de retención y amortiguación',
-    desc: 'Diseño de tanques de retención para control del caudal pico en urbanizaciones, colegios e industria donde la red receptora no tiene capacidad para caudales de diseño. Cálculo del volumen de retención (tránsito de ondas), sistema de descarga controlada y desbordamiento de emergencia.',
-  },
-  {
-    icon: '📋',
-    titulo: 'Memorias, planos y licencia',
-    desc: 'Memoria de cálculo hidrológico e hidráulico completa. Planos en AutoCAD: planta general, perfiles hidráulicos, detalles de cámaras, sumideros y estructura de entrega. Especificaciones técnicas de materiales. Documento apto para licencia de construcción ante Curaduría Urbana de Manizales.',
+    icon: '♻️',
+    titulo: 'Sistemas de aprovechamiento de aguas lluvias',
+    desc: 'Diseño de sistemas de recolección y almacenamiento de aguas lluvias para riego de zonas verdes, lavado de áreas comunes y otros usos no potables en conjuntos residenciales y edificios en Manizales. El sistema incluye tanque de almacenamiento, filtro de primer lavado, red de distribución y sistema de rebose hacia el alcantarillado.',
   },
 ]
 
-const TIPOS_PROYECTO = [
+const PROCESO = [
   {
-    icon: '🏫',
-    tipo: 'Cubiertas de colegios e instituciones',
-    desc: 'Las instituciones educativas y hospitalarias de Manizales tienen grandes áreas de cubierta (500–5.000 m²) con requerimientos específicos de canaletes, bajantes y disposición del agua lluvia sin afectar zonas peatonales. Normativa NSR-10 Títulos J/K y reglamentos de construcción municipales. BIC ha diseñado sistemas pluviales para instituciones del Eje Cafetero.',
+    paso: '01',
+    titulo: 'Análisis de precipitaciones y curvas IDF en Manizales',
+    desc: 'Manizales tiene una de las pluviometrías más altas de Colombia (más de 2.000 mm/año en el área urbana). BIC usa las curvas IDF del IDEAM para la estación de Manizales (La Nubia / Enea) para calcular las intensidades de diseño para periodos de retorno de 2, 5 y 10 años, según el tipo de proyecto y lo exigido por Aguas de Manizales.',
   },
   {
-    icon: '🏭',
-    tipo: 'Zonas industriales y bodegas',
-    desc: 'Naves industriales y bodegas logísticas con coberturas metálicas de alta impermeabilidad (C = 0.90). Caudales de alta magnitud concentrados en pocos bajantes. Diseño de colectores subterráneos, separadores de grasas y aceites, y sistemas de pretratamiento previo a la descarga a la red pública o a fuentes superficiales.',
+    paso: '02',
+    titulo: 'Diseño hidráulico de la red de aguas lluvias',
+    desc: 'Cálculo del caudal pluvial de diseño con el método racional (Q = C × I × A), diseño de los colectores por la ecuación de Manning, verificación de velocidades mínimas de autolimpieza y máximas para evitar erosión. Diseño de bajantes para cubiertas según la NSR-10 Título I Capítulo I.5.',
   },
   {
-    icon: '🏘️',
-    tipo: 'Urbanizaciones y proyectos residenciales',
-    desc: 'Redes pluviales para proyectos de parcelación, urbanización y vivienda. Diseño integrado con la topografía del lote, vías internas y entrega al sistema de alcantarillado de Aguas de Manizales. Verificación de la capacidad del receptor y, cuando se requiere, diseño de tanque de amortiguación o parque de retención.',
+    paso: '03',
+    titulo: 'Planos de diseño y memoria de cálculo',
+    desc: 'Entrega de planos hidráulicos en AutoCAD (DWG) con la red de aguas lluvias georreferenciada, memorias de cálculo detalladas, especificaciones técnicas de tuberías y accesorios, presupuesto con APU y cronograma de obra. Todo firmado por profesional COPNIA para trámite ante Aguas de Manizales o la curaduría.',
   },
-  {
-    icon: '🏪',
-    tipo: 'Centros comerciales y proyectos mixtos',
-    desc: 'Proyectos de uso mixto con grandes áreas impermeables. Diseño del sistema de aguas lluvias coordinado con los sistemas sanitario y de incendios. Cálculo de bombas de aguas lluvias para sótanos y semisótanos. Estudio de impacto hídrico sobre la red de Aguas de Manizales requerido por el POT.',
-  },
-]
-
-const CONTEXTO_MANIZALES = [
-  {
-    icon: '☁️',
-    titulo: 'Alta pluviosidad en Manizales',
-    desc: 'Manizales registra precipitaciones anuales de 2.200–3.800 mm/año según el sector, con intensidades máximas de 60–120 mm/h en tormentas de corta duración. Las curvas IDF del IDEAM para la estación Aeropuerto La Nubia (altitud 2.085 m) son la referencia base para diseños en la ciudad.',
-  },
-  {
-    icon: '⚠️',
-    titulo: 'Riesgo torrencial en laderas',
-    desc: 'La topografía de Manizales genera escorrentía concentrada en quebradas urbanas y canales de drenaje. El Plan de Gestión del Riesgo municipal identifica zonas de alta amenaza por avenidas torrenciales (quebrada Manizales, El Guamo). Los proyectos en ladera requieren análisis de la escorrentía de ladera y diseño de obras de encauzamiento.',
-  },
-  {
-    icon: '🏛️',
-    titulo: 'POT y regulación municipal',
-    desc: 'El Plan de Ordenamiento Territorial de Manizales (Acuerdo 0958/2017) establece requerimientos técnicos para sistemas pluviales en proyectos de construcción. La Curaduría Urbana exige memorias de cálculo de aguas lluvias para proyectos con áreas > 500 m² de cubierta o urbanizaciones de más de 10 viviendas.',
-  },
-  {
-    icon: '💧',
-    titulo: 'Aguas de Manizales: conexión y capacidad',
-    desc: 'Aguas de Manizales exige estudio de capacidad del receptor antes de aprobar conexiones pluviales que aumenten el caudal al sistema existente. BIC elabora el estudio de impacto hidráulico sobre la red receptora y, cuando es necesario, diseña el sistema de retención o almacenamiento que garantiza el caudal de conexión permitido.',
-  },
-]
-
-const ALCANCE_TABLA = [
-  { tipo: 'Diagnóstico', detalle: 'Reconocimiento del área. Verificación de la topografía. Revisión de la red receptora (Aguas de Manizales). Determinación del período de retorno de diseño según tipo de infraestructura y normativa aplicable.' },
-  { tipo: 'Hidrología', detalle: 'Cálculo de intensidades IDF para Manizales. Estimación de caudales de diseño por Método Racional o SCS-CN. Verificación con datos IDEAM estación La Nubia. Definición del caudal máximo de diseño para la red pluvial.' },
-  { tipo: 'Diseño hidráulico', detalle: 'Trazado de colectores, selección de diámetros y pendientes. Verificación de velocidades. Diseño de cámaras de inspección, sumideros y estructuras especiales. Perfiles hidráulicos con cotas de plantilla y nivel de agua.' },
-  { tipo: 'Entregables', detalle: 'Memoria de cálculo. Planos en AutoCAD (planta, perfil, detalles). Especificaciones técnicas. Presupuesto de obra. Apto para licencia en Curaduría Urbana de Manizales y tramite ante Aguas de Manizales.' },
-  { tipo: 'Acompañamiento', detalle: 'Asistencia en respuesta a observaciones de Curaduría o Aguas de Manizales. Ajustes de diseño por cambios del proyecto arquitectónico. Visitas de supervisión técnica en construcción si se contratan.' },
 ]
 
 const FAQ = [
   {
-    q: '¿Por qué Manizales necesita diseños especiales de aguas lluvias?',
-    a: 'Manizales tiene una de las pluviosidades más altas de Colombia para su altitud: 2.200–3.800 mm/año con tormentas de alta intensidad. La topografía en ladera concentra la escorrentía rápidamente, generando caudales pico elevados en poco tiempo. El suelo volcánico tiene alta capacidad de infiltración cuando está seco, pero satura fácilmente en eventos consecutivos. Estos factores hacen que el diseño de aguas lluvias en Manizales sea más exigente que en ciudades planas, con curvas IDF más intensas y mayor énfasis en el control de caudales pico.',
-  },
-  {
-    q: '¿Qué período de retorno se usa para diseño de aguas lluvias en colegios e instituciones?',
-    a: 'Según el RAS 2017 Título D y los criterios de Aguas de Manizales, se usan los siguientes períodos de retorno según el tipo de obra: Para cubiertas de edificios y áreas privadas: Tr = 5 años. Para vías locales y colectores secundarios: Tr = 10 años. Para colectores principales y áreas industriales: Tr = 25 años. Para estructuras de retención y obras de control: Tr = 25–100 años. BIC selecciona el período de retorno apropiado para cada componente del sistema.',
-  },
-  {
-    q: '¿Cuándo se necesita un tanque de retención en aguas lluvias en Manizales?',
-    a: 'Un tanque de retención (o atenuación de caudal pico) es requerido cuando: la red receptora de Aguas de Manizales no tiene capacidad para el caudal de diseño generado por el nuevo proyecto; el POT municipal exige retención para proyectos sobre cierta superficie impermeable; el predio está en una cuenca con problemas comprobados de inundación aguas abajo. BIC realiza el estudio de capacidad del receptor y, si se requiere retención, diseña el tanque incluyendo el cálculo del volumen (método del hidrograma de entrada-salida) y el sistema de descarga controlada.',
-  },
-  {
-    q: '¿Qué diferencia hay entre el alcantarillado sanitario y el pluvial en Manizales?',
-    a: 'Manizales tiene un sistema de alcantarillado separado en la mayor parte de la ciudad: la red sanitaria recoge aguas residuales domésticas e industriales y las lleva a la PTAR La Francia; la red pluvial recoge el agua lluvia de calles, cubiertas y áreas duras y la descarga a fuentes superficiales. Conectar aguas lluvias a la red sanitaria o viceversa está prohibido y genera multas de Aguas de Manizales y CORPOCALDAS. BIC diseña los sistemas garantizando la separación conforme a la normativa.',
+    q: '¿Por qué el diseño de aguas lluvias es crítico en Manizales?',
+    a: 'Manizales tiene una precipitación media anual superior a 2.000 mm en el área urbana, con intensidades horarias que superan los 80 mm/h en eventos extremos. Un sistema de drenaje pluvial mal diseñado o subestimado genera inundaciones en sótanos, erosión de taludes y daños estructurales. Aguas de Manizales exige que todos los proyectos de construcción presenten el diseño del sistema de aguas lluvias firmado COPNIA como requisito para la licencia de construcción.',
   },
   {
     q: '¿Cuánto cuesta el diseño de aguas lluvias para un colegio en Manizales?',
-    a: 'Para una institución educativa típica de Manizales (área de cubierta de 1.000–3.000 m², sistema de canaletas, bajantes y colectores subterráneos hasta entrega a red pública), el rango orientativo 2026 es $4–10 millones COP. Para proyectos que incluyen estudio de impacto sobre la red receptora y diseño de tanque de retención, el rango es $8–18 millones COP. BIC entrega propuesta técnica y económica detallada en menos de 24 horas hábiles, sin costo.',
+    a: 'El costo del diseño de la red de aguas lluvias para un colegio en Manizales (un edificio de 2 a 4 pisos con área de cubierta de 500 a 2.000 m²) oscila entre $4 y $10 millones COP, dependiendo del área de drenaje y la complejidad de la red exterior. Para urbanizaciones completas, el costo varía según el número de lotes y la extensión de la red pública. BIC envía presupuesto detallado en 24 horas.',
+  },
+  {
+    q: '¿Las aguas lluvias se pueden separar de las aguas residuales en Manizales?',
+    a: 'Sí, y es obligatorio en proyectos nuevos en Manizales. El sistema de alcantarillado de Aguas de Manizales S.A. E.S.P. exige la separación entre las redes de aguas residuales domésticas y las aguas lluvias en todos los proyectos de construcción nueva y en las renovaciones de redes. BIC diseña los dos sistemas de forma separada (hidrosanitario y pluvial) y entrega los planos diferenciados que exige la empresa de servicios.',
   },
 ]
 
 export default function ServicioAguasLluviasManizales() {
-  useEffect(() => { window.scrollTo(0, 0) }, [])
-
   useEffect(() => {
-    const schema = {
-      '@context': 'https://schema.org',
-      '@type': 'Service',
-      name: 'Diseño de Redes de Aguas Lluvias — Manizales y Caldas',
-      description: seoConfig.description,
-      url: 'https://ingenieriabernal.co/servicios/aguas-lluvias-manizales',
-      serviceType: 'Diseño de Redes Pluviales y Drenaje Urbano',
-      provider: {
-        '@type': 'ProfessionalService',
-        name: 'BIC Bernal Ingeniería Consultores',
-        url: 'https://ingenieriabernal.co',
-        telephone: '+573024778910',
-      },
-      areaServed: [
-        { '@type': 'City', name: 'Manizales' },
-        { '@type': 'AdministrativeArea', name: 'Caldas' },
-        { '@type': 'AdministrativeArea', name: 'Eje Cafetero' },
-      ],
-    }
-    let el = document.getElementById('schema-service-geo')
-    if (!el) {
-      el = document.createElement('script')
-      el.id = 'schema-service-geo'
-      el.setAttribute('type', 'application/ld+json')
-      document.head.appendChild(el)
-    }
-    el.textContent = JSON.stringify(schema)
-    return () => { document.getElementById('schema-service-geo')?.remove() }
+    window.scrollTo(0, 0)
+    const s = document.createElement('script')
+    s.type = 'application/ld+json'
+    s.id = 'schema-aguas-lluvias-manizales'
+    s.textContent = JSON.stringify(SCHEMA)
+    document.head.appendChild(s)
+    return () => { document.getElementById('schema-aguas-lluvias-manizales')?.remove() }
   }, [])
 
   return (
     <>
       <SEOHead config={seoConfig} />
-      <SchemaMarkup
-        type="service"
-        serviceName="Diseño de Redes de Aguas Lluvias — Manizales y Caldas"
-        serviceDesc={seoConfig.description}
-        serviceUrl="/servicios/aguas-lluvias-manizales"
-        faqItems={FAQ}
-      />
 
       {/* ── HERO ── */}
       <section style={{
-        background: 'linear-gradient(135deg, #001A33 0%, #002A50 60%, #003B6F 100%)',
+        background: 'linear-gradient(135deg, #001A33 0%, #002A50 55%, #003B6F 100%)',
         paddingTop: 120, paddingBottom: 80,
         position: 'relative', overflow: 'hidden',
       }}>
         <BlueprintBg opacity={0.07} />
-        <div style={{ maxWidth: 900, margin: '0 auto', padding: '0 24px', position: 'relative' }}>
-          <SectionLabel light>Servicio especializado — Manizales y Caldas</SectionLabel>
+        <div style={{ maxWidth: 920, margin: '0 auto', padding: '0 24px', position: 'relative' }}>
+          <SectionLabel light>Redes pluviales · Manizales · Caldas</SectionLabel>
           <h1 style={{
             fontFamily: "'Playfair Display', serif", fontWeight: 700, color: '#fff',
-            fontSize: 'clamp(28px, 5vw, 44px)', lineHeight: 1.2, marginBottom: 24,
+            fontSize: 'clamp(26px, 4.5vw, 46px)', lineHeight: 1.2, marginBottom: 20,
           }}>
-            Diseño de Redes de Aguas Lluvias en Manizales
+            Diseño de Aguas Lluvias en Manizales
           </h1>
-          <p style={{
-            fontFamily: "'Lato', sans-serif", color: 'rgba(255,255,255,0.82)',
-            fontSize: 17, lineHeight: 1.75, maxWidth: 720, marginBottom: 36,
-          }}>
-            BIC diseña redes de aguas lluvias para cubiertas de colegios e instituciones,
-            zonas industriales, urbanizaciones y proyectos mixtos en Manizales y Caldas.
-            Curvas IDF del IDEAM, Método Racional y SCS-CN, cálculo de caudales de diseño,
-            colectores, sumideros, cámaras y tanques de retención. Memorias aceptadas por
-            Curaduría Urbana y Aguas de Manizales. Ingeniero COPNIA vigente y sede local.
+          <p style={{ color: '#17A2B8', fontSize: 'clamp(16px, 2.2vw, 20px)', fontWeight: 600, marginBottom: 20 }}>
+            Redes pluviales para cubiertas, colegios, urbanizaciones y edificios — NSR-10 y RAS 2017
           </p>
-          <div style={{ display: 'flex', gap: 12, flexWrap: 'wrap' }}>
-            <Btn href={`https://wa.me/${WA}?text=${WA_MSG}`}>
-              📱 Solicitar cotización de aguas lluvias en Manizales
-            </Btn>
-            <Btn variant="outline" href="/servicios/redes-hidrosanitarias" dark>
-              Ver servicio de redes hidrosanitarias →
-            </Btn>
+          <p style={{ color: 'rgba(255,255,255,0.82)', fontSize: 16, lineHeight: 1.8, marginBottom: 28, maxWidth: 760 }}>
+            BIC Bernal Ingeniería Consultores diseña redes de aguas lluvias para proyectos de construcción
+            en Manizales y el Eje Cafetero. Con la mayor pluviometría de Colombia, Manizales exige diseños
+            rigurosos que cumplan las curvas IDF del IDEAM y los requerimientos de Aguas de Manizales S.A. E.S.P.
+            BIC entrega planos firmados COPNIA aptos para trámite de licencia de construcción.
+          </p>
+          <div style={{ display: 'flex', gap: 12, flexWrap: 'wrap', marginBottom: 24 }}>
+            <Btn href={`https://wa.me/${WA}?text=${WA_MSG}`}>📱 Cotizar diseño aguas lluvias</Btn>
+            <Btn variant="outline" href="/servicios/redes-hidrosanitarias" dark>Ver servicio hidrosanitario</Btn>
+          </div>
+          <div style={{ display: 'flex', gap: 8, flexWrap: 'wrap' }}>
+            {['NSR-10 I', 'RAS 2017', 'IDF Manizales', 'Manning', 'Aguas de Manizales', 'COPNIA'].map(t => (
+              <Tag key={t} style={{ background: 'rgba(23,162,184,0.15)', color: '#7FDBEA', border: '1px solid rgba(23,162,184,0.3)', fontSize: 11 }}>{t}</Tag>
+            ))}
           </div>
         </div>
       </section>
 
-      {/* ── TAGS ── */}
-      <div style={{ background: '#0A2540', padding: '14px 24px', borderBottom: '1px solid rgba(23,162,184,0.15)' }}>
-        <div style={{ maxWidth: 900, margin: '0 auto', display: 'flex', gap: 8, flexWrap: 'wrap', alignItems: 'center' }}>
-          <span style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 11, color: 'rgba(255,255,255,0.5)', marginRight: 4 }}>Cobertura:</span>
-          {['Manizales', 'Caldas', 'Eje Cafetero', 'NSR-10', 'RAS 2017', 'COPNIA'].map(t => (
-            <Tag key={t}>{t}</Tag>
-          ))}
-        </div>
-      </div>
-
-      {/* ── ENLACE INTERNO ── */}
-      <div style={{ background: '#EEF6FB', padding: '18px 24px', borderBottom: '1px solid #D1E9F5' }}>
-        <div style={{ maxWidth: 900, margin: '0 auto' }}>
-          <p style={{ fontFamily: "'Lato', sans-serif", fontSize: 14, color: '#475569', margin: 0 }}>
-            Página especializada para Manizales y Caldas.{' '}
-            <a href="/servicios/redes-hidrosanitarias" style={{ color: '#17A2B8', fontWeight: 700, textDecoration: 'none' }}>
-              Ver página principal del servicio de Redes Hidrosanitarias →
-            </a>
-          </p>
-        </div>
-      </div>
-
-      {/* ── QUÉ INCLUYE ── */}
-      <Section bg="#F8FAFC" style={{ padding: '72px 24px' }}>
-        <div style={{ maxWidth: 900, margin: '0 auto' }}>
-          <SectionLabel>Alcance del servicio</SectionLabel>
-          <h2 style={{
-            fontFamily: "'Playfair Display', serif", fontWeight: 700, color: '#001A33',
-            fontSize: 'clamp(22px, 4vw, 32px)', marginBottom: 8,
-          }}>¿Qué incluye el diseño de aguas lluvias en Manizales?</h2>
-          <ThinLine mb={40} />
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: 24 }}>
-            {INCLUYE.map((item) => (
-              <div key={item.titulo} style={{
-                background: '#fff', border: '1px solid #E2E8F0', borderRadius: 4,
-                padding: 28, borderTop: '3px solid #17A2B8',
-              }}>
-                <div style={{ fontSize: 28, marginBottom: 12 }}>{item.icon}</div>
-                <h3 style={{
-                  fontFamily: "'Montserrat', sans-serif", fontWeight: 700, color: '#001A33',
-                  fontSize: 14, marginBottom: 10,
-                }}>{item.titulo}</h3>
-                <p style={{
-                  fontFamily: "'Lato', sans-serif", color: '#475569', fontSize: 14, lineHeight: 1.65,
-                }}>{item.desc}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </Section>
-
-      {/* ── TIPOS DE PROYECTO ── */}
-      <Section bg="#fff" style={{ padding: '72px 24px' }}>
-        <div style={{ maxWidth: 900, margin: '0 auto' }}>
-          <SectionLabel>Aplicaciones</SectionLabel>
-          <h2 style={{
-            fontFamily: "'Playfair Display', serif", fontWeight: 700, color: '#001A33',
-            fontSize: 'clamp(22px, 4vw, 32px)', marginBottom: 8,
-          }}>Tipos de proyecto de aguas lluvias en Manizales</h2>
-          <ThinLine mb={40} />
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(270px, 1fr))', gap: 20 }}>
-            {TIPOS_PROYECTO.map(t => (
-              <div key={t.tipo} style={{ padding: '20px 22px', background: '#F8FAFC', border: '1px solid #E2E8F0', borderRadius: 4, display: 'flex', gap: 14, alignItems: 'flex-start' }}>
-                <span style={{ fontSize: 24, flexShrink: 0 }}>{t.icon}</span>
-                <div>
-                  <h3 style={{ fontFamily: "'Montserrat', sans-serif", fontWeight: 700, fontSize: 13, color: '#001A33', margin: '0 0 6px' }}>{t.tipo}</h3>
-                  <p style={{ fontFamily: "'Lato', sans-serif", color: '#475569', fontSize: 13, lineHeight: 1.6, margin: 0 }}>{t.desc}</p>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </Section>
-
-      {/* ── CONTEXTO MANIZALES ── */}
-      <Section bg="#F8FAFC" style={{ padding: '72px 24px' }}>
-        <div style={{ maxWidth: 900, margin: '0 auto' }}>
-          <SectionLabel>Contexto local</SectionLabel>
-          <h2 style={{
-            fontFamily: "'Playfair Display', serif", fontWeight: 700, color: '#001A33',
-            fontSize: 'clamp(22px, 4vw, 32px)', marginBottom: 8,
-          }}>Por qué el drenaje pluvial en Manizales es diferente</h2>
-          <ThinLine mb={40} />
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(270px, 1fr))', gap: 20 }}>
-            {CONTEXTO_MANIZALES.map(c => (
-              <div key={c.titulo} style={{ padding: '20px 22px', background: '#fff', border: '1px solid #E2E8F0', borderRadius: 4, display: 'flex', gap: 14, alignItems: 'flex-start' }}>
-                <span style={{ fontSize: 24, flexShrink: 0 }}>{c.icon}</span>
-                <div>
-                  <h3 style={{ fontFamily: "'Montserrat', sans-serif", fontWeight: 700, fontSize: 13, color: '#001A33', margin: '0 0 6px' }}>{c.titulo}</h3>
-                  <p style={{ fontFamily: "'Lato', sans-serif", color: '#475569', fontSize: 13, lineHeight: 1.6, margin: 0 }}>{c.desc}</p>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </Section>
-
-      {/* ── ALCANCE POR TIPO ── */}
-      <Section bg="#fff" style={{ padding: '72px 24px' }}>
-        <div style={{ maxWidth: 900, margin: '0 auto' }}>
-          <SectionLabel>Proceso de trabajo</SectionLabel>
-          <h2 style={{ fontFamily: "'Playfair Display', serif", fontWeight: 700, color: '#001A33', fontSize: 'clamp(22px, 4vw, 32px)', marginBottom: 8 }}>
-            Etapas del diseño: diagnóstico, diseño y acompañamiento
+      {/* ── SERVICIOS ── */}
+      <Section>
+        <div style={{ maxWidth: 960, margin: '0 auto', padding: '0 24px' }}>
+          <SectionLabel>Tipos de proyecto</SectionLabel>
+          <h2 style={{ fontFamily: "'Playfair Display', serif", fontWeight: 700, fontSize: 'clamp(22px, 3vw, 32px)', marginBottom: 12 }}>
+            ¿Para qué tipo de proyecto diseñamos aguas lluvias?
           </h2>
-          <ThinLine mb={40} />
-          <div style={{ display: 'flex', flexDirection: 'column', gap: 0 }}>
-            {ALCANCE_TABLA.map((a, i) => (
-              <div key={a.tipo} style={{ display: 'grid', gridTemplateColumns: '140px 1fr', gap: 20, padding: '20px 0', borderBottom: i < ALCANCE_TABLA.length - 1 ? '1px solid #F1F5F9' : 'none' }}>
-                <div style={{ background: '#003B6F', borderRadius: 4, display: 'flex', alignItems: 'center', justifyContent: 'center', padding: '8px 12px' }}>
-                  <span style={{ fontFamily: "'Montserrat', sans-serif", fontWeight: 700, color: '#17A2B8', fontSize: 12, textAlign: 'center', lineHeight: 1.3 }}>{a.tipo}</span>
-                </div>
-                <p style={{ fontFamily: "'Lato', sans-serif", color: '#475569', fontSize: 14, lineHeight: 1.65, margin: 0 }}>{a.detalle}</p>
+          <ThinLine mb={36} />
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(260px, 1fr))', gap: 20 }}>
+            {SERVICIOS.map(s => (
+              <div key={s.titulo} style={{
+                background: '#fff', border: '1px solid #e2e8f0', borderRadius: 12,
+                padding: 24, borderLeft: '4px solid #17A2B8',
+              }}>
+                <div style={{ fontSize: 24, marginBottom: 8 }}>{s.icon}</div>
+                <h3 style={{ fontWeight: 700, fontSize: 15, color: '#002A50', marginBottom: 8 }}>{s.titulo}</h3>
+                <p style={{ color: '#555', fontSize: 14, lineHeight: 1.7, margin: 0 }}>{s.desc}</p>
               </div>
             ))}
           </div>
         </div>
       </Section>
 
-      {/* ── POR QUÉ BIC ── */}
-      <Section bg="#001A33" style={{ padding: '72px 24px' }}>
-        <BlueprintBg opacity={0.05} />
-        <div style={{ maxWidth: 900, margin: '0 auto', position: 'relative' }}>
-          <SectionLabel light>Diferenciadores BIC</SectionLabel>
-          <h2 style={{
-            fontFamily: "'Playfair Display', serif", fontWeight: 700, color: '#fff',
-            fontSize: 'clamp(22px, 4vw, 32px)', marginBottom: 8,
-          }}>¿Por qué contratar BIC para aguas lluvias en Manizales?</h2>
-          <ThinLine mb={40} />
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(240px, 1fr))', gap: 24 }}>
-            {[
-              { icon: '📍', titulo: 'Sede local en Manizales', desc: 'BIC tiene sede en Manizales (Calle 65A #23B-24). Conocimiento directo del POT, curvas IDF locales, criterios de Curaduría Urbana y Aguas de Manizales. Respuesta inmediata a observaciones de las entidades.' },
-              { icon: '🎓', titulo: 'Especialista UNAL · COPNIA vigente', desc: 'Rogerio Bernal Ríos, egresado UNAL, especialista en Ingeniería Hidráulica y Ambiental. Matrícula COPNIA 17202-313228 CLD activa. Memorias firmadas y aceptadas por Curaduría Urbana de Manizales.' },
-              { icon: '🌧️', titulo: 'Experiencia en pluviosidad de alta montaña', desc: 'BIC tiene experiencia en diseño hidrológico para zonas de alta pluviosidad como Manizales y el Eje Cafetero. Manejo de curvas IDF del IDEAM, correlación con estaciones locales y aplicación del Método Racional para intensidades de hasta 140 mm/h.' },
-              { icon: '⚡', titulo: 'Propuesta en 24 horas · Trato directo', desc: 'Comunicación directa con el director técnico. Propuesta técnica y económica en menos de 24 horas hábiles, sin costo. Acompañamiento hasta la aprobación de la licencia en Curaduría Urbana.' },
-            ].map(d => (
-              <div key={d.titulo} style={{
-                background: 'rgba(255,255,255,0.05)', border: '1px solid rgba(23,162,184,0.2)',
-                borderRadius: 4, padding: 28,
-              }}>
-                <div style={{ fontSize: 30, marginBottom: 12 }}>{d.icon}</div>
-                <h3 style={{
-                  fontFamily: "'Montserrat', sans-serif", fontWeight: 700, color: '#17A2B8',
-                  fontSize: 14, marginBottom: 8,
-                }}>{d.titulo}</h3>
-                <p style={{
-                  fontFamily: "'Lato', sans-serif", color: 'rgba(255,255,255,0.72)', fontSize: 14, lineHeight: 1.65,
-                }}>{d.desc}</p>
+      {/* ── PROCESO ── */}
+      <Section style={{ background: '#f8f9fa' }}>
+        <div style={{ maxWidth: 880, margin: '0 auto', padding: '0 24px' }}>
+          <SectionLabel>Metodología</SectionLabel>
+          <h2 style={{ fontFamily: "'Playfair Display', serif", fontWeight: 700, fontSize: 'clamp(22px, 3vw, 32px)', marginBottom: 8 }}>
+            Cómo diseñamos aguas lluvias en Manizales
+          </h2>
+          <ThinLine mb={36} />
+          <div style={{ display: 'flex', flexDirection: 'column', gap: 28 }}>
+            {PROCESO.map(p => (
+              <div key={p.paso} style={{ display: 'grid', gridTemplateColumns: '60px 1fr', gap: 20 }}>
+                <div style={{
+                  width: 48, height: 48, borderRadius: '50%',
+                  background: 'linear-gradient(135deg, #17A2B8, #0d8fa3)',
+                  color: '#fff', fontWeight: 900, fontSize: 14,
+                  display: 'flex', alignItems: 'center', justifyContent: 'center', flexShrink: 0,
+                }}>{p.paso}</div>
+                <div>
+                  <h3 style={{ fontWeight: 700, fontSize: 16, color: '#002A50', marginBottom: 8 }}>{p.titulo}</h3>
+                  <p style={{ color: '#555', lineHeight: 1.75, fontSize: 14, margin: 0 }}>{p.desc}</p>
+                </div>
               </div>
             ))}
           </div>
@@ -369,71 +197,85 @@ export default function ServicioAguasLluviasManizales() {
       </Section>
 
       {/* ── FAQ ── */}
-      <Section bg="#F8FAFC" style={{ padding: '72px 24px' }}>
-        <div style={{ maxWidth: 860, margin: '0 auto' }}>
+      <Section>
+        <div style={{ maxWidth: 860, margin: '0 auto', padding: '0 24px' }}>
           <SectionLabel>Preguntas frecuentes</SectionLabel>
-          <h2 style={{ fontFamily: "'Playfair Display', serif", fontWeight: 700, color: '#001A33', fontSize: 'clamp(22px, 4vw, 32px)', marginBottom: 8 }}>
-            Preguntas frecuentes — aguas lluvias en Manizales
+          <h2 style={{ fontFamily: "'Playfair Display', serif", fontWeight: 700, fontSize: 'clamp(22px, 3vw, 32px)', marginBottom: 8 }}>
+            Aguas lluvias en Manizales — lo que más preguntan
           </h2>
-          <ThinLine mb={40} />
-          <div style={{ display: 'flex', flexDirection: 'column', gap: 16 }}>
-            {FAQ.map((faq, i) => (
-              <div key={i} style={{ background: '#fff', border: '1px solid #E2E8F0', borderRadius: 4, padding: '22px 26px' }}>
-                <h3 style={{ fontFamily: "'Montserrat', sans-serif", fontWeight: 700, color: '#001A33', fontSize: 14, margin: '0 0 10px', lineHeight: 1.4 }}>{faq.q}</h3>
-                <p style={{ fontFamily: "'Lato', sans-serif", color: '#475569', fontSize: 14, lineHeight: 1.7, margin: 0 }}>{faq.a}</p>
+          <ThinLine mb={32} />
+          <div style={{ display: 'flex', flexDirection: 'column', gap: 18 }}>
+            {FAQ.map(item => (
+              <div key={item.q} style={{ background: '#f8f9fa', borderRadius: 12, padding: 24, border: '1px solid #e2e8f0' }}>
+                <h3 style={{ fontWeight: 700, fontSize: 15, marginBottom: 10, color: '#002A50', lineHeight: 1.4 }}>{item.q}</h3>
+                <p style={{ color: '#555', lineHeight: 1.8, fontSize: 14, margin: 0 }}>{item.a}</p>
               </div>
             ))}
           </div>
         </div>
       </Section>
 
-      {/* ── SERVICIOS RELACIONADOS ── */}
-      <Section bg="#EFF6FB" style={{ padding: '48px 24px' }}>
-        <div style={{ maxWidth: 860, margin: '0 auto' }}>
-          <p style={{ fontFamily: "'Montserrat', sans-serif", fontWeight: 700, color: '#003B6F', fontSize: 13, letterSpacing: '0.08em', textTransform: 'uppercase', marginBottom: 20 }}>
-            Servicios relacionados
+      {/* ── TAMBIÉN DISPONIBLE EN ── */}
+      <Section style={{ background: '#eef6fb' }}>
+        <div style={{ maxWidth: 860, margin: '0 auto', padding: '0 24px' }}>
+          <p style={{ fontFamily: "'Montserrat', sans-serif", fontWeight: 700, color: '#003B6F', fontSize: 12, letterSpacing: '0.07em', textTransform: 'uppercase', marginBottom: 14 }}>
+            Servicio nacional de redes hidrosanitarias
           </p>
-          <div style={{ display: 'flex', gap: 16, flexWrap: 'wrap' }}>
-            <a href="/servicios/redes-hidrosanitarias" style={{ flex: '1 1 220px', background: '#fff', border: '1px solid #E2E8F0', borderRadius: 4, padding: '18px 20px', textDecoration: 'none' }}>
-              <span style={{ fontFamily: "'Playfair Display', serif", fontWeight: 700, color: '#003B6F', fontSize: 14, display: 'block', lineHeight: 1.35 }}>Redes hidrosanitarias — agua potable, sanitario y pluvial</span>
-              <span style={{ fontFamily: "'Lato', sans-serif", color: '#17A2B8', fontSize: 12, marginTop: 8, display: 'block' }}>Ver servicio →</span>
-            </a>
-            <a href="/servicios/modelacion-hec-ras" style={{ flex: '1 1 220px', background: '#fff', border: '1px solid #E2E8F0', borderRadius: 4, padding: '18px 20px', textDecoration: 'none' }}>
-              <span style={{ fontFamily: "'Playfair Display', serif", fontWeight: 700, color: '#003B6F', fontSize: 14, display: 'block', lineHeight: 1.35 }}>Modelación HEC-RAS para cuencas urbanas e inundabilidad</span>
-              <span style={{ fontFamily: "'Lato', sans-serif", color: '#17A2B8', fontSize: 12, marginTop: 8, display: 'block' }}>Ver servicio →</span>
-            </a>
-            <a href="/diseno-alcantarillado-colombia" style={{ flex: '1 1 220px', background: '#fff', border: '1px solid #E2E8F0', borderRadius: 4, padding: '18px 20px', textDecoration: 'none' }}>
-              <span style={{ fontFamily: "'Playfair Display', serif", fontWeight: 700, color: '#003B6F', fontSize: 14, display: 'block', lineHeight: 1.35 }}>Diseño de alcantarillado sanitario y combinado Colombia</span>
-              <span style={{ fontFamily: "'Lato', sans-serif", color: '#17A2B8', fontSize: 12, marginTop: 8, display: 'block' }}>Ver servicio →</span>
-            </a>
-          </div>
+          <a href="/servicios/redes-hidrosanitarias" style={{
+            display: 'inline-block', background: '#fff', border: '1px solid #b3d4e8',
+            borderRadius: 8, padding: '14px 20px', color: '#003B6F',
+            fontWeight: 600, fontSize: 14, textDecoration: 'none',
+          }}>
+            Ver diseño de redes hidrosanitarias Colombia →
+          </a>
         </div>
       </Section>
 
       {/* ── CTA FINAL ── */}
-      <Section bg="#17A2B8" style={{ padding: '64px 24px', textAlign: 'center' }}>
-        <div style={{ maxWidth: 680, margin: '0 auto' }}>
+      <section style={{
+        background: 'linear-gradient(135deg, #001A33 0%, #003B6F 100%)',
+        padding: '72px 24px', textAlign: 'center',
+        position: 'relative', overflow: 'hidden',
+      }}>
+        <BlueprintBg opacity={0.05} />
+        <div style={{ position: 'relative', maxWidth: 720, margin: '0 auto' }}>
+          <div style={{ fontSize: 40, marginBottom: 16 }}>🌧️</div>
           <h2 style={{
-            fontFamily: "'Playfair Display', serif", fontWeight: 700, color: '#fff',
-            fontSize: 'clamp(22px, 4vw, 34px)', marginBottom: 16,
+            fontFamily: "'Playfair Display', serif", fontWeight: 700,
+            color: '#fff', fontSize: 'clamp(22px, 3.5vw, 36px)', marginBottom: 16, lineHeight: 1.25,
           }}>
-            ¿Proyecto de aguas lluvias en Manizales o Caldas?
+            ¿Su proyecto necesita diseño<br />de aguas lluvias en Manizales?
           </h2>
-          <p style={{
-            fontFamily: "'Lato', sans-serif", color: 'rgba(255,255,255,0.9)',
-            fontSize: 16, lineHeight: 1.7, marginBottom: 32,
-          }}>
-            Indíquenos el tipo de proyecto, el área aproximada de cubierta o del lote y
-            el municipio. Le respondemos con propuesta técnica y presupuesto en menos de 24 horas.
+          <p style={{ color: 'rgba(255,255,255,0.82)', fontSize: 16, lineHeight: 1.8, marginBottom: 32 }}>
+            Compártanos el tipo de edificación, el área de cubierta y el municipio.
+            BIC le envía presupuesto y plazo en menos de 24 horas.
           </p>
-          <Btn
-            href={`https://wa.me/${WA}?text=${WA_MSG}`}
-            style={{ background: '#fff', color: '#17A2B8', fontSize: 15, padding: '14px 36px' }}
-          >
-            📱 Solicitar cotización de aguas lluvias en Manizales
-          </Btn>
+          <div style={{ display: 'flex', gap: 14, justifyContent: 'center', flexWrap: 'wrap' }}>
+            <a
+              href={`https://wa.me/${WA}?text=${WA_MSG}`}
+              target="_blank" rel="noopener noreferrer"
+              style={{
+                display: 'inline-block', padding: '15px 36px',
+                background: '#25D366', color: '#fff',
+                borderRadius: 8, fontWeight: 700, fontSize: 16, textDecoration: 'none',
+              }}
+            >
+              📱 Cotizar por WhatsApp · +57 302 477 8910
+            </a>
+            <a
+              href="/contacto"
+              style={{
+                display: 'inline-block', padding: '15px 36px',
+                background: 'transparent', color: '#fff',
+                borderRadius: 8, fontWeight: 700, fontSize: 16,
+                textDecoration: 'none', border: '2px solid rgba(255,255,255,0.4)',
+              }}
+            >
+              Formulario de contacto
+            </a>
+          </div>
         </div>
-      </Section>
+      </section>
     </>
   )
 }

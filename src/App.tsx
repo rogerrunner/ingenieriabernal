@@ -358,6 +358,13 @@ export default function App() {
 
           <Route path="/calculadora-estudios-hidraulicos" component={CalculadoraHidraulica} />
 
+          {/* ── PÁGINAS GEOGRÁFICAS DE SERVICIO — mayo 2026 ── */}
+          <Route path="/modelacion-hidraulica-putumayo" component={ServicioModelacionHidraulicaPutumayo} />
+          <Route path="/acueducto-quindio" component={ServicioAcueductoQuindio} />
+          <Route path="/geotecnia-pereira" component={ServicioEstudioSuelosPereira} />
+          <Route path="/ptap-municipios-colombia" component={ServicioPTAPColombia} />
+          <Route path="/aguas-lluvias-manizales" component={ServicioAguasLluviasManizales} />
+
           <Route path="/blog/:slug" component={BlogDetail} />
           <Route component={NotFound} />
         </Switch>

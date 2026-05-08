@@ -69,10 +69,15 @@
   <url><loc>https://ingenieriabernal.co/costa-caribe</loc><lastmod>2026-04-15</lastmod><changefreq>monthly</changefreq><priority>0.78</priority></url>
   <url><loc>https://ingenieriabernal.co/llanos-orinoquia</loc><lastmod>2026-04-15</lastmod><changefreq>monthly</changefreq><priority>0.78</priority></url>
 
-  <!-- Ciudades principales — noindex: consolidadas en páginas de mayor valor -->
-  <!-- /ingenieria-bogota, /ingenieria-medellin, /ingenieria-cali, /ingenieria-manizales,
-       /ingenieria-bucaramanga, /ingenieria-barranquilla, /ingenieria-eje-cafetero,
-       /ingenieria-antioquia — removidas del sitemap (noindex por thin content) -->
+  <!-- Landing pages capitales principales -->
+  <url><loc>https://ingenieriabernal.co/ingenieria-bogota</loc><lastmod>2026-05-07</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://ingenieriabernal.co/ingenieria-medellin</loc><lastmod>2026-05-07</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://ingenieriabernal.co/ingenieria-cali</loc><lastmod>2026-05-07</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://ingenieriabernal.co/ingenieria-manizales</loc><lastmod>2026-05-07</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://ingenieriabernal.co/ingenieria-bucaramanga</loc><lastmod>2026-05-07</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://ingenieriabernal.co/ingenieria-barranquilla</loc><lastmod>2026-05-07</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://ingenieriabernal.co/ingenieria-eje-cafetero</loc><lastmod>2026-05-07</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://ingenieriabernal.co/ingenieria-antioquia</loc><lastmod>2026-05-07</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
 
   <!-- Páginas regionales SEO -->
   <url><loc>https://ingenieriabernal.co/regional/manizales</loc><lastmod>2026-04-15</lastmod><changefreq>monthly</changefreq><priority>0.92</priority></url>
@@ -263,5 +268,12 @@
   <url><loc>https://ingenieriabernal.co/servicios/bucaramanga</loc><lastmod>2026-05-04</lastmod><changefreq>monthly</changefreq><priority>0.80</priority></url>
   <url><loc>https://ingenieriabernal.co/servicios/ibague</loc><lastmod>2026-05-04</lastmod><changefreq>monthly</changefreq><priority>0.78</priority></url>
   <url><loc>https://ingenieriabernal.co/calculadora-estudios-hidraulicos</loc><lastmod>2026-05-04</lastmod><changefreq>monthly</changefreq><priority>0.75</priority></url>
+
+  <!-- Páginas geográficas de servicio — mayo 2026 -->
+  <url><loc>https://ingenieriabernal.co/modelacion-hidraulica-putumayo</loc><lastmod>2026-05-07</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://ingenieriabernal.co/acueducto-quindio</loc><lastmod>2026-05-07</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://ingenieriabernal.co/geotecnia-pereira</loc><lastmod>2026-05-07</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://ingenieriabernal.co/ptap-municipios-colombia</loc><lastmod>2026-05-07</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://ingenieriabernal.co/aguas-lluvias-manizales</loc><lastmod>2026-05-07</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
 
 </urlset>
