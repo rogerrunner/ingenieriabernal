@@ -91,6 +91,7 @@ const DisenoPTAPColombia = lazy(() => import('./pages/DisenoPTAPColombia'))
 const DisenoAlcantarilladoColombia = lazy(() => import('./pages/DisenoAlcantarilladoColombia'))
 const PomcaColombia = lazy(() => import('./pages/PomcaColombia'))
 const CalculadoraHidraulica = lazy(() => import('./pages/CalculadoraHidraulica'))
+const HydraulicEngineerEnglish = lazy(() => import('./pages/HydraulicEngineerEnglish'))
 
 function ScrollToTop() {
   const [location] = useLocation()
@@ -355,6 +356,7 @@ export default function App() {
           <Route path="/ingeniero-hidraulico-manizales" component={IngenieroHidraulicoManizales} />
 
           <Route path="/calculadora-estudios-hidraulicos" component={CalculadoraHidraulica} />
+          <Route path="/hydraulic-engineering-consulting" component={HydraulicEngineerEnglish} />
 
           <Route path="/blog/:slug" component={BlogDetail} />
           <Route component={NotFound} />

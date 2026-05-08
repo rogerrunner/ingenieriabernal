@@ -7,8 +7,8 @@ const WA = '573024778910'
 const WA_MSG = encodeURIComponent('Hola, tengo un terreno en suelo de expansión urbana y quiero información sobre planes parciales. ¿Pueden asesorarme?')
 
 const seoConfig = {
-  title: 'Plan Parcial Colombia — Formulación POT, COPNIA | BIC',
-  description: 'BIC formula y tramita planes parciales en Colombia. Suelo expansión urbana, cargas y beneficios, coordinación POT y curaduría. COPNIA vigente. Cotización sin costo.',
+  title: 'Plan Parcial Colombia — Consultoría Técnica Urbanística | BIC',
+  description: 'Consultoría en planes parciales de desarrollo urbanístico en Colombia. Estudios técnicos, licencias, viabilidad hidráulica. BIC COPNIA. Solicita cotización.',
   keywords: [
     'plan parcial Colombia',
     'formulación plan parcial Colombia',
@@ -362,6 +362,59 @@ export default function PlanParcialColombia() {
               }}>
                 {s.label} →
               </a>
+            ))}
+          </div>
+        </div>
+      </Section>
+
+      {/* ── QUÉ INCLUYE LA CONSULTORÍA BIC ── */}
+      <Section>
+        <div style={{ maxWidth: 860, margin: '0 auto', padding: '0 24px' }}>
+          <SectionLabel>Alcance de la consultoría</SectionLabel>
+          <h2 style={{ fontFamily: "'Playfair Display', serif", fontWeight: 700, fontSize: 'clamp(22px, 3vw, 32px)', marginBottom: 12 }}>
+            ¿Qué incluye la consultoría BIC para planes parciales?
+          </h2>
+          <p style={{ color: '#555', lineHeight: 1.75, marginBottom: 28, maxWidth: 760 }}>
+            BIC ofrece un alcance técnico completo para el plan parcial — desde la viabilidad inicial hasta el acompañamiento ante la curaduría para la licencia de urbanismo.
+          </p>
+          <div style={{ display: 'flex', flexDirection: 'column', gap: 12 }}>
+            {[
+              {
+                item: 'Estudio de viabilidad hidráulica y sanitaria del predio',
+                detail: 'Verificación de capacidad de las redes existentes de acueducto y alcantarillado para soportar el nuevo desarrollo. Modelación con EPANET y SWMM cuando se requiere.',
+              },
+              {
+                item: 'Coordinación con curadurías y entidades de servicios públicos',
+                detail: 'BIC gestiona la comunicación técnica con la curaduría urbana y las empresas prestadoras (acueducto, energía) para la viabilidad de conexión de servicios.',
+              },
+              {
+                item: 'Diseño de redes maestras de acueducto y alcantarillado',
+                detail: 'Diseño de los sistemas estructurantes de agua potable y saneamiento del plan parcial conforme a RAS 2017 y Resolución 0330/2017.',
+              },
+              {
+                item: 'Memorias técnicas para licencia urbanística',
+                detail: 'Elaboración de todas las memorias de cálculo y planos técnicos exigidos por el curador urbano para tramitar la licencia de urbanismo posterior al decreto de adopción.',
+              },
+              {
+                item: 'Cálculos de dotaciones según RAS 2017',
+                detail: 'Cálculo de demandas de agua potable, caudales de aguas residuales y aguas lluvias según los parámetros y criterios del Reglamento Técnico del Sector de Agua Potable.',
+              },
+            ].map((c, i) => (
+              <div key={c.item} style={{
+                background: '#fff', border: '1px solid #e2e8f0', borderRadius: 12,
+                padding: '18px 22px', display: 'grid', gridTemplateColumns: '40px 1fr', gap: 16, alignItems: 'start',
+              }}>
+                <div style={{
+                  width: 36, height: 36, borderRadius: '50%',
+                  background: 'linear-gradient(135deg, #2E75B6, #1A3A6B)',
+                  color: '#fff', fontWeight: 900, fontSize: 14,
+                  display: 'flex', alignItems: 'center', justifyContent: 'center', flexShrink: 0,
+                }}>{String(i + 1).padStart(2, '0')}</div>
+                <div>
+                  <p style={{ fontWeight: 700, fontSize: 15, color: '#1A3A6B', margin: '0 0 6px' }}>{c.item}</p>
+                  <p style={{ color: '#555', fontSize: 14, lineHeight: 1.75, margin: 0 }}>{c.detail}</p>
+                </div>
+              </div>
             ))}
           </div>
         </div>
