@@ -411,6 +411,10 @@ export default function ServicioDisenoAcueductos() {
               <span style={{ fontFamily: "'Playfair Display', serif", fontWeight: 700, color: '#003B6F', fontSize: 14, display: 'block', lineHeight: 1.35 }}>Interventoría técnica de obras de acueducto y plantas de tratamiento</span>
               <span style={{ fontFamily: "'Lato', sans-serif", color: '#17A2B8', fontSize: 12, marginTop: 8, display: 'block' }}>Ver servicio →</span>
             </a>
+            <a href="/servicios/diseno-acueducto-quindio" style={{ flex: '1 1 220px', background: '#EEF6FB', border: '1px solid #17A2B8', borderRadius: 4, padding: '18px 20px', textDecoration: 'none' }}>
+              <span style={{ fontFamily: "'Playfair Display', serif", fontWeight: 700, color: '#003B6F', fontSize: 14, display: 'block', lineHeight: 1.35 }}>¿Proyecto en Quindío o Eje Cafetero? Ver página especializada →</span>
+              <span style={{ fontFamily: "'Lato', sans-serif", color: '#17A2B8', fontSize: 12, marginTop: 8, display: 'block' }}>Acueductos Quindío y Eje Cafetero →</span>
+            </a>
           </div>
         </div>
       </Section>

@@ -91,6 +91,11 @@ const DisenoPTAPColombia = lazy(() => import('./pages/DisenoPTAPColombia'))
 const DisenoAlcantarilladoColombia = lazy(() => import('./pages/DisenoAlcantarilladoColombia'))
 const PomcaColombia = lazy(() => import('./pages/PomcaColombia'))
 const CalculadoraHidraulica = lazy(() => import('./pages/CalculadoraHidraulica'))
+const ServicioModelacionHidraulicaPutumayo = lazy(() => import('./pages/ServicioModelacionHidraulicaPutumayo'))
+const ServicioAcueductoQuindio = lazy(() => import('./pages/ServicioAcueductoQuindio'))
+const ServicioEstudioSuelosPereira = lazy(() => import('./pages/ServicioEstudioSuelosPereira'))
+const ServicioPTAPColombia = lazy(() => import('./pages/ServicioPTAPColombia'))
+const ServicioAguasLluviasManizales = lazy(() => import('./pages/ServicioAguasLluviasManizales'))
 
 function ScrollToTop() {
   const [location] = useLocation()
@@ -321,6 +326,13 @@ export default function App() {
           <Route path="/servicios/ambiental" component={ServicioAmbiental} />
           <Route path="/servicios/diseno-acueductos" component={ServicioDisenoAcueductos} />
           <Route path="/servicios/contra-incendios-nsr10" component={ServicioContraIncendiosNSR10} />
+
+          {/* ── PÁGINAS GEOGRÁFICAS TRANSACCIONALES — FONDO DE EMBUDO ── */}
+          <Route path="/servicios/modelacion-hidraulica-putumayo" component={ServicioModelacionHidraulicaPutumayo} />
+          <Route path="/servicios/diseno-acueducto-quindio" component={ServicioAcueductoQuindio} />
+          <Route path="/servicios/estudio-suelos-pereira" component={ServicioEstudioSuelosPereira} />
+          <Route path="/servicios/diseno-ptap-colombia" component={ServicioPTAPColombia} />
+          <Route path="/servicios/aguas-lluvias-manizales" component={ServicioAguasLluviasManizales} />
 
           {/* ── LANDING PAGES DE CIUDAD — /servicios/{ciudad} ── */}
           <Route path="/servicios/bogota" component={CiudadBogota} />

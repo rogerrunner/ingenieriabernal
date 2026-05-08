@@ -94,6 +94,13 @@
   <url><loc>https://ingenieriabernal.co/servicios/diseno-acueductos</loc><lastmod>2026-04-24</lastmod><changefreq>monthly</changefreq><priority>0.91</priority></url>
   <url><loc>https://ingenieriabernal.co/servicios/contra-incendios-nsr10</loc><lastmod>2026-05-03</lastmod><changefreq>monthly</changefreq><priority>0.90</priority></url>
 
+  <!-- Páginas geográficas transaccionales — fondo de embudo -->
+  <url><loc>https://ingenieriabernal.co/servicios/modelacion-hidraulica-putumayo</loc><lastmod>2026-05-07</lastmod><changefreq>monthly</changefreq><priority>0.85</priority></url>
+  <url><loc>https://ingenieriabernal.co/servicios/diseno-acueducto-quindio</loc><lastmod>2026-05-07</lastmod><changefreq>monthly</changefreq><priority>0.85</priority></url>
+  <url><loc>https://ingenieriabernal.co/servicios/estudio-suelos-pereira</loc><lastmod>2026-05-07</lastmod><changefreq>monthly</changefreq><priority>0.85</priority></url>
+  <url><loc>https://ingenieriabernal.co/servicios/diseno-ptap-colombia</loc><lastmod>2026-05-07</lastmod><changefreq>monthly</changefreq><priority>0.85</priority></url>
+  <url><loc>https://ingenieriabernal.co/servicios/aguas-lluvias-manizales</loc><lastmod>2026-05-07</lastmod><changefreq>monthly</changefreq><priority>0.85</priority></url>
+
   <!-- Landing pages locales — Manizales -->
   <url><loc>https://ingenieriabernal.co/estudio-de-inundabilidad-manizales</loc><lastmod>2026-04-15</lastmod><changefreq>monthly</changefreq><priority>0.92</priority></url>
   <url><loc>https://ingenieriabernal.co/estudio-de-suelos-manizales</loc><lastmod>2026-04-15</lastmod><changefreq>monthly</changefreq><priority>0.90</priority></url>

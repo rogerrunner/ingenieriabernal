@@ -339,6 +339,7 @@ export default function DisenoPTAPColombia() {
               { label: 'Diseño de PTAR Colombia', href: '/diseno-ptar-colombia' },
               { label: 'Canales de conducción', href: '/diseno-canal-riego-colombia' },
               { label: 'Estudios hidrológicos', href: '/servicios' },
+              { label: '¿PTAP por región? Ver especializada →', href: '/servicios/diseno-ptap-colombia' },
             ].map(s => (
               <a key={s.label} href={s.href} style={{
                 display: 'block', background: '#f0f9ff', border: '1px solid #b3e0ea',
