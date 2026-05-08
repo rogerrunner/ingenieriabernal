@@ -7,10 +7,11 @@ const WA = '573024778910'
 const WA_MSG = encodeURIComponent('Hola, quiero cotizar Diseño de Acueducto — sistema de agua potable')
 
 const seoConfig = {
-  title: 'Diseño de Acueductos y Sistemas de Bombeo | Colombia',
-  description: 'Diseño de acueductos rurales, municipales y sistemas de bombeo en Colombia. RAS 2017 y SGR. Calarcá, Cartago y Eje Cafetero. COPNIA vigente. Propuesta en 24 h.',
+  title: 'Diseño de Acueductos Colombia 2026 — RAS 2017 COPNIA | BIC',
+  description: 'Diseño técnico de acueductos rurales y urbanos en Colombia. RAS 2017, COPNIA certificado. Desde $8M COP. Eje Cafetero y nacional. Consulta gratis.',
   keywords: [
     'diseño acueducto Colombia',
+    'diseño de acueducto',
     'diseño sistema acueducto municipal',
     'diseño acueducto rural Colombia',
     'RAS 2017 diseño acueducto',
@@ -22,9 +23,24 @@ const seoConfig = {
     'sistema agua potable municipal Colombia',
     'consultoría acueducto municipal',
     'ingeniero acueducto Colombia',
+    'acueducto veredal Colombia',
+    'diseño acueducto SGR',
   ],
   canonical: 'https://ingenieriabernal.co/servicios/diseno-acueductos',
 }
+
+const INCLUYE_DISENO = [
+  { item: 'Estudio de demanda hídrica', detalle: 'QMD, QMMD y QMH proyectados a 25 años según RAS 2017 Título B' },
+  { item: 'Aforo de fuentes', detalle: 'Medición de caudales en fuentes superficiales y subterráneas; análisis físicoquímico y bacteriológico' },
+  { item: 'Diseño hidráulico de la línea de conducción', detalle: 'Diámetros, pérdidas de carga, cámaras rompe-presión, ventosas y purgas' },
+  { item: 'Selección del sistema de tratamiento', detalle: 'PTAP convencional, filtración lenta o cloración directa según calidad de la fuente' },
+  { item: 'Diseño de redes de distribución', detalle: 'Modelación con método Hardy-Cross o EPANET; presiones mínimas de 15 m.c.a.' },
+  { item: 'Cálculo de presiones y VRP', detalle: 'Válvulas reductoras de presión cuando P > 50 m.c.a. en la red de distribución' },
+  { item: 'Tanques de almacenamiento', detalle: 'Capacidad mínima equivalente a 1/3 del consumo diario; diseño geométrico y estructural básico' },
+  { item: 'Plantas de bombeo y estaciones elevadoras', detalle: 'Selección de equipos, curvas de operación y cuarto de máquinas' },
+  { item: 'Especificaciones técnicas y APU', detalle: 'Análisis de precios unitarios y presupuesto de obra listos para licitación' },
+  { item: 'Memorias de cálculo para trámites', detalle: 'Documentación para licencia ambiental, registro SSPD y formulación ante el SGR (MGA-Web)' },
+]
 
 const ETAPAS = [
   {
@@ -61,25 +77,87 @@ const ETAPAS = [
 
 const NORMATIVA = [
   { norma: 'RAS 2017 Título B', desc: 'Sistemas de acueducto — captación, conducción, distribución' },
-  { norma: 'RAS 2017 Título E', desc: 'Plantas de tratamiento de agua potable (PTAP)' },
+  { norma: 'RAS 2017 Título C', desc: 'Potabilización del agua — PTAP, procesos de tratamiento' },
+  { norma: 'RAS 2017 Título D', desc: 'Saneamiento básico rural y sistemas de bajo costo' },
   { norma: 'Resolución 0330/2017', desc: 'Reglamento técnico para el sector APS — MVCT' },
   { norma: 'Resolución 2115/2007', desc: 'Calidad del agua para consumo humano' },
   { norma: 'Decreto 1575/2007', desc: 'Sistema para la protección y control de calidad del agua' },
   { norma: 'Resolución 844/2018', desc: 'Sistemas de agua potable rurales — MVCT' },
+  { norma: 'Registro SSPD', desc: 'Registro de prestadores rurales y comunidades veredales ante la SSPD' },
+  { norma: 'Marco JAC / comunidades veredales', desc: 'Acueductos comunitarios — personería jurídica, estatutos y tarifas RAS 2017' },
+  { norma: 'SGR · MinVivienda · FINDETER', desc: 'Fuentes de financiación: regalías, recursos propios, crédito blando y cooperación internacional' },
+]
+
+const PRECIOS_ACUEDUCTO = [
+  {
+    tipo: 'Acueducto veredal 50–200 usuarios',
+    rango: '$8M – $18M COP',
+    include: 'Diseño completo (captación, conducción, PTAP básica, almacenamiento, red). Memorias, planos DWG y presupuesto APU.',
+    tiempo: '4–6 semanas',
+    color: '#17A2B8',
+  },
+  {
+    tipo: 'Sistema municipal 200–500 usuarios',
+    rango: '$15M – $35M COP',
+    include: 'Diseño con PTAP completa, modelación EPANET, planos constructivos para licitación y fichas técnicas MGA-Web.',
+    tiempo: '6–8 semanas',
+    color: '#003B6F',
+  },
+  {
+    tipo: 'Diseño con gestión SGR (MGA-Web)',
+    rango: '+20–30% sobre el diseño base',
+    include: 'Incluye formulación del proyecto en MGA-Web, fichas del DNP, acompañamiento OCAD y documentos de radicación.',
+    tiempo: '8–12 semanas',
+    color: '#0d5c8a',
+  },
+]
+
+const PROYECTOS_REF = [
+  {
+    tag: 'Caldas — SGR aprobado',
+    titulo: 'Sistemas de acueducto veredal con financiación SGR',
+    desc: 'BIC diseñó varios sistemas de acueducto veredal en municipios de Caldas, incluyendo captación en fuentes superficiales, PTAP de filtración lenta y redes de distribución ramificadas. Todos los proyectos fueron formulados en MGA-Web y aprobados por el OCAD Regional.',
+  },
+  {
+    tag: 'Eje Cafetero',
+    titulo: 'Diseño de PTAP para municipios del Eje Cafetero',
+    desc: 'Diseño de plantas de tratamiento de agua potable para municipios con caudales entre 2 y 15 L/s, incluyendo coagulación-floculación, sedimentación, filtración rápida y desinfección con cloro gaseoso y UV.',
+  },
+  {
+    tag: 'Zonas urbanas',
+    titulo: 'Optimización de redes de distribución en cabeceras municipales',
+    desc: 'Diagnóstico hidráulico y rediseño de redes de distribución existentes con modelación EPANET, sectorización y localización de VRP, logrando reducciones del agua no contabilizada (IANC) superiores al 20%.',
+  },
 ]
 
 const FAQ_ACUEDUCTOS = [
   {
+    q: '¿Cuántos usuarios necesita un acueducto para requerir diseño profesional?',
+    a: 'A partir de 5 conexiones domiciliarias, el RAS 2017 y la Resolución 0330/2017 exigen que el sistema de acueducto cuente con un diseño firmado por un ingeniero con tarjeta profesional COPNIA vigente. Sin importar el tamaño del sistema, la entidad financiadora (SGR, MinVivienda) o la autoridad sanitaria exigirán este requisito.',
+  },
+  {
+    q: '¿Qué estudios previos necesito antes del diseño de acueducto?',
+    a: 'Los estudios previos mínimos son: levantamiento topográfico del área del proyecto, aforo de la fuente de captación (mínimo en época seca), y análisis físicoquímico y bacteriológico del agua fuente. BIC puede orientar la contratación de estos estudios o realizarlos directamente según el municipio.',
+  },
+  {
+    q: '¿Pueden gestionar el trámite ante la SSPD?',
+    a: 'Sí. BIC acompaña el proceso completo de registro ante la Superintendencia de Servicios Públicos Domiciliarios (SSPD), incluyendo la preparación de los documentos técnicos del sistema, el manual de operación y los estatutos para acueductos comunitarios administrados por JAC.',
+  },
+  {
+    q: '¿Trabajan con regalías del SGR?',
+    a: 'Sí. BIC elabora la documentación técnica para el Sistema General de Regalías: diseño conforme al RAS 2017, memorias de cálculo, planos constructivos, presupuesto APU, cronograma y fichas técnicas en MGA-Web. Acompañamos la formulación del proyecto hasta la aprobación por el OCAD, sin costo adicional.',
+  },
+  {
     q: '¿Cuánto cuesta el diseño de un acueducto rural en Colombia?',
-    a: 'El costo de un diseño de acueducto rural varía entre $15 millones y $45 millones COP según el número de usuarios, la longitud de la red y la complejidad de la fuente. BIC entrega presupuesto personalizado sin costo en 24 horas.',
+    a: 'El costo de un diseño de acueducto rural oscila entre $8 millones y $35 millones COP según el número de usuarios, la longitud de la red y la complejidad del sistema de tratamiento. Acueductos veredales de 50 a 200 usuarios se ubican entre $8M y $18M; sistemas municipales de 200 a 500 usuarios entre $15M y $35M. BIC entrega propuesta personalizada sin costo en 24 horas.',
   },
   {
     q: '¿Qué norma rige el diseño de acueductos en Colombia?',
-    a: 'El Reglamento Técnico del Sector de Agua Potable y Saneamiento Básico — RAS 2017 (Resolución 0330 de 2017) es la norma vigente para el diseño de acueductos en Colombia.',
+    a: 'El Reglamento Técnico del Sector de Agua Potable y Saneamiento Básico — RAS 2017 (Resolución 0330 de 2017) es la norma vigente para el diseño de acueductos en Colombia. Sus Títulos B (acueductos), C (PTAP) y D (saneamiento rural) aplican según el tipo de sistema.',
   },
   {
     q: '¿Cuánto tiempo demora el diseño de un acueducto veredal?',
-    a: 'BIC entrega diseños de acueductos veredales en 3 a 4 semanas una vez firmado el contrato y recibidos los datos de campo (topografía y análisis de agua).',
+    a: 'BIC entrega diseños de acueductos veredales en 4 a 8 semanas una vez firmado el contrato y recibidos los datos de campo (topografía y análisis de agua). Proyectos con gestión SGR (MGA-Web) pueden requerir 8 a 12 semanas por los trámites adicionales.',
   },
 ]
 
@@ -179,11 +257,39 @@ export default function ServicioDisenoAcueductos() {
       <div style={{ background: '#0A2540', padding: '14px 24px', borderBottom: '1px solid rgba(23,162,184,0.15)' }}>
         <div style={{ maxWidth: 900, margin: '0 auto', display: 'flex', gap: 8, flexWrap: 'wrap', alignItems: 'center' }}>
           <span style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 11, color: 'rgba(255,255,255,0.5)', marginRight: 4 }}>Normativa:</span>
-          {['RAS 2017', 'Resolución 0330/2017', 'EPANET', 'Resolución 2115/2007', 'PTAP'].map(t => (
+          {['RAS 2017', 'Resolución 0330/2017', 'EPANET', 'Resolución 2115/2007', 'PTAP', 'SGR · MGA-Web'].map(t => (
             <Tag key={t}>{t}</Tag>
           ))}
         </div>
       </div>
+
+      {/* ── QUÉ INCLUYE ── */}
+      <Section bg="#F0F7FF" style={{ padding: '72px 24px' }}>
+        <div style={{ maxWidth: 900, margin: '0 auto' }}>
+          <SectionLabel>Alcance del servicio</SectionLabel>
+          <h2 style={{
+            fontFamily: "'Playfair Display', serif", fontWeight: 700, color: '#001A33',
+            fontSize: 'clamp(22px, 4vw, 32px)', marginBottom: 8,
+          }}>¿Qué incluye un diseño de acueducto en Colombia?</h2>
+          <ThinLine mb={40} />
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(260px, 1fr))', gap: 16 }}>
+            {INCLUYE_DISENO.map((it) => (
+              <div key={it.item} style={{
+                background: '#fff', border: '1px solid #D1E9F6', borderRadius: 6,
+                padding: '18px 20px', borderLeft: '4px solid #17A2B8',
+              }}>
+                <p style={{
+                  fontFamily: "'Montserrat', sans-serif", fontWeight: 700, color: '#002A50',
+                  fontSize: 13, marginBottom: 6,
+                }}>{it.item}</p>
+                <p style={{
+                  fontFamily: "'Lato', sans-serif", color: '#475569', fontSize: 13, lineHeight: 1.65, margin: 0,
+                }}>{it.detalle}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </Section>
 
       {/* ── METODOLOGÍA ── */}
       <Section bg="#F8FAFC" style={{ padding: '80px 24px' }}>
@@ -227,14 +333,14 @@ export default function ServicioDisenoAcueductos() {
           <h2 style={{
             fontFamily: "'Playfair Display', serif", fontWeight: 700, color: '#001A33',
             fontSize: 'clamp(22px, 4vw, 32px)', marginBottom: 8,
-          }}>Normativa aplicable al diseño de acueductos</h2>
+          }}>Normativa colombiana para diseño de acueductos</h2>
           <ThinLine mb={40} />
           <div style={{ overflowX: 'auto' }}>
             <table style={{ width: '100%', borderCollapse: 'collapse', fontFamily: "'Lato', sans-serif" }}>
                             <caption style={{position:'absolute',left:'-9999px'}}>Normativa diseno de acueductos Colombia</caption>
               <thead>
                 <tr style={{ background: '#003B6F', color: '#fff' }}>
-                  <th style={{ padding: '12px 16px', textAlign: 'left', fontFamily: "'Montserrat', sans-serif", fontSize: 13 }}>Norma</th>
+                  <th style={{ padding: '12px 16px', textAlign: 'left', fontFamily: "'Montserrat', sans-serif", fontSize: 13 }}>Norma / Fuente</th>
                   <th style={{ padding: '12px 16px', textAlign: 'left', fontFamily: "'Montserrat', sans-serif", fontSize: 13 }}>Aplicación</th>
                 </tr>
               </thead>
@@ -247,6 +353,39 @@ export default function ServicioDisenoAcueductos() {
                 ))}
               </tbody>
             </table>
+          </div>
+        </div>
+      </Section>
+
+      {/* ── PRECIOS ── */}
+      <Section bg="#F0F7FF" style={{ padding: '72px 24px' }}>
+        <div style={{ maxWidth: 900, margin: '0 auto' }}>
+          <SectionLabel>Inversión</SectionLabel>
+          <h2 style={{
+            fontFamily: "'Playfair Display', serif", fontWeight: 700, color: '#001A33',
+            fontSize: 'clamp(22px, 4vw, 32px)', marginBottom: 8,
+          }}>¿Cuánto cuesta el diseño de un acueducto en Colombia?</h2>
+          <ThinLine mb={12} />
+          <p style={{ fontFamily: "'Lato', sans-serif", color: '#64748B', fontSize: 15, lineHeight: 1.7, marginBottom: 40, maxWidth: 720 }}>
+            Los valores son orientativos para 2026. El precio definitivo depende de la longitud de la red,
+            la complejidad del sistema de tratamiento y si se requiere gestión SGR. BIC entrega propuesta
+            sin costo en 24 horas.
+          </p>
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(260px, 1fr))', gap: 24 }}>
+            {PRECIOS_ACUEDUCTO.map((p) => (
+              <div key={p.tipo} style={{
+                background: '#fff', border: `2px solid ${p.color}`,
+                borderRadius: 8, padding: 28, display: 'flex', flexDirection: 'column', gap: 12,
+              }}>
+                <p style={{ fontFamily: "'Montserrat', sans-serif", fontWeight: 700, color: p.color, fontSize: 13, margin: 0 }}>{p.tipo}</p>
+                <p style={{ fontFamily: "'Playfair Display', serif", fontWeight: 700, color: '#001A33', fontSize: 26, margin: 0 }}>{p.rango}</p>
+                <p style={{ fontFamily: "'Lato', sans-serif", color: '#475569', fontSize: 14, lineHeight: 1.65, margin: 0 }}>{p.include}</p>
+                <div style={{ background: '#F8FAFC', borderRadius: 4, padding: '8px 12px', display: 'inline-flex', gap: 6, alignItems: 'center' }}>
+                  <span style={{ fontFamily: "'Montserrat', sans-serif", fontWeight: 700, color: '#475569', fontSize: 12 }}>Plazo típico:</span>
+                  <span style={{ fontFamily: "'Lato', sans-serif", color: '#002A50', fontSize: 12 }}>{p.tiempo}</span>
+                </div>
+              </div>
+            ))}
           </div>
         </div>
       </Section>
@@ -285,6 +424,41 @@ export default function ServicioDisenoAcueductos() {
           </div>
         </div>
       </section>
+
+      {/* ── PROYECTOS DE REFERENCIA ── */}
+      <Section bg="#F8FAFC" style={{ padding: '72px 24px' }}>
+        <div style={{ maxWidth: 900, margin: '0 auto' }}>
+          <SectionLabel>Experiencia BIC</SectionLabel>
+          <h2 style={{
+            fontFamily: "'Playfair Display', serif", fontWeight: 700, color: '#001A33',
+            fontSize: 'clamp(22px, 4vw, 32px)', marginBottom: 8,
+          }}>Proyectos de referencia en diseño de acueductos</h2>
+          <ThinLine mb={40} />
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(260px, 1fr))', gap: 24 }}>
+            {PROYECTOS_REF.map((pr) => (
+              <div key={pr.titulo} style={{
+                background: '#fff', border: '1px solid #E2E8F0', borderRadius: 6, padding: 28,
+                borderTop: '4px solid #17A2B8',
+              }}>
+                <div style={{
+                  display: 'inline-block', background: 'rgba(23,162,184,0.1)',
+                  border: '1px solid rgba(23,162,184,0.3)', borderRadius: 14,
+                  padding: '3px 12px', marginBottom: 12,
+                }}>
+                  <span style={{ color: '#17A2B8', fontSize: 11, fontWeight: 700 }}>{pr.tag}</span>
+                </div>
+                <h3 style={{
+                  fontFamily: "'Montserrat', sans-serif", fontWeight: 700, color: '#002A50',
+                  fontSize: 14, marginBottom: 10, lineHeight: 1.4,
+                }}>{pr.titulo}</h3>
+                <p style={{
+                  fontFamily: "'Lato', sans-serif", color: '#475569', fontSize: 14, lineHeight: 1.65, margin: 0,
+                }}>{pr.desc}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </Section>
 
       {/* ── POR QUÉ BIC ── */}
       <Section bg="#001A33" style={{ padding: '72px 24px' }}>
@@ -328,28 +502,25 @@ export default function ServicioDisenoAcueductos() {
           <h2 style={{
             fontFamily: "'Playfair Display', serif", fontWeight: 700, color: '#001A33',
             fontSize: 'clamp(22px, 4vw, 32px)', marginBottom: 8,
-          }}>Preguntas sobre diseño de acueductos</h2>
+          }}>Preguntas frecuentes sobre diseño de acueductos</h2>
           <ThinLine mb={40} />
           {[
+            ...FAQ_ACUEDUCTOS,
             {
               q: '¿Qué diferencia hay entre RAS 2017 y Resolución 0330/2017?',
               a: 'La Resolución 0330 de 2017 del Ministerio de Vivienda, Ciudad y Territorio es el reglamento que adopta el RAS 2017 como norma técnica obligatoria para el sector de agua potable y saneamiento básico en Colombia. El RAS 2017 es el documento técnico con los criterios de diseño (caudales, presiones, materiales), mientras que la Resolución 0330 es el instrumento jurídico que le da fuerza legal. Ambos deben citarse en las memorias de diseño de acueducto.',
             },
             {
               q: '¿Cuándo es obligatorio diseñar una PTAP?',
-              a: 'El diseño de una Planta de Tratamiento de Agua Potable (PTAP) es obligatorio cuando la calidad del agua de la fuente de captación no cumple los valores máximos aceptables del Decreto 1575/2007 y la Resolución 2115/2007 sin tratamiento. Todo proyecto de acueducto que capte agua superficial requiere tratamiento. Los acueductos que capten agua subterránea (pozos) pueden requerir solo desinfección si el agua cumple los parámetros físico-químicos requeridos, previa verificación con la autoridad ambiental.',
-            },
-            {
-              q: '¿Qué es la dotación neta y cómo se calcula?',
-              a: 'La dotación neta es el volumen de agua consumido por habitante por día, expresada en litros/habitante/día (L/hab/día). La Resolución 0330/2017 establece valores según el nivel de complejidad del sistema (bajo, medio, medio alto, alto) y la zona climática. Para sistemas de nivel de complejidad alto en clima cálido, la dotación neta máxima es 140 L/hab/día. A esta se le aplica el Índice de Agua No Contabilizada (IANC) para obtener la dotación bruta, que es el caudal de diseño del sistema.',
+              a: 'El diseño de una Planta de Tratamiento de Agua Potable (PTAP) es obligatorio cuando la calidad del agua de la fuente de captación no cumple los valores máximos aceptables del Decreto 1575/2007 y la Resolución 2115/2007 sin tratamiento. Todo proyecto de acueducto que capte agua superficial requiere tratamiento. Los acueductos que capten agua subterránea (pozos) pueden requerir solo desinfección si el agua cumple los parámetros físico-químicos requeridos.',
             },
             {
               q: '¿Cuál es el periodo de diseño recomendado para un acueducto?',
-              a: 'La Resolución 0330/2017 establece periodos de diseño según el nivel de complejidad y el componente del sistema: para redes de distribución el periodo mínimo es 20 años; para estructuras de captación, conducción y plantas de tratamiento, el periodo es de 25 años. Esto significa que el sistema debe ser capaz de abastecer la demanda proyectada con esos horizontes de tiempo. La proyección de población se realiza según los métodos definidos en el RAS 2017.',
+              a: 'La Resolución 0330/2017 establece periodos de diseño según el nivel de complejidad y el componente del sistema: para redes de distribución el periodo mínimo es 20 años; para estructuras de captación, conducción y plantas de tratamiento, el periodo es de 25 años. La proyección de población se realiza según los métodos definidos en el RAS 2017.',
             },
             {
               q: '¿Qué es el modelo EPANET y por qué se usa en diseño de acueductos?',
-              a: 'EPANET es un software de dominio público desarrollado por la EPA de los Estados Unidos para modelar el comportamiento hidráulico y la calidad del agua en redes de distribución a presión. Permite simular los caudales en tuberías, presiones en nodos y la variación de calidad del agua en todo el sistema bajo diferentes condiciones de demanda. El RAS 2017 recomienda su uso para el análisis y diseño de redes de distribución, especialmente en sistemas de nivel de complejidad alto. BIC incluye el modelo EPANET como entregable en todos sus diseños de redes de distribución.',
+              a: 'EPANET es un software de dominio público desarrollado por la EPA de los Estados Unidos para modelar el comportamiento hidráulico y la calidad del agua en redes de distribución a presión. Permite simular los caudales en tuberías, presiones en nodos y la variación de calidad del agua bajo diferentes condiciones de demanda. El RAS 2017 recomienda su uso para el análisis y diseño de redes de distribución, especialmente en sistemas de nivel de complejidad alto. BIC incluye el modelo EPANET como entregable en todos sus diseños de redes.',
             },
           ].map(({ q, a }) => (
             <details key={q} style={{
@@ -383,6 +554,10 @@ export default function ServicioDisenoAcueductos() {
             </a>
             <a href="/blog/mga-web-regalias-agua-potable" style={{ flex: '1 1 260px', background: '#fff', border: '1px solid #E2E8F0', borderRadius: 4, padding: '18px 20px', textDecoration: 'none' }}>
               <span style={{ fontFamily: "'Playfair Display', serif", fontWeight: 700, color: '#003B6F', fontSize: 15, display: 'block', lineHeight: 1.3 }}>MGA-Web y Regalías: Cómo formular un proyecto de agua potable</span>
+              <span style={{ fontFamily: "'Lato', sans-serif", color: '#17A2B8', fontSize: 12, marginTop: 8, display: 'block' }}>Leer artículo →</span>
+            </a>
+            <a href="/blog/normas-tecnicas-diseno-acueductos-colombia-ras-2017" style={{ flex: '1 1 260px', background: '#fff', border: '1px solid #E2E8F0', borderRadius: 4, padding: '18px 20px', textDecoration: 'none' }}>
+              <span style={{ fontFamily: "'Playfair Display', serif", fontWeight: 700, color: '#003B6F', fontSize: 15, display: 'block', lineHeight: 1.3 }}>Normas técnicas para diseño de acueductos en Colombia: RAS 2017</span>
               <span style={{ fontFamily: "'Lato', sans-serif", color: '#17A2B8', fontSize: 12, marginTop: 8, display: 'block' }}>Leer artículo →</span>
             </a>
           </div>

@@ -1,14 +1,17 @@
 import { useEffect } from 'react'
 import SEOHead from '@/components/SEOHead'
+import SchemaMarkup from '@/components/SchemaMarkup'
 import { BlueprintBg, ThinLine, SectionLabel, Btn, Section, Tag } from '@/components/ui'
 
 const WA = '573024778910'
 const WA_MSG = encodeURIComponent('Hola, quiero cotizar Redes Hidrosanitarias para Edificaciones')
 
 const seoConfig = {
-  title: 'Diseño Redes Aguas Lluvias Cubiertas y Colegios | BIC',
-  description: 'Diseño de redes de aguas lluvias para cubiertas, colegios y edificaciones en Colombia. NSR-10, RAS 2017. Manizales y Eje Cafetero. COPNIA. Cotice ya.',
+  title: 'Diseño Redes Hidrosanitarias Colombia — NSR-10 | BIC',
+  description: 'Diseño de redes hidrosanitarias para edificaciones. NSR-10, RAS 2017. Memorias de cálculo, planos. Manizales y Eje Cafetero. COPNIA. Cotiza ya.',
   keywords: [
+    'redes hidrosanitarias Colombia',
+    'diseño redes hidrosanitarias',
     'redes hidrosanitarias edificaciones Colombia',
     'diseño hidrosanitario edificios',
     'redes agua fría agua caliente',
@@ -21,12 +24,112 @@ const seoConfig = {
     'diseño fontanería Colombia',
     'redes hidrosanitarias industriales',
     'diseño hidrosanitario constructoras',
+    'planos hidrosanitarios COPNIA',
   ],
   canonical: 'https://ingenieriabernal.co/servicios/redes-hidrosanitarias',
 }
 
+const FAQ_REDES = [
+  {
+    q: '¿Cuánto demora el diseño de redes hidrosanitarias?',
+    a: 'El plazo depende de la complejidad del proyecto: una vivienda unifamiliar o local comercial se entrega en 1 a 2 semanas; un edificio de 5 a 10 pisos requiere 2 a 4 semanas incluyendo memorias completas y planos constructivos. BIC confirma el plazo exacto en la propuesta técnica, que envía sin costo en 24 horas.',
+  },
+  {
+    q: '¿El diseño incluye firma del plano para la curaduría?',
+    a: 'Sí. Todos los planos y memorias de cálculo que entrega BIC van firmados y sellados con tarjeta COPNIA vigente (matrícula 17202-313228 CLD activa) del Ing. Rogerio Bernal Ríos, Especialista en Ingeniería Hidráulica y Ambiental de la Universidad Nacional. La firma COPNIA es obligatoria para el trámite de licencia de construcción ante cualquier curaduría en Colombia.',
+  },
+  {
+    q: '¿Qué norma regula el diseño hidrosanitario de edificaciones en Colombia?',
+    a: 'El diseño hidrosanitario de edificaciones se rige principalmente por la NTC 1500 (Código Colombiano de Fontanería), el RAS 2017 (Resolución 0330/2017) para sistemas de agua potable, y la NSR-10 Títulos I y K para instalaciones internas y sistemas contra incendios. Las curadurías urbanas exigen que las memorias estén firmadas por un ingeniero con tarjeta COPNIA vigente.',
+  },
+  {
+    q: '¿Cuándo es obligatorio el sistema contra incendios en un edificio en Colombia?',
+    a: 'Según el NSR-10 Capítulo K, el sistema de protección contra incendios es obligatorio en edificios con altura mayor de 12 metros (aprox. 4 pisos o más) con uso de ocupación residencial colectiva; edificios de comercio o servicio con área mayor a 500 m²; edificios de uso industrial; locales de reunión pública con capacidad mayor a 50 personas; y parqueaderos cubiertos con más de 30 cupos.',
+  },
+  {
+    q: '¿Es obligatorio un especialista para firmar la memoria hidrosanitaria?',
+    a: 'Sí. La Ley 400 de 1997 y el Decreto 945 de 2017 (que adopta la NSR-10) exigen que las memorias de diseño de instalaciones hidráulicas estén firmadas por un ingeniero con tarjeta profesional COPNIA vigente. Las curadurías urbanas rechazan expedientes de licencia que no cumplan este requisito. BIC entrega toda la documentación firmada y sellada con matrícula COPNIA 17202-313228.',
+  },
+  {
+    q: '¿Qué documentos entrega el diseño hidrosanitario para licencia de construcción?',
+    a: 'La entrega incluye: planos isométricos de red de agua fría y caliente con diámetros y cotas; planos de red de aguas residuales y aguas lluvias en cada nivel; memoria de cálculo con método Hunter, presiones, caudales y verificación de velocidades; especificaciones técnicas de materiales; detalles de aparatos sanitarios y puntos de consumo. Todo firmado y sellado con tarjeta COPNIA vigente.',
+  },
+]
+
+const QUE_SON = [
+  {
+    icon: '💧',
+    tipo: 'Red de suministro (agua potable)',
+    desc: 'Sistema de agua fría y agua caliente desde la acometida del acueducto municipal hasta cada punto de consumo del edificio. Incluye medidor, tanque de almacenamiento, sistema de presurización si aplica, y la red de distribución interna (lavamanos, sanitarios, duchas, lavaplatos).',
+    norma: 'NTC 1500 · RAS 2017 · Res. 0330/2017',
+  },
+  {
+    icon: '🚿',
+    tipo: 'Red de aguas residuales domésticas',
+    desc: 'Recolecta las aguas negras (sanitarios y orinales) y aguas grises (lavamanos, duchas, lavaplatos) y las conduce al colector público de alcantarillado o al sistema de tratamiento en sitio. Diseño de ramales, bajantes, ventilación y cámaras de inspección.',
+    norma: 'NTC 1500 · RAS 2017 · Decreto 1076/2015',
+  },
+  {
+    icon: '🌧️',
+    tipo: 'Red de aguas lluvias (alcantarillado predial)',
+    desc: 'Recolecta el agua de lluvia de cubiertas, terrazas y zonas duras. Diseño de bajantes, canales, sumideros y colectores pluviales con análisis hidrológico usando curvas IDF del IDEAM para el municipio del proyecto.',
+    norma: 'NTC 1500 · Manual INVIAS Drenaje · Curvas IDF IDEAM',
+  },
+  {
+    icon: '🔥',
+    tipo: 'Sistema contra incendio (CI) — NSR-10 Título K',
+    desc: 'Red húmeda con gabinetes, rociadores automáticos (sprinklers NFPA 13), tanque de reserva y bomba de incendio. Obligatorio según NSR-10 para edificios de cierta altura y uso. BIC diseña el sistema hidráulico completo con cálculo de la bomba jockey y bomba principal.',
+    norma: 'NSR-10 Cap. K · NFPA 13 · NFPA 14 · NSR-10 Título J',
+  },
+]
+
+const CUANDO_NECESITAS = [
+  {
+    caso: 'Licencia de construcción',
+    desc: 'Las curadurías urbanas en Colombia exigen memorias de cálculo hidrosanitarias firmadas por especialista COPNIA como requisito para expedir la licencia de construcción de cualquier edificación de más de 1 piso.',
+  },
+  {
+    caso: 'Proyectos multifamiliares y comerciales',
+    desc: 'Edificios de apartamentos, conjuntos cerrados, centros comerciales y edificios de oficinas requieren diseño hidrosanitario completo con modelación de presiones y caudales simultáneos.',
+  },
+  {
+    caso: 'Hospitales, clínicas y centros educativos',
+    desc: 'Los equipamientos de salud y educación tienen requisitos especiales de dotación y calidad del agua (NTC especiales) que requieren diseño especializado y verificación adicional ante entidades de control.',
+  },
+  {
+    caso: 'Bodegas, parques industriales y plantas',
+    desc: 'Las naves industriales con área mayor a 500 m² requieren sistema contra incendios (CI) obligatorio según NSR-10 Capítulo K. BIC diseña tanto el CI como todas las redes sanitarias del proyecto.',
+  },
+]
+
+const CONTENIDO_DISENO = [
+  { entregable: 'Planos de redes', detalle: 'Agua fría, agua caliente, aguas negras y aguas lluvias — en planta por piso e isometrías completas en AutoCAD DWG y PDF' },
+  { entregable: 'Memorias de cálculo', detalle: 'Diámetros, velocidades y presiones verificadas en todos los puntos del sistema (método Hunter, Hazen-Williams)' },
+  { entregable: 'Especificaciones técnicas', detalle: 'Materiales (PVC, CPVC, PPR, hierro galvanizado), accesorios, válvulas y equipos de bombeo' },
+  { entregable: 'Presupuesto de instalación (APU)', detalle: 'Análisis de precios unitarios por actividad, lista de materiales y resumen de costos por sistema' },
+  { entregable: 'Gestión ante curaduría o ESP', detalle: 'BIC adapta el expediente al formato específico de la curaduría del municipio y gestiona la viabilidad de conexión ante la ESP local' },
+]
+
+const PRECIOS_REDES = [
+  {
+    tipo: 'Vivienda unifamiliar',
+    rango: '$2M – $4M COP',
+    detalle: 'Agua fría, aguas residuales y aguas lluvias. Planos y memoria firmada COPNIA. Entrega en 1 semana.',
+  },
+  {
+    tipo: 'Edificio 5–10 pisos',
+    rango: '$6M – $15M COP',
+    detalle: 'Todos los sistemas (AP, AR, AL) con isometrías y memorias completas. Entrega en 2–3 semanas.',
+  },
+  {
+    tipo: 'Local comercial o bodega',
+    rango: '$3M – $8M COP',
+    detalle: 'Incluye diseño CI si lo exige el NSR-10. Entrega en 1–2 semanas.',
+  },
+]
+
 const INCLUYE = [
-  { icon: '🚿', titulo: 'Redes de agua fría y agua caliente', desc: 'Diseño de la red de distribución interna de agua potable fría y caliente. Cálculo de caudales simultaneos (método Hunter), diámetros, presiones en cada punto de consumo y selección de materiales (PVC, CPVC, PPR). Cumplimiento del RAS 2017 Título B.' },
+  { icon: '🚿', titulo: 'Redes de agua fría y agua caliente', desc: 'Diseño de la red de distribución interna de agua potable fría y caliente. Cálculo de caudales simultáneos (método Hunter), diámetros, presiones en cada punto de consumo y selección de materiales (PVC, CPVC, PPR). Cumplimiento del RAS 2017 Título B.' },
   { icon: '🏗️', titulo: 'Red de aguas residuales domésticas', desc: 'Diseño de la red de desagüe de aparatos sanitarios, trampas, sifones y columnas de ventilación. Cálculo por unidades de descarga (UD), diámetros de ramales, bajantes y colectores de piso. Cumplimiento NSR-10 Título I.' },
   { icon: '🌧️', titulo: 'Red de aguas lluvias y drenaje superficial', desc: 'Cálculo de caudales pluviales por intensidad de diseño local (curvas IDF IDEAM). Diseño de canales, canaletas, bajantes exteriores, tanques de almacenamiento o reutilización de aguas lluvias.' },
   { icon: '♻️', titulo: 'Sistemas de reutilización y ahorro de agua', desc: 'Diseño de sistemas de recolección de aguas lluvias para riego, lavado y descarga de sanitarios. Sistemas de agua caliente solar o por calentadores de paso. Soluciones de eficiencia hídrica para edificios sostenibles.' },
@@ -71,6 +174,13 @@ export default function ServicioRedesHidrosanitarias() {
   return (
     <>
       <SEOHead config={seoConfig} />
+      <SchemaMarkup
+        type="service"
+        serviceName="Diseño de Redes Hidrosanitarias para Edificaciones"
+        serviceDesc={seoConfig.description}
+        serviceUrl="/servicios/redes-hidrosanitarias"
+        faqItems={FAQ_REDES}
+      />
 
       {/* ── HERO ── */}
       <section style={{
@@ -85,7 +195,7 @@ export default function ServicioRedesHidrosanitarias() {
             fontFamily: "'Playfair Display', serif", fontWeight: 700, color: '#fff',
             fontSize: 'clamp(28px, 5vw, 44px)', lineHeight: 1.2, marginBottom: 24,
           }}>
-            Redes Hidrosanitarias para Edificaciones<br />
+            Diseño de Redes Hidrosanitarias en Colombia<br />
             <span style={{ color: '#17A2B8' }}>Residenciales, Comerciales e Industriales</span>
           </h1>
           <p style={{
@@ -95,19 +205,16 @@ export default function ServicioRedesHidrosanitarias() {
             BIC Bernal Ingeniería Consultores diseña redes hidrosanitarias internas para todo tipo
             de edificaciones en Colombia: agua fría, agua caliente, aguas residuales domésticas,
             aguas lluvias y sistemas de reutilización. Nuestros diseños cumplen el RAS 2017, la NSR-10
-            Título I y la normativa local de cada municipio, entregando planos isométricos, memorias
-            de cálculo firmadas por especialista y documentación lista para trámite de licencia de
-            construcción ante la curaduría urbana. Rogerio Bernal Ríos, Especialista en Ingeniería
-            Hidráulica y Ambiental (UNAL) con matrícula COPNIA 17202-313228, ha diseñado las
-            instalaciones hidrosanitarias del Makarí Mall en Dosquebradas y múltiples conjuntos
-            residenciales en el Eje Cafetero.
+            Título I y K y la NTC 1500, entregando planos isométricos en AutoCAD, memorias de cálculo
+            firmadas por especialista COPNIA y documentación lista para trámite de licencia de
+            construcción ante cualquier curaduría urbana del país.
           </p>
           <div style={{ display: 'flex', gap: 12, flexWrap: 'wrap' }}>
             <Btn href={`https://wa.me/${WA}?text=${WA_MSG}`}>
-              📱 Solicitar cotización
+              Solicitar cotización
             </Btn>
-            <Btn variant="outline" href="/servicios" dark>
-              Ver todos los servicios
+            <Btn variant="outline" href="/memorias-hidrosanitarias-colombia" dark>
+              Memorias para curaduría
             </Btn>
           </div>
         </div>
@@ -117,13 +224,107 @@ export default function ServicioRedesHidrosanitarias() {
       <div style={{ background: '#0A2540', padding: '14px 24px', borderBottom: '1px solid rgba(23,162,184,0.15)' }}>
         <div style={{ maxWidth: 900, margin: '0 auto', display: 'flex', gap: 8, flexWrap: 'wrap', alignItems: 'center' }}>
           <span style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 11, color: 'rgba(255,255,255,0.5)', marginRight: 4 }}>Normativa:</span>
-          {['NSR-10 Título I', 'RAS 2017 Título B', 'NTC 1500', 'Curva IDF IDEAM', 'Curadurías urbanas'].map(t => (
+          {['NSR-10 Título I · K', 'RAS 2017', 'NTC 1500', 'NFPA 13 · 14', 'COPNIA', 'AutoCAD DWG'].map(t => (
             <Tag key={t}>{t}</Tag>
           ))}
         </div>
       </div>
 
-      {/* ── QUÉ INCLUYE ── */}
+      {/* ── QUÉ SON ── */}
+      <Section bg="#F8FAFC" style={{ padding: '72px 24px' }}>
+        <div style={{ maxWidth: 960, margin: '0 auto' }}>
+          <SectionLabel>Definición técnica</SectionLabel>
+          <h2 style={{
+            fontFamily: "'Playfair Display', serif", fontWeight: 700, color: '#001A33',
+            fontSize: 'clamp(22px, 4vw, 32px)', marginBottom: 8,
+          }}>¿Qué son las redes hidrosanitarias?</h2>
+          <ThinLine mb={16} />
+          <p style={{ fontFamily: "'Lato', sans-serif", color: '#475569', fontSize: 15, lineHeight: 1.75, maxWidth: 760, marginBottom: 40 }}>
+            Las redes hidrosanitarias son los sistemas de tuberías, accesorios y equipos que garantizan
+            el suministro de agua potable y la evacuación segura de aguas residuales y pluviales en una
+            edificación. Son la infraestructura invisible que hace habitable cualquier construcción.
+          </p>
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: 24 }}>
+            {QUE_SON.map((s) => (
+              <div key={s.tipo} style={{
+                background: '#fff', border: '1px solid #E2E8F0', borderRadius: 6,
+                padding: 28, borderTop: '4px solid #17A2B8',
+              }}>
+                <div style={{ fontSize: 28, marginBottom: 10 }}>{s.icon}</div>
+                <h3 style={{
+                  fontFamily: "'Montserrat', sans-serif", fontWeight: 700, color: '#002A50',
+                  fontSize: 14, marginBottom: 10,
+                }}>{s.tipo}</h3>
+                <p style={{
+                  fontFamily: "'Lato', sans-serif", color: '#475569', fontSize: 14, lineHeight: 1.65, marginBottom: 14,
+                }}>{s.desc}</p>
+                <div style={{ background: '#F0F7FF', borderRadius: 4, padding: '7px 12px' }}>
+                  <span style={{ fontFamily: "'Montserrat', sans-serif", fontWeight: 700, color: '#003B6F', fontSize: 11 }}>NORMA: </span>
+                  <span style={{ fontFamily: "'Lato', sans-serif", color: '#475569', fontSize: 12 }}>{s.norma}</span>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </Section>
+
+      {/* ── CUÁNDO NECESITAS ── */}
+      <Section bg="#fff" style={{ padding: '72px 24px' }}>
+        <div style={{ maxWidth: 900, margin: '0 auto' }}>
+          <SectionLabel>Casos de aplicación</SectionLabel>
+          <h2 style={{
+            fontFamily: "'Playfair Display', serif", fontWeight: 700, color: '#001A33',
+            fontSize: 'clamp(22px, 4vw, 32px)', marginBottom: 8,
+          }}>¿Cuándo necesitas diseño profesional de redes hidrosanitarias?</h2>
+          <ThinLine mb={40} />
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(260px, 1fr))', gap: 20 }}>
+            {CUANDO_NECESITAS.map((c) => (
+              <div key={c.caso} style={{
+                padding: 24, background: '#F8FAFC',
+                borderLeft: '4px solid #17A2B8', borderRadius: '0 6px 6px 0',
+              }}>
+                <h3 style={{
+                  fontFamily: "'Montserrat', sans-serif", fontWeight: 700, color: '#002A50',
+                  fontSize: 14, marginBottom: 8,
+                }}>{c.caso}</h3>
+                <p style={{
+                  fontFamily: "'Lato', sans-serif", color: '#475569', fontSize: 14, lineHeight: 1.65, margin: 0,
+                }}>{c.desc}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </Section>
+
+      {/* ── CONTENIDO DEL DISEÑO BIC ── */}
+      <Section bg="#F0F7FF" style={{ padding: '72px 24px' }}>
+        <div style={{ maxWidth: 900, margin: '0 auto' }}>
+          <SectionLabel>Entregables</SectionLabel>
+          <h2 style={{
+            fontFamily: "'Playfair Display', serif", fontWeight: 700, color: '#001A33',
+            fontSize: 'clamp(22px, 4vw, 32px)', marginBottom: 8,
+          }}>Contenido del diseño BIC</h2>
+          <ThinLine mb={40} />
+          <div style={{ display: 'flex', flexDirection: 'column', gap: 14 }}>
+            {CONTENIDO_DISENO.map((it) => (
+              <div key={it.entregable} style={{
+                display: 'grid', gridTemplateColumns: '200px 1fr', gap: 20, alignItems: 'flex-start',
+                background: '#fff', borderRadius: 6, padding: '16px 22px', border: '1px solid #D1E9F6',
+              }}>
+                <p style={{
+                  fontFamily: "'Montserrat', sans-serif", fontWeight: 700, color: '#17A2B8',
+                  fontSize: 13, margin: 0,
+                }}>{it.entregable}</p>
+                <p style={{
+                  fontFamily: "'Lato', sans-serif", color: '#475569', fontSize: 14, lineHeight: 1.65, margin: 0,
+                }}>{it.detalle}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </Section>
+
+      {/* ── QUÉ INCLUYE (alcance detallado) ── */}
       <Section bg="#F8FAFC" style={{ padding: '72px 24px' }}>
         <div style={{ maxWidth: 900, margin: '0 auto' }}>
           <SectionLabel>Alcance del servicio</SectionLabel>
@@ -152,8 +353,55 @@ export default function ServicioRedesHidrosanitarias() {
         </div>
       </Section>
 
-      {/* ── PARA QUIÉN ── */}
+      {/* ── PRECIOS 2026 ── */}
       <Section bg="#fff" style={{ padding: '72px 24px' }}>
+        <div style={{ maxWidth: 900, margin: '0 auto' }}>
+          <SectionLabel>Inversión</SectionLabel>
+          <h2 style={{
+            fontFamily: "'Playfair Display', serif", fontWeight: 700, color: '#001A33',
+            fontSize: 'clamp(22px, 4vw, 32px)', marginBottom: 8,
+          }}>Precios orientativos 2026</h2>
+          <ThinLine mb={12} />
+          <p style={{ fontFamily: "'Lato', sans-serif", color: '#64748B', fontSize: 15, lineHeight: 1.7, marginBottom: 40, maxWidth: 720 }}>
+            Los valores son aproximados para proyectos típicos en Colombia en 2026. El precio definitivo
+            depende del número de pisos, la tipología del proyecto y si requiere sistema contra incendios.
+            BIC envía propuesta detallada en menos de 24 horas.
+          </p>
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(240px, 1fr))', gap: 24 }}>
+            {PRECIOS_REDES.map((p, i) => (
+              <div key={p.tipo} style={{
+                background: i === 1 ? 'linear-gradient(135deg, #002A50, #003B6F)' : '#F8FAFC',
+                border: i === 1 ? 'none' : '1px solid #E2E8F0',
+                borderRadius: 8, padding: 28,
+              }}>
+                <p style={{
+                  fontFamily: "'Montserrat', sans-serif", fontWeight: 700,
+                  color: i === 1 ? '#7FDBEA' : '#17A2B8', fontSize: 13, margin: '0 0 8px',
+                }}>{p.tipo}</p>
+                <p style={{
+                  fontFamily: "'Playfair Display', serif", fontWeight: 700,
+                  color: i === 1 ? '#fff' : '#001A33', fontSize: 28, margin: '0 0 12px',
+                }}>{p.rango}</p>
+                <p style={{
+                  fontFamily: "'Lato', sans-serif",
+                  color: i === 1 ? 'rgba(255,255,255,0.8)' : '#475569',
+                  fontSize: 14, lineHeight: 1.65, margin: 0,
+                }}>{p.detalle}</p>
+              </div>
+            ))}
+          </div>
+          <div style={{ marginTop: 24, background: '#F0F7FF', borderRadius: 8, padding: '16px 22px', border: '1px solid #D1E9F6' }}>
+            <p style={{ fontFamily: "'Lato', sans-serif", color: '#003B6F', fontSize: 14, lineHeight: 1.7, margin: 0 }}>
+              <strong>Sistema contra incendios (CI):</strong> el diseño del CI según NSR-10 Título K tiene un costo
+              adicional de $4M a $10M COP según la complejidad. BIC lo cotiza por separado cuando aplica.
+              La firma COPNIA para todos los planos y memorias está siempre incluida.
+            </p>
+          </div>
+        </div>
+      </Section>
+
+      {/* ── PARA QUIÉN ── */}
+      <Section bg="#F8FAFC" style={{ padding: '72px 24px' }}>
         <div style={{ maxWidth: 900, margin: '0 auto' }}>
           <SectionLabel>Clientes objetivo</SectionLabel>
           <h2 style={{
@@ -164,8 +412,9 @@ export default function ServicioRedesHidrosanitarias() {
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(260px, 1fr))', gap: 20 }}>
             {PARA_QUIEN.map((p) => (
               <div key={p.tipo} style={{
-                padding: 24, background: '#F8FAFC',
+                padding: 24, background: '#fff',
                 borderLeft: '3px solid #17A2B8', borderRadius: '0 4px 4px 0',
+                border: '1px solid #E2E8F0',
               }}>
                 <h3 style={{
                   fontFamily: "'Montserrat', sans-serif", fontWeight: 700, color: '#002A50',
@@ -224,28 +473,7 @@ export default function ServicioRedesHidrosanitarias() {
             fontSize: 'clamp(22px, 4vw, 32px)', marginBottom: 8,
           }}>Preguntas sobre diseño hidrosanitario</h2>
           <ThinLine mb={40} />
-          {[
-            {
-              q: '¿Qué norma regula el diseño hidrosanitario de edificaciones en Colombia?',
-              a: 'El diseño hidrosanitario de edificaciones se rige principalmente por el RAS 2017 (Resolución 0330/2017) para los sistemas de agua potable, y por la NSR-10 Título I para instalaciones internas de acueducto y saneamiento. Adicionalmente, la NTC 1500 (Código Colombiano de Fontanería) establece requisitos para materiales, accesorios y métodos de instalación. Las curadurías urbanas exigen que las memorias estén firmadas por un ingeniero con tarjeta COPNIA vigente.',
-            },
-            {
-              q: '¿Qué documentos entrega el diseño hidrosanitario para licencia de construcción?',
-              a: 'La entrega típica incluye: (1) Planos isométricos de red de agua fría y caliente con diámetros y cotas; (2) Planos de red de aguas residuales y aguas lluvias en cada nivel; (3) Memoria de cálculo con método Hunter, presiones, caudales y verificación de velocidades; (4) Especificaciones técnicas de materiales (PVC, CPVC, PPR según corresponda); (5) Detalles de aparatos sanitarios y puntos de consumo. Todo firmado y sellado con tarjeta COPNIA vigente.',
-            },
-            {
-              q: '¿Es obligatorio un especialista para firmar la memoria hidrosanitaria?',
-              a: 'Sí. La Ley 400 de 1997 y el Decreto 945 de 2017 (que adopta la NSR-10) exigen que las memorias de diseño de instalaciones hidráulicas estén firmadas por un ingeniero con tarjeta profesional COPNIA vigente y experiencia acreditable en el área. Las curadurías urbanas rechazan expedientes de licencia que no cumplan este requisito. BIC entrega toda la documentación firmada y sellada con matrícula COPNIA 17202-313228.',
-            },
-            {
-              q: '¿Qué es el método Hunter y por qué se usa en diseño hidrosanitario?',
-              a: 'El método Hunter es el procedimiento estándar para calcular el caudal de diseño en redes internas de edificios. Se basa en unidades de gasto (UG) asignadas a cada aparato sanitario según su frecuencia de uso, y aplica una curva de probabilidad para determinar el gasto simultáneo máximo probable. Este método evita sobredimensionar las tuberías (mayor costo) o subdimensionarlas (presiones insuficientes en pisos altos). El RAS 2017 y la NSR-10 lo reconocen como método válido para edificaciones residenciales y comerciales.',
-            },
-            {
-              q: '¿Cuánto tarda y cuánto cuesta el diseño hidrosanitario?',
-              a: 'El plazo típico es de 2 a 4 semanas según la complejidad del proyecto (número de pisos, área construida, tipo de edificación). El costo varía según el alcance: un apartamento o casa independiente puede resolverse en una semana; un edificio multifamiliar de 8-12 pisos requiere 3-4 semanas incluyendo memorias completas. Solicite cotización describiendo el tipo de edificación, número de pisos y número de baños — respondemos en menos de 24 horas.',
-            },
-          ].map(({ q, a }) => (
+          {FAQ_REDES.map(({ q, a }) => (
             <details key={q} style={{
               borderBottom: '1px solid #E2E8F0', paddingBottom: 20, marginBottom: 20,
             }}>
@@ -272,6 +500,10 @@ export default function ServicioRedesHidrosanitarias() {
             Artículos relacionados
           </p>
           <div style={{ display: 'flex', gap: 16, flexWrap: 'wrap' }}>
+            <a href="/blog/redes-hidrosanitarias-colombia" style={{ flex: '1 1 260px', background: '#fff', border: '1px solid #E2E8F0', borderRadius: 4, padding: '18px 20px', textDecoration: 'none' }}>
+              <span style={{ fontFamily: "'Playfair Display', serif", fontWeight: 700, color: '#003B6F', fontSize: 15, display: 'block', lineHeight: 1.3 }}>Redes Hidrosanitarias en Colombia: Diseño según NSR-10 y RAS</span>
+              <span style={{ fontFamily: "'Lato', sans-serif", color: '#17A2B8', fontSize: 12, marginTop: 8, display: 'block' }}>Leer artículo →</span>
+            </a>
             <a href="/blog/costos-obras-hidraulicas-colombia-2026" style={{ flex: '1 1 260px', background: '#fff', border: '1px solid #E2E8F0', borderRadius: 4, padding: '18px 20px', textDecoration: 'none' }}>
               <span style={{ fontFamily: "'Playfair Display', serif", fontWeight: 700, color: '#003B6F', fontSize: 15, display: 'block', lineHeight: 1.3 }}>Costos de Obras Hidráulicas en Colombia 2026: APU y Tendencias</span>
               <span style={{ fontFamily: "'Lato', sans-serif", color: '#17A2B8', fontSize: 12, marginTop: 8, display: 'block' }}>Leer artículo →</span>
@@ -291,16 +523,16 @@ export default function ServicioRedesHidrosanitarias() {
             Servicios relacionados
           </p>
           <div style={{ display: 'flex', gap: 16, flexWrap: 'wrap' }}>
+            <a href="/memorias-hidrosanitarias-colombia" style={{ flex: '1 1 220px', background: '#fff', border: '1px solid #E2E8F0', borderRadius: 4, padding: '18px 20px', textDecoration: 'none' }}>
+              <span style={{ fontFamily: "'Playfair Display', serif", fontWeight: 700, color: '#003B6F', fontSize: 14, display: 'block', lineHeight: 1.35 }}>Memorias de cálculo hidrosanitarias para licencia de construcción</span>
+              <span style={{ fontFamily: "'Lato', sans-serif", color: '#17A2B8', fontSize: 12, marginTop: 8, display: 'block' }}>Ver servicio →</span>
+            </a>
             <a href="/servicios/contra-incendios-nsr10" style={{ flex: '1 1 220px', background: '#fff', border: '1px solid #E2E8F0', borderRadius: 4, padding: '18px 20px', textDecoration: 'none' }}>
               <span style={{ fontFamily: "'Playfair Display', serif", fontWeight: 700, color: '#003B6F', fontSize: 14, display: 'block', lineHeight: 1.35 }}>Sistemas CI NSR-10 Títulos J y K — rociadores NFPA 13 e hidrantes NFPA 14</span>
               <span style={{ fontFamily: "'Lato', sans-serif", color: '#17A2B8', fontSize: 12, marginTop: 8, display: 'block' }}>Ver servicio →</span>
             </a>
-            <a href="/servicios/contra-incendios-nsr10" style={{ flex: '1 1 220px', background: '#fff', border: '1px solid #E2E8F0', borderRadius: 4, padding: '18px 20px', textDecoration: 'none' }}>
-              <span style={{ fontFamily: "'Playfair Display', serif", fontWeight: 700, color: '#003B6F', fontSize: 14, display: 'block', lineHeight: 1.35 }}>Sistemas contra incendio NSR-10 para edificios, centros comerciales e industria</span>
-              <span style={{ fontFamily: "'Lato', sans-serif", color: '#17A2B8', fontSize: 12, marginTop: 8, display: 'block' }}>Ver servicio →</span>
-            </a>
             <a href="/servicios/diseno-acueductos" style={{ flex: '1 1 220px', background: '#fff', border: '1px solid #E2E8F0', borderRadius: 4, padding: '18px 20px', textDecoration: 'none' }}>
-              <span style={{ fontFamily: "'Playfair Display', serif", fontWeight: 700, color: '#003B6F', fontSize: 14, display: 'block', lineHeight: 1.35 }}>Diseño de acueducto y alcantarillado municipal conforme RAS 2017</span>
+              <span style={{ fontFamily: "'Playfair Display', serif", fontWeight: 700, color: '#003B6F', fontSize: 14, display: 'block', lineHeight: 1.35 }}>Diseño de acueducto municipal y veredal conforme RAS 2017</span>
               <span style={{ fontFamily: "'Lato', sans-serif", color: '#17A2B8', fontSize: 12, marginTop: 8, display: 'block' }}>Ver servicio →</span>
             </a>
             <a href="/servicios/interventoria" style={{ flex: '1 1 220px', background: '#fff', border: '1px solid #E2E8F0', borderRadius: 4, padding: '18px 20px', textDecoration: 'none' }}>
@@ -353,7 +585,7 @@ export default function ServicioRedesHidrosanitarias() {
             href={`https://wa.me/${WA}?text=${WA_MSG}`}
             style={{ background: '#fff', color: '#17A2B8', fontSize: 15, padding: '14px 36px' }}
           >
-            📱 Chatear por WhatsApp
+            Chatear por WhatsApp
           </Btn>
         </div>
       </Section>
