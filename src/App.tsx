@@ -26,6 +26,7 @@ const Barranquilla = lazy(() => import('./pages/Barranquilla'))
 const EjeCafetero = lazy(() => import('./pages/EjeCafetero'))
 const Antioquia = lazy(() => import('./pages/Antioquia'))
 const ServicioEstudiosHidrologicos = lazy(() => import('./pages/ServicioEstudiosHidrologicos'))
+const ServicioTopografia = lazy(() => import('./pages/ServicioTopografia'))
 const ServicioModelacionHecRas = lazy(() => import('./pages/ServicioModelacionHecRas'))
 const ServicioRedesHidrosanitarias = lazy(() => import('./pages/ServicioRedesHidrosanitarias'))
 const ServicioInterventoria = lazy(() => import('./pages/ServicioInterventoria'))
@@ -306,6 +307,7 @@ export default function App() {
           {/* ── LANDING PAGES DE SERVICIOS INDIVIDUALES ── */}
           <Route path="/servicios/estudio-inundabilidad-manizales" component={EstudioInundabilidadManizales} />
           <Route path="/servicios/estudios-hidrologicos" component={ServicioEstudiosHidrologicos} />
+          <Route path="/servicios/topografia" component={ServicioTopografia} />
           <Route path="/servicios/modelacion-hec-ras" component={ServicioModelacionHecRas} />
           <Route path="/servicios/redes-hidrosanitarias" component={ServicioRedesHidrosanitarias} />
           <Route path="/servicios/interventoria" component={ServicioInterventoria} />

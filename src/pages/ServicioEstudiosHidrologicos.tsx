@@ -7,8 +7,8 @@ const WA = '573024778910'
 const WA_MSG = encodeURIComponent('Hola, necesito un estudio hidrológico. ¿Pueden asesorarme sobre el alcance y el costo?')
 
 const seoConfig = {
-  title: 'Estudios Hidrológicos Colombia — HEC-HMS | BIC',
-  description: 'Estudios hidrológicos en Colombia para CAR, licencias y SGR. Caudales IDF, HEC-HMS, Dec. 1807/2014. COPNIA vigente. Cotización en 24 horas.',
+  title: 'Estudios Hidrológicos Colombia — HEC-HMS Caudales Diseño | BIC',
+  description: 'Estudios hidrológicos en Colombia: caudales de diseño, análisis de crecientes, periodos de retorno. HEC-HMS, métodos estadísticos. COPNIA. Eje Cafetero y nacional.',
   keywords: [
     'estudio hidrológico Colombia',
     'estudios hidrológicos para CAR Colombia',
@@ -300,6 +300,204 @@ export default function ServicioEstudiosHidrologicos() {
                     </div>
                   </div>
                 </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </Section>
+
+      {/* ── QUÉ ES UN ESTUDIO HIDROLÓGICO ── */}
+      <Section>
+        <div style={{ maxWidth: 960, margin: '0 auto', padding: '0 24px' }}>
+          <SectionLabel>Fundamentos</SectionLabel>
+          <h2 style={{ fontFamily: "'Playfair Display', serif", fontWeight: 700, fontSize: 'clamp(22px, 3vw, 34px)', marginBottom: 16 }}>
+            ¿Qué es un estudio hidrológico?
+          </h2>
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(240px, 1fr))', gap: 14, marginBottom: 12 }}>
+            {[
+              'Análisis cuantitativo del ciclo del agua en una cuenca hidrográfica',
+              'Determina caudales máximos para diseño de obras (Tr 10, 25, 50, 100 años)',
+              'Estima disponibilidad hídrica para captaciones y licencias ambientales',
+              'Base técnica obligatoria para diseño hidráulico, ambiental y urbanístico',
+            ].map(item => (
+              <div key={item} style={{ background: '#f0f9ff', borderRadius: 10, padding: '14px 18px', borderLeft: '3px solid #17A2B8' }}>
+                <p style={{ color: '#002A50', fontSize: 14, lineHeight: 1.65, margin: 0 }}>{item}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </Section>
+
+      {/* ── TIPOS DETALLADOS ── */}
+      <Section style={{ background: '#f8f9fa' }}>
+        <div style={{ maxWidth: 960, margin: '0 auto', padding: '0 24px' }}>
+          <SectionLabel>Catálogo técnico</SectionLabel>
+          <h2 style={{ fontFamily: "'Playfair Display', serif", fontWeight: 700, fontSize: 'clamp(22px, 3vw, 34px)', marginBottom: 8 }}>
+            Tipos de estudios hidrológicos BIC
+          </h2>
+          <p style={{ color: '#555', lineHeight: 1.75, marginBottom: 32, maxWidth: 780 }}>
+            Cada modalidad responde a un requerimiento técnico o normativo específico.
+          </p>
+          <div style={{ display: 'flex', flexDirection: 'column', gap: 16 }}>
+            {[
+              {
+                num: '1', titulo: 'Análisis de crecientes y caudales máximos',
+                items: [
+                  'Periodos de retorno Tr: 2, 5, 10, 25, 50 y 100 años',
+                  'Métodos: racional modificado, SCS-CN, regionalización IDEAM',
+                  'Para dimensionar canales, alcantarillas, disipadores, puentes',
+                ],
+              },
+              {
+                num: '2', titulo: 'Aforos y balance hídrico',
+                items: [
+                  'Medición de caudales en campo (molinete, flotadores, sección-velocidad)',
+                  'Balance hídrico mensual: oferta vs demanda',
+                  'Requerido para concesiones de agua y licencias ambientales (ANLA/CAR)',
+                ],
+              },
+              {
+                num: '3', titulo: 'Análisis estadístico de series históricas',
+                items: [
+                  'Distribuciones: Log-Normal, Gumbel, Log-Pearson III',
+                  'Ajuste estadístico y pruebas de bondad (chi-cuadrado, Kolmogorov-Smirnov)',
+                  'Datos IDEAM: estaciones pluviométricas e hidrométricas',
+                ],
+              },
+              {
+                num: '4', titulo: 'Modelación hidrológica con HEC-HMS',
+                items: [
+                  'Transformación lluvia-escorrentía',
+                  'Tránsito de crecientes en ríos (Muskingum, Lag)',
+                  'Calibración con eventos históricos documentados',
+                ],
+              },
+              {
+                num: '5', titulo: 'Estudios de sedimentos',
+                items: [
+                  'Transporte de sedimentos en cauces',
+                  'Diseño de trampas de sedimentos y desarenadores',
+                  'Vida útil de embalses y reservorios',
+                ],
+              },
+            ].map(t => (
+              <div key={t.num} style={{ background: '#fff', border: '1px solid #e2e8f0', borderRadius: 12, padding: '20px 24px', display: 'grid', gridTemplateColumns: '36px 1fr', gap: 16, alignItems: 'start' }}>
+                <div style={{ width: 36, height: 36, borderRadius: '50%', background: 'linear-gradient(135deg, #17A2B8, #0d8fa3)', color: '#fff', fontWeight: 700, fontSize: 15, display: 'flex', alignItems: 'center', justifyContent: 'center', flexShrink: 0 }}>{t.num}</div>
+                <div>
+                  <h3 style={{ fontWeight: 700, fontSize: 16, color: '#002A50', marginBottom: 10 }}>{t.titulo}</h3>
+                  <ul style={{ margin: 0, padding: '0 0 0 16px', color: '#555', fontSize: 13, lineHeight: 1.7 }}>
+                    {t.items.map(i => <li key={i}>{i}</li>)}
+                  </ul>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </Section>
+
+      {/* ── SOFTWARE Y METODOLOGÍAS ── */}
+      <Section>
+        <div style={{ maxWidth: 960, margin: '0 auto', padding: '0 24px' }}>
+          <SectionLabel>Herramientas</SectionLabel>
+          <h2 style={{ fontFamily: "'Playfair Display', serif", fontWeight: 700, fontSize: 'clamp(22px, 3vw, 34px)', marginBottom: 24 }}>
+            Software y metodologías
+          </h2>
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(240px, 1fr))', gap: 14 }}>
+            {[
+              { sw: 'HEC-HMS (USACE)', desc: 'Modelación lluvia-escorrentía y tránsito de crecientes' },
+              { sw: 'SWMM 5.1 (EPA)', desc: 'Drenaje urbano e inundaciones' },
+              { sw: 'HidroEsta', desc: 'Análisis estadístico de distribuciones probabilísticas' },
+              { sw: 'GIS (ArcGIS/QGIS)', desc: 'Delimitación de cuencas y análisis espacial' },
+              { sw: 'IDEAM — DHIME', desc: 'Series históricas pluviométricas nacionales' },
+            ].map(s => (
+              <div key={s.sw} style={{ background: '#f8fbff', border: '1px solid #d0e8f5', borderRadius: 10, padding: '16px 20px', borderLeft: '3px solid #17A2B8' }}>
+                <h3 style={{ fontWeight: 700, fontSize: 13, color: '#002A50', marginBottom: 5 }}>{s.sw}</h3>
+                <p style={{ color: '#555', fontSize: 13, lineHeight: 1.6, margin: 0 }}>{s.desc}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </Section>
+
+      {/* ── CUÁNDO NECESITAS ── */}
+      <Section style={{ background: '#f8f9fa' }}>
+        <div style={{ maxWidth: 960, margin: '0 auto', padding: '0 24px' }}>
+          <SectionLabel>Casos de uso</SectionLabel>
+          <h2 style={{ fontFamily: "'Playfair Display', serif", fontWeight: 700, fontSize: 'clamp(22px, 3vw, 34px)', marginBottom: 24 }}>
+            ¿Cuándo necesitas un estudio hidrológico?
+          </h2>
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(220px, 1fr))', gap: 12 }}>
+            {[
+              'Diseño de acueductos (caudal de captación, análisis de mínimos)',
+              'Diseño de alcantarillados y drenajes urbanos',
+              'Planes de ordenamiento territorial (POT) y POMCA',
+              'Permisos de concesión de agua ante CAR/ANLA',
+              'Obras viales: alcantarillas, pontones, puentes',
+              'Gestión del riesgo por inundaciones (UNGRD, MADS)',
+              'Licencias de construcción en zonas de ronda hídrica',
+            ].map(caso => (
+              <div key={caso} style={{ background: '#fff', border: '1px solid #e2e8f0', borderRadius: 8, padding: '12px 16px', display: 'flex', alignItems: 'flex-start', gap: 10 }}>
+                <span style={{ color: '#17A2B8', fontSize: 16, flexShrink: 0, marginTop: 1 }}>✓</span>
+                <p style={{ color: '#444', fontSize: 13, lineHeight: 1.6, margin: 0 }}>{caso}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </Section>
+
+      {/* ── PRECIOS ORIENTATIVOS 2026 ── */}
+      <Section>
+        <div style={{ maxWidth: 880, margin: '0 auto', padding: '0 24px' }}>
+          <SectionLabel>Inversión 2026</SectionLabel>
+          <h2 style={{ fontFamily: "'Playfair Display', serif", fontWeight: 700, fontSize: 'clamp(22px, 3vw, 32px)', marginBottom: 24, color: '#002A50' }}>
+            Precios orientativos 2026
+          </h2>
+          <div style={{ display: 'flex', flexDirection: 'column', gap: 12, marginBottom: 24 }}>
+            {[
+              { nombre: 'Estudio hidrológico básico (cuenca < 50 km²)', rango: '$4M – $8M COP' },
+              { nombre: 'Estudio con modelación HEC-HMS (cuenca media)', rango: '$6M – $15M COP' },
+              { nombre: 'Estudio para concesión de agua (balance hídrico)', rango: '$5M – $12M COP' },
+              { nombre: 'Estudio completo POMCA o POT (cuenca grande)', rango: '$15M – $40M COP' },
+            ].map(p => (
+              <div key={p.nombre} style={{ background: '#fff', border: '1px solid #b3e0ea', borderLeft: '4px solid #17A2B8', borderRadius: 10, padding: '16px 22px', display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexWrap: 'wrap', gap: 10 }}>
+                <p style={{ fontWeight: 600, color: '#002A50', fontSize: 14, margin: 0 }}>{p.nombre}</p>
+                <p style={{ fontFamily: "'Playfair Display', serif", fontWeight: 700, fontSize: 20, color: '#17A2B8', margin: 0 }}>{p.rango}</p>
+              </div>
+            ))}
+          </div>
+          <p style={{ color: '#666', fontSize: 13, lineHeight: 1.65 }}>Tiempos: 2–6 semanas según disponibilidad de datos. BIC envía propuesta detallada en 24 horas sin costo.</p>
+        </div>
+      </Section>
+
+      {/* ── FAQ ADICIONAL ── */}
+      <Section style={{ background: '#f0f9ff' }}>
+        <div style={{ maxWidth: 880, margin: '0 auto', padding: '0 24px' }}>
+          <SectionLabel>Más preguntas</SectionLabel>
+          <h2 style={{ fontFamily: "'Playfair Display', serif", fontWeight: 700, fontSize: 'clamp(22px, 3vw, 32px)', marginBottom: 28, color: '#002A50' }}>
+            Preguntas técnicas frecuentes
+          </h2>
+          <div style={{ display: 'flex', flexDirection: 'column', gap: 16 }}>
+            {[
+              {
+                q: '¿Con qué datos trabajan si no hay estación hidrométrica cerca?',
+                a: 'Usamos regionalización hidrológica con metodologías del IDEAM y del INVIAS (Manual de Drenaje 2009). Cuando es posible, realizamos aforos de campo para calibrar los modelos.',
+              },
+              {
+                q: '¿El estudio hidrológico sirve para solicitar la concesión de agua?',
+                a: 'Sí. El balance hídrico y el análisis de caudales mínimos son documentos exigidos por la CAR o la ANLA para tramitar la concesión de aguas superficiales o subterráneas.',
+              },
+              {
+                q: '¿Entregan los modelos HEC-HMS editables?',
+                a: 'Sí. BIC entrega el archivo de proyecto HEC-HMS, la memoria de cálculo en PDF y los datos procesados en Excel para que el cliente o la entidad contratante pueda verificar los resultados.',
+              },
+              {
+                q: '¿Pueden hacer el estudio hidrológico e hidráulico como un solo contrato?',
+                a: 'Sí. BIC integra los dos estudios (hidrológico + hidráulico con HEC-RAS) en un solo contrato, lo cual reduce tiempos y garantiza consistencia entre los caudales de diseño y los resultados hidráulicos.',
+              },
+            ].map(item => (
+              <div key={item.q} style={{ background: '#fff', borderRadius: 12, padding: 24, border: '1px solid #d0eaf5' }}>
+                <h3 style={{ fontWeight: 700, fontSize: 15, marginBottom: 10, color: '#002A50', lineHeight: 1.4 }}>{item.q}</h3>
+                <p style={{ color: '#555', lineHeight: 1.8, fontSize: 14, margin: 0 }}>{item.a}</p>
               </div>
             ))}
           </div>
