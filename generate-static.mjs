@@ -243,14 +243,22 @@ const routes = [
   { path: 'blog/estudio-amenaza-inundaciones-pot-colombia', title: 'Estudios de amenaza por inundaciones para POT en Colombia | BIC', desc: 'Guía técnica sobre estudios de amenaza por inundación para POT en Colombia: obligatoriedad Decreto 1807/2014, metodología hidrología + HEC-RAS 2D, categorías de amenaza e integración al ordenamiento.', url: 'https://ingenieriabernal.co/blog/estudio-amenaza-inundaciones-pot-colombia' },
   { path: 'blog/cuanto-cuesta-sistema-contra-incendios-nsr10-colombia', title: '¿Cuánto cuesta un sistema contra incendios NSR-10 en Colombia? Rangos reales 2026 | BIC', desc: 'Rangos de precio reales para diseño e instalación de sistemas contra incendios NSR-10 en Colombia 2026. Qué factores encarecen el proyecto y cómo obtener una propuesta técnica seria.', url: 'https://ingenieriabernal.co/blog/cuanto-cuesta-sistema-contra-incendios-nsr10-colombia' },
   { path: 'blog/tramites-licencia-ambiental-construccion-colombia', title: 'Trámites ambientales antes de construir en Colombia: guía para promotores y constructores | BIC', desc: 'Guía práctica sobre qué trámites ambientales son obligatorios antes de construir en Colombia: concesiones de agua, permisos de vertimientos, licencias ambientales ANLA y estudios Decreto 1807.', url: 'https://ingenieriabernal.co/blog/tramites-licencia-ambiental-construccion-colombia' },
+  // Artículos Batch O faltantes
+  { path: 'blog/estudio-suelos-torres-edificios-colombia', title: 'Estudio de Suelos para Torres y Edificios en Colombia: ¿Qué incluye y cuánto cuesta?', desc: 'Qué incluye el estudio de suelos para torres y edificios en Colombia. NSR-10 Título H, tipos de ensayos, plazos y costos reales 2026. Pereira, Eje Cafetero y todo el país.', url: 'https://ingenieriabernal.co/blog/estudio-suelos-torres-edificios-colombia' },
+  { path: 'blog/diseno-aguas-lluvias-cubierta-colegio-colombia', title: 'Diseño de Aguas Lluvias para Cubiertas de Colegios y Edificios en Colombia', desc: 'Cómo se diseña el sistema de aguas lluvias para cubiertas de colegios y edificios en Colombia. RAS 2017, NSR-10, curvas IDF y método Racional. Manizales y Eje Cafetero.', url: 'https://ingenieriabernal.co/blog/diseno-aguas-lluvias-cubierta-colegio-colombia' },
+  // Páginas geográficas de servicio — mayo 2026 (URLs canónicas)
+  { path: 'modelacion-hidraulica-putumayo', title: 'Modelación Hidráulica en Putumayo | BIC Colombia', desc: 'Modelación HEC-RAS 1D/2D de quebradas y ríos en Putumayo y Caquetá. Decreto 1807/2014. Inundaciones, espolones, Mocoa. BIC COPNIA. Cotice ya.', url: 'https://ingenieriabernal.co/modelacion-hidraulica-putumayo' },
+  { path: 'acueducto-quindio', title: 'Diseño de Acueductos en el Quindío | BIC', desc: 'Diseño de acueductos rurales y municipales en Armenia, Calarcá y el Quindío. RAS 2017, Res. 0330. BIC, COPNIA vigente. Propuesta en 24 h.', url: 'https://ingenieriabernal.co/acueducto-quindio' },
+  { path: 'geotecnia-pereira', title: 'Estudio de Suelos en Pereira | Geotecnia BIC', desc: 'Estudios geotécnicos para construcción en Pereira y Risaralda. NSR-10 Título H. Sondeos SPT, apiques. BIC, COPNIA vigente. Presupuesto en 24 h.', url: 'https://ingenieriabernal.co/geotecnia-pereira' },
+  { path: 'ptap-municipios-colombia', title: 'PTAP para Municipios Colombia | Diseño y SGR BIC', desc: 'Diseño de PTAP para municipios con regalías SGR y IRCA alto en Colombia. RAS 2017, Res. 0330. BIC Eje Cafetero, cobertura nacional. Cotice.', url: 'https://ingenieriabernal.co/ptap-municipios-colombia' },
+  { path: 'aguas-lluvias-manizales', title: 'Diseño Aguas Lluvias en Manizales | BIC', desc: 'Diseño de redes de aguas lluvias para cubiertas, colegios y urbanizaciones en Manizales. NSR-10, RAS 2017. BIC, COPNIA vigente. Cotice hoy.', url: 'https://ingenieriabernal.co/aguas-lluvias-manizales' },
+  // Aliases /servicios/ — canonical apunta a la URL raíz
+  { path: 'servicios/modelacion-hidraulica-putumayo', title: 'Modelación Hidráulica en Putumayo | BIC Colombia', desc: 'Modelación HEC-RAS 1D/2D de quebradas y ríos en Putumayo y Caquetá. Decreto 1807/2014. Inundaciones, espolones, Mocoa. BIC COPNIA. Cotice ya.', url: 'https://ingenieriabernal.co/modelacion-hidraulica-putumayo' },
+  { path: 'servicios/diseno-acueducto-quindio', title: 'Diseño de Acueductos en el Quindío | BIC', desc: 'Diseño de acueductos rurales y municipales en Armenia, Calarcá y el Quindío. RAS 2017, Res. 0330. BIC, COPNIA vigente. Propuesta en 24 h.', url: 'https://ingenieriabernal.co/acueducto-quindio' },
+  { path: 'servicios/estudio-suelos-pereira', title: 'Estudio de Suelos en Pereira | Geotecnia BIC', desc: 'Estudios geotécnicos para construcción en Pereira y Risaralda. NSR-10 Título H. Sondeos SPT, apiques. BIC, COPNIA vigente. Presupuesto en 24 h.', url: 'https://ingenieriabernal.co/geotecnia-pereira' },
+  { path: 'servicios/diseno-ptap-colombia', title: 'PTAP para Municipios Colombia | Diseño y SGR BIC', desc: 'Diseño de PTAP para municipios con regalías SGR y IRCA alto en Colombia. RAS 2017, Res. 0330. BIC Eje Cafetero, cobertura nacional. Cotice.', url: 'https://ingenieriabernal.co/ptap-municipios-colombia' },
+  { path: 'servicios/aguas-lluvias-manizales', title: 'Diseño Aguas Lluvias en Manizales | BIC', desc: 'Diseño de redes de aguas lluvias para cubiertas, colegios y urbanizaciones en Manizales. NSR-10, RAS 2017. BIC, COPNIA vigente. Cotice hoy.', url: 'https://ingenieriabernal.co/aguas-lluvias-manizales' },
 ];
-
-// Páginas con noindex (thin content — usan RegionalPage sin contenido profundo)
-// ingenieria-bogota, ingenieria-medellin, ingenieria-cali tienen CityPage + DEEP_CONTENT (600+ words) → indexables
-const NOINDEX_PATHS = new Set([
-  'ingenieria-manizales', 'ingenieria-bucaramanga', 'ingenieria-barranquilla',
-  'ingenieria-eje-cafetero', 'ingenieria-antioquia',
-]);
 
 // Páginas redirigidas (canonical apunta a la URL definitiva)
 const REDIRECT_PAGES = {
@@ -268,11 +276,6 @@ function injectMeta(html, r) {
     .replace(/<meta property="og:description" content="[^"]*"/, `<meta property="og:description" content="${r.desc}"`)
     .replace(/<meta name="twitter:title" content="[^"]*"/, `<meta name="twitter:title" content="${r.title}"`)
     .replace(/<meta name="twitter:description" content="[^"]*"/, `<meta name="twitter:description" content="${r.desc}"`);
-
-  // Noindex para páginas de thin content
-  if (NOINDEX_PATHS.has(r.path)) {
-    result = result.replace(/<meta name="robots" content="[^"]*"/, '<meta name="robots" content="noindex, follow"');
-  }
 
   return result;
 }
@@ -295,8 +298,7 @@ for (const route of routes) {
   const dir = join(distDir, route.path);
   mkdirSync(dir, { recursive: true });
   writeFileSync(join(dir, 'index.html'), html, 'utf-8');
-  const marker = NOINDEX_PATHS.has(route.path) ? '🚫' : '✅';
-  console.log(`  ${marker} /${route.path}`);
+  console.log(`  ✅ /${route.path}`);
 }
 
 console.log(`\n✅ Pre-rendering completo: ${routes.length} rutas generadas.`);
