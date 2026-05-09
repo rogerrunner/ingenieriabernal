@@ -6,8 +6,8 @@ const WA = '573024778910'
 const WA_MSG = encodeURIComponent('Hola, necesito información sobre formulación de POMCA en Colombia. ¿Pueden ayudarme?')
 
 const seoConfig = {
-  title: 'POMCA Colombia — Formulación Dec. 1076 | BIC',
-  description: 'Formulación y ajuste de POMCA en Colombia. Diagnóstico, prospectiva, zonificación. Dec. 1076/2015. COPNIA vigente. Consultoría Manizales. Cotiza sin costo.',
+  title: 'POMCA y Estudios Ambientales Hídricos Colombia — BIC',
+  description: 'Estudios técnicos para POMCA, planes de manejo de cuencas y diagnósticos ambientales en Colombia. Modelación hidráulica, balance hídrico, normativa MADS. BIC COPNIA.',
   keywords: [
     'POMCA Colombia',
     'plan ordenación manejo cuencas Colombia',
@@ -52,6 +52,54 @@ const FASES = [
   },
 ]
 
+const ESTUDIOS_HIDRO = [
+  {
+    num: '1',
+    titulo: 'Caracterización hidrológica de cuencas',
+    items: [
+      'Delimitación y morfometría de cuencas con SIG',
+      'Balance hídrico superficial y subterráneo',
+      'Análisis de caudales mínimos (estiajes) y máximos (crecientes)',
+    ],
+  },
+  {
+    num: '2',
+    titulo: 'Modelación hidráulica de ríos y quebradas',
+    items: [
+      'HEC-RAS 1D y 2D para definición de rondas hídricas',
+      'Mapas de inundación para Tr 100, 500 años',
+      'Requerido por POMCA, POT y PGRM',
+    ],
+  },
+  {
+    num: '3',
+    titulo: 'Diagnóstico de calidad del agua',
+    items: [
+      'Análisis de índice de calidad ICA',
+      'Modelación de cargas contaminantes y dilución',
+      'Sustento técnico para concesiones y vertimientos',
+    ],
+  },
+  {
+    num: '4',
+    titulo: 'Zonificación de amenaza y riesgo hídrico',
+    items: [
+      'Movimientos en masa e inundaciones',
+      'Metodología UNGRD y SGC',
+      'Insumo técnico para alcaldías y CAR',
+    ],
+  },
+  {
+    num: '5',
+    titulo: 'Participación técnica en formulación de POMCA',
+    items: [
+      'Elaboración de componentes técnicos hídricos',
+      'Análisis de conflictos de uso del agua',
+      'Programas de reducción de riesgo',
+    ],
+  },
+]
+
 const PROCESO = [
   {
     paso: '01',
@@ -84,12 +132,15 @@ const PROCESO = [
 ]
 
 const NORMATIVA = [
+  { codigo: 'Decreto 1640/2012', descripcion: 'Ordenación de cuencas hidrográficas (compilado en Decreto 1076/2015)' },
   { codigo: 'Decreto 1076/2015', descripcion: 'DUR Sector Ambiente — Parte 3, Título 3: régimen de ordenación y manejo de cuencas hidrográficas, fases del POMCA y actores' },
+  { codigo: 'Resolución 1907/2013', descripcion: 'MADS — guía técnica para la formulación de los planes de ordenación y manejo de cuencas hidrográficas' },
   { codigo: 'Ley 99/1993', descripcion: 'Ley general ambiental — funciones de las CAR en la ordenación y manejo de cuencas hidrográficas' },
+  { codigo: 'Decreto 2811/1974', descripcion: 'Código Nacional de Recursos Naturales Renovables — marco base del derecho ambiental colombiano' },
   { codigo: 'Ley 388/1997', descripcion: 'Ley de Desarrollo Territorial — articulación del POMCA con los POT municipales y normas de uso del suelo' },
   { codigo: 'Ley 1523/2012', descripcion: 'Política Nacional de Gestión del Riesgo — integración de la gestión del riesgo en los POMCA' },
-  { codigo: 'Política Nacional para la Gestión Integral del Recurso Hídrico', descripcion: 'MADS — marco de referencia para la ordenación de cuencas y la gestión del agua en Colombia' },
-  { codigo: 'Resolución 1907/2013', descripcion: 'MADS — guía técnica para la formulación de los planes de ordenación y manejo de cuencas hidrográficas' },
+  { codigo: 'Decreto 1807/2014', descripcion: 'Incorporación de la gestión del riesgo en los POT municipales' },
+  { codigo: 'CONPES 3700/2011', descripcion: 'Estrategia institucional para la articulación de políticas y acciones en materia de cambio climático en Colombia' },
 ]
 
 const FAQ = [
@@ -105,6 +156,18 @@ const FAQ = [
     q: '¿Cómo afecta el POMCA a un proyecto de construcción o urbanismo?',
     a: 'El POMCA es determinante ambiental de los POT municipales, lo que significa que las normas del POMCA prevalecen sobre el ordenamiento urbano local en todo lo relacionado con la gestión hídrica. Si su predio está en una cuenca con POMCA adoptado, las categorías de zonificación ambiental del POMCA (especialmente las áreas de preservación y las zonas de riesgo) afectan directamente qué puede construir y qué permisos ambientales necesita. BIC revisa la compatibilidad de su proyecto con el POMCA vigente como parte de los estudios de viabilidad ambiental.',
   },
+  {
+    q: '¿Pueden contratar directamente con BIC para el POMCA o se necesita la CAR?',
+    a: 'Los POMCA los adoptan las CAR, pero los estudios técnicos de soporte los pueden contratar los municipios, gremios o la misma CAR con consultores privados. BIC puede participar como subcontratista técnico especializado en la componente hídrica.',
+  },
+  {
+    q: '¿Qué diferencia hay entre POMCA y POT en lo hídrico?',
+    a: 'El POMCA es el instrumento rector de la cuenca hidrográfica (nivel CAR), mientras que el POT es el instrumento de ordenamiento del territorio municipal. El POT debe incorporar las determinantes ambientales del POMCA, incluidas las rondas hídricas y zonas de amenaza.',
+  },
+  {
+    q: '¿Los mapas de inundación de BIC son aceptados por la ANLA y las CAR?',
+    a: 'Sí, siempre que los estudios sigan la metodología de la ANLA y estén firmados por ingeniero COPNIA. BIC elabora los estudios con HEC-RAS conforme a los términos de referencia de cada autoridad ambiental.',
+  },
 ]
 
 const ARTICULOS = [
@@ -114,7 +177,24 @@ const ARTICULOS = [
 ]
 
 export default function PomcaColombia() {
-  useEffect(() => { window.scrollTo(0, 0) }, [])
+  useEffect(() => {
+    window.scrollTo(0, 0)
+    const faqSchema = {
+      '@context': 'https://schema.org',
+      '@type': 'FAQPage',
+      mainEntity: FAQ.map(f => ({
+        '@type': 'Question',
+        name: f.q,
+        acceptedAnswer: { '@type': 'Answer', text: f.a },
+      })),
+    }
+    const sf = document.createElement('script')
+    sf.type = 'application/ld+json'
+    sf.id = 'schema-pomca-faq'
+    sf.textContent = JSON.stringify(faqSchema)
+    document.head.appendChild(sf)
+    return () => { document.getElementById('schema-pomca-faq')?.remove() }
+  }, [])
 
   return (
     <>
@@ -156,8 +236,27 @@ export default function PomcaColombia() {
         </div>
       </section>
 
+      {/* ── QUÉ ES EL POMCA ── */}
+      <Section bg="#fff" style={{ padding: '72px 24px' }}>
+        <div style={{ maxWidth: 960, margin: '0 auto', padding: '0 24px' }}>
+          <SectionLabel>Definición</SectionLabel>
+          <h2 style={{
+            fontFamily: "'Playfair Display', serif", fontWeight: 700,
+            fontSize: 'clamp(22px, 3vw, 34px)', marginBottom: 8, color: '#001A33',
+          }}>¿Qué es el POMCA?</h2>
+          <ThinLine mb={32} />
+          <ul style={{ fontFamily: "'Lato', sans-serif", color: '#475569', fontSize: 15, lineHeight: 1.85, paddingLeft: 24, margin: 0, display: 'flex', flexDirection: 'column', gap: 10 }}>
+            <li>Plan de Ordenación y Manejo de Cuenca Hidrográfica (Decreto 1640/2012)</li>
+            <li>Instrumento de planificación y gestión de cuencas hidrográficas en Colombia</li>
+            <li>Formulado y adoptado por las Corporaciones Autónomas Regionales (CAR)</li>
+            <li>Integra los componentes: diagnóstico, zonificación ambiental, prospectiva y formulación de programas</li>
+            <li>Base para los POT municipales en lo relacionado con recurso hídrico y riesgo</li>
+          </ul>
+        </div>
+      </Section>
+
       {/* ── FASES ── */}
-      <Section>
+      <Section bg="#f8f9fa">
         <div style={{ maxWidth: 960, margin: '0 auto', padding: '0 24px' }}>
           <SectionLabel>Fases del POMCA</SectionLabel>
           <h2 style={{ fontFamily: "'Playfair Display', serif", fontWeight: 700, fontSize: 'clamp(22px, 3vw, 34px)', marginBottom: 12 }}>
@@ -178,6 +277,40 @@ export default function PomcaColombia() {
                   <ul style={{ margin: 0, padding: '0 0 0 14px', color: '#555', fontSize: 12, lineHeight: 1.7 }}>
                     {f.actores.map(a => <li key={a}>{a}</li>)}
                   </ul>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </Section>
+
+      {/* ── ESTUDIOS TÉCNICOS ── */}
+      <Section bg="#fff" style={{ padding: '72px 24px' }}>
+        <div style={{ maxWidth: 880, margin: '0 auto', padding: '0 24px' }}>
+          <SectionLabel>Portafolio técnico</SectionLabel>
+          <h2 style={{ fontFamily: "'Playfair Display', serif", fontWeight: 700, fontSize: 'clamp(22px, 3vw, 34px)', marginBottom: 8 }}>
+            Estudios técnicos que apoya BIC
+          </h2>
+          <ThinLine mb={36} />
+          <div style={{ display: 'flex', flexDirection: 'column', gap: 20 }}>
+            {ESTUDIOS_HIDRO.map(e => (
+              <div key={e.num} style={{
+                background: '#f8f9fa', border: '1px solid #e2e8f0', borderRadius: 12,
+                padding: 28, borderLeft: '4px solid #17A2B8',
+              }}>
+                <div style={{ display: 'flex', alignItems: 'flex-start', gap: 16 }}>
+                  <div style={{
+                    minWidth: 36, height: 36, borderRadius: '50%',
+                    background: 'linear-gradient(135deg, #17A2B8, #0d8fa3)',
+                    color: '#fff', fontWeight: 900, fontSize: 14,
+                    display: 'flex', alignItems: 'center', justifyContent: 'center', flexShrink: 0,
+                  }}>{e.num}</div>
+                  <div>
+                    <h3 style={{ fontWeight: 700, fontSize: 15, color: '#002A50', marginBottom: 10 }}>{e.titulo}</h3>
+                    <ul style={{ fontFamily: "'Lato', sans-serif", color: '#555', fontSize: 14, lineHeight: 1.7, paddingLeft: 20, margin: 0, display: 'flex', flexDirection: 'column', gap: 4 }}>
+                      {e.items.map(item => <li key={item}>{item}</li>)}
+                    </ul>
+                  </div>
                 </div>
               </div>
             ))}
@@ -230,24 +363,51 @@ export default function PomcaColombia() {
       </Section>
 
       {/* ── NORMATIVA ── */}
-      <Section>
+      <Section bg="#fff">
         <div style={{ maxWidth: 860, margin: '0 auto', padding: '0 24px' }}>
           <SectionLabel>Marco normativo</SectionLabel>
           <h2 style={{ fontFamily: "'Playfair Display', serif", fontWeight: 700, fontSize: 'clamp(22px, 3vw, 34px)', marginBottom: 12 }}>
-            Normativa que rige los POMCA en Colombia
+            Normativa y marco legal
           </h2>
           <ThinLine mb={28} />
           <div style={{ display: 'flex', flexDirection: 'column', gap: 12 }}>
             {NORMATIVA.map(n => (
               <div key={n.codigo} style={{
-                display: 'grid', gridTemplateColumns: '200px 1fr', gap: 16, alignItems: 'center',
-                background: '#fff', borderRadius: 10, padding: '14px 20px', border: '1px solid #e2e8f0',
+                display: 'grid', gridTemplateColumns: '220px 1fr', gap: 16, alignItems: 'center',
+                background: '#F8FAFC', borderRadius: 10, padding: '14px 20px', border: '1px solid #e2e8f0',
               }}>
                 <div style={{
                   background: '#003B6F', color: '#fff', borderRadius: 6,
                   padding: '6px 10px', textAlign: 'center', fontWeight: 700, fontSize: 11,
                 }}>{n.codigo}</div>
                 <p style={{ color: '#444', fontSize: 14, lineHeight: 1.6, margin: 0 }}>{n.descripcion}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </Section>
+
+      {/* ── PRECIOS ── */}
+      <Section bg="#f8f9fa" style={{ padding: '72px 24px' }}>
+        <div style={{ maxWidth: 880, margin: '0 auto', padding: '0 24px' }}>
+          <SectionLabel>Inversión orientativa</SectionLabel>
+          <h2 style={{ fontFamily: "'Playfair Display', serif", fontWeight: 700, fontSize: 'clamp(22px, 3vw, 34px)', marginBottom: 8 }}>
+            Precios orientativos 2026
+          </h2>
+          <ThinLine mb={32} />
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(260px, 1fr))', gap: 16 }}>
+            {[
+              { tipo: 'Caracterización hidrológica (cuenca < 100 km²)', precio: '$8M – $20M COP' },
+              { tipo: 'Modelación hidráulica HEC-RAS + mapa inundación', precio: '$10M – $30M COP' },
+              { tipo: 'Componente técnico-hídrico para POMCA (CAR)', precio: '$30M – $100M COP' },
+              { tipo: 'Diagnóstico ambiental para licencia', precio: '$5M – $15M COP' },
+            ].map(p => (
+              <div key={p.tipo} style={{
+                background: '#fff', border: '1px solid #b3e0ea', borderRadius: 12,
+                padding: 24, borderTop: '4px solid #17A2B8',
+              }}>
+                <p style={{ fontWeight: 600, color: '#002A50', fontSize: 14, marginBottom: 8 }}>{p.tipo}</p>
+                <p style={{ fontFamily: "'Playfair Display', serif", fontWeight: 700, color: '#17A2B8', fontSize: 22, margin: 0 }}>{p.precio}</p>
               </div>
             ))}
           </div>
@@ -271,7 +431,7 @@ export default function PomcaColombia() {
       </Section>
 
       {/* ── SERVICIOS RELACIONADOS ── */}
-      <Section>
+      <Section bg="#fff">
         <div style={{ maxWidth: 920, margin: '0 auto', padding: '0 24px' }}>
           <SectionLabel>Servicios relacionados</SectionLabel>
           <h2 style={{ fontFamily: "'Playfair Display', serif", fontWeight: 700, fontSize: 'clamp(20px, 3vw, 30px)', marginBottom: 24 }}>
@@ -298,7 +458,7 @@ export default function PomcaColombia() {
       </Section>
 
       {/* ── FAQ ── */}
-      <Section>
+      <Section bg="#f8f9fa">
         <div style={{ maxWidth: 880, margin: '0 auto', padding: '0 24px' }}>
           <SectionLabel>Preguntas frecuentes</SectionLabel>
           <h2 style={{ fontFamily: "'Playfair Display', serif", fontWeight: 700, fontSize: 'clamp(22px, 3vw, 34px)', marginBottom: 8 }}>
@@ -307,7 +467,7 @@ export default function PomcaColombia() {
           <ThinLine mb={32} />
           <div style={{ display: 'flex', flexDirection: 'column', gap: 18 }}>
             {FAQ.map(item => (
-              <div key={item.q} style={{ background: '#f8f9fa', borderRadius: 12, padding: 26, border: '1px solid #e2e8f0' }}>
+              <div key={item.q} style={{ background: '#fff', borderRadius: 12, padding: 26, border: '1px solid #e2e8f0' }}>
                 <h3 style={{ fontWeight: 700, fontSize: 15, marginBottom: 12, color: '#002A50', lineHeight: 1.4 }}>
                   {item.q}
                 </h3>
