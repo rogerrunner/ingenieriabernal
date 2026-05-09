@@ -1,33 +1,160 @@
-import { useEffect } from 'react'
+import { useEffect, useState } from 'react'
 import { useRoute } from 'wouter'
-import articles1 from '../data/articles1'
-import articlesB from '../data/articlesB'
-import articlesC from '../data/articlesC'
-import articlesD from '../data/articlesD'
-import articlesE from '../data/articlesE'
-import articlesF from '../data/articlesF'
-import articlesA from '../data/articlesA'
-import articlesG from '../data/articlesG'
-import articlesH from '../data/articlesH'
-import articlesI from '../data/articlesI'
-import articlesJ from '../data/articlesJ'
-import articlesK from '../data/articlesK'
-import articlesL from '../data/articlesL'
-import articlesM from '../data/articlesM'
-import articlesN from '../data/articlesN'
-import articlesO from '../data/articlesO'
 import SEOHead from '../components/SEOHead'
 import { BlueprintBg, Tag, ThinLine, SectionLabel, Btn, Section } from '../components/ui'
 import { SEOConfig } from '../lib/seo'
 
 const WA = '573024778910'
 
-// ─── ARTICLE CONTENT ────────────────────────────────────────────────────────
-const ARTICLES: Record<string, {
+// ─── TYPES ───────────────────────────────────────────────────────────────────
+type Article = {
   title: string; date: string; readTime: string; category: string
   metaDesc: string; keywords: string; body: React.ReactNode
   faqItems?: Array<{ q: string; a: string }>
-}> = {
+}
+type ArticleBatch = Record<string, Article>
+
+// ─── LAZY BATCH LOADERS — each becomes a separate chunk ─────────────────────
+const BATCH_LOADERS: Record<string, () => Promise<ArticleBatch>> = {
+  articles1: () => import('../data/articles1').then(m => m.default),
+  articlesA: () => import('../data/articlesA').then(m => m.default),
+  articlesB: () => import('../data/articlesB').then(m => m.default),
+  articlesC: () => import('../data/articlesC').then(m => m.default),
+  articlesD: () => import('../data/articlesD').then(m => m.default),
+  articlesE: () => import('../data/articlesE').then(m => m.default),
+  articlesF: () => import('../data/articlesF').then(m => m.default),
+  articlesG: () => import('../data/articlesG').then(m => m.default),
+  articlesH: () => import('../data/articlesH').then(m => m.default),
+  articlesI: () => import('../data/articlesI').then(m => m.default),
+  articlesJ: () => import('../data/articlesJ').then(m => m.default),
+  articlesK: () => import('../data/articlesK').then(m => m.default),
+  articlesL: () => import('../data/articlesL').then(m => m.default),
+  articlesM: () => import('../data/articlesM').then(m => m.default),
+  articlesN: () => import('../data/articlesN').then(m => m.default),
+  articlesO: () => import('../data/articlesO').then(m => m.default),
+}
+
+// ─── SLUG → BATCH MAP (strings only — no JSX) ────────────────────────────────
+const SLUG_BATCH_MAP: Record<string, string> = {
+  // articles1
+  'irca-municipio-colombia': 'articles1',
+  'mga-web-regalias-agua-potable': 'articles1',
+  'hec-ras-2d-modelacion-hidraulica-colombia': 'articles1',
+  'cuando-se-requiere-hec-ras-colombia': 'articles1',
+  'diseno-redes-hidrosanitarias-nsr-10-colombia': 'articles1',
+  'estudio-amenaza-inundaciones-pot-colombia': 'articles1',
+  // articlesA
+  'estudio-hidrologico-colombia': 'articlesA',
+  'crecientes-eje-cafetero-colombia': 'articlesA',
+  'analisis-frecuencias-hidrologicas-colombia': 'articlesA',
+  'curvas-idf-colombia': 'articlesA',
+  'hec-hms-colombia': 'articlesA',
+  'diseno-canales-colombia': 'articlesA',
+  'ronda-hidrica-colombia': 'articlesA',
+  'aforo-caudales-colombia': 'articlesA',
+  'modelacion-1d-2d-colombia': 'articlesA',
+  // articlesB
+  'acueducto-rural-colombia': 'articlesB',
+  'ptap-colombia': 'articlesB',
+  'redes-hidrosanitarias-colombia': 'articlesB',
+  'sistemas-contra-incendio-nsr10': 'articlesB',
+  'interventoria-hidraulica-colombia': 'articlesB',
+  'alcantarillado-pluvial-colombia': 'articlesB',
+  'epanet-colombia-acueducto': 'articlesB',
+  'bocatoma-lateral-colombia': 'articlesB',
+  // articlesC
+  'ras-2000-colombia': 'articlesC',
+  'ley-1523-riesgo-colombia': 'articlesC',
+  'nsr10-titulo-j-incendios-colombia': 'articlesC',
+  'pomca-colombia': 'articlesC',
+  'decreto-1575-agua-colombia': 'articlesC',
+  'licencia-ambiental-anla-colombia': 'articlesC',
+  'contratacion-publica-ingenieria-colombia': 'articlesC',
+  // articlesD
+  'riesgo-inundacion-eje-cafetero': 'articlesD',
+  'estabilidad-taludes-eje-cafetero': 'articlesD',
+  'regalias-acueducto-colombia': 'articlesD',
+  'caso-estudio-acueducto-rural': 'articlesD',
+  'plan-mejoramiento-irca-colombia': 'articlesD',
+  'contratar-consultoria-hidraulica-colombia': 'articlesD',
+  // articlesE
+  'bocatoma-caudal-riego-colombia': 'articlesE',
+  'estudio-hidrologico-decreto-1807': 'articlesE',
+  'hec-ras-1d-vs-2d-colombia': 'articlesE',
+  'ptar-industrial-colombia': 'articlesE',
+  'ingeniero-hidraulico-para-mi-proyecto': 'articlesE',
+  'retiro-quebrada-construccion-colombia': 'articlesE',
+  'que-necesito-para-urbanizar-un-lote-colombia': 'articlesE',
+  'estudios-car-corpocaldas-colombia': 'articlesE',
+  // articlesF
+  'cuanto-cuesta-estudio-hidrologico': 'articlesF',
+  'requisitos-ptar-licencia-construccion': 'articlesF',
+  'estudio-hidraulico-urbanizacion': 'articlesF',
+  'calcular-caudal-diseno-alcantarillado': 'articlesF',
+  'diseno-ptap-municipio-costos': 'articlesF',
+  'modelacion-hec-ras-colombia': 'articlesF',
+  'plan-manejo-aguas-lluvias-colombia': 'articlesF',
+  'diferencias-ptar-ptap': 'articlesF',
+  'permiso-vertimientos-colombia': 'articlesF',
+  'estudio-amenaza-inundacion': 'articlesF',
+  'socavacion-puentes-hec18-colombia': 'articlesF',
+  'condicion-aguas-abajo-hec-ras': 'articlesF',
+  'modelacion-avenidas-torrenciales-colombia': 'articlesF',
+  // articlesG
+  'diseno-hidraulico-urbanizaciones': 'articlesG',
+  'hec-ras-modelado-fluvial-introduccion': 'articlesG',
+  'caso-red-hidrosanitaria-vivienda': 'articlesG',
+  // articlesH
+  'estudio-hidrologico-cuencas-paso-a-paso': 'articlesH',
+  'normativa-icontec-hidraulica-colombia': 'articlesH',
+  'tuberias-pvc-vs-pe-colombia': 'articlesH',
+  'calculo-caudal-diseno-acueducto-rural-colombia': 'articlesH',
+  'tramitar-concesion-aguas-colombia-guia': 'articlesH',
+  'cuanto-cuesta-diseno-acueducto-colombia-2026': 'articlesH',
+  'requisitos-car-acueducto-veredal-colombia': 'articlesH',
+  'como-formular-proyecto-agua-potable-sgr-colombia': 'articlesH',
+  // articlesI
+  'diferencia-ptap-ptar-colombia': 'articlesI',
+  'estudio-inundabilidad-lote-colombia': 'articlesI',
+  'diseno-red-contra-incendio-nsr10-colombia': 'articlesI',
+  'que-es-pomca-colombia-para-que-sirve': 'articlesI',
+  'interventoria-obras-hidraulicas-colombia': 'articlesI',
+  // articlesJ
+  'cuanto-cuesta-ptap-colombia-2026': 'articlesJ',
+  'cuanto-cuesta-ptar-aguas-residuales-colombia': 'articlesJ',
+  'tramitar-licencia-construccion-acueducto-colombia': 'articlesJ',
+  'vida-util-acueducto-rural-colombia': 'articlesJ',
+  'que-es-concesion-de-aguas-colombia': 'articlesJ',
+  // articlesK
+  'acueducto-multiveredal-colombia': 'articlesK',
+  'estudio-hidrologico-colombia-que-es': 'articlesK',
+  'proyecto-acueducto-sgr-paso-a-paso': 'articlesK',
+  'diferencia-bocatoma-captacion-aguas-colombia': 'articlesK',
+  'cuando-contratar-ingeniero-hidraulico-colombia': 'articlesK',
+  // articlesL
+  'costo-estudio-hec-ras-colombia-2026': 'articlesL',
+  'documentos-para-contratar-diseno-acueducto-veredal': 'articlesL',
+  // articlesM
+  'caudales-diseno-acueducto-ras-2017': 'articlesM',
+  'materiales-tuberia-acueducto-rural-colombia': 'articlesM',
+  'conexiones-domiciliarias-acueducto-veredal': 'articlesM',
+  'irca-calidad-agua-potable-colombia': 'articlesM',
+  'mapas-inundacion-colombia-pomca-pot': 'articlesM',
+  // articlesN
+  'interventoria-hidraulica-obligaciones-costos-colombia': 'articlesN',
+  'presupuesto-diseno-ptap-veredal-colombia-2026': 'articlesN',
+  'modelacion-hidraulica-pomca-colombia': 'articlesN',
+  'indice-edificabilidad-colombia-calculo-ejemplo': 'articlesN',
+  'normas-tecnicas-diseno-acueductos-colombia-ras-2017': 'articlesN',
+  // articlesO
+  'cuanto-cuesta-sistema-contra-incendios-nsr10-colombia': 'articlesO',
+  'tramites-licencia-ambiental-construccion-colombia': 'articlesO',
+  'estudio-suelos-torres-edificios-colombia': 'articlesO',
+  'diseno-aguas-lluvias-cubierta-colegio-colombia': 'articlesO',
+}
+
+// ─── ARTICLE CONTENT (inline — kept in this chunk) ──────────────────────────
+const INLINE_ARTICLES: ArticleBatch = {
 
     'suds-sistemas-drenaje-sostenible-colombia': {
           title: 'SUDS en Colombia: Drenaje Sostenible para Ciudades de Montaña',
@@ -297,22 +424,6 @@ const ARTICLES: Record<string, {
       <p>La normativa hidráulica en Colombia es estable pero su aplicación es cada vez más rigurosa. Los proyectos que no cumplen con RAS 2017, Decreto 1807 y NSR-10 desde el diseño enfrentan observaciones, retrasos en licencias y sobrecostos en obra. Invertir en consultoría técnica de calidad desde la prefactibilidad es la forma más eficiente de evitar estos problemas.</p>
     </>
   },
-  ...articles1,
-  ...articlesA,
-  ...articlesB,
-  ...articlesC,
-  ...articlesD,
-  ...articlesE,
-  ...articlesF,
-  ...articlesG,
-  ...articlesH,
-  ...articlesI,
-  ...articlesJ,
-  ...articlesK,
-  ...articlesL,
-  ...articlesM,
-  ...articlesN,
-  ...articlesO,
 }
 
 // ─── SERVICE LINKS PER ARTICLE ──────────────────────────────────────────────
@@ -449,7 +560,30 @@ function ArticleBody({ body }: { body: React.ReactNode }) {
 export default function BlogDetail() {
   const [, params] = useRoute('/blog/:slug')
   const slug = params?.slug || ''
-  const article = ARTICLES[slug]
+
+  const [article, setArticle] = useState<Article | null | undefined>(undefined)
+
+  // Load article: inline immediately, batch articles via dynamic import
+  useEffect(() => {
+    const inline = INLINE_ARTICLES[slug]
+    if (inline !== undefined) {
+      setArticle(inline)
+      return
+    }
+
+    const batchName = SLUG_BATCH_MAP[slug]
+    if (!batchName) {
+      setArticle(null)
+      return
+    }
+
+    let cancelled = false
+    setArticle(undefined)
+    BATCH_LOADERS[batchName]().then(batch => {
+      if (!cancelled) setArticle(batch[slug] ?? null)
+    })
+    return () => { cancelled = true }
+  }, [slug])
 
   // SEO configuration for the article
   const seoConfig: SEOConfig | null = article ? {
