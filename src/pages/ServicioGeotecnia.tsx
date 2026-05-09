@@ -6,8 +6,8 @@ const WA = '573024778910'
 const WA_MSG = encodeURIComponent('Hola, quiero cotizar Estudios Geotécnicos y de Suelos')
 
 const seoConfig = {
-  title: 'Estudio de Suelos para Construcción | Eje Cafetero y Colombia',
-  description: 'Estudio de suelos para licencia de construcción en Pereira, Eje Cafetero y Colombia. Torres, edificios y obras. NSR-10 Título H. COPNIA. Cotiza hoy.',
+  title: 'Estudios Geotécnicos Colombia — Suelos NSR-10 Taludes | BIC',
+  description: 'Estudios geotécnicos y de suelos en Colombia. NSR-10, estabilidad de taludes, capacidad portante. Proyectos de construcción e hidráulicos. COPNIA. Consulta.',
   keywords: [
     'estudios geotécnicos Colombia',
     'estudio de suelos Colombia',
@@ -41,6 +41,66 @@ const PARA_QUIEN = [
   { tipo: 'Interventores y revisores técnicos', desc: 'Revisión de estudios geotécnicos presentados por contratistas. Verificación de la exploración mínima requerida, ensayos realizados y parámetros utilizados en el diseño de cimentaciones.' },
 ]
 
+const ESTUDIOS_BIC = [
+  {
+    num: '1',
+    titulo: 'Estudio de suelos para cimentaciones (NSR-10 Capítulo H)',
+    items: [
+      'Perforación exploratoria y ensayos SPT',
+      'Análisis de capacidad portante y asentamientos',
+      'Recomendación de tipo de cimentación (zapatas, pilotes, platea)',
+      'Requerido para licencias de construcción en todo tipo de edificaciones',
+    ],
+  },
+  {
+    num: '2',
+    titulo: 'Estabilidad de taludes y laderas',
+    items: [
+      'Análisis de factores de seguridad (métodos Bishop, Fellenius, Morgenstern-Price)',
+      'Identificación de zonas de movimiento en masa',
+      'Diseño de obras de estabilización: muros de contención, anclajes, geomallas',
+      'Requerido en proyectos viales, hidráulicos y POT/POMCA',
+    ],
+  },
+  {
+    num: '3',
+    titulo: 'Estudios de riesgo geológico para POT y licencias',
+    items: [
+      'Zonificación de amenaza por movimientos en masa',
+      'Evaluación de aptitud urbanística del predio',
+      'Requerido por curadurías en zonas de ladera (Caldas, Eje Cafetero)',
+    ],
+  },
+  {
+    num: '4',
+    titulo: 'Investigación de subsuelo para obras hidráulicas',
+    items: [
+      'Estudio de permeabilidad (ensayo Lefranc, permeámetro)',
+      'Aptitud del terreno para PTAP, PTAR, tanques enterrados',
+      'Análisis de licuación en zonas sísmicas',
+    ],
+  },
+]
+
+const FAQ_GEO = [
+  {
+    q: '¿El estudio geotécnico es obligatorio para obtener licencia de construcción?',
+    a: 'Sí. La NSR-10 Capítulo H exige un Estudio de Suelos firmado por ingeniero COPNIA para todas las edificaciones de importancia normal y especial. Las curadurías urbanas verifican su presentación antes de expedir la licencia.',
+  },
+  {
+    q: '¿Qué pasa si construyo sin estudio de suelos?',
+    a: 'La edificación queda en situación irregular, la póliza de estabilidad no aplica y en caso de accidente la responsabilidad recae directamente sobre el propietario y el constructor. Además, dificulta la venta o hipoteca del inmueble.',
+  },
+  {
+    q: '¿BIC hace las perforaciones y ensayos o solo el informe?',
+    a: 'BIC ejecuta todo el proceso: diseño del programa exploratorio, contratación de la perforación, supervisión de ensayos SPT, toma de muestras y ensayos de laboratorio, análisis y elaboración del informe final firmado por ingeniero COPNIA.',
+  },
+  {
+    q: '¿Pueden hacer el estudio geotécnico y el diseño de cimentación en el mismo contrato?',
+    a: 'Sí. Incluimos las recomendaciones de cimentación directamente en el informe, y si el cliente lo requiere, elaboramos los planos constructivos de la cimentación como un alcance adicional.',
+  },
+]
+
 const SCHEMA = {
   '@context': 'https://schema.org',
   '@type': 'Service',
@@ -65,7 +125,24 @@ export default function ServicioGeotecnia() {
     s.id = 'schema-geotecnia'
     s.textContent = JSON.stringify(SCHEMA)
     document.head.appendChild(s)
-    return () => { document.getElementById('schema-geotecnia')?.remove() }
+    const faqSchema = {
+      '@context': 'https://schema.org',
+      '@type': 'FAQPage',
+      mainEntity: FAQ_GEO.map(f => ({
+        '@type': 'Question',
+        name: f.q,
+        acceptedAnswer: { '@type': 'Answer', text: f.a },
+      })),
+    }
+    const sf = document.createElement('script')
+    sf.type = 'application/ld+json'
+    sf.id = 'schema-geotecnia-faq'
+    sf.textContent = JSON.stringify(faqSchema)
+    document.head.appendChild(sf)
+    return () => {
+      document.getElementById('schema-geotecnia')?.remove()
+      document.getElementById('schema-geotecnia-faq')?.remove()
+    }
   }, [])
 
   return (
@@ -123,6 +200,24 @@ export default function ServicioGeotecnia() {
         </div>
       </div>
 
+      {/* ── QUÉ ES ── */}
+      <Section bg="#fff" style={{ padding: '72px 24px' }}>
+        <div style={{ maxWidth: 900, margin: '0 auto' }}>
+          <SectionLabel>Definición técnica</SectionLabel>
+          <h2 style={{
+            fontFamily: "'Playfair Display', serif", fontWeight: 700, color: '#001A33',
+            fontSize: 'clamp(22px, 4vw, 32px)', marginBottom: 8,
+          }}>¿Qué es un estudio geotécnico?</h2>
+          <ThinLine mb={32} />
+          <ul style={{ fontFamily: "'Lato', sans-serif", color: '#475569', fontSize: 15, lineHeight: 1.85, paddingLeft: 24, margin: 0, display: 'flex', flexDirection: 'column', gap: 10 }}>
+            <li>Caracterización del subsuelo: tipo de suelo, estratigrafía, nivel freático</li>
+            <li>Determinación de parámetros resistentes (cohesión, fricción, compresibilidad)</li>
+            <li>Evaluación de la aptitud del terreno para cimentar o construir</li>
+            <li>Obligatorio para licencias de construcción en zonas con riesgo geológico</li>
+          </ul>
+        </div>
+      </Section>
+
       {/* ── QUÉ INCLUYE ── */}
       <Section bg="#F8FAFC" style={{ padding: '72px 24px' }}>
         <div style={{ maxWidth: 900, margin: '0 auto' }}>
@@ -152,8 +247,45 @@ export default function ServicioGeotecnia() {
         </div>
       </Section>
 
-      {/* ── PARA QUIÉN ── */}
+      {/* ── ESTUDIOS BIC ── */}
       <Section bg="#fff" style={{ padding: '72px 24px' }}>
+        <div style={{ maxWidth: 900, margin: '0 auto' }}>
+          <SectionLabel>Portafolio técnico</SectionLabel>
+          <h2 style={{
+            fontFamily: "'Playfair Display', serif", fontWeight: 700, color: '#001A33',
+            fontSize: 'clamp(22px, 4vw, 32px)', marginBottom: 8,
+          }}>Estudios que realiza BIC</h2>
+          <ThinLine mb={40} />
+          <div style={{ display: 'flex', flexDirection: 'column', gap: 20 }}>
+            {ESTUDIOS_BIC.map(e => (
+              <div key={e.num} style={{
+                background: '#F8FAFC', border: '1px solid #E2E8F0', borderRadius: 4,
+                padding: 28, borderLeft: '4px solid #17A2B8',
+              }}>
+                <div style={{ display: 'flex', alignItems: 'flex-start', gap: 16 }}>
+                  <div style={{
+                    minWidth: 36, height: 36, borderRadius: '50%',
+                    background: '#17A2B8', color: '#fff', fontWeight: 900, fontSize: 14,
+                    display: 'flex', alignItems: 'center', justifyContent: 'center', flexShrink: 0,
+                  }}>{e.num}</div>
+                  <div>
+                    <h3 style={{
+                      fontFamily: "'Montserrat', sans-serif", fontWeight: 700, color: '#001A33',
+                      fontSize: 15, marginBottom: 12,
+                    }}>{e.titulo}</h3>
+                    <ul style={{ fontFamily: "'Lato', sans-serif", color: '#475569', fontSize: 14, lineHeight: 1.7, paddingLeft: 20, margin: 0, display: 'flex', flexDirection: 'column', gap: 4 }}>
+                      {e.items.map(item => <li key={item}>{item}</li>)}
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </Section>
+
+      {/* ── PARA QUIÉN ── */}
+      <Section bg="#F8FAFC" style={{ padding: '72px 24px' }}>
         <div style={{ maxWidth: 900, margin: '0 auto' }}>
           <SectionLabel>Clientes objetivo</SectionLabel>
           <h2 style={{
@@ -164,7 +296,7 @@ export default function ServicioGeotecnia() {
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(260px, 1fr))', gap: 20 }}>
             {PARA_QUIEN.map((p) => (
               <div key={p.tipo} style={{
-                padding: 24, background: '#F8FAFC',
+                padding: 24, background: '#fff',
                 borderLeft: '3px solid #17A2B8', borderRadius: '0 4px 4px 0',
               }}>
                 <h3 style={{
@@ -177,6 +309,69 @@ export default function ServicioGeotecnia() {
               </div>
             ))}
           </div>
+        </div>
+      </Section>
+
+      {/* ── NORMATIVA ── */}
+      <Section bg="#fff" style={{ padding: '72px 24px' }}>
+        <div style={{ maxWidth: 900, margin: '0 auto' }}>
+          <SectionLabel>Marco legal</SectionLabel>
+          <h2 style={{
+            fontFamily: "'Playfair Display', serif", fontWeight: 700, color: '#001A33',
+            fontSize: 'clamp(22px, 4vw, 32px)', marginBottom: 8,
+          }}>Normativa</h2>
+          <ThinLine mb={32} />
+          <div style={{ display: 'flex', flexDirection: 'column', gap: 12 }}>
+            {[
+              { codigo: 'NSR-10 Capítulo H', desc: 'Requisitos de estudios geotécnicos para cimentaciones' },
+              { codigo: 'NSR-10 Capítulo H.3', desc: 'Suelos problemáticos' },
+              { codigo: 'Decreto 1807/2014', desc: 'Incorporación de riesgo en POT' },
+              { codigo: 'INVIAS', desc: 'Manual de Diseño Geométrico y especificaciones geotécnicas para vías' },
+              { codigo: 'SGC', desc: 'Servicio Geológico Colombiano: mapas de amenaza sísmica y geológica' },
+            ].map(n => (
+              <div key={n.codigo} style={{
+                display: 'grid', gridTemplateColumns: '200px 1fr', gap: 16, alignItems: 'center',
+                background: '#F8FAFC', borderRadius: 4, padding: '14px 20px', border: '1px solid #E2E8F0',
+              }}>
+                <div style={{
+                  background: '#003B6F', color: '#fff', borderRadius: 4,
+                  padding: '6px 10px', textAlign: 'center', fontWeight: 700, fontSize: 11,
+                }}>{n.codigo}</div>
+                <p style={{ fontFamily: "'Lato', sans-serif", color: '#444', fontSize: 14, lineHeight: 1.6, margin: 0 }}>{n.desc}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </Section>
+
+      {/* ── PRECIOS ── */}
+      <Section bg="#F8FAFC" style={{ padding: '72px 24px' }}>
+        <div style={{ maxWidth: 900, margin: '0 auto' }}>
+          <SectionLabel>Inversión orientativa</SectionLabel>
+          <h2 style={{
+            fontFamily: "'Playfair Display', serif", fontWeight: 700, color: '#001A33',
+            fontSize: 'clamp(22px, 4vw, 32px)', marginBottom: 8,
+          }}>Precios orientativos 2026</h2>
+          <ThinLine mb={32} />
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(260px, 1fr))', gap: 16 }}>
+            {[
+              { tipo: 'Estudio de suelos vivienda unifamiliar', precio: '$2.5M – $5M COP' },
+              { tipo: 'Estudio geotécnico edificio 5-10 pisos', precio: '$6M – $15M COP' },
+              { tipo: 'Estabilidad de talud vial o predial', precio: '$5M – $12M COP' },
+              { tipo: 'Estudio geotécnico para obra hidráulica', precio: '$4M – $10M COP' },
+            ].map(p => (
+              <div key={p.tipo} style={{
+                background: '#fff', border: '1px solid #E2E8F0', borderRadius: 4,
+                padding: 24, borderTop: '3px solid #17A2B8',
+              }}>
+                <p style={{ fontFamily: "'Montserrat', sans-serif", fontWeight: 600, color: '#001A33', fontSize: 14, marginBottom: 8 }}>{p.tipo}</p>
+                <p style={{ fontFamily: "'Playfair Display', serif", fontWeight: 700, color: '#17A2B8', fontSize: 22, margin: 0 }}>{p.precio}</p>
+              </div>
+            ))}
+          </div>
+          <p style={{ fontFamily: "'Lato', sans-serif", color: '#64748B', fontSize: 13, marginTop: 20, lineHeight: 1.6 }}>
+            Incluye trabajo de campo, ensayos de laboratorio, informe y recomendaciones de diseño. Precios referenciales — solicite cotización formal sin costo.
+          </p>
         </div>
       </Section>
 
@@ -209,6 +404,31 @@ export default function ServicioGeotecnia() {
                 <p style={{
                   fontFamily: "'Lato', sans-serif", color: 'rgba(255,255,255,0.72)', fontSize: 14, lineHeight: 1.65,
                 }}>{d.desc}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </Section>
+
+      {/* ── FAQ ── */}
+      <Section bg="#F8FAFC" style={{ padding: '72px 24px' }}>
+        <div style={{ maxWidth: 900, margin: '0 auto' }}>
+          <SectionLabel>Preguntas frecuentes</SectionLabel>
+          <h2 style={{
+            fontFamily: "'Playfair Display', serif", fontWeight: 700, color: '#001A33',
+            fontSize: 'clamp(22px, 4vw, 32px)', marginBottom: 8,
+          }}>Preguntas sobre estudios geotécnicos</h2>
+          <ThinLine mb={32} />
+          <div style={{ display: 'flex', flexDirection: 'column', gap: 18 }}>
+            {FAQ_GEO.map(item => (
+              <div key={item.q} style={{ background: '#fff', borderRadius: 4, padding: 26, border: '1px solid #E2E8F0' }}>
+                <h3 style={{
+                  fontFamily: "'Montserrat', sans-serif", fontWeight: 700, fontSize: 15,
+                  marginBottom: 12, color: '#002A50', lineHeight: 1.4,
+                }}>
+                  {item.q}
+                </h3>
+                <p style={{ fontFamily: "'Lato', sans-serif", color: '#555', lineHeight: 1.8, fontSize: 14, margin: 0 }}>{item.a}</p>
               </div>
             ))}
           </div>
