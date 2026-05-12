@@ -16,6 +16,7 @@ import articlesL from '../data/articlesL'
 import articlesM from '../data/articlesM'
 import articlesN from '../data/articlesN'
 import articlesO from '../data/articlesO'
+import articlesP from '../data/articlesP'
 import SEOHead from '../components/SEOHead'
 import { BlueprintBg, Tag, ThinLine, SectionLabel, Btn, Section } from '../components/ui'
 import { SEOConfig } from '../lib/seo'
@@ -313,6 +314,7 @@ const ARTICLES: Record<string, {
   ...articlesM,
   ...articlesN,
   ...articlesO,
+  ...articlesP,
 }
 
 // ─── SERVICE LINKS PER ARTICLE ──────────────────────────────────────────────
@@ -420,6 +422,22 @@ const SERVICE_LINKS: Record<string, { label: string; href: string }> = {
   // leads mayo 2026
   'estudio-suelos-torres-edificios-colombia':          { label: 'Estudios Geotécnicos y de Suelos',           href: '/servicios/geotecnia' },
   'diseno-aguas-lluvias-cubierta-colegio-colombia':   { label: 'Redes Aguas Lluvias y Hidrosanitarias',      href: '/servicios/redes-hidrosanitarias' },
+  // articlesP — clusters de autoridad SEO (modelación hidráulica, acueductos, geotecnia, PTAP, aguas lluvias)
+  'caudal-diseno-quebradas-torrenciales-colombia':     { label: 'Modelación Hidráulica HEC-RAS 2D',           href: '/servicios/modelacion-hidraulica' },
+  'espolones-obras-proteccion-riberas-rios-colombia':  { label: 'Modelación Hidráulica HEC-RAS 2D',           href: '/servicios/modelacion-hidraulica' },
+  'zonificacion-riesgo-inundacion-municipios-colombia':{ label: 'Modelación Hidráulica HEC-RAS 2D',           href: '/servicios/modelacion-hidraulica' },
+  'diseno-acueducto-rural-colombia-paso-a-paso':       { label: 'Diseño de Acueductos Colombia',              href: '/servicios/diseno-acueductos' },
+  'seleccion-bomba-centrifuga-acueducto-colombia':     { label: 'Diseño de Acueductos Colombia',              href: '/servicios/diseno-acueductos' },
+  'redes-distribucion-agua-potable-calculos-hidraulicos': { label: 'Diseño de Acueductos Colombia',           href: '/servicios/diseno-acueductos' },
+  'ensayo-spt-interpretacion-capacidad-portante':      { label: 'Estudios Geotécnicos y de Suelos',           href: '/servicios/geotecnia' },
+  'clasificacion-suelos-sucs-colombia-ejemplos':       { label: 'Estudios Geotécnicos y de Suelos',           href: '/servicios/geotecnia' },
+  'estudio-suelos-edificio-multifamiliar-requisitos-nsr10': { label: 'Estudios Geotécnicos NSR-10',           href: '/servicios/geotecnia' },
+  'procesos-potabilizacion-agua-colombia-resolucion-0330': { label: 'Diseño PTAP Colombia',                   href: '/servicios/diseno-ptap' },
+  'diseno-floculadores-sedimentadores-ptap':           { label: 'Diseño PTAP Colombia',                       href: '/servicios/diseno-ptap' },
+  'ptap-compacta-municipios-rurales-colombia':         { label: 'Diseño PTAP Colombia',                       href: '/servicios/diseno-ptap' },
+  'calculo-caudal-aguas-lluvias-cubierta-edificio':    { label: 'Redes Hidrosanitarias y Aguas Lluvias',      href: '/servicios/redes-hidrosanitarias' },
+  'sistemas-drenaje-aguas-lluvias-colegios-colombia':  { label: 'Redes Hidrosanitarias y Aguas Lluvias',      href: '/servicios/redes-hidrosanitarias' },
+  'ras-2000-titulo-d-alcantarillado-pluvial-guia':     { label: 'Redes Hidrosanitarias y Aguas Lluvias',      href: '/servicios/redes-hidrosanitarias' },
 }
 
 // Canonical override: estos artículos apuntan su canonical a la página de servicio
