@@ -23,6 +23,11 @@ import { SEOConfig } from '../lib/seo'
 
 const WA = '573024778910'
 
+// Slugs que NO deben indexarse — atraen audiencia incorrecta (estudiantes, no clientes)
+const NOINDEX_SLUGS = new Set([
+  'indice-edificabilidad-colombia-calculo-ejemplo',
+])
+
 // ─── ARTICLE CONTENT ────────────────────────────────────────────────────────
 const ARTICLES: Record<string, {
   title: string; date: string; readTime: string; category: string
@@ -475,7 +480,8 @@ export default function BlogDetail() {
     description: article.metaDesc,
     keywords: article.keywords.split(', '),
     ogType: 'article',
-    canonical: CANONICAL_OVERRIDES[slug] ?? `https://ingenieriabernal.co/blog/${slug}`
+    canonical: CANONICAL_OVERRIDES[slug] ?? `https://ingenieriabernal.co/blog/${slug}`,
+    noindex: NOINDEX_SLUGS.has(slug)
   } : null
 
   useEffect(() => {

@@ -277,6 +277,11 @@ const routes = [
   { path: 'blog/ras-2000-titulo-d-alcantarillado-pluvial-guia', title: 'RAS 2000 Título D: Guía para Diseño de Alcantarillado Pluvial | BIC', desc: 'Criterios del RAS 2000 Título D para diseño de alcantarillado pluvial en Colombia: período de retorno, velocidades mínimas y máximas, Manning, pozos de inspección y conexiones domiciliarias pluviales.', url: 'https://ingenieriabernal.co/blog/ras-2000-titulo-d-alcantarillado-pluvial-guia' },
 ];
 
+// Slugs de blog que NO deben indexarse (atraen audiencia incorrecta)
+const NOINDEX_PATHS = new Set([
+  'blog/indice-edificabilidad-colombia-calculo-ejemplo',
+]);
+
 // Páginas redirigidas (canonical apunta a la URL definitiva)
 const REDIRECT_PAGES = {
   'servicios/acueducto-alcantarillado': 'https://ingenieriabernal.co/servicios/diseno-acueductos',
@@ -311,7 +316,10 @@ for (const [fromPath, toUrl] of Object.entries(REDIRECT_PAGES)) {
 }
 
 for (const route of routes) {
-  const html = injectMeta(baseHtml, route);
+  let html = injectMeta(baseHtml, route);
+  if (NOINDEX_PATHS.has(route.path)) {
+    html = html.replace(/<meta name="robots" content="[^"]*"/, '<meta name="robots" content="noindex, follow"');
+  }
   const dir = join(distDir, route.path);
   mkdirSync(dir, { recursive: true });
   writeFileSync(join(dir, 'index.html'), html, 'utf-8');

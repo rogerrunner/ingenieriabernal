@@ -17,6 +17,7 @@ export interface SEOConfig {
   ogImage?: string;
   ogType?: string;
   canonical?: string;
+  noindex?: boolean;
 }
 
 export const defaultSEO: SEOConfig = {
@@ -491,7 +492,7 @@ export function generateMetaTags(seo: SEOConfig, url?: string) {
     "twitter:description": seo.description,
     "twitter:image": seo.ogImage || "https://ingenieriabernal.co/og-image.svg",
     "author": "Rogerio Bernal",
-    "robots": "index, follow",
+    "robots": seo.noindex ? "noindex, follow" : "index, follow",
     "viewport": "width=device-width, initial-scale=1.0",
     "language": "Spanish"
   };
