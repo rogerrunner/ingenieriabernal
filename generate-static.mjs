@@ -280,6 +280,9 @@ const routes = [
 // Slugs de blog que NO deben indexarse (atraen audiencia incorrecta)
 const NOINDEX_PATHS = new Set([
   'blog/indice-edificabilidad-colombia-calculo-ejemplo',
+  'blog/ras-2000-colombia',
+  'blog/diferencias-ptar-ptap',
+  'blog/ronda-hidrica-colombia',
 ]);
 
 // Páginas redirigidas (canonical apunta a la URL definitiva)

@@ -6,8 +6,8 @@ const WA = '573024778910'
 const WA_MSG = encodeURIComponent('Hola, quiero cotizar un Estudio de Suelos en Pereira')
 
 const seoConfig = {
-  title: 'Estudio de Suelos en Pereira — NSR-10 | BIC',
-  description: 'Realizamos estudios de suelos en Pereira según NSR-10. Informe geotécnico completo para licencia de construcción en Risaralda. +57 302 477 8910',
+  title: 'Estudio de Suelos en Pereira — NSR-10 para Licencia | BIC COPNIA',
+  description: 'Estudio de suelos en Pereira para licencia de construcción: capacidad portante, perfil estratigráfico y memoria NSR-10. Entrega rápida. COPNIA. +57 302 477 8910',
   keywords: [
     'estudio de suelos Pereira',
     'estudio geotécnico Pereira',

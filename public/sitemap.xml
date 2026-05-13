@@ -82,7 +82,7 @@
 
   <!-- Páginas regionales SEO -->
   <url><loc>https://ingenieriabernal.co/regional/manizales</loc><lastmod>2026-04-15</lastmod><changefreq>monthly</changefreq><priority>0.92</priority></url>
-  <url><loc>https://ingenieriabernal.co/regional/pereira</loc><lastmod>2026-04-15</lastmod><changefreq>monthly</changefreq><priority>0.90</priority></url>
+  <url><loc>https://ingenieriabernal.co/regional/pereira</loc><lastmod>2026-05-13</lastmod><changefreq>weekly</changefreq><priority>1.0</priority></url>
   <url><loc>https://ingenieriabernal.co/regional/armenia</loc><lastmod>2026-04-15</lastmod><changefreq>monthly</changefreq><priority>0.90</priority></url>
   <url><loc>https://ingenieriabernal.co/regional/eje-cafetero</loc><lastmod>2026-04-15</lastmod><changefreq>monthly</changefreq><priority>0.92</priority></url>
 
@@ -109,21 +109,21 @@
 
   <!-- Landing pages locales — Manizales -->
   <url><loc>https://ingenieriabernal.co/estudio-de-inundabilidad-manizales</loc><lastmod>2026-04-15</lastmod><changefreq>monthly</changefreq><priority>0.92</priority></url>
-  <url><loc>https://ingenieriabernal.co/estudio-de-suelos-manizales</loc><lastmod>2026-04-15</lastmod><changefreq>monthly</changefreq><priority>0.90</priority></url>
-  <url><loc>https://ingenieriabernal.co/licencia-de-construccion-manizales</loc><lastmod>2026-04-15</lastmod><changefreq>monthly</changefreq><priority>0.90</priority></url>
-  <url><loc>https://ingenieriabernal.co/estudio-de-suelos-pereira</loc><lastmod>2026-04-15</lastmod><changefreq>monthly</changefreq><priority>0.90</priority></url>
-  <url><loc>https://ingenieriabernal.co/diseno-hidraulico-manizales</loc><lastmod>2026-04-15</lastmod><changefreq>monthly</changefreq><priority>0.90</priority></url>
+  <url><loc>https://ingenieriabernal.co/estudio-de-suelos-manizales</loc><lastmod>2026-05-13</lastmod><changefreq>weekly</changefreq><priority>1.0</priority></url>
+  <url><loc>https://ingenieriabernal.co/licencia-de-construccion-manizales</loc><lastmod>2026-05-13</lastmod><changefreq>weekly</changefreq><priority>1.0</priority></url>
+  <url><loc>https://ingenieriabernal.co/estudio-de-suelos-pereira</loc><lastmod>2026-05-13</lastmod><changefreq>weekly</changefreq><priority>1.0</priority></url>
+  <url><loc>https://ingenieriabernal.co/diseno-hidraulico-manizales</loc><lastmod>2026-05-13</lastmod><changefreq>weekly</changefreq><priority>1.0</priority></url>
   <url><loc>https://ingenieriabernal.co/modelacion-hidraulica-manizales</loc><lastmod>2026-04-15</lastmod><changefreq>monthly</changefreq><priority>0.88</priority></url>
   <url><loc>https://ingenieriabernal.co/estudio-hidrologico-manizales</loc><lastmod>2026-04-15</lastmod><changefreq>monthly</changefreq><priority>0.88</priority></url>
   <url><loc>https://ingenieriabernal.co/interventoria-hidraulica-manizales</loc><lastmod>2026-04-15</lastmod><changefreq>monthly</changefreq><priority>0.88</priority></url>
-  <url><loc>https://ingenieriabernal.co/diseno-hidraulico-pereira</loc><lastmod>2026-04-15</lastmod><changefreq>monthly</changefreq><priority>0.88</priority></url>
+  <url><loc>https://ingenieriabernal.co/diseno-hidraulico-pereira</loc><lastmod>2026-05-13</lastmod><changefreq>weekly</changefreq><priority>1.0</priority></url>
   <url><loc>https://ingenieriabernal.co/estudio-de-inundabilidad-pereira</loc><lastmod>2026-04-15</lastmod><changefreq>monthly</changefreq><priority>0.88</priority></url>
   <url><loc>https://ingenieriabernal.co/licencia-de-construccion-pereira</loc><lastmod>2026-04-15</lastmod><changefreq>monthly</changefreq><priority>0.88</priority></url>
   <url><loc>https://ingenieriabernal.co/estudio-de-suelos-eje-cafetero</loc><lastmod>2026-04-15</lastmod><changefreq>monthly</changefreq><priority>0.88</priority></url>
   <url><loc>https://ingenieriabernal.co/consultoria-ingenieria-civil-manizales</loc><lastmod>2026-04-15</lastmod><changefreq>monthly</changefreq><priority>0.88</priority></url>
   <url><loc>https://ingenieriabernal.co/gestion-riesgo-hidrico-manizales</loc><lastmod>2026-04-15</lastmod><changefreq>monthly</changefreq><priority>0.88</priority></url>
   <url><loc>https://ingenieriabernal.co/diseno-hidraulico-eje-cafetero</loc><lastmod>2026-04-15</lastmod><changefreq>monthly</changefreq><priority>0.88</priority></url>
-  <url><loc>https://ingenieriabernal.co/topografia-manizales</loc><lastmod>2026-04-15</lastmod><changefreq>monthly</changefreq><priority>0.88</priority></url>
+  <url><loc>https://ingenieriabernal.co/topografia-manizales</loc><lastmod>2026-05-13</lastmod><changefreq>weekly</changefreq><priority>1.0</priority></url>
 
   <!-- Blog articles — Batch original -->
   <url><loc>https://ingenieriabernal.co/blog/suds-sistemas-drenaje-sostenible-colombia</loc><lastmod>2026-03-27</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>

@@ -7,8 +7,8 @@ const WA = '573024778910'
 const WA_MSG = encodeURIComponent('Hola, necesito un estudio de gestión del riesgo hídrico para mi proyecto')
 
 const seoConfig = {
-  title: 'Gestión del Riesgo Hídrico Colombia — Dec. 1807 | BIC',
-  description: 'Estudios de amenaza y riesgo por inundación en Colombia. Dec. 1807/2014, Ley 1523/2012, PMGR municipales. COPNIA 17202-313228 vigente. Cotiza sin costo.',
+  title: 'Estudio de Riesgo por Inundación Colombia — Decreto 1807 | BIC COPNIA',
+  description: 'Estudios de amenaza, vulnerabilidad y riesgo hídrico en Colombia para POT, licencias y SGR. Decreto 1807/2014. COPNIA 17202-313228. Cotización sin costo. ☎ +57 302 477 8910',
   keywords: [
     'gestión del riesgo hídrico Colombia',
     'estudio amenaza inundación Colombia',

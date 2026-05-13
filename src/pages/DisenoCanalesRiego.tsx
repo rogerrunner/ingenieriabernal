@@ -7,8 +7,8 @@ const WA = '573024778910'
 const WA_MSG = encodeURIComponent('Hola, necesito cotizar el diseño de un canal de riego o conducción. ¿Pueden asesorarme?')
 
 const seoConfig = {
-  title: 'Diseño de Canales de Riego Colombia — COPNIA | BIC',
-  description: 'Diseño de canales de riego y conducción en Colombia. Revestidos y en tierra, cálculo hidráulico, memoria COPNIA. Agroindustria y distritos. Cotiza sin costo.',
+  title: 'Diseño Canal de Riego Colombia — Cálculo Hidráulico COPNIA | BIC',
+  description: 'Diseño de canales de riego en Colombia: revestidos, en tierra y conducción a presión. Cálculo hidráulico, memoria técnica COPNIA. Agroindustria y distritos de riego. +57 302 477 8910',
   keywords: [
     'diseño canal de riego Colombia',
     'canal de conducción Colombia ingeniería',

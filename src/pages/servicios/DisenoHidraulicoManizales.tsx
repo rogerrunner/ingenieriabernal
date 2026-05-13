@@ -6,8 +6,8 @@ const WA = '573024778910'
 const WA_MSG = encodeURIComponent('Hola, quiero cotizar un Diseño Hidráulico en Manizales')
 
 const seoConfig = {
-  title: 'Diseño Hidráulico en Manizales — COPNIA | BIC',
-  description: 'Diseño hidráulico en Manizales: redes de acueducto, alcantarillado, canales y estructuras. BIC cumple RAS 2017 y normativa vigente. COPNIA. +57 302 477 8910',
+  title: 'Diseño Hidráulico Manizales — Acueducto, Alcantarillado y Canales | BIC',
+  description: 'Diseño hidráulico en Manizales para proyectos urbanos y licencias: redes de acueducto, alcantarillado pluvial y estructuras. RAS 2017 / COPNIA. +57 302 477 8910',
   keywords: [
     'diseño hidráulico Manizales',
     'redes acueducto Manizales',

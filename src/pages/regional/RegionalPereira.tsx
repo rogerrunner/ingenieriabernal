@@ -6,8 +6,8 @@ const WA = '573024778910'
 const WA_MSG = encodeURIComponent('Hola, quiero cotizar un proyecto de ingeniería hidráulica en Pereira')
 
 const seoConfig = {
-  title: 'Ingeniería Hidráulica Pereira — COPNIA | BIC',
-  description: 'Consultoría en ingeniería hidráulica en Pereira y Risaralda. Acueductos, CI NSR-10 y HEC-RAS. COPNIA vigente. Sector público y privado. Cotiza hoy.',
+  title: 'Ingeniero Hidráulico en Pereira — Estudio de Suelos, HEC-RAS | BIC',
+  description: 'Ingeniería hidráulica en Pereira: estudio de suelos, diseño hidrosanitario NSR-10, HEC-RAS y gestión del riesgo. COPNIA vigente. Cotización sin costo. ☎ +57 302 477 8910',
   keywords: [
     'ingeniería hidráulica Pereira',
     'consultoría acueductos Pereira',

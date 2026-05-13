@@ -6,8 +6,8 @@ const WA = '573024778910'
 const WA_MSG = encodeURIComponent('Hola, quiero asesoría técnica para mi licencia de construcción en Manizales')
 
 const seoConfig = {
-  title: 'Licencia de Construcción Manizales — COPNIA | BIC',
-  description: 'BIC prepara todos los estudios para licencia de construcción en Manizales: suelos, estructural, hidrosanitario y planos. COPNIA. Cotiza hoy. +57 302 477 8910',
+  title: 'Estudios para Licencia de Construcción en Manizales — COPNIA | BIC',
+  description: 'Todo lo que la Curaduría de Manizales pide: estudio de suelos, hidrosanitario NSR-10, planos y memorias. Respuesta en 24 h. COPNIA. ☎ +57 302 477 8910',
   keywords: [
     'licencia de construcción Manizales',
     'documentos técnicos licencia construcción',

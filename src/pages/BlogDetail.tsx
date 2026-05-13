@@ -26,6 +26,9 @@ const WA = '573024778910'
 // Slugs que NO deben indexarse — atraen audiencia incorrecta (estudiantes, no clientes)
 const NOINDEX_SLUGS = new Set([
   'indice-edificabilidad-colombia-calculo-ejemplo',
+  'ras-2000-colombia',
+  'diferencias-ptar-ptap',
+  'ronda-hidrica-colombia',
 ])
 
 // ─── ARTICLE CONTENT ────────────────────────────────────────────────────────
