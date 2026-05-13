@@ -7,8 +7,8 @@ const WA = '573024778910'
 const WA_MSG = encodeURIComponent('Hola, quiero cotizar Diseño de Acueducto — sistema de agua potable')
 
 const seoConfig = {
-  title: 'Diseño de Acueductos Colombia 2026 — RAS 2017 COPNIA | BIC',
-  description: 'Diseño técnico de acueductos rurales y urbanos en Colombia. RAS 2017, COPNIA certificado. Desde $8M COP. Eje Cafetero y nacional. Consulta gratis.',
+  title: 'Diseño de Acueducto Colombia 2026 — Bombeo y PTAP RAS 2017 | BIC COPNIA',
+  description: 'Diseño de acueductos rurales y urbanos en Colombia: captación, conducción, estaciones de bombeo y planta PTAP. RAS 2017 y Resolución 0330. COPNIA. Consulta gratis.',
   keywords: [
     'diseño acueducto Colombia',
     'diseño de acueducto',

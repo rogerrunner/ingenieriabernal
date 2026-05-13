@@ -7,8 +7,8 @@ const WA = '573024778910'
 const WA_MSG = encodeURIComponent('Hola, quiero cotizar Redes Hidrosanitarias para Edificaciones')
 
 const seoConfig = {
-  title: 'Diseño Redes Hidrosanitarias Colombia — NSR-10 | BIC',
-  description: 'Diseño de redes hidrosanitarias para edificaciones. NSR-10, RAS 2017. Memorias de cálculo, planos. Manizales y Eje Cafetero. COPNIA. Cotiza ya.',
+  title: 'Diseño Redes Hidrosanitarias — NSR-10 para Licencia de Construcción | BIC',
+  description: 'Diseño de redes hidrosanitarias para edificaciones según NSR-10: agua fría, caliente, aguas residuales y lluvias. Memorias y planos para curaduría. COPNIA. +57 302 477 8910',
   keywords: [
     'redes hidrosanitarias Colombia',
     'diseño redes hidrosanitarias',

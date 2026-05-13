@@ -244,7 +244,7 @@ const ARTICLES: Record<string, {
   'nsr-10-sistemas-contra-incendios': {
     title: 'NSR-10 Capítulos J y K: Guía Técnica para Sistemas Contra Incendios en Colombia',
     date: 'Noviembre 2025', readTime: '9 min', category: 'Normativa CI',
-    metaDesc: 'Guía técnica completa sobre NSR-10 Caps. J y K para sistemas contra incendios en edificaciones colombianas. NTC 1500, 1669, 2301. Casos reales.',
+    metaDesc: '¿Tu edificio necesita sistema contra incendios NSR-10? Requisitos Capítulos J y K, NTC 1500, 1669 y 2301. BIC COPNIA diseña tu sistema CI. Cotiza sin costo.',
     keywords: 'sistemas contra incendios NSR-10 Colombia, NTC 1500 1669 2301 diseño CI edificios',
     body: <>
       <p>Los sistemas contra incendios en Colombia están regulados por la NSR-10 (Norma Sismo Resistente) en sus Capítulos J (requisitos de protección contra incendios) y K (instalaciones hidráulicas y sanitarias), complementados por las normas técnicas colombianas NTC 1500 (Código Colombiano de Fontanería), NTC 1669 (rociadores automáticos) y NTC 2301 (hidrantes). El incumplimiento de estas normas es causal de no expedición de licencia de construcción, de clausura por el Cuerpo de Bomberos y de responsabilidad civil y penal en caso de siniestro.</p>

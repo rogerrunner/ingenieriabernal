@@ -7,8 +7,8 @@ const WA = '573024778910'
 const WA_MSG = encodeURIComponent('Hola, necesito cotizar el diseño de una bocatoma. ¿Pueden ayudarme con más información?')
 
 const seoConfig = {
-  title: 'Bocatomas Colombia — Diseño COPNIA, HEC-RAS | BIC',
-  description: 'Diseño de bocatomas laterales, frontales y de fondo en Colombia. HEC-RAS, memoria COPNIA, permisos CAR. Acueductos, riego e industria. Solicita cotización.',
+  title: 'Diseño Bocatoma Colombia — Captación de Agua RAS 2017 | BIC COPNIA',
+  description: 'Diseñamos bocatomas laterales, de fondo y frontales según RAS 2017 y Resolución 0330. Acueductos rurales, riego e industria. HEC-RAS. COPNIA vigente. +57 302 477 8910',
   keywords: [
     'diseño de bocatoma Colombia',
     'bocatoma lateral Colombia',

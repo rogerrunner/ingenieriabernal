@@ -7,8 +7,8 @@ const WA = '573024778910'
 const WA_MSG = encodeURIComponent('Hola, tengo un terreno en suelo de expansión urbana y quiero información sobre planes parciales. ¿Pueden asesorarme?')
 
 const seoConfig = {
-  title: 'Plan Parcial Colombia — Consultoría Técnica Urbanística | BIC',
-  description: 'Consultoría en planes parciales de desarrollo urbanístico en Colombia. Estudios técnicos, licencias, viabilidad hidráulica. BIC COPNIA. Solicita cotización.',
+  title: 'Estudios Técnicos para Plan Parcial Colombia — Decreto 2181 | BIC COPNIA',
+  description: 'BIC elabora los estudios técnicos exigidos en el plan parcial: hidrología, riesgo hídrico, diseño hidrosanitario y redes. Decreto 2181. COPNIA vigente. Cotización sin costo.',
   keywords: [
     'plan parcial Colombia',
     'formulación plan parcial Colombia',
