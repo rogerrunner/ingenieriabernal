@@ -6,7 +6,7 @@ const WA = '573024778910'
 const WA_MSG = encodeURIComponent('Hola, quiero cotizar un Estudio de Suelos en Pereira')
 
 const seoConfig = {
-  title: 'Estudio de Suelos en Pereira — NSR-10 para Licencia | BIC COPNIA',
+  title: 'Estudio de Suelos Pereira para Licencia de Construcción | BIC',
   description: 'Estudio de suelos en Pereira para licencia de construcción: capacidad portante, perfil estratigráfico y memoria NSR-10. Entrega rápida. COPNIA. +57 302 477 8910',
   keywords: [
     'estudio de suelos Pereira',
@@ -131,12 +131,10 @@ export default function EstudioSuelosPereira() {
             fontFamily: "'Lato', sans-serif", color: 'rgba(255,255,255,0.82)',
             fontSize: 17, lineHeight: 1.75, maxWidth: 720, marginBottom: 36,
           }}>
-            BIC Bernal Ingeniería Consultores realiza estudios de suelos en Pereira, Dosquebradas
-            y Risaralda para constructoras, propietarios y promotores de vivienda. Ejecutamos
-            perforaciones SPT, ensayos de laboratorio geotécnico y análisis de capacidad portante
-            conforme a la NSR-10 Título H. Nuestros informes están firmados por especialista con
-            COPNIA vigente y son aceptados por las curadurías de Pereira. Integramos la
-            microzonificación sísmica local y las restricciones de la CARDER en cada análisis.
+            Sin el estudio de suelos no puedes tramitar la licencia de construcción en Pereira.
+            BIC realiza estudios geotécnicos para urbanizaciones, edificios, condominios y proyectos
+            comerciales en Pereira y Risaralda — con laboratorio certificado, informe ejecutivo y
+            planos de cimentación listos para curadurías. Entrega en 3 semanas.
           </p>
           <div style={{ display: 'flex', gap: 12, flexWrap: 'wrap' }}>
             <Btn href={`https://wa.me/${WA}?text=${WA_MSG}`}>
@@ -269,6 +267,18 @@ export default function EstudioSuelosPereira() {
             fontSize: 'clamp(22px, 4vw, 32px)', marginBottom: 8,
           }}>Zonas de Pereira donde trabajamos</h2>
           <ThinLine mb={40} />
+          <div style={{ marginBottom: 36, padding: '20px 24px', background: '#EBF8FF', borderLeft: '4px solid #17A2B8', borderRadius: '0 4px 4px 0' }}>
+            <p style={{ fontFamily: "'Montserrat', sans-serif", fontWeight: 700, color: '#002A50', fontSize: 13, marginBottom: 12 }}>
+              Proyectos que atendemos:
+            </p>
+            <ul style={{ fontFamily: "'Lato', sans-serif", color: '#334155', fontSize: 14, lineHeight: 1.8, paddingLeft: 20, margin: 0 }}>
+              <li>Parcelaciones campestres y condominios privados</li>
+              <li>Edificios comerciales, industriales y de oficinas</li>
+              <li>Urbanizaciones y conjuntos residenciales</li>
+              <li>Proyectos agroindustriales con demanda hídrica</li>
+              <li>Predios con riesgo de inundación que requieren estudio técnico</li>
+            </ul>
+          </div>
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(260px, 1fr))', gap: 20 }}>
             {ZONAS.map((z) => (
               <div key={z.zona} style={{
@@ -327,14 +337,19 @@ export default function EstudioSuelosPereira() {
           }}>
             ¿Necesita estudio de suelos para su proyecto en Pereira?
           </h2>
-          <p style={{
-            fontFamily: "'Lato', sans-serif", color: 'rgba(255,255,255,0.9)',
-            fontSize: 16, lineHeight: 1.7, marginBottom: 32,
-          }}>
-            Compártanos la dirección del predio en Pereira o Risaralda, el uso del suelo y el tipo
-            de edificación proyectada. Le enviamos propuesta técnica con número de sondeos y costo
-            total en menos de 24 horas.
-          </p>
+          <div style={{ marginBottom: 32 }}>
+            <div style={{ display: 'flex', gap: 16, flexWrap: 'wrap', justifyContent: 'center', marginBottom: 20 }}>
+              <span style={{ background: 'rgba(255,255,255,0.15)', borderRadius: 4, padding: '8px 16px', fontFamily: "'Montserrat', sans-serif", fontWeight: 700, color: '#fff', fontSize: 13 }}>
+                Inversión desde $3.5M COP según alcance
+              </span>
+              <span style={{ background: 'rgba(255,255,255,0.15)', borderRadius: 4, padding: '8px 16px', fontFamily: "'Montserrat', sans-serif", fontWeight: 700, color: '#fff', fontSize: 13 }}>
+                Plazo: 3 semanas desde el anticipo del 50%
+              </span>
+            </div>
+            <p style={{ fontFamily: "'Lato', sans-serif", color: 'rgba(255,255,255,0.9)', fontSize: 15, lineHeight: 1.7, margin: 0 }}>
+              ¿Tienes el predio pero no sabes qué estudios necesitas? Escríbenos y te decimos exactamente qué necesitas para tu licencia — sin costo.
+            </p>
+          </div>
           <Btn
             href={`https://wa.me/${WA}?text=${WA_MSG}`}
             style={{ background: '#fff', color: '#17A2B8', fontSize: 15, padding: '14px 36px' }}

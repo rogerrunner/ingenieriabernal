@@ -6,7 +6,7 @@ const WA = '573024778910'
 const WA_MSG = encodeURIComponent('Hola, quiero cotizar un Diseño Hidráulico en Manizales')
 
 const seoConfig = {
-  title: 'Diseño Hidráulico Manizales — Acueducto, Alcantarillado y Canales | BIC',
+  title: 'Diseño Hidráulico Manizales para Constructoras y Promotores | BIC',
   description: 'Diseño hidráulico en Manizales para proyectos urbanos y licencias: redes de acueducto, alcantarillado pluvial y estructuras. RAS 2017 / COPNIA. +57 302 477 8910',
   keywords: [
     'diseño hidráulico Manizales',
@@ -146,11 +146,10 @@ export default function DisenoHidraulicoManizales() {
             fontFamily: "'Lato', sans-serif", color: 'rgba(255,255,255,0.82)',
             fontSize: 17, lineHeight: 1.75, maxWidth: 720, marginBottom: 36,
           }}>
-            BIC Bernal Ingeniería Consultores diseña redes de acueducto, alcantarillado pluvial y
-            sanitario, canales y estructuras hidráulicas en Manizales y Caldas. Aplicamos el
-            RAS 2000 (Resolución 0330 de 2017), la NSR-10 y los estándares de Aguas de Manizales.
-            Modelamos con EPANET, SewerGEMS y HEC-RAS para garantizar diseños verificables y
-            aprobables ante las entidades competentes.
+            Si tienes un proyecto de construcción, urbanización, parcelación o edificio comercial en
+            Manizales o Caldas, necesitas el diseño hidráulico aprobado por las entidades competentes
+            para tramitar tu licencia de construcción. BIC lo entrega listo para curadurías en 4 semanas
+            — con memorias de cálculo, planos firmados y garantía de aprobación. Registro COPNIA 17202-313228 CLD.
           </p>
           <div style={{ display: 'flex', gap: 12, flexWrap: 'wrap' }}>
             <Btn href={`https://wa.me/${WA}?text=${WA_MSG}`}>
@@ -270,6 +269,18 @@ export default function DisenoHidraulicoManizales() {
             fontSize: 'clamp(22px, 4vw, 32px)', marginBottom: 8,
           }}>Tipos de proyectos en Manizales y Caldas</h2>
           <ThinLine mb={40} />
+          <div style={{ marginBottom: 36, padding: '20px 24px', background: '#EBF8FF', borderLeft: '4px solid #17A2B8', borderRadius: '0 4px 4px 0' }}>
+            <p style={{ fontFamily: "'Montserrat', sans-serif", fontWeight: 700, color: '#002A50', fontSize: 13, marginBottom: 12 }}>
+              Proyectos que atendemos:
+            </p>
+            <ul style={{ fontFamily: "'Lato', sans-serif", color: '#334155', fontSize: 14, lineHeight: 1.8, paddingLeft: 20, margin: 0 }}>
+              <li>Parcelaciones campestres y condominios privados</li>
+              <li>Edificios comerciales, industriales y de oficinas</li>
+              <li>Urbanizaciones y conjuntos residenciales</li>
+              <li>Proyectos agroindustriales con demanda hídrica</li>
+              <li>Predios con riesgo de inundación que requieren estudio técnico</li>
+            </ul>
+          </div>
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(260px, 1fr))', gap: 20 }}>
             {PROYECTOS.map((p) => (
               <div key={p.tipo} style={{
@@ -357,14 +368,19 @@ export default function DisenoHidraulicoManizales() {
           }}>
             ¿Necesita diseño hidráulico en Manizales?
           </h2>
-          <p style={{
-            fontFamily: "'Lato', sans-serif", color: 'rgba(255,255,255,0.9)',
-            fontSize: 16, lineHeight: 1.7, marginBottom: 32,
-          }}>
-            Compártanos el tipo de proyecto (urbanización, edificio, vía, acueducto rural),
-            la ubicación en Manizales o Caldas y el número de unidades o caudal estimado.
-            Le enviamos propuesta técnica detallada en menos de 24 horas.
-          </p>
+          <div style={{ marginBottom: 32 }}>
+            <div style={{ display: 'flex', gap: 16, flexWrap: 'wrap', justifyContent: 'center', marginBottom: 20 }}>
+              <span style={{ background: 'rgba(255,255,255,0.15)', borderRadius: 4, padding: '8px 16px', fontFamily: "'Montserrat', sans-serif", fontWeight: 700, color: '#fff', fontSize: 13 }}>
+                Inversión desde $3.5M COP según alcance
+              </span>
+              <span style={{ background: 'rgba(255,255,255,0.15)', borderRadius: 4, padding: '8px 16px', fontFamily: "'Montserrat', sans-serif", fontWeight: 700, color: '#fff', fontSize: 13 }}>
+                Plazo: 3 a 4 semanas desde el anticipo del 50%
+              </span>
+            </div>
+            <p style={{ fontFamily: "'Lato', sans-serif", color: 'rgba(255,255,255,0.9)', fontSize: 15, lineHeight: 1.7, margin: 0 }}>
+              ¿Tienes el predio pero no sabes qué estudios necesitas? Escríbenos y te decimos exactamente qué necesitas para tu licencia — sin costo.
+            </p>
+          </div>
           <Btn
             href={`https://wa.me/${WA}?text=${WA_MSG}`}
             style={{ background: '#fff', color: '#17A2B8', fontSize: 15, padding: '14px 36px' }}

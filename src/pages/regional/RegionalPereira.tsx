@@ -6,7 +6,7 @@ const WA = '573024778910'
 const WA_MSG = encodeURIComponent('Hola, quiero cotizar un proyecto de ingeniería hidráulica en Pereira')
 
 const seoConfig = {
-  title: 'Ingeniero Hidráulico en Pereira — Estudio de Suelos, HEC-RAS | BIC',
+  title: 'Ingeniería en Pereira para Constructoras y Promotores — Estudios y Diseños | BIC',
   description: 'Ingeniería hidráulica en Pereira: estudio de suelos, diseño hidrosanitario NSR-10, HEC-RAS y gestión del riesgo. COPNIA vigente. Cotización sin costo. ☎ +57 302 477 8910',
   keywords: [
     'ingeniería hidráulica Pereira',
@@ -86,10 +86,11 @@ export default function RegionalPereira() {
             fontFamily: "'Lato', sans-serif", color: 'rgba(255,255,255,0.82)',
             fontSize: 17, lineHeight: 1.75, maxWidth: 720, marginBottom: 36,
           }}>
-            Atendemos proyectos de ingeniería hidráulica y sanitaria en Risaralda, con presencia
-            activa en Pereira. Diseñamos sistemas de acueducto, redes contra incendio y
-            modelaciones HEC-RAS para el sector público y privado. BIC opera desde Manizales
-            con desplazamientos ágiles a Pereira, Dosquebradas, La Virginia y toda la región.
+            Si tienes un proyecto de construcción, urbanización, parcelación o desarrollo comercial
+            en Pereira o Risaralda, BIC realiza todos los estudios e ingeniería que necesitas para
+            tramitar tu licencia: estudio de suelos, diseño hidrosanitario, acueducto, redes contra
+            incendio y gestión del riesgo hídrico. Un solo consultor. Entrega en 3 a 4 semanas.
+            COPNIA 17202-313228 CLD.
           </p>
           <div style={{ display: 'flex', gap: 12, flexWrap: 'wrap' }}>
             <Btn href={`https://wa.me/${WA}?text=${WA_MSG}`}>
@@ -111,6 +112,18 @@ export default function RegionalPereira() {
             fontSize: 'clamp(22px, 4vw, 32px)', marginBottom: 8,
           }}>¿Qué proyectos ejecutamos en la región?</h2>
           <ThinLine mb={40} />
+          <div style={{ marginBottom: 36, padding: '20px 24px', background: '#EBF8FF', borderLeft: '4px solid #17A2B8', borderRadius: '0 4px 4px 0' }}>
+            <p style={{ fontFamily: "'Montserrat', sans-serif", fontWeight: 700, color: '#002A50', fontSize: 13, marginBottom: 12 }}>
+              Proyectos que atendemos:
+            </p>
+            <ul style={{ fontFamily: "'Lato', sans-serif", color: '#334155', fontSize: 14, lineHeight: 1.8, paddingLeft: 20, margin: 0 }}>
+              <li>Parcelaciones campestres y condominios privados</li>
+              <li>Edificios comerciales, industriales y de oficinas</li>
+              <li>Urbanizaciones y conjuntos residenciales</li>
+              <li>Proyectos agroindustriales con demanda hídrica</li>
+              <li>Predios con riesgo de inundación que requieren estudio técnico</li>
+            </ul>
+          </div>
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: 20 }}>
             {SERVICIOS.map(s => (
               <a key={s.href} href={s.href} style={{ textDecoration: 'none' }}>
@@ -178,13 +191,19 @@ export default function RegionalPereira() {
           }}>
             ¿Tiene un proyecto en Pereira o Risaralda?
           </h2>
-          <p style={{
-            fontFamily: "'Lato', sans-serif", color: 'rgba(255,255,255,0.9)',
-            fontSize: 16, lineHeight: 1.7, marginBottom: 32,
-          }}>
-            Compártanos el tipo de proyecto y la entidad contratante. Enviamos propuesta
-            técnica y económica en menos de 24 horas.
-          </p>
+          <div style={{ marginBottom: 32 }}>
+            <div style={{ display: 'flex', gap: 16, flexWrap: 'wrap', justifyContent: 'center', marginBottom: 20 }}>
+              <span style={{ background: 'rgba(255,255,255,0.15)', borderRadius: 4, padding: '8px 16px', fontFamily: "'Montserrat', sans-serif", fontWeight: 700, color: '#fff', fontSize: 13 }}>
+                Inversión desde $3.5M COP según el estudio
+              </span>
+              <span style={{ background: 'rgba(255,255,255,0.15)', borderRadius: 4, padding: '8px 16px', fontFamily: "'Montserrat', sans-serif", fontWeight: 700, color: '#fff', fontSize: 13 }}>
+                Plazo: 3 a 4 semanas desde el anticipo del 50%
+              </span>
+            </div>
+            <p style={{ fontFamily: "'Lato', sans-serif", color: 'rgba(255,255,255,0.9)', fontSize: 15, lineHeight: 1.7, margin: 0 }}>
+              ¿Tienes el predio pero no sabes qué estudios necesitas? Escríbenos y te decimos exactamente qué necesitas para tu licencia — sin costo.
+            </p>
+          </div>
           <Btn
             href={`https://wa.me/${WA}?text=${WA_MSG}`}
             style={{ background: '#fff', color: '#17A2B8', fontSize: 15, padding: '14px 36px' }}
