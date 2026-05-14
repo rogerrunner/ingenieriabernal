@@ -3,28 +3,26 @@ import SEOHead from '@/components/SEOHead'
 import { BlueprintBg, SectionLabel, Btn, Section, Tag } from '@/components/ui'
 
 const WA = '573024778910'
-const WA_MSG = encodeURIComponent('Hola, necesito consultoría en obras hidráulicas: bocatoma / canal / encauzamiento / protección fluvial')
+const WA_MSG = encodeURIComponent('Hola, tengo un predio o proyecto en zona de inundación y necesito obras de protección hidráulica o un estudio de amenaza. ¿Pueden asesorarme?')
 
 const seoConfig = {
-  title: 'Diseño Obras Hidráulicas Colombia — Canales, Diques, Gaviones | BIC',
-  description: 'Diseño de obras hidráulicas en Colombia: canales, diques, gaviones, disipadores. RAS 2017, NSR-10. Proyectos viales e hídricos. COPNIA. Solicita cotización.',
+  title: 'Obras de Protección contra Inundaciones Colombia — Muros, Gaviones, Box Culvert | BIC',
+  description: 'BIC diseña obras de protección contra inundaciones para proyectos privados en Colombia: muros de encauzamiento, gaviones, canalizaciones y box culvert. Para predios en zonas de amenaza media-alta. Modelación HEC-RAS 2D. COPNIA 17202-313228 CLD. Propuesta en 24 horas.',
   keywords: [
+    'obras protección inundaciones Colombia proyectos privados',
+    'diseño muro encauzamiento Colombia',
+    'gaviones protección río Colombia',
+    'box culvert Colombia diseño',
+    'protección predios inundación Colombia',
     'obras hidráulicas Colombia',
-    'diseño bocatoma Colombia',
-    'diseño canal de conducción Colombia',
-    'encauzamiento río Colombia',
-    'obra de protección fluvial Colombia',
     'dique protección inundación Colombia',
+    'encauzamiento río Colombia',
     'estructura hidráulica Colombia',
-    'obras control torrencial Colombia',
-    'gaviones Colombia diseño',
+    'obra de protección fluvial Colombia',
     'ingeniero hidráulico obras Colombia',
-    'consultor bocatoma acueducto Colombia',
-    'estudio hidrológico obra hidráulica',
-    'diseño disipador energía hidráulica',
-    'obras río Colombia ingeniería',
     'HEC-RAS diseño obra hidráulica',
-    'box culvert diseño Colombia',
+    'obras control torrencial Colombia',
+    'diseño bocatoma Colombia',
   ],
   canonical: 'https://ingenieriabernal.co/obras-hidraulicas-colombia',
 }
@@ -37,6 +35,12 @@ const STATS = [
 ]
 
 const TIPOS = [
+  {
+    icon: '🏗️',
+    tipo: 'Obras de Protección para Proyectos Privados en Zona de Riesgo',
+    desc: 'Si tu predio está en zona de amenaza media o alta por inundación, la autoridad puede condicionar o denegar la licencia de construcción o urbanismo. La solución es diseñar obras de mitigación que reduzcan el riesgo a nivel aceptable. BIC evalúa el predio con modelación HEC-RAS 2D, define el tipo de obra (muro de encauzamiento, canalización de quebrada, box culvert, dique de tierra) y entrega el diseño completo con memoria firmada COPNIA para presentar ante Planeación, la CAR y el curador. Servicio especialmente competitivo en precios para promotores y desarrolladores privados.',
+    clientes: ['Urbanizadores y promotores de plan parcial con amenaza hídrica', 'Propietarios de predios en zona inundable que buscan licencia', 'Empresas con infraestructura en zona de riesgo medio-alto', 'Constructoras con proyectos condicionados por la CAR'],
+  },
   {
     icon: '🔵',
     tipo: 'Bocatomas y Captaciones',
@@ -115,14 +119,19 @@ const PROCESO = [
 
 const CLIENTES = [
   {
+    perfil: 'Promotores y desarrolladores privados en zona de riesgo',
+    desc: 'Urbanizadores y propietarios con predios en zona de amenaza hídrica que necesitan obras de mitigación para obtener la licencia. BIC elabora el estudio de amenaza + diseño de obras en un solo contrato, reduciendo tiempos y costos.',
+    ejemplo: 'Canalización de quebrada + muro de encauzamiento para habilitar urbanización',
+  },
+  {
+    perfil: 'Propietarios en Zonas de Riesgo Hídrico',
+    desc: 'Propietarios de predios, fincas o industrias ubicadas en zonas de inundación o con ríos y quebradas en el lindero. BIC realiza el estudio de amenaza y diseña las obras de protección: diques, gaviones o encauzamientos para proteger la infraestructura.',
+    ejemplo: 'Diseño de dique de protección para planta industrial en zona inundable',
+  },
+  {
     perfil: 'Municipios y Alcaldías',
     desc: 'Obras de encauzamiento, protección fluvial, bocatomas y canales de acueducto municipal. BIC elabora el diseño técnico completo y acompaña los procesos de licitación y contratación directa con el municipio.',
     ejemplo: 'Encauzamiento de quebrada en zona urbana, bocatoma de acueducto rural',
-  },
-  {
-    perfil: 'Empresas de Servicios Públicos (ESP)',
-    desc: 'Diseño de captaciones para acueductos, rehabilitación de bocatomas existentes, diseño de canales de conducción. Entregables bajo Resolución 0330/2017 y RAS 2017 para radicación ante la Superintendencia de Servicios Públicos.',
-    ejemplo: 'Bocatoma nueva + canal de aducción para ESP municipal',
   },
   {
     perfil: 'Constructoras de Infraestructura',
@@ -138,11 +147,6 @@ const CLIENTES = [
     perfil: 'CAR y Entidades Ambientales',
     desc: 'Estudios técnicos para permisos de ocupación de cauce, concesiones de agua y planes de manejo ambiental relacionados con obras hidráulicas. BIC prepara los informes técnicos que la CAR exige para otorgar el permiso ambiental.',
     ejemplo: 'Estudios técnicos para permiso de ocupación de cauce ante Corpocaldas',
-  },
-  {
-    perfil: 'Propietarios en Zonas de Riesgo Hídrico',
-    desc: 'Propietarios de predios, fincas o industrias ubicadas en zonas de inundación o con ríos y quebradas en el lindero. BIC realiza el estudio de amenaza y diseña las obras de protección: diques, gaviones o encauzamientos para proteger la infraestructura.',
-    ejemplo: 'Diseño de dique de protección para planta industrial en zona inundable',
   },
 ]
 
@@ -291,14 +295,11 @@ export default function ObrasHidraulicasColombia() {
             fontFamily: "'Playfair Display', serif", fontWeight: 700, color: '#fff',
             fontSize: 'clamp(26px, 4.5vw, 44px)', lineHeight: 1.2, marginBottom: 24,
           }}>
-            Obras Hidráulicas en Colombia:<br />
-            <span style={{ color: '#17A2B8' }}>Bocatomas, Canales, Encauzamientos y Protección Fluvial</span>
+            Obras de Protección contra Inundaciones<br />
+            <span style={{ color: '#17A2B8' }}>Muros, Gaviones, Canalizaciones y Box Culvert para Proyectos Privados</span>
           </h1>
           <p style={{ color: 'rgba(255,255,255,0.82)', fontSize: 17, lineHeight: 1.75, marginBottom: 32, maxWidth: 740 }}>
-            BIC Bernal Ingeniería Consultores diseña obras hidráulicas mayores con modelación HEC-RAS 2D,
-            memorias de cálculo firmadas por especialista COPNIA y planos constructivos en AutoCAD.
-            Municipios, empresas de servicios públicos, constructoras y proyectos de regalías SGR
-            en todo el territorio nacional.
+            Si tu predio o proyecto está en zona de amenaza media o alta por inundación, BIC diseña las obras de protección hidráulica necesarias para habilitarlo: muros de encauzamiento, gaviones, canalizaciones de quebradas, box culvert y diques. Diseño con modelación HEC-RAS 2D, memorias firmadas COPNIA 17202-313228 CLD y planos constructivos en AutoCAD. 10 años de experiencia en obras hidráulicas para proyectos privados, municipios y constructoras en Colombia.
           </p>
           <div style={{ display: 'flex', gap: 12, flexWrap: 'wrap' }}>
             <Btn href={`https://wa.me/${WA}?text=${WA_MSG}`}>📱 Consultar sobre mi proyecto</Btn>

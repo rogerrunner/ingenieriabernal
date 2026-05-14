@@ -3,20 +3,22 @@ import SEOHead from '@/components/SEOHead'
 import { BlueprintBg, ThinLine, SectionLabel, Btn, Section, Tag } from '@/components/ui'
 
 const WA = '573024778910'
-const WA_MSG = encodeURIComponent('Hola, mi municipio necesita una PTAP. ¿Pueden ayudarnos a diseñarla y gestionar los recursos?')
+const WA_MSG = encodeURIComponent('Hola, tengo una parcelación o condominio rural y necesito el diseño de la PTAP para el acueducto privado. ¿Pueden asesorarme?')
 
 const seoConfig = {
-  title: 'PTAP para Municipios Colombia | Diseño y SGR BIC',
-  description: 'Diseño de PTAP para municipios con regalías SGR y IRCA alto en Colombia. RAS 2017, Res. 0330. BIC Eje Cafetero, cobertura nacional. Cotice.',
+  title: 'Diseño de PTAP para Acueductos Privados — Parcelaciones y Condominios | BIC',
+  description: 'BIC diseña plantas de tratamiento de agua potable (PTAP) para acueductos privados de parcelaciones, condominios y proyectos rurales-residenciales en Colombia. RAS 2017. Firmado COPNIA 17202-313228 CLD. Propuesta en 24 horas.',
   keywords: [
+    'PTAP acueducto privado Colombia',
+    'diseño PTAP parcelación Colombia',
+    'planta agua potable condominio rural Colombia',
+    'PTAP proyecto residencial rural RAS 2017',
+    'acueducto privado parcelación Colombia diseño',
     'PTAP municipios Colombia',
     'planta agua potable municipio Colombia',
-    'PTAP regalías SGR Colombia',
-    'PTAP IRCA Colombia',
     'diseño PTAP rural Colombia',
     'planta potabilizadora municipio',
     'agua potable comunidad rural Colombia',
-    'PTAP MGA-Web SGR',
     'planta tratamiento agua potable pequeño municipio',
     'PTAP veredal Colombia',
   ],
@@ -41,6 +43,16 @@ const SCHEMA = {
 
 const TIPOS = [
   {
+    icon: '🏡',
+    titulo: 'PTAP para parcelaciones y condominios privados',
+    desc: 'El caso más frecuente en proyectos rurales-residenciales de gran escala: la parcelación o condominio de más de 20 viviendas necesita su propio sistema de agua potable cuando no hay acueducto municipal disponible. BIC diseña la PTAP completa conforme al RAS 2017 — captación, planta de tratamiento y red de distribución — con planos constructivos, memoria de cálculo y manual de operación firmados COPNIA. El diseño incluye la concesión de aguas ante la CAR.',
+  },
+  {
+    icon: '🏗️',
+    titulo: 'PTAP para proyectos urbanísticos privados con fuente propia',
+    desc: 'Urbanizaciones y loteos en zona rural o periurbana donde la ESP no cubre el predio. BIC dimensiona la PTAP según el número de viviendas proyectadas, el horizonte de diseño de 25 años y la calidad del agua cruda de la fuente. Tecnología seleccionada según turbidez, color y parámetros fisicoquímicos: filtración lenta, floculación-sedimentación o planta compacta modular.',
+  },
+  {
     icon: '🏘️',
     titulo: 'PTAP para acueductos comunitarios rurales',
     desc: 'Diseño de plantas de tratamiento para acueductos comunitarios y Juntas de Acción Comunal que atienden entre 50 y 500 viviendas rurales. Tecnologías de bajo costo y fácil operación: filtros lentos, filtros de flujo ascendente y desinfección por cloración. Entrega de planos, memoria de cálculo y manual de operación firmados COPNIA.',
@@ -49,16 +61,6 @@ const TIPOS = [
     icon: '🏛️',
     titulo: 'PTAP para cabeceras municipales con IRCA alto',
     desc: 'Diagnóstico del IRCA (Índice de Riesgo de Calidad del Agua) actual y diseño del tren de tratamiento para cumplir la Resolución 2115/2007. Para municipios con IRCA en categoría de riesgo alto o muy alto, BIC diseña la PTAP completa (coagulación, floculación, sedimentación, filtración rápida, desinfección) con financiación SGR o del Ministerio de Vivienda.',
-  },
-  {
-    icon: '💰',
-    titulo: 'Formulación MGA-Web para financiación SGR',
-    desc: 'BIC elabora el proyecto de PTAP en la Metodología General Ajustada (MGA-Web) del DNP para su presentación ante el OCAD. El expediente incluye diseños firmados COPNIA, análisis de alternativas de tratamiento, estudio de calidad del agua cruda, presupuesto con APU verificable, cronograma de ejecución y plan de mantenimiento.',
-  },
-  {
-    icon: '🔧',
-    titulo: 'Supervisión técnica de construcción de PTAP',
-    desc: 'Interventoría y supervisión técnica durante la construcción de la PTAP. BIC verifica la correcta ejecución de las unidades de tratamiento conforme a los planos de diseño, realiza pruebas hidráulicas, acompaña la puesta en marcha y capacita al operador del sistema en las rutinas de mantenimiento preventivo.',
   },
 ]
 
@@ -71,16 +73,20 @@ const FINANCIACION = [
 
 const FAQ = [
   {
-    q: '¿Qué es el IRCA y por qué importa para diseñar una PTAP?',
-    a: 'El IRCA (Índice de Riesgo de Calidad del Agua para Consumo Humano) mide el grado de riesgo del agua que consume la población. Un municipio con IRCA alto o muy alto no está suministrando agua potable segura. Este indicador activa la obligación de diseñar y construir una PTAP y habilita a los municipios para acceder a recursos del SGR, el SGP y el Ministerio de Vivienda. BIC puede consultar el IRCA de cualquier municipio y evaluar qué tipo de tratamiento se requiere.',
+    q: '¿Mi parcelación o condominio necesita PTAP propia si no hay acueducto municipal?',
+    a: 'Sí, si el predio no está dentro del área de servicio de una Empresa Prestadora (ESP) del servicio de acueducto, o si la ESP no tiene la capacidad de extensión, el promotor debe diseñar y construir el acueducto privado con su propia PTAP. La Ley 142 de 1994 y el RAS 2017 regulan este tipo de sistema. BIC diseña la PTAP, la red de distribución y tramita la concesión de aguas ante la CAR en un solo proceso integrado.',
   },
   {
-    q: '¿Cuánto tiempo tarda el diseño de una PTAP para un municipio pequeño?',
-    a: 'El diseño completo de una PTAP para un municipio de nivel bajo o medio (hasta 12,500 hab) toma entre 4 y 8 semanas desde la firma del contrato y la entrega de los análisis de calidad del agua cruda. El tiempo incluye: caracterización de la fuente, diseño de las unidades de tratamiento, ensayo de jarras, planos constructivos, memoria de cálculo, presupuesto APU y, si se requiere, el formulario MGA-Web completo.',
+    q: '¿Cuánto tiempo tarda el diseño de la PTAP para una parcelación?',
+    a: 'Para una parcelación o condominio de 20 a 50 viviendas, el diseño completo toma entre 4 y 6 semanas desde la entrega del análisis de calidad del agua cruda y los datos básicos del proyecto (número de viviendas, localización). El tiempo incluye: caracterización de la fuente, diseño del tren de tratamiento con ensayo de jarras, planos constructivos, memoria de cálculo RAS 2017 y manual de operación. BIC puede adelantar la concesión de aguas en paralelo.',
   },
   {
-    q: '¿BIC puede diseñar la PTAP y también formular el proyecto para el SGR?',
-    a: 'Sí, es precisamente el valor diferencial de BIC: en un solo contrato obtenemos los diseños técnicos firmados COPNIA y formulamos el proyecto en MGA-Web del DNP para la presentación ante el OCAD. Esto evita que el municipio tenga que contratar a una firma de diseño por separado y otra de formulación, reduciendo tiempos y costos. BIC tiene contratos verificables en SECOP I con alcaldías que usaron este servicio integrado.',
+    q: '¿Qué fuentes de agua se pueden usar para el acueducto privado de una parcelación?',
+    a: 'Las más frecuentes en Colombia son: toma de río o quebrada (bocatoma de fondo o lateral), manantial (nacimiento de agua), pozo profundo o aljibes. Cada fuente requiere una concesión de aguas diferente ante la CAR. La calidad del agua cruda determina el tipo de tratamiento necesario: una fuente de montaña limpia puede requerir solo filtración y cloración; un río con turbidez alta en invierno puede necesitar planta de tratamiento completa. BIC evalúa la fuente antes de diseñar.',
+  },
+  {
+    q: '¿BIC puede diseñar la PTAP y también formular el proyecto para el SGR (para municipios)?',
+    a: 'Sí. Para municipios con IRCA alto, BIC diseña la PTAP completa firmada COPNIA y formula el proyecto en MGA-Web del DNP para presentación ante el OCAD. Esto evita contratar firma de diseño y formuladora por separado. BIC tiene contratos verificables en SECOP I con alcaldías que usaron este servicio integrado.',
   },
 ]
 
@@ -107,28 +113,26 @@ export default function ServicioPTAPColombia() {
       }}>
         <BlueprintBg opacity={0.07} />
         <div style={{ maxWidth: 920, margin: '0 auto', padding: '0 24px', position: 'relative' }}>
-          <SectionLabel light>Agua potable · Municipios</SectionLabel>
+          <SectionLabel light>Agua potable · Acueductos privados · Colombia</SectionLabel>
           <h1 style={{
             fontFamily: "'Playfair Display', serif", fontWeight: 700, color: '#fff',
             fontSize: 'clamp(26px, 4.5vw, 46px)', lineHeight: 1.2, marginBottom: 20,
           }}>
-            PTAP para Municipios en Colombia
+            Diseño de PTAP para Acueductos Privados<br />
+            <span style={{ color: '#17A2B8' }}>Parcelaciones, Condominios y Proyectos Rurales</span>
           </h1>
           <p style={{ color: '#17A2B8', fontSize: 'clamp(16px, 2.2vw, 20px)', fontWeight: 600, marginBottom: 20 }}>
-            Diseño de plantas de tratamiento + formulación SGR para municipios con IRCA alto
+            Si tu parcelación o condominio no tiene acceso al acueducto municipal, necesita su propio sistema de agua potable — BIC lo diseña conforme al RAS 2017
           </p>
           <p style={{ color: 'rgba(255,255,255,0.82)', fontSize: 16, lineHeight: 1.8, marginBottom: 28, maxWidth: 760 }}>
-            BIC diseña plantas de tratamiento de agua potable para municipios colombianos con IRCA alto,
-            acueductos comunitarios sin tratamiento y proyectos con financiación de regalías SGR,
-            Ministerio de Vivienda o FINDETER. El servicio incluye el diseño técnico firmado COPNIA
-            y la formulación del proyecto en MGA-Web del DNP. Cobertura en todo el territorio nacional.
+            BIC Bernal Ingeniería Consultores diseña plantas de tratamiento de agua potable (PTAP) para acueductos privados de parcelaciones, condominios y proyectos rurales-residenciales en Colombia. El diseño incluye la caracterización de la fuente, el tren de tratamiento dimensionado según la calidad del agua cruda, los planos constructivos, la memoria de cálculo y el manual de operación — todo firmado por especialista con COPNIA 17202-313228 CLD y 10 años de experiencia. También diseñamos para municipios con IRCA alto y formulamos proyectos en MGA-Web SGR.
           </p>
           <div style={{ display: 'flex', gap: 12, flexWrap: 'wrap', marginBottom: 24 }}>
-            <Btn href={`https://wa.me/${WA}?text=${WA_MSG}`}>📱 Cotizar PTAP para su municipio</Btn>
+            <Btn href={`https://wa.me/${WA}?text=${WA_MSG}`}>📱 Cotizar PTAP para mi proyecto</Btn>
             <Btn variant="outline" href="/diseno-ptap-colombia" dark>Ver diseño PTAP Colombia</Btn>
           </div>
           <div style={{ display: 'flex', gap: 8, flexWrap: 'wrap' }}>
-            {['IRCA', 'RAS 2017', 'MGA-Web', 'SGR', 'COPNIA', 'Min. Vivienda'].map(t => (
+            {['Acueducto privado', 'RAS 2017', 'Parcelaciones', 'Condominios', 'COPNIA 17202-313228', 'Todo Colombia'].map(t => (
               <Tag key={t} style={{ background: 'rgba(23,162,184,0.15)', color: '#7FDBEA', border: '1px solid rgba(23,162,184,0.3)', fontSize: 11 }}>{t}</Tag>
             ))}
           </div>
@@ -140,7 +144,7 @@ export default function ServicioPTAPColombia() {
         <div style={{ maxWidth: 960, margin: '0 auto', padding: '0 24px' }}>
           <SectionLabel>Tipos de PTAP</SectionLabel>
           <h2 style={{ fontFamily: "'Playfair Display', serif", fontWeight: 700, fontSize: 'clamp(22px, 3vw, 32px)', marginBottom: 12 }}>
-            ¿Qué tipo de PTAP necesita su municipio?
+            Tipos de PTAP que diseña BIC — privadas y municipales
           </h2>
           <ThinLine mb={36} />
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(260px, 1fr))', gap: 20 }}>
@@ -154,6 +158,39 @@ export default function ServicioPTAPColombia() {
                 <p style={{ color: '#555', fontSize: 14, lineHeight: 1.7, margin: 0 }}>{t.desc}</p>
               </div>
             ))}
+          </div>
+        </div>
+      </Section>
+
+      {/* ── ENTREGABLES PTAP PRIVADA ── */}
+      <Section style={{ background: '#f8f9fa' }}>
+        <div style={{ maxWidth: 880, margin: '0 auto', padding: '0 24px' }}>
+          <SectionLabel>¿Qué entrega BIC?</SectionLabel>
+          <h2 style={{ fontFamily: "'Playfair Display', serif", fontWeight: 700, fontSize: 'clamp(22px, 3vw, 32px)', marginBottom: 24 }}>
+            Entregables del diseño de PTAP para acueducto privado
+          </h2>
+          <div style={{ display: 'flex', flexDirection: 'column', gap: 12, marginBottom: 36 }}>
+            {[
+              { item: 'Estudio de calidad del agua cruda', detail: 'Análisis fisicoquímico y microbiológico de la fuente de captación. Determinación del tren de tratamiento requerido según RAS 2017 y Decreto 1575/2007.' },
+              { item: 'Diseño del tren de tratamiento', detail: 'Dimensionamiento hidráulico de cada unidad: coagulación, floculación, sedimentación, filtración y desinfección. Cálculo de dosificación de reactivos.' },
+              { item: 'Planos constructivos en AutoCAD', detail: 'Planos de planta, cortes, detalles estructurales e hidráulicos de cada unidad. Perfil hidráulico del sistema desde captación hasta red de distribución.' },
+              { item: 'Memoria de cálculo firmada COPNIA', detail: 'Documento técnico completo con toda la metodología de diseño conforme al RAS 2017 Título C. Firmado y sellado con matrícula COPNIA 17202-313228 CLD vigente.' },
+              { item: 'Manual de operación y mantenimiento', detail: 'Guía de operación para el operador del sistema: rutinas de mantenimiento preventivo, dosis de reactivos, control de calidad del agua tratada.' },
+              { item: 'Estudio de concesión de aguas', detail: 'Soporte hidrológico para la solicitud de concesión ante la CAR: oferta hídrica, caudal ecológico y caudal concesionado según el Decreto 1076/2015.' },
+            ].map((e, i) => (
+              <div key={e.item} style={{ background: '#fff', border: '1px solid #e2e8f0', borderRadius: 10, padding: '16px 20px', display: 'grid', gridTemplateColumns: '36px 1fr', gap: 14, alignItems: 'start' }}>
+                <div style={{ width: 30, height: 30, borderRadius: '50%', background: 'linear-gradient(135deg, #17A2B8, #0d8fa3)', color: '#fff', fontWeight: 700, fontSize: 13, display: 'flex', alignItems: 'center', justifyContent: 'center', flexShrink: 0 }}>{String(i + 1).padStart(2, '0')}</div>
+                <div>
+                  <p style={{ fontWeight: 700, fontSize: 14, color: '#002A50', margin: '0 0 4px' }}>{e.item}</p>
+                  <p style={{ color: '#555', fontSize: 13, lineHeight: 1.7, margin: 0 }}>{e.detail}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+          <div style={{ background: '#e6f7ff', borderRadius: 10, padding: '16px 20px', border: '1px solid #b3e0ea' }}>
+            <p style={{ color: '#003B6F', fontSize: 14, lineHeight: 1.7, margin: 0 }}>
+              <strong>Inversión orientativa:</strong> PTAP para parcelación de 20–50 viviendas: <strong>$18M – $35M COP</strong> · Plazo: 4 a 6 semanas. PTAP para 50–200 viviendas: <strong>$30M – $60M COP</strong> · Plazo: 6 a 10 semanas. BIC envía propuesta técnica y económica detallada en 24 horas sin costo. COPNIA 17202-313228 CLD — 10 años en consultoría hidráulica.
+            </p>
           </div>
         </div>
       </Section>
@@ -226,16 +263,15 @@ export default function ServicioPTAPColombia() {
       }}>
         <BlueprintBg opacity={0.05} />
         <div style={{ position: 'relative', maxWidth: 720, margin: '0 auto' }}>
-          <div style={{ fontSize: 40, marginBottom: 16 }}>🏛️</div>
+          <div style={{ fontSize: 40, marginBottom: 16 }}>💧</div>
           <h2 style={{
             fontFamily: "'Playfair Display', serif", fontWeight: 700,
             color: '#fff', fontSize: 'clamp(22px, 3.5vw, 36px)', marginBottom: 16, lineHeight: 1.25,
           }}>
-            ¿Su municipio necesita una PTAP?
+            ¿Tu proyecto necesita acueducto privado con PTAP?
           </h2>
           <p style={{ color: 'rgba(255,255,255,0.82)', fontSize: 16, lineHeight: 1.8, marginBottom: 32 }}>
-            Indíquenos el municipio, el caudal requerido y la fuente de financiación disponible.
-            BIC le envía propuesta técnica en menos de 24 horas, sin costo.
+            Cuéntanos el número de viviendas proyectadas, la ubicación del predio y la fuente de agua disponible. BIC te envía propuesta técnica y económica en menos de 24 horas, sin costo. COPNIA 17202-313228 CLD — 10 años en consultoría hidráulica.
           </p>
           <div style={{ display: 'flex', gap: 14, justifyContent: 'center', flexWrap: 'wrap' }}>
             <a

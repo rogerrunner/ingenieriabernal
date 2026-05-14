@@ -4,33 +4,55 @@ import SchemaMarkup from '@/components/SchemaMarkup'
 import { BlueprintBg, SectionLabel, Btn, Section, Tag } from '@/components/ui'
 
 const WA = '573024778910'
-const WA_MSG = encodeURIComponent('Hola, tengo un terreno en suelo de expansión urbana y quiero información sobre planes parciales. ¿Pueden asesorarme?')
+const WA_MSG = encodeURIComponent('Hola, tengo un predio en suelo de expansión y necesito el estudio de gestión del riesgo por inundaciones para mi plan parcial. ¿Pueden asesorarme sobre el alcance y el costo?')
 
 const seoConfig = {
-  title: 'Estudios Técnicos para Plan Parcial Colombia — Decreto 2181 | BIC COPNIA',
-  description: 'BIC elabora los estudios técnicos exigidos en el plan parcial: hidrología, riesgo hídrico, diseño hidrosanitario y redes. Decreto 2181. COPNIA vigente. Cotización sin costo.',
+  title: 'Gestión del Riesgo para Plan Parcial — Estudio de Inundaciones | BIC',
+  description: 'BIC elabora el estudio de detalle de gestión del riesgo por inundación que exige el Decreto 1807 para planes parciales en Colombia. Sin este estudio no se aprueba el plan parcial. COPNIA 17202-313228 CLD. Propuesta en 24 horas.',
   keywords: [
+    'gestión riesgo inundaciones plan parcial Colombia',
+    'estudio detalle amenaza inundación plan parcial',
+    'plan parcial Colombia gestión del riesgo',
+    'estudio amenaza plan parcial Decreto 1807',
+    'plan parcial zona inundable Colombia',
+    'formulación plan parcial zona amenaza hídrica',
     'plan parcial Colombia',
-    'formulación plan parcial Colombia',
     'consultoría plan parcial Colombia',
-    'plan parcial suelo expansión urbana',
+    'plan parcial suelo expansión Colombia',
+    'promotor urbanizador plan parcial riesgo hídrico',
     'empresa plan parcial Colombia',
     'plan parcial Ley 388 Colombia',
     'plan parcial Manizales',
     'plan parcial Pereira Colombia',
     'plan parcial Caldas',
     'cargas y beneficios urbanismo Colombia',
-    'plan parcial tramitar Colombia',
-    'plan parcial ingeniero Colombia',
-    'formulador plan parcial Eje Cafetero',
-    'qué es un plan parcial Colombia',
-    'plan parcial adoptado Colombia',
-    'consultor urbanismo plan parcial',
   ],
   canonical: 'https://ingenieriabernal.co/plan-parcial-colombia',
 }
 
+const ENTREGABLES_RIESGO = [
+  { item: 'Estudio hidrológico HEC-HMS', detail: 'Caudales de diseño para T=100 años según Decreto 1807/2014. Curvas IDF del IDEAM y caracterización morfométrica de la cuenca.' },
+  { item: 'Modelación hidráulica HEC-RAS 2D', detail: 'Mancha de inundación georeferenciada para el predio y el polígono del plan parcial. Perfiles de lámina de agua, velocidades y tirantes.' },
+  { item: 'Zonificación de amenaza y riesgo', detail: 'Mapa digital en MAGNA-SIRGAS con delimitación de zonas de amenaza alta, media y baja. Aceptado por Planeación, CAR y curadurías urbanas.' },
+  { item: 'Medidas de gestión del riesgo', detail: 'Propuesta de obras de mitigación, cotas mínimas de piso, retiros de cauce y restricciones de uso incorporadas al documento del plan parcial.' },
+  { item: 'Informe técnico firmado COPNIA 17202-313228 CLD', detail: 'Documento completo para presentar ante Planeación municipal, la CAR y la curaduría urbana. Firmado y sellado por especialista con matrícula vigente.' },
+]
+
+const PROYECTOS_APLICA = [
+  { icon: '🏗️', tipo: 'Urbanización en llanura de inundación', desc: 'Predios planos cerca de ríos o quebradas que el POT clasifica con amenaza media o alta. Frecuente en municipios de valle: Pereira, Armenia, Ibagué, La Dorada, Palmira.' },
+  { icon: '🏢', tipo: 'Desarrollo comercial en zona hídrica', desc: 'Centros comerciales, bodegas o parques industriales en suelo de expansión con presencia de cauces o historial de inundaciones. El estudio de riesgo es obligatorio antes del concepto de Planeación.' },
+  { icon: '🏘️', tipo: 'Plan parcial residencial con restricción', desc: 'El POT clasifica el suelo como expansión urbana pero incluye restricciones por rondas hídricas o amenazas que el plan parcial debe gestionar explícitamente.' },
+  { icon: '🌿', tipo: 'Gran proyecto en zona POMCA', desc: 'Predios dentro de la zona de ordenación de una cuenca (POMCA) adoptada por la CAR donde el manejo del riesgo hídrico es condición previa a la concertación.' },
+]
+
 const TIPOS_PP = [
+  {
+    icon: '🌿',
+    tipo: 'Plan Parcial en Zona de Expansión con Amenaza Hídrica',
+    desc: 'El tipo más complejo y el de mayor volumen en Colombia. Muchos suelos de expansión urbana tienen restricciones por amenaza de inundación, remoción en masa o cercanía a fuentes hídricas. El Decreto 1807 de 2014 exige que el plan parcial incluya un estudio de detalle de amenaza y riesgo, el mapa de zonificación aprobado y las medidas de gestión que el desarrollo debe adoptar. Sin este componente, Planeación no puede emitir concepto favorable. BIC integra el análisis hidrológico-hidráulico completo directamente en la formulación del plan parcial.',
+    clientes: 'Urbanizadores, promotores inmobiliarios y propietarios de suelo en expansión con fuentes hídricas en el polígono o en las inmediaciones',
+    ejemplos: ['Urbanizaciones cerca de ríos con amenaza alta o media', 'Desarrollos en llanuras de inundación con POT restrictivo', 'Planes parciales en zonas POMCA adoptado por la CAR'],
+  },
   {
     icon: '🏘️',
     tipo: 'Plan Parcial Residencial',
@@ -161,57 +183,138 @@ export default function PlanParcialColombia() {
       }}>
         <BlueprintBg opacity={0.07} />
         <div style={{ maxWidth: 920, margin: '0 auto', padding: '0 24px', position: 'relative' }}>
-          <SectionLabel light>Urbanismo y desarrollo urbano · Colombia</SectionLabel>
+          <SectionLabel light>Gestión del riesgo hídrico · Planes parciales Colombia</SectionLabel>
           <h1 style={{
             fontFamily: "'Playfair Display', serif", fontWeight: 700, color: '#fff',
             fontSize: 'clamp(26px, 4.5vw, 46px)', lineHeight: 1.2, marginBottom: 20,
           }}>
-            Plan Parcial Colombia — Asesoría Técnica y Formulación
+            Gestión del Riesgo para Plan Parcial<br />
+            <span style={{ color: '#90CDF4' }}>Estudio de Inundaciones — Decreto 1807</span>
           </h1>
           <p style={{ color: '#90CDF4', fontSize: 'clamp(16px, 2.2vw, 20px)', fontWeight: 600, marginBottom: 20 }}>
-            Del suelo bruto al decreto de adopción — consultoría técnica especializada en Ley 388/97
+            Sin el estudio de detalle de gestión del riesgo, la autoridad ambiental no aprueba tu plan parcial — BIC lo elabora en 4 a 8 semanas con firma COPNIA
           </p>
           <p style={{ color: 'rgba(255,255,255,0.82)', fontSize: 16, lineHeight: 1.8, marginBottom: 32, maxWidth: 760 }}>
-            BIC Bernal Ingeniería Consultores formula y tramita planes parciales en Colombia para suelo
-            de expansión urbana residencial, mixto e industrial. Nuestro trabajo incluye el diagnóstico
-            del POT, los estudios técnicos de soporte (servicios públicos, movilidad, riesgo),
-            la formulación del modelo de ocupación y el cálculo de cargas y beneficios,
-            el acompañamiento en la concertación con Planeación y la CAR, y el proceso
-            hasta el decreto de adopción.
+            Si tu predio en suelo de expansión tiene amenaza de inundación, el Decreto 1807 de 2014 exige un estudio de detalle antes de que Planeación municipal emita concepto sobre el plan parcial. Sin este estudio el plan parcial no avanza. BIC Bernal Ingeniería Consultores elabora el estudio hidrológico-hidráulico completo, la zonificación de amenaza y riesgo, y las medidas de gestión incorporadas al plan parcial — todo firmado por especialista con COPNIA 17202-313228 CLD y 10 años de experiencia en consultoría hidráulica para grandes proyectos privados en Colombia.
           </p>
           <div style={{ display: 'flex', gap: 12, flexWrap: 'wrap', marginBottom: 28 }}>
-            <Btn href={`https://wa.me/${WA}?text=${WA_MSG}`}>📱 Consultar viabilidad de mi terreno</Btn>
-            <Btn variant="outline" href="/licencia-de-urbanismo" dark>Licencia de urbanismo</Btn>
+            <Btn href={`https://wa.me/${WA}?text=${WA_MSG}`}>📱 Necesito el estudio para mi plan parcial</Btn>
+            <Btn variant="outline" href="/gestion-riesgo-hidrico" dark>Gestión del riesgo hídrico</Btn>
           </div>
           <div style={{ display: 'flex', gap: 8, flexWrap: 'wrap' }}>
-            {['Ley 388/97','Suelo de expansión','Cargas y beneficios','Concertación Planeación','Decreto de adopción','Toda Colombia'].map(t => (
+            {['Decreto 1807/2014','Gestión del riesgo','Plan parcial','HEC-RAS 2D','COPNIA 17202-313228','Toda Colombia'].map(t => (
               <Tag key={t} style={{ background: 'rgba(144,205,244,0.15)', color: '#90CDF4', border: '1px solid rgba(144,205,244,0.3)', fontSize: 11 }}>{t}</Tag>
             ))}
           </div>
         </div>
       </section>
 
-      {/* ── ADVERTENCIA LEGAL VALOR ── */}
-      <section style={{ background: '#FFF8E1', borderBottom: '3px solid #F59E0B' }}>
-        <div style={{ maxWidth: 860, margin: '0 auto', padding: '24px 24px' }}>
-          <p style={{ color: '#92400E', fontSize: 15, lineHeight: 1.7, margin: 0, fontWeight: 500 }}>
-            <strong>Importante:</strong> En Colombia, el suelo de expansión urbana NO puede desarrollarse sin un plan parcial adoptado previamente por el municipio.
-            Intentar solicitar una licencia de urbanismo en suelo de expansión sin plan parcial genera rechazo de plano en la curaduría.
-            BIC verifica la viabilidad del plan parcial antes de iniciar cualquier proceso.
+      {/* ── URGENCIA: DECRETO 1807 ── */}
+      <section style={{ background: '#FFF3CD', borderBottom: '3px solid #F59E0B' }}>
+        <div style={{ maxWidth: 860, margin: '0 auto', padding: '22px 24px' }}>
+          <p style={{ color: '#7B3F00', fontSize: 15, lineHeight: 1.7, margin: 0, fontWeight: 500 }}>
+            <strong>Si tu predio está en zona de amenaza media o alta por inundación:</strong> el Decreto 1807 de 2014 obliga a presentar un estudio de detalle de gestión del riesgo antes de que Planeación emita concepto sobre el plan parcial. Sin ese estudio el plan no puede adoptarse. BIC determina en la primera consulta si tu proyecto lo requiere — orientación sin costo.
           </p>
         </div>
       </section>
 
-      {/* ── TIPOS ── */}
+      {/* ── GESTIÓN DEL RIESGO EN EL PLAN PARCIAL ── */}
       <Section>
+        <div style={{ maxWidth: 960, margin: '0 auto', padding: '0 24px' }}>
+          <SectionLabel>El componente que más frena al promotor</SectionLabel>
+          <h2 style={{ fontFamily: "'Playfair Display', serif", fontWeight: 700, fontSize: 'clamp(22px, 3vw, 34px)', marginBottom: 12 }}>
+            ¿Para qué tipo de proyecto aplica el estudio de gestión del riesgo?
+          </h2>
+          <p style={{ color: '#555', lineHeight: 1.75, marginBottom: 36, maxWidth: 780 }}>
+            Cualquier plan parcial cuyo polígono incluya o colinde con zonas de amenaza hídrica alta o media requiere el estudio antes de concertar con Planeación. Estos son los casos más frecuentes que BIC atiende:
+          </p>
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(260px, 1fr))', gap: 20 }}>
+            {PROYECTOS_APLICA.map(p => (
+              <div key={p.tipo} style={{ background: '#fff', border: '1px solid #e2e8f0', borderRadius: 12, padding: 24, borderTop: '4px solid #2E75B6' }}>
+                <div style={{ fontSize: 28, marginBottom: 10 }}>{p.icon}</div>
+                <h3 style={{ fontWeight: 700, fontSize: 15, color: '#1A3A6B', marginBottom: 8 }}>{p.tipo}</h3>
+                <p style={{ color: '#555', fontSize: 14, lineHeight: 1.75, margin: 0 }}>{p.desc}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </Section>
+
+      {/* ── QUÉ ENTREGA BIC ── */}
+      <Section style={{ background: '#f8f9fa' }}>
+        <div style={{ maxWidth: 880, margin: '0 auto', padding: '0 24px' }}>
+          <SectionLabel>Entregables del estudio</SectionLabel>
+          <h2 style={{ fontFamily: "'Playfair Display', serif", fontWeight: 700, fontSize: 'clamp(22px, 3vw, 34px)', marginBottom: 12 }}>
+            ¿Qué entrega BIC para el estudio de gestión del riesgo del plan parcial?
+          </h2>
+          <p style={{ color: '#555', lineHeight: 1.75, marginBottom: 28, maxWidth: 760 }}>
+            Todos los documentos necesarios para que Planeación, la CAR y la curaduría acepten el componente de riesgo del plan parcial.
+          </p>
+          <div style={{ display: 'flex', flexDirection: 'column', gap: 12 }}>
+            {ENTREGABLES_RIESGO.map((e, i) => (
+              <div key={e.item} style={{ background: '#fff', border: '1px solid #e2e8f0', borderRadius: 12, padding: '18px 22px', display: 'grid', gridTemplateColumns: '40px 1fr', gap: 16, alignItems: 'start' }}>
+                <div style={{ width: 36, height: 36, borderRadius: '50%', background: 'linear-gradient(135deg, #2E75B6, #1A3A6B)', color: '#fff', fontWeight: 900, fontSize: 14, display: 'flex', alignItems: 'center', justifyContent: 'center', flexShrink: 0 }}>{String(i + 1).padStart(2, '0')}</div>
+                <div>
+                  <p style={{ fontWeight: 700, fontSize: 15, color: '#1A3A6B', margin: '0 0 5px' }}>{e.item}</p>
+                  <p style={{ color: '#555', fontSize: 14, lineHeight: 1.7, margin: 0 }}>{e.detail}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </Section>
+
+      {/* ── INVERSIÓN Y PLAZO ── */}
+      <Section>
+        <div style={{ maxWidth: 860, margin: '0 auto', padding: '0 24px' }}>
+          <SectionLabel>Inversión y plazo</SectionLabel>
+          <h2 style={{ fontFamily: "'Playfair Display', serif", fontWeight: 700, fontSize: 'clamp(22px, 3vw, 32px)', marginBottom: 24, color: '#1A3A6B' }}>
+            ¿Cuánto cuesta y cuánto demora el estudio de riesgo para plan parcial?
+          </h2>
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(240px, 1fr))', gap: 16, marginBottom: 24 }}>
+            {[
+              { tipo: 'Predio urbano o expansión (área < 5 ha)', rango: '$18M – $35M COP', plazo: '4 a 6 semanas' },
+              { tipo: 'Plan parcial con polígono medio (5–20 ha)', rango: '$30M – $60M COP', plazo: '6 a 8 semanas' },
+              { tipo: 'Gran desarrollo (+20 ha, varios cauces)', rango: 'Propuesta a medida', plazo: '8 a 14 semanas' },
+            ].map(p => (
+              <div key={p.tipo} style={{ background: '#fff', border: '1px solid #e2e8f0', borderRadius: 12, padding: '20px 22px', borderLeft: '4px solid #2E75B6' }}>
+                <p style={{ fontWeight: 700, fontSize: 14, color: '#1A3A6B', marginBottom: 8 }}>{p.tipo}</p>
+                <p style={{ fontFamily: "'Playfair Display', serif", fontWeight: 700, fontSize: 22, color: '#2E75B6', margin: '0 0 4px' }}>{p.rango}</p>
+                <p style={{ color: '#666', fontSize: 13, margin: 0 }}>Plazo: {p.plazo}</p>
+              </div>
+            ))}
+          </div>
+          <div style={{ background: '#EEF2FF', borderRadius: 10, padding: '16px 20px', border: '1px solid #C7D2FE' }}>
+            <p style={{ color: '#3730A3', fontSize: 14, lineHeight: 1.7, margin: 0 }}>
+              <strong>¿Tienes un proyecto?</strong> Cuéntanos el municipio, el área del predio y si ya tienes el polígono del plan parcial definido. BIC te da una propuesta técnica y económica en menos de 24 horas, sin costo. COPNIA 17202-313228 CLD — 10 años de experiencia en consultoría hidráulica.
+            </p>
+          </div>
+        </div>
+      </Section>
+
+      {/* ── CTA INTERMEDIO ── */}
+      <section style={{ background: 'linear-gradient(90deg, #1A3A6B, #2E5599)', padding: '36px 24px' }}>
+        <div style={{ maxWidth: 800, margin: '0 auto', display: 'flex', flexWrap: 'wrap', alignItems: 'center', justifyContent: 'space-between', gap: 20 }}>
+          <div>
+            <p style={{ color: '#fff', fontWeight: 700, fontSize: 18, margin: 0 }}>¿Tiene un proyecto que necesita el estudio de riesgo?</p>
+            <p style={{ color: 'rgba(255,255,255,0.75)', fontSize: 14, margin: '4px 0 0' }}>Propuesta en 24 horas · COPNIA 17202-313228 CLD · 10 años de experiencia hidráulica</p>
+          </div>
+          <a href={`https://wa.me/${WA}?text=${WA_MSG}`} target="_blank" rel="noopener noreferrer"
+            style={{ display: 'inline-block', padding: '12px 28px', background: '#25D366', color: '#fff', borderRadius: 8, fontWeight: 700, fontSize: 15, textDecoration: 'none' }}>
+            📱 Consultar por WhatsApp
+          </a>
+        </div>
+      </section>
+
+      {/* ── TIPOS ── */}
+      <Section style={{ background: '#f8f9fa' }}>
         <div style={{ maxWidth: 960, margin: '0 auto', padding: '0 24px' }}>
           <SectionLabel>Tipos de plan parcial</SectionLabel>
           <h2 style={{ fontFamily: "'Playfair Display', serif", fontWeight: 700, fontSize: 'clamp(22px, 3vw, 34px)', marginBottom: 12 }}>
-            Tipos de plan parcial que formula BIC
+            Tipos de plan parcial que formula BIC — y su componente de riesgo
           </h2>
           <p style={{ color: '#555', lineHeight: 1.75, marginBottom: 36, maxWidth: 780 }}>
-            Cada tipo tiene características técnicas, normativas y de coordinación diferentes. BIC determina
-            el tipo de plan parcial correcto según el POT del municipio y las condiciones del predio.
+            Cada tipo tiene características técnicas, normativas y de coordinación diferentes. El primero es el de mayor complejidad hídrica. BIC determina el tipo de plan correcto según el POT y las condiciones del predio.
           </p>
           <div style={{ display: 'flex', flexDirection: 'column', gap: 20 }}>
             {TIPOS_PP.map(t => (
@@ -427,19 +530,18 @@ export default function PlanParcialColombia() {
       }}>
         <BlueprintBg opacity={0.05} />
         <div style={{ position: 'relative', maxWidth: 720, margin: '0 auto' }}>
-          <div style={{ fontSize: 40, marginBottom: 16 }}>🏙️</div>
+          <div style={{ fontSize: 40, marginBottom: 16 }}>🏗️</div>
           <h2 style={{
             fontFamily: "'Playfair Display', serif", fontWeight: 700,
             color: '#fff', fontSize: 'clamp(22px, 3.5vw, 36px)', marginBottom: 16, lineHeight: 1.25,
           }}>
-            ¿Tiene suelo de expansión urbana<br />que quiere desarrollar?
+            ¿Tiene un proyecto que necesita<br />el estudio de gestión del riesgo?
           </h2>
           <p style={{ color: 'rgba(255,255,255,0.82)', fontSize: 16, lineHeight: 1.8, marginBottom: 16 }}>
-            Cuéntenos el municipio, el área del predio y si conoce si ya existe un plan parcial
-            que lo cobije o si necesita formular uno nuevo.
+            Cuéntenos el municipio, el área del predio y si el POT identifica amenaza de inundación en la zona. BIC determina en 24 horas si necesita el estudio y cuánto cuesta.
           </p>
           <p style={{ color: '#90CDF4', fontWeight: 600, fontSize: 15, marginBottom: 32 }}>
-            BIC verifica la viabilidad del plan parcial sin costo · Propuesta de honorarios en 48 horas.
+            COPNIA 17202-313228 CLD · 10 años en consultoría hidráulica · Propuesta en 24 horas sin costo
           </p>
           <div style={{ display: 'flex', gap: 14, justifyContent: 'center', flexWrap: 'wrap' }}>
             <a href={`https://wa.me/${WA}?text=${WA_MSG}`} target="_blank" rel="noopener noreferrer"

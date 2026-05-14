@@ -4,27 +4,27 @@ import SchemaMarkup from '@/components/SchemaMarkup'
 import { BlueprintBg, ThinLine, SectionLabel, Btn, Section, Tag } from '@/components/ui'
 
 const WA = '573024778910'
-const WA_MSG = encodeURIComponent('Hola, quiero cotizar Redes Hidrosanitarias para Edificaciones')
+const WA_MSG = encodeURIComponent('Hola, tengo un proyecto de edificio comercial / hotel / centro comercial / planta industrial y necesito el diseño de redes hidrosanitarias para licencia de construcción. ¿Pueden cotizarlo?')
 
 const seoConfig = {
-  title: 'Diseño Redes Hidrosanitarias — NSR-10 para Licencia de Construcción | BIC',
-  description: 'Diseño de redes hidrosanitarias para edificaciones según NSR-10: agua fría, caliente, aguas residuales y lluvias. Memorias y planos para curaduría. COPNIA. +57 302 477 8910',
+  title: 'Redes Hidrosanitarias para Edificios Comerciales e Industriales — NSR-10 | BIC',
+  description: 'BIC diseña redes hidrosanitarias para edificios comerciales, hoteles, centros comerciales y plantas industriales en Colombia. NSR-10, RAS 2017, NTC 1500. Planos y memorias firmadas COPNIA 17202-313228 CLD para licencia de construcción. Propuesta en 24 horas.',
   keywords: [
+    'diseño hidrosanitario edificio comercial Colombia',
+    'redes hidrosanitarias hotel Colombia',
+    'hidrosanitario centro comercial Colombia NSR-10',
+    'diseño hidrosanitario planta industrial Colombia',
+    'redes hidrosanitarias licencia construcción NSR-10',
     'redes hidrosanitarias Colombia',
     'diseño redes hidrosanitarias',
-    'redes hidrosanitarias edificaciones Colombia',
     'diseño hidrosanitario edificios',
-    'redes agua fría agua caliente',
-    'diseño hidrosanitario conjunto residencial',
-    'redes aguas residuales edificio',
-    'hidrosanitario NSR-10',
-    'diseño hidrosanitario Manizales',
-    'diseño hidrosanitario comercial',
     'memoria hidrosanitaria licencia construcción',
-    'diseño fontanería Colombia',
+    'hidrosanitario NSR-10',
+    'diseño hidrosanitario comercial',
     'redes hidrosanitarias industriales',
     'diseño hidrosanitario constructoras',
     'planos hidrosanitarios COPNIA',
+    'diseño hidrosanitario Manizales',
   ],
   canonical: 'https://ingenieriabernal.co/servicios/redes-hidrosanitarias',
 }
@@ -112,19 +112,19 @@ const CONTENIDO_DISENO = [
 
 const PRECIOS_REDES = [
   {
-    tipo: 'Vivienda unifamiliar',
-    rango: '$2M – $4M COP',
-    detalle: 'Agua fría, aguas residuales y aguas lluvias. Planos y memoria firmada COPNIA. Entrega en 1 semana.',
+    tipo: 'Edificio comercial u hotel (5–15 pisos)',
+    rango: '$12M – $28M COP',
+    detalle: 'Todos los sistemas (AP, ACS, AR, AL) con isometrías completas, memorias Hunter/Hazen-Williams y CI NSR-10 si aplica. Entrega en 3–5 semanas.',
   },
   {
-    tipo: 'Edificio 5–10 pisos',
+    tipo: 'Centro comercial o planta industrial',
+    rango: '$20M – $50M COP',
+    detalle: 'Redes completas + sistema CI obligatorio NSR-10 Capítulo K. Incluye diseño de bomba jockey y bomba principal. Entrega en 4–8 semanas.',
+  },
+  {
+    tipo: 'Edificio residencial 5–10 pisos',
     rango: '$6M – $15M COP',
     detalle: 'Todos los sistemas (AP, AR, AL) con isometrías y memorias completas. Entrega en 2–3 semanas.',
-  },
-  {
-    tipo: 'Local comercial o bodega',
-    rango: '$3M – $8M COP',
-    detalle: 'Incluye diseño CI si lo exige el NSR-10. Entrega en 1–2 semanas.',
   },
 ]
 
@@ -138,10 +138,10 @@ const INCLUYE = [
 ]
 
 const PARA_QUIEN = [
-  { tipo: 'Constructoras y promotores inmobiliarios', desc: 'Diseños completos de redes hidrosanitarias para proyectos de vivienda multifamiliar, conjuntos cerrados, torres de apartamentos y urbanizaciones.' },
-  { tipo: 'Propietarios y desarrolladores de edificios comerciales', desc: 'Centros comerciales, hoteles, clínicas, colegios y edificios de oficinas que requieren redes hidrosanitarias con alta eficiencia y cumplimiento normativo.' },
-  { tipo: 'Constructoras de proyectos industriales', desc: 'Naves industriales, bodegas de logística, parques empresariales y plantas de producción con demandas especiales de agua industrial y disposición de aguas residuales.' },
-  { tipo: 'Profesionales que tramitan licencias de construcción', desc: 'Arquitectos, ingenieros y maestros de obra que necesitan la memoria hidrosanitaria firmada por especialista para completar el expediente de licencia.' },
+  { tipo: 'Promotores de edificios comerciales y hoteles', desc: 'Edificios de 4 o más pisos con uso comercial, hotelero o de servicios. La licencia de construcción exige memorias hidrosanitarias firmadas por especialista COPNIA. BIC entrega planos y memorias listos para curaduría.' },
+  { tipo: 'Desarrolladores de centros comerciales', desc: 'Centros comerciales, galerías y nodos comerciales con área mayor a 500 m². Exigen sistema contra incendios NSR-10 Capítulo K adicional al hidrosanitario. BIC diseña ambos en un solo contrato.' },
+  { tipo: 'Empresas con plantas industriales y bodegas', desc: 'Plantas de producción, parques industriales y naves logísticas que requieren redes especiales de agua industrial, sistemas de tratamiento de efluentes y CI obligatorio según NSR-10.' },
+  { tipo: 'Constructoras y promotores inmobiliarios', desc: 'Proyectos de vivienda multifamiliar, conjuntos cerrados y torres de apartamentos. Diseño completo con isometrías y memorias por cada sistema.' },
 ]
 
 const SCHEMA = {
@@ -195,23 +195,18 @@ export default function ServicioRedesHidrosanitarias() {
             fontFamily: "'Playfair Display', serif", fontWeight: 700, color: '#fff',
             fontSize: 'clamp(28px, 5vw, 44px)', lineHeight: 1.2, marginBottom: 24,
           }}>
-            Diseño de Redes Hidrosanitarias en Colombia<br />
-            <span style={{ color: '#17A2B8' }}>Residenciales, Comerciales e Industriales</span>
+            Redes Hidrosanitarias para Edificios Comerciales<br />
+            <span style={{ color: '#17A2B8' }}>Hoteles, Centros Comerciales y Plantas Industriales</span>
           </h1>
           <p style={{
             fontFamily: "'Lato', sans-serif", color: 'rgba(255,255,255,0.82)',
             fontSize: 17, lineHeight: 1.75, maxWidth: 720, marginBottom: 36,
           }}>
-            BIC Bernal Ingeniería Consultores diseña redes hidrosanitarias internas para todo tipo
-            de edificaciones en Colombia: agua fría, agua caliente, aguas residuales domésticas,
-            aguas lluvias y sistemas de reutilización. Nuestros diseños cumplen el RAS 2017, la NSR-10
-            Título I y K y la NTC 1500, entregando planos isométricos en AutoCAD, memorias de cálculo
-            firmadas por especialista COPNIA y documentación lista para trámite de licencia de
-            construcción ante cualquier curaduría urbana del país.
+            BIC diseña redes hidrosanitarias para grandes proyectos privados en Colombia: edificios comerciales de más de 4 pisos, hoteles, centros comerciales y plantas industriales. Diseño de redes hidrosanitarias para licencia de construcción conforme a NSR-10 Título I y K, RAS 2017 y NTC 1500. Planos isométricos en AutoCAD y memorias de cálculo firmadas por especialista con COPNIA 17202-313228 CLD y 10 años de experiencia — aceptados por cualquier curaduría urbana de Colombia.
           </p>
           <div style={{ display: 'flex', gap: 12, flexWrap: 'wrap' }}>
             <Btn href={`https://wa.me/${WA}?text=${WA_MSG}`}>
-              Solicitar cotización
+              📱 Cotizar diseño hidrosanitario
             </Btn>
             <Btn variant="outline" href="/memorias-hidrosanitarias-colombia" dark>
               Memorias para curaduría

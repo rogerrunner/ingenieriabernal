@@ -3,23 +3,24 @@ import SEOHead from '@/components/SEOHead'
 import { BlueprintBg, ThinLine, SectionLabel, Btn, Section, Tag } from '@/components/ui'
 
 const WA = '573024778910'
-const WA_MSG = encodeURIComponent('Hola, quiero cotizar Diseño de Acueducto y Alcantarillado')
+const WA_MSG = encodeURIComponent('Hola, tengo una urbanización o parcelación y necesito el diseño de las redes de acueducto y alcantarillado para la licencia urbanística. ¿Pueden cotizarlo?')
 
 const seoConfig = {
-  title: 'Diseño Acueducto y Alcantarillado Colombia | BIC',
-  description: 'Diseño de acueductos y alcantarillados para municipios en Colombia. RAS 2017, Res. 0330/2017, EPANET, PTAP, PTAR. COPNIA 17202-313228. Cotiza sin costo.',
+  title: 'Redes de Acueducto y Alcantarillado para Urbanizaciones y Parcelaciones | BIC',
+  description: 'BIC diseña redes de acueducto y alcantarillado para urbanizaciones, condominios y parcelaciones privadas en Colombia. RAS 2017, Resolución 0330/2017. Requerido para la licencia urbanística. COPNIA 17202-313228 CLD. Propuesta en 24 horas.',
   keywords: [
+    'diseño acueducto alcantarillado urbanización Colombia',
+    'redes acueducto parcelación Colombia',
+    'diseño alcantarillado condominio Colombia',
+    'acueducto alcantarillado licencia urbanística Colombia',
+    'redes acueducto urbanización privada RAS 2017',
     'diseño acueducto alcantarillado Colombia',
     'diseño acueducto municipal Colombia',
     'diseño alcantarillado sanitario Colombia',
     'RAS 2017 acueducto',
     'Resolución 0330 2017',
-    'redes distribución agua potable',
-    'colectores alcantarillado',
-    'diseño PTAP Colombia',
-    'diseño PTAR Colombia',
-    'acueducto rural Colombia',
-    'alcantarillado pluvial',
+    'redes distribución agua potable urbanización',
+    'alcantarillado pluvial urbanización',
     'ingeniería sanitaria Colombia',
   ],
   canonical: 'https://ingenieriabernal.co/servicios/acueducto-alcantarillado',
@@ -35,10 +36,10 @@ const INCLUYE = [
 ]
 
 const PARA_QUIEN = [
-  { tipo: 'Alcaldías y empresas de servicios públicos (ESP)', desc: 'Diseños para proyectos de inversión municipal, expansión de redes, optimización de sistemas existentes y cumplimiento de planes de saneamiento.' },
-  { tipo: 'Constructoras y urbanizadores', desc: 'Redes internas de acueducto y alcantarillado para proyectos de vivienda, urbanizaciones, conjuntos residenciales y zonas industriales.' },
-  { tipo: 'Gobernaciones y entidades territoriales', desc: 'Estudios y diseños para proyectos de agua potable y saneamiento básico financiados con regalías SGR o recursos FINDETER/Minvivienda.' },
-  { tipo: 'Interventores y supervisores técnicos', desc: 'Revisión de diseños y memorias de cálculo entregados por terceros. Verificación de cumplimiento normativo RAS 2017 y Resolución 0330.' },
+  { tipo: 'Urbanizadores y promotores de desarrollos residenciales', desc: 'El diseño de redes internas de acueducto y alcantarillado es requisito del curador urbano para expedir la licencia urbanística. BIC entrega el expediente técnico completo: memorias, planos en AutoCAD, presupuesto APU y especificaciones listas para el trámite.' },
+  { tipo: 'Promotores de parcelaciones y condominios rurales', desc: 'Parcelaciones y condominios que no tienen acceso a la red municipal y deben diseñar su propio acueducto. BIC diseña la red de distribución, la PTAP si aplica, y gestiona la concesión de aguas ante la CAR.' },
+  { tipo: 'Constructoras de proyectos comerciales e industriales', desc: 'Centros comerciales, bodegas logísticas y parques industriales que requieren redes de agua potable y alcantarillado industrial para tramitar la licencia de construcción.' },
+  { tipo: 'Alcaldías y empresas de servicios públicos (ESP)', desc: 'Diseños para proyectos de inversión municipal, expansión de redes existentes, optimización de sistemas y cumplimiento de planes de saneamiento. Formulación en MGA-Web si se requiere SGR.' },
 ]
 
 export default function ServicioAcueductoAlcantarillado() {
@@ -61,28 +62,21 @@ export default function ServicioAcueductoAlcantarillado() {
             fontFamily: "'Playfair Display', serif", fontWeight: 700, color: '#fff',
             fontSize: 'clamp(28px, 5vw, 44px)', lineHeight: 1.2, marginBottom: 24,
           }}>
-            Diseño de Acueducto y Alcantarillado<br />
-            <span style={{ color: '#17A2B8' }}>para Municipios y Constructoras en Colombia</span>
+            Redes de Acueducto y Alcantarillado<br />
+            <span style={{ color: '#17A2B8' }}>para Urbanizaciones, Condominios y Parcelaciones</span>
           </h1>
           <p style={{
             fontFamily: "'Lato', sans-serif", color: 'rgba(255,255,255,0.82)',
             fontSize: 17, lineHeight: 1.75, maxWidth: 720, marginBottom: 36,
           }}>
-            BIC Bernal Ingeniería Consultores diseña sistemas de acueducto y alcantarillado para
-            municipios, constructoras y entidades públicas con cumplimiento total del RAS 2017 y la
-            Resolución 0330/2017. Desde la captación hasta la planta de tratamiento, desde los colectores
-            sanitarios hasta el emisario final, entregamos documentación técnica completa —memorias,
-            planos, presupuestos y especificaciones— apta para licitación, contratación directa y
-            aprobación ante el Ministerio de Vivienda. Rogerio Bernal Ríos, Especialista en
-            Ingeniería Hidráulica y Ambiental (UNAL) con matrícula COPNIA 17202-313228, ha diseñado
-            sistemas de agua en más de 20 municipios del Eje Cafetero y otras regiones de Colombia.
+            El diseño de redes internas de acueducto y alcantarillado es requisito obligatorio para obtener la licencia urbanística de cualquier urbanización, condominio o parcelación en Colombia. BIC Bernal Ingeniería Consultores elabora el diseño completo conforme al RAS 2017 y la Resolución 0330/2017 — memorias, planos en AutoCAD, presupuesto APU y especificaciones técnicas — firmado por especialista con COPNIA 17202-313228 CLD y 10 años de experiencia en proyectos privados de gran escala. También diseñamos para municipios y entidades públicas.
           </p>
           <div style={{ display: 'flex', gap: 12, flexWrap: 'wrap' }}>
             <Btn href={`https://wa.me/${WA}?text=${WA_MSG}`}>
-              📱 Solicitar cotización
+              📱 Cotizar diseño de redes
             </Btn>
-            <Btn variant="outline" href="/servicios" dark>
-              Ver todos los servicios
+            <Btn variant="outline" href="/urbanizacion-colombia" dark>
+              Ingeniería para urbanizaciones
             </Btn>
           </div>
         </div>
@@ -97,6 +91,15 @@ export default function ServicioAcueductoAlcantarillado() {
           ))}
         </div>
       </div>
+
+      {/* ── URGENCIA: LICENCIA URBANÍSTICA ── */}
+      <section style={{ background: '#FFF3CD', borderBottom: '3px solid #F59E0B' }}>
+        <div style={{ maxWidth: 860, margin: '0 auto', padding: '22px 24px' }}>
+          <p style={{ color: '#7B3F00', fontSize: 15, lineHeight: 1.7, margin: 0, fontWeight: 500 }}>
+            <strong>El diseño de redes de acueducto y alcantarillado es obligatorio para la licencia urbanística:</strong> el curador urbano no puede expedir la licencia de urbanismo sin las memorias técnicas de los sistemas de agua potable y saneamiento firmadas por especialista COPNIA. BIC entrega el expediente completo aceptado por curadurías en toda Colombia. Propuesta en 24 horas sin costo.
+          </p>
+        </div>
+      </section>
 
       {/* ── QUÉ INCLUYE ── */}
       <Section bg="#F8FAFC" style={{ padding: '72px 24px' }}>
@@ -293,14 +296,13 @@ export default function ServicioAcueductoAlcantarillado() {
             fontFamily: "'Playfair Display', serif", fontWeight: 700, color: '#fff',
             fontSize: 'clamp(22px, 4vw, 34px)', marginBottom: 16,
           }}>
-            Cuéntenos su proyecto de agua y saneamiento
+            ¿Tienes un proyecto que necesita las redes de acueducto y alcantarillado?
           </h2>
           <p style={{
             fontFamily: "'Lato', sans-serif", color: 'rgba(255,255,255,0.9)',
             fontSize: 16, lineHeight: 1.7, marginBottom: 32,
           }}>
-            Indíquenos el municipio, la población a servir y la fuente de financiación prevista.
-            Le enviamos propuesta técnica y económica en 24 horas.
+            Cuéntanos el tipo de proyecto (urbanización, parcelación, comercial), el número de viviendas o el área, y el municipio. BIC te envía propuesta técnica y económica en menos de 24 horas. COPNIA 17202-313228 CLD — 10 años en consultoría hidráulica.
           </p>
           <Btn
             href={`https://wa.me/${WA}?text=${WA_MSG}`}

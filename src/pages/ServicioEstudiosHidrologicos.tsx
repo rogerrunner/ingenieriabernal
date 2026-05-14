@@ -4,28 +4,27 @@ import SchemaMarkup from '@/components/SchemaMarkup'
 import { BlueprintBg, SectionLabel, Btn, Section, Tag } from '@/components/ui'
 
 const WA = '573024778910'
-const WA_MSG = encodeURIComponent('Hola, necesito un estudio hidrológico. ¿Pueden asesorarme sobre el alcance y el costo?')
+const WA_MSG = encodeURIComponent('Hola, tengo un predio cerca de un río o quebrada y necesito el estudio de amenaza por inundación para licencia de construcción o plan parcial. ¿Pueden asesorarme?')
 
 const seoConfig = {
-  title: 'Estudios Hidrológicos Colombia — HEC-HMS Caudales Diseño | BIC',
-  description: 'Estudios hidrológicos en Colombia: caudales de diseño, análisis de crecientes, periodos de retorno. HEC-HMS, métodos estadísticos. COPNIA. Eje Cafetero y nacional.',
+  title: 'Estudio de Inundaciones y Gestión del Riesgo para Proyectos Privados | BIC',
+  description: 'BIC elabora estudios de amenaza por inundación para urbanizaciones, planes parciales y licencias de construcción en Colombia. Sin el estudio no puedes construir en zona de riesgo. Decreto 1807. COPNIA 17202-313228 CLD. Propuesta en 24 horas.',
   keywords: [
+    'estudio amenaza inundación Colombia proyectos privados',
+    'estudio inundación urbanización Colombia',
+    'estudio hidrológico plan parcial Colombia',
+    'amenaza inundación licencia construcción Decreto 1807',
+    'sin estudio no puedes construir zona riesgo Colombia',
     'estudio hidrológico Colombia',
     'estudios hidrológicos para CAR Colombia',
     'caudales de diseño Colombia',
     'curvas IDF Colombia IDEAM',
-    'estudio hidrológico licencia construcción',
     'estudio hidrológico Decreto 1807',
-    'estudio hidrológico obras hidráulicas',
-    'análisis de cuencas hidrográficas Colombia',
     'HEC-HMS Colombia ingeniería',
     'empresa estudios hidrológicos Colombia',
-    'estudio hidrológico municipios SGR',
+    'estudio hidrológico amenaza inundación Colombia',
     'estudio hidrológico Manizales Caldas',
     'firma hidrología Colombia COPNIA',
-    'estudio hidrológico bocatoma acueducto',
-    'estudio hidrológico amenaza inundación Colombia',
-    'caudal ecológico Colombia estudio',
   ],
   canonical: 'https://ingenieriabernal.co/servicios/estudios-hidrologicos',
 }
@@ -139,12 +138,12 @@ const FAQ = [
 ]
 
 const CLIENTES = [
+  { tipo: 'Promotores y urbanizadores privados', desc: 'Estudios Decreto 1807 para planes parciales y urbanizaciones en zonas con amenaza hídrica. El estudio es obligatorio antes de la aprobación del plan parcial.' },
+  { tipo: 'Empresarios con predios cerca de ríos', desc: 'Propietarios de lotes para desarrollos comerciales, industriales o residenciales de gran escala en zonas con fuentes hídricas. Sin el estudio no se puede licenciar.' },
+  { tipo: 'Constructoras e inmobiliarios', desc: 'Estudios Dec. 1807 para licencias de construcción y planes parciales en zonas con amenaza. Entregables aceptados por todas las curadurías urbanas de Colombia.' },
   { tipo: 'Municipios y Secretarías de Planeación', desc: 'POT, PMGRD, proyectos de agua y saneamiento con SGR, estudios para OCAD.' },
-  { tipo: 'Constructoras e Inmobiliarios', desc: 'Estudios Dec. 1807 para licencias, planes parciales en zonas con amenaza.' },
   { tipo: 'Empresas de Servicios Públicos (ESP)', desc: 'Concesión de aguas, diseño de bocatomas, ampliación de acueductos.' },
   { tipo: 'INVÍAS y Gobernaciones', desc: 'Hidrología para diseño de puentes, drenaje vial y obras de infraestructura.' },
-  { tipo: 'Entidades Ambientales (CAR)', desc: 'Estudios hidrológicos como soporte técnico de permisos y conceptos ambientales.' },
-  { tipo: 'Interventores y Revisores', desc: 'Revisión independiente de estudios presentados por terceros, validación de memorias.' },
 ]
 
 export default function ServicioEstudiosHidrologicos() {
@@ -172,30 +171,26 @@ export default function ServicioEstudiosHidrologicos() {
       }}>
         <BlueprintBg opacity={0.07} />
         <div style={{ maxWidth: 920, margin: '0 auto', padding: '0 24px', position: 'relative' }}>
-          <SectionLabel light>Hidrología · Colombia</SectionLabel>
+          <SectionLabel light>Amenaza por inundación · Proyectos privados · Colombia</SectionLabel>
           <h1 style={{
             fontFamily: "'Playfair Display', serif", fontWeight: 700, color: '#fff',
             fontSize: 'clamp(26px, 4.5vw, 46px)', lineHeight: 1.2, marginBottom: 20,
           }}>
-            Estudios Hidrológicos en Colombia
+            Estudio de Inundaciones y Gestión del Riesgo<br />
+            <span style={{ color: '#17A2B8' }}>para Proyectos Privados en Colombia</span>
           </h1>
           <p style={{ color: '#17A2B8', fontSize: 'clamp(16px, 2.2vw, 20px)', fontWeight: 600, marginBottom: 20 }}>
-            Para permisos CAR, licencias de construcción, diseño de obras y proyectos SGR — firmados por especialista COPNIA
+            Sin el estudio de amenaza por inundación no puedes construir en zona de riesgo — BIC lo entrega en 2 a 6 semanas firmado COPNIA
           </p>
           <p style={{ color: 'rgba(255,255,255,0.82)', fontSize: 16, lineHeight: 1.8, marginBottom: 32, maxWidth: 760 }}>
-            BIC Bernal Ingeniería Consultores realiza estudios hidrológicos en todo Colombia:
-            cálculo de caudales de diseño, curvas IDF del IDEAM, modelación HEC-HMS,
-            análisis de amenaza por inundación (Decreto 1807) y estudios de oferta hídrica
-            para concesiones de agua ante la CAR. Cada estudio viene firmado por el especialista
-            en hidrología con tarjeta profesional COPNIA vigente y es válido ante cualquier
-            autoridad ambiental, curador urbano o entidad de financiación en Colombia.
+            Si tu proyecto está cerca de un río, quebrada o en zona que el POT clasifica con amenaza media o alta, el Decreto 1807 de 2014 exige un estudio de detalle de amenaza y riesgo por inundación antes de que el curador urbano expida la licencia. BIC realiza el estudio hidrológico completo — caudales de diseño HEC-HMS, modelación HEC-RAS 2D, mapa de mancha de inundación — firmado por especialista con COPNIA 17202-313228 CLD y 10 años de experiencia en consultoría hidráulica para urbanizaciones, planes parciales y grandes desarrollos comerciales e industriales en Colombia.
           </p>
           <div style={{ display: 'flex', gap: 12, flexWrap: 'wrap', marginBottom: 28 }}>
-            <Btn href={`https://wa.me/${WA}?text=${WA_MSG}`}>📱 Cotizar estudio hidrológico</Btn>
+            <Btn href={`https://wa.me/${WA}?text=${WA_MSG}`}>📱 Cotizar estudio de inundaciones</Btn>
             <Btn variant="outline" href="/servicios/modelacion-hec-ras" dark>Modelación HEC-RAS 2D</Btn>
           </div>
           <div style={{ display: 'flex', gap: 8, flexWrap: 'wrap' }}>
-            {['Decreto 1807/2014','HEC-HMS','Curvas IDF IDEAM','Caudal ecológico','COPNIA vigente','Todo Colombia'].map(t => (
+            {['Decreto 1807/2014','HEC-HMS','HEC-RAS 2D','Urbanizaciones','Planes parciales','COPNIA 17202-313228'].map(t => (
               <Tag key={t} style={{ background: 'rgba(23,162,184,0.15)', color: '#7FDBEA', border: '1px solid rgba(23,162,184,0.3)', fontSize: 11 }}>{t}</Tag>
             ))}
           </div>
@@ -218,6 +213,15 @@ export default function ServicioEstudiosHidrologicos() {
               </div>
             ))}
           </div>
+        </div>
+      </section>
+
+      {/* ── URGENCIA: PARA PROYECTOS PRIVADOS ── */}
+      <section style={{ background: '#FFF3CD', borderBottom: '3px solid #F59E0B' }}>
+        <div style={{ maxWidth: 860, margin: '0 auto', padding: '22px 24px' }}>
+          <p style={{ color: '#7B3F00', fontSize: 15, lineHeight: 1.7, margin: 0, fontWeight: 500 }}>
+            <strong>¿Tu predio está cerca de un río, quebrada o en zona que el POT clasifica con amenaza?</strong> El curador urbano no puede expedir la licencia de construcción ni Planeación aprobar el plan parcial sin el estudio de amenaza por inundación del Decreto 1807. BIC determina si tu proyecto lo requiere en la primera consulta — orientación gratuita en 24 horas.
+          </p>
         </div>
       </section>
 
