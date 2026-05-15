@@ -5,11 +5,11 @@ const articles1: Record<string, {
 }> = {
 
   'irca-municipio-colombia': {
-    title: 'Cómo bajar el IRCA de un municipio en Colombia: guía técnica para alcaldes y ESP',
+    title: 'Índice IRCA agua potable Colombia 2026: qué significa y qué hacer si falla',
     date: 'Abril 2026',
     readTime: '10 min',
     category: 'Agua y Saneamiento',
-    metaDesc: 'Aprenda qué es el IRCA, por qué sube, cuáles son las causas más comunes en municipios colombianos y qué pasos concretos puede tomar para reducirlo. Información técnica con respaldo normativo.',
+    metaDesc: 'El IRCA mide la calidad del agua potable en Colombia según la Resolución 2115. Aprenda a interpretarlo y qué acciones exige la norma. BIC le ayuda a cumplir.',
     keywords: 'cómo bajar el IRCA de un municipio Colombia, índice de riesgo de calidad del agua IRCA, IRCA alto qué hacer Colombia, calidad agua acueducto Colombia, Decreto 1575 2007',
     body: <>
       <p>Cuando el IRCA de su municipio aparece en los reportes del INS con categoría <strong>"alto"</strong> o <strong>"inviable sanitariamente"</strong>, el problema no es solo técnico: es político, legal y de salud pública al mismo tiempo. Las multas de la Superintendencia de Servicios Públicos pueden llegar, y lo que es peor, el agua que consume la comunidad representa un riesgo real.</p>

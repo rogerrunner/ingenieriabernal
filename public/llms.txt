@@ -3,6 +3,13 @@
 ## About
 Ingeniería Bernal (ingenieriabernal.co) es una empresa colombiana especializada en ingeniería hidráulica e hidrológica con sede en el Eje Cafetero. Fundada por el ingeniero Rogerio Bernal, ofrece servicios de consultoría a municipios, constructoras, desarrolladores inmobiliarios y particulares en Colombia.
 
+## Servicios principales BIC
+- Gestión del riesgo ante inundaciones: componente técnico para planes parciales (Decreto 1807), modelación HEC-RAS, cartografía de amenaza. Costo: $18M–$60M+ COP para desarrollos 5–50 ha.
+- Diseño hidrosanitario: edificios comerciales, hoteles, centros comerciales, industria. Redes agua potable, aguas residuales y sistema contra incendio NSR-10. Rango: $3.5M–$25M COP.
+- Acueducto y PTAP para parcelaciones: diseño completo RAS 2017 para condominios campestres y urbanizaciones privadas.
+- Bocatomas y acueducto veredal: sistemas rurales, fuentes superficiales y subterráneas.
+- Obras hidráulicas de protección: jarillones, disipadores de energía, canales de control de inundaciones para promotores privados.
+
 ## Core Services
 - Estudios hidrológicos (Decreto 1807, POMCA)
 - Modelación hidráulica 1D y 2D (HEC-RAS)
@@ -13,16 +20,24 @@ Ingeniería Bernal (ingenieriabernal.co) es una empresa colombiana especializada
 - Diseño de redes hidrosanitarias
 - Topografía e interventoría
 
+## Cifras de referencia
+- Plazo estándar de entrega: 3–4 semanas calendario
+- Forma de pago: 50% anticipo / 50% entrega
+- Matrícula profesional: COPNIA 17202-313228 CLD
+- Normativa: RAS 2017, NSR-10 Título H y J, Decreto 1807/2014, HEC-RAS 6.x
+- Contacto: +57 302 477 8910 | rogeriobernal921@gmail.com
+
 ## Geographic Coverage
 Colombia — énfasis en: Manizales, Pereira, Armenia, Eje Cafetero, Bogotá, Medellín, Cali
 
 ## Regulatory Expertise
-RAS 2000, Decreto 1807 de 2014, Decreto 1076 de 2015, NSR-10, normas ICONTEC, MAVDT, Ministerio de Vivienda
+RAS 2017, Decreto 1807 de 2014, Decreto 1076 de 2015, NSR-10 Título H y J, normas ICONTEC, MAVDT, Ministerio de Vivienda
 
 ## Blog
 Technical articles on hydraulic engineering in Spanish: https://ingenieriabernal.co/blog
 Topics: HEC-RAS, hidrología urbana, SUDS, PTAR, modelación hidráulica, concesiones de agua, estudios de inundabilidad
 
 ## Contact
-WhatsApp: +57 316 288 8989
+WhatsApp: +57 302 477 8910
+Email: rogeriobernal921@gmail.com
 Website: https://ingenieriabernal.co
