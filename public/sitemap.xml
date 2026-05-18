@@ -88,6 +88,8 @@
 
   <!-- Servicios sub-páginas -->
   <url><loc>https://ingenieriabernal.co/servicios/estudio-inundabilidad-manizales</loc><lastmod>2026-04-15</lastmod><changefreq>monthly</changefreq><priority>0.90</priority></url>
+  
+  <url><loc>https://ingenieriabernal.co/servicios/topografia</loc><lastmod>2026-05-18</lastmod><changefreq>monthly</changefreq><priority>0.88</priority></url>
   <url><loc>https://ingenieriabernal.co/servicios/estudios-hidrologicos</loc><lastmod>2026-04-15</lastmod><changefreq>monthly</changefreq><priority>0.88</priority></url>
   <url><loc>https://ingenieriabernal.co/servicios/modelacion-hec-ras</loc><lastmod>2026-04-24</lastmod><changefreq>monthly</changefreq><priority>0.91</priority></url>
   <!-- /servicios/acueducto-alcantarillado — redirigida a /servicios/diseno-acueductos (consolidación) -->
@@ -148,7 +150,6 @@
   <url><loc>https://ingenieriabernal.co/blog/bocatoma-lateral-colombia</loc><lastmod>2026-04-27</lastmod><changefreq>monthly</changefreq><priority>0.80</priority></url>
 
   <!-- Batch C -->
-  <url><loc>https://ingenieriabernal.co/blog/ras-2000-colombia</loc><lastmod>2026-04-27</lastmod><changefreq>monthly</changefreq><priority>0.80</priority></url>
   <url><loc>https://ingenieriabernal.co/blog/ley-1523-riesgo-colombia</loc><lastmod>2026-04-27</lastmod><changefreq>monthly</changefreq><priority>0.80</priority></url>
   <url><loc>https://ingenieriabernal.co/blog/nsr10-titulo-j-incendios-colombia</loc><lastmod>2026-04-27</lastmod><changefreq>monthly</changefreq><priority>0.80</priority></url>
   <url><loc>https://ingenieriabernal.co/blog/pomca-colombia</loc><lastmod>2026-04-27</lastmod><changefreq>monthly</changefreq><priority>0.80</priority></url>
@@ -182,7 +183,6 @@
   <url><loc>https://ingenieriabernal.co/blog/diseno-ptap-municipio-costos</loc><lastmod>2026-04-27</lastmod><changefreq>monthly</changefreq><priority>0.80</priority></url>
   <url><loc>https://ingenieriabernal.co/blog/modelacion-hec-ras-colombia</loc><lastmod>2026-04-27</lastmod><changefreq>monthly</changefreq><priority>0.80</priority></url>
   <url><loc>https://ingenieriabernal.co/blog/plan-manejo-aguas-lluvias-colombia</loc><lastmod>2026-04-27</lastmod><changefreq>monthly</changefreq><priority>0.80</priority></url>
-  <url><loc>https://ingenieriabernal.co/blog/diferencias-ptar-ptap</loc><lastmod>2026-04-27</lastmod><changefreq>monthly</changefreq><priority>0.80</priority></url>
   <url><loc>https://ingenieriabernal.co/blog/permiso-vertimientos-colombia</loc><lastmod>2026-04-27</lastmod><changefreq>monthly</changefreq><priority>0.80</priority></url>
   <url><loc>https://ingenieriabernal.co/blog/estudio-amenaza-inundacion</loc><lastmod>2026-04-27</lastmod><changefreq>monthly</changefreq><priority>0.80</priority></url>
   <url><loc>https://ingenieriabernal.co/blog/socavacion-puentes-hec18-colombia</loc><lastmod>2026-04-30</lastmod><changefreq>monthly</changefreq><priority>0.82</priority></url>
@@ -243,10 +243,8 @@
   <url><loc>https://ingenieriabernal.co/blog/curvas-idf-colombia</loc><lastmod>2026-05-03</lastmod><changefreq>monthly</changefreq><priority>0.82</priority></url>
   <url><loc>https://ingenieriabernal.co/blog/hec-hms-colombia</loc><lastmod>2026-05-03</lastmod><changefreq>monthly</changefreq><priority>0.82</priority></url>
   <url><loc>https://ingenieriabernal.co/blog/diseno-canales-colombia</loc><lastmod>2026-05-03</lastmod><changefreq>monthly</changefreq><priority>0.82</priority></url>
-  <url><loc>https://ingenieriabernal.co/blog/ronda-hidrica-colombia</loc><lastmod>2026-05-03</lastmod><changefreq>monthly</changefreq><priority>0.82</priority></url>
   <url><loc>https://ingenieriabernal.co/blog/aforo-caudales-colombia</loc><lastmod>2026-05-03</lastmod><changefreq>monthly</changefreq><priority>0.82</priority></url>
   <url><loc>https://ingenieriabernal.co/blog/modelacion-1d-2d-colombia</loc><lastmod>2026-05-03</lastmod><changefreq>monthly</changefreq><priority>0.82</priority></url>
-  <url><loc>https://ingenieriabernal.co/blog/indice-edificabilidad-colombia-calculo-ejemplo</loc><lastmod>2026-05-03</lastmod><changefreq>monthly</changefreq><priority>0.84</priority></url>
   <url><loc>https://ingenieriabernal.co/blog/modelacion-hidraulica-pomca-colombia</loc><lastmod>2026-05-03</lastmod><changefreq>monthly</changefreq><priority>0.83</priority></url>
   <url><loc>https://ingenieriabernal.co/blog/normas-tecnicas-diseno-acueductos-colombia-ras-2017</loc><lastmod>2026-05-03</lastmod><changefreq>monthly</changefreq><priority>0.83</priority></url>
   <url><loc>https://ingenieriabernal.co/blog/presupuesto-diseno-ptap-veredal-colombia-2026</loc><lastmod>2026-05-03</lastmod><changefreq>monthly</changefreq><priority>0.83</priority></url>
