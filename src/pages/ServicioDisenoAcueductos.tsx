@@ -7,8 +7,8 @@ const WA = '573024778910'
 const WA_MSG = encodeURIComponent('Hola, quiero cotizar Diseño de Acueducto — sistema de agua potable')
 
 const seoConfig = {
-  title: 'Diseño de Acueducto Colombia 2026 — Bombeo y PTAP RAS 2017 | BIC COPNIA',
-  description: 'Diseño de acueductos rurales y urbanos en Colombia: captación, conducción, estaciones de bombeo y planta PTAP. RAS 2017 y Resolución 0330. COPNIA. Consulta gratis.',
+  title: 'Diseño de Acueducto para tu Proyecto — Rural, Urbano o Regalías SGR | BIC Colombia',
+  description: '¿Necesitas diseñar el acueducto para tu urbanización, municipio o proyecto veredal? BIC lo diseña completo: captación, conducción, bombeo y PTAP. RAS 2017, Res. 0330. Firma COPNIA. Propuesta gratis. Sin intermediarios.',
   keywords: [
     'diseño acueducto Colombia',
     'diseño de acueducto',
@@ -634,9 +634,3 @@ export default function ServicioDisenoAcueductos() {
             style={{ background: '#fff', color: '#17A2B8', fontSize: 15, padding: '14px 36px' }}
           >
             Chatear por WhatsApp
-          </Btn>
-        </div>
-      </Section>
-    </>
-  )
-}

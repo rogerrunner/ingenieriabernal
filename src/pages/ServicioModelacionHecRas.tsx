@@ -7,8 +7,8 @@ const WA = '573024778910'
 const WA_MSG = encodeURIComponent('Hola, quiero cotizar Modelación Hidráulica HEC-RAS 2D')
 
 const seoConfig = {
-  title: 'Modelación HEC-RAS Colombia — Inundabilidad | BIC',
-  description: 'Estudios de inundabilidad y modelación HEC-RAS 1D/2D para Dec. 1807, POMCA y licencias ambientales. COPNIA vigente. Manizales y Colombia. Cotiza hoy.',
+  title: 'Modelación HEC-RAS 2D para tu Proyecto — Licencias y Planes Parciales | BIC',
+  description: '¿Tu proyecto requiere modelación HEC-RAS para el Decreto 1807 o la licencia ambiental? BIC la ejecuta: 1D/2D, manchas de inundación, concepto técnico para la CAR. Más de 100 proyectos. Propuesta en 24 h.',
   keywords: [
     'modelación hidráulica HEC-RAS 2D Colombia',
     'HEC-RAS 2D Colombia',
@@ -431,10 +431,4 @@ export default function ServicioModelacionHecRas() {
             href={`https://wa.me/${WA}?text=${WA_MSG}`}
             style={{ background: '#fff', color: '#17A2B8', fontSize: 15, padding: '14px 36px' }}
           >
-            📱 Chatear por WhatsApp
-          </Btn>
-        </div>
-      </Section>
-    </>
-  )
-}
+            📱 Chatear

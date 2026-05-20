@@ -8,8 +8,8 @@ const WA = '573024778910'
 const WA_MSG = encodeURIComponent('Hola, necesito cotizar el diseño de una PTAP en Colombia. ¿Pueden ayudarme?')
 
 const seoConfig = {
-  title: 'Diseño Plantas de Tratamiento de Agua | Ingeniería Bernal',
-  description: 'Diseñamos PTAP para municipios, veredas y proyectos en Colombia y Ecuador. RAS 2017, Res. 0330/2017. Eje Cafetero y todo el país. Cotice sin costo.',
+  title: 'Diseño de PTAP para tu Proyecto — Municipio, Vereda o Urbanización | Contrata BIC',
+  description: '¿Necesitas diseñar tu planta de tratamiento de agua potable? BIC la diseña: captación, coagulación, filtración y desinfección. RAS 2017, Res. 0330. Firma COPNIA. Para municipios, regalías SGR y proyectos privados. Propuesta sin costo.',
   keywords: [
     'diseño PTAP Colombia',
     'planta tratamiento agua potable Colombia',
@@ -435,11 +435,4 @@ export default function DisenoPTAPColombia() {
                 textDecoration: 'none', border: '2px solid rgba(255,255,255,0.4)',
               }}
             >
-              Formulario de contacto
-            </a>
-          </div>
-        </div>
-      </section>
-    </>
-  )
-}
+      

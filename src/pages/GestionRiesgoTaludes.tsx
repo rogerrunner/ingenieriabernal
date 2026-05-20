@@ -6,8 +6,8 @@ const WA = '573024778910'
 const WA_MSG = encodeURIComponent('Hola, necesito estudios de gestión de riesgo en taludes o deslizamientos. ¿Pueden ayudarme?')
 
 const seoConfig = {
-  title: 'Gestión Riesgo Taludes Colombia — Deslizamientos | BIC',
-  description: 'Estudios de riesgo en taludes en Colombia: estabilidad, zonificación, deslizamientos. COPNIA vigente. Manizales, Eje Cafetero y todo el país. Cotiza hoy.',
+  title: 'Estudio de Riesgo en Taludes y Deslizamientos para tu Proyecto | Contrata BIC',
+  description: '¿Tu proyecto tiene un talud inestable o amenaza de deslizamiento? BIC elabora el estudio técnico: zonificación, estabilidad y medidas de manejo. Firma COPNIA. Para constructoras y desarrolladores en Colombia. Propuesta en 24 h.',
   keywords: [
     'gestión de riesgo taludes Colombia',
     'estabilidad de taludes Colombia',
@@ -393,11 +393,4 @@ export default function GestionRiesgoTaludes() {
               📱 Consultar por WhatsApp · +57 302 477 8910
             </a>
             <a href="/contacto" style={{ display: 'inline-block', padding: '15px 36px', background: 'transparent', color: '#fff', borderRadius: 8, fontWeight: 700, fontSize: 16, textDecoration: 'none', border: '2px solid rgba(255,255,255,0.4)' }}>
-              Formulario de contacto
-            </a>
-          </div>
-        </div>
-      </section>
-    </>
-  )
-}
+              Formulario de co

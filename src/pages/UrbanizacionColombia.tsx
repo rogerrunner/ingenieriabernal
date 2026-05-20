@@ -6,8 +6,8 @@ const WA = '573024778910'
 const WA_MSG = encodeURIComponent('Hola, quiero información sobre ingeniería para mi proyecto de urbanización en Colombia')
 
 const seoConfig = {
-  title: 'Urbanizaciones Colombia — Diseño Hidráulico | BIC',
-  description: 'BIC diseña redes hidrosanitarias, riesgo hídrico y CI para urbanizaciones en Colombia. Res. 0330/2017, Dec. 1807. COPNIA vigente. Cotice en 24 horas.',
+  title: 'Ingeniería para Urbanizaciones en Colombia — Contrata BIC | Firma COPNIA',
+  description: '¿Eres desarrollador o urbanizador? BIC entrega todos los diseños hidráulicos para tu urbanización: redes hidrosanitarias, riesgo hídrico, acueducto y alcantarillado. Dec. 1807, Res. 0330. Sin intermediarios. Propuesta en 24 h.',
   keywords: [
     'urbanización Colombia ingeniería',
     'cómo hacer una urbanización en Colombia',
@@ -484,10 +484,4 @@ export default function UrbanizacionColombia() {
               textDecoration: 'none',
             }}
           >
-            📱 Chatear por WhatsApp · +57 302 477 8910
-          </a>
-        </div>
-      </section>
-    </>
-  )
-}
+            📱 

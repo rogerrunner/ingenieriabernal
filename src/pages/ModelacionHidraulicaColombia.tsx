@@ -7,8 +7,8 @@ const WA = '573024778910'
 const WA_MSG = encodeURIComponent('Hola, necesito cotizar una modelación hidráulica en Colombia. ¿Pueden ayudarme?')
 
 const seoConfig = {
-  title: 'Modelación Hidráulica Colombia — HEC-RAS, HEC-HMS | BIC',
-  description: 'Modelación hidráulica de ríos y quebradas en Colombia. HEC-RAS 2D, HEC-HMS, SWMM. Estudios de inundación, amenaza hídrica, manejo de cuencas. COPNIA. Consulta.',
+  title: 'Modelación Hidráulica para tu Proyecto — HEC-RAS 2D, HEC-HMS | Empresa BIC Colombia',
+  description: '¿Tu proyecto requiere modelación hidráulica? BIC la ejecuta: HEC-RAS 2D, HEC-HMS, manchas de inundación y concepto Decreto 1807. Para constructoras, desarrolladores y entidades. Firma COPNIA. Propuesta en 24 h. Sin intermediarios.',
   keywords: [
     'modelación hidráulica Colombia',
     'HEC-RAS 2D Colombia',
@@ -638,11 +638,4 @@ export default function ModelacionHidraulicaColombia() {
             <a href="/modelacion-hidraulica-putumayo" style={{
               color: '#7FDBEA', fontWeight: 600, fontSize: 14, textDecoration: 'underline',
             }}>
-              Modelación hidráulica en el Putumayo →
-            </a>
-          </div>
-        </div>
-      </section>
-    </>
-  )
-}
+              Modelación hidráulica en el Put

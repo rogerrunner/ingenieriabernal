@@ -7,8 +7,8 @@ const WA = '573024778910'
 const WA_MSG = encodeURIComponent('Hola, tengo un predio en suelo de expansión y necesito el estudio de gestión del riesgo por inundaciones para mi plan parcial. ¿Pueden asesorarme sobre el alcance y el costo?')
 
 const seoConfig = {
-  title: 'Gestión del Riesgo para Plan Parcial — Estudio de Inundaciones | BIC',
-  description: 'BIC elabora el estudio de detalle de gestión del riesgo por inundación que exige el Decreto 1807 para planes parciales en Colombia. Sin este estudio no se aprueba el plan parcial. COPNIA 17202-313228 CLD. Propuesta en 24 horas.',
+  title: 'Estudio de Riesgo por Inundación para Plan Parcial | Contrata BIC — Decreto 1807',
+  description: '¿Tu plan parcial necesita el estudio detallado de gestión del riesgo? BIC lo entrega: concepto Decreto 1807, HEC-RAS 2D, firma COPNIA. Sin el estudio no avanza. Propuesta en 24 h. Contrata directo.',
   keywords: [
     'gestión riesgo inundaciones plan parcial Colombia',
     'estudio detalle amenaza inundación plan parcial',
@@ -558,3 +558,4 @@ export default function PlanParcialColombia() {
     </>
   )
 }
+                  

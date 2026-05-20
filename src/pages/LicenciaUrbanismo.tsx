@@ -6,8 +6,8 @@ const WA = '573024778910'
 const WA_MSG = encodeURIComponent('Hola, quiero información sobre los estudios técnicos para tramitar licencia de urbanismo en Colombia')
 
 const seoConfig = {
-  title: 'Licencia de Urbanismo Colombia — Decreto 1807 | BIC',
-  description: 'BIC prepara estudios para licencia de urbanismo en Colombia: hidrosanitario, riesgo hídrico Dec. 1807, acueducto y alcantarillado. COPNIA. Propuesta en 24 horas.',
+  title: 'Estudios Técnicos para Licencia de Urbanismo | Contrata BIC — Colombia',
+  description: '¿Estás tramitando tu licencia de urbanismo? BIC entrega todos los estudios requeridos: riesgo hídrico Decreto 1807, diseño acueducto y alcantarillado, memorias COPNIA. Para urbanizadores y desarrolladores. Propuesta en 24 h.',
   keywords: [
     'licencia de urbanismo Colombia',
     'trámite licencia urbanismo',
@@ -580,10 +580,4 @@ export default function LicenciaUrbanismo() {
               textDecoration: 'none',
             }}
           >
-            📱 Chatear por WhatsApp · +57 302 477 8910
-          </a>
-        </div>
-      </section>
-    </>
-  )
-}
+            📱 Chatear por What

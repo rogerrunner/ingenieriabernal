@@ -6,8 +6,8 @@ const WA = '573024778910'
 const WA_MSG = encodeURIComponent('Hola, necesito consultoría en ingeniería hidráulica para un proyecto en Colombia')
 
 const seoConfig = {
-  title: 'Ingeniería Hidráulica Colombia — COPNIA 2026 | BIC',
-  description: 'Ingeniería hidráulica para Colombia: HEC-RAS 2D, hidrosanitario NSR-10, acueductos RAS 2017, riesgo hídrico Dec. 1807, regalías MGA-Web. COPNIA 17202-313228.',
+  title: 'Empresa de Ingeniería Hidráulica en Colombia — Contrata BIC | COPNIA 2026',
+  description: 'BIC es la firma de ingeniería hidráulica que contrata para tus proyectos: estudios de riesgo, acueductos, PTAR, PTAP, modelación HEC-RAS y redes hidrosanitarias. Para constructoras y desarrolladores. COPNIA. Sin intermediarios.',
   keywords: [
     'ingeniería hidráulica Colombia',
     'consultoría hidráulica Colombia',
@@ -506,10 +506,4 @@ export default function IngenieriaHidraulicaColombia() {
               textDecoration: 'none',
             }}
           >
-            📱 Chatear por WhatsApp · +57 302 477 8910
-          </a>
-        </div>
-      </section>
-    </>
-  )
-}
+            📱 Chatear por What

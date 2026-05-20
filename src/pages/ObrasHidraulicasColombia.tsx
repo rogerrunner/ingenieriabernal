@@ -6,8 +6,8 @@ const WA = '573024778910'
 const WA_MSG = encodeURIComponent('Hola, tengo un predio o proyecto en zona de inundación y necesito obras de protección hidráulica o un estudio de amenaza. ¿Pueden asesorarme?')
 
 const seoConfig = {
-  title: 'Obras de Protección contra Inundaciones Colombia — Muros, Gaviones, Box Culvert | BIC',
-  description: 'BIC diseña obras de protección contra inundaciones para proyectos privados en Colombia: muros de encauzamiento, gaviones, canalizaciones y box culvert. Para predios en zonas de amenaza media-alta. Modelación HEC-RAS 2D. COPNIA 17202-313228 CLD. Propuesta en 24 horas.',
+  title: 'Obras Hidráulicas de Protección para tu Proyecto — Muros, Gaviones, Box Culvert | BIC',
+  description: '¿Tu predio está en zona de inundación? BIC diseña las obras de protección para habilitar tu proyecto: muros de encauzamiento, gaviones, box culvert. HEC-RAS 2D, permisos CAR. Firma COPNIA. Para desarrolladores privados. Propuesta en 24 h.',
   keywords: [
     'obras protección inundaciones Colombia proyectos privados',
     'diseño muro encauzamiento Colombia',
@@ -583,3 +583,4 @@ export default function ObrasHidraulicasColombia() {
     </>
   )
 }
+                          

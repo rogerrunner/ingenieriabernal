@@ -7,8 +7,8 @@ const WA = '573024778910'
 const WA_MSG = encodeURIComponent('Hola, tengo un predio cerca de un río o quebrada y necesito el estudio de amenaza por inundación para licencia de construcción o plan parcial. ¿Pueden asesorarme?')
 
 const seoConfig = {
-  title: 'Estudio de Inundaciones y Gestión del Riesgo para Proyectos Privados | BIC',
-  description: 'BIC elabora estudios de amenaza por inundación para urbanizaciones, planes parciales y licencias de construcción en Colombia. Sin el estudio no puedes construir en zona de riesgo. Decreto 1807. COPNIA 17202-313228 CLD. Propuesta en 24 horas.',
+  title: 'Estudio de Gestión del Riesgo por Inundación para tu Proyecto | Decreto 1807 — BIC',
+  description: '¿Tu predio está en zona de riesgo o cerca de un río? BIC elabora el estudio que necesitas para construir: amenaza, vulnerabilidad y riesgo, Decreto 1807. Para urbanizaciones, planes parciales y licencias. Firma COPNIA. Propuesta en 24 h.',
   keywords: [
     'estudio amenaza inundación Colombia proyectos privados',
     'estudio inundación urbanización Colombia',
@@ -681,5 +681,3 @@ export default function ServicioEstudiosHidrologicos() {
         </div>
       </section>
     </>
-  )
-}

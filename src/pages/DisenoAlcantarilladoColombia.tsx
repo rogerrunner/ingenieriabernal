@@ -6,8 +6,8 @@ const WA = '573024778910'
 const WA_MSG = encodeURIComponent('Hola, necesito cotizar el diseño de alcantarillado en Colombia. ¿Pueden ayudarme?')
 
 const seoConfig = {
-  title: 'Diseño Alcantarillado Colombia — RAS 2017 Separado Combinado | BIC',
-  description: 'Diseño de redes de alcantarillado sanitario y pluvial en Colombia. RAS 2017, EPANET, SWMM. Sistemas separados y combinados. COPNIA certificado. Cotiza.',
+  title: 'Diseño de Alcantarillado para Constructoras y Urbanizaciones | Firma COPNIA — BIC',
+  description: '¿Necesitas el diseño del sistema de alcantarillado para tu urbanización, constructora o proyecto de infraestructura? BIC lo entrega completo: sanitario y pluvial, RAS 2017, SWMM. Contrata la firma directa. Propuesta en 24 h.',
   keywords: [
     'diseño de alcantarillado Colombia',
     'alcantarillado sanitario Colombia',
@@ -495,11 +495,4 @@ export default function DisenoAlcantarilladoColombia() {
                 textDecoration: 'none', border: '2px solid rgba(255,255,255,0.4)',
               }}
             >
-              Formulario de contacto
-            </a>
-          </div>
-        </div>
-      </section>
-    </>
-  )
-}
+              Formulario de contact

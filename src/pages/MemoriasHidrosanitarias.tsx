@@ -6,8 +6,8 @@ const WA = '573024778910'
 const WA_MSG = encodeURIComponent('Hola, necesito memorias de cálculo hidrosanitarias para un proyecto de construcción — licencia, curaduría o ESP. ¿Pueden elaborarlas?')
 
 const seoConfig = {
-  title: 'Memorias Hidrosanitarias Colombia — NSR-10 RAS | BIC',
-  description: 'Memorias de cálculo hidrosanitarias para licencias de construcción. NSR-10, RAS 2017. Manizales y Eje Cafetero. Ing. Bernal COPNIA. Cotiza ya.',
+  title: 'Memorias Hidrosanitarias para Licencias de Construcción | Contrata BIC Colombia',
+  description: '¿Necesitas las memorias de cálculo hidrosanitarias para tu licencia de construcción? BIC las elabora: NSR-10, RAS 2017, firma COPNIA. Para constructoras y proyectos grandes. Manizales, Pereira y todo Colombia. Propuesta en 24 h.',
   keywords: [
     'memorias de cálculo hidrosanitarias Colombia',
     'diseño hidrosanitario licencia construcción',
@@ -388,11 +388,4 @@ export default function MemoriasHidrosanitarias() {
               📱 Cotizar por WhatsApp · +57 302 477 8910
             </a>
             <a href="/contacto" style={{ display: 'inline-block', padding: '15px 36px', background: 'transparent', color: '#fff', borderRadius: 8, fontWeight: 700, fontSize: 16, textDecoration: 'none', border: '2px solid rgba(255,255,255,0.4)' }}>
-              Formulario de contacto
-            </a>
-          </div>
-        </div>
-      </section>
-    </>
-  )
-}
+            

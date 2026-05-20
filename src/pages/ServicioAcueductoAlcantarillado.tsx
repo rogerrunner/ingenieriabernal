@@ -6,8 +6,8 @@ const WA = '573024778910'
 const WA_MSG = encodeURIComponent('Hola, tengo una urbanización o parcelación y necesito el diseño de las redes de acueducto y alcantarillado para la licencia urbanística. ¿Pueden cotizarlo?')
 
 const seoConfig = {
-  title: 'Redes de Acueducto y Alcantarillado para Urbanizaciones y Parcelaciones | BIC',
-  description: 'BIC diseña redes de acueducto y alcantarillado para urbanizaciones, condominios y parcelaciones privadas en Colombia. RAS 2017, Resolución 0330/2017. Requerido para la licencia urbanística. COPNIA 17202-313228 CLD. Propuesta en 24 horas.',
+  title: 'Diseño de Acueducto y Alcantarillado para Urbanizaciones | Contrata BIC — Colombia',
+  description: '¿Necesitas el diseño de redes de acueducto y alcantarillado para aprobar tu licencia urbanística? BIC lo entrega: RAS 2017, Res. 0330/2017, firma COPNIA. Para urbanizaciones, condominios y parcelaciones. Sin intermediarios. Propuesta en 24 h.',
   keywords: [
     'diseño acueducto alcantarillado urbanización Colombia',
     'redes acueducto parcelación Colombia',
@@ -312,6 +312,4 @@ export default function ServicioAcueductoAlcantarillado() {
           </Btn>
         </div>
       </Section>
-    </>
-  )
-}
+    

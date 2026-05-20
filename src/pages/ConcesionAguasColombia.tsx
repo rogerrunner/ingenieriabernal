@@ -7,8 +7,8 @@ const WA = '573024778910'
 const WA_MSG = encodeURIComponent('Hola, necesito información sobre concesión de aguas en Colombia. ¿Pueden ayudarme?')
 
 const seoConfig = {
-  title: 'Concesión de Aguas Colombia — Trámite CAR | BIC',
-  description: 'BIC elabora estudios para concesiones de aguas ante la CAR en Colombia. Dec. 1076/2015, aforos, hidrología y oferta hídrica. COPNIA vigente. Cotice en 24 horas.',
+  title: 'Trámite de Concesión de Aguas ante la CAR | Contrata BIC Colombia',
+  description: '¿Necesitas la concesión de aguas para tu proyecto o empresa? BIC elabora todos los estudios técnicos ante la CAR: aforos, hidrología, oferta hídrica. Dec. 1076/2015. Firma COPNIA. Para proyectos privados e industriales. Propuesta en 24 h.',
   keywords: [
     'concesión de aguas Colombia',
     'concesión aguas superficiales Colombia',
@@ -369,11 +369,4 @@ export default function ConcesionAguasColombia() {
                 textDecoration: 'none', border: '2px solid rgba(255,255,255,0.4)',
               }}
             >
-              Formulario de contacto
-            </a>
-          </div>
-        </div>
-      </section>
-    </>
-  )
-}
+              Formulario de 

@@ -7,8 +7,8 @@ const WA = '573024778910'
 const WA_MSG = encodeURIComponent('Hola, necesito cotizar el diseño de una PTAR en Colombia. ¿Pueden ayudarme?')
 
 const seoConfig = {
-  title: 'Diseño PTAR PTAP Colombia — RAS 2017 Permisos CAR | BIC',
-  description: 'Diseño de plantas de tratamiento de aguas residuales y potables en Colombia. RAS 2017, permisos CAR, SGR. BIC COPNIA. Desde $10M COP. Consulta sin costo.',
+  title: 'Diseño de PTAR para tu Proyecto Industrial, Urbanización o Municipio | BIC Colombia',
+  description: '¿Necesitas diseñar tu planta de tratamiento de aguas residuales? BIC entrega el proyecto completo: memorias COPNIA, permisos CAR, RAS 2017. Para industrias, constructoras y entes territoriales. Propuesta sin costo.',
   keywords: [
     'diseño PTAR Colombia',
     'diseño PTAP Colombia',
@@ -586,10 +586,3 @@ export default function DisenoPTARColombia() {
               }}
             >
               Formulario de contacto
-            </a>
-          </div>
-        </div>
-      </section>
-    </>
-  )
-}
