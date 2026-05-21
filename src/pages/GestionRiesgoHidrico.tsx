@@ -1,6 +1,7 @@
 import { useEffect } from 'react'
 import SEOHead from '@/components/SEOHead'
 import SpeakableSchema from '@/components/SpeakableSchema'
+import SchemaMarkup from '@/components/SchemaMarkup'
 import { BlueprintBg, ThinLine, SectionLabel, Btn, Section, Tag } from '@/components/ui'
 
 const WA = '573024778910'
@@ -144,6 +145,17 @@ export default function GestionRiesgoHidrico() {
     <>
       <SEOHead config={seoConfig} />
       <SpeakableSchema name="Gestión del Riesgo Hídrico Colombia | BIC Bernal Ingeniería" />
+      <SchemaMarkup
+        type="service"
+        serviceName="Gestión del Riesgo Hídrico — Decreto 1807 Colombia"
+        serviceDesc="Estudios de amenaza, vulnerabilidad y riesgo por inundación y avenidas torrenciales para planes parciales, licencias de urbanismo y POT/EOT. Modelación HEC-RAS 2D, cartografía SIG 1:2.000, concepto de aptitud urbanística. BIC Colombia."
+        serviceUrl="/gestion-riesgo-hidrico"
+        faqItems={FAQS.map(f => ({ q: f.q, a: f.a }))}
+        priceSpecification={[
+          { name: 'Estudio básico riesgo hídrico (< 5 ha)', minPrice: 18000000, maxPrice: 30000000, priceCurrency: 'COP' },
+          { name: 'Estudio detallado HEC-RAS 2D (5–50 ha)', minPrice: 30000000, maxPrice: 60000000, priceCurrency: 'COP', description: 'Incluye modelación HEC-RAS 2D, cartografía SIG escala 1:2.000 y concepto de aptitud urbanística' },
+        ]}
+      />
 
       {/* ── HERO ── */}
       <section style={{
