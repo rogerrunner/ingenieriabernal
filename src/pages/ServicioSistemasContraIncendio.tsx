@@ -23,6 +23,7 @@ const seoConfig = {
     'NFPA 13 Colombia',
   ],
   canonical: 'https://ingenieriabernal.co/servicios/sistemas-contra-incendio',
+  noindex: true,
 }
 
 const INCLUYE = [

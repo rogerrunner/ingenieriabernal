@@ -26,6 +26,7 @@ const seoConfig = {
     'flood risk analysis Colombia',
   ],
   canonical: 'https://ingenieriabernal.co/hydraulic-engineering-consulting',
+  noindex: true,
 }
 
 const SERVICES = [

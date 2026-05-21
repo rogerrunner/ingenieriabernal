@@ -29,6 +29,15 @@ const NOINDEX_SLUGS = new Set([
   'ras-2000-colombia',
   'diferencias-ptar-ptap',
   'ronda-hidrica-colombia',
+  // Fuera de foco: geotecnia / contra incendio / informacional puro
+  'nsr-10-sistemas-contra-incendios',
+  'clasificacion-suelos-sucs-colombia-ejemplos',
+  'estudio-suelos-edificio-multifamiliar-requisitos-nsr10',
+  'procesos-potabilizacion-agua-colombia-resolucion-0330',
+  'que-es-concesion-de-aguas-colombia',
+  'normas-tecnicas-diseno-acueductos-colombia-ras-2017',
+  'redes-hidrosanitarias-colombia',
+  'diferencia-bocatoma-captacion-aguas-colombia',
 ])
 
 // ─── ARTICLE CONTENT ────────────────────────────────────────────────────────
