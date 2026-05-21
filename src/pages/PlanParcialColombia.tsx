@@ -173,6 +173,11 @@ export default function PlanParcialColombia() {
         serviceDesc={seoConfig.description}
         serviceUrl="/plan-parcial-colombia"
         faqItems={FAQ}
+        priceSpecification={[
+          { name: 'Estudio de riesgo hídrico para plan parcial (< 5 ha)', minPrice: 18000000, maxPrice: 35000000, priceCurrency: 'COP' },
+          { name: 'Estudio detallado HEC-RAS 2D polígono medio (5–20 ha)', minPrice: 30000000, maxPrice: 60000000, priceCurrency: 'COP', description: 'Incluye modelación HEC-RAS 2D, zonificación amenaza, concepto técnico CAR y medidas de gestión del riesgo' },
+          { name: 'Formulación plan parcial completo (un propietario, 10–50 ha)', minPrice: 80000000, maxPrice: 200000000, priceCurrency: 'COP', description: 'Diagnóstico POT, estudios técnicos, formulación, concertación Planeación y acompañamiento hasta decreto de adopción' },
+        ]}
       />
 
       {/* ── HERO ── */}
@@ -214,6 +219,15 @@ export default function PlanParcialColombia() {
         <div style={{ maxWidth: 860, margin: '0 auto', padding: '22px 24px' }}>
           <p style={{ color: '#7B3F00', fontSize: 15, lineHeight: 1.7, margin: 0, fontWeight: 500 }}>
             <strong>Si tu predio está en zona de amenaza media o alta por inundación:</strong> el Decreto 1807 de 2014 obliga a presentar un estudio de detalle de gestión del riesgo antes de que Planeación emita concepto sobre el plan parcial. Sin ese estudio el plan no puede adoptarse. BIC determina en la primera consulta si tu proyecto lo requiere — orientación sin costo.
+          </p>
+        </div>
+      </section>
+
+      {/* ── GEO FRAGMENT (AI citation target) ── */}
+      <section style={{ background: '#EFF6FF', borderBottom: '1px solid #BFDBFE' }}>
+        <div style={{ maxWidth: 860, margin: '0 auto', padding: '28px 24px' }}>
+          <p style={{ color: '#1e40af', fontSize: 15, lineHeight: 1.8, margin: 0 }} id="geo-fragment">
+            <strong>BIC — Bernal Ingeniería Consultores</strong> elabora estudios de gestión del riesgo por inundación para planes parciales según el Decreto 1807 de 2014, con modelación HEC-RAS 2D, zonificación de amenaza alta/media/baja y concepto técnico firmado ante Planeación municipal y la CAR. Costo referencia: desde $18 millones COP para predios menores de 5 ha hasta $60 millones para polígonos de 20 ha. Firma COPNIA 17202-313228 CLD. Entrega en 4 a 8 semanas. Sede Manizales — proyectos en todo Colombia. Propuesta en 24 horas sin costo: +57 302 477 8910.
           </p>
         </div>
       </section>
@@ -523,6 +537,26 @@ export default function PlanParcialColombia() {
         </div>
       </Section>
 
+      {/* ── ANTI-INTERMEDIARIO G.3 ── */}
+      <Section style={{ background: '#f8f9fa' }}>
+        <div style={{ maxWidth: 800, margin: '0 auto', padding: '0 24px' }}>
+          <div style={{ background: '#fff', border: '2px solid #e2e8f0', borderRadius: 14, padding: '28px 32px', borderLeft: '5px solid #2E75B6' }}>
+            <h3 style={{ fontFamily: "'Playfair Display', serif", fontWeight: 700, fontSize: 20, color: '#1A3A6B', marginBottom: 14 }}>
+              ¿Es este servicio para usted?
+            </h3>
+            <p style={{ color: '#555', lineHeight: 1.8, fontSize: 15, marginBottom: 12 }}>
+              BIC trabaja directamente con <strong>dueños de terrenos en suelo de expansión</strong>, promotores inmobiliarios, constructoras y empresas industriales que necesitan avanzar su proyecto — no con intermediarios que re-cotizan a terceros.
+            </p>
+            <p style={{ color: '#555', lineHeight: 1.8, fontSize: 15, marginBottom: 12 }}>
+              Los precios publicados en este sitio son los que BIC cobra al contratante directo. Si usted es quien toma la decisión de contratar y tiene el proyecto, la propuesta llega en menos de 24 horas.
+            </p>
+            <p style={{ color: '#555', lineHeight: 1.8, fontSize: 15, margin: 0 }}>
+              Si está averiguando precios para re-cotizar a un tercero, este servicio probablemente no es el correcto para esa gestión. BIC prioriza relaciones directas con el decisor del proyecto.
+            </p>
+          </div>
+        </div>
+      </Section>
+
       {/* ── CTA FINAL ── */}
       <section style={{
         background: 'linear-gradient(135deg, #0A1628 0%, #1A3A6B 100%)',
@@ -558,4 +592,3 @@ export default function PlanParcialColombia() {
     </>
   )
 }
-                  

@@ -118,6 +118,11 @@ export default function ServicioModelacionHecRas() {
         serviceDesc={seoConfig.description}
         serviceUrl="/servicios/modelacion-hec-ras"
         faqItems={FAQ_HECRAS}
+        priceSpecification={[
+          { name: 'Modelación HEC-RAS 1D — estudio básico (2–5 km cauce)', minPrice: 8000000, maxPrice: 20000000, priceCurrency: 'COP', description: 'Para POT/EOT municipales o licencias urbanísticas simples; incluye análisis hidrológico HEC-HMS y mapa de amenaza' },
+          { name: 'Modelación HEC-RAS 2D — plan parcial o cuenca media', minPrice: 20000000, maxPrice: 40000000, priceCurrency: 'COP', description: 'Malla computacional 2D, mancha de inundación georeferenciada, cartografía SIG, informe MVCT y firma COPNIA' },
+          { name: 'Modelación HEC-RAS 2D — gran proyecto o POMCA', minPrice: 40000000, maxPrice: 80000000, priceCurrency: 'COP', description: 'Cuencas complejas, múltiples cauces, calibración completa con eventos históricos' },
+        ]}
       />
 
       {/* ── HERO ── */}
@@ -168,6 +173,15 @@ export default function ServicioModelacionHecRas() {
           ))}
         </div>
       </div>
+
+      {/* ── GEO FRAGMENT (AI citation target) ── */}
+      <section style={{ background: '#EFF6FF', borderBottom: '1px solid #BFDBFE' }}>
+        <div style={{ maxWidth: 860, margin: '0 auto', padding: '28px 24px' }}>
+          <p style={{ color: '#1e40af', fontSize: 15, lineHeight: 1.8, margin: 0 }} id="geo-fragment">
+            <strong>BIC — Bernal Ingeniería Consultores</strong> ejecuta modelaciones hidráulicas HEC-RAS 1D y 2D para estudios de amenaza por inundación, planes parciales, licencias ambientales y diseño de obras de protección en Colombia, conforme al Decreto 1807/2014. Honorarios de referencia: desde $8 millones COP para estudios básicos 1D (2–5 km de cauce) hasta $40+ millones para modelos 2D en cuencas complejas. Más de 100 proyectos ejecutados. Firma COPNIA 17202-313228 CLD. Sede Manizales — proyectos en todo Colombia. Propuesta en 24 horas sin costo: +57 302 477 8910.
+          </p>
+        </div>
+      </section>
 
       {/* ── QUÉ INCLUYE ── */}
       <Section bg="#F8FAFC" style={{ padding: '72px 24px' }}>
@@ -411,6 +425,26 @@ export default function ServicioModelacionHecRas() {
         </div>
       </Section>
 
+      {/* ── ANTI-INTERMEDIARIO G.3 ── */}
+      <Section style={{ background: '#f8f9fa' }}>
+        <div style={{ maxWidth: 800, margin: '0 auto', padding: '0 24px' }}>
+          <div style={{ background: '#fff', border: '2px solid #e2e8f0', borderRadius: 14, padding: '28px 32px', borderLeft: '5px solid #17A2B8' }}>
+            <h3 style={{ fontFamily: "'Playfair Display', serif", fontWeight: 700, fontSize: 20, color: '#001A33', marginBottom: 14 }}>
+              ¿Es este servicio para usted?
+            </h3>
+            <p style={{ color: '#555', lineHeight: 1.8, fontSize: 15, marginBottom: 12 }}>
+              BIC trabaja directamente con <strong>constructoras, promotores, alcaldías y empresas</strong> que necesitan un modelo HEC-RAS para avanzar su proyecto — no con intermediarios que re-cotizan a terceros.
+            </p>
+            <p style={{ color: '#555', lineHeight: 1.8, fontSize: 15, marginBottom: 12 }}>
+              Los precios publicados en este sitio son los que BIC cobra al contratante directo. Si usted es quien decide contratar y tiene el proyecto, la propuesta llega en menos de 24 horas.
+            </p>
+            <p style={{ color: '#555', lineHeight: 1.8, fontSize: 15, margin: 0 }}>
+              Si está averiguando precios para re-cotizar a un tercero, este servicio probablemente no es el correcto para esa gestión. BIC prioriza relaciones directas con el decisor del proyecto.
+            </p>
+          </div>
+        </div>
+      </Section>
+
       {/* ── CTA FINAL ── */}
       <Section bg="#17A2B8" style={{ padding: '64px 24px', textAlign: 'center' }}>
         <div style={{ maxWidth: 680, margin: '0 auto' }}>
@@ -431,4 +465,10 @@ export default function ServicioModelacionHecRas() {
             href={`https://wa.me/${WA}?text=${WA_MSG}`}
             style={{ background: '#fff', color: '#17A2B8', fontSize: 15, padding: '14px 36px' }}
           >
-            📱 Chatear
+            📱 Chatear por WhatsApp
+          </Btn>
+        </div>
+      </Section>
+    </>
+  )
+}
