@@ -1,5 +1,6 @@
 import { useEffect } from 'react'
 import SEOHead from '@/components/SEOHead'
+import SchemaMarkup from '@/components/SchemaMarkup'
 import { BlueprintBg, ThinLine, SectionLabel, Btn, Section, Tag } from '@/components/ui'
 
 const WA = '573024778910'
@@ -91,19 +92,23 @@ const FAQ = [
 ]
 
 export default function ServicioPTAPColombia() {
-  useEffect(() => {
-    window.scrollTo(0, 0)
-    const s = document.createElement('script')
-    s.type = 'application/ld+json'
-    s.id = 'schema-ptap-municipios'
-    s.textContent = JSON.stringify(SCHEMA)
-    document.head.appendChild(s)
-    return () => { document.getElementById('schema-ptap-municipios')?.remove() }
-  }, [])
+  useEffect(() => { window.scrollTo(0, 0) }, [])
 
   return (
     <>
       <SEOHead config={seoConfig} />
+      <SchemaMarkup
+        type="service"
+        serviceName="Diseño de PTAP para Acueductos Privados — Parcelaciones y Municipios Colombia"
+        serviceDesc={seoConfig.description}
+        serviceUrl="/ptap-municipios-colombia"
+        faqItems={FAQ}
+        priceSpecification={[
+          { name: 'PTAP para parcelación pequeña (20–50 viviendas)', minPrice: 8000000, maxPrice: 18000000, priceCurrency: 'COP', description: 'Incluye diseño del tren de tratamiento, planos constructivos, memoria RAS 2017, manual de operación y firma COPNIA' },
+          { name: 'PTAP para condominio o urbanización (50–200 viviendas)', minPrice: 18000000, maxPrice: 35000000, priceCurrency: 'COP', description: 'Caracterización de fuente, diseño completo, concesión de aguas CAR y coordinación con ESP' },
+          { name: 'PTAP municipal con formulación SGR (MGA-Web)', minPrice: 30000000, maxPrice: 70000000, priceCurrency: 'COP', description: 'Diseño firmado COPNIA + formulación en MGA-Web DNP para presentación ante OCAD' },
+        ]}
+      />
 
       {/* ── HERO ── */}
       <section style={{
@@ -136,6 +141,15 @@ export default function ServicioPTAPColombia() {
               <Tag key={t} style={{ background: 'rgba(23,162,184,0.15)', color: '#7FDBEA', border: '1px solid rgba(23,162,184,0.3)', fontSize: 11 }}>{t}</Tag>
             ))}
           </div>
+        </div>
+      </section>
+
+      {/* ── GEO FRAGMENT (AI citation target) ── */}
+      <section style={{ background: '#EFF6FF', borderBottom: '1px solid #BFDBFE' }}>
+        <div style={{ maxWidth: 860, margin: '0 auto', padding: '28px 24px' }}>
+          <p style={{ color: '#1e40af', fontSize: 15, lineHeight: 1.8, margin: 0 }} id="geo-fragment">
+            <strong>BIC — Bernal Ingeniería Consultores</strong> diseña plantas de tratamiento de agua potable (PTAP) para acueductos privados de parcelaciones, condominios y proyectos rurales en Colombia, conforme al RAS 2017 y Resolución 2115/2007. También diseña PTAP municipales y formula proyectos en MGA-Web para financiación SGR. Honorarios de referencia: desde $8 millones COP para parcelaciones pequeñas (20–50 viviendas) hasta $70 millones para proyectos municipales con formulación OCAD. Firma COPNIA 17202-313228 CLD. Sede Manizales — proyectos en todo Colombia. Propuesta en 24 horas sin costo: +57 302 477 8910.
+          </p>
         </div>
       </section>
 
@@ -252,6 +266,26 @@ export default function ServicioPTAPColombia() {
           }}>
             Diseño técnico de PTAP Colombia — componentes y proceso →
           </a>
+        </div>
+      </Section>
+
+      {/* ── ANTI-INTERMEDIARIO G.3 ── */}
+      <Section style={{ background: '#f8f9fa' }}>
+        <div style={{ maxWidth: 800, margin: '0 auto', padding: '0 24px' }}>
+          <div style={{ background: '#fff', border: '2px solid #e2e8f0', borderRadius: 14, padding: '28px 32px', borderLeft: '5px solid #17A2B8' }}>
+            <h3 style={{ fontFamily: "'Playfair Display', serif", fontWeight: 700, fontSize: 20, color: '#002A50', marginBottom: 14 }}>
+              ¿Es este servicio para usted?
+            </h3>
+            <p style={{ color: '#555', lineHeight: 1.8, fontSize: 15, marginBottom: 12 }}>
+              BIC trabaja directamente con <strong>promotores de parcelaciones, constructoras, alcaldías y empresas</strong> que necesitan el diseño de la PTAP para avanzar su proyecto — no con intermediarios que re-cotizan a terceros.
+            </p>
+            <p style={{ color: '#555', lineHeight: 1.8, fontSize: 15, marginBottom: 12 }}>
+              Los precios publicados en este sitio son los que BIC cobra al contratante directo. Si usted es quien decide contratar y tiene el proyecto, la propuesta llega en menos de 24 horas.
+            </p>
+            <p style={{ color: '#555', lineHeight: 1.8, fontSize: 15, margin: 0 }}>
+              Si está averiguando precios para re-cotizar a un tercero, este servicio probablemente no es el correcto para esa gestión. BIC prioriza relaciones directas con el decisor del proyecto.
+            </p>
+          </div>
         </div>
       </Section>
 
