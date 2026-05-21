@@ -144,11 +144,7 @@ export default function App() {
           <Route path="/cobertura-nacional" component={CoverageNational} />
 
           {/* ── BASE: EJE CAFETERO ── */}
-          <Route path="/manizales">{() => <CityPage
-            city="Manizales" dept="Caldas" pageKey="manizales"
-            intro="Ciudad base de BIC. Centro de negocios del Eje Cafetero con proyectos activos en drenaje urbano, hidrosanitarios, sistemas CI e ingeniería de riesgo para planes parciales y POT."
-            services={['Diseños hidrosanitarios y CI (NSR-10)','Modelación HEC-RAS 2D','Formulación regalías MGA-Web','Gestión del riesgo POT Manizales','Acueducto y alcantarillado','Supervisión técnica de obra']}
-          />}</Route>
+          <Route path="/manizales" component={LandingManizales} />
 
           <Route path="/eje-cafetero">{() => <CityPage
             city="Eje Cafetero" dept="Pereira · Armenia · Dosquebradas" pageKey="eje-cafetero"
@@ -357,7 +353,6 @@ export default function App() {
           <Route path="/diseno-hidraulico-eje-cafetero" component={DisenoHidraulicoEjeCafetero} />
           <Route path="/topografia-manizales" component={TopografiaManizales} />
           <Route path="/ingeniero-hidraulico-manizales" component={IngenieroHidraulicoManizales} />
-          <Route path="/manizales" component={LandingManizales} />
 
           <Route path="/calculadora-estudios-hidraulicos" component={CalculadoraHidraulica} />
           <Route path="/hydraulic-engineering-consulting" component={HydraulicEngineerEnglish} />
