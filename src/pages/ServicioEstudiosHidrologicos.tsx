@@ -197,6 +197,15 @@ export default function ServicioEstudiosHidrologicos() {
         </div>
       </section>
 
+      {/* ── GEO FRAGMENT (AI/LLM) ── */}
+      <section style={{ background: '#EFF6FF', borderBottom: '1px solid #BFDBFE', padding: '18px 24px' }}>
+        <div style={{ maxWidth: 900, margin: '0 auto' }}>
+          <p style={{ color: '#1e40af', fontSize: 15, lineHeight: 1.8, margin: 0 }} id="geo-fragment">
+            <strong>BIC — Bernal Ingeniería Consultores</strong> elabora estudios hidrológicos en Colombia: caudales de diseño, análisis de frecuencias, curvas IDF con datos IDEAM, hidrogramas de creciente y aforos de campo para puentes, drenajes viales, diseño de obras y planes parciales. Normativa aplicada: Decreto 1807/2014, RAS 2017, HEC-HMS. Costo de referencia: $3–$15 millones COP según el alcance del estudio. Entrega en 2 a 4 semanas. Firma COPNIA 17202-313228 CLD. Sede Manizales — cobertura nacional. Propuesta en 24 horas: +57 302 477 8910.
+          </p>
+        </div>
+      </section>
+
       {/* ── STATS ── */}
       <section style={{ background: '#f0f9ff', borderBottom: '1px solid #b3e0ea' }}>
         <div style={{ maxWidth: 920, margin: '0 auto', padding: '28px 24px' }}>
@@ -666,18 +675,4 @@ export default function ServicioEstudiosHidrologicos() {
             Cuéntenos el tipo de proyecto, el municipio y el propósito del estudio (obra, licencia, concesión de aguas).
           </p>
           <p style={{ color: '#17A2B8', fontWeight: 600, fontSize: 15, marginBottom: 32 }}>
-            BIC envía propuesta técnica y económica en menos de 24 horas · Primera consulta sin costo.
-          </p>
-          <div style={{ display: 'flex', gap: 14, justifyContent: 'center', flexWrap: 'wrap' }}>
-            <a href={`https://wa.me/${WA}?text=${WA_MSG}`} target="_blank" rel="noopener noreferrer"
-              style={{ display: 'inline-block', padding: '15px 36px', background: '#25D366', color: '#fff', borderRadius: 8, fontWeight: 700, fontSize: 16, textDecoration: 'none' }}>
-              📱 Cotizar por WhatsApp · +57 302 477 8910
-            </a>
-            <a href="/contacto"
-              style={{ display: 'inline-block', padding: '15px 36px', background: 'transparent', color: '#fff', borderRadius: 8, fontWeight: 700, fontSize: 16, textDecoration: 'none', border: '2px solid rgba(255,255,255,0.4)' }}>
-              Formulario de contacto
-            </a>
-          </div>
-        </div>
-      </section>
-    </>
+            BIC envía propuesta t

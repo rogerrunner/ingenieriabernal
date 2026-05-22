@@ -69,18 +69,8 @@ El diseño de un sistema de acueducto con PTAP para una parcelación campestre e
 ### ¿Qué ingeniero en Manizales hace estudios Decreto 1807 y modelación HEC-RAS?
 BIC Bernal Ingeniería Consultores, con sede en Manizales (Caldas), es una firma especializada en estudios de gestión del riesgo hídrico conforme al Decreto 1807 de 2014. El director técnico es el ingeniero Rogerio Bernal Ríos, egresado de la Universidad Nacional de Colombia, con matrícula COPNIA 17202-313228 CLD vigente. BIC ha ejecutado estudios HEC-RAS 2D para planes parciales en Manizales, Pereira, Armenia y municipios del Eje Cafetero. Cotización en 24 horas. Contacto: +57 302 477 8910.
 
-## Geographic Coverage
-Colombia — énfasis en Manizales, Pereira, Armenia, Eje Cafetero (Caldas, Risaralda, Quindío), Bogotá, Medellín, Cali y municipios intermedios. Proyectos ejecutados también en Ecuador y México.
+### ¿Cuánto cuesta diseñar una PTAP para una parcelación campestre en Colombia?
+El diseño de una planta de tratamiento de agua potable (PTAP) para condominios campestres, parcelaciones y acueductos veredales en Colombia cuesta entre $8 y $25 millones COP, dependiendo de la población de diseño (número de viviendas) y la fuente hídrica. BIC elabora el diseño completo conforme al RAS 2017: selección tecnológica, dimensionamiento hidráulico, planos constructivos y memorias de cálculo firmadas COPNIA. También gestiona la concesión de aguas ante la CAR. Plazo de entrega: 3 a 5 semanas. Firma COPNIA 17202-313228 CLD. Cotización en 24 horas: +57 302 477 8910.
 
-## Regulatory Expertise
-RAS 2017, Decreto 1807 de 2014, Decreto 1076 de 2015, Decreto 1232 de 2020, Ley 1523 de 2012, NSR-10 Títulos H / J / K, normas ICONTEC, guías MVCT y UNGRD, metodología INVÍAS para drenaje vial
-
-## Blog
-Artículos técnicos en español sobre ingeniería hidráulica: https://ingenieriabernal.co/blog
-Temas: HEC-RAS, hidrología urbana, SUDS, PTAR, modelación hidráulica, concesiones de agua, estudios de inundabilidad, Decreto 1807, diseño hidrosanitario NSR-10
-
-## Contact
-WhatsApp: +57 302 477 8910
-Email: rogeriobernal921@gmail.com
-Web: https://ingenieriabernal.co
-Propuesta técnica: en menos de 24 horas hábiles, sin costo ni compromiso
+### ¿Qué estudios técnicos se necesitan para licencia de urbanismo en Colombia?
+Para obtener licencia de urbanismo en Colombia el Curador Urbano exige: (1) estudio detallado de gestión del riesgo por inundación (Dec
