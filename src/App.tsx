@@ -42,6 +42,8 @@ const RegionalManizales = lazy(() => import('./pages/regional/RegionalManizales'
 const RegionalPereira = lazy(() => import('./pages/regional/RegionalPereira'))
 const RegionalArmenia = lazy(() => import('./pages/regional/RegionalArmenia'))
 const RegionalEjeCafetero = lazy(() => import('./pages/regional/RegionalEjeCafetero'))
+const RegionalCali = lazy(() => import('./pages/regional/RegionalCali'))
+const RegionalMedellin = lazy(() => import('./pages/regional/RegionalMedellin'))
 const EstudioInundabilidadManizales = lazy(() => import('./pages/servicios/EstudioInundabilidadManizales'))
 const EstudioSuelosManizales = lazy(() => import('./pages/servicios/EstudioSuelosManizales'))
 const LicenciaConstruccionManizales = lazy(() => import('./pages/servicios/LicenciaConstruccionManizales'))
@@ -334,6 +336,8 @@ export default function App() {
           <Route path="/regional/pereira" component={RegionalPereira} />
           <Route path="/regional/armenia" component={RegionalArmenia} />
           <Route path="/regional/eje-cafetero" component={RegionalEjeCafetero} />
+          <Route path="/regional/cali" component={RegionalCali} />
+          <Route path="/regional/medellin" component={RegionalMedellin} />
 
           {/* ── LANDING PAGES LOCALES — MANIZALES ── */}
           <Route path="/estudio-de-inundabilidad-manizales" component={EstudioInundabilidadManizales} />
