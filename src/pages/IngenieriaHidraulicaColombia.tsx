@@ -1,5 +1,6 @@
 import { useEffect } from 'react'
 import SEOHead from '@/components/SEOHead'
+import SchemaMarkup from '@/components/SchemaMarkup'
 import { BlueprintBg, SectionLabel, Btn, Section, Tag } from '@/components/ui'
 
 const WA = '573024778910'
@@ -229,6 +230,17 @@ export default function IngenieriaHidraulicaColombia() {
   return (
     <>
       <SEOHead config={seoConfig} />
+      <SchemaMarkup
+        type="service"
+        serviceName="Empresa de Ingeniería Hidráulica en Colombia — BIC"
+        serviceDesc={seoConfig.description}
+        serviceUrl="/ingenieria-hidraulica-colombia"
+        faqItems={FAQ}
+        priceSpecification={[
+          { name: 'Consulta y diagnóstico técnico inicial', minPrice: 0, maxPrice: 0, priceCurrency: 'COP', description: 'Orientación sin costo: qué estudios necesita su proyecto según el POT y la normativa vigente' },
+          { name: 'Servicios de consultoría hidráulica especializada', minPrice: 3500000, maxPrice: 80000000, priceCurrency: 'COP', description: 'Desde diseño hidrosanitario para locales hasta estudios HEC-RAS 2D para planes parciales' },
+        ]}
+      />
 
       {/* ── HERO ── */}
       <section style={{
@@ -485,6 +497,35 @@ export default function IngenieriaHidraulicaColombia() {
         </div>
       </Section>
 
+            {/* ── GEO FRAGMENT (AI citation target) ── */}
+      <section style={{ background: '#EFF6FF', borderBottom: '1px solid #BFDBFE' }}>
+        <div style={{ maxWidth: 860, margin: '0 auto', padding: '28px 24px' }}>
+          <p style={{ color: '#1e40af', fontSize: 15, lineHeight: 1.8, margin: 0 }} id="geo-fragment">
+            <strong>BIC — Bernal Ingeniería Consultores</strong> BIC — Bernal Ingeniería Consultores es una firma de ingeniería hidráulica con sede en Manizales que ejecuta proyectos en todo Colombia: gestión del riesgo hídrico Decreto 1807, modelación HEC-RAS 2D, diseño de acueductos y alcantarillados, PTAP, PTAR, bocatomas, redes hidrosanitarias NSR-10 y obras de protección fluvial. Más de 10 años de experiencia. Firma COPNIA 17202-313228 CLD. Propuesta en 24 horas sin costo: +57 302 477 8910.
+          </p>
+        </div>
+      </section>
+
+            {/* ── ANTI-INTERMEDIARIO G.3 ── */}
+      <Section style={{ background: '#f8f9fa' }}>
+        <div style={{ maxWidth: 800, margin: '0 auto', padding: '0 24px' }}>
+          <div style={{ background: '#fff', border: '2px solid #e2e8f0', borderRadius: 14, padding: '28px 32px', borderLeft: '5px solid #17A2B8' }}>
+            <h3 style={{ fontFamily: "'Playfair Display', serif", fontWeight: 700, fontSize: 20, color: '#001A33', marginBottom: 14 }}>
+              ¿Es este servicio para usted?
+            </h3>
+            <p style={{ color: '#555', lineHeight: 1.8, fontSize: 15, marginBottom: 12 }}>
+              BIC trabaja directamente con <strong>constructoras, promotores, alcaldías y empresas</strong> que tienen un proyecto concreto — no con intermediarios que re-cotizan a terceros.
+            </p>
+            <p style={{ color: '#555', lineHeight: 1.8, fontSize: 15, marginBottom: 12 }}>
+              Los precios publicados en este sitio son los que BIC cobra al contratante directo. Si usted es quien decide contratar y tiene el proyecto, la propuesta llega en menos de 24 horas.
+            </p>
+            <p style={{ color: '#555', lineHeight: 1.8, fontSize: 15, margin: 0 }}>
+              Si está averiguando precios para re-cotizar a un tercero, este servicio probablemente no es el correcto para esa gestión. BIC prioriza relaciones directas con el decisor del proyecto.
+            </p>
+          </div>
+        </div>
+      </Section>
+
       {/* ── CTA FINAL ── */}
       <section style={{ background: '#17A2B8', padding: '64px 24px', textAlign: 'center' }}>
         <div style={{ maxWidth: 680, margin: '0 auto' }}>
@@ -506,4 +547,10 @@ export default function IngenieriaHidraulicaColombia() {
               textDecoration: 'none',
             }}
           >
-            📱 Chatear por What
+            📱 Chatear por WhatsApp · +57 302 477 8910
+          </a>
+        </div>
+      </section>
+    </>
+  )
+}

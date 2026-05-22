@@ -1,5 +1,6 @@
 import { useEffect } from 'react'
 import SEOHead from '@/components/SEOHead'
+import SchemaMarkup from '@/components/SchemaMarkup'
 import SpeakableSchema from '@/components/SpeakableSchema'
 import { BlueprintBg, ThinLine, SectionLabel, Btn, Section, Tag } from '@/components/ui'
 
@@ -219,6 +220,18 @@ export default function DisenoPTARColombia() {
     <>
       <SEOHead config={seoConfig} />
       <SpeakableSchema name="Diseño de PTAR en Colombia — Plantas de Tratamiento Aguas Residuales | BIC" />
+      <SchemaMarkup
+        type="service"
+        serviceName="Diseño de PTAR para Industrias, Urbanizaciones y Municipios — Colombia"
+        serviceDesc={seoConfig.description}
+        serviceUrl="/diseno-ptar-colombia"
+        faqItems={FAQ}
+        priceSpecification={[
+          { name: 'PTAR veredal o comunitaria (50–200 usuarios)', minPrice: 12000000, maxPrice: 22000000, priceCurrency: 'COP', description: 'Lagunas de estabilización o filtros anaerobios — bajo costo de operación, entrega en 6–8 semanas' },
+          { name: 'PTAR municipal (200–1.000 hab)', minPrice: 18000000, maxPrice: 40000000, priceCurrency: 'COP', description: 'Sistema convencional con permiso de vertimientos ante la CAR, firmado COPNIA' },
+          { name: 'PTAR industrial o gran proyecto (> 1.000 hab)', minPrice: 30000000, maxPrice: 80000000, priceCurrency: 'COP', description: 'Diseño específico según parámetros del agua residual industrial, estudio de impacto ambiental' },
+        ]}
+      />
 
       {/* ── HERO ── */}
       <section style={{
@@ -272,6 +285,15 @@ export default function DisenoPTARColombia() {
           </p>
         </div>
       </Section>
+
+            {/* ── GEO FRAGMENT (AI citation target) ── */}
+      <section style={{ background: '#EFF6FF', borderBottom: '1px solid #BFDBFE' }}>
+        <div style={{ maxWidth: 860, margin: '0 auto', padding: '28px 24px' }}>
+          <p style={{ color: '#1e40af', fontSize: 15, lineHeight: 1.8, margin: 0 }} id="geo-fragment">
+            <strong>BIC — Bernal Ingeniería Consultores</strong> BIC — Bernal Ingeniería Consultores diseña plantas de tratamiento de aguas residuales (PTAR) para industrias, urbanizaciones y municipios en Colombia, conforme al RAS 2017 y Decreto 1594/84. Honorarios desde $12 millones COP para PTAR veredales hasta $80 millones para proyectos industriales grandes. Firma COPNIA 17202-313228 CLD. Trámite de permiso de vertimientos ante la CAR incluido. Sede Manizales — proyectos en todo Colombia. Propuesta en 24 horas sin costo: +57 302 477 8910.
+          </p>
+        </div>
+      </section>
 
       {/* ── TIPOS ── */}
       <Section>
@@ -542,6 +564,26 @@ export default function DisenoPTARColombia() {
         </div>
       </Section>
 
+            {/* ── ANTI-INTERMEDIARIO G.3 ── */}
+      <Section style={{ background: '#f8f9fa' }}>
+        <div style={{ maxWidth: 800, margin: '0 auto', padding: '0 24px' }}>
+          <div style={{ background: '#fff', border: '2px solid #e2e8f0', borderRadius: 14, padding: '28px 32px', borderLeft: '5px solid #17A2B8' }}>
+            <h3 style={{ fontFamily: "'Playfair Display', serif", fontWeight: 700, fontSize: 20, color: '#001A33', marginBottom: 14 }}>
+              ¿Es este servicio para usted?
+            </h3>
+            <p style={{ color: '#555', lineHeight: 1.8, fontSize: 15, marginBottom: 12 }}>
+              BIC trabaja directamente con <strong>constructoras, promotores, alcaldías y empresas</strong> que tienen un proyecto concreto — no con intermediarios que re-cotizan a terceros.
+            </p>
+            <p style={{ color: '#555', lineHeight: 1.8, fontSize: 15, marginBottom: 12 }}>
+              Los precios publicados en este sitio son los que BIC cobra al contratante directo. Si usted es quien decide contratar y tiene el proyecto, la propuesta llega en menos de 24 horas.
+            </p>
+            <p style={{ color: '#555', lineHeight: 1.8, fontSize: 15, margin: 0 }}>
+              Si está averiguando precios para re-cotizar a un tercero, este servicio probablemente no es el correcto para esa gestión. BIC prioriza relaciones directas con el decisor del proyecto.
+            </p>
+          </div>
+        </div>
+      </Section>
+
       {/* ── CTA FINAL ── */}
       <section style={{
         background: 'linear-gradient(135deg, #001A33 0%, #003B6F 100%)',
@@ -586,3 +628,10 @@ export default function DisenoPTARColombia() {
               }}
             >
               Formulario de contacto
+            </a>
+          </div>
+        </div>
+      </section>
+    </>
+  )
+}

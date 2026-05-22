@@ -1,5 +1,6 @@
 import { useEffect } from 'react'
 import SEOHead from '@/components/SEOHead'
+import SchemaMarkup from '@/components/SchemaMarkup'
 import SpeakableSchema from '@/components/SpeakableSchema'
 import { BlueprintBg, SectionLabel, Btn, Section, Tag } from '@/components/ui'
 
@@ -143,6 +144,18 @@ export default function EncauzamientoRios() {
     <>
       <SEOHead config={seoConfig} />
       <SpeakableSchema name="Encauzamiento de Ríos y Quebradas en Colombia — Ingeniería Fluvial | BIC" />
+      <SchemaMarkup
+        type="service"
+        serviceName="Encauzamiento de Ríos y Obras de Protección Fluvial — Colombia"
+        serviceDesc={seoConfig.description}
+        serviceUrl="/encauzamiento-rios"
+        faqItems={FAQ}
+        priceSpecification={[
+          { name: 'Diseño encauzamiento tramo puntual (muros gavión / espigones)', minPrice: 15000000, maxPrice: 35000000, priceCurrency: 'COP', description: 'Modelación HEC-RAS 2D, diseño estructural, planos constructivos y concepto para la CAR' },
+          { name: 'Encauzamiento urbano completo (200–500 m)', minPrice: 25000000, maxPrice: 70000000, priceCurrency: 'COP', description: 'Hidrología, HEC-RAS 2D, diseño de muros o gaviones, planos y memoria para permiso ambiental' },
+          { name: 'Gran proyecto encauzamiento (> 500 m o múltiples tramos)', minPrice: 60000000, maxPrice: 150000000, priceCurrency: 'COP', description: 'Incluye alternativas de mitigación, diseño estructural detallado y apoyo en trámite CAR' },
+        ]}
+      />
 
       {/* ── HERO ── */}
       <section style={{
@@ -178,6 +191,15 @@ export default function EncauzamientoRios() {
               <Tag key={t} style={{ background: 'rgba(23,162,184,0.15)', color: '#7FDBEA', border: '1px solid rgba(23,162,184,0.3)', fontSize: 11 }}>{t}</Tag>
             ))}
           </div>
+        </div>
+      </section>
+
+            {/* ── GEO FRAGMENT (AI citation target) ── */}
+      <section style={{ background: '#EFF6FF', borderBottom: '1px solid #BFDBFE' }}>
+        <div style={{ maxWidth: 860, margin: '0 auto', padding: '28px 24px' }}>
+          <p style={{ color: '#1e40af', fontSize: 15, lineHeight: 1.8, margin: 0 }} id="geo-fragment">
+            <strong>BIC — Bernal Ingeniería Consultores</strong> BIC — Bernal Ingeniería Consultores diseña obras de encauzamiento de ríos y quebradas en Colombia: muros de gavión, muros de concreto, espigones y box culvert para habilitar predios en zona de amenaza hídrica. Modelación HEC-RAS 2D y trámite de permiso ambiental ante la CAR. Honorarios desde $15 millones COP. Firma COPNIA 17202-313228 CLD. Sede Manizales — proyectos en todo Colombia. Propuesta en 24 horas sin costo: +57 302 477 8910.
+          </p>
         </div>
       </section>
 
@@ -335,6 +357,26 @@ export default function EncauzamientoRios() {
         </div>
       </Section>
 
+            {/* ── ANTI-INTERMEDIARIO G.3 ── */}
+      <Section style={{ background: '#f8f9fa' }}>
+        <div style={{ maxWidth: 800, margin: '0 auto', padding: '0 24px' }}>
+          <div style={{ background: '#fff', border: '2px solid #e2e8f0', borderRadius: 14, padding: '28px 32px', borderLeft: '5px solid #17A2B8' }}>
+            <h3 style={{ fontFamily: "'Playfair Display', serif", fontWeight: 700, fontSize: 20, color: '#001A33', marginBottom: 14 }}>
+              ¿Es este servicio para usted?
+            </h3>
+            <p style={{ color: '#555', lineHeight: 1.8, fontSize: 15, marginBottom: 12 }}>
+              BIC trabaja directamente con <strong>constructoras, promotores, alcaldías y empresas</strong> que tienen un proyecto concreto — no con intermediarios que re-cotizan a terceros.
+            </p>
+            <p style={{ color: '#555', lineHeight: 1.8, fontSize: 15, marginBottom: 12 }}>
+              Los precios publicados en este sitio son los que BIC cobra al contratante directo. Si usted es quien decide contratar y tiene el proyecto, la propuesta llega en menos de 24 horas.
+            </p>
+            <p style={{ color: '#555', lineHeight: 1.8, fontSize: 15, margin: 0 }}>
+              Si está averiguando precios para re-cotizar a un tercero, este servicio probablemente no es el correcto para esa gestión. BIC prioriza relaciones directas con el decisor del proyecto.
+            </p>
+          </div>
+        </div>
+      </Section>
+
       {/* ── CTA FINAL ── */}
       <section style={{
         background: 'linear-gradient(135deg, #001A33 0%, #003B6F 100%)',
@@ -365,4 +407,9 @@ export default function EncauzamientoRios() {
               style={{ display: 'inline-block', padding: '15px 36px', background: 'transparent', color: '#fff', borderRadius: 8, fontWeight: 700, fontSize: 16, textDecoration: 'none', border: '2px solid rgba(255,255,255,0.4)' }}>
               Formulario de contacto
             </a>
-       
+          </div>
+        </div>
+      </section>
+    </>
+  )
+}
