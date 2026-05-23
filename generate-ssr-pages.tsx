@@ -37,6 +37,23 @@ import GestionRiesgoHidrico from './src/pages/GestionRiesgoHidrico'
 import PlanParcialColombia from './src/pages/PlanParcialColombia'
 import BocatomasColombia from './src/pages/BocatomasColombia'
 import DisenoAlcantarilladoColombia from './src/pages/DisenoAlcantarilladoColombia'
+// Páginas de servicio adicionales
+import DisenoPTAPColombia from './src/pages/DisenoPTAPColombia'
+import DisenoPTARColombia from './src/pages/DisenoPTARColombia'
+import UrbanizacionColombia from './src/pages/UrbanizacionColombia'
+import LicenciaUrbanismo from './src/pages/LicenciaUrbanismo'
+import EncauzamientoRios from './src/pages/EncauzamientoRios'
+import ConcesionAguasColombia from './src/pages/ConcesionAguasColombia'
+import GestionRiesgoTaludes from './src/pages/GestionRiesgoTaludes'
+import MemoriasHidrosanitarias from './src/pages/MemoriasHidrosanitarias'
+import ServicioAcueductoAlcantarillado from './src/pages/ServicioAcueductoAlcantarillado'
+import ServicioPTAPColombia from './src/pages/ServicioPTAPColombia'
+// Páginas regionales
+import RegionalMedellin from './src/pages/regional/RegionalMedellin'
+import RegionalCali from './src/pages/regional/RegionalCali'
+import RegionalPereira from './src/pages/regional/RegionalPereira'
+import RegionalArmenia from './src/pages/regional/RegionalArmenia'
+import RegionalEjeCafetero from './src/pages/regional/RegionalEjeCafetero'
 
 // ─── Mapa de rutas a componentes ─────────────────────────────────────────────
 const PAGES: Record<string, React.ComponentType> = {
@@ -58,6 +75,23 @@ const PAGES: Record<string, React.ComponentType> = {
   'plan-parcial-colombia': PlanParcialColombia,
   'bocatomas-colombia': BocatomasColombia,
   'diseno-alcantarillado-colombia': DisenoAlcantarilladoColombia,
+  // Páginas de servicio adicionales
+  'diseno-ptap-colombia': DisenoPTAPColombia,
+  'diseno-ptar-colombia': DisenoPTARColombia,
+  'urbanizacion-colombia': UrbanizacionColombia,
+  'licencia-urbanismo': LicenciaUrbanismo,
+  'encauzamiento-rios': EncauzamientoRios,
+  'concesion-aguas-colombia': ConcesionAguasColombia,
+  'gestion-riesgo-taludes': GestionRiesgoTaludes,
+  'memorias-hidrosanitarias': MemoriasHidrosanitarias,
+  'servicio-acueducto-alcantarillado': ServicioAcueductoAlcantarillado,
+  'servicio-ptap-colombia': ServicioPTAPColombia,
+  // Páginas regionales
+  'regional/medellin': RegionalMedellin,
+  'regional/cali': RegionalCali,
+  'regional/pereira': RegionalPereira,
+  'regional/armenia': RegionalArmenia,
+  'regional/eje-cafetero': RegionalEjeCafetero,
 }
 
 let injected = 0
