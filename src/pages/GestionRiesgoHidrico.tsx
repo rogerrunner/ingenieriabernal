@@ -2,7 +2,7 @@ import { useEffect } from 'react'
 import SEOHead from '@/components/SEOHead'
 import SpeakableSchema from '@/components/SpeakableSchema'
 import SchemaMarkup from '@/components/SchemaMarkup'
-import { BlueprintBg, ThinLine, SectionLabel, Btn, Section, Tag } from '@/components/ui'
+import { BlueprintBg, ThinLine, SectionLabel, Btn, Section, Tag, CTABanner } from '@/components/ui'
 
 const WA = '573024778910'
 const WA_MSG = encodeURIComponent('Hola, necesito un estudio de gestión del riesgo hídrico para mi proyecto')
@@ -156,6 +156,8 @@ export default function GestionRiesgoHidrico() {
           { name: 'Estudio detallado HEC-RAS 2D (5–50 ha)', minPrice: 30000000, maxPrice: 60000000, priceCurrency: 'COP', description: 'Incluye modelación HEC-RAS 2D, cartografía SIG escala 1:2.000 y concepto de aptitud urbanística' },
         ]}
       />
+
+      <CTABanner service="Estudio de gestión del riesgo hídrico — Decreto 1807" />
 
       {/* ── HERO ── */}
       <section style={{

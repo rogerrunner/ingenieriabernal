@@ -2,7 +2,7 @@ import { useEffect } from 'react'
 import SEOHead from '@/components/SEOHead'
 import SchemaMarkup from '@/components/SchemaMarkup'
 import SpeakableSchema from '@/components/SpeakableSchema'
-import { BlueprintBg, ThinLine, SectionLabel, Btn, Section, Tag } from '@/components/ui'
+import { BlueprintBg, ThinLine, SectionLabel, Btn, Section, Tag, CTABanner } from '@/components/ui'
 
 const WA = '573024778910'
 const WA_MSG = encodeURIComponent('Hola, necesito cotizar el diseño de una PTAR en Colombia. ¿Pueden ayudarme?')
@@ -232,6 +232,8 @@ export default function DisenoPTARColombia() {
           { name: 'PTAR industrial o gran proyecto (> 1.000 hab)', minPrice: 30000000, maxPrice: 80000000, priceCurrency: 'COP', description: 'Diseño específico según parámetros del agua residual industrial, estudio de impacto ambiental' },
         ]}
       />
+
+      <CTABanner service="Diseño de PTAR — planta tratamiento aguas residuales" />
 
       {/* ── HERO ── */}
       <section style={{

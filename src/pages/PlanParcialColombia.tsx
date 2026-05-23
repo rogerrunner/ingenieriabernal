@@ -1,7 +1,7 @@
 import { useEffect } from 'react'
 import SEOHead from '@/components/SEOHead'
 import SchemaMarkup from '@/components/SchemaMarkup'
-import { BlueprintBg, SectionLabel, Btn, Section, Tag } from '@/components/ui'
+import { BlueprintBg, SectionLabel, Btn, Section, Tag, CTABanner } from '@/components/ui'
 
 const WA = '573024778910'
 const WA_MSG = encodeURIComponent('Hola, tengo un predio en suelo de expansión y necesito el estudio de gestión del riesgo por inundaciones para mi plan parcial. ¿Pueden asesorarme sobre el alcance y el costo?')
@@ -179,6 +179,8 @@ export default function PlanParcialColombia() {
           { name: 'Formulación plan parcial completo (un propietario, 10–50 ha)', minPrice: 80000000, maxPrice: 200000000, priceCurrency: 'COP', description: 'Diagnóstico POT, estudios técnicos, formulación, concertación Planeación y acompañamiento hasta decreto de adopción' },
         ]}
       />
+
+      <CTABanner service="Componente de riesgo hídrico para plan parcial — Decreto 1807" />
 
       {/* ── HERO ── */}
       <section style={{

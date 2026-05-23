@@ -1,7 +1,7 @@
 import { useEffect } from 'react'
 import SEOHead from '@/components/SEOHead'
 import SchemaMarkup from '@/components/SchemaMarkup'
-import { BlueprintBg, ThinLine, SectionLabel, Btn, Section, Tag } from '@/components/ui'
+import { BlueprintBg, ThinLine, SectionLabel, Btn, Section, Tag, CTABanner } from '@/components/ui'
 
 const WA = '573024778910'
 const WA_MSG = encodeURIComponent('Hola, quiero cotizar Modelación Hidráulica HEC-RAS 2D')
@@ -124,6 +124,8 @@ export default function ServicioModelacionHecRas() {
           { name: 'Modelación HEC-RAS 2D — gran proyecto o POMCA', minPrice: 40000000, maxPrice: 80000000, priceCurrency: 'COP', description: 'Cuencas complejas, múltiples cauces, calibración completa con eventos históricos' },
         ]}
       />
+
+      <CTABanner service="Modelación hidráulica HEC-RAS 2D — estudios de inundación" />
 
       {/* ── HERO ── */}
       <section style={{

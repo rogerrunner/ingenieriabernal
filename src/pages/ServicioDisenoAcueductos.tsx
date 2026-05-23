@@ -1,7 +1,7 @@
 import { useEffect } from 'react'
 import SEOHead from '@/components/SEOHead'
 import SchemaMarkup from '@/components/SchemaMarkup'
-import { BlueprintBg, ThinLine, SectionLabel, Btn, Section, Tag } from '@/components/ui'
+import { BlueprintBg, ThinLine, SectionLabel, Btn, Section, Tag, CTABanner } from '@/components/ui'
 
 const WA = '573024778910'
 const WA_MSG = encodeURIComponent('Hola, quiero cotizar Diseño de Acueducto — sistema de agua potable')
@@ -217,6 +217,8 @@ export default function ServicioDisenoAcueductos() {
           { name: 'Acueducto municipal con formulación SGR (MGA-Web)', minPrice: 35000000, maxPrice: 80000000, priceCurrency: 'COP', description: 'Diseño firmado COPNIA + formulación en MGA-Web DNP para presentación ante OCAD' },
         ]}
       />
+
+      <CTABanner service="Diseño de acueducto y alcantarillado para urbanizaciones" />
 
       {/* ── HERO ── */}
       <section style={{

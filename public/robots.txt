@@ -1,3 +1,25 @@
 User-agent: *
 Allow: /
 Sitemap: https://ingenieriabernal.co/sitemap.xml
+
+# AI crawlers — explicitly allowed for AEO indexing
+User-agent: GPTBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Claude-Web
+Allow: /
+
+User-agent: anthropic-ai
+Allow: /
+
+User-agent: Googlebot-Extended
+Allow: /
+
+User-agent: cohere-ai
+Allow: /

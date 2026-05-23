@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react'
 
-const WA_URL = 'https://wa.me/573024778910?text=' + encodeURIComponent('Hola, me interesa una consulta con BIC. ¿Podríamos conversar?')
+const WA_URL = 'https://wa.me/573024778910?text=' + encodeURIComponent('Hola, me gustaría una propuesta para mi proyecto hidráulico. ¿Podemos hablar?')
 
 const WAIcon = () => (
   <svg viewBox="0 0 32 32" width="30" height="30" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -46,7 +46,7 @@ export default function FloatingQuoteButton() {
           pointerEvents: 'none',
           animation: 'badgeIn 0.4s cubic-bezier(.34,1.56,.64,1)',
         }}>
-          💬 ¿Hablamos?
+          📋 Propuesta en 24 h — sin costo
         </div>
       )}
 
