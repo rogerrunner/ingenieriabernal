@@ -6,9 +6,61 @@ const WA = '573024778910'
 
 const STATS = [
   { value: 10, suffix: '+', label: 'Años de experiencia' },
-  { value: 50, suffix: '+', label: 'Proyectos ejecutados' },
+  { value: 50, suffix: '+', label: 'Proyectos entregados' },
   { value: 3, suffix: '', label: 'Países: CO · EC · MX' },
   { value: 21, suffix: '', label: 'Regiones cubiertas' },
+]
+
+// Galería de portafolio con imágenes reales de proyectos BIC
+const PORTFOLIO_GALLERY = [
+  {
+    img: '/img/proyectos/gbp_expert/01_inspeccion_campo_guatica_risaralda.jpeg',
+    title: 'Inspección de campo — Erosión hídrica',
+    location: 'Guática, Risaralda',
+    type: 'Modelación HEC-RAS 2D · Decreto 1807',
+    year: '2023',
+    alt: 'Ingenieros BIC inspeccionando zona de erosión hídrica en Guática Risaralda',
+  },
+  {
+    img: '/img/proyectos/gbp_expert/06_mapa_riesgo_hidrico_alto_medio_bajo.jpeg',
+    title: 'Mapa de riesgo hídrico — Bajo/Medio/Alto',
+    location: 'Belalcázar, Caldas',
+    type: 'Gestión del Riesgo · Decreto 1807/2014',
+    year: '2023',
+    alt: 'Mapa de riesgo hídrico Belalcázar Caldas firmado por Rogerio Bernal COPNIA',
+  },
+  {
+    img: '/img/proyectos/gbp_expert/03_modelacion_hec_ras_2d_inundacion_3d.jpeg',
+    title: 'Modelo 3D HEC-RAS sobre imagen satelital',
+    location: 'Santa Rosa de Cabal, Risaralda',
+    type: 'Modelación HEC-RAS 2D · Inundación',
+    year: '2022',
+    alt: 'Modelo 3D terreno HEC-RAS 2D sobre imagen satelital Santa Rosa de Cabal',
+  },
+  {
+    img: '/img/proyectos/gbp_expert/07_mapa_inundacion_profundidad_aereo.jpeg',
+    title: 'Mapa de inundación TR-100 — Profundidad',
+    location: 'Eje Cafetero, Colombia',
+    type: 'Modelación hidrológica · HEC-HMS · ArcGIS',
+    year: '2022',
+    alt: 'Mapa de inundación profundidad TR100 vista aérea Colombia BIC',
+  },
+  {
+    img: '/img/proyectos/gbp_expert/09_inspeccion_canales_hidraulicos_campo.jpeg',
+    title: 'Inspección hidráulica en campo',
+    location: 'Eje Cafetero, Colombia',
+    type: 'Estudios Hidrológicos · Inspección de campo',
+    year: '2021',
+    alt: 'Inspección hidráulica quebrada Colombia puente BIC ingeniería',
+  },
+  {
+    img: '/img/proyectos/gbp_expert/10_ingeniero_hidraulico_rogerio_bernal.jpg',
+    title: 'Especialista en Ingeniería Hidráulica — UNAL',
+    location: 'Manizales, Colombia',
+    type: 'COPNIA 17202-313228 CLD · Matriculado',
+    year: '2024',
+    alt: 'Rogerio Bernal ingeniero hidráulico especialista UNAL Manizales COPNIA matriculado',
+  },
 ]
 
 const DIFFERENTIATORS = [
@@ -83,8 +135,8 @@ export default function Home() {
         <div className="container" style={{ position: 'relative', maxWidth: 960 }}>
           <div style={{ display: 'flex', gap: 8, flexWrap: 'wrap', marginBottom: 20 }}>
             <Tag style={{ background: 'rgba(23,162,184,0.15)', color: '#17A2B8', border: '1px solid rgba(23,162,184,0.3)', fontSize: 12 }}>🇨🇴 Manizales, Colombia</Tag>
-            <Tag style={{ background: 'rgba(23,162,184,0.15)', color: '#17A2B8', border: '1px solid rgba(23,162,184,0.3)', fontSize: 12 }}></Tag>
-            <Tag style={{ background: 'rgba(23,162,184,0.15)', color: '#17A2B8', border: '1px solid rgba(23,162,184,0.3)', fontSize: 12 }}>UNAL Manizales</Tag>
+            <Tag style={{ background: 'rgba(23,162,184,0.15)', color: '#17A2B8', border: '1px solid rgba(23,162,184,0.3)', fontSize: 12 }}>✅ COPNIA 17202-313228 CLD</Tag>
+            <Tag style={{ background: 'rgba(23,162,184,0.15)', color: '#17A2B8', border: '1px solid rgba(23,162,184,0.3)', fontSize: 12 }}>🎓 Especialista Ing. Hidráulica — UNAL</Tag>
           </div>
           <h1 style={{ fontFamily: "'Playfair Display', serif", fontWeight: 900, color: '#fff', fontSize: 'clamp(28px, 5vw, 58px)', lineHeight: 1.1, marginBottom: 20 }}>
             Ingeniería Hidráulica y Ambiental en Colombia<br />
@@ -122,6 +174,24 @@ export default function Home() {
       <section style={{ background: '#002A50', padding: '40px 40px' }}>
         <div className="container" style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(160px, 1fr))', gap: '2rem', maxWidth: 860, margin: '0 auto' }}>
           {STATS.map(s => <StatCounter key={s.label} {...s} />)}
+        </div>
+      </section>
+
+      {/* ── TRUST BAR — credenciales clave arriba del fold */}
+      <section style={{ background: '#003B6F', borderTop: '1px solid rgba(23,162,184,0.3)', padding: '0' }}>
+        <div className="container" style={{ maxWidth: 960, display: 'flex', flexWrap: 'wrap', justifyContent: 'center', gap: 0 }}>
+          {[
+            { icon: '✅', label: 'COPNIA 17202-313228 CLD', sublabel: 'Matrícula profesional activa' },
+            { icon: '🎓', label: 'Especialista Ing. Hidráulica', sublabel: 'Universidad Nacional — Manizales' },
+            { icon: '📋', label: '50+ proyectos entregados', sublabel: 'Colombia · Ecuador · México' },
+            { icon: '⚡', label: 'Propuesta en 24 horas', sublabel: 'Sin intermediarios' },
+          ].map((item, i) => (
+            <div key={i} style={{ flex: '1 1 200px', padding: '14px 20px', borderRight: i < 3 ? '1px solid rgba(255,255,255,0.1)' : 'none', textAlign: 'center' }}>
+              <span style={{ fontSize: '1.2rem', display: 'block', marginBottom: 3 }}>{item.icon}</span>
+              <p style={{ margin: 0, color: '#fff', fontFamily: "'Montserrat', sans-serif", fontWeight: 700, fontSize: 12 }}>{item.label}</p>
+              <p style={{ margin: 0, color: 'rgba(255,255,255,0.55)', fontSize: 11, fontFamily: "'Lato', sans-serif" }}>{item.sublabel}</p>
+            </div>
+          ))}
         </div>
       </section>
 
@@ -228,28 +298,59 @@ export default function Home() {
         </div>
       </Section>
 
-      {/* ── PROYECTOS PREVIEW */}
-      <Section bg="#F8FAFC" style={{ padding: '56px 40px' }}>
+      {/* ── PORTAFOLIO VISUAL — fotos reales de campo y modelación */}
+      <Section bg="#F8FAFC" style={{ padding: '60px 40px' }}>
         <div className="container">
-          <SectionLabel>Proyectos ejecutados</SectionLabel>
+          <SectionLabel>Portafolio — proyectos reales en Colombia</SectionLabel>
           <ThinLine />
-          <h2 style={{ fontFamily: "'Playfair Display', serif", fontWeight: 700, color: '#003B6F', fontSize: 'clamp(20px, 3vw, 28px)', margin: '1.2rem 0 2rem' }}>
-            Evidencia verificable en campo
+          <h2 style={{ fontFamily: "'Playfair Display', serif", fontWeight: 700, color: '#003B6F', fontSize: 'clamp(20px, 3vw, 30px)', margin: '1.2rem 0 0.5rem' }}>
+            Evidencia técnica verificable en campo
           </h2>
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(300px, 1fr))', gap: 14, marginBottom: 28 }}>
-            {PROJECTS_PREVIEW.map(p => (
-              <div key={p.title} style={{ background: '#fff', border: '1px solid #e0edf5', borderRadius: 10, padding: '1.4rem', borderLeft: `4px solid #17A2B8` }}>
-                <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', marginBottom: 8 }}>
-                  <Tag style={{ fontSize: 12, background: '#f0f7fa', color: '#003B6F', border: '1px solid #deedf5' }}>{p.dept} · {p.year}</Tag>
+          <p style={{ color: '#475569', fontSize: 14, marginBottom: '2rem', lineHeight: 1.7 }}>
+            Cada proyecto incluye modelación HEC-RAS 2D, informe técnico firmado COPNIA y concepto para la autoridad ambiental. 50+ proyectos entregados en Colombia, Ecuador y México.
+          </p>
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(280px, 1fr))', gap: 16, marginBottom: 32 }}>
+            {PORTFOLIO_GALLERY.map((p) => (
+              <a key={p.title} href="/proyectos" style={{ textDecoration: 'none', display: 'block' }}>
+                <div style={{ background: '#fff', border: '1px solid #e0edf5', borderRadius: 12, overflow: 'hidden', transition: 'box-shadow 0.2s, transform 0.2s', cursor: 'pointer' }}
+                  onMouseEnter={e => { (e.currentTarget as HTMLDivElement).style.boxShadow = '0 8px 28px rgba(0,59,111,0.13)'; (e.currentTarget as HTMLDivElement).style.transform = 'translateY(-2px)' }}
+                  onMouseLeave={e => { (e.currentTarget as HTMLDivElement).style.boxShadow = 'none'; (e.currentTarget as HTMLDivElement).style.transform = 'none' }}
+                >
+                  <div style={{ height: 180, overflow: 'hidden', background: '#e8f0f6' }}>
+                    <img
+                      src={p.img}
+                      alt={p.alt}
+                      loading="lazy"
+                      style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }}
+                    />
+                  </div>
+                  <div style={{ padding: '14px 16px' }}>
+                    <div style={{ display: 'flex', justifyContent: 'space-between', marginBottom: 6 }}>
+                      <span style={{ fontSize: 11, color: '#17A2B8', fontWeight: 700, fontFamily: "'Montserrat', sans-serif", textTransform: 'uppercase', letterSpacing: '0.05em' }}>{p.location}</span>
+                      <span style={{ fontSize: 11, color: '#94a3b8', fontFamily: "'Lato', sans-serif" }}>{p.year}</span>
+                    </div>
+                    <h3 style={{ fontFamily: "'Montserrat', sans-serif", fontWeight: 700, fontSize: 13, color: '#003B6F', margin: '0 0 5px', lineHeight: 1.4 }}>{p.title}</h3>
+                    <p style={{ fontSize: 12, color: '#475569', margin: 0, lineHeight: 1.5 }}>{p.type}</p>
+                  </div>
                 </div>
-                <h3 style={{ fontFamily: "'Montserrat', sans-serif", fontWeight: 700, fontSize: 14, color: '#003B6F', margin: '0 0 4px' }}>{p.title}</h3>
-                <p style={{ fontSize: 12, color: '#17A2B8', fontWeight: 600, margin: '0 0 6px' }}>{p.type}</p>
-                <p style={{ fontSize: 12, color: '#475569', margin: 0 }}>{p.client}</p>
+              </a>
+            ))}
+          </div>
+          {/* Proyectos adicionales en texto — contratos destacados */}
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(280px, 1fr))', gap: 10, marginBottom: 28 }}>
+            {PROJECTS_PREVIEW.map(p => (
+              <div key={p.title} style={{ background: '#fff', border: '1px solid #e0edf5', borderRadius: 8, padding: '12px 16px', borderLeft: '3px solid #17A2B8' }}>
+                <div style={{ display: 'flex', justifyContent: 'space-between', marginBottom: 4 }}>
+                  <span style={{ fontSize: 11, color: '#64748b', fontFamily: "'Lato', sans-serif" }}>{p.dept} · {p.year}</span>
+                </div>
+                <h3 style={{ fontFamily: "'Montserrat', sans-serif", fontWeight: 700, fontSize: 13, color: '#003B6F', margin: '0 0 3px' }}>{p.title}</h3>
+                <p style={{ fontSize: 12, color: '#17A2B8', fontWeight: 600, margin: '0 0 3px' }}>{p.type}</p>
+                <p style={{ fontSize: 11, color: '#475569', margin: 0 }}>{p.client}</p>
               </div>
             ))}
           </div>
           <div style={{ textAlign: 'center' }}>
-            <Btn href="/proyectos">Ver portafolio completo →</Btn>
+            <Btn href="/proyectos" style={{ fontSize: 15, padding: '12px 32px' }}>Ver portafolio completo — 50+ proyectos →</Btn>
           </div>
         </div>
       </Section>
