@@ -6,13 +6,13 @@ const articlesL: Record<string, {
   metaDesc: string; keywords: string; body: React.ReactNode
 }> = {
 
-  'costo-estudio-hec-ras-colombia-2026': {
-    title: '¿Cuánto cuesta un estudio HEC-RAS en Colombia? (2026)',
+  'que-incluye-estudio-hec-ras-colombia-2026': {
+    title: '¿Qué incluye un estudio HEC-RAS en Colombia? Guía completa 2026',
     date: 'Mayo 2026',
     readTime: '8 min',
     category: 'Estudios Técnicos',
-    metaDesc: 'Rangos de precio para estudios HEC-RAS en Colombia 2026. Qué incluye el estudio, factores de costo y cómo cotizar. Quebradas, ríos y espolones.',
-    keywords: 'cuánto cuesta estudio HEC-RAS, precio modelación HEC-RAS Colombia, costo estudio inundabilidad Colombia',
+    metaDesc: 'Qué incluye un estudio HEC-RAS en Colombia 2026: entregables, metodología, software y factores de costo. Quebradas, ríos y espolones.',
+    keywords: 'qué incluye estudio HEC-RAS, entregables modelación HEC-RAS Colombia, estudio inundabilidad Colombia entregables',
     body: <>
       <p>Cuando alguien busca cuánto cuesta un estudio HEC-RAS en Colombia, generalmente ya tiene un proyecto en marcha, un trámite ante la CAR o una licencia de urbanismo que no puede avanzar sin ese estudio. Es decir: ya tomó la decisión de contratar, solo necesita saber en qué rango de precios moverse. Este artículo responde esa pregunta con cifras reales de 2026 y explica qué factores determinan el costo final. En <strong>BIC — Bernal Ingeniería Consultores</strong> elaboramos presupuestos personalizados con respuesta en 24 horas.</p>
 

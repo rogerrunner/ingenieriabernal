@@ -417,7 +417,7 @@ const SERVICE_LINKS: Record<string, { label: string; href: string }> = {
   'diferencia-bocatoma-captacion-aguas-colombia':     { label: 'Diseño de Bocatomas en Colombia',            href: '/bocatomas-colombia' },
   'cuando-contratar-ingeniero-hidraulico-colombia':   { label: 'Ver todos nuestros servicios',               href: '/servicios' },
   // articlesL
-  'costo-estudio-hec-ras-colombia-2026':              { label: 'Modelación Hidráulica HEC-RAS 2D',            href: '/servicios/modelacion-hec-ras' },
+  'que-incluye-estudio-hec-ras-colombia-2026':        { label: 'Modelación Hidráulica HEC-RAS 2D',            href: '/servicios/modelacion-hec-ras' },
   'documentos-para-contratar-diseno-acueducto-veredal': { label: 'Diseño de Acueductos Colombia',            href: '/servicios/diseno-acueductos' },
   // articlesM
   'caudales-diseno-acueducto-ras-2017':               { label: 'Diseño de Acueductos Colombia',               href: '/servicios/diseno-acueductos' },
