@@ -484,4 +484,10 @@ export default function UrbanizacionColombia() {
               textDecoration: 'none',
             }}
           >
-            📱 
+            📱 Chatear por WhatsApp · +57 302 477 8910
+          </a>
+        </div>
+      </section>
+    </>
+  )
+}

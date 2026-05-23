@@ -423,4 +423,32 @@ export default function DisenoPTAPColombia() {
           <p style={{ color: '#17A2B8', fontWeight: 600, fontSize: 15, marginBottom: 32 }}>
             Primera consulta sin costo · Atención en todo Colombia.
           </p>
-          <div style={{ display: 'flex', gap: 14, justifyCon
+          <div style={{ display: 'flex', gap: 14, justifyContent: 'center', flexWrap: 'wrap' }}>
+            <a
+              href={`https://wa.me/${WA}?text=${WA_MSG}`}
+              target="_blank" rel="noopener noreferrer"
+              style={{
+                display: 'inline-block', padding: '15px 36px',
+                background: '#25D366', color: '#fff',
+                borderRadius: 8, fontWeight: 700, fontSize: 16, textDecoration: 'none',
+              }}
+            >
+              📱 Cotizar por WhatsApp · +57 302 477 8910
+            </a>
+            <a
+              href="/contacto"
+              style={{
+                display: 'inline-block', padding: '15px 36px',
+                background: 'transparent', color: '#fff',
+                borderRadius: 8, fontWeight: 700, fontSize: 16,
+                textDecoration: 'none', border: '2px solid rgba(255,255,255,0.4)',
+              }}
+            >
+              Formulario de contacto
+            </a>
+          </div>
+        </div>
+      </section>
+    </>
+  )
+}

@@ -572,4 +572,27 @@ export default function LicenciaUrbanismo() {
       }}>
         <BlueprintBg opacity={0.05} />
         <div style={{ position: 'relative', maxWidth: 700, margin: '0 auto' }}>
-          <h2 style={{ fontFamily: "'Playfair Display', serif", fontWeight: 700, color: '#fff', fontSize: 'clamp(22px, 3vw, 34px)', m
+          <h2 style={{ fontFamily: "'Playfair Display', serif", fontWeight: 700, color: '#fff', fontSize: 'clamp(22px, 3vw, 34px)', marginBottom: 16 }}>
+            ¿Va a desarrollar un predio y necesita la licencia de urbanismo?
+          </h2>
+          <p style={{ color: 'rgba(255,255,255,0.82)', fontSize: 16, lineHeight: 1.75, marginBottom: 32 }}>
+            Cuéntenos la ubicación y el tipo de proyecto. BIC le indica qué estudios necesita y
+            le envía una propuesta técnica y económica en menos de 24 horas.
+          </p>
+          <a
+            href={`https://wa.me/${WA}?text=${WA_MSG}`}
+            target="_blank" rel="noopener noreferrer"
+            style={{
+              display: 'inline-block', padding: '14px 32px',
+              background: '#25D366', color: '#fff',
+              borderRadius: 8, fontWeight: 700, fontSize: 16,
+              textDecoration: 'none',
+            }}
+          >
+            📱 Chatear por WhatsApp · +57 302 477 8910
+          </a>
+        </div>
+      </section>
+    </>
+  )
+}

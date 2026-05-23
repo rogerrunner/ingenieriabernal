@@ -369,4 +369,11 @@ export default function ConcesionAguasColombia() {
                 textDecoration: 'none', border: '2px solid rgba(255,255,255,0.4)',
               }}
             >
-              Formulario de 
+              Formulario de contacto
+            </a>
+          </div>
+        </div>
+      </section>
+    </>
+  )
+}

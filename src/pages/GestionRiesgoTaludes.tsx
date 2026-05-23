@@ -393,4 +393,11 @@ export default function GestionRiesgoTaludes() {
               📱 Consultar por WhatsApp · +57 302 477 8910
             </a>
             <a href="/contacto" style={{ display: 'inline-block', padding: '15px 36px', background: 'transparent', color: '#fff', borderRadius: 8, fontWeight: 700, fontSize: 16, textDecoration: 'none', border: '2px solid rgba(255,255,255,0.4)' }}>
-              Formulario de co
+              Formulario de contacto
+            </a>
+          </div>
+        </div>
+      </section>
+    </>
+  )
+}

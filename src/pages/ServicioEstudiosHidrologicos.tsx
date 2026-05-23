@@ -675,4 +675,20 @@ export default function ServicioEstudiosHidrologicos() {
             Cuéntenos el tipo de proyecto, el municipio y el propósito del estudio (obra, licencia, concesión de aguas).
           </p>
           <p style={{ color: '#17A2B8', fontWeight: 600, fontSize: 15, marginBottom: 32 }}>
-            BIC envía propuesta t
+            BIC envía propuesta técnica y económica en menos de 24 horas · Primera consulta sin costo.
+          </p>
+          <div style={{ display: 'flex', gap: 14, justifyContent: 'center', flexWrap: 'wrap' }}>
+            <a href={`https://wa.me/${WA}?text=${WA_MSG}`} target="_blank" rel="noopener noreferrer"
+              style={{ display: 'inline-block', padding: '15px 36px', background: '#25D366', color: '#fff', borderRadius: 8, fontWeight: 700, fontSize: 16, textDecoration: 'none' }}>
+              📱 Cotizar por WhatsApp · +57 302 477 8910
+            </a>
+            <a href="/contacto"
+              style={{ display: 'inline-block', padding: '15px 36px', background: 'transparent', color: '#fff', borderRadius: 8, fontWeight: 700, fontSize: 16, textDecoration: 'none', border: '2px solid rgba(255,255,255,0.4)' }}>
+              Formulario de contacto
+            </a>
+          </div>
+        </div>
+      </section>
+    </>
+  )
+}

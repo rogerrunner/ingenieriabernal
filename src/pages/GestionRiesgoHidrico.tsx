@@ -523,4 +523,27 @@ export default function GestionRiesgoHidrico() {
           }}>
             ¿Necesita estudio de riesgo hídrico para su proyecto?
           </h2>
-     
+          <p style={{
+            fontFamily: "'Lato', sans-serif", color: 'rgba(255,255,255,0.9)',
+            fontSize: 16, lineHeight: 1.7, marginBottom: 32,
+          }}>
+            Indíquenos la ubicación del predio, los cauces cercanos y la entidad a la que debe
+            entregar el informe. Le respondemos con propuesta técnica y presupuesto en menos de
+            24 horas. Primera consulta sin costo.
+          </p>
+          <div style={{ display: 'flex', gap: 12, justifyContent: 'center', flexWrap: 'wrap' }}>
+            <Btn
+              href={`https://wa.me/${WA}?text=${WA_MSG}`}
+              style={{ background: '#fff', color: '#17A2B8', fontSize: 15, padding: '14px 36px' }}
+            >
+              📱 Chatear por WhatsApp
+            </Btn>
+            <Btn variant="outline" href="/contacto" style={{ borderColor: '#fff', color: '#fff' }}>
+              Ver formulario de contacto
+            </Btn>
+          </div>
+        </div>
+      </Section>
+    </>
+  )
+}
