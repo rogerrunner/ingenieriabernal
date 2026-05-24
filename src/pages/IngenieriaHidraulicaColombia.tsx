@@ -266,7 +266,7 @@ export default function IngenieriaHidraulicaColombia() {
             COPNIA 17202-313228 CLD vigente y más de 10 años de experiencia en Colombia, Ecuador y México.
           </p>
           <div style={{ display: 'flex', gap: 12, flexWrap: 'wrap' }}>
-            <Btn href={`https://wa.me/${WA}?text=${WA_MSG}`}>📱 Solicitar cotización</Btn>
+            <Btn href={`https://wa.me/${WA}?text=${WA_MSG}`}>📱 Propuesta en 24 h — sin costo</Btn>
             <Btn variant="outline" href="/servicios" dark>Ver todos los servicios</Btn>
           </div>
           <div style={{ display: 'flex', gap: 8, flexWrap: 'wrap', marginTop: 28 }}>
@@ -547,7 +547,7 @@ export default function IngenieriaHidraulicaColombia() {
               textDecoration: 'none',
             }}
           >
-            📱 Chatear por WhatsApp · +57 302 477 8910
+            📱 Propuesta en 24 h — sin costo
           </a>
         </div>
       </section>

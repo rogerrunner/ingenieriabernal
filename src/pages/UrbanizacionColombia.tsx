@@ -486,7 +486,7 @@ export default function UrbanizacionColombia() {
               textDecoration: 'none',
             }}
           >
-            📱 Chatear por WhatsApp · +57 302 477 8910
+            📱 Propuesta en 24 h — sin costo
           </a>
         </div>
       </section>

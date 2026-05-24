@@ -356,7 +356,7 @@ export default function ServicioContraIncendiosNSR10() {
             href={`https://wa.me/${WA}?text=${WA_MSG}`}
             style={{ background: '#fff', color: '#17A2B8', fontSize: 15, padding: '14px 36px' }}
           >
-            Chatear por WhatsApp
+            📱 Propuesta en 24 h — sin costo
           </Btn>
         </div>
       </Section>

@@ -526,7 +526,7 @@ export default function DisenoAlcantarilladoColombia() {
                 borderRadius: 8, fontWeight: 700, fontSize: 16, textDecoration: 'none',
               }}
             >
-              📱 Cotizar por WhatsApp · +57 302 477 8910
+              📱 Propuesta en 24 h — sin costo
             </a>
             <a
               href="/contacto"

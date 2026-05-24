@@ -266,7 +266,7 @@ export default function ServicioTopografia() {
           </div>
           <a href={`https://wa.me/${WA}?text=${WA_MSG}`} target="_blank" rel="noopener noreferrer"
             style={{ display: 'inline-block', padding: '12px 28px', background: '#25D366', color: '#fff', borderRadius: 8, fontWeight: 700, fontSize: 15, textDecoration: 'none' }}>
-            📱 Cotizar por WhatsApp
+            📱 Propuesta en 24 h — sin costo
           </a>
         </div>
       </section>
@@ -303,7 +303,7 @@ export default function ServicioTopografia() {
           </p>
           <a href={`https://wa.me/${WA}?text=${WA_MSG}`} target="_blank" rel="noopener noreferrer"
             style={{ display: 'inline-block', padding: '13px 28px', background: '#25D366', color: '#fff', borderRadius: 8, fontWeight: 700, fontSize: 15, textDecoration: 'none' }}>
-            📱 Solicitar cotización sin costo
+            📱 Propuesta en 24 h — sin costo
           </a>
         </div>
       </section>
@@ -374,7 +374,7 @@ export default function ServicioTopografia() {
           <div style={{ display: 'flex', gap: 14, justifyContent: 'center', flexWrap: 'wrap' }}>
             <a href={`https://wa.me/${WA}?text=${WA_MSG}`} target="_blank" rel="noopener noreferrer"
               style={{ display: 'inline-block', padding: '15px 36px', background: '#25D366', color: '#fff', borderRadius: 8, fontWeight: 700, fontSize: 16, textDecoration: 'none' }}>
-              📱 Cotizar por WhatsApp · +57 302 477 8910
+              📱 Propuesta en 24 h — sin costo
             </a>
             <a href="/contacto"
               style={{ display: 'inline-block', padding: '15px 36px', background: 'transparent', color: '#fff', borderRadius: 8, fontWeight: 700, fontSize: 16, textDecoration: 'none', border: '2px solid rgba(255,255,255,0.4)' }}>

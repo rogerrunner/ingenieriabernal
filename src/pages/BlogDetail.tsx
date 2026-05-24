@@ -663,7 +663,7 @@ export default function BlogDetail() {
                   boxShadow: '0 4px 12px rgba(37,211,102,0.35)',
                 }}
               >
-                📱 Consultar por WhatsApp
+                📱 Propuesta en 24 h — sin costo
               </a>
               <Btn href="/blog" variant="outline" dark>← Todos los artículos</Btn>
             </div>

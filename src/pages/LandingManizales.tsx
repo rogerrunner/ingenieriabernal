@@ -346,7 +346,7 @@ export default function LandingManizales() {
             href={`https://wa.me/${WA}?text=${WA_MSG}`}
             style={{ background: '#fff', color: '#17A2B8', fontSize: 15, padding: '14px 36px' }}
           >
-            Chatear por WhatsApp +57 302 477 8910
+            📱 Propuesta en 24 h — sin costo +57 302 477 8910
           </Btn>
         </div>
       </Section>

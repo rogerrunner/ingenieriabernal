@@ -273,7 +273,7 @@ export default function LicenciaUrbanismo() {
             Urbanizaciones residenciales, comerciales, industriales y planes parciales en todo el territorio nacional.
           </p>
           <div style={{ display: 'flex', gap: 12, flexWrap: 'wrap' }}>
-            <Btn href={`https://wa.me/${WA}?text=${WA_MSG}`}>📱 Solicitar cotización</Btn>
+            <Btn href={`https://wa.me/${WA}?text=${WA_MSG}`}>📱 Propuesta en 24 h — sin costo</Btn>
             <Btn variant="outline" href="/servicios" dark>Ver todos los servicios</Btn>
           </div>
           <div style={{ display: 'flex', gap: 8, flexWrap: 'wrap', marginTop: 28 }}>
@@ -591,7 +591,7 @@ export default function LicenciaUrbanismo() {
               textDecoration: 'none',
             }}
           >
-            📱 Chatear por WhatsApp · +57 302 477 8910
+            📱 Propuesta en 24 h — sin costo
           </a>
         </div>
       </section>

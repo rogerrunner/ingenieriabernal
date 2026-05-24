@@ -345,7 +345,7 @@ export default function BocatomasColombia() {
               fontWeight: 700, fontSize: 15, textDecoration: 'none', whiteSpace: 'nowrap',
             }}
           >
-            📱 Cotizar por WhatsApp
+            📱 Propuesta en 24 h — sin costo
           </a>
         </div>
       </section>
@@ -513,7 +513,7 @@ export default function BocatomasColombia() {
                 textDecoration: 'none',
               }}
             >
-              📱 Cotizar por WhatsApp · +57 302 477 8910
+              📱 Propuesta en 24 h — sin costo
             </a>
             <a
               href="/contacto"

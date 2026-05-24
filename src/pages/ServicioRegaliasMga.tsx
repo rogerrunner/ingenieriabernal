@@ -82,7 +82,7 @@ export default function ServicioRegaliasMga() {
           </p>
           <div style={{ display: 'flex', gap: 12, flexWrap: 'wrap' }}>
             <Btn href={`https://wa.me/${WA}?text=${WA_MSG}`}>
-              📱 Solicitar cotización
+              📱 Propuesta en 24 h — sin costo
             </Btn>
             <Btn variant="outline" href="/servicios" dark>
               Ver todos los servicios
@@ -259,7 +259,7 @@ export default function ServicioRegaliasMga() {
             href={`https://wa.me/${WA}?text=${WA_MSG}`}
             style={{ background: '#fff', color: '#17A2B8', fontSize: 15, padding: '14px 36px' }}
           >
-            📱 Chatear por WhatsApp
+            📱 Propuesta en 24 h — sin costo
           </Btn>
         </div>
       </Section>
