@@ -19,6 +19,7 @@ import articlesO from '../data/articlesO'
 import articlesP from '../data/articlesP'
 import articlesQ from '../data/articlesQ'
 import articlesR from '../data/articlesR'
+import articlesS from '../data/articlesS'
 import SEOHead from '../components/SEOHead'
 import { BlueprintBg, Tag, ThinLine, SectionLabel, Btn, Section } from '../components/ui'
 import { SEOConfig } from '../lib/seo'
@@ -336,6 +337,7 @@ const ARTICLES: Record<string, {
   ...articlesP,
   ...articlesQ,
   ...articlesR,
+  ...articlesS,
 }
 
 // ─── SERVICE LINKS PER ARTICLE ──────────────────────────────────────────────
@@ -465,6 +467,8 @@ const SERVICE_LINKS: Record<string, { label: string; href: string }> = {
   'decreto-1807-plan-parcial-colombia':                { label: 'Gestión del Riesgo Hídrico — Plan Parcial',  href: '/plan-parcial-colombia' },
   // articlesR — costo plan parcial Colombia
   'cuanto-cuesta-plan-parcial-colombia':               { label: 'Plan Parcial Colombia — BIC',                href: '/plan-parcial-colombia' },
+  // articlesS — costo diseno alcantarillado Colombia
+  'cuanto-cuesta-diseno-alcantarillado-colombia':      { label: 'Diseño de Alcantarillado en Colombia',        href: '/diseno-alcantarillado-colombia' },
 }
 
 // Canonical override: estos artículos apuntan su canonical a la página de servicio
