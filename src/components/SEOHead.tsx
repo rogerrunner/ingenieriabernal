@@ -40,7 +40,33 @@ export default function SEOHead({ config }: SEOHeadProps) {
         document.head.appendChild(canonical);
       }
       canonical.setAttribute("href", config.canonical);
+
+      // hreflang -- single-language site (es-CO) pointing to canonical
+      const hreflangLocales = [
+        { hreflang: "es-CO",    href: config.canonical },
+        { hreflang: "es",       href: config.canonical },
+        { hreflang: "x-default", href: config.canonical },
+      ];
+      hreflangLocales.forEach(({ hreflang, href }) => {
+        let link = document.querySelector(`link[rel='alternate'][hreflang='${hreflang}']`);
+        if (!link) {
+          link = document.createElement("link");
+          link.setAttribute("rel", "alternate");
+          link.setAttribute("hreflang", hreflang);
+          document.head.appendChild(link);
+        }
+        link.setAttribute("href", href);
+      });
     }
+
+    // Geo meta tags -- company HQ Manizales, Caldas, Colombia
+    const geoTags: [string, string][] = [
+      ["geo.region",    "CO-CAL"],
+      ["geo.placename", "Manizales, Caldas, Colombia"],
+      ["geo.position",  "5.0703;-75.5138"],
+      ["ICBM",          "5.0703, -75.5138"],
+    ];
+    geoTags.forEach(([name, content]) => updateMetaTag(name, content));
   }, [config]);
 
   return null;

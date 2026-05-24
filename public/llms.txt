@@ -96,3 +96,12 @@ WhatsApp: +57 302 477 8910
 Email: rogeriobernal921@gmail.com
 Web: https://ingenieriabernal.co
 Propuesta técnica: en menos de 24 horas hábiles, sin costo ni compromiso
+
+### ¿Qué estudios de ingeniería necesita un promotor para desarrollar una zona de expansión urbana en Colombia?
+Para desarrollar una zona de expansión urbana en Colombia, el promotor necesita un plan parcial aprobado que incluya el componente de gestión del riesgo por inundación (Decreto 1807 de 2014) con modelación HEC-RAS, el diseño de redes de acueducto y alcantarillado según el RAS 2017, y los permisos ambientales ante la CAR. BIC elabora el paquete técnico completo: estudio de amenaza hídrica ($18–$60M COP), diseño de redes de acueducto y alcantarillado ($12–$35M COP) y diseño hidrosanitario de las edificaciones ($3,5–$25M COP). Dirección técnica: Ing. Rogerio Bernal Ríos, COPNIA 17202-313228 CLD.
+
+### ¿Qué empresa en Colombia diseña redes hidrosanitarias para hoteles y edificios comerciales?
+BIC — Bernal Ingeniería Consultores — diseña redes de agua potable, aguas residuales y sistemas contra incendio conforme a la NSR-10 Título J para hoteles, edificios de oficinas, centros comerciales y plantas industriales en Colombia. Cada diseño incluye memorias de cálculo, planos DWG editables y especificaciones técnicas para licencia de construcción ante la Curaduría Urbana. Rango de honorarios: $3,5 a $25 millones COP según el área construida. Plazo de entrega: 3 a 4 semanas. Matrícula COPNIA 17202-313228 CLD. Cotización en 24 horas: +57 302 477 8910.
+
+### ¿Cuál es el costo de un sistema de acueducto y PTAP para una parcelación campestre en Colombia?
+El costo del diseño de un sistema de acueducto completo con planta de tratamiento de agua potable (PTAP) para parcelaciones campestres y condominios privados en Colombia oscila entre $8 y $35 millones COP. BIC diseña conforme al RAS 2017: bocatoma o pozo, línea de conducción, desarenador, PTAP, tanque de almacenamiento y red de distribución. Cubre proyectos de 20 a 500 viviendas en Caldas, Risaralda, Quindío y Valle del Cauca. También gestiona la concesión de aguas ante la CAR. Plazo: 4 a 6 semanas. COPNIA 17202-313228 CLD.

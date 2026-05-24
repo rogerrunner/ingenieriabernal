@@ -88,7 +88,15 @@ const LOCAL_BUSINESS_SCHEMA = {
   paymentAccepted: 'Transferencia bancaria, Nequi, Bancolombia',
   sameAs: [
     'https://wa.me/573024778910',
+    'https://www.linkedin.com/in/rogerio-bernal-rios-4487341b4/',
+    'https://ingenieriabernal.co',
   ],
+  hasCredential: {
+    '@type': 'EducationalOccupationalCredential',
+    credentialCategory: 'Matricula profesional de ingeniero',
+    recognizedBy: { '@type': 'Organization', name: 'COPNIA' },
+    identifier: '17202-313228 CLD',
+  },
   priceRange: '$$',
 }
 
