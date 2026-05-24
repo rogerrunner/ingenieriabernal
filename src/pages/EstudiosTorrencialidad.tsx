@@ -1,5 +1,6 @@
 import { useEffect } from 'react'
 import SEOHead from '@/components/SEOHead'
+import SchemaMarkup from '@/components/SchemaMarkup'
 import { BlueprintBg, SectionLabel, Btn, Section, Tag } from '@/components/ui'
 
 const WA = '573024778910'
@@ -161,6 +162,18 @@ export default function EstudiosTorrencialidad() {
   return (
     <>
       <SEOHead config={seoConfig} />
+      <SchemaMarkup
+        type="service"
+        serviceName="Estudios de Torrencialidad Colombia — FLO-2D y RAMMS"
+        serviceDesc="Estudios de amenaza torrencial para Colombia: mapa de amenaza Decreto 1807, modelación FLO-2D / RAMMS DEBRISFLOW, delimitación de retiros y concepto técnico firmado COPNIA para CAR, curadurías y planes de ordenamiento territorial."
+        serviceUrl="/estudios-torrencialidad-colombia"
+        faqItems={FAQ.map(f => ({ q: f.q, a: f.a }))}
+        priceSpecification={[
+          { name: 'Mapa de amenaza torrencial basico (cuenca < 20 km2)', minPrice: 15000000, maxPrice: 25000000, priceCurrency: 'COP', description: 'Metodologia geomorfologica, mapa amenaza alta/media/baja, delimitacion retiro, firma COPNIA' },
+          { name: 'Modelacion FLO-2D o RAMMS completa (plan parcial o POT)', minPrice: 35000000, maxPrice: 85000000, priceCurrency: 'COP', description: 'Modelacion bidimensional calibrada, cartografia SIG entregable CAR, informe tecnico completo' },
+          { name: 'Estudio combinado torrencialidad + inundacion HEC-RAS', minPrice: 45000000, maxPrice: 120000000, priceCurrency: 'COP', description: 'Ambos componentes Decreto 1807: HEC-RAS para rio principal + FLO-2D para quebradas torrenciales' },
+        ]}
+      />
 
       {/* ── HERO ── */}
       <section style={{
@@ -462,7 +475,7 @@ export default function EstudiosTorrencialidad() {
             (POT, licencia, diseño de obras) y el organismo ante el que va a presentar el informe.
           </p>
           <p style={{ color: '#F4A261', fontWeight: 600, fontSize: 15, marginBottom: 32 }}>
-            BIC le envía propuesta tecnica y economica en menos de 24 horas · Primera consulta sin costo.
+            BIC le envia propuesta tecnica y economica en menos de 24 horas · Primera consulta sin costo.
           </p>
           <div style={{ display: 'flex', gap: 14, justifyContent: 'center', flexWrap: 'wrap' }}>
             <a
@@ -475,7 +488,7 @@ export default function EstudiosTorrencialidad() {
                 textDecoration: 'none',
               }}
             >
-              📱 Propuesta en 24 h — sin costo
+              Propuesta en 24 h sin costo
             </a>
             <a
               href="/contacto"

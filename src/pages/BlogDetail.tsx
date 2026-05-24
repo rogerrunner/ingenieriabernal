@@ -21,6 +21,7 @@ import articlesQ from '../data/articlesQ'
 import articlesR from '../data/articlesR'
 import articlesS from '../data/articlesS'
 import articlesT from '../data/articlesT'
+import articlesU from '../data/articlesU'
 import SEOHead from '../components/SEOHead'
 import { BlueprintBg, Tag, ThinLine, SectionLabel, Btn, Section } from '../components/ui'
 import { SEOConfig } from '../lib/seo'
@@ -340,6 +341,7 @@ const ARTICLES: Record<string, {
   ...articlesR,
   ...articlesS,
   ...articlesT,
+  ...articlesU,
 }
 
 // ─── SERVICE LINKS PER ARTICLE ──────────────────────────────────────────────
@@ -473,6 +475,8 @@ const SERVICE_LINKS: Record<string, { label: string; href: string }> = {
   'cuanto-cuesta-diseno-alcantarillado-colombia':      { label: 'Diseño de Alcantarillado en Colombia',        href: '/diseno-alcantarillado-colombia' },
   // articlesT — estudio torrencialidad Colombia
   'estudio-torrencialidad-colombia':                   { label: 'Estudios de Torrencialidad — BIC Colombia',   href: '/estudios-torrencialidad-colombia' },
+  // articlesU — diseno acueducto veredal bocatoma Colombia
+  'diseno-acueducto-veredal-colombia':                 { label: 'Bocatomas y Acueducto Veredal — BIC',         href: '/bocatomas-colombia' },
 }
 
 // Canonical override: estos artículos apuntan su canonical a la página de servicio
