@@ -139,6 +139,25 @@ const FAQS = [
 ]
 
 export default function GestionRiesgoHidrico() {
+
+  useEffect(() => {
+    const id = 'bc-gestion-riesgo'
+    document.getElementById(id)?.remove()
+    const el = document.createElement('script')
+    el.id = id
+    el.type = 'application/ld+json'
+    el.text = JSON.stringify({
+      '@context': 'https://schema.org',
+      '@type': 'BreadcrumbList',
+      'itemListElement': [
+        { '@type': 'ListItem', 'position': 1, 'name': 'Inicio', 'item': 'https://ingenieriabernal.co' },
+        { '@type': 'ListItem', 'position': 2, 'name': 'Gestión del Riesgo Hídrico', 'item': 'https://ingenieriabernal.co/gestion-riesgo-hidrico' },
+      ],
+    })
+    document.head.appendChild(el)
+    return () => { document.getElementById(id)?.remove() }
+  }, [])
+
   useEffect(() => { window.scrollTo(0, 0) }, [])
 
   return (

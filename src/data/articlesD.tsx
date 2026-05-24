@@ -2,6 +2,7 @@
 const articlesD: Record<string, {
   title: string; date: string; readTime: string; category: string
   metaDesc: string; keywords: string; body: React.ReactNode
+  faqItems?: Array<{ q: string; a: string }>
 }> = {
 
   'riesgo-inundacion-eje-cafetero': {
@@ -255,6 +256,121 @@ const articlesD: Record<string, {
       <p><strong>Antes de contratar, solicite una consulta técnica gratuita con Rogerio Bernal para evaluar los requerimientos específicos de su proyecto sin ningún compromiso.</strong> <strong>Contáctenos: ingenieriabernal.co | WhatsApp +57 302 477 8910</strong></p>
     </>,
   },
+
+  'decreto-1807-riesgo-inundacion-colombia': {
+    title: 'Decreto 1807 de 2014: guia completa para estudios de riesgo en Colombia (POT, licencias y planes parciales)',
+    date: 'Mayo 2026',
+    readTime: '14 min',
+    category: 'Riesgo Hidrico',
+    metaDesc: 'Todo lo que necesitas saber sobre el Decreto 1807 de 2014 en Colombia: que estudios exige, como se elaboran, quien puede firmarlos, cuanto cuestan y como afectan las licencias de construccion y los planes parciales.',
+    keywords: 'Decreto 1807 Colombia riesgo inundacion, estudios Decreto 1807 plan parcial Colombia, amenaza inundacion licencia construccion Colombia, riesgo hidrico POT Colombia',
+    body: <>
+      <p>El <strong>Decreto 1807 de 2014</strong> es, junto con la Ley 388 de 1997, el instrumento normativo que mas afecta a los promotores inmobiliarios, alcaldias y propietarios de predios en zonas de amenaza hidrica en Colombia. Desde su entrada en vigencia, obtener una licencia de construccion, aprobar un plan parcial o revisar un POT en zonas de expansion urbana exige estudios tecnicos detallados que van mucho mas alla de un simple certificado de usos del suelo. Esta guia explica, sin tecnicismos innecesarios pero con precision normativa, que exige el Decreto, a quien le aplica y como obtener los estudios correctamente.</p>
+
+      <h2>Que es el Decreto 1807 de 2014 y a quien aplica</h2>
+      <p>El Decreto 1807 de 2014 reglamenta el articulo 189 del Decreto Ley 019 de 2012 y los articulos 2, 3 y 4 de la Ley 1523 de 2012 (Ley de Gestion del Riesgo). Su proposito es incorporar de manera formal la gestion del riesgo por inundaciones y movimientos en masa en los instrumentos de ordenamiento territorial colombianos. Esto significa que no se aplica solo al POT municipal: tambien rige para las licencias de construccion individuales y los planes parciales que se tramiten en zonas donde la cartografia oficial del municipio identifica amenaza alta o media.</p>
+      <p>El decreto aplica en los siguientes escenarios:</p>
+      <ul>
+        <li><strong>Revision y ajuste de POT:</strong> Todo municipio que revise su POT debe actualizar o elaborar estudios basicos y detallados de amenaza por inundacion y movimientos en masa antes de delimitar las zonas de expansion urbana o modificar las normas urbanisticas en zonas de amenaza.</li>
+        <li><strong>Planes parciales:</strong> Los planes parciales en suelo de expansion urbana o en areas de renovacion que incluyan zonas de amenaza alta o media deben incorporar estudios detallados de riesgo como condicion para su aprobacion.</li>
+        <li><strong>Licencias de construccion:</strong> El curador urbano puede exigir estudios de amenaza y riesgo como condicion para expedir la licencia cuando el predio se localiza en zonas de amenaza alta o media segun la cartografia municipal vigente.</li>
+        <li><strong>Permisos de subdivision y urbanizacion:</strong> Aplica de igual forma cuando el predio esta en zona de amenaza segun el POT.</li>
+      </ul>
+
+      <h2>Los dos niveles de estudios: basicos y detallados</h2>
+      <p>El Decreto 1807 establece dos niveles de estudios tecnicos con requisitos, escalas y metodologias diferentes:</p>
+      <p><strong>Estudios basicos</strong> son los que elabora el municipio (o la autoridad competente) para toda la jurisdiccion, a escala 1:25.000 en suelo rural y 1:5.000 en suelo urbano y de expansion. Estos estudios producen la cartografia de amenaza municipal que es el insumo base para la revision del POT. Generalmente los elaboran firmas contratadas por la alcaldia o la CAR. No los hace el promotor individual.</p>
+      <p><strong>Estudios detallados</strong> son los que se elaboran a escala 1:2.000 o mayor para predios o areas especificas. Estos son los que tipicamente debe contratar el promotor o propietario cuando:</p>
+      <ul>
+        <li>El predio tiene una parte en zona de amenaza segun los estudios basicos del municipio.</li>
+        <li>La curaduria solicita el estudio como condicion para la licencia.</li>
+        <li>El plan parcial incluye suelo en zona de amenaza alta o media.</li>
+        <li>El municipio no cuenta con estudios basicos actualizados y la CAR o la UNGRD lo exige como condicion previa.</li>
+      </ul>
+
+      <h2>Que debe incluir un estudio detallado de amenaza por inundacion</h2>
+      <p>Un estudio detallado de amenaza por inundacion conforme al Decreto 1807 es sustancialmente mas riguroso que lo que muchas firmas ofrecen bajo este nombre. Debe incluir, como minimo:</p>
+      <ul>
+        <li><strong>Estudio hidrologico de la cuenca aportante:</strong> Caracterizacion morfometrica, analisis de informacion climatologica del IDEAM, calculo de caudales de creciente para periodos de retorno de 25, 50, 100 y 500 anos mediante analisis de frecuencias estadisticas (Gumbel, Log-Pearson III) y modelacion lluvia-escorrentia.</li>
+        <li><strong>Modelacion hidraulica con HEC-RAS 2D:</strong> Para generar los mapas de amenaza por inundacion (calados, velocidades, tiempos de llegada) se requiere modelacion hidraulica bidimensional del cauce y la llanura de inundacion. HEC-RAS 2D es el estandar aceptado por las Curaduras Urbanas, las CAR y el IGAC en Colombia. La modelacion unidimensional (HEC-RAS 1D) ya no es suficiente en la mayoria de los casos.</li>
+        <li><strong>Levantamiento topografico de alta resolucion:</strong> La precision del modelo hidraulico depende directamente de la calidad del DTM (modelo digital del terreno). Para estudios urbanos se requiere levantamiento con estacion total o LiDAR con precision vertical de 0,10 a 0,25 m. El uso de imagenes satelitales de libre acceso (SRTM, ASTER) no es aceptable para estudios detallados.</li>
+        <li><strong>Cartografia de amenaza:</strong> Mapas a escala 1:2.000 con la delimitacion de tres zonas: amenaza alta (Tr 25-50 anos), media (Tr 50-100 anos) y baja (Tr 100-500 anos). Los mapas deben entregarse en formato shapefile georreferenciado en MAGNA-SIRGAS para que el municipio pueda incorporarlos al SIG municipal.</li>
+        <li><strong>Analisis de vulnerabilidad y riesgo:</strong> Superposicion de la cartografia de amenaza con el catastro de bienes expuestos (edificaciones, infraestructura) para producir el mapa de riesgo del area de estudio.</li>
+        <li><strong>Medidas de mitigacion:</strong> Propuesta de obras de proteccion (jarillones, canales de alivio, espolones) o medidas no estructurales (restricciones de uso del suelo) que permitan reducir el nivel de amenaza en el area del proyecto.</li>
+      </ul>
+
+      <h2>Que exige el Decreto para movimientos en masa</h2>
+      <p>Ademas de la amenaza por inundacion, el Decreto 1807 exige estudios de amenaza por movimientos en masa (deslizamientos, flujos de detritos, caidas de roca) cuando el predio o el area del plan parcial incluye zonas de ladera. Este componente comprende:</p>
+      <ul>
+        <li>Geologia y geomorfologia del area, con identificacion de unidades de terreno susceptibles.</li>
+        <li>Reconocimiento de campo con cartografia de evidencias de inestabilidad pasada.</li>
+        <li>Analisis de estabilidad de taludes con software especializado (SLOPE/W, SLIDE) para las laderas criticas.</li>
+        <li>Cartografia de amenaza por movimientos en masa a escala 1:2.000.</li>
+        <li>Medidas de mitigacion: muros de contencion, sistemas de drenaje, obras de estabilizacion.</li>
+      </ul>
+      <p>En el Eje Cafetero, dado que los suelos de ceniza volcanica son especialmente susceptibles a movimientos en masa cuando se saturan, este componente es tan critico como el de inundacion y no debe separarse del analisis hidrologico.</p>
+
+      <h2>Cuanto cuesta un estudio Decreto 1807 en Colombia</h2>
+      <p>Los costos dependen del tamano del area, la disponibilidad de datos topograficos existentes y la complejidad hidrologica de la cuenca. Los rangos orientativos para 2026 en el mercado colombiano son:</p>
+      <ul>
+        <li><strong>Estudio para predio individual (1.000-5.000 m2) en zona urbana:</strong> $8-18 millones COP. Incluye visita de campo, levantamiento topografico basico, modelacion HEC-RAS y cartografia de amenaza.</li>
+        <li><strong>Estudio para plan parcial (5-50 hectareas):</strong> $25-65 millones COP. Requiere levantamiento topografico de precision, modelacion 2D completa y componente de movimientos en masa.</li>
+        <li><strong>Estudio para plan parcial grande (+50 hectareas) o zona de expansion urbana:</strong> $60-150 millones COP. Incluye levantamiento LiDAR o vuelo fotogrametrico, modelacion 2D de cuenca completa y acompanamiento ante la CAR.</li>
+      </ul>
+      <p>Desconfie de propuestas con precios significativamente inferiores que no especifican el alcance del levantamiento topografico: sin un DTM de buena calidad, el modelo HEC-RAS 2D produce resultados poco confiables que las Curaduras Urbanas y las CAR rechazan.</p>
+
+      <h2>Quien puede firmar los estudios: requisitos del profesional responsable</h2>
+      <p>El Decreto 1807 no exige explicitamente una especialidad profesional especifica para el firmante, pero la naturaleza tecnica de los estudios (modelacion hidrologica, modelacion hidraulica 2D, analisis de estabilidad de taludes) hace que en la practica deban ser elaborados y firmados por ingenieros civiles con especializacion o maestria en ingenieria hidraulica, hidrologica o ambiental, con matricula profesional vigente ante el COPNIA. Algunos curadores urbanos y CAR exigen adicionalmente que el profesional responsable certifique su experiencia en proyectos similares mediante lista de proyectos y contratos anteriores.</p>
+      <p>Verificar la matricula profesional del firmante ante el COPNIA es obligatorio: el numero de matricula debe aparecer en todas las memorias de calculo y planos del estudio.</p>
+
+      <h2>Proceso para obtener el estudio y presentarlo ante la Curaduria</h2>
+      <p>El proceso tipico para un plan parcial o licencia con componente Decreto 1807 sigue estos pasos:</p>
+      <ul>
+        <li><strong>Semana 1-2:</strong> Recopilacion de informacion: cartografia basica del municipio, datos del IDEAM, topografia existente, estudios previos del area.</li>
+        <li><strong>Semana 2-4:</strong> Levantamiento topografico de campo (si no existe informacion suficiente). Este paso suele ser el cuello de botella para proyectos grandes.</li>
+        <li><strong>Semana 3-6:</strong> Estudio hidrologico: analisis de frecuencias, modelacion lluvia-escorrentia, caudales de diseno.</li>
+        <li><strong>Semana 5-9:</strong> Modelacion hidraulica HEC-RAS 2D: configuracion del modelo, calibracion, simulaciones para multiples periodos de retorno.</li>
+        <li><strong>Semana 8-10:</strong> Cartografia de amenaza, analisis de vulnerabilidad y riesgo, propuesta de medidas de mitigacion.</li>
+        <li><strong>Semana 9-12:</strong> Elaboracion de informe tecnico final, memorias de calculo y planos. Presentacion ante Curaduria o CAR.</li>
+      </ul>
+      <p>En total, un estudio Decreto 1807 bien elaborado requiere entre 8 y 12 semanas desde la firma del contrato. Propuestas que ofrecen plazos de 2-4 semanas para estudios de esta complejidad deben revisarse con cuidado: generalmente implican simplificaciones metodologicas que la Curaduria rechazara.</p>
+
+      <h2>Decreto 1807 y planes parciales: lo que todo promotor debe saber</h2>
+      <p>Para los promotores inmobiliarios, el Decreto 1807 tiene implicaciones directas sobre la viabilidad economica de los proyectos en zonas de expansion urbana. Los aspectos mas criticos son:</p>
+      <ul>
+        <li><strong>Las zonas de amenaza alta no son edificables</strong> salvo que se demuestren obras de mitigacion que las reduzcan a amenaza baja. Esto puede implicar la perdida de un porcentaje significativo del area bruta del plan parcial.</li>
+        <li><strong>Las obras de mitigacion deben estar disenadasy presupuestadas en el plan parcial.</strong> No es suficiente mencionarlas: deben tener diseno de detalle y ser parte del presupuesto de obras de urbanismo.</li>
+        <li><strong>La CAR tiene que avalar las medidas de mitigacion</strong> antes de que la Secretaria de Planeacion pueda aprobar el plan parcial. Esto agrega una instancia de revision adicional al proceso.</li>
+        <li><strong>El estudio puede cambiar el aprovechamiento urbanistico:</strong> Si una fraccion significativa del area del plan queda en zona de amenaza alta sin posibilidad de mitigacion, el area neta urbanizable disminuye y con ella los indices de construccion y la rentabilidad del proyecto.</li>
+      </ul>
+      <p>Por esto, recomendamos contratar el estudio Decreto 1807 en la etapa de due diligence tecnica del predio, antes de comprarlo o de invertir en el diseno urbanistico. Conocer con precision la cartografia de amenaza del predio especifico puede cambiar completamente el analisis de viabilidad del proyecto.</p>
+
+      <p><strong>BIC elabora estudios detallados de amenaza y riesgo segun Decreto 1807 con modelacion HEC-RAS 2D calibrada, aceptada por Curaduras Urbanas y CAR en el Eje Cafetero, Bogota y todo Colombia. Primera consulta sin costo.</strong> <strong>Contactenos: ingenieriabernal.co | WhatsApp +57 302 477 8910</strong></p>
+    </>,
+    faqItems: [
+      {
+        q: 'Que estudios exige el Decreto 1807 para construir en zona de amenaza en Colombia?',
+        a: 'El Decreto 1807 de 2014 exige estudios de amenaza, vulnerabilidad y riesgo por inundacion y movimientos en masa para predios en zonas de amenaza alta o media segun el POT municipal. El estudio detallado debe incluir estudio hidrologico de la cuenca, modelacion hidraulica HEC-RAS 2D, levantamiento topografico de alta resolucion, cartografia de amenaza a escala 1:2.000 y propuesta de medidas de mitigacion. Son obligatorios para licencias de construccion, planes parciales y revision de POT.'
+      },
+      {
+        q: 'Cuanto cuesta un estudio Decreto 1807 en Colombia en 2026?',
+        a: 'El costo de un estudio Decreto 1807 varia segun el area y complejidad: para predios individuales en zona urbana (1.000-5.000 m2) el rango es $8-18 millones COP; para planes parciales de 5-50 hectareas, $25-65 millones; para zonas de expansion de mas de 50 hectareas, $60-150 millones. El costo depende principalmente del levantamiento topografico requerido (estacion total vs. LiDAR) y de la extension de la modelacion hidraulica 2D.'
+      },
+      {
+        q: 'Cuanto tiempo tarda un estudio Decreto 1807 en Colombia?',
+        a: 'Un estudio Decreto 1807 bien elaborado requiere entre 8 y 12 semanas desde la firma del contrato: 1-2 semanas de recopilacion de informacion y topografia, 2-3 semanas de estudio hidrologico, 3-4 semanas de modelacion HEC-RAS 2D, y 2-3 semanas de cartografia, analisis de riesgo e informe final. Propuestas con plazos de 2-4 semanas para estudios de este alcance implican simplificaciones metodologicas que las Curaduras y CAR suelen rechazar.'
+      },
+      {
+        q: 'Que pasa si el predio esta en zona de amenaza alta segun el Decreto 1807?',
+        a: 'Las zonas de amenaza alta no son edificables directamente. Existen dos opciones: (1) demostrar mediante obras de mitigacion (jarillones, canales, espolones) que la amenaza se puede reducir a nivel bajo, con diseno detallado y aval de la CAR; o (2) excluir esas areas del aprovechamiento urbanistico del plan parcial o proyecto. En cualquier caso, la curaduria urbana no puede expedir licencia de construccion en zona de amenaza alta sin el estudio tecnico que sustente las medidas de mitigacion.'
+      },
+      {
+        q: 'Que es la modelacion HEC-RAS 2D y por que es obligatoria para el Decreto 1807?',
+        a: 'HEC-RAS 2D es el software de modelacion hidraulica bidimensional del Cuerpo de Ingenieros del Ejercito de EE.UU., reconocido como estandar tecnico por las Curaduras Urbanas, las CAR y el IGAC en Colombia. Permite simular el comportamiento del flujo en la llanura de inundacion con alta precision, produciendo mapas de calados, velocidades y extension de la inundacion para distintos periodos de retorno. A diferencia de la modelacion 1D (que solo simula el flujo dentro del cauce), el modelo 2D captura la propagacion del desbordamiento sobre el territorio, que es precisamente lo que el Decreto 1807 exige cartografiar.'
+      },
+    ],
+  },
+
 
 }
 

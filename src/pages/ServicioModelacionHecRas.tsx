@@ -107,6 +107,26 @@ const CASO_ESTUDIO = {
 
 
 export default function ServicioModelacionHecRas() {
+
+  useEffect(() => {
+    const id = 'bc-hec-ras'
+    document.getElementById(id)?.remove()
+    const el = document.createElement('script')
+    el.id = id
+    el.type = 'application/ld+json'
+    el.text = JSON.stringify({
+      '@context': 'https://schema.org',
+      '@type': 'BreadcrumbList',
+      'itemListElement': [
+        { '@type': 'ListItem', 'position': 1, 'name': 'Inicio', 'item': 'https://ingenieriabernal.co' },
+        { '@type': 'ListItem', 'position': 2, 'name': 'Servicios', 'item': 'https://ingenieriabernal.co/servicios' },
+        { '@type': 'ListItem', 'position': 3, 'name': 'Modelación HEC-RAS 2D', 'item': 'https://ingenieriabernal.co/servicios/modelacion-hec-ras' },
+      ],
+    })
+    document.head.appendChild(el)
+    return () => { document.getElementById(id)?.remove() }
+  }, [])
+
   useEffect(() => { window.scrollTo(0, 0) }, [])
 
   return (

@@ -147,6 +147,26 @@ const CLIENTES = [
 ]
 
 export default function ServicioEstudiosHidrologicos() {
+
+  useEffect(() => {
+    const id = 'bc-estudios-hidro'
+    document.getElementById(id)?.remove()
+    const el = document.createElement('script')
+    el.id = id
+    el.type = 'application/ld+json'
+    el.text = JSON.stringify({
+      '@context': 'https://schema.org',
+      '@type': 'BreadcrumbList',
+      'itemListElement': [
+        { '@type': 'ListItem', 'position': 1, 'name': 'Inicio', 'item': 'https://ingenieriabernal.co' },
+        { '@type': 'ListItem', 'position': 2, 'name': 'Servicios', 'item': 'https://ingenieriabernal.co/servicios' },
+        { '@type': 'ListItem', 'position': 3, 'name': 'Estudios Hidrológicos', 'item': 'https://ingenieriabernal.co/servicios/estudios-hidrologicos' },
+      ],
+    })
+    document.head.appendChild(el)
+    return () => { document.getElementById(id)?.remove() }
+  }, [])
+
   useEffect(() => { window.scrollTo(0, 0) }, [])
 
   return (
