@@ -160,10 +160,13 @@ export default function Home() {
           </div>
 
           <div style={{ display: 'flex', gap: 14, flexWrap: 'wrap' }}>
-            <Btn href={`https://wa.me/${WA}?text=${encodeURIComponent('Hola, me gustaría una consulta con BIC sobre mi proyecto. ¿Podemos hablar?')}`} style={{ background: '#25D366', color: '#fff' }}>
-              📱 Consulta gratuita por WhatsApp
+            <Btn href={`https://wa.me/${WA}?text=${encodeURIComponent('Hola, me gustaría una propuesta para mi proyecto hidráulico. ¿Podemos hablar?')}`} style={{ background: '#25D366', color: '#fff' }}>
+              📱 Propuesta en 24 h — gratis
             </Btn>
-            <Btn href="/contacto" variant="outline" dark>
+            <Btn href="/proyectos" variant="outline" dark>
+              📂 Ver 50+ proyectos →
+            </Btn>
+            <Btn href="/contacto" variant="ghost" dark>
               ✉️ Describir mi proyecto
             </Btn>
           </div>

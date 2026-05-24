@@ -18,6 +18,7 @@ import articlesN from '../data/articlesN'
 import articlesO from '../data/articlesO'
 import articlesP from '../data/articlesP'
 import articlesQ from '../data/articlesQ'
+import articlesR from '../data/articlesR'
 import SEOHead from '../components/SEOHead'
 import { BlueprintBg, Tag, ThinLine, SectionLabel, Btn, Section } from '../components/ui'
 import { SEOConfig } from '../lib/seo'
@@ -334,6 +335,7 @@ const ARTICLES: Record<string, {
   ...articlesO,
   ...articlesP,
   ...articlesQ,
+  ...articlesR,
 }
 
 // ─── SERVICE LINKS PER ARTICLE ──────────────────────────────────────────────
@@ -461,6 +463,8 @@ const SERVICE_LINKS: Record<string, { label: string; href: string }> = {
   'costo-estudio-hec-ras-colombia-2026':               { label: 'Modelación HEC-RAS 2D Colombia',             href: '/servicios/modelacion-hec-ras' },
   'documentos-diseno-hidrosanitario-colombia':         { label: 'Diseño Redes Hidrosanitarias NSR-10',        href: '/servicios/redes-hidrosanitarias' },
   'decreto-1807-plan-parcial-colombia':                { label: 'Gestión del Riesgo Hídrico — Plan Parcial',  href: '/plan-parcial-colombia' },
+  // articlesR — costo plan parcial Colombia
+  'cuanto-cuesta-plan-parcial-colombia':               { label: 'Plan Parcial Colombia — BIC',                href: '/plan-parcial-colombia' },
 }
 
 // Canonical override: estos artículos apuntan su canonical a la página de servicio
