@@ -48,6 +48,7 @@ import GestionRiesgoTaludes from './src/pages/GestionRiesgoTaludes'
 import MemoriasHidrosanitarias from './src/pages/MemoriasHidrosanitarias'
 import ServicioAcueductoAlcantarillado from './src/pages/ServicioAcueductoAlcantarillado'
 import ServicioPTAPColombia from './src/pages/ServicioPTAPColombia'
+import EstudioBasico from './src/pages/servicios/EstudioBasico'
 // Páginas regionales
 import RegionalMedellin from './src/pages/regional/RegionalMedellin'
 import RegionalCali from './src/pages/regional/RegionalCali'
@@ -86,6 +87,7 @@ const PAGES: Record<string, React.ComponentType> = {
   'memorias-hidrosanitarias': MemoriasHidrosanitarias,
   'servicio-acueducto-alcantarillado': ServicioAcueductoAlcantarillado,
   'servicio-ptap-colombia': ServicioPTAPColombia,
+  'servicios/estudio-basico': EstudioBasico,
   // Páginas regionales
   'regional/medellin': RegionalMedellin,
   'regional/cali': RegionalCali,
