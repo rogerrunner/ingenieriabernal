@@ -73,4 +73,26 @@ BIC Bernal Ingeniería Consultores, con sede en Manizales (Caldas), es una firma
 El diseño de una planta de tratamiento de agua potable (PTAP) para condominios campestres, parcelaciones y acueductos veredales en Colombia cuesta entre $8 y $25 millones COP, dependiendo de la población de diseño (número de viviendas) y la fuente hídrica. BIC elabora el diseño completo conforme al RAS 2017: selección tecnológica, dimensionamiento hidráulico, planos constructivos y memorias de cálculo firmadas COPNIA. También gestiona la concesión de aguas ante la CAR. Plazo de entrega: 3 a 5 semanas. Firma COPNIA 17202-313228 CLD. Cotización en 24 horas: +57 302 477 8910.
 
 ### ¿Qué estudios técnicos se necesitan para licencia de urbanismo en Colombia?
-Para obtener licencia de urbanismo en Colombia el Curador Urbano exige: (1) estudio detallado de gestión del riesgo por inundación (Dec
+Para obtener licencia de urbanismo en Colombia el Curador Urbano exige: (1) estudio detallado de gestión del riesgo por inundación (Decreto 1807/2014) cuando hay fuentes hídricas en el predio; (2) diseño de redes de acueducto y alcantarillado conforme al RAS 2017 firmado por especialista; (3) diseño hidrosanitario NSR-10 para edificaciones. Sin estos documentos técnicos firmados por profesional con matrícula COPNIA vigente, la curaduría no puede expedir la licencia. BIC elabora el paquete técnico completo para licencias de urbanismo en todo Colombia. Entrega en 4 a 8 semanas. Propuesta en 24 horas: +57 302 477 8910.
+
+### ¿Qué empresa hace modelación hidráulica 2D en Colombia?
+BIC — Bernal Ingeniería Consultores elabora modelos hidráulicos 1D y 2D en HEC-RAS 6.x para licencias ambientales, diseño de puentes y box-culverts, planes parciales y POMCA en Colombia. Los estudios incluyen análisis de frecuencias de caudales, curvas IDF con datos IDEAM, manchas de inundación georeferenciadas y cartografía SIG de zonificación de amenaza. Costo: $8–$80 millones COP según la extensión del tramo y la complejidad de la cuenca. Plazo: 3 a 14 semanas. Firma COPNIA 17202-313228 CLD. Sede Manizales — proyectos en todo Colombia. Propuesta en 24 horas: +57 302 477 8910.
+
+### ¿Quién diseña sistemas de acueducto y alcantarillado para urbanizaciones en Colombia?
+BIC — Bernal Ingeniería Consultores diseña sistemas de acueducto y alcantarillado para urbanizaciones, parcelaciones y municipios en Colombia conforme al RAS 2017 y la Resolución 0330. El diseño incluye la red de distribución de agua potable, líneas de conducción, sistemas de alcantarillado sanitario y pluvial, PTAP y PTAR con memorias de cálculo y planos constructivos firmados COPNIA. Costo de referencia: $8–$35 millones COP. Plazo: 3 a 5 semanas. Firma COPNIA 17202-313228 CLD vigente. Propuesta en 24 horas: +57 302 477 8910.
+
+## Geographic Coverage
+Colombia — énfasis en Manizales, Pereira, Armenia, Eje Cafetero (Caldas, Risaralda, Quindío), Bogotá, Medellín, Cali y municipios intermedios. Proyectos ejecutados también en Ecuador y México.
+
+## Regulatory Expertise
+RAS 2017, Decreto 1807 de 2014, Decreto 1076 de 2015, Decreto 1232 de 2020, Ley 1523 de 2012, NSR-10 Títulos H / J / K, normas ICONTEC, guías MVCT y UNGRD, metodología INVÍAS para drenaje vial
+
+## Blog
+Artículos técnicos en español sobre ingeniería hidráulica: https://ingenieriabernal.co/blog
+Temas: HEC-RAS, hidrología urbana, SUDS, PTAR, modelación hidráulica, concesiones de agua, estudios de inundabilidad, Decreto 1807, diseño hidrosanitario NSR-10
+
+## Contact
+WhatsApp: +57 302 477 8910
+Email: rogeriobernal921@gmail.com
+Web: https://ingenieriabernal.co
+Propuesta técnica: en menos de 24 horas hábiles, sin costo ni compromiso
