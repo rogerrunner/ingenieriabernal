@@ -20,6 +20,7 @@ import articlesP from '../data/articlesP'
 import articlesQ from '../data/articlesQ'
 import articlesR from '../data/articlesR'
 import articlesS from '../data/articlesS'
+import articlesT from '../data/articlesT'
 import SEOHead from '../components/SEOHead'
 import { BlueprintBg, Tag, ThinLine, SectionLabel, Btn, Section } from '../components/ui'
 import { SEOConfig } from '../lib/seo'
@@ -338,6 +339,7 @@ const ARTICLES: Record<string, {
   ...articlesQ,
   ...articlesR,
   ...articlesS,
+  ...articlesT,
 }
 
 // ─── SERVICE LINKS PER ARTICLE ──────────────────────────────────────────────
@@ -469,6 +471,8 @@ const SERVICE_LINKS: Record<string, { label: string; href: string }> = {
   'cuanto-cuesta-plan-parcial-colombia':               { label: 'Plan Parcial Colombia — BIC',                href: '/plan-parcial-colombia' },
   // articlesS — costo diseno alcantarillado Colombia
   'cuanto-cuesta-diseno-alcantarillado-colombia':      { label: 'Diseño de Alcantarillado en Colombia',        href: '/diseno-alcantarillado-colombia' },
+  // articlesT — estudio torrencialidad Colombia
+  'estudio-torrencialidad-colombia':                   { label: 'Estudios de Torrencialidad — BIC Colombia',   href: '/estudios-torrencialidad-colombia' },
 }
 
 // Canonical override: estos artículos apuntan su canonical a la página de servicio
