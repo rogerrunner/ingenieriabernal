@@ -1,6 +1,6 @@
 import { useEffect } from 'react'
 import SEOHead from '@/components/SEOHead'
-import { BlueprintBg, SectionLabel, Btn, Section, Tag } from '@/components/ui'
+import { BlueprintBg, SectionLabel, Btn, Section, Tag } from '@/components/ui', CTABanner } from '@/components/ui'
 
 const WA = '573024778910'
 const WA_MSG = encodeURIComponent('Hola, necesito estudios de gestión de riesgo en taludes o deslizamientos. ¿Pueden ayudarme?')
@@ -160,6 +160,8 @@ export default function GestionRiesgoTaludes() {
   return (
     <>
       <SEOHead config={seoConfig} />
+
+      <CTABanner service="Gestión del Riesgo de Taludes Colombia" />
 
       {/* ── HERO ── */}
       <section style={{ background: 'linear-gradient(135deg, #001A33 0%, #002A50 55%, #003B6F 100%)', paddingTop: 120, paddingBottom: 80, position: 'relative', overflow: 'hidden' }}>

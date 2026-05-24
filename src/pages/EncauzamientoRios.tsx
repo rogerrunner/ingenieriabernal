@@ -2,7 +2,7 @@ import { useEffect } from 'react'
 import SEOHead from '@/components/SEOHead'
 import SchemaMarkup from '@/components/SchemaMarkup'
 import SpeakableSchema from '@/components/SpeakableSchema'
-import { BlueprintBg, SectionLabel, Btn, Section, Tag } from '@/components/ui'
+import { BlueprintBg, SectionLabel, Btn, Section, Tag } from '@/components/ui', CTABanner } from '@/components/ui'
 
 const WA = '573024778910'
 const WA_MSG = encodeURIComponent('Hola, necesito información sobre encauzamiento de ríos o protección fluvial. ¿Pueden asesorarme?')
@@ -143,6 +143,8 @@ export default function EncauzamientoRios() {
   return (
     <>
       <SEOHead config={seoConfig} />
+
+      <CTABanner service="Encauzamiento de Ríos y Obras de Protección Hidráulica" />
       <SpeakableSchema name="Encauzamiento de Ríos y Quebradas en Colombia — Ingeniería Fluvial | BIC" />
       <SchemaMarkup
         type="service"

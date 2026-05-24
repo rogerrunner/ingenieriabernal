@@ -1,6 +1,6 @@
 import { useEffect } from 'react'
 import SEOHead from '@/components/SEOHead'
-import { BlueprintBg, SectionLabel, Btn, Section, Tag } from '@/components/ui'
+import { BlueprintBg, SectionLabel, Btn, Section, Tag } from '@/components/ui', CTABanner } from '@/components/ui'
 
 const WA = '573024778910'
 const WA_MSG = encodeURIComponent('Hola, quiero información sobre los estudios técnicos para tramitar licencia de urbanismo en Colombia')
@@ -247,6 +247,8 @@ export default function LicenciaUrbanismo() {
   return (
     <>
       <SEOHead config={seoConfig} />
+
+      <CTABanner service="Licencia de Urbanismo — Estudios Técnicos Colombia" />
 
       {/* ── HERO ── */}
       <section style={{

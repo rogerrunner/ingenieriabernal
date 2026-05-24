@@ -2,7 +2,7 @@ import { useEffect } from 'react'
 import SEOHead from '@/components/SEOHead'
 import SchemaMarkup from '@/components/SchemaMarkup'
 import SpeakableSchema from '@/components/SpeakableSchema'
-import { BlueprintBg, ThinLine, SectionLabel, Btn, Section, Tag } from '@/components/ui'
+import { BlueprintBg, ThinLine, SectionLabel, Btn, Section, Tag } from '@/components/ui', CTABanner } from '@/components/ui'
 
 const WA = '573024778910'
 const WA_MSG = encodeURIComponent('Hola, necesito cotizar el diseño de una bocatoma. ¿Pueden ayudarme con más información?')
@@ -163,6 +163,8 @@ export default function BocatomasColombia() {
   return (
     <>
       <SEOHead config={seoConfig} />
+
+      <CTABanner service="Diseño de Bocatomas y Captación Hídrica" />
       <SpeakableSchema name="Diseño de Bocatomas en Colombia — Ingeniería Hidráulica Especializada | BIC" />
       <SchemaMarkup
         type="service"

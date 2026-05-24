@@ -2,7 +2,7 @@ import { useEffect } from 'react'
 import SEOHead from '@/components/SEOHead'
 import SpeakableSchema from '@/components/SpeakableSchema'
 import SchemaMarkup from '@/components/SchemaMarkup'
-import { BlueprintBg, ThinLine, SectionLabel, Btn, Section, Tag } from '@/components/ui'
+import { BlueprintBg, ThinLine, SectionLabel, Btn, Section, Tag } from '@/components/ui', CTABanner } from '@/components/ui'
 
 const WA = '573024778910'
 const WA_MSG = encodeURIComponent('Hola, necesito cotizar el diseño de una PTAP en Colombia. ¿Pueden ayudarme?')
@@ -173,6 +173,8 @@ export default function DisenoPTAPColombia() {
   return (
     <>
       <SEOHead config={seoConfig} />
+
+      <CTABanner service="Diseño PTAP — Planta de Tratamiento de Agua Potable" />
       <SchemaMarkup
         type="service"
         serviceName="Diseño de PTAP — Planta de Tratamiento de Agua Potable"

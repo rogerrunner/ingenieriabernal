@@ -98,6 +98,7 @@ const ServicioEstudioSuelosPereira = lazy(() => import('./pages/ServicioEstudioS
 const ServicioPTAPColombia = lazy(() => import('./pages/ServicioPTAPColombia'))
 const ServicioAguasLluviasManizales = lazy(() => import('./pages/ServicioAguasLluviasManizales'))
 const HydraulicEngineerEnglish = lazy(() => import('./pages/HydraulicEngineerEnglish'))
+const EstudioBasico = lazy(() => import('./pages/servicios/EstudioBasico'))
 
 function ScrollToTop() {
   const [location] = useLocation()
@@ -368,6 +369,7 @@ export default function App() {
           <Route path="/ptap-municipios-colombia" component={ServicioPTAPColombia} />
           <Route path="/aguas-lluvias-manizales" component={ServicioAguasLluviasManizales} />
 
+          <Route path="/servicios/estudio-basico" component={EstudioBasico} />
           <Route path="/blog/:slug" component={BlogDetail} />
           <Route component={NotFound} />
         </Switch>

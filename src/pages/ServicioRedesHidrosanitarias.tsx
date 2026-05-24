@@ -1,7 +1,7 @@
 import { useEffect } from 'react'
 import SEOHead from '@/components/SEOHead'
 import SchemaMarkup from '@/components/SchemaMarkup'
-import { BlueprintBg, ThinLine, SectionLabel, Btn, Section, Tag } from '@/components/ui'
+import { BlueprintBg, ThinLine, SectionLabel, Btn, Section, Tag } from '@/components/ui', CTABanner } from '@/components/ui'
 
 const WA = '573024778910'
 const WA_MSG = encodeURIComponent('Hola, tengo un proyecto de edificio comercial / hotel / centro comercial / planta industrial y necesito el diseño de redes hidrosanitarias para licencia de construcción. ¿Pueden cotizarlo?')
@@ -174,6 +174,8 @@ export default function ServicioRedesHidrosanitarias() {
   return (
     <>
       <SEOHead config={seoConfig} />
+
+      <CTABanner service="Diseño de Redes Hidrosanitarias NSR-10" />
       <SchemaMarkup
         type="service"
         serviceName="Diseño de Redes Hidrosanitarias para Edificaciones"

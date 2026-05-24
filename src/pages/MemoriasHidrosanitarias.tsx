@@ -1,6 +1,6 @@
 import { useEffect } from 'react'
 import SEOHead from '@/components/SEOHead'
-import { BlueprintBg, SectionLabel, Btn, Section, Tag } from '@/components/ui'
+import { BlueprintBg, SectionLabel, Btn, Section, Tag } from '@/components/ui', CTABanner } from '@/components/ui'
 
 const WA = '573024778910'
 const WA_MSG = encodeURIComponent('Hola, necesito memorias de cálculo hidrosanitarias para un proyecto de construcción — licencia, curaduría o ESP. ¿Pueden elaborarlas?')
@@ -156,6 +156,8 @@ export default function MemoriasHidrosanitarias() {
   return (
     <>
       <SEOHead config={seoConfig} />
+
+      <CTABanner service="Memorias Hidrosanitarias para Licencia de Construcción" />
 
       {/* ── HERO ── */}
       <section style={{ background: 'linear-gradient(135deg, #001A33 0%, #002A50 55%, #003B6F 100%)', paddingTop: 120, paddingBottom: 80, position: 'relative', overflow: 'hidden' }}>
