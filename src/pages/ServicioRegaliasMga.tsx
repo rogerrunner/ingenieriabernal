@@ -1,6 +1,6 @@
 import { useEffect } from 'react'
 import SEOHead from '@/components/SEOHead'
-import { BlueprintBg, ThinLine, SectionLabel, Btn, Section, Tag } from '@/components/ui', CTABanner } from '@/components/ui'
+import { BlueprintBg, ThinLine, SectionLabel, Btn, Section, Tag, CTABanner } from '@/components/ui'
 
 const WA = '573024778910'
 const WA_MSG = encodeURIComponent('Hola, quiero cotizar Formulación de Proyectos de Regalías MGA-Web')

@@ -53,14 +53,6 @@ const PORTFOLIO_GALLERY = [
     year: '2021',
     alt: 'Inspección hidráulica quebrada Colombia puente BIC ingeniería',
   },
-  {
-    img: '/img/proyectos/gbp_expert/10_ingeniero_hidraulico_rogerio_bernal.jpg',
-    title: 'Especialista en Ingeniería Hidráulica — UNAL',
-    location: 'Manizales, Colombia',
-    type: 'COPNIA 17202-313228 CLD · Matriculado',
-    year: '2024',
-    alt: 'Rogerio Bernal ingeniero hidráulico especialista UNAL Manizales COPNIA matriculado',
-  },
 ]
 
 const DIFFERENTIATORS = [

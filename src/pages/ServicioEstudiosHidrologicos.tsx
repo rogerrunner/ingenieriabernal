@@ -1,7 +1,7 @@
 import { useEffect } from 'react'
 import SEOHead from '@/components/SEOHead'
 import SchemaMarkup from '@/components/SchemaMarkup'
-import { BlueprintBg, SectionLabel, Btn, Section, Tag } from '@/components/ui', CTABanner } from '@/components/ui'
+import { BlueprintBg, SectionLabel, Btn, Section, Tag, CTABanner } from '@/components/ui'
 
 const WA = '573024778910'
 const WA_MSG = encodeURIComponent('Hola, tengo un predio cerca de un río o quebrada y necesito el estudio de amenaza por inundación para licencia de construcción o plan parcial. ¿Pueden asesorarme?')
