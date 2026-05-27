@@ -3,6 +3,7 @@ import SEOHead from '@/components/SEOHead'
 import SchemaMarkup from '@/components/SchemaMarkup'
 import SpeakableSchema from '@/components/SpeakableSchema'
 import { BlueprintBg, ThinLine, SectionLabel, Btn, Section, Tag, CTABanner } from '@/components/ui'
+import QuoteFormInline from '@/components/QuoteFormInline'
 
 const WA = '573024778910'
 const WA_MSG = encodeURIComponent('Hola, necesito cotizar el diseño de una bocatoma. ¿Pueden ayudarme con más información?')
@@ -479,6 +480,12 @@ export default function BocatomasColombia() {
           </div>
         </div>
       </Section>
+      {/* ── FORMULARIO COTIZACIÓN INLINE ── */}
+      <Section>
+        <QuoteFormInline />
+      </Section>
+
+
 
       {/* ── CTA FINAL ── */}
       <section style={{

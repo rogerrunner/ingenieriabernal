@@ -2,14 +2,15 @@ import { useEffect } from 'react'
 import SEOHead from '@/components/SEOHead'
 import SpeakableSchema from '@/components/SpeakableSchema'
 import SchemaMarkup from '@/components/SchemaMarkup'
+import QuoteFormInline from '@/components/QuoteFormInline'
 import { BlueprintBg, ThinLine, SectionLabel, Btn, Section, Tag, CTABanner } from '@/components/ui'
 
 const WA = '573024778910'
 const WA_MSG = encodeURIComponent('Hola, necesito un estudio de gestión del riesgo hídrico para mi proyecto')
 
 const seoConfig = {
-  title: 'Estudio de Gestión del Riesgo Hídrico — Decreto 1807 | BIC Colombia',
-  description: 'Estudio detallado de gestión del riesgo por inundación para licencias, planes parciales y CAR. HEC-RAS 2D, firma COPNIA, concepto técnico incluido. Propuesta en 24 h.',
+  title: 'Gestión del Riesgo Hídrico Decreto 1807 · HEC-RAS 2D · Firma COPNIA | BIC',
+  description: 'Estudio de gestión del riesgo hídrico para licencias y planes parciales en Colombia. Modelación HEC-RAS 2D, cartografía SIG 1:2.000, aptitud urbanística. Desde $18M COP. Propuesta en 24 h sin costo.',
   keywords: [
     'gestión del riesgo hídrico Colombia',
     'estudio amenaza inundación Colombia',
@@ -535,6 +536,11 @@ export default function GestionRiesgoHidrico() {
         </div>
       </Section>
 
+      {/* ── FORMULARIO COTIZACIÓN INLINE ── */}
+      <Section>
+        <QuoteFormInline />
+      </Section>
+
       {/* ── CTA FINAL ── */}
       <Section bg="#17A2B8" style={{ padding: '64px 24px', textAlign: 'center' }}>
         <div style={{ maxWidth: 680, margin: '0 auto' }}>
@@ -559,6 +565,15 @@ export default function GestionRiesgoHidrico() {
             >
               📱 Propuesta en 24 h — sin costo
             </Btn>
+            <Btn variant="outline" href="/contacto" style={{ borderColor: '#fff', color: '#fff' }}>
+              Ver formulario de contacto
+            </Btn>
+          </div>
+        </div>
+      </Section>
+    </>
+  )
+}
             <Btn variant="outline" href="/contacto" style={{ borderColor: '#fff', color: '#fff' }}>
               Ver formulario de contacto
             </Btn>
