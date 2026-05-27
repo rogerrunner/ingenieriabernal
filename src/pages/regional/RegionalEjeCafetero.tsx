@@ -59,7 +59,8 @@ const FAQ_ITEMS = [
 
 const PRICE_SPECS = [
   { name: 'Gestión Riesgo Hídrico / Decreto 1807 (Eje Cafetero)', minPrice: 18000000, maxPrice: 60000000 },
-  { name: 'Modelación HEC-RAS Eje Cafetero', minPrice: 8000000, maxPrice: 25000000 },
+  { name: 'Modelación Hidráulica HEC-RAS 1D/2D Eje Cafetero', minPrice: 8000000, maxPrice: 25000000 },
+  { name: 'Modelación Hidrológica HEC-HMS Eje Cafetero', minPrice: 5000000, maxPrice: 15000000 },
   { name: 'Diseño Acueducto y Alcantarillado Urbanización', minPrice: 12000000, maxPrice: 35000000 },
   { name: 'PTAP / PTAR Industrial y Residencial (Eje Cafetero)', minPrice: 8000000, maxPrice: 40000000 },
   { name: 'Formulación Regalías SGR Municipios Eje Cafetero', minPrice: 6000000, maxPrice: 15000000 },
@@ -73,10 +74,16 @@ const SERVICIOS = [
     desc: 'Estudios de amenaza y riesgo hídrico para planes parciales en Caldas, Risaralda y Quindío. Modelación HEC-RAS 2D con entrega ante curaduría y corporaciones ambientales (CORPOCALDAS, CARDER, CRQ).',
   },
   {
-    nombre: 'Modelación HEC-RAS · Eje Cafetero',
-    href: '/servicios/modelacion-hec-ras',
+    nombre: 'Modelación Hidráulica · HEC-RAS 1D y 2D',
+    href: '/modelacion-hidraulica-colombia',
     precio: '$8M – $25M COP',
-    desc: 'Manchas de inundación y zonificación de amenaza para POT, planes parciales y viabilidad de proyectos en cuencas de los tres departamentos cafeteros.',
+    desc: 'Manchas de inundación, perfiles hidráulicos y zonificación de amenaza para POT, planes parciales y proyectos de infraestructura en los tres departamentos cafeteros.',
+  },
+  {
+    nombre: 'Modelación Hidrológica · HEC-HMS y Cuencas',
+    href: '/modelacion-hidrologica-colombia',
+    precio: '$5M – $15M COP',
+    desc: 'Análisis de cuencas, curvas IDF, caudales de diseño por período de retorno y balance hídrico. Base técnica para acueductos, PTAP, puentes e infraestructura vial en el Eje Cafetero.',
   },
   {
     nombre: 'Diseño Acueducto y Alcantarillado',
@@ -85,16 +92,10 @@ const SERVICIOS = [
     desc: 'Sistemas de agua potable y saneamiento para urbanizaciones, condominios y municipios bajo RAS 2017. Planos y memorias con firma COPNIA.',
   },
   {
-    nombre: 'PTAP · Agua Potable Industrial y Condominios',
+    nombre: 'PTAP y PTAR · Industria y Conjuntos',
     href: '/diseno-ptap-colombia',
-    precio: '$8M – $35M COP',
-    desc: 'Diseño de plantas de tratamiento de agua potable para industrias cafeteras, agroindustriales y condominios rurales en el Eje Cafetero.',
-  },
-  {
-    nombre: 'PTAR · Aguas Residuales Industriales',
-    href: '/diseno-ptar-colombia',
-    precio: '$10M – $40M COP',
-    desc: 'Plantas de tratamiento de aguas residuales para industrias, beneficiaderos de café, plantas porcinas y conjuntos residenciales grandes.',
+    precio: '$8M – $40M COP',
+    desc: 'Plantas de tratamiento de agua potable y aguas residuales para industrias cafeteras, agroindustriales, beneficiaderos y conjuntos residenciales grandes en el Eje Cafetero.',
   },
   {
     nombre: 'Formulación SGR · Municipios Eje Cafetero',

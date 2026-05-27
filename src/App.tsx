@@ -86,6 +86,7 @@ const TengoUnLote = lazy(() => import('./pages/TengoUnLote'))
 const GestionRiesgoTaludes = lazy(() => import('./pages/GestionRiesgoTaludes'))
 const IngenieriaManizalesNacional = lazy(() => import('./pages/IngenieriaManizalesNacional'))
 const ModelacionHidraulicaColombia = lazy(() => import('./pages/ModelacionHidraulicaColombia'))
+const ModelacionHidrologicaColombia = lazy(() => import('./pages/ModelacionHidrologicaColombia'))
 const DisenoPTARColombia = lazy(() => import('./pages/DisenoPTARColombia'))
 const ConcesionAguasColombia = lazy(() => import('./pages/ConcesionAguasColombia'))
 const DisenoPTAPColombia = lazy(() => import('./pages/DisenoPTAPColombia'))
@@ -298,6 +299,7 @@ export default function App() {
           <Route path="/gestion-riesgo-taludes-colombia" component={GestionRiesgoTaludes} />
           <Route path="/ingenieria-hidraulica-colombia-desde-manizales" component={IngenieriaManizalesNacional} />
           <Route path="/modelacion-hidraulica-colombia" component={ModelacionHidraulicaColombia} />
+          <Route path="/modelacion-hidrologica-colombia" component={ModelacionHidrologicaColombia} />
           <Route path="/diseno-ptar-colombia" component={DisenoPTARColombia} />
           <Route path="/concesion-aguas-colombia" component={ConcesionAguasColombia} />
           <Route path="/diseno-ptap-colombia" component={DisenoPTAPColombia} />

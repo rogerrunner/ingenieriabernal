@@ -153,12 +153,18 @@ FloatingQuoteButton global en App.tsx. QuoteFormInline en 5 servicios core. Comm
 
 ### ✅ PRIORIDAD 3 — /proyectos page en hero — HECHO (ya estaba en Home.tsx)
 
-### ✅ PRIORIDAD 4 — RegionalManizales + RegionalEjeCafetero UPGRADE — HECHO (2026-05-27)
-Reescritas con: precios visibles, lenguaje de decisor (constructoras/municipios/industria), FAQPage, PriceSpec, QuoteFormInline, CTABanner, GEO fragment, anti-intermediario. Commits pendientes en bat.
+### ✅ PRIORIDAD 4 — RegionalManizales + RegionalEjeCafetero + Cali + Medellín UPGRADE — HECHO (2026-05-27)
+4 páginas reescritas con: precios visibles, lenguaje de decisor (constructoras/municipios/industria), FAQPage, PriceSpec, QuoteFormInline, CTABanner, GEO fragment, anti-intermediario, modelación hidráulica + hidrológica explícita.
 
-### PRIORIDAD 5 — GSC indexing manual (Rogerio lo hace)
+### ✅ PRIORIDAD 5 — ModelacionHidrologicaColombia.tsx — NUEVA PÁGINA CREADA (2026-05-27)
+URL: /modelacion-hidrologica-colombia | Título: "Modelación Hidrológica Colombia — HEC-HMS, Cuencas y Caudales de Diseño"
+Incluye: FAQPage (6 Q&A), PriceSpec (6 tipos $5M–$28M), QuoteFormInline, CTABanner, GEO fragment Eje Cafetero, anti-intermediario.
+4 páginas regionales actualizadas para enlazar a esta página (href cambió de /servicios/estudios-hidrologicos a /modelacion-hidrologica-colombia).
+Sitemap actualizado: nueva página agregada, fechas regionales frescas (2026-05-27), páginas noindex (suelos, topografía) eliminadas del sitemap.
+
+### PRIORIDAD 6 — GSC indexing manual (Rogerio lo hace)
 Solicitar indexación manual en Google Search Console para estas URLs:
-/regional/manizales, /regional/eje-cafetero, /regional/armenia, /regional/cali, /regional/medellin, /plan-parcial-colombia, /gestion-riesgo-hidrico, /servicios/modelacion-hec-ras
+/regional/manizales, /regional/eje-cafetero, /regional/cali, /regional/medellin, /modelacion-hidrologica-colombia, /modelacion-hidraulica-colombia, /gestion-riesgo-hidrico, /servicios/modelacion-hec-ras
 
 ### PRIORIDAD 6 — Página precio fijo + Wompi
 Crear `/servicios/estudio-basico` con precio fijo visible ($8M–$15M COP) y botón de pago Wompi. Objetivo: cierre digital sin intermediación humana para proyectos pequeños.

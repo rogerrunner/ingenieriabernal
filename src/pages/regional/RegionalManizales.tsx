@@ -59,7 +59,8 @@ const FAQ_ITEMS = [
 
 const PRICE_SPECS = [
   { name: 'Gestión Riesgo Hídrico / Decreto 1807 (Caldas)', minPrice: 18000000, maxPrice: 60000000 },
-  { name: 'Modelación HEC-RAS Manizales y Municipios', minPrice: 8000000, maxPrice: 25000000 },
+  { name: 'Modelación Hidráulica HEC-RAS 1D/2D Manizales', minPrice: 8000000, maxPrice: 25000000 },
+  { name: 'Modelación Hidrológica HEC-HMS Caldas', minPrice: 5000000, maxPrice: 15000000 },
   { name: 'Diseño Acueducto y Alcantarillado Urbanización', minPrice: 12000000, maxPrice: 35000000 },
   { name: 'PTAP / PTAR Industria y Conjuntos (Caldas)', minPrice: 8000000, maxPrice: 40000000 },
 ]
@@ -72,10 +73,16 @@ const SERVICIOS = [
     desc: 'Estudios de riesgo para planes parciales y licencias de urbanismo en Caldas. Modelación HEC-RAS 2D, manchas de inundación y entrega ante curaduría y CORPOCALDAS.',
   },
   {
-    nombre: 'Modelación HEC-RAS · Caldas y Eje Cafetero',
-    href: '/servicios/modelacion-hec-ras',
+    nombre: 'Modelación Hidráulica · HEC-RAS 1D y 2D',
+    href: '/modelacion-hidraulica-colombia',
     precio: '$8M – $25M COP',
-    desc: 'Manchas de inundación 1D y 2D para POT, planes parciales y viabilidad de proyectos en cuencas de Caldas, Risaralda y Quindío.',
+    desc: 'Manchas de inundación, perfiles hidráulicos y zonificación de amenaza para POT, planes parciales y viabilidad de proyectos en cuencas de Caldas y el Eje Cafetero.',
+  },
+  {
+    nombre: 'Modelación Hidrológica · HEC-HMS y Cuencas',
+    href: '/modelacion-hidrologica-colombia',
+    precio: '$5M – $15M COP',
+    desc: 'Análisis de cuencas hidrográficas, curvas IDF, caudales de diseño por período de retorno y balance hídrico. Insumo técnico para acueductos, PTAP, puentes y obras de drenaje en Caldas.',
   },
   {
     nombre: 'Diseño Acueducto y Alcantarillado',
@@ -96,10 +103,10 @@ const SERVICIOS = [
     desc: 'Estructuración de proyectos de agua y saneamiento ante el SGR con MGA-Web, indicadores de brechas y presentación a Órganos Colegiados de Administración y Decisión (OCAD).',
   },
   {
-    nombre: 'Plan Parcial — Estudios Técnicos Hidráulicos',
-    href: '/plan-parcial-colombia',
-    precio: 'Incluido en Gestión Riesgo',
-    desc: 'Estudios de amenaza hídrica, drenaje urbano y redes de servicios para expedientes de planes parciales ante las autoridades de Manizales y municipios de Caldas.',
+    nombre: 'Encauzamiento · Obras Hidráulicas',
+    href: '/encauzamiento-rios',
+    precio: 'Consultar',
+    desc: 'Diseño de obras de protección de márgenes, canales de conducción, estructuras de control de inundaciones y box culverts para proyectos viales y urbanos en Caldas.',
   },
 ]
 
