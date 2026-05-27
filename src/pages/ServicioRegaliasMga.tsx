@@ -1,6 +1,7 @@
 import { useEffect } from 'react'
 import SEOHead from '@/components/SEOHead'
 import { BlueprintBg, ThinLine, SectionLabel, Btn, Section, Tag, CTABanner } from '@/components/ui'
+import QuoteFormInline from '@/components/QuoteFormInline'
 
 const WA = '573024778910'
 const WA_MSG = encodeURIComponent('Hola, quiero cotizar Formulación de Proyectos de Regalías MGA-Web')
@@ -238,6 +239,12 @@ export default function ServicioRegaliasMga() {
           </div>
         </div>
       </Section>
+      {/* ── FORMULARIO COTIZACIÓN INLINE ── */}
+      <Section>
+        <QuoteFormInline />
+      </Section>
+
+
 
       {/* ── CTA FINAL ── */}
       <Section bg="#17A2B8" style={{ padding: '64px 24px', textAlign: 'center' }}>

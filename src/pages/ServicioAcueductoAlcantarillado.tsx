@@ -1,6 +1,7 @@
 import { useEffect } from 'react'
 import SEOHead from '@/components/SEOHead'
 import { BlueprintBg, ThinLine, SectionLabel, Btn, Section, Tag } from '@/components/ui'
+import QuoteFormInline from '@/components/QuoteFormInline'
 
 const WA = '573024778910'
 const WA_MSG = encodeURIComponent('Hola, tengo una urbanización o parcelación y necesito el diseño de las redes de acueducto y alcantarillado para la licencia urbanística. ¿Pueden cotizarlo?')
@@ -297,6 +298,12 @@ export default function ServicioAcueductoAlcantarillado() {
           </div>
         </div>
       </Section>
+      {/* ── FORMULARIO COTIZACIÓN INLINE ── */}
+      <Section>
+        <QuoteFormInline />
+      </Section>
+
+
 
       {/* ── CTA FINAL ── */}
       <Section bg="#17A2B8" style={{ padding: '64px 24px', textAlign: 'center' }}>

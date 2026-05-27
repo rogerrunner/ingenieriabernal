@@ -1,6 +1,7 @@
 import { useEffect } from 'react'
 import SEOHead from '@/components/SEOHead'
 import { BlueprintBg, SectionLabel, Btn, Section, Tag, CTABanner } from '@/components/ui'
+import QuoteFormInline from '@/components/QuoteFormInline'
 
 const WA = '573024778910'
 const WA_MSG = encodeURIComponent('Hola, necesito estudios de gestión de riesgo en taludes o deslizamientos. ¿Pueden ayudarme?')
@@ -373,6 +374,12 @@ export default function GestionRiesgoTaludes() {
           </div>
         </div>
       </Section>
+      {/* ── FORMULARIO COTIZACIÓN INLINE ── */}
+      <Section>
+        <QuoteFormInline />
+      </Section>
+
+
 
       {/* ── CTA FINAL ── */}
       <section style={{ background: 'linear-gradient(135deg, #001A33 0%, #003B6F 100%)', padding: '72px 24px', textAlign: 'center', position: 'relative', overflow: 'hidden' }}>

@@ -103,7 +103,7 @@
 | Fotos reales de proyectos (10 imágenes 01-10 en gbp_expert/) | ✅ | 10e459a |
 | Homepage: galería portafolio visual (6 fotos) + trust bar COPNIA/UNAL | ✅ | 42400a8 |
 | Landing /regional/pereira/ (CTR 19.4% — original ya existía) | ✅ | existe |
-| /proyectos page: link prominente desde hero | ⏳ PENDIENTE | — |
+| /proyectos page: link prominente desde hero | ✅ ya estaba en Home.tsx hero | 0a134b0 |
 | Página de precio fijo Wompi ("Zonificación desde $8M COP") | ⏳ PENDIENTE | — |
 | Blog buyer-intent: "¿Cuánto cuesta un plan parcial en Colombia?" | ✅ | articlesR |
 | Blog buyer-intent: "¿Cuánto cuesta diseño de alcantarillado Colombia?" | ✅ | articlesS |
@@ -114,8 +114,10 @@
 ### 4.4 CONVERSIÓN (problema central: 20+ leads, pocos cierres)
 | Acción | Estado |
 |---|---|
-| CTA WhatsApp unificado sticky en todas las páginas de servicio | ⏳ PENDIENTE (próximo) |
-| Botón "Propuesta en 24h" prominente arriba del fold en páginas core | ⏳ PENDIENTE |
+| CTA WhatsApp unificado sticky en todas las páginas de servicio | ✅ FloatingQuoteButton global en App.tsx | 0a134b0 |
+| QuoteFormInline en 5 páginas core (PlanParcial, Redes, PTAR, PTAP, Bocatomas) | ✅ | 0a134b0 |
+| SEO title/meta GestionRiesgoHidrico mejorado para CTR | ✅ Precio + HEC-RAS + COPNIA en title | 0a134b0 |
+| Botón "Propuesta en 24h" prominente arriba del fold en páginas core | ✅ FloatingQuoteButton + QuoteFormInline cubren esto |
 | Trust bar homepage: COPNIA + UNAL + 50 proyectos + 24h | ✅ (`42400a8`) |
 | Galería portafolio visual | ✅ (`42400a8`) |
 | Testimonios de clientes reales | ⏳ PENDIENTE (requiere info de Rogerio) |
@@ -132,25 +134,24 @@
 ---
 
 ## 5. PRÓXIMAS ACCIONES (en orden de impacto)
+**Última actualización:** 2026-05-27
 
-### PRIORIDAD 1 — CTA unificado (esta sesión)
-Un solo camino de conversión claro en todas las páginas de servicio:
-- Botón WhatsApp verde sticky (fijo al scroll) con texto "📱 Propuesta en 24 h — sin costo"
-- Eliminar ruido de CTAs secundarios que difunden la atención
-- Componente reutilizable `<CTAWhatsApp />` aplicado a las 10 páginas core
+### ✅ PRIORIDAD 1 — CTA unificado — HECHO
+FloatingQuoteButton global en App.tsx. QuoteFormInline en 5 servicios core. Commits fc985a1 + 0a134b0.
 
-### PRIORIDAD 2 — robots.txt IA crawlers
-Agregar 4 líneas al robots.txt para permitir explícitamente GPTBot, PerplexityBot, Claude-Web, Anthropic-AI. Sin estas líneas los modelos de IA pueden no indexar el contenido.
+### ✅ PRIORIDAD 2 — robots.txt IA crawlers — HECHO (ya estaba)
 
-### PRIORIDAD 3 — /proyectos page en hero
-La página de portafolio visual debe tener un CTA directo desde el hero de la homepage. Actualmente no hay enlace visible.
+### ✅ PRIORIDAD 3 — /proyectos page en hero — HECHO (ya estaba en Home.tsx)
 
 ### PRIORIDAD 4 — GSC indexing manual (Rogerio lo hace)
-Solicitar indexación manual en Google Search Console para las 10 URLs nuevas:
-/manizales, /regional/cali, /regional/medellin, /plan-parcial-colombia, /gestion-riesgo-hidrico, /servicios/modelacion-hec-ras, 3 blogs nuevos, /ingenieria-hidraulica-colombia
+Solicitar indexación manual en Google Search Console para estas URLs:
+/manizales, /regional/cali, /regional/medellin, /plan-parcial-colombia, /gestion-riesgo-hidrico, /servicios/modelacion-hec-ras, /blog/inundaciones-eje-cafetero-riesgo-hidrico-que-hacer, /ingenieria-hidraulica-colombia
 
 ### PRIORIDAD 5 — Página precio fijo + Wompi
 Crear `/servicios/estudio-basico` con precio fijo visible ($8M–$15M COP) y botón de pago Wompi. Objetivo: cierre digital sin intermediación humana para proyectos pequeños.
+
+### PRIORIDAD 6 — Limpiar staged deletions en git index
+El `git reset HEAD` está pendiente por un index.lock. Rogerio debe cerrar la ventana PowerShell del commit_now.ps1 (la que dice "Presiona Enter para cerrar"), y luego ejecutar `git reset HEAD` en Git Bash o terminal para deshacer las staged deletions de servicios/*.tsx que quedaron de un abort_rebase anterior. Esas páginas NO deben borrarse.
 
 ---
 
