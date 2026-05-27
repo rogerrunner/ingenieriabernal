@@ -21,6 +21,7 @@ const seoConfig = {
     'MAGNA-SIRGAS Colombia topografía',
   ],
   canonical: 'https://ingenieriabernal.co/topografia-manizales',
+  noindex: true,
 }
 
 const TIPOS_LEVANTAMIENTO = [

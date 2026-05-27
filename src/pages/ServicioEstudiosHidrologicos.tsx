@@ -1,6 +1,7 @@
 import { useEffect } from 'react'
 import SEOHead from '@/components/SEOHead'
 import SchemaMarkup from '@/components/SchemaMarkup'
+import QuoteFormInline from '@/components/QuoteFormInline'
 import { BlueprintBg, SectionLabel, Btn, Section, Tag, CTABanner } from '@/components/ui'
 
 const WA = '573024778910'
@@ -677,6 +678,11 @@ export default function ServicioEstudiosHidrologicos() {
             </a>
           </div>
         </div>
+      </Section>
+
+      {/* ── FORMULARIO DE COTIZACIÓN INLINE ── */}
+      <Section>
+        <QuoteFormInline />
       </Section>
 
       {/* ── CTA FINAL ── */}

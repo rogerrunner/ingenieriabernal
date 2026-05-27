@@ -23,6 +23,7 @@ const seoConfig = {
     'estabilidad taludes Caldas',
   ],
   canonical: 'https://ingenieriabernal.co/estudio-de-suelos-manizales',
+  noindex: true,
 }
 
 const PROCESO = [

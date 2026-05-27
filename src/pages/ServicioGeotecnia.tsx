@@ -23,6 +23,7 @@ const seoConfig = {
     'SPT Colombia',
   ],
   canonical: 'https://ingenieriabernal.co/servicios/geotecnia',
+  noindex: true,
 }
 
 const INCLUYE = [

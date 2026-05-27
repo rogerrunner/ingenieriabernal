@@ -1,6 +1,7 @@
 import { useEffect } from 'react'
 import SEOHead from '@/components/SEOHead'
 import SchemaMarkup from '@/components/SchemaMarkup'
+import QuoteFormInline from '@/components/QuoteFormInline'
 import { BlueprintBg, ThinLine, SectionLabel, Btn, Section, Tag, CTABanner } from '@/components/ui'
 
 const WA = '573024778910'
@@ -467,6 +468,11 @@ export default function ServicioModelacionHecRas() {
         </div>
       </Section>
 
+      {/* ── FORMULARIO DE COTIZACIÓN INLINE ── */}
+      <Section>
+        <QuoteFormInline />
+      </Section>
+
       {/* ── CTA FINAL ── */}
       <Section bg="#17A2B8" style={{ padding: '64px 24px', textAlign: 'center' }}>
         <div style={{ maxWidth: 680, margin: '0 auto' }}>
@@ -485,9 +491,8 @@ export default function ServicioModelacionHecRas() {
           </p>
           <Btn
             href={`https://wa.me/${WA}?text=${WA_MSG}`}
-            style={{ background: '#fff', color: '#17A2B8', fontSize: 15, padding: '14px 36px' }}
-          >
-            📱 Propuesta en 24 h — sin costo
+            style={{ background: '#fff', color: '#17A2B8', fontWeight: 700 }}>
+            Propuesta en 24 h — sin costo
           </Btn>
         </div>
       </Section>

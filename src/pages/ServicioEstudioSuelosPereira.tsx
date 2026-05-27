@@ -21,6 +21,7 @@ const seoConfig = {
     'ingeniero geotécnico Pereira',
   ],
   canonical: 'https://ingenieriabernal.co/geotecnia-pereira',
+  noindex: true,
 }
 
 const SCHEMA = {

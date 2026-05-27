@@ -25,6 +25,7 @@ const seoConfig = {
     'suelos volcánicos Eje Cafetero',
   ],
   canonical: 'https://ingenieriabernal.co/estudio-de-suelos-pereira',
+  noindex: true,
 }
 
 const PROCESO = [

@@ -26,6 +26,7 @@ const seoConfig = {
     'AutoCAD Civil 3D planos topográficos',
   ],
   canonical: 'https://ingenieriabernal.co/servicios/topografia',
+  noindex: true,
 }
 
 const FAQ = [

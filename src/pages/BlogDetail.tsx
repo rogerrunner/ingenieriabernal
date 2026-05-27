@@ -22,6 +22,7 @@ import articlesR from '../data/articlesR'
 import articlesS from '../data/articlesS'
 import articlesT from '../data/articlesT'
 import articlesU from '../data/articlesU'
+import articlesV from '../data/articlesV'
 import SEOHead from '../components/SEOHead'
 import { BlueprintBg, Tag, ThinLine, SectionLabel, Btn, Section } from '../components/ui'
 import { SEOConfig } from '../lib/seo'
@@ -34,10 +35,12 @@ const NOINDEX_SLUGS = new Set([
   'ras-2000-colombia',
   'diferencias-ptar-ptap',
   'ronda-hidrica-colombia',
-  // Fuera de foco: geotecnia / contra incendio / informacional puro
+  // Fuera de foco: geotecnia / suelos / contra incendio / informacional puro
   'nsr-10-sistemas-contra-incendios',
   'clasificacion-suelos-sucs-colombia-ejemplos',
   'estudio-suelos-edificio-multifamiliar-requisitos-nsr10',
+  'estudio-suelos-torres-edificios-colombia',
+  'ensayo-spt-interpretacion-capacidad-portante',
   'procesos-potabilizacion-agua-colombia-resolucion-0330',
   'que-es-concesion-de-aguas-colombia',
   'normas-tecnicas-diseno-acueductos-colombia-ras-2017',
@@ -342,10 +345,12 @@ const ARTICLES: Record<string, {
   ...articlesS,
   ...articlesT,
   ...articlesU,
+  ...articlesV,
 }
 
 // ─── SERVICE LINKS PER ARTICLE ──────────────────────────────────────────────
 const SERVICE_LINKS: Record<string, { label: string; href: string }> = {
+  'inundaciones-eje-cafetero-riesgo-hidrico-que-hacer': { label: 'Gestión del Riesgo Hídrico — Decreto 1807', href: '/gestion-riesgo-hidrico' },
   'suds-sistemas-drenaje-sostenible-colombia':       { label: 'Estudios Hidrológicos e Hidráulicos',    href: '/servicios/estudios-hidrologicos' },
   'cambios-normativos-ingenieria-hidraulica-2026':   { label: 'Ver todos nuestros servicios',           href: '/servicios' },
   'costos-obras-hidraulicas-colombia-2026':          { label: 'Ver todos nuestros servicios',           href: '/servicios' },

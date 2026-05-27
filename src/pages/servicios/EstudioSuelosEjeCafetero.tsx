@@ -21,6 +21,7 @@ const seoConfig = {
     'laboratorio geotécnico Manizales',
   ],
   canonical: 'https://ingenieriabernal.co/estudio-de-suelos-eje-cafetero',
+  noindex: true,
 }
 
 const PROCESO = [
