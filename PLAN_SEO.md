@@ -1,5 +1,5 @@
 # PLAN SEO / AEO — ingenieriabernal.co
-**Última actualización:** 2026-05-23  
+**Última actualización:** 2026-05-27  
 **Propósito:** Documento maestro de estrategia. Sobrevive resets de contexto. Claude debe leer esto al inicio de cada sesión SEO.
 
 ---
@@ -22,8 +22,18 @@
 **Regla de oro del contenido:**
 > "Aprender no, contratar sí. Sin intermediarios. Entre más grandes mejor."
 
-**Problema de conversión (2026-05):**  
-20+ cotizaciones activas, pocos cierres. Causas: CTAs fragmentados, diseño no inspira confianza para proyectos de $50M+, llegada de intermediarios sin poder de decisión. Trust signals insuficientes hasta el commit `42400a8`.
+**Problema de conversión (2026-05 — REVISADO 2026-05-27):**  
+20+ cotizaciones activas, CERO cierres. La causa real NO es el precio (se probó alto/justo/bajo sin resultado). La causa es el tipo de cliente que llega: intermediarios, estudiantes, profesionales buscando subcontrato. La solución no es bajar precio — es filtrar mejor desde el contenido.
+
+**Diagnóstico confirmado (2026-05-27):**
+- Manizales (ciudad base) no genera llamadas — la página regional era genérica y hablaba de "proyectos residenciales"
+- Topógrafos y arquitectos que llegan buscan subcontratar a precio de subcontrato — no son el cliente objetivo
+- Las páginas regionales no tenían señales de precio ($8M–$60M), lenguaje de decisor ni anti-intermediario
+- SOLUCIÓN: reescritura completa de RegionalManizales + RegionalEjeCafetero con: precios visibles, lenguaje de constructora/promotor/municipio, QuoteFormInline, CTABanner, FAQPage, anti-intermediario
+
+**Eje geográfico primario:** Eje Cafetero (Caldas, Risaralda, Quindío) → luego nacional → luego LATAM  
+**Servicios de mayor rentabilidad:** modelación hidráulica, modelación hidrológica, diseño PTAP/PTAR, gestión riesgo Decreto 1807  
+**Cliente objetivo real:** grandes propietarios de terreno, constructoras medianas/grandes, empresas industriales, municipios con SGR, promotores urbanísticos
 
 ---
 
@@ -143,11 +153,14 @@ FloatingQuoteButton global en App.tsx. QuoteFormInline en 5 servicios core. Comm
 
 ### ✅ PRIORIDAD 3 — /proyectos page en hero — HECHO (ya estaba en Home.tsx)
 
-### PRIORIDAD 4 — GSC indexing manual (Rogerio lo hace)
-Solicitar indexación manual en Google Search Console para estas URLs:
-/manizales, /regional/cali, /regional/medellin, /plan-parcial-colombia, /gestion-riesgo-hidrico, /servicios/modelacion-hec-ras, /blog/inundaciones-eje-cafetero-riesgo-hidrico-que-hacer, /ingenieria-hidraulica-colombia
+### ✅ PRIORIDAD 4 — RegionalManizales + RegionalEjeCafetero UPGRADE — HECHO (2026-05-27)
+Reescritas con: precios visibles, lenguaje de decisor (constructoras/municipios/industria), FAQPage, PriceSpec, QuoteFormInline, CTABanner, GEO fragment, anti-intermediario. Commits pendientes en bat.
 
-### PRIORIDAD 5 — Página precio fijo + Wompi
+### PRIORIDAD 5 — GSC indexing manual (Rogerio lo hace)
+Solicitar indexación manual en Google Search Console para estas URLs:
+/regional/manizales, /regional/eje-cafetero, /regional/armenia, /regional/cali, /regional/medellin, /plan-parcial-colombia, /gestion-riesgo-hidrico, /servicios/modelacion-hec-ras
+
+### PRIORIDAD 6 — Página precio fijo + Wompi
 Crear `/servicios/estudio-basico` con precio fijo visible ($8M–$15M COP) y botón de pago Wompi. Objetivo: cierre digital sin intermediación humana para proyectos pequeños.
 
 ### PRIORIDAD 6 — Limpiar staged deletions en git index
