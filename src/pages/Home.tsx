@@ -46,12 +46,12 @@ const PORTFOLIO_GALLERY = [
     alt: 'Mapa de inundación profundidad TR100 vista aérea Colombia BIC',
   },
   {
-    img: '/img/proyectos/gbp_expert/09_inspeccion_canales_hidraulicos_campo.jpeg',
-    title: 'Inspección hidráulica en campo',
-    location: 'Eje Cafetero, Colombia',
-    type: 'Estudios Hidrológicos · Inspección de campo',
-    year: '2021',
-    alt: 'Inspección hidráulica quebrada Colombia puente BIC ingeniería',
+    img: '/img/proyectos/gbp_expert/p06_modelo_3d_hec_ras_santa_rosa.jpeg',
+    title: 'Modelo 3D HEC-RAS 2D — Llanura de inundación',
+    location: 'Santa Rosa de Cabal, Risaralda',
+    type: 'Modelación HEC-RAS 2D · Gestión del Riesgo · Decreto 1807',
+    year: '2022',
+    alt: 'Modelo 3D HEC-RAS 2D llanura inundación Santa Rosa de Cabal Risaralda BIC',
   },
 ]
 
