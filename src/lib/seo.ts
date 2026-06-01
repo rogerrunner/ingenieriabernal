@@ -1,4 +1,4 @@
-/**
+﻿/**
  * SEO Configuration for Rogerio Bernal - Ingeniería Hidráulica
  * Optimized for local search in Manizales, Caldas and Eje Cafetero
  * 
@@ -193,7 +193,7 @@ export function generateLocalBusinessSchema() {
       "addressCountry": "CO"
     },
     "telephone": "+57 302 477-8910",
-    "email": "rogeriobernal@ingenieriabernal.co",
+    "email": "robernalri@unal.edu.co",
     "url": "https://ingenieriabernal.co",
     "priceRange": "$$",
     "areaServed": [
@@ -234,7 +234,7 @@ export function generateLocalBusinessSchema() {
       "@type": "ContactPoint",
       "contactType": "Customer Service",
       "telephone": "+57 302 477-8910",
-      "email": "rogeriobernal@ingenieriabernal.co",
+      "email": "robernalri@unal.edu.co",
       "areaServed": "CO",
       "availableLanguage": ["es"]
     }
@@ -252,7 +252,7 @@ export function generateProfessionalSchema() {
     "name": "Rogerio Bernal Ríos",
     "jobTitle": "Ingeniero Civil - Especialista en Ingeniería Hidráulica",
     "image": "https://ingenieriabernal.co/rogerio.jpg",
-    "email": "rogeriobernal@ingenieriabernal.co",
+    "email": "robernalri@unal.edu.co",
     "telephone": "+57 302 477-8910",
     "url": "https://ingenieriabernal.co",
     "sameAs": [
@@ -322,7 +322,7 @@ export function generateServiceSchema() {
     "provider": {
       "@type": "Person",
       "name": "Rogerio Bernal Ríos",
-      "email": "rogeriobernal@ingenieriabernal.co",
+      "email": "robernalri@unal.edu.co",
       "telephone": "+57 302 477-8910"
     },
     "areaServed": {

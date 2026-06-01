@@ -1,4 +1,4 @@
-import QuoteFormInline from '../components/QuoteFormInline'
+﻿import QuoteFormInline from '../components/QuoteFormInline'
 
 // Category L articles — Mayo 2026 (costo HEC-RAS, documentos acueducto veredal)
 const articlesL: Record<string, {
@@ -93,7 +93,7 @@ const articlesL: Record<string, {
 
       <QuoteFormInline serviceId="modelacion-hec-ras" />
 
-      <p>En <strong>BIC realizamos estudios HEC-RAS 1D y 2D</strong> con entregables listos para radicación ante la autoridad ambiental. Nuestros modelos incluyen calibración con eventos históricos, mapas de inundación en SIG y memoria de cálculo firmada COPNIA. Solicite su presupuesto personalizado — respuesta en 24 horas: <strong>ingenieriabernal.co</strong> / <strong>+57 302 477 8910</strong> / <strong>rogerio@ingenieriabernal.co</strong>.</p>
+      <p>En <strong>BIC realizamos estudios HEC-RAS 1D y 2D</strong> con entregables listos para radicación ante la autoridad ambiental. Nuestros modelos incluyen calibración con eventos históricos, mapas de inundación en SIG y memoria de cálculo firmada COPNIA. Solicite su presupuesto personalizado — respuesta en 24 horas: <strong>ingenieriabernal.co</strong> / <strong>+57 302 477 8910</strong> / <strong>robernalri@unal.edu.co</strong>.</p>
     </>,
   },
 
@@ -196,7 +196,7 @@ const articlesL: Record<string, {
 
       <QuoteFormInline serviceId="acueducto-alcantarillado" />
 
-      <p>¿Tiene algunos de estos documentos y quiere saber si puede empezar? Escríbanos — evaluamos su caso sin costo y le decimos exactamente en qué punto del proceso puede iniciarse el diseño. Contáctenos en <strong>ingenieriabernal.co</strong>, al <strong>+57 302 477 8910</strong> o a <strong>rogerio@ingenieriabernal.co</strong>.</p>
+      <p>¿Tiene algunos de estos documentos y quiere saber si puede empezar? Escríbanos — evaluamos su caso sin costo y le decimos exactamente en qué punto del proceso puede iniciarse el diseño. Contáctenos en <strong>ingenieriabernal.co</strong>, al <strong>+57 302 477 8910</strong> o a <strong>robernalri@unal.edu.co</strong>.</p>
     </>,
   },
 

@@ -1,4 +1,4 @@
-import { useEffect } from 'react'
+﻿import { useEffect } from 'react'
 import SEOHead from '@/components/SEOHead'
 import { BlueprintBg, ThinLine, SectionLabel, Btn, Section, Tag } from '@/components/ui'
 
@@ -30,7 +30,7 @@ const SCHEMA = {
   description: 'Consultoría en ingeniería hidráulica e hidrológica en Bogotá y Cundinamarca.',
   url: 'https://ingenieriabernal.co',
   telephone: '+573024778910',
-  email: 'rogeriobernal@ingenieriabernal.co',
+  email: 'robernalri@unal.edu.co',
   address: {
     '@type': 'PostalAddress',
     addressLocality: 'Bogotá',

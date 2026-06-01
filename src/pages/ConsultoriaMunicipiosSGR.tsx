@@ -1,4 +1,4 @@
-import { useEffect } from 'react'
+﻿import { useEffect } from 'react'
 import SEOHead from '@/components/SEOHead'
 import SchemaMarkup from '@/components/SchemaMarkup'
 import { BlueprintBg, ThinLine, SectionLabel, Btn, Section, Tag } from '@/components/ui'
@@ -175,8 +175,8 @@ export default function ConsultoriaMunicipiosSGR() {
             <Btn href={`https://wa.me/${WA}?text=${WA_MSG}`} primary>
               Solicitar propuesta técnica
             </Btn>
-            <Btn href="mailto:rogeriobernal@ingenieriabernal.co">
-              rogeriobernal@ingenieriabernal.co
+            <Btn href="mailto:robernalri@unal.edu.co">
+              robernalri@unal.edu.co
             </Btn>
           </div>
           <div style={{ display: 'flex', gap: 12, flexWrap: 'wrap', marginTop: 32 }}>
@@ -397,8 +397,8 @@ export default function ConsultoriaMunicipiosSGR() {
             <Btn href={`https://wa.me/${WA}?text=${WA_MSG}`} primary>
               WhatsApp +57 302 477 8910
             </Btn>
-            <Btn href="mailto:rogeriobernal@ingenieriabernal.co" style={{ color: '#fff', borderColor: 'rgba(255,255,255,0.5)' }}>
-              rogeriobernal@ingenieriabernal.co
+            <Btn href="mailto:robernalri@unal.edu.co" style={{ color: '#fff', borderColor: 'rgba(255,255,255,0.5)' }}>
+              robernalri@unal.edu.co
             </Btn>
           </div>
         </div>

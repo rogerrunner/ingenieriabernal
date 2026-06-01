@@ -1,4 +1,4 @@
-import { useEffect } from 'react'
+﻿import { useEffect } from 'react'
 import SEOHead from '@/components/SEOHead'
 import { BlueprintBg, ThinLine, SectionLabel, Btn, Section, Tag } from '@/components/ui'
 
@@ -30,7 +30,7 @@ const SCHEMA = {
   description: 'Estudios hidrológicos e hidráulicos en Cali, Valle del Cauca: río Cauca, río Cali, riesgo hídrico y diseño de infraestructura hídrica.',
   url: 'https://ingenieriabernal.co',
   telephone: '+573024778910',
-  email: 'rogeriobernal@ingenieriabernal.co',
+  email: 'robernalri@unal.edu.co',
   address: {
     '@type': 'PostalAddress',
     addressLocality: 'Cali',

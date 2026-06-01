@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react'
+﻿import { useState, useEffect } from 'react'
 import { BlueprintBg, Tag, ThinLine, SectionLabel, Btn, Section } from '../components/ui'
 import SchemaMarkup from '../components/SchemaMarkup'
 
@@ -241,8 +241,8 @@ export default function Contact() {
             {/* Email */}
             <div style={{ background: '#fff', borderRadius: 12, padding: '1.5rem', border: '1px solid #e0edf5' }}>
               <p style={{ color: '#003B6F', fontWeight: 700, fontSize: 13, textTransform: 'uppercase', letterSpacing: '0.08em', margin: '0 0 8px' }}>Correo electrónico</p>
-              <a href="mailto:rogeriobernal@ingenieriabernal.co" style={{ color: '#17A2B8', fontWeight: 600, fontSize: 15, textDecoration: 'none' }}>
-                rogeriobernal@ingenieriabernal.co
+              <a href="mailto:robernalri@unal.edu.co" style={{ color: '#17A2B8', fontWeight: 600, fontSize: 15, textDecoration: 'none' }}>
+                robernalri@unal.edu.co
               </a>
             </div>
 

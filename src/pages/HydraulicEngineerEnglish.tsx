@@ -1,4 +1,4 @@
-import { useEffect } from 'react'
+﻿import { useEffect } from 'react'
 import SEOHead from '@/components/SEOHead'
 import SchemaMarkup from '@/components/SchemaMarkup'
 import { BlueprintBg, SectionLabel, Btn, Section, Tag } from '@/components/ui'
@@ -63,7 +63,7 @@ const FAQ = [
   },
   {
     q: 'How do I get a quote?',
-    a: 'The fastest way is via WhatsApp (+57 302 477 8910) or email (rogeriobernal@ingenieriabernal.co). Share your project location, scope, and any permit requirements you have received. BIC responds in English or Spanish, typically within 24 hours, with a free preliminary assessment and a formal proposal within 48 hours.',
+    a: 'The fastest way is via WhatsApp (+57 302 477 8910) or email (robernalri@unal.edu.co). Share your project location, scope, and any permit requirements you have received. BIC responds in English or Spanish, typically within 24 hours, with a free preliminary assessment and a formal proposal within 48 hours.',
   },
   {
     q: 'What currencies and payment methods do you accept?',
@@ -111,7 +111,7 @@ export default function HydraulicEngineerEnglish() {
           </p>
           <div style={{ display: 'flex', gap: 12, flexWrap: 'wrap', marginBottom: 28 }}>
             <Btn href={`https://wa.me/${WA}?text=${WA_MSG}`}>📱 WhatsApp: +57 302 477 8910</Btn>
-            <Btn variant="outline" href="mailto:rogeriobernal@ingenieriabernal.co" dark>Email a quote request</Btn>
+            <Btn variant="outline" href="mailto:robernalri@unal.edu.co" dark>Email a quote request</Btn>
           </div>
           <div style={{ display: 'flex', gap: 8, flexWrap: 'wrap' }}>
             {['COPNIA 17202-313228','TOEFL iBT 98/120','RAS 2017','NSR-10','HEC-RAS 2D','Nationwide Colombia'].map(t => (
@@ -280,14 +280,14 @@ export default function HydraulicEngineerEnglish() {
             Request a free consultation via WhatsApp or email. We respond in <strong style={{ color: '#90CDF4' }}>English and Spanish</strong>.
           </p>
           <p style={{ color: 'rgba(255,255,255,0.65)', fontSize: 14, marginBottom: 32 }}>
-            Email: rogeriobernal@ingenieriabernal.co · WhatsApp: +57 302 477 8910
+            Email: robernalri@unal.edu.co · WhatsApp: +57 302 477 8910
           </p>
           <div style={{ display: 'flex', gap: 14, justifyContent: 'center', flexWrap: 'wrap' }}>
             <a href={`https://wa.me/${WA}?text=${WA_MSG}`} target="_blank" rel="noopener noreferrer"
               style={{ display: 'inline-block', padding: '15px 36px', background: '#25D366', color: '#fff', borderRadius: 8, fontWeight: 700, fontSize: 16, textDecoration: 'none' }}>
               📱 Request a free consultation
             </a>
-            <a href="mailto:rogeriobernal@ingenieriabernal.co"
+            <a href="mailto:robernalri@unal.edu.co"
               style={{ display: 'inline-block', padding: '15px 36px', background: 'transparent', color: '#fff', borderRadius: 8, fontWeight: 700, fontSize: 16, textDecoration: 'none', border: '2px solid rgba(255,255,255,0.4)' }}>
               Send an email
             </a>

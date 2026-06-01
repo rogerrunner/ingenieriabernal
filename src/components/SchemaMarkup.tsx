@@ -1,4 +1,4 @@
-import { useEffect } from 'react'
+﻿import { useEffect } from 'react'
 
 const BASE_URL = 'https://ingenieriabernal.co'
 
@@ -13,7 +13,7 @@ const LOCAL_BUSINESS_SCHEMA = {
   image: BASE_URL + '/og-default.jpg',
   description: 'Consultoría en ingeniería hidráulica y saneamiento básico. Diseño de acueductos, PTAP, modelación HEC-RAS, redes contra incendio NSR-10 y proyectos SGR. Manizales, Colombia. Egresados UNAL — COPNIA 17202-313228.',
   telephone: '+573024778910',
-  email: 'rogeriobernal@ingenieriabernal.co',
+  email: 'robernalri@unal.edu.co',
   foundingDate: '2015',
   numberOfEmployees: { '@type': 'QuantitativeValue', value: 5 },
   founder: {

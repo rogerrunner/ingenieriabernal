@@ -1,4 +1,4 @@
-import { useEffect } from 'react'
+﻿import { useEffect } from 'react'
 import { BlueprintBg, Tag, ThinLine, SectionLabel, Btn, Section } from '../components/ui'
 
 const DEFAULT_PHONE = '573024778910'
@@ -53,7 +53,7 @@ export default function RegionalPage({ city, department, description, phone = DE
       description: `Consultoría en ingeniería hidráulica, hidrología, acueductos y geotecnia en ${city}, ${department}`,
       url: 'https://ingenieriabernal.co',
       telephone: `+${phone}`,
-      email: 'rogeriobernal@ingenieriabernal.co',
+      email: 'robernalri@unal.edu.co',
       address: {
         '@type': 'PostalAddress',
         addressLocality: city,

@@ -1,4 +1,4 @@
-import QuoteFormInline from '../components/QuoteFormInline'
+﻿import QuoteFormInline from '../components/QuoteFormInline'
 
 // Batch M articles — Mayo 2026 (acueductos rurales y gestión del riesgo hídrico)
 const articlesM: Record<string, {
@@ -66,7 +66,7 @@ const articlesM: Record<string, {
 
       <QuoteFormInline serviceId="acueducto-alcantarillado" />
 
-      <p>La correcta determinación de los caudales de diseño es la base sobre la que se sustentan todos los demás componentes del sistema. Un error en esta etapa se multiplica en cada decisión de dimensionamiento posterior. En <strong>BIC</strong> entregamos memorias de cálculo completas que incluyen la proyección de población, los caudales QMD/QMMD/QMH y la justificación técnica de cada parámetro según el RAS 2017. <strong>¿Necesita un diseño hidráulico con memorias de cálculo completas? BIC entrega en 3 semanas.</strong> Contáctenos: <strong>+57 302 477 8910</strong> / <strong>rogerio@ingenieriabernal.co</strong>.</p>
+      <p>La correcta determinación de los caudales de diseño es la base sobre la que se sustentan todos los demás componentes del sistema. Un error en esta etapa se multiplica en cada decisión de dimensionamiento posterior. En <strong>BIC</strong> entregamos memorias de cálculo completas que incluyen la proyección de población, los caudales QMD/QMMD/QMH y la justificación técnica de cada parámetro según el RAS 2017. <strong>¿Necesita un diseño hidráulico con memorias de cálculo completas? BIC entrega en 3 semanas.</strong> Contáctenos: <strong>+57 302 477 8910</strong> / <strong>robernalri@unal.edu.co</strong>.</p>
     </>,
   },
 
@@ -180,7 +180,7 @@ const articlesM: Record<string, {
 
       <QuoteFormInline serviceId="acueducto-alcantarillado" />
 
-      <p>La especificación incorrecta de materiales es una de las causas más frecuentes de reparaciones prematuras y pérdidas de agua en acueductos rurales colombianos. <strong>BIC especifica los materiales óptimos para cada tramo según las condiciones reales del terreno</strong>, con base en el RAS 2017 y la experiencia de campo en la región. Contáctenos: <strong>+57 302 477 8910</strong> / <strong>rogerio@ingenieriabernal.co</strong>.</p>
+      <p>La especificación incorrecta de materiales es una de las causas más frecuentes de reparaciones prematuras y pérdidas de agua en acueductos rurales colombianos. <strong>BIC especifica los materiales óptimos para cada tramo según las condiciones reales del terreno</strong>, con base en el RAS 2017 y la experiencia de campo en la región. Contáctenos: <strong>+57 302 477 8910</strong> / <strong>robernalri@unal.edu.co</strong>.</p>
     </>,
   },
 
@@ -236,7 +236,7 @@ const articlesM: Record<string, {
 
       <QuoteFormInline serviceId="acueducto-alcantarillado" />
 
-      <p>Las conexiones domiciliarias bien diseñadas y correctamente instaladas pueden reducir las pérdidas de agua no contabilizada hasta en un 15% desde el primer año de operación. <strong>BIC diseña el esquema completo de conexiones domiciliarias para evitar pérdidas de agua desde el inicio</strong>, con especificaciones de materiales, presiones y medidores según el RAS 2017. Contáctenos: <strong>+57 302 477 8910</strong> / <strong>rogerio@ingenieriabernal.co</strong>.</p>
+      <p>Las conexiones domiciliarias bien diseñadas y correctamente instaladas pueden reducir las pérdidas de agua no contabilizada hasta en un 15% desde el primer año de operación. <strong>BIC diseña el esquema completo de conexiones domiciliarias para evitar pérdidas de agua desde el inicio</strong>, con especificaciones de materiales, presiones y medidores según el RAS 2017. Contáctenos: <strong>+57 302 477 8910</strong> / <strong>robernalri@unal.edu.co</strong>.</p>
     </>,
   },
 
@@ -337,7 +337,7 @@ const articlesM: Record<string, {
 
       <QuoteFormInline serviceId="acueducto-alcantarillado" />
 
-      <p><strong>BIC diseña PTAP que garantizan IRCA en nivel sin riesgo</strong>, con memorias de cálculo, planos y especificaciones aceptadas por la Secretaría de Salud y el MVCT. Solicite su evaluación técnica: <strong>+57 302 477 8910</strong> / <strong>rogerio@ingenieriabernal.co</strong>.</p>
+      <p><strong>BIC diseña PTAP que garantizan IRCA en nivel sin riesgo</strong>, con memorias de cálculo, planos y especificaciones aceptadas por la Secretaría de Salud y el MVCT. Solicite su evaluación técnica: <strong>+57 302 477 8910</strong> / <strong>robernalri@unal.edu.co</strong>.</p>
     </>,
   },
 
@@ -398,7 +398,7 @@ const articlesM: Record<string, {
 
       <QuoteFormInline serviceId="modelacion-hec-ras" />
 
-      <p><strong>BIC elabora estudios de inundabilidad con HEC-RAS aceptados por CAR y municipios en todo Colombia</strong>: Corpocaldas, CARDER, CRQ, Corantioquia, CDMB y otras autoridades ambientales. Nuestros estudios incluyen modelos calibrados, mapas SIG y firma COPNIA vigente. Contáctenos: <strong>+57 302 477 8910</strong> / <strong>rogerio@ingenieriabernal.co</strong>.</p>
+      <p><strong>BIC elabora estudios de inundabilidad con HEC-RAS aceptados por CAR y municipios en todo Colombia</strong>: Corpocaldas, CARDER, CRQ, Corantioquia, CDMB y otras autoridades ambientales. Nuestros estudios incluyen modelos calibrados, mapas SIG y firma COPNIA vigente. Contáctenos: <strong>+57 302 477 8910</strong> / <strong>robernalri@unal.edu.co</strong>.</p>
     </>,
   },
 
