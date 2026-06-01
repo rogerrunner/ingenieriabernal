@@ -1,5 +1,6 @@
 import { useEffect } from 'react'
 import SEOHead from '@/components/SEOHead'
+import SpeakableSchema from '@/components/SpeakableSchema'
 import SchemaMarkup from '@/components/SchemaMarkup'
 import { BlueprintBg, ThinLine, SectionLabel, Btn, Section, Tag } from '@/components/ui'
 
@@ -99,6 +100,7 @@ export default function ServicioContraIncendiosNSR10() {
   return (
     <>
       <SEOHead config={seoConfig} />
+      <SpeakableSchema name="Diseño Red Contra Incendio NSR-10 Colombia | BIC" />
       <SchemaMarkup
         type="service"
         serviceName="Diseño Red Contra Incendio NSR-10 — NFPA 13/14/20"

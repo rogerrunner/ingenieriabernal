@@ -1,5 +1,6 @@
 import { useEffect } from 'react'
 import SEOHead from '@/components/SEOHead'
+import SpeakableSchema from '@/components/SpeakableSchema'
 import SchemaMarkup from '@/components/SchemaMarkup'
 import { BlueprintBg, ThinLine, SectionLabel, Btn, Section, Tag, CTABanner } from '@/components/ui'
 import QuoteFormInline from '@/components/QuoteFormInline'
@@ -175,6 +176,7 @@ export default function ServicioRedesHidrosanitarias() {
   return (
     <>
       <SEOHead config={seoConfig} />
+      <SpeakableSchema name="Redes Hidrosanitarias para Edificios Comerciales e Industriales — NSR-10 | BIC" />
 
       <CTABanner service="Diseño de Redes Hidrosanitarias NSR-10" />
       <SchemaMarkup

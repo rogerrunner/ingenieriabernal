@@ -1,5 +1,6 @@
 import { useEffect } from 'react'
 import SEOHead from '@/components/SEOHead'
+import SpeakableSchema from '@/components/SpeakableSchema'
 import SchemaMarkup from '@/components/SchemaMarkup'
 import { BlueprintBg, SectionLabel, Btn, Section, Tag } from '@/components/ui'
 
@@ -249,6 +250,7 @@ export default function IngenieriaHidraulicaColombia() {
   return (
     <>
       <SEOHead config={seoConfig} />
+      <SpeakableSchema name="Empresa de Ingeniería Hidráulica en Colombia — Contrata BIC | COPNIA 2026" />
       <SchemaMarkup
         type="service"
         serviceName="Empresa de Ingeniería Hidráulica en Colombia — BIC"

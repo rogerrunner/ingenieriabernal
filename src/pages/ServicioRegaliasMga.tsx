@@ -1,5 +1,6 @@
 import { useEffect } from 'react'
 import SEOHead from '@/components/SEOHead'
+import SpeakableSchema from '@/components/SpeakableSchema'
 import { BlueprintBg, ThinLine, SectionLabel, Btn, Section, Tag, CTABanner } from '@/components/ui'
 import QuoteFormInline from '@/components/QuoteFormInline'
 
@@ -48,6 +49,7 @@ export default function ServicioRegaliasMga() {
   return (
     <>
       <SEOHead config={seoConfig} />
+      <SpeakableSchema name="Regalías MGA-Web Colombia — Agua Potable | BIC" />
 
       <CTABanner service="Formulación de Proyectos Regalías SGR — MGA Web" />
 

@@ -1,5 +1,6 @@
 import { useEffect } from 'react'
 import SEOHead from '@/components/SEOHead'
+import SpeakableSchema from '@/components/SpeakableSchema'
 import { BlueprintBg, ThinLine, SectionLabel, Btn, Section, Tag } from '@/components/ui'
 
 const WA = '573024778910'
@@ -47,6 +48,7 @@ export default function ServicioAmbiental() {
   return (
     <>
       <SEOHead config={seoConfig} />
+      <SpeakableSchema name="Estudios Ambientales e IRCA Colombia — COPNIA | BIC" />
 
       {/* ── HERO ── */}
       <section style={{

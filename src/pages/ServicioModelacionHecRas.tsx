@@ -1,5 +1,6 @@
 import { useEffect } from 'react'
 import SEOHead from '@/components/SEOHead'
+import SpeakableSchema from '@/components/SpeakableSchema'
 import SchemaMarkup from '@/components/SchemaMarkup'
 import QuoteFormInline from '@/components/QuoteFormInline'
 import { BlueprintBg, ThinLine, SectionLabel, Btn, Section, Tag, CTABanner } from '@/components/ui'
@@ -133,6 +134,7 @@ export default function ServicioModelacionHecRas() {
   return (
     <>
       <SEOHead config={seoConfig} />
+      <SpeakableSchema name="Modelación HEC-RAS 2D para tu Proyecto — Licencias y Planes Parciales | BIC" />
       <SchemaMarkup
         type="service"
         serviceName="Modelación HEC-RAS — Estudios de Inundación en Colombia"

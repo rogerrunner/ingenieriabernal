@@ -41,6 +41,7 @@ const ServicioContraIncendiosNSR10 = lazy(() => import('./pages/ServicioContraIn
 const RegionalManizales = lazy(() => import('./pages/regional/RegionalManizales'))
 const RegionalPereira = lazy(() => import('./pages/regional/RegionalPereira'))
 const RegionalArmenia = lazy(() => import('./pages/regional/RegionalArmenia'))
+const RegionalBarranquilla = lazy(() => import('./pages/regional/RegionalBarranquilla'))
 const RegionalEjeCafetero = lazy(() => import('./pages/regional/RegionalEjeCafetero'))
 const RegionalCali = lazy(() => import('./pages/regional/RegionalCali'))
 const RegionalMedellin = lazy(() => import('./pages/regional/RegionalMedellin'))
@@ -100,6 +101,7 @@ const ServicioPTAPColombia = lazy(() => import('./pages/ServicioPTAPColombia'))
 const ServicioAguasLluviasManizales = lazy(() => import('./pages/ServicioAguasLluviasManizales'))
 const HydraulicEngineerEnglish = lazy(() => import('./pages/HydraulicEngineerEnglish'))
 const EstudioBasico = lazy(() => import('./pages/servicios/EstudioBasico'))
+const ProjectDetail = lazy(() => import('./pages/ProjectDetail'))
 
 function ScrollToTop() {
   const [location] = useLocation()
@@ -338,6 +340,7 @@ export default function App() {
           <Route path="/regional/manizales" component={RegionalManizales} />
           <Route path="/regional/pereira" component={RegionalPereira} />
           <Route path="/regional/armenia" component={RegionalArmenia} />
+          <Route path="/regional/barranquilla" component={RegionalBarranquilla} />
           <Route path="/regional/eje-cafetero" component={RegionalEjeCafetero} />
           <Route path="/regional/cali" component={RegionalCali} />
           <Route path="/regional/medellin" component={RegionalMedellin} />
@@ -372,6 +375,7 @@ export default function App() {
           <Route path="/aguas-lluvias-manizales" component={ServicioAguasLluviasManizales} />
 
           <Route path="/servicios/estudio-basico" component={EstudioBasico} />
+          <Route path="/proyectos/:id" component={ProjectDetail} />
           <Route path="/blog/:slug" component={BlogDetail} />
           <Route component={NotFound} />
         </Switch>

@@ -1,5 +1,6 @@
 import { useEffect } from 'react'
 import SEOHead from '@/components/SEOHead'
+import SpeakableSchema from '@/components/SpeakableSchema'
 import SchemaMarkup from '@/components/SchemaMarkup'
 import { BlueprintBg, ThinLine, SectionLabel, Btn, Section, Tag } from '@/components/ui'
 
@@ -66,6 +67,7 @@ export default function ServicioInterventoria() {
   return (
     <>
       <SEOHead config={seoConfig} />
+      <SpeakableSchema name="Interventoría Obras Hidráulicas Colombia — COPNIA | BIC" />
 
       {/* ── HERO ── */}
       <section style={{

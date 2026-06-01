@@ -1,5 +1,6 @@
 import { useEffect } from 'react'
 import SEOHead from '@/components/SEOHead'
+import SpeakableSchema from '@/components/SpeakableSchema'
 import SchemaMarkup from '@/components/SchemaMarkup'
 import QuoteFormInline from '@/components/QuoteFormInline'
 import { BlueprintBg, ThinLine, SectionLabel, Btn, Section, CTABanner } from '@/components/ui'
@@ -65,6 +66,7 @@ export default function RegionalArmenia() {
   return (
     <>
       <SEOHead config={seoConfig} />
+      <SpeakableSchema name="Ingeniería Hidráulica Armenia y Quindío — Propuesta en 24 h | BIC COPNIA" />
 
       <SchemaMarkup
         type="service"
@@ -240,7 +242,7 @@ export default function RegionalArmenia() {
             Sin intermediarios. Respondemos directamente con propuesta técnica y económica
             en menos de 24 horas. Entre más grande el proyecto, mejor podemos ayudarle.
           </p>
-          <QuoteFormInline />
+          <QuoteFormInline ciudad="Armenia" />
         </div>
       </Section>
     </>

@@ -1,5 +1,6 @@
 import { useEffect } from 'react'
 import SEOHead from '@/components/SEOHead'
+import SpeakableSchema from '@/components/SpeakableSchema'
 import SchemaMarkup from '@/components/SchemaMarkup'
 import { BlueprintBg, SectionLabel, Btn, Section, Tag } from '@/components/ui'
 
@@ -54,6 +55,7 @@ export default function ServicioTopografia() {
   return (
     <>
       <SEOHead config={seoConfig} />
+      <SpeakableSchema name="Levantamiento Topográfico Colombia — Estación Total Drone | BIC" />
       <SchemaMarkup
         type="service"
         serviceName="Levantamiento Topográfico en Colombia"

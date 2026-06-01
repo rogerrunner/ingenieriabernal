@@ -1,5 +1,6 @@
 import { useEffect } from 'react'
 import SEOHead from '@/components/SEOHead'
+import SpeakableSchema from '@/components/SpeakableSchema'
 import SchemaMarkup from '@/components/SchemaMarkup'
 import QuoteFormInline from '@/components/QuoteFormInline'
 import { BlueprintBg, SectionLabel, Btn, Section, Tag, CTABanner } from '@/components/ui'
@@ -173,6 +174,7 @@ export default function ServicioEstudiosHidrologicos() {
   return (
     <>
       <SEOHead config={seoConfig} />
+      <SpeakableSchema name="Estudio de Gestión del Riesgo por Inundación para tu Proyecto | Decreto 1807 — BIC" />
 
       <CTABanner service="Estudios Hidrológicos e Hidráulicos Colombia" />
       <SchemaMarkup

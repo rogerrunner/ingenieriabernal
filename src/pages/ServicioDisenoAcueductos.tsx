@@ -1,5 +1,6 @@
 import { useEffect } from 'react'
 import SEOHead from '@/components/SEOHead'
+import SpeakableSchema from '@/components/SpeakableSchema'
 import SchemaMarkup from '@/components/SchemaMarkup'
 import { BlueprintBg, ThinLine, SectionLabel, Btn, Section, Tag, CTABanner } from '@/components/ui'
 import QuoteFormInline from '@/components/QuoteFormInline'
@@ -206,6 +207,7 @@ export default function ServicioDisenoAcueductos() {
   return (
     <>
       <SEOHead config={seoConfig} />
+      <SpeakableSchema name="Diseño de Acueducto para tu Proyecto — Rural, Urbano o Regalías SGR | BIC Colombia" />
       <SchemaMarkup
         type="service"
         serviceName="Diseño de Acueductos Rurales y Veredales"
