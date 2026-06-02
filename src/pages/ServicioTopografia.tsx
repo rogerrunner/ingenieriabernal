@@ -63,7 +63,8 @@ export default function ServicioTopografia() {
         serviceUrl="/servicios/topografia"
         faqItems={FAQ}
         priceSpecification={[
-          { name: 'Levantamiento topográfico', minPrice: 1500000, maxPrice: 9000000, description: 'Planimetría, altimetría, batimetría, drone — MAGNA-SIRGAS, AutoCAD Civil 3D' },
+          { name: 'Levantamiento topográfico estación total / GPS', minPrice: 1500000, maxPrice: 4500000, priceCurrency: 'COP', description: 'Planimetría, altimetría, curvas de nivel — MAGNA-SIRGAS, AutoCAD Civil 3D' },
+          { name: 'Levantamiento fotogramétrico Drone RTK', minPrice: 9500000, maxPrice: 25000000, priceCurrency: 'COP', description: 'Ortofoto, MDT de alta densidad, vuelo con drone RTK GNSS — entregables Civil 3D y GIS' },
         ]}
       />
 
@@ -91,9 +92,20 @@ export default function ServicioTopografia() {
             con drone. Entregables en MAGNA-SIRGAS y AutoCAD Civil 3D. Firmados por especialista
             con tarjeta profesional COPNIA vigente y válidos ante curadurías, IGAC y entidades ambientales.
           </p>
-          <div style={{ display: 'flex', gap: 12, flexWrap: 'wrap', marginBottom: 28 }}>
+          <div style={{ display: 'flex', gap: 12, flexWrap: 'wrap', marginBottom: 16 }}>
             <Btn href={`https://wa.me/${WA}?text=${WA_MSG}`}>📱 Cotizar levantamiento</Btn>
             <Btn variant="outline" href="/servicios/estudios-hidrologicos" dark>Estudios Hidrológicos</Btn>
+          </div>
+          <div style={{ marginBottom: 16 }}>
+            <span style={{
+              display: 'inline-flex', alignItems: 'center', gap: 6,
+              background: 'rgba(34,197,94,0.12)', border: '1px solid rgba(34,197,94,0.35)',
+              borderRadius: 100, padding: '7px 16px',
+              fontFamily: "'Montserrat', sans-serif", fontWeight: 700,
+              color: '#4ADE80', fontSize: 13,
+            }}>
+              ✓ Topografía Drone RTK — Desde $9.500.000 COP
+            </span>
           </div>
           <div style={{ display: 'flex', gap: 8, flexWrap: 'wrap' }}>
             {['Estación total','GPS diferencial','Drone fotogramétrico','MAGNA-SIRGAS','Civil 3D','Todo Colombia'].map(t => (

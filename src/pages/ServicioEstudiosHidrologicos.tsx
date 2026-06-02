@@ -184,7 +184,7 @@ export default function ServicioEstudiosHidrologicos() {
         serviceUrl="/servicios/estudios-hidrologicos"
         faqItems={FAQ}
         priceSpecification={[
-          { name: 'Estudio hidrológico', minPrice: 3500000, maxPrice: 12000000, description: 'Caudales de diseño, curvas IDF, HEC-HMS, Decreto 1807/2014, concesiones CAR' },
+          { name: 'Estudio hidrológico', minPrice: 4500000, maxPrice: 12000000, description: 'Caudales de diseño, curvas IDF, HEC-HMS, Decreto 1807/2014, concesiones CAR' },
         ]}
       />
 
@@ -210,9 +210,20 @@ export default function ServicioEstudiosHidrologicos() {
           <p style={{ color: 'rgba(255,255,255,0.82)', fontSize: 16, lineHeight: 1.8, marginBottom: 32, maxWidth: 760 }}>
             Si tu proyecto está cerca de un río, quebrada o en zona que el POT clasifica con amenaza media o alta, el Decreto 1807 de 2014 exige un estudio de detalle de amenaza y riesgo por inundación antes de que el curador urbano expida la licencia. BIC realiza el estudio hidrológico completo — caudales de diseño HEC-HMS, modelación HEC-RAS 2D, mapa de mancha de inundación — firmado por especialista con COPNIA 17202-313228 CLD y 10 años de experiencia en consultoría hidráulica para urbanizaciones, planes parciales y grandes desarrollos comerciales e industriales en Colombia.
           </p>
-          <div style={{ display: 'flex', gap: 12, flexWrap: 'wrap', marginBottom: 28 }}>
+          <div style={{ display: 'flex', gap: 12, flexWrap: 'wrap', marginBottom: 16 }}>
             <Btn href={`https://wa.me/${WA}?text=${WA_MSG}`}>📱 Cotizar estudio de inundaciones</Btn>
             <Btn variant="outline" href="/servicios/modelacion-hec-ras" dark>Modelación HEC-RAS 2D</Btn>
+          </div>
+          <div style={{ marginBottom: 16 }}>
+            <span style={{
+              display: 'inline-flex', alignItems: 'center', gap: 6,
+              background: 'rgba(34,197,94,0.12)', border: '1px solid rgba(34,197,94,0.35)',
+              borderRadius: 100, padding: '7px 16px',
+              fontFamily: "'Montserrat', sans-serif", fontWeight: 700,
+              color: '#4ADE80', fontSize: 13,
+            }}>
+              ✓ Desde $4.500.000 COP
+            </span>
           </div>
           <div style={{ display: 'flex', gap: 8, flexWrap: 'wrap' }}>
             {['Decreto 1807/2014','HEC-HMS','HEC-RAS 2D','Urbanizaciones','Planes parciales','COPNIA 17202-313228'].map(t => (

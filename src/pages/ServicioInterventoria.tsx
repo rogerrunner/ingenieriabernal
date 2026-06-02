@@ -68,6 +68,16 @@ export default function ServicioInterventoria() {
     <>
       <SEOHead config={seoConfig} />
       <SpeakableSchema name="Interventoría Obras Hidráulicas Colombia — COPNIA | BIC" />
+      <SchemaMarkup
+        type="service"
+        serviceName="Interventoría Técnica de Obras Hidráulicas en Colombia"
+        serviceDesc={seoConfig.description}
+        serviceUrl="/servicios/interventoria"
+        faqItems={FAQ_INT}
+        priceSpecification={[
+          { name: 'Interventoría técnica obras hidráulicas', minPrice: 4000000, maxPrice: 40000000, priceCurrency: 'COP', description: 'Control técnico, informes periódicos, actas de cobro — acueductos, alcantarillados, PTAR, redes hidrosanitarias' },
+        ]}
+      />
 
       {/* ── HERO ── */}
       <section style={{
@@ -106,6 +116,17 @@ export default function ServicioInterventoria() {
             <Btn variant="outline" href="/servicios" dark>
               Ver todos los servicios
             </Btn>
+          </div>
+          <div style={{ marginTop: 20 }}>
+            <span style={{
+              display: 'inline-flex', alignItems: 'center', gap: 6,
+              background: 'rgba(34,197,94,0.12)', border: '1px solid rgba(34,197,94,0.35)',
+              borderRadius: 100, padding: '7px 16px',
+              fontFamily: "'Montserrat', sans-serif", fontWeight: 700,
+              color: '#4ADE80', fontSize: 13,
+            }}>
+              ✓ Desde $4.000.000 COP
+            </span>
           </div>
         </div>
       </section>

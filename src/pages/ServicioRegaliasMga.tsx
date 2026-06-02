@@ -1,6 +1,7 @@
 import { useEffect } from 'react'
 import SEOHead from '@/components/SEOHead'
 import SpeakableSchema from '@/components/SpeakableSchema'
+import SchemaMarkup from '@/components/SchemaMarkup'
 import { BlueprintBg, ThinLine, SectionLabel, Btn, Section, Tag, CTABanner } from '@/components/ui'
 import QuoteFormInline from '@/components/QuoteFormInline'
 
@@ -50,6 +51,15 @@ export default function ServicioRegaliasMga() {
     <>
       <SEOHead config={seoConfig} />
       <SpeakableSchema name="Regalías MGA-Web Colombia — Agua Potable | BIC" />
+      <SchemaMarkup
+        type="service"
+        serviceName="Formulación de Proyectos de Regalías MGA-Web — Agua y Saneamiento"
+        serviceDesc={seoConfig.description}
+        serviceUrl="/servicios/regalias-mga"
+        priceSpecification={[
+          { name: 'Formulación proyecto SGR (agua / saneamiento / riesgo)', minPrice: 5000000, maxPrice: 20000000, priceCurrency: 'COP', description: 'Registro MGA-Web, BPIN, fichas técnicas sectoriales, indicadores costo-eficiencia y acompañamiento OCAD' },
+        ]}
+      />
 
       <CTABanner service="Formulación de Proyectos Regalías SGR — MGA Web" />
 
@@ -90,6 +100,17 @@ export default function ServicioRegaliasMga() {
             <Btn variant="outline" href="/servicios" dark>
               Ver todos los servicios
             </Btn>
+          </div>
+          <div style={{ marginTop: 20 }}>
+            <span style={{
+              display: 'inline-flex', alignItems: 'center', gap: 6,
+              background: 'rgba(34,197,94,0.12)', border: '1px solid rgba(34,197,94,0.35)',
+              borderRadius: 100, padding: '7px 16px',
+              fontFamily: "'Montserrat', sans-serif", fontWeight: 700,
+              color: '#4ADE80', fontSize: 13,
+            }}>
+              ✓ Desde $5.000.000 COP
+            </span>
           </div>
         </div>
       </section>

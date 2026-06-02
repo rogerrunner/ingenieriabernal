@@ -1,6 +1,7 @@
 import { useEffect } from 'react'
 import SEOHead from '@/components/SEOHead'
 import SpeakableSchema from '@/components/SpeakableSchema'
+import SchemaMarkup from '@/components/SchemaMarkup'
 import { BlueprintBg, ThinLine, SectionLabel, Btn, Section, Tag } from '@/components/ui'
 
 const WA = '573024778910'
@@ -151,6 +152,15 @@ export default function ServicioGeotecnia() {
     <>
       <SEOHead config={seoConfig} />
       <SpeakableSchema name="Estudios Geotécnicos Colombia — Suelos NSR-10 Taludes | BIC" />
+      <SchemaMarkup
+        type="service"
+        serviceName="Estudios Geotécnicos y de Suelos en Colombia"
+        serviceDesc={seoConfig.description}
+        serviceUrl="/servicios/geotecnia"
+        priceSpecification={[
+          { name: 'Estudio geotécnico para licencia de construcción (NSR-10 H)', minPrice: 5000000, maxPrice: 18000000, priceCurrency: 'COP', description: 'Sondeos SPT, ensayos de laboratorio, capacidad portante, informe firmado COPNIA para curaduría' },
+        ]}
+      />
 
       {/* ── HERO ── */}
       <section style={{
@@ -189,6 +199,17 @@ export default function ServicioGeotecnia() {
             <Btn variant="outline" href="/servicios" dark>
               Ver todos los servicios
             </Btn>
+          </div>
+          <div style={{ marginTop: 20 }}>
+            <span style={{
+              display: 'inline-flex', alignItems: 'center', gap: 6,
+              background: 'rgba(34,197,94,0.12)', border: '1px solid rgba(34,197,94,0.35)',
+              borderRadius: 100, padding: '7px 16px',
+              fontFamily: "'Montserrat', sans-serif", fontWeight: 700,
+              color: '#4ADE80', fontSize: 13,
+            }}>
+              ✓ Desde $5.000.000 COP
+            </span>
           </div>
         </div>
       </section>

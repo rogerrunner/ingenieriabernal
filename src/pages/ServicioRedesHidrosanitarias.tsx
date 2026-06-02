@@ -222,6 +222,17 @@ export default function ServicioRedesHidrosanitarias() {
               Memorias para curaduría
             </Btn>
           </div>
+          <div style={{ marginTop: 20 }}>
+            <span style={{
+              display: 'inline-flex', alignItems: 'center', gap: 6,
+              background: 'rgba(34,197,94,0.12)', border: '1px solid rgba(34,197,94,0.35)',
+              borderRadius: 100, padding: '7px 16px',
+              fontFamily: "'Montserrat', sans-serif", fontWeight: 700,
+              color: '#4ADE80', fontSize: 13,
+            }}>
+              ✓ Desde $6.000.000 COP
+            </span>
+          </div>
         </div>
       </section>
 

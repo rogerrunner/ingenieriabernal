@@ -215,6 +215,7 @@ export default function ServicioDisenoAcueductos() {
         serviceUrl="/servicios/diseno-acueductos"
         faqItems={FAQ_ACUEDUCTOS}
         priceSpecification={[
+          { name: 'Diagnóstico hidráulico EPANET / optimización red existente', minPrice: 6000000, maxPrice: 8000000, priceCurrency: 'COP', description: 'Modelación EPANET de red de distribución existente, sectorización y VRP' },
           { name: 'Acueducto veredal / comunitario (< 500 hab)', minPrice: 8000000, maxPrice: 18000000, priceCurrency: 'COP', description: 'Captación, conducción, PTAP básica y red de distribución conforme a RAS 2017' },
           { name: 'Acueducto urbanización o parcelación (20–200 viviendas)', minPrice: 18000000, maxPrice: 40000000, priceCurrency: 'COP', description: 'Diseño completo con PTAP, bombeo, red de distribución y memorias para licencia' },
           { name: 'Acueducto municipal con formulación SGR (MGA-Web)', minPrice: 35000000, maxPrice: 80000000, priceCurrency: 'COP', description: 'Diseño firmado COPNIA + formulación en MGA-Web DNP para presentación ante OCAD' },
@@ -259,6 +260,17 @@ export default function ServicioDisenoAcueductos() {
             <Btn variant="outline" href="/servicios" dark>
               Ver todos los servicios
             </Btn>
+          </div>
+          <div style={{ marginTop: 20 }}>
+            <span style={{
+              display: 'inline-flex', alignItems: 'center', gap: 6,
+              background: 'rgba(34,197,94,0.12)', border: '1px solid rgba(34,197,94,0.35)',
+              borderRadius: 100, padding: '7px 16px',
+              fontFamily: "'Montserrat', sans-serif", fontWeight: 700,
+              color: '#4ADE80', fontSize: 13,
+            }}>
+              ✓ Desde $6.000.000 COP
+            </span>
           </div>
         </div>
       </section>

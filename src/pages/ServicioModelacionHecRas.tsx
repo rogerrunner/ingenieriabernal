@@ -142,6 +142,7 @@ export default function ServicioModelacionHecRas() {
         serviceUrl="/servicios/modelacion-hec-ras"
         faqItems={FAQ_HECRAS}
         priceSpecification={[
+          { name: 'Análisis hidrológico soporte HEC-RAS — cuenca pequeña', minPrice: 4500000, maxPrice: 8000000, priceCurrency: 'COP', description: 'HEC-HMS, curvas IDF, caudales de diseño para modelación hidráulica básica' },
           { name: 'Modelación HEC-RAS 1D — estudio básico (2–5 km cauce)', minPrice: 8000000, maxPrice: 20000000, priceCurrency: 'COP', description: 'Para POT/EOT municipales o licencias urbanísticas simples; incluye análisis hidrológico HEC-HMS y mapa de amenaza' },
           { name: 'Modelación HEC-RAS 2D — plan parcial o cuenca media', minPrice: 20000000, maxPrice: 40000000, priceCurrency: 'COP', description: 'Malla computacional 2D, mancha de inundación georeferenciada, cartografía SIG, informe MVCT y firma COPNIA' },
           { name: 'Modelación HEC-RAS 2D — gran proyecto o POMCA', minPrice: 40000000, maxPrice: 80000000, priceCurrency: 'COP', description: 'Cuencas complejas, múltiples cauces, calibración completa con eventos históricos' },
@@ -185,6 +186,17 @@ export default function ServicioModelacionHecRas() {
             <Btn variant="outline" href="/servicios" dark>
               Ver todos los servicios
             </Btn>
+          </div>
+          <div style={{ marginTop: 20 }}>
+            <span style={{
+              display: 'inline-flex', alignItems: 'center', gap: 6,
+              background: 'rgba(34,197,94,0.12)', border: '1px solid rgba(34,197,94,0.35)',
+              borderRadius: 100, padding: '7px 16px',
+              fontFamily: "'Montserrat', sans-serif", fontWeight: 700,
+              color: '#4ADE80', fontSize: 13,
+            }}>
+              ✓ Desde $4.500.000 COP
+            </span>
           </div>
         </div>
       </section>

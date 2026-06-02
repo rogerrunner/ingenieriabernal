@@ -1,6 +1,7 @@
 import { useEffect } from 'react'
 import SEOHead from '@/components/SEOHead'
 import SpeakableSchema from '@/components/SpeakableSchema'
+import SchemaMarkup from '@/components/SchemaMarkup'
 import { BlueprintBg, SectionLabel, Btn, Section, Tag } from '@/components/ui'
 
 const WA = '573024778910'
@@ -156,6 +157,16 @@ export default function DisenoCanalesRiego() {
     <>
       <SEOHead config={seoConfig} />
       <SpeakableSchema name="Diseño de Canales de Riego en Colombia — Ingeniería Hidráulica | BIC" />
+      <SchemaMarkup
+        type="service"
+        serviceName="Diseño de Canales de Riego y Conducción Hidráulica en Colombia"
+        serviceDesc={seoConfig.description}
+        serviceUrl="/diseno-canal-riego-colombia"
+        faqItems={FAQ}
+        priceSpecification={[
+          { name: 'Diseño canal de riego / conducción (proyecto básico)', minPrice: 9000000, maxPrice: 25000000, priceCurrency: 'COP', description: 'Sección hidráulica, obras de arte, memoria de cálculo firmada COPNIA — listo para SGR y licitar' },
+        ]}
+      />
 
       {/* ── HERO ── */}
       <section style={{
@@ -181,9 +192,20 @@ export default function DisenoCanalesRiego() {
             hidráulica óptima, diseño de todas las obras de arte (caídas, sifones, aforadores, compuertas)
             y memoria de cálculo firmada por especialista COPNIA. Listo para licitar, financiar con SGR y construir.
           </p>
-          <div style={{ display: 'flex', gap: 12, flexWrap: 'wrap', marginBottom: 28 }}>
+          <div style={{ display: 'flex', gap: 12, flexWrap: 'wrap', marginBottom: 16 }}>
             <Btn href={`https://wa.me/${WA}?text=${WA_MSG}`}>📱 Cotizar diseño de canal</Btn>
             <Btn variant="outline" href="/obras-hidraulicas-colombia" dark>Ver todas las obras hidráulicas</Btn>
+          </div>
+          <div style={{ marginBottom: 16 }}>
+            <span style={{
+              display: 'inline-flex', alignItems: 'center', gap: 6,
+              background: 'rgba(34,197,94,0.12)', border: '1px solid rgba(34,197,94,0.35)',
+              borderRadius: 100, padding: '7px 16px',
+              fontFamily: "'Montserrat', sans-serif", fontWeight: 700,
+              color: '#4ADE80', fontSize: 13,
+            }}>
+              ✓ Desde $9.000.000 COP
+            </span>
           </div>
           <div style={{ display: 'flex', gap: 8, flexWrap: 'wrap' }}>
             {['Riego agrícola','Conducción agua potable','Drenaje urbano','Obras de arte','RAS 2017','COPNIA'].map(t => (
