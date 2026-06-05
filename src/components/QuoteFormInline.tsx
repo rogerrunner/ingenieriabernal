@@ -26,11 +26,38 @@ const REGIONS = [
   'Bucaramanga / Santander',
   'Barranquilla / Costa Caribe',
   'Otra región de Colombia',
+  'Latinoamérica (fuera de Colombia)',
+]
+
+const ROLES = [
+  { value: 'propietario', label: 'Propietario del terreno o predio' },
+  { value: 'promotor', label: 'Promotor / urbanizador / desarrollador inmobiliario' },
+  { value: 'empresa', label: 'Empresa o empresario (industria, comercio, agroindustria)' },
+  { value: 'gobierno', label: 'Alcaldía, gobernación o entidad pública' },
+  { value: 'constructor', label: 'Constructora o firma de arquitectura' },
+  { value: 'otro', label: 'Otro (descríbalo en el mensaje)' },
+]
+
+const STAGES = [
+  { value: 'idea', label: 'Tengo el terreno / predio, estoy evaluando el proyecto' },
+  { value: 'licencia', label: 'Estoy tramitando licencia o permiso CAR' },
+  { value: 'diseno', label: 'Tengo el proyecto aprobado y necesito los diseños' },
+  { value: 'licitacion', label: 'Tengo presupuesto y necesito contratar ya' },
+  { value: 'obra', label: 'Estoy en ejecución y necesito interventoría o ajuste' },
+]
+
+const BUDGETS = [
+  { value: 'menos50', label: 'Menos de $50 millones COP' },
+  { value: '50a200', label: '$50 millones – $200 millones COP' },
+  { value: '200a1000', label: '$200 millones – $1.000 millones COP' },
+  { value: 'mas1000', label: 'Más de $1.000 millones COP' },
+  { value: 'nodefinido', label: 'Presupuesto por definir' },
 ]
 
 export default function QuoteFormInline({ serviceId }: { serviceId?: string }) {
   const [form, setForm] = useState({
-    name: '', email: '', phone: '', region: '', service: serviceId || '', description: '',
+    name: '', email: '', phone: '', region: '', service: serviceId || '',
+    role: '', stage: '', budget: '', description: '',
   })
   const [sent, setSent] = useState(false)
   const [errors, setErrors] = useState<Record<string, string>>({})
@@ -42,6 +69,8 @@ export default function QuoteFormInline({ serviceId }: { serviceId?: string }) {
     if (!form.name.trim()) e.name = 'Requerido'
     if (!form.email.trim() || !/\S+@\S+\.\S+/.test(form.email)) e.email = 'Email inválido'
     if (!form.service) e.service = 'Seleccione un servicio'
+    
+    
     return e
   }
 
@@ -51,10 +80,16 @@ export default function QuoteFormInline({ serviceId }: { serviceId?: string }) {
     if (Object.keys(errs).length) { setErrors(errs); return }
     setErrors({})
     const svc = selectedService ? selectedService.label : form.service
+    const roleLabel = ROLES.find(r => r.value === form.role)?.label || form.role
+    const stageLabel = STAGES.find(s => s.value === form.stage)?.label || form.stage
+    const budgetLabel = BUDGETS.find(b => b.value === form.budget)?.label || 'no indicado'
     const msg = encodeURIComponent(
       `Hola, soy ${form.name}.\n` +
+      `👤 Rol: ${roleLabel}\n` +
       `📍 Región: ${form.region || 'no indicada'}\n` +
       `🔧 Servicio: ${svc}${selectedService?.price ? ' (' + selectedService.price + ')' : ''}\n` +
+      `📌 Etapa del proyecto: ${stageLabel}\n` +
+      `💰 Presupuesto aprox.: ${budgetLabel}\n` +
       `📧 Email: ${form.email}\n` +
       `📞 Tel: ${form.phone || 'no indicado'}\n` +
       `📝 Proyecto: ${form.description || 'sin detalle adicional'}`
@@ -73,6 +108,7 @@ export default function QuoteFormInline({ serviceId }: { serviceId?: string }) {
     display: 'block', fontFamily: "'Montserrat', sans-serif", fontWeight: 700,
     fontSize: 11.5, color: '#003B6F', marginBottom: 5, textTransform: 'uppercase', letterSpacing: '0.04em',
   }
+  const errStyle: React.CSSProperties = { color: '#e53e3e', fontSize: 11 }
 
   return (
     <div style={{
@@ -80,16 +116,29 @@ export default function QuoteFormInline({ serviceId }: { serviceId?: string }) {
       border: '2px solid #B8DDEF', borderRadius: 16, padding: '2rem',
       marginTop: '2.5rem', marginBottom: '1rem',
     }}>
-      <div style={{ display: 'flex', alignItems: 'center', gap: 12, marginBottom: '1.5rem' }}>
+      <div style={{ display: 'flex', alignItems: 'center', gap: 12, marginBottom: '1rem' }}>
         <div style={{ width: 44, height: 44, borderRadius: '50%', background: '#003B6F', display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: 20, flexShrink: 0 }}>📋</div>
         <div>
           <h3 style={{ fontFamily: "'Montserrat', sans-serif", fontWeight: 800, color: '#003B6F', fontSize: '1.05rem', margin: 0 }}>
-            Solicitar cotización — BIC Bernal Ingeniería
+            Solicitar propuesta técnica — BIC Bernal Ingeniería
           </h3>
           <p style={{ color: '#5a7f99', fontSize: 12.5, margin: '3px 0 0', fontFamily: "'Lato', sans-serif" }}>
-            Primera consulta sin costo · Respuesta en &lt; 24 horas hábiles · WhatsApp + correo
+            Primera consulta sin costo · Respuesta en &lt; 24 horas · WhatsApp + correo
           </p>
         </div>
+      </div>
+
+      {/* Anti-intermediary notice */}
+      <div style={{
+        background: '#FFF8E1', border: '1px solid #FFD54F', borderRadius: 8,
+        padding: '10px 14px', marginBottom: '1.25rem', display: 'flex', gap: 10, alignItems: 'flex-start',
+      }}>
+        <span style={{ fontSize: 16, flexShrink: 0 }}>ℹ️</span>
+        <p style={{ fontFamily: "'Lato', sans-serif", fontSize: 12.5, color: '#5a4000', margin: 0, lineHeight: 1.5 }}>
+          <strong>Trabajamos directo con el propietario del proyecto</strong>, el promotor, la empresa o la entidad contratante.
+          No cotizamos a revendedores ni firmas que subcontratan a terceros.
+          Si usted es el cliente final, esta es su consultoría.
+        </p>
       </div>
 
       {/* Pricing table */}
@@ -118,6 +167,7 @@ export default function QuoteFormInline({ serviceId }: { serviceId?: string }) {
 
       {!sent ? (
         <form onSubmit={handleSubmit}>
+          {/* Row 1: name + email */}
           <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '1rem', marginBottom: '1rem' }}>
             <div>
               <label style={lbl}>Nombre y apellido *</label>
@@ -127,7 +177,7 @@ export default function QuoteFormInline({ serviceId }: { serviceId?: string }) {
                 onFocus={e => { e.currentTarget.style.borderColor = '#17A2B8' }}
                 onBlur={e => { e.currentTarget.style.borderColor = errors.name ? '#e53e3e' : '#D0E8F2' }}
               />
-              {errors.name && <span style={{ color: '#e53e3e', fontSize: 11 }}>{errors.name}</span>}
+              {errors.name && <span style={errStyle}>{errors.name}</span>}
             </div>
             <div>
               <label style={lbl}>Correo electrónico *</label>
@@ -137,8 +187,53 @@ export default function QuoteFormInline({ serviceId }: { serviceId?: string }) {
                 onFocus={e => { e.currentTarget.style.borderColor = '#17A2B8' }}
                 onBlur={e => { e.currentTarget.style.borderColor = errors.email ? '#e53e3e' : '#D0E8F2' }}
               />
-              {errors.email && <span style={{ color: '#e53e3e', fontSize: 11 }}>{errors.email}</span>}
+              {errors.email && <span style={errStyle}>{errors.email}</span>}
             </div>
+          </div>
+
+          {/* Row 2: role (full width) */}
+          <div style={{ marginBottom: '1rem' }}>
+            <label style={lbl}>¿Cuál es su rol en el proyecto? *</label>
+            <select style={{ ...inp, background: '#fff', borderColor: '#D0E8F2' }}
+              value={form.role} onChange={e => setForm(f => ({ ...f, role: e.target.value }))}
+              onFocus={e => { e.currentTarget.style.borderColor = '#17A2B8' }}
+              onBlur={e => { e.currentTarget.style.borderColor = '#D0E8F2' }}
+            >
+              <option value="">Seleccione su rol…</option>
+              {ROLES.map(r => <option key={r.value} value={r.value}>{r.label}</option>)}
+            </select>
+
+          </div>
+
+          {/* Row 3: stage + budget */}
+          <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '1rem', marginBottom: '1rem' }}>
+            <div>
+              <label style={lbl}>Etapa del proyecto *</label>
+              <select style={{ ...inp, background: '#fff', borderColor: '#D0E8F2' }}
+                value={form.stage} onChange={e => setForm(f => ({ ...f, stage: e.target.value }))}
+                onFocus={e => { e.currentTarget.style.borderColor = '#17A2B8' }}
+                onBlur={e => { e.currentTarget.style.borderColor = '#D0E8F2' }}
+              >
+                <option value="">Seleccione etapa…</option>
+                {STAGES.map(s => <option key={s.value} value={s.value}>{s.label}</option>)}
+              </select>
+  
+            </div>
+            <div>
+              <label style={lbl}>Presupuesto aprox. del proyecto</label>
+              <select style={{ ...inp, background: '#fff' }}
+                value={form.budget} onChange={e => setForm(f => ({ ...f, budget: e.target.value }))}
+                onFocus={e => { e.currentTarget.style.borderColor = '#17A2B8' }}
+                onBlur={e => { e.currentTarget.style.borderColor = '#D0E8F2' }}
+              >
+                <option value="">Seleccione rango…</option>
+                {BUDGETS.map(b => <option key={b.value} value={b.value}>{b.label}</option>)}
+              </select>
+            </div>
+          </div>
+
+          {/* Row 4: phone + region */}
+          <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '1rem', marginBottom: '1rem' }}>
             <div>
               <label style={lbl}>Teléfono / WhatsApp</label>
               <input style={inp} placeholder="+57 300 000 0000" type="tel"
@@ -160,6 +255,7 @@ export default function QuoteFormInline({ serviceId }: { serviceId?: string }) {
             </div>
           </div>
 
+          {/* Service */}
           <div style={{ marginBottom: '1rem' }}>
             <label style={lbl}>Servicio requerido *</label>
             <select style={{ ...inp, borderColor: errors.service ? '#e53e3e' : '#D0E8F2', background: '#fff' }}
@@ -172,7 +268,7 @@ export default function QuoteFormInline({ serviceId }: { serviceId?: string }) {
                 <option key={s.id} value={s.id}>{s.label}{s.price ? ' — ' + s.price : ''}</option>
               ))}
             </select>
-            {errors.service && <span style={{ color: '#e53e3e', fontSize: 11 }}>{errors.service}</span>}
+            {errors.service && <span style={errStyle}>{errors.service}</span>}
             {selectedService?.detail && (
               <p style={{ color: '#17A2B8', fontSize: 12, margin: '5px 0 0', fontFamily: "'Lato', sans-serif" }}>
                 ℹ️ {selectedService.detail}
@@ -180,6 +276,7 @@ export default function QuoteFormInline({ serviceId }: { serviceId?: string }) {
             )}
           </div>
 
+          {/* Description */}
           <div style={{ marginBottom: '1.25rem' }}>
             <label style={lbl}>Descripción del proyecto</label>
             <textarea style={{ ...inp, resize: 'vertical', minHeight: 80 } as React.CSSProperties}
@@ -216,7 +313,7 @@ export default function QuoteFormInline({ serviceId }: { serviceId?: string }) {
         <div style={{ textAlign: 'center', padding: '2rem 0' }}>
           <div style={{ fontSize: '3rem', marginBottom: 12 }}>✅</div>
           <p style={{ fontFamily: "'Montserrat', sans-serif", fontWeight: 800, color: '#003B6F', fontSize: '1.1rem', margin: '0 0 8px' }}>
-            ¡Cotización enviada!
+            ¡Propuesta enviada!
           </p>
           <p style={{ color: '#5a7f99', fontSize: 14, margin: 0 }}>
             Abra WhatsApp y le responderemos en menos de 24 horas hábiles.<br />

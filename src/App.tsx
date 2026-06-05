@@ -72,6 +72,7 @@ const BocatomasColombia = lazy(() => import('./pages/BocatomasColombia'))
 const DisenoCanalesRiego = lazy(() => import('./pages/DisenoCanalesRiego'))
 const EncauzamientoRios = lazy(() => import('./pages/EncauzamientoRios'))
 const PlanParcialColombia = lazy(() => import('./pages/PlanParcialColombia'))
+const PromotorUrbanizacionColombia = lazy(() => import('./pages/PromotorUrbanizacionColombia'))
 const IngenieriaHidraulicaManizales = lazy(() => import('./pages/IngenieriaHidraulicaManizales'))
 const IngenieroHidraulicoManizales = lazy(() => import('./pages/IngenieroHidraulicoManizales'))
 const LandingManizales = lazy(() => import('./pages/LandingManizales'))
@@ -286,6 +287,7 @@ export default function App() {
           <Route path="/diseno-canal-riego-colombia" component={DisenoCanalesRiego} />
           <Route path="/encauzamiento-rios-colombia" component={EncauzamientoRios} />
           <Route path="/plan-parcial-colombia" component={PlanParcialColombia} />
+          <Route path="/promotor-urbanizacion-colombia" component={PromotorUrbanizacionColombia} />
           <Route path="/ingenieria-hidraulica-manizales" component={IngenieriaHidraulicaManizales} />
           <Route path="/estudios-torrencialidad-colombia" component={EstudiosTorrencialidad} />
           <Route path="/construir-cerca-rio-quebrada-colombia" component={ConstruirCercaRioQuebrada} />
