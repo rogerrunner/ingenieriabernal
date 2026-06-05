@@ -6,11 +6,11 @@ import { BlueprintBg, ThinLine, SectionLabel, Btn, Section, Tag, CTABanner } fro
 import QuoteFormInline from '@/components/QuoteFormInline'
 
 const WA = '573024778910'
-const WA_MSG = encodeURIComponent('Hola, necesito cotizar el diseño de una PTAP en Colombia. ¿Pueden ayudarme?')
+const WA_MSG = encodeURIComponent('Hola, necesito asesoría técnica para el diseño de una PTAP (estudio técnico / consultoría). ¿Pueden orientarme?')
 
 const seoConfig = {
-  title: 'Diseño de PTAP para tu Proyecto — Municipio, Vereda o Urbanización | Contrata BIC',
-  description: '¿Necesitas diseñar tu planta de tratamiento de agua potable? BIC la diseña: captación, coagulación, filtración y desinfección. RAS 2017, Res. 0330. Firma COPNIA. Para municipios, regalías SGR y proyectos privados. Propuesta sin costo.',
+  title: 'Consultoría para Diseño de PTAP en Colombia — Asesoría Técnica | BIC',
+  description: 'Asesoría técnica especializada para diseño de PTAP en Colombia. Estudios de conceptualización, memorias de cálculo COPNIA, gestión ante Res. 0330 y regalías SGR. Dirigido a entes territoriales, operadores de SPD y promotores de infraestructura.',
   keywords: [
     'diseño PTAP Colombia',
     'planta tratamiento agua potable Colombia',

@@ -104,10 +104,10 @@ function StatCounter({ value, suffix, label }: { value: number, suffix: string, 
 
 export default function Home() {
   useEffect(() => {
-    document.title = 'BIC Ingeniería Hidráulica Colombia | Acueductos · HEC-RAS 2D · PTAR'
+    document.title = 'BIC | Consultoría Hidráulica Colombia — HEC-RAS 2D · Hidrología · Riesgo Hídrico'
     const meta = document.querySelector('meta[name="description"]')
     if (meta) meta.setAttribute('content',
-      'Ingeniería hidráulica y ambiental en todo Colombia. Diseño de acueductos, modelación HEC-RAS 2D, PTAR/PTAP, gestión del riesgo y sistemas contra incendios. COPNIA. Cotización en 24 h.'
+      'Consultoría hidráulica especializada en Colombia. Estudios hidrológicos, modelación HEC-RAS 2D, gestión del riesgo hídrico y diseño de acueductos para proyectos municipales, viales y urbanísticos. COPNIA.'
     )
     let canonical = document.querySelector("link[rel='canonical']")
     if (!canonical) {

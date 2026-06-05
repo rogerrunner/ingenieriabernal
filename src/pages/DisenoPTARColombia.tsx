@@ -6,11 +6,11 @@ import { BlueprintBg, ThinLine, SectionLabel, Btn, Section, Tag, CTABanner } fro
 import QuoteFormInline from '@/components/QuoteFormInline'
 
 const WA = '573024778910'
-const WA_MSG = encodeURIComponent('Hola, necesito cotizar el diseño de una PTAR en Colombia. ¿Pueden ayudarme?')
+const WA_MSG = encodeURIComponent('Hola, necesito asesoría técnica para el diseño de una PTAR (estudio técnico / consultoría). ¿Pueden orientarme?')
 
 const seoConfig = {
-  title: 'Diseño de PTAR para tu Proyecto Industrial, Urbanización o Municipio | BIC Colombia',
-  description: '¿Necesitas diseñar tu planta de tratamiento de aguas residuales? BIC entrega el proyecto completo: memorias COPNIA, permisos CAR, RAS 2017. Para industrias, constructoras y entes territoriales. Propuesta sin costo.',
+  title: 'Consultoría para Diseño de PTAR en Colombia — Asesoría Técnica | BIC',
+  description: 'Asesoría técnica especializada para diseño de PTAR en Colombia. Estudios de conceptualización, memorias de cálculo COPNIA, gestión de permisos CAR. Dirigido a entes territoriales, operadores de SPD y promotores de grandes proyectos.',
   keywords: [
     'diseño PTAR Colombia',
     'diseño PTAP Colombia',
