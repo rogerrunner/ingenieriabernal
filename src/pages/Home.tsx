@@ -46,12 +46,12 @@ const PORTFOLIO_GALLERY = [
     alt: 'Mapa de inundación profundidad TR100 vista aérea Colombia BIC',
   },
   {
-    img: '/img/proyectos/gbp_expert/p06_modelo_3d_hec_ras_santa_rosa.jpeg',
-    title: 'Modelo 3D HEC-RAS 2D — Llanura de inundación',
-    location: 'Santa Rosa de Cabal, Risaralda',
-    type: 'Modelación HEC-RAS 2D · Gestión del Riesgo · Decreto 1807',
-    year: '2022',
-    alt: 'Modelo 3D HEC-RAS 2D llanura inundación Santa Rosa de Cabal Risaralda BIC',
+    img: '/img/proyectos/gbp_expert/09_inspeccion_canales_hidraulicos_campo.jpeg',
+    title: 'Inspección hidráulica en campo',
+    location: 'Eje Cafetero, Colombia',
+    type: 'Estudios Hidrológicos · Inspección de campo',
+    year: '2021',
+    alt: 'Inspección hidráulica quebrada Colombia puente BIC ingeniería',
   },
 ]
 
@@ -105,10 +105,10 @@ function StatCounter({ value, suffix, label }: { value: number, suffix: string, 
 
 export default function Home() {
   useEffect(() => {
-    document.title = 'BIC Ingeniería Hidráulica Colombia | Gestión del Riesgo · HEC-RAS 2D · Acueductos · Distritos de Riego'
+    document.title = 'BIC | Consultoría Hidráulica Colombia — HEC-RAS 2D · Hidrología · Riesgo Hídrico'
     const meta = document.querySelector('meta[name="description"]')
     if (meta) meta.setAttribute('content',
-      'Consultoría en ingeniería hidráulica en Colombia: modelación de inundaciones HEC-RAS 2D, estudios detallados Decreto 1807, diseño de acueductos veredales e industriales, distritos de riego, PTAP, PTAR, modelación hidrológica y alcantarillados. COPNIA 17202-313228 CLD. Propuesta en 24 h.'
+      'Consultoría hidráulica especializada en Colombia. Estudios hidrológicos, modelación HEC-RAS 2D, gestión del riesgo hídrico y diseño de acueductos para proyectos municipales, viales y urbanísticos. COPNIA.'
     )
     let canonical = document.querySelector("link[rel='canonical']")
     if (!canonical) {
@@ -136,7 +136,7 @@ export default function Home() {
             <span style={{ color: '#17A2B8' }}>| BIC — Bernal Ingeniería Consultores</span>
           </h1>
           <p style={{ color: 'rgba(255,255,255,0.75)', fontSize: 17, maxWidth: 640, lineHeight: 1.8, marginBottom: 16 }}>
-            Consultoría especializada en modelación de inundaciones HEC-RAS 2D, estudios de gestión del riesgo hídrico (Decreto 1807), diseño de acueductos veredales e industriales, distritos de riego, PTAP, PTAR, modelación hidrológica y alcantarillados. +10 años de experiencia verificable. Manizales, Eje Cafetero y todo Colombia.
+            Estudios hidrológicos, diseño de acueductos, modelación HEC-RAS 2D e interventoría técnica. +10 años de experiencia verificable. Manizales, Eje Cafetero y todo Colombia.
           </p>
 
           {/* 3 diferenciadores únicos */}
