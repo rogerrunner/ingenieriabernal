@@ -23,6 +23,7 @@ import articlesS from '../data/articlesS'
 import articlesT from '../data/articlesT'
 import articlesU from '../data/articlesU'
 import articlesV from '../data/articlesV'
+import articlesW from '../data/articlesW'
 import SEOHead from '../components/SEOHead'
 import { BlueprintBg, Tag, ThinLine, SectionLabel, Btn, Section } from '../components/ui'
 import { SEOConfig } from '../lib/seo'
@@ -346,11 +347,16 @@ const ARTICLES: Record<string, {
   ...articlesT,
   ...articlesU,
   ...articlesV,
+  ...articlesW,
 }
 
 // ─── SERVICE LINKS PER ARTICLE ──────────────────────────────────────────────
 const SERVICE_LINKS: Record<string, { label: string; href: string }> = {
-  'inundaciones-eje-cafetero-riesgo-hidrico-que-hacer': { label: 'Gestión del Riesgo Hídrico — Decreto 1807', href: '/gestion-riesgo-hidrico' },
+  'cuanto-cuesta-estudio-riesgo-inundacion-colombia': { label: 'Estudio de Riesgo por Inundación — Decreto 1807', href: '/gestion-riesgo-hidrico' },
+  'que-estudios-pide-la-car-para-construir-cerca-rio-colombia': { label: 'Estudios requeridos por la CAR', href: '/me-pidieron-estudios-en-la-car' },
+  'componente-hidrico-plan-parcial-colombia-guia': { label: 'Plan Parcial — Componente Hídrico', href: '/plan-parcial-colombia' },
+  'como-conseguir-contratos-ingenieria-hidraulica-municipios-colombia': { label: 'Consultoría para Municipios y SGR', href: '/consultoria-municipios-sgr' },
+    'inundaciones-eje-cafetero-riesgo-hidrico-que-hacer': { label: 'Gestión del Riesgo Hídrico — Decreto 1807', href: '/gestion-riesgo-hidrico' },
   'suds-sistemas-drenaje-sostenible-colombia':       { label: 'Estudios Hidrológicos e Hidráulicos',    href: '/servicios/estudios-hidrologicos' },
   'cambios-normativos-ingenieria-hidraulica-2026':   { label: 'Ver todos nuestros servicios',           href: '/servicios' },
   'costos-obras-hidraulicas-colombia-2026':          { label: 'Ver todos nuestros servicios',           href: '/servicios' },
