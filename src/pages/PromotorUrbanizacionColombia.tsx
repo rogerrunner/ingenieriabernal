@@ -132,20 +132,7 @@ export default function PromotorUrbanizacionColombia() {
         </section>
       </BlueprintBg>
 
-      {/* Anti-intermediary */}
-      <Section bg="white">
-        <div style={{ maxWidth: 780, margin: '0 auto', background: '#FFF8E1', border: '1px solid #FFD54F', borderRadius: 12, padding: '1.25rem 1.5rem', display: 'flex', gap: 14, alignItems: 'flex-start' }}>
-          <span style={{ fontSize: 22, flexShrink: 0 }}>ℹ️</span>
-          <div>
-            <p style={{ fontFamily: "'Montserrat', sans-serif", fontWeight: 800, color: '#5a4000', fontSize: 14, margin: '0 0 4px' }}>
-              Trabajamos directo con el promotor o propietario del proyecto
-            </p>
-            <p style={{ fontFamily: "'Lato', sans-serif", color: '#7a6000', fontSize: 13.5, margin: 0, lineHeight: 1.6 }}>
-              No cotizamos a revendedores ni firmas intermediarias que subcontratan los estudios. Si usted es el desarrollador, la constructora o el propietario del terreno, esta es su consultoría. El director del proyecto lo atiende directamente.
-            </p>
-          </div>
-        </div>
-      </Section>
+
 
       {/* Servicios */}
       <Section id="propuesta" bg="light">

@@ -128,16 +128,15 @@ export default function QuoteFormInline({ serviceId }: { serviceId?: string }) {
         </div>
       </div>
 
-      {/* Anti-intermediary notice */}
+      {/* Director direct access trust signal */}
       <div style={{
-        background: '#FFF8E1', border: '1px solid #FFD54F', borderRadius: 8,
-        padding: '10px 14px', marginBottom: '1.25rem', display: 'flex', gap: 10, alignItems: 'flex-start',
+        background: '#EBF5F9', border: '1px solid #B8DDEF', borderRadius: 8,
+        padding: '10px 14px', marginBottom: '1.25rem', display: 'flex', gap: 10, alignItems: 'center',
       }}>
-        <span style={{ fontSize: 16, flexShrink: 0 }}>ℹ️</span>
-        <p style={{ fontFamily: "'Lato', sans-serif", fontSize: 12.5, color: '#5a4000', margin: 0, lineHeight: 1.5 }}>
-          <strong>Trabajamos directo con el propietario del proyecto</strong>, el promotor, la empresa o la entidad contratante.
-          No cotizamos a revendedores ni firmas que subcontratan a terceros.
-          Si usted es el cliente final, esta es su consultoría.
+        <span style={{ fontSize: 18, flexShrink: 0 }}>👤</span>
+        <p style={{ fontFamily: "'Lato', sans-serif", fontSize: 12.5, color: '#1e3a52', margin: 0, lineHeight: 1.5 }}>
+          <strong>Habla directamente con el Ing. Rogerio Bernal</strong>, director del proyecto — no con coordinadores ni asesores comerciales.
+          Respuesta en &lt; 24 horas hábiles.
         </p>
       </div>
 
