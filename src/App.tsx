@@ -93,6 +93,7 @@ const ConcesionAguasColombia = lazy(() => import('./pages/ConcesionAguasColombia
 const DisenoPTAPColombia = lazy(() => import('./pages/DisenoPTAPColombia'))
 const DisenoAlcantarilladoColombia = lazy(() => import('./pages/DisenoAlcantarilladoColombia'))
 const PomcaColombia = lazy(() => import('./pages/PomcaColombia'))
+const PlanesMaestrosAcueductoColombia = lazy(() => import('./pages/PlanesMaestrosAcueductoColombia'))
 const CalculadoraHidraulica = lazy(() => import('./pages/CalculadoraHidraulica'))
 const ServicioModelacionHidraulicaPutumayo = lazy(() => import('./pages/ServicioModelacionHidraulicaPutumayo'))
 const ServicioAcueductoQuindio = lazy(() => import('./pages/ServicioAcueductoQuindio'))
@@ -307,6 +308,7 @@ export default function App() {
           <Route path="/diseno-ptap-colombia" component={DisenoPTAPColombia} />
           <Route path="/diseno-alcantarillado-colombia" component={DisenoAlcantarilladoColombia} />
           <Route path="/pomca-colombia" component={PomcaColombia} />
+          <Route path="/planes-maestros-acueducto-alcantarillado-colombia" component={PlanesMaestrosAcueductoColombia} />
 
           {/* ── LANDING PAGES DE SERVICIOS INDIVIDUALES ── */}
           <Route path="/servicios/estudio-inundabilidad-manizales" component={EstudioInundabilidadManizales} />
