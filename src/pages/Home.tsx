@@ -56,21 +56,22 @@ const PORTFOLIO_GALLERY = [
 ]
 
 const DIFFERENTIATORS = [
-  { icon: '🔥', title: 'CI NSR-10 Exclusivo', desc: 'Diseño de sistemas contra incendios — rociadores, red húmeda/seca, detección. Especialidad exclusiva BIC en el Eje Cafetero.' },
-  { icon: '📋', title: 'Regalías MGA-Web', desc: 'Formulación de proyectos de agua y saneamiento para el SGR. Contratos ejecutados en Caldas y Boyacá.' },
-  { icon: '🌎', title: 'Internacional / BID-CAF', desc: 'Proyectos en Ecuador y México con Apostille. TOEFL 98/120. Acceso a licitaciones multilaterales.' },
+  { icon: '🌊', title: 'Modelación HEC-RAS 2D', desc: 'Inundaciones, torrencialidad y gestión del riesgo hídrico. Estudios Decreto 1807 para licencias de urbanismo y planes parciales.' },
+  { icon: '🔧', title: 'Acueductos Veredales e Industriales', desc: 'Diseño de sistemas de abastecimiento para comunidades rurales, parcelaciones, municipios e industria. Res. 0330/2017.' },
+  { icon: '🌱', title: 'Distritos de Riego y Canales', desc: 'Diseño hidráulico de canales de riego, bocatomas y estructuras de distribución para proyectos agropecuarios.' },
 ]
 
 const SERVICES_PREVIEW = [
-  { icon: '💧', title: 'Hidrosanitario y CI', desc: 'NSR-10 J/K · NTC 1500/1669/2301', href: '/servicios/redes-hidrosanitarias' },
-  { icon: '🌊', title: 'Modelación HEC-RAS 2D', desc: 'Inundaciones · Torrencialidad · Riesgo', href: '/servicios/modelacion-hec-ras' },
-  { icon: '🔧', title: 'Acueducto y Alcantarillado', desc: 'Res. 0330/2017 · EPANET · RAS 2017', href: '/servicios/diseno-acueductos' },
-  { icon: '⚠️', title: 'Gestión del Riesgo / POT', desc: 'Decreto 1807/2014 · ArcGIS · POMCA', href: '/gestion-riesgo-hidrico' },
-  { icon: '🏭', title: 'PTAP y PTAR', desc: 'Plantas tratamiento agua potable y residual', href: '/servicios/diseno-acueductos' },
-  { icon: '📐', title: 'Topobatimetría', desc: 'Levantamientos · MDT · Secciones HEC-RAS', href: '/servicios' },
-  { icon: '📋', title: 'Regalías MGA-Web', desc: 'Formulación SGR · Municipios · Agua', href: '/servicios/regalias-mga' },
-  { icon: '🌿', title: 'Ingeniería Ambiental', desc: 'CAR · CORPOCALDAS · CARDER · EIA', href: '/servicios/ambiental' },
-  { icon: '🏗️', title: 'Residencia e Interventoría', desc: 'Supervisión técnica obras hidráulicas', href: '/servicios/interventoria' },
+  // Ordenado por demanda real GSC (clics + impresiones)
+  { icon: '♻️', title: 'PTAR — Aguas Residuales', desc: 'Diseño plantas tratamiento industrial y municipal · #1 en búsquedas', href: '/diseno-ptar-colombia' },
+  { icon: '🔧', title: 'Diseño de Acueductos', desc: 'Veredales · Industriales · Res. 0330/2017 · EPANET', href: '/servicios/diseno-acueductos' },
+  { icon: '🔥', title: 'Sistemas CI / NSR-10', desc: 'Rociadores · Red húmeda/seca · Detección · Capítulo J/K', href: '/servicios/contra-incendios-nsr10' },
+  { icon: '💧', title: 'Redes Hidrosanitarias', desc: 'NTC 1500/1669/2301 · Memorias de cálculo · Residencial/Industrial', href: '/servicios/redes-hidrosanitarias' },
+  { icon: '🌧️', title: 'Diseño de Alcantarillados', desc: 'Sanitario · Pluvial · SewerGEMs · RAS 2017 Título D', href: '/diseno-alcantarillado-colombia' },
+  { icon: '🌊', title: 'Modelación Hidráulica', desc: 'HEC-RAS 2D · HEC-18 · Socavación · Torrencialidad', href: '/servicios/modelacion-hec-ras' },
+  { icon: '⚠️', title: 'Gestión del Riesgo Hídrico', desc: 'Decreto 1807/2014 · Estudios detallados · POT', href: '/gestion-riesgo-hidrico' },
+  { icon: '🏭', title: 'PTAP — Agua Potable', desc: 'Plantas tratamiento potabilización municipal y rural', href: '/diseno-ptap-colombia' },
+  { icon: '📊', title: 'Modelación Hidrológica', desc: 'HEC-HMS · TETIS v9 · Caudales de diseño · TR 2-500 años', href: '/modelacion-hidrologica-colombia' },
 ]
 
 const CLIENTS = [
@@ -104,10 +105,10 @@ function StatCounter({ value, suffix, label }: { value: number, suffix: string, 
 
 export default function Home() {
   useEffect(() => {
-    document.title = 'BIC Ingeniería Hidráulica Colombia | Acueductos · HEC-RAS 2D · PTAR'
+    document.title = 'BIC Ingeniería Hidráulica Colombia | Gestión del Riesgo · HEC-RAS 2D · Acueductos · Distritos de Riego'
     const meta = document.querySelector('meta[name="description"]')
     if (meta) meta.setAttribute('content',
-      'Ingeniería hidráulica y ambiental en todo Colombia. Diseño de acueductos, modelación HEC-RAS 2D, PTAR/PTAP, gestión del riesgo y sistemas contra incendios. COPNIA. Cotización en 24 h.'
+      'Consultoría en ingeniería hidráulica en Colombia: modelación de inundaciones HEC-RAS 2D, estudios detallados Decreto 1807, diseño de acueductos veredales e industriales, distritos de riego, PTAP, PTAR, modelación hidrológica y alcantarillados. COPNIA 17202-313228 CLD. Propuesta en 24 h.'
     )
     let canonical = document.querySelector("link[rel='canonical']")
     if (!canonical) {
@@ -135,7 +136,7 @@ export default function Home() {
             <span style={{ color: '#17A2B8' }}>| BIC — Bernal Ingeniería Consultores</span>
           </h1>
           <p style={{ color: 'rgba(255,255,255,0.75)', fontSize: 17, maxWidth: 640, lineHeight: 1.8, marginBottom: 16 }}>
-            Estudios hidrológicos, diseño de acueductos, modelación HEC-RAS 2D e interventoría técnica. +10 años de experiencia verificable. Manizales, Eje Cafetero y todo Colombia.
+            Consultoría especializada en modelación de inundaciones HEC-RAS 2D, estudios de gestión del riesgo hídrico (Decreto 1807), diseño de acueductos veredales e industriales, distritos de riego, PTAP, PTAR, modelación hidrológica y alcantarillados. +10 años de experiencia verificable. Manizales, Eje Cafetero y todo Colombia.
           </p>
 
           {/* 3 diferenciadores únicos */}

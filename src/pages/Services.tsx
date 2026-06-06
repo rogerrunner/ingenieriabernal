@@ -122,7 +122,7 @@ const SERVICES = [
 ]
 
 export default function Services() {
-  const [active, setActive] = useState('hidrosanitario')
+  const [active, setActive] = useState('riesgo')
 
   useEffect(() => {
     document.title = 'Servicios Ingeniería Hidráulica — COPNIA | BIC'
