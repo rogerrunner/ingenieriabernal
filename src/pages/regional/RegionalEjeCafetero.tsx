@@ -2,8 +2,7 @@ import { useEffect } from 'react'
 import SEOHead from '@/components/SEOHead'
 import SchemaMarkup from '@/components/SchemaMarkup'
 import QuoteFormInline from '@/components/QuoteFormInline'
-import CTABanner from '@/components/CTABanner'
-import { BlueprintBg, ThinLine, SectionLabel, Btn, Section } from '@/components/ui'
+import { BlueprintBg, ThinLine, SectionLabel, Btn, Section, CTABanner } from '@/components/ui'
 
 const WA = '573024778910'
 const WA_MSG = encodeURIComponent(
