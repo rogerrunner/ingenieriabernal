@@ -288,6 +288,9 @@ const routes = [
   { path: 'blog/permiso-ocupacion-cauce-colombia', title: 'Permiso de Ocupación de Cauce Colombia — Trámite CAR | BIC', desc: 'Guía completa del permiso de ocupación de cauce en Colombia: qué obras lo requieren, estudios técnicos para la CAR, costos $15M–$40M y plazos reales. CORPOCALDAS, CARDER, CRQ.', url: 'https://ingenieriabernal.co/blog/permiso-ocupacion-cauce-colombia' },
   { path: 'blog/diseno-sistema-drenaje-pluvial-urbanizacion-colombia', title: 'Diseño Drenaje Pluvial para Urbanizaciones Colombia — RAS 2017 | BIC', desc: 'Guía técnica de diseño de drenaje pluvial para urbanizaciones en Colombia: normas RAS 2017, metodología de cálculo, tipos de sistemas y precios reales 2026.', url: 'https://ingenieriabernal.co/blog/diseno-sistema-drenaje-pluvial-urbanizacion-colombia' },
   { path: 'blog/cuanto-cuesta-consultoria-hidraulica-colombia', title: '¿Cuánto cuesta contratar consultoría hidráulica en Colombia? Precios reales 2026 | BIC', desc: 'Precios reales 2026 para consultoría hidráulica en Colombia: riesgo hídrico, HEC-RAS, acueductos, CAR, MGA-Web SGR. Factores que determinan el costo. Propuesta en 24 horas.', url: 'https://ingenieriabernal.co/blog/cuanto-cuesta-consultoria-hidraulica-colombia' },
+  // LATAM
+  { path: 'consultoria-hidraulica-ecuador', title: 'Consultoría en Ingeniería Hidráulica Ecuador — HEC-RAS, SENAGUA | BIC', desc: 'BIC ofrece estudios hidrológicos, modelación HEC-RAS 2D, diseño de acueductos y gestión del riesgo hídrico para proyectos en Ecuador. Propuesta en 24 h.' },
+  { path: 'consultoria-hidraulica-mexico', title: 'Consultoría en Ingeniería Hidráulica México — HEC-RAS, CONAGUA | BIC', desc: 'BIC ofrece estudios hidrológicos, modelación HEC-RAS 2D, diseño de sistemas hidráulicos y gestión del riesgo hídrico para proyectos en México. Propuesta en 24 h.' },
 ];
 
 // Slugs de blog que NO deben indexarse (atraen audiencia incorrecta)

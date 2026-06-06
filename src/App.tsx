@@ -102,6 +102,8 @@ const ServicioPTAPColombia = lazy(() => import('./pages/ServicioPTAPColombia'))
 const ServicioAguasLluviasManizales = lazy(() => import('./pages/ServicioAguasLluviasManizales'))
 const HydraulicEngineerEnglish = lazy(() => import('./pages/HydraulicEngineerEnglish'))
 const EstudioBasico = lazy(() => import('./pages/servicios/EstudioBasico'))
+const LatamEcuador = lazy(() => import('./pages/LatamEcuador'))
+const LatamMexico = lazy(() => import('./pages/LatamMexico'))
 
 function ScrollToTop() {
   const [location] = useLocation()
@@ -376,6 +378,10 @@ export default function App() {
           <Route path="/aguas-lluvias-manizales" component={ServicioAguasLluviasManizales} />
 
           <Route path="/servicios/estudio-basico" component={EstudioBasico} />
+
+          {/* ── LATAM ── */}
+          <Route path="/consultoria-hidraulica-ecuador" component={LatamEcuador} />
+          <Route path="/consultoria-hidraulica-mexico" component={LatamMexico} />
           <Route path="/blog/:slug" component={BlogDetail} />
           <Route component={NotFound} />
         </Switch>
