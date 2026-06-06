@@ -40,6 +40,8 @@ import articlesS from './src/data/articlesS'
 import articlesT from './src/data/articlesT'
 import articlesU from './src/data/articlesU'
 import articlesV from './src/data/articlesV'
+import articlesW from './src/data/articlesW'
+import articlesX from './src/data/articlesX'
 
 const ALL_ARTICLES = {
   ...articles1,
@@ -65,6 +67,8 @@ const ALL_ARTICLES = {
   ...articlesT,
   ...articlesU,
   ...articlesV,
+  ...articlesW,
+  ...articlesX,
 }
 
 const distDir = join(__dirname, 'dist')
