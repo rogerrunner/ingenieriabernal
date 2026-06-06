@@ -3,3 +3,12 @@ dist/
 .claude/
 *.env
 .DS_Store
+
+# Utilidades locales — no subir al repo
+*.bat
+*.log
+home_resolved.tsx
+
+# Documentos de trabajo locales
+Estudios (algunos de ellos)/
+Estudios*/
