@@ -574,12 +574,3 @@ export default function GestionRiesgoHidrico() {
     </>
   )
 }
-            <Btn variant="outline" href="/contacto" style={{ borderColor: '#fff', color: '#fff' }}>
-              Ver formulario de contacto
-            </Btn>
-          </div>
-        </div>
-      </Section>
-    </>
-  )
-}
