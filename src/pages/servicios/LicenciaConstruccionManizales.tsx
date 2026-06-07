@@ -23,6 +23,7 @@ const seoConfig = {
     'revisor técnico independiente NSR-10',
   ],
   canonical: 'https://ingenieriabernal.co/licencia-de-construccion-manizales',
+  noindex: true,
 }
 
 const DOCUMENTOS_CURIA = [

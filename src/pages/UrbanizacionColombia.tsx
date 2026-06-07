@@ -27,6 +27,7 @@ const seoConfig = {
     'decreto 1807 urbanización',
   ],
   canonical: 'https://ingenieriabernal.co/urbanizacion-colombia',
+  noindex: true,
 }
 
 const STATS = [

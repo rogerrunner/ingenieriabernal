@@ -26,6 +26,7 @@ const seoConfig = {
     'POT ronda hidrica Colombia',
   ],
   canonical: 'https://ingenieriabernal.co/construir-cerca-rio-quebrada-colombia',
+  noindex: true,
 }
 
 const CASOS = [

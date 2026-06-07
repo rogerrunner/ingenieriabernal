@@ -48,6 +48,11 @@ const NOINDEX_SLUGS = new Set([
   'normas-tecnicas-diseno-acueductos-colombia-ras-2017',
   'redes-hidrosanitarias-colombia',
   'diferencia-bocatoma-captacion-aguas-colombia',
+  // PTAR construcción — atrae compradores de equipos / constructoras, no municipios
+  'cuanto-cuesta-ptar-aguas-residuales-colombia',
+  // Urbanismo / plan parcial — fuera del foco hidráulico prioritario
+  'cuanto-cuesta-plan-parcial-colombia',
+  'decreto-1807-plan-parcial-colombia',
 ])
 
 // ─── ARTICLE CONTENT ────────────────────────────────────────────────────────

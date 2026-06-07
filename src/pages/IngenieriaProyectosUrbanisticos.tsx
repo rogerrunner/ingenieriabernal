@@ -26,6 +26,7 @@ const seoConfig = {
     'empresa ingeniería proyectos urbanísticos',
   ],
   canonical: 'https://ingenieriabernal.co/ingenieria-proyectos-urbanisticos-colombia',
+  noindex: true,
 }
 
 const COMPONENTES = [

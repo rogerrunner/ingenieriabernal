@@ -27,6 +27,7 @@ const seoConfig = {
     'empresa gestión riesgo taludes Colombia',
   ],
   canonical: 'https://ingenieriabernal.co/gestion-riesgo-taludes-colombia',
+  noindex: true,
 }
 
 const TIPOS = [

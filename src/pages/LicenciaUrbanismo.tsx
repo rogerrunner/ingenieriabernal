@@ -27,6 +27,7 @@ const seoConfig = {
     'curaduría urbana estudios ingeniería',
   ],
   canonical: 'https://ingenieriabernal.co/licencia-de-urbanismo',
+  noindex: true,
 }
 
 const STATS = [

@@ -23,6 +23,7 @@ const seoConfig = {
     'promotor urbanizador Colombia estudio hídrico',
   ],
   canonical: 'https://ingenieriabernal.co/promotor-urbanizacion-colombia',
+  noindex: true,
 }
 
 const SERVICIOS = [
