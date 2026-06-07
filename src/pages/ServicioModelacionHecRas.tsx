@@ -6,26 +6,27 @@ import QuoteFormInline from '@/components/QuoteFormInline'
 import { BlueprintBg, ThinLine, SectionLabel, Btn, Section, Tag, CTABanner } from '@/components/ui'
 
 const WA = '573024778910'
-const WA_MSG = encodeURIComponent('Hola, quiero cotizar Modelación Hidráulica HEC-RAS 2D')
+const WA_MSG = encodeURIComponent('Hola, necesitamos propuesta para modelación hidráulica HEC-RAS 2D. Es para estudio de amenaza hídrica / POT / proyecto INVÍAS / concesión vial. ¿Pueden enviarnos una propuesta técnica?')
 
 const seoConfig = {
-  title: 'Modelación HEC-RAS 2D para tu Proyecto — Licencias y Planes Parciales | BIC',
-  description: '¿Tu proyecto requiere modelación HEC-RAS para el Decreto 1807 o la licencia ambiental? BIC la ejecuta: 1D/2D, manchas de inundación, concepto técnico para la CAR. Más de 100 proyectos. Propuesta en 24 h.',
+  title: 'Modelación Hidráulica HEC-RAS 2D Colombia — POT · INVÍAS · Amenaza Hídrica · POMCA | BIC',
+  description: 'BIC ejecuta modelación hidráulica HEC-RAS 2D para estudios de amenaza hídrica en POT/EOT, proyectos INVÍAS, concesiones viales y POMCA en Colombia. Firma COPNIA 17202-313228. Propuesta técnica sin costo.',
   keywords: [
     'modelación hidráulica HEC-RAS 2D Colombia',
-    'HEC-RAS 2D Colombia',
-    'manchas de inundación Colombia',
-    'amenaza hídrica Decreto 1807',
-    'modelación HEC-RAS municipios',
-    'estudio riesgo hídrico planes parciales',
-    'modelación hidráulica constructoras',
-    'HEC-RAS Eje Cafetero',
-    'zonas de inundación Colombia',
-    'mapa amenaza hídrica',
-    'perfiles hidráulicos',
-    'flujo bidimensional',
+    'HEC-RAS 2D POT Colombia',
+    'estudio amenaza hídrica POT EOT Colombia',
+    'modelación hidráulica INVÍAS Colombia',
+    'HEC-RAS concesiones viales Colombia',
+    'modelación hidráulica POMCA Colombia',
+    'manchas inundación POT municipal Colombia',
+    'modelación HEC-RAS municipios Colombia',
+    'amenaza hídrica Decreto 1807 POT',
+    'perfiles hidráulicos HEC-RAS Colombia',
+    'modelación hidráulica 2D cuencas Colombia',
+    'consultor modelación hidráulica COPNIA Colombia',
   ],
   canonical: 'https://ingenieriabernal.co/servicios/modelacion-hec-ras',
+  noindex: true,
 }
 
 const INCLUYE = [

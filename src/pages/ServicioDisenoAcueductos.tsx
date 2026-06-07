@@ -6,29 +6,29 @@ import { BlueprintBg, ThinLine, SectionLabel, Btn, Section, Tag, CTABanner } fro
 import QuoteFormInline from '@/components/QuoteFormInline'
 
 const WA = '573024778910'
-const WA_MSG = encodeURIComponent('Hola, quiero cotizar Diseño de Acueducto — sistema de agua potable')
+const WA_MSG = encodeURIComponent('Hola, necesitamos propuesta para diseño de acueducto en Colombia. Es para municipio / ESP / urbanización / parcelación. ¿Pueden enviarnos una propuesta técnica?')
 
 const seoConfig = {
-  title: 'Diseño de Acueducto para tu Proyecto — Rural, Urbano o Regalías SGR | BIC Colombia',
-  description: '¿Necesitas diseñar el acueducto para tu urbanización, municipio o proyecto veredal? BIC lo diseña completo: captación, conducción, bombeo y PTAP. RAS 2017, Res. 0330. Firma COPNIA. Propuesta gratis. Sin intermediarios.',
+  title: 'Diseño de Acueducto Colombia — Municipios · ESP · Urbanizaciones · Res. 0330 · EPANET | BIC',
+  description: 'Diseño de sistemas de acueducto para municipios, ESP y urbanizaciones en Colombia. EPANET 2.2, RAS 2017 Res. 0330, memorias de cálculo COPNIA para SGR y PDA. Firma COPNIA 17202-313228. Propuesta técnica sin costo.',
   keywords: [
-    'diseño acueducto Colombia',
-    'diseño de acueducto',
-    'diseño sistema acueducto municipal',
-    'diseño acueducto rural Colombia',
-    'RAS 2017 diseño acueducto',
-    'Resolución 0330 2017 acueducto',
-    'diseño red distribución agua potable',
-    'diseño PTAP Colombia',
-    'captación bocatoma diseño',
-    'diseño acueducto Eje Cafetero',
-    'sistema agua potable municipal Colombia',
-    'consultoría acueducto municipal',
-    'ingeniero acueducto Colombia',
-    'acueducto veredal Colombia',
-    'diseño acueducto SGR',
+    'diseño acueducto municipal Colombia',
+    'diseño acueducto ESP Colombia',
+    'diseño acueducto urbanización Colombia',
+    'diseño sistema agua potable municipio Colombia',
+    'EPANET acueducto Colombia',
+    'RAS 2017 Resolución 0330 acueducto',
+    'diseño acueducto SGR Colombia',
+    'diseño acueducto PDA Colombia',
+    'diseño acueducto Ley 142 Colombia',
+    'consultoría diseño acueducto COPNIA Colombia',
+    'memorias cálculo acueducto COPNIA',
+    'diseño captación conducción distribución Colombia',
+    'diseño acueducto veredal municipal Colombia',
+    'ingeniero diseño acueducto Colombia COPNIA',
   ],
   canonical: 'https://ingenieriabernal.co/servicios/diseno-acueductos',
+  noindex: true,
 }
 
 const INCLUYE_DISENO = [

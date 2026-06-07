@@ -5,29 +5,29 @@ import QuoteFormInline from '@/components/QuoteFormInline'
 import { BlueprintBg, ThinLine, SectionLabel, Btn, Section, Tag, CTABanner } from '@/components/ui'
 
 const WA = '573024778910'
-const WA_MSG = encodeURIComponent('Hola, necesito cotizar una modelación hidrológica (HEC-HMS / análisis de cuencas) para mi proyecto. ¿Pueden asesorarme?')
+const WA_MSG = encodeURIComponent('Hola, necesitamos propuesta para modelación hidrológica HEC-HMS en Colombia. Es para EIA / vía / POMCA / POT / diseño de acueducto. ¿Pueden enviarnos una propuesta técnica?')
 
 const seoConfig = {
-  title: 'Modelación Hidrológica Colombia — HEC-HMS, Cuencas y Caudales de Diseño | BIC',
-  description: 'BIC ejecuta modelación hidrológica profesional: HEC-HMS, análisis de frecuencias, caudales de diseño para constructoras, municipios e industria. Eje Cafetero y todo Colombia. Firma COPNIA. Desde $5M COP. Propuesta en 24 h.',
+  title: 'Modelación Hidrológica Colombia — HEC-HMS · EIA · Vías 4G · POMCA · POT | BIC',
+  description: 'BIC ejecuta modelación hidrológica HEC-HMS para EIA de proyectos de infraestructura, concesiones viales 4G, POMCA y estudios de ordenamiento hídrico en Colombia. Firma COPNIA 17202-313228. Propuesta técnica.',
   keywords: [
     'modelación hidrológica Colombia',
     'HEC-HMS Colombia',
-    'estudio hidrológico Colombia',
-    'caudales de diseño Colombia',
-    'análisis de cuencas Colombia',
-    'curvas IDF Colombia',
-    'hidrograma de creciente Colombia',
-    'modelación hidrológica constructoras Colombia',
-    'modelación hidrológica Eje Cafetero',
-    'modelación hidrológica Caldas Risaralda Quindío',
-    'estudio hidrológico plan parcial Colombia',
-    'estudio hidrológico acueducto Colombia',
-    'período de retorno caudales Colombia',
-    'empresa hidrología Colombia COPNIA',
-    'modelación HEC-HMS Manizales Pereira',
+    'estudio hidrológico EIA Colombia',
+    'modelación hidrológica concesiones viales Colombia',
+    'HEC-HMS vías 4G Colombia',
+    'modelación hidrológica POMCA Colombia',
+    'estudio hidrológico POT EOT Colombia',
+    'caudales diseño acueducto Colombia',
+    'análisis frecuencias caudales Colombia',
+    'curvas IDF Colombia IDEAM',
+    'hidrograma creciente HEC-HMS Colombia',
+    'modelación hidrológica infraestructura Colombia',
+    'consultor hidrología COPNIA Colombia',
+    'estudio hidrológico INVÍAS Colombia',
   ],
   canonical: 'https://ingenieriabernal.co/modelacion-hidrologica-colombia',
+  noindex: true,
 }
 
 const SOFTWARE = [
@@ -172,7 +172,7 @@ export default function ModelacionHidrologicaColombia() {
 
   return (
     <>
-      <SEOHead {...seoConfig} />
+      <SEOHead config={seoConfig} />
       <SchemaMarkup {...schemaData} />
       <BlueprintBg>
 

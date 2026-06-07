@@ -4,26 +4,27 @@ import SchemaMarkup from '@/components/SchemaMarkup'
 import { BlueprintBg, ThinLine, SectionLabel, Btn, Section, Tag } from '@/components/ui'
 
 const WA = '573024778910'
-const WA_MSG = encodeURIComponent('Hola, necesito cotizar el diseño de alcantarillado en Colombia. ¿Pueden ayudarme?')
+const WA_MSG = encodeURIComponent('Hola, necesitamos propuesta para diseño de alcantarillado en Colombia. Es para municipio / ESP / urbanización / parcelación. ¿Pueden enviarnos una propuesta técnica?')
 
 const seoConfig = {
-  title: 'Diseño de Alcantarillado para Constructoras y Urbanizaciones | Firma COPNIA — BIC',
-  description: '¿Necesitas el diseño del sistema de alcantarillado para tu urbanización, constructora o proyecto de infraestructura? BIC lo entrega completo: sanitario y pluvial, RAS 2017, SWMM. Contrata la firma directa. Propuesta en 24 h.',
+  title: 'Diseño de Alcantarillado Colombia — Municipios · ESP · Urbanizaciones · RAS 2017 Título D | BIC',
+  description: 'Diseño de alcantarillado sanitario y pluvial para municipios, ESP y urbanizaciones en Colombia. SewerGEMS, SWMM, RAS 2017 Título D, memorias COPNIA. Firma COPNIA 17202-313228. Propuesta técnica sin costo.',
   keywords: [
-    'diseño de alcantarillado Colombia',
-    'alcantarillado sanitario Colombia',
-    'alcantarillado pluvial Colombia',
-    'diseño redes sanitarias Colombia',
-    'diseño alcantarillado RAS 2017',
-    'diseño alcantarillado Manizales',
-    'diseño alcantarillado Eje Cafetero',
-    'colectores aguas residuales Colombia',
+    'diseño alcantarillado municipal Colombia',
+    'diseño alcantarillado ESP Colombia',
+    'diseño alcantarillado urbanización Colombia',
+    'alcantarillado sanitario pluvial RAS 2017 Colombia',
+    'SewerGEMS alcantarillado Colombia',
     'SWMM alcantarillado Colombia',
-    'método racional caudal pluvial Colombia',
-    'diseño pozos inspección Colombia',
-    'ingeniería sanitaria Colombia',
+    'diseño colectores municipio Colombia',
+    'diseño alcantarillado SGR Colombia',
+    'diseño alcantarillado PDA Colombia',
+    'memorias cálculo alcantarillado COPNIA Colombia',
+    'consultoría diseño alcantarillado Colombia',
+    'ingeniería sanitaria municipal Colombia COPNIA',
   ],
   canonical: 'https://ingenieriabernal.co/diseno-alcantarillado-colombia',
+  noindex: true,
 }
 
 const SISTEMAS = [
