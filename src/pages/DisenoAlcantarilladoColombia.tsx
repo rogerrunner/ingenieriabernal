@@ -540,7 +540,8 @@ export default function DisenoAlcantarilladoColombia() {
               Solicitar por formulario
             </a>
           </div>
-        </section>
+        </div>
+      </section>
       </>
     )
 }
