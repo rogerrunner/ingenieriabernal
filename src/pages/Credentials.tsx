@@ -128,7 +128,7 @@ export default function Credentials() {
 
   return (
     <>
-      <SEOHead {...seoConfig} />
+      <SEOHead config={seoConfig} />
       <section style={{ background: '#003B6F', padding: '120px 40px 64px', position: 'relative', overflow: 'hidden' }}>
         <BlueprintBg opacity={0.07} />
         <div className="container" style={{ position: 'relative' }}>
