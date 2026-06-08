@@ -501,4 +501,18 @@ export default function ServicioModelacionHecRas() {
             fontSize: 16, lineHeight: 1.7, marginBottom: 32,
           }}>
             Indíquenos el cauce, la longitud del tramo y el objetivo del estudio.
-            Le respondemos con presupuesto y plazo de entr
+            Le respondemos con presupuesto y plazo de entrega en menos de 24 horas hábiles.
+          </p>
+          <div style={{ display: 'flex', gap: 12, flexWrap: 'wrap', justifyContent: 'center' }}>
+            <Btn href={`https://wa.me/${WA}?text=${WA_MSG}`}>
+              📱 Solicitar propuesta técnica
+            </Btn>
+            <Btn variant="outline" href="/contacto" dark>
+              Formulario de contacto
+            </Btn>
+          </div>
+        </div>
+      </Section>
+    </>
+  )
+}
