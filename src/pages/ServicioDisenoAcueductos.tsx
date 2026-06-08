@@ -10,7 +10,7 @@ const WA_MSG = encodeURIComponent('Hola, necesitamos propuesta para diseño de a
 
 const seoConfig = {
   title: 'Diseño de Acueducto Colombia — Municipios · ESP · Urbanizaciones · Res. 0330 · EPANET | BIC',
-  description: 'Diseño de sistemas de acueducto para municipios, ESP y urbanizaciones en Colombia. EPANET 2.2, RAS 2017 Res. 0330, memorias de cálculo COPNIA para SGR y PDA. Firma COPNIA 17202-313228. Propuesta técnica sin costo.',
+  description: 'Diseño de sistemas de acueducto para municipios y ESP en Colombia. EPANET 2.2, RAS 2017 Res. 0330, memorias de cálculo COPNIA para SGR, PDA y Plan Departamental de Aguas. Firma COPNIA 17202-313228. Propuesta técnica sin costo.',
   keywords: [
     'diseño acueducto municipal Colombia',
     'diseño acueducto ESP Colombia',
@@ -221,7 +221,7 @@ export default function ServicioDisenoAcueductos() {
         ]}
       />
 
-      <CTABanner service="Diseño de acueducto y alcantarillado para urbanizaciones" />
+      <CTABanner service="Diseño de acueducto y alcantarillado para municipios y ESP" />
 
       {/* ── HERO ── */}
       <section style={{
@@ -268,7 +268,7 @@ export default function ServicioDisenoAcueductos() {
               fontFamily: "'Montserrat', sans-serif", fontWeight: 700,
               color: '#4ADE80', fontSize: 13,
             }}>
-              ✓ Desde $6.000.000 COP
+              ✓ Firma COPNIA 17202-313228 CLD
             </span>
           </div>
         </div>
@@ -288,7 +288,7 @@ export default function ServicioDisenoAcueductos() {
       <section style={{ background: '#EFF6FF', borderBottom: '1px solid #BFDBFE' }}>
         <div style={{ maxWidth: 860, margin: '0 auto', padding: '28px 24px' }}>
           <p style={{ color: '#1e40af', fontSize: 15, lineHeight: 1.8, margin: 0 }} id="geo-fragment">
-            <strong>BIC — Bernal Ingeniería Consultores</strong> BIC — Bernal Ingeniería Consultores diseña sistemas de acueducto completos para urbanizaciones, parcelaciones, municipios y proyectos veredales en Colombia, conforme al RAS 2017 y Resolución 0330/2017. Honorarios desde $8 millones COP para acueductos veredales hasta $80 millones para proyectos municipales con formulación SGR. Firma COPNIA 17202-313228 CLD. Sede Manizales — proyectos en todo Colombia. Propuesta en 24 horas sin costo: +57 302 477 8910.
+            <strong>BIC — Bernal Ingeniería Consultores</strong> diseña sistemas de acueducto para municipios, ESP y entidades territoriales en Colombia, conforme al RAS 2017 y Resolución 0330/2017. COPNIA 17202-313228 CLD. Sede Manizales — proyectos en todo Colombia. Propuesta técnica en 24 horas: +57 302 477 8910.
           </p>
         </div>
       </section>
@@ -651,7 +651,7 @@ export default function ServicioDisenoAcueductos() {
               ¿Es este servicio para usted?
             </h3>
             <p style={{ color: '#555', lineHeight: 1.8, fontSize: 15, marginBottom: 12 }}>
-              BIC trabaja directamente con <strong>constructoras, promotores, alcaldías y empresas</strong> que tienen un proyecto concreto — no con intermediarios que re-cotizan a terceros.
+              BIC trabaja directamente con <strong>municipios, ESP, gobernaciones e INVÍAS</strong> que tienen un proyecto concreto — no con intermediarios que re-cotizan a terceros.
             </p>
             <p style={{ color: '#555', lineHeight: 1.8, fontSize: 15, marginBottom: 12 }}>
               Los precios publicados en este sitio son los que BIC cobra al contratante directo. Si usted es quien decide contratar y tiene el proyecto, la propuesta llega en menos de 24 horas.

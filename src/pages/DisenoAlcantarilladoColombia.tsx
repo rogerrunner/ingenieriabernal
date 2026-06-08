@@ -8,7 +8,7 @@ const WA_MSG = encodeURIComponent('Hola, necesitamos propuesta para diseño de a
 
 const seoConfig = {
   title: 'Diseño de Alcantarillado Colombia — Municipios · ESP · Urbanizaciones · RAS 2017 Título D | BIC',
-  description: 'Diseño de alcantarillado sanitario y pluvial para municipios, ESP y urbanizaciones en Colombia. SewerGEMS, SWMM, RAS 2017 Título D, memorias COPNIA. Firma COPNIA 17202-313228. Propuesta técnica sin costo.',
+  description: 'Diseño de alcantarillado sanitario y pluvial para municipios y ESP en Colombia. SewerGEMS, SWMM, RAS 2017 Título D, memorias COPNIA para SGR y PDA. Firma COPNIA 17202-313228. Propuesta técnica sin costo.',
   keywords: [
     'diseño alcantarillado municipal Colombia',
     'diseño alcantarillado ESP Colombia',
@@ -53,7 +53,7 @@ const TIPOS = [
   {
     icon: '🏘️',
     tipo: 'Alcantarillado para Urbanizaciones',
-    desc: 'Diseño completo de redes de alcantarillado sanitario y pluvial para conjuntos residenciales, parcelaciones y urbanizaciones. Incluye cálculo de caudales de aguas residuales domésticas, diseño de colectores, pozos de inspección, cajas de paso y descole al sistema municipal. Se verifica la pendiente mínima y la velocidad de autolimpieza (≥0,6 m/s) en todos los tramos.',
+    desc: 'Diseño completo de redes de alcantarillado sanitario y pluvial para nuevos sectores urbanos y ampliaciones del sistema municipal existente. Incluye cálculo de caudales de aguas residuales domésticas, diseño de colectores, pozos de inspección, cajas de paso y descole al sistema municipal. Se verifica la pendiente mínima y la velocidad de autolimpieza (≥0,6 m/s) en todos los tramos.',
     aplica: 'Constructoras, promotores inmobiliarios, urbanizadoras, conjuntos residenciales rurales.',
   },
   {
@@ -242,7 +242,7 @@ export default function DisenoAlcantarilladoColombia() {
             Diseño de Alcantarillado en Colombia
           </h1>
           <p style={{ color: '#17A2B8', fontSize: 'clamp(17px, 2.5vw, 22px)', fontWeight: 600, marginBottom: 20 }}>
-            Redes sanitarias y pluviales para urbanizaciones, parcelaciones y municipios — RAS 2017
+            Redes sanitarias y pluviales para municipios, ESP y entidades territoriales — RAS 2017 Título D
           </p>
           <p style={{ color: 'rgba(255,255,255,0.82)', fontSize: 16, lineHeight: 1.8, marginBottom: 32, maxWidth: 760 }}>
             BIC Bernal Ingeniería Consultores diseña redes de alcantarillado sanitario y pluvial en Colombia
@@ -437,7 +437,7 @@ export default function DisenoAlcantarilladoColombia() {
             {[
               { label: 'Diseño de acueducto Colombia', href: '/servicios/diseno-acueductos' },
               { label: 'Diseño de PTAR Colombia', href: '/diseno-ptar-colombia' },
-              { label: 'Urbanizaciones Colombia', href: '/urbanizacion-colombia' },
+              { label: 'Planes Maestros PMAA', href: '/planes-maestros-acueducto-alcantarillado-colombia' },
               { label: 'Licencia de urbanismo', href: '/licencia-de-urbanismo' },
               { label: 'Bocatomas Colombia', href: '/bocatomas-colombia' },
             ].map(s => (
