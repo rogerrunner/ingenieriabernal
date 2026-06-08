@@ -27,7 +27,6 @@ const seoConfig = {
     'estudio hidrológico INVÍAS Colombia',
   ],
   canonical: 'https://ingenieriabernal.co/modelacion-hidrologica-colombia',
-  noindex: true,
 }
 
 const SOFTWARE = [
@@ -377,9 +376,4 @@ export default function ModelacionHidrologicaColombia() {
           subtitle="Constructoras, municipios e industria — atención directa al decisor. Sin intermediarios."
           ctaPrimary={{ label: 'WhatsApp directo', href: `https://wa.me/${WA}?text=${WA_MSG}` }}
           ctaSecondary={{ label: 'Ver gestión de riesgo', href: '/gestion-riesgo-hidrico' }}
-        />
-
-      </BlueprintBg>
-    </>
-  )
-}
+      

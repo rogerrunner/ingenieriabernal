@@ -6,23 +6,23 @@ import QuoteFormInline from '@/components/QuoteFormInline'
 import { BlueprintBg, ThinLine, SectionLabel, Btn, Section, Tag, CTABanner } from '@/components/ui'
 
 const WA = '573024778910'
-const WA_MSG = encodeURIComponent('Hola, necesito un estudio de gestión del riesgo hídrico para mi proyecto')
+const WA_MSG = encodeURIComponent('Hola, necesitamos un estudio de gestión del riesgo hídrico por inundación (Decreto 1807). ¿Podemos agendar una llamada técnica?')
 
 const seoConfig = {
-  title: 'Gestión del Riesgo Hídrico Decreto 1807 · HEC-RAS 2D · Firma COPNIA | BIC',
-  description: 'Estudio de gestión del riesgo hídrico para licencias y planes parciales en Colombia. Modelación HEC-RAS 2D, cartografía SIG 1:2.000, aptitud urbanística. Desde $18M COP. Propuesta en 24 h sin costo.',
+  title: 'Estudios Detallados Riesgo Hídrico por Inundación — POT, SGR y Decreto 1807 | BIC',
+  description: 'BIC elabora estudios detallados de gestión del riesgo hídrico por inundación para revisión de POT/EOT, proyectos SGR y cumplimiento Decreto 1807/2014. HEC-RAS 2D, cartografía SIG. Para municipios, secretarías de planeación y gobernaciones. COPNIA. Cotiza hoy.',
   keywords: [
-    'gestión del riesgo hídrico Colombia',
-    'estudio amenaza inundación Colombia',
-    'Decreto 1807 2014 riesgo hídrico',
-    'mapa amenaza inundación Colombia',
-    'análisis riesgo inundaciones Colombia',
-    'plan gestión riesgo municipal Colombia',
-    'estudio riesgo hídrico plan parcial',
-    'amenaza torrencialidad Colombia',
-    'PMGR municipio Colombia',
-    'Ley 1523 gestión riesgo desastres',
-    'BIC Bernal Ingeniería riesgo hídrico',
+    'estudios detallados riesgo inundación Decreto 1807 Colombia',
+    'estudio amenaza inundación POT municipio Colombia',
+    'revisión POT riesgo hídrico Colombia',
+    'estudio riesgo hídrico SGR Colombia',
+    'gestión riesgo hídrico municipio Colombia',
+    'Decreto 1807 2014 municipios Colombia',
+    'amenaza hídrica alcaldía Colombia',
+    'PMGR formulación municipio Colombia',
+    'estudio inundación INVÍAS concesiones viales',
+    'riesgo hídrico CAR POMCA Colombia',
+    'cartografía riesgo inundación Colombia HEC-RAS',
   ],
   canonical: 'https://ingenieriabernal.co/gestion-riesgo-hidrico',
 }
@@ -76,16 +76,16 @@ const PARA_QUIEN = [
     desc: 'Componente de riesgo hídrico para revisión del POT/EOT exigido por el Decreto 1807/2014. Actualización de PMGR conforme a la Ley 1523/2012. Estudios requeridos por el OCAD para proyectos del SGR.',
   },
   {
-    tipo: 'Constructoras y Curadores Urbanos',
-    desc: 'Estudios de amenaza y riesgo obligatorios para planes parciales, licencias de urbanismo y proyectos de subdivisión en zonas con cauces cercanos. Sin este estudio la Curaduría no expide la licencia.',
+    tipo: 'Empresas de Servicios Públicos (ESP) y Operadores',
+    desc: 'Estudios de riesgo hídrico para infraestructura de acueducto y alcantarillado en zonas con amenaza por inundación. Insumo técnico para planes maestros, expansión de redes y proyectos de inversión ante el regulador.',
   },
   {
     tipo: 'CAR y Entidades Ambientales',
     desc: 'Análisis de riesgo hídrico como insumo técnico para la expedición de licencias ambientales, conceptos de viabilidad de POMCA y planes de ordenación y manejo de cuencas hidrográficas.',
   },
   {
-    tipo: 'Promotores Inmobiliarios y Fiduciarias',
-    desc: 'Due diligence técnico de predios con exposición a inundación o torrencialidad. Cuantificación del riesgo para estructuración financiera de proyectos y obtención de seguros de construcción.',
+    tipo: 'Gobernaciones y Secretarías de Infraestructura',
+    desc: 'Estudios de riesgo por inundación para proyectos de infraestructura pública (hospitales, colegios, vías) en zonas ribereñas. Cumplimiento de condicionantes ambientales de las CAR y soporte para radicación ante OCAD/SGR.',
   },
   {
     tipo: 'Concesiones Viales e INVÍAS',

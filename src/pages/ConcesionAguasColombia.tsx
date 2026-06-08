@@ -4,11 +4,11 @@ import SpeakableSchema from '@/components/SpeakableSchema'
 import { BlueprintBg, ThinLine, SectionLabel, Btn, Section, Tag } from '@/components/ui'
 
 const WA = '573024778910'
-const WA_MSG = encodeURIComponent('Hola, necesito información sobre concesión de aguas en Colombia. ¿Pueden ayudarme?')
+const WA_MSG = encodeURIComponent('Hola, necesitamos tramitar una concesión de aguas superficiales para un proyecto de infraestructura hídrica. ¿Pueden enviarnos una propuesta técnica?')
 
 const seoConfig = {
-  title: 'Trámite de Concesión de Aguas ante la CAR | Contrata BIC Colombia',
-  description: '¿Necesitas la concesión de aguas para tu proyecto o empresa? BIC elabora todos los estudios técnicos ante la CAR: aforos, hidrología, oferta hídrica. Dec. 1076/2015. Firma COPNIA. Para proyectos privados e industriales. Propuesta en 24 h.',
+  title: 'Concesión de Aguas Superficiales — Municipios, ESP y Proyectos de Infraestructura | BIC',
+  description: 'BIC elabora los estudios técnicos para concesiones de aguas superficiales ante CAR: aforos, hidrología, oferta hídrica, caudal ecológico. Decreto 1076/2015. Para municipios, ESP y proyectos de infraestructura. COPNIA. Propuesta en 24 h.',
   keywords: [
     'concesión de aguas Colombia',
     'concesión aguas superficiales Colombia',
@@ -103,7 +103,7 @@ const FAQ = [
   },
   {
     q: '¿Cuánto cuesta elaborar el estudio para una concesión de aguas?',
-    a: 'El costo del estudio técnico depende del tipo de fuente (superficial o subterránea), si se requiere campaña de aforos de campo, el uso del agua y los entregables exigidos por la CAR. Para una concesión de aguas superficiales para acueducto o riego de mediana escala, el estudio técnico completo oscila entre $8 y $20 millones COP. BIC envía propuesta detallada en 24 horas.',
+    a: 'El costo del estudio técnico depende del tipo de fuente (superficial o subterránea), si se requiere campaña de aforos de campo, el uso del agua y los entregables exigidos por la CAR. BIC envía propuesta técnica detallada en 24 horas según el tipo de fuente, el uso del agua y los entregables exigidos por la CAR específica.',
   },
   {
     q: '¿La concesión de aguas es necesaria para diseñar una bocatoma?',

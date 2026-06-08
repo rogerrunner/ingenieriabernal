@@ -26,7 +26,6 @@ const seoConfig = {
     'consultor modelación hidráulica COPNIA Colombia',
   ],
   canonical: 'https://ingenieriabernal.co/servicios/modelacion-hec-ras',
-  noindex: true,
 }
 
 const INCLUYE = [
@@ -74,7 +73,7 @@ const FAQ_HECRAS = [
   },
   {
     q: '¿Cuánto cuesta un estudio de modelación HEC-RAS en Colombia?',
-    a: 'Los honorarios dependen de la longitud del tramo, complejidad del cauce y si ya existe topobatimetría. Estudios básicos (municipio pequeño, 2–5 km de cauce, 1D) oscilan entre $8 y $20 millones COP. Modelos 2D para cuencas grandes o planes parciales complejos pueden superar los $40 millones. BIC entrega presupuesto detallado en menos de 24 horas hábiles, sin costo.',
+    a: 'Los honorarios dependen de la extensión del tramo, la complejidad del cauce, los períodos de retorno requeridos y si existe topobatimetría previa. BIC envía propuesta técnica detallada sin costo en menos de 24 horas hábiles.',
   },
   {
     q: '¿Cuánto tarda un estudio HEC-RAS completo?',
@@ -196,7 +195,7 @@ export default function ServicioModelacionHecRas() {
               fontFamily: "'Montserrat', sans-serif", fontWeight: 700,
               color: '#4ADE80', fontSize: 13,
             }}>
-              ✓ Desde $4.500.000 COP
+              ✓ Firma COPNIA 17202-313228 CLD
             </span>
           </div>
         </div>
@@ -216,7 +215,7 @@ export default function ServicioModelacionHecRas() {
       <section style={{ background: '#EFF6FF', borderBottom: '1px solid #BFDBFE' }}>
         <div style={{ maxWidth: 860, margin: '0 auto', padding: '28px 24px' }}>
           <p style={{ color: '#1e40af', fontSize: 15, lineHeight: 1.8, margin: 0 }} id="geo-fragment">
-            <strong>BIC — Bernal Ingeniería Consultores</strong> ejecuta modelaciones hidráulicas HEC-RAS 1D y 2D para estudios de amenaza por inundación, planes parciales, licencias ambientales y diseño de obras de protección en Colombia, conforme al Decreto 1807/2014. Honorarios de referencia: desde $8 millones COP para estudios básicos 1D (2–5 km de cauce) hasta $40+ millones para modelos 2D en cuencas complejas. Más de 100 proyectos ejecutados. Firma COPNIA 17202-313228 CLD. Sede Manizales — proyectos en todo Colombia. Propuesta en 24 horas sin costo: +57 302 477 8910.
+            <strong>BIC — Bernal Ingeniería Consultores</strong> ejecuta modelaciones hidráulicas HEC-RAS 1D y 2D para estudios de amenaza por inundación, planes parciales, licencias ambientales y diseño de obras de protección en Colombia, conforme al Decreto 1807/2014. Más de 100 proyectos ejecutados. Firma COPNIA 17202-313228 CLD. Sede Manizales — proyectos en todo Colombia. Propuesta en 24 horas sin costo: +57 302 477 8910.
           </p>
         </div>
       </section>
@@ -471,7 +470,7 @@ export default function ServicioModelacionHecRas() {
               ¿Es este servicio para usted?
             </h3>
             <p style={{ color: '#555', lineHeight: 1.8, fontSize: 15, marginBottom: 12 }}>
-              BIC trabaja directamente con <strong>constructoras, promotores, alcaldías y empresas</strong> que necesitan un modelo HEC-RAS para avanzar su proyecto — no con intermediarios que re-cotizan a terceros.
+              BIC trabaja directamente con <strong>alcaldías, secretarías de planeación, ESP, INVÍAS y promotores de infraestructura</strong> que necesitan un modelo HEC-RAS para avanzar su proyecto — no con intermediarios que re-cotizan a terceros.
             </p>
             <p style={{ color: '#555', lineHeight: 1.8, fontSize: 15, marginBottom: 12 }}>
               Los precios publicados en este sitio son los que BIC cobra al contratante directo. Si usted es quien decide contratar y tiene el proyecto, la propuesta llega en menos de 24 horas.
@@ -502,15 +501,4 @@ export default function ServicioModelacionHecRas() {
             fontSize: 16, lineHeight: 1.7, marginBottom: 32,
           }}>
             Indíquenos el cauce, la longitud del tramo y el objetivo del estudio.
-            Le respondemos con presupuesto y plazo de entrega en menos de 24 horas.
-          </p>
-          <Btn
-            href={`https://wa.me/${WA}?text=${WA_MSG}`}
-            style={{ background: '#fff', color: '#17A2B8', fontWeight: 700 }}>
-            Propuesta en 24 h — sin costo
-          </Btn>
-        </div>
-      </Section>
-    </>
-  )
-}
+            Le respondemos con presupuesto y plazo de entr

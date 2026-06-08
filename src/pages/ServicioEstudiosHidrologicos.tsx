@@ -6,17 +6,17 @@ import QuoteFormInline from '@/components/QuoteFormInline'
 import { BlueprintBg, SectionLabel, Btn, Section, Tag, CTABanner } from '@/components/ui'
 
 const WA = '573024778910'
-const WA_MSG = encodeURIComponent('Hola, tengo un predio cerca de un río o quebrada y necesito el estudio de amenaza por inundación para licencia de construcción o plan parcial. ¿Pueden asesorarme?')
+const WA_MSG = encodeURIComponent('Hola, necesitamos un estudio hidrológico HEC-HMS para un proyecto de infraestructura. ¿Pueden enviarnos una propuesta técnica?')
 
 const seoConfig = {
-  title: 'Estudio de Gestión del Riesgo por Inundación para tu Proyecto | Decreto 1807 — BIC',
-  description: '¿Tu predio está en zona de riesgo o cerca de un río? BIC elabora el estudio que necesitas para construir: amenaza, vulnerabilidad y riesgo, Decreto 1807. Para urbanizaciones, planes parciales y licencias. Firma COPNIA. Propuesta en 24 h.',
+  title: 'Estudios Hidrológicos HEC-HMS — Infraestructura Vial, Acueductos y SGR Colombia | BIC',
+  description: 'BIC elabora estudios hidrológicos (HEC-HMS, curvas IDF, caudales de diseño) para proyectos INVÍAS, diseño de acueductos y alcantarillados municipales, EIA y SGR. COPNIA habilitado para radicación institucional. Propuesta en 24 h.',
   keywords: [
-    'estudio amenaza inundación Colombia proyectos privados',
-    'estudio inundación urbanización Colombia',
-    'estudio hidrológico plan parcial Colombia',
-    'amenaza inundación licencia construcción Decreto 1807',
-    'sin estudio no puedes construir zona riesgo Colombia',
+    'estudio hidrológico INVÍAS Colombia diseño vial',
+    'estudio hidrológico diseño acueducto municipal Colombia',
+    'estudio hidrológico EIA infraestructura Colombia',
+    'empresa estudios hidrológicos municipios ESP Colombia',
+    'HEC-HMS concesiones viales Colombia consultoría',
     'estudio hidrológico Colombia',
     'estudios hidrológicos para CAR Colombia',
     'caudales de diseño Colombia',
@@ -140,9 +140,9 @@ const FAQ = [
 ]
 
 const CLIENTES = [
-  { tipo: 'Promotores y urbanizadores privados', desc: 'Estudios Decreto 1807 para planes parciales y urbanizaciones en zonas con amenaza hídrica. El estudio es obligatorio antes de la aprobación del plan parcial.' },
-  { tipo: 'Empresarios con predios cerca de ríos', desc: 'Propietarios de lotes para desarrollos comerciales, industriales o residenciales de gran escala en zonas con fuentes hídricas. Sin el estudio no se puede licenciar.' },
-  { tipo: 'Constructoras e inmobiliarios', desc: 'Estudios Dec. 1807 para licencias de construcción y planes parciales en zonas con amenaza. Entregables aceptados por todas las curadurías urbanas de Colombia.' },
+  { tipo: 'Alcaldías y Secretarías de Planeación', desc: 'Componente hidrológico para revisión de POT/EOT (Decreto 1807/2014), estudios de amenaza por inundación para SGR y formulación de proyectos MGA-Web para el OCAD.' },
+  { tipo: 'Concesiones Viales e INVÍAS', desc: 'Estudios hidrológicos para diseño de puentes, box-culverts, drenaje longitudinal y obras de protección en corredores viales 4G/5G. Metodología INVÍAS y AASHTO.' },
+  { tipo: 'Empresas de Infraestructura y Sector Energético', desc: 'Hidrología para EIA de proyectos hidroeléctricos, plantas industriales, minería y grandes desarrollos que requieren licencia ambiental ante la CAR o la ANLA.' },
   { tipo: 'Municipios y Secretarías de Planeación', desc: 'POT, PMGRD, proyectos de agua y saneamiento con SGR, estudios para OCAD.' },
   { tipo: 'Empresas de Servicios Públicos (ESP)', desc: 'Concesión de aguas, diseño de bocatomas, ampliación de acueductos.' },
   { tipo: 'INVÍAS y Gobernaciones', desc: 'Hidrología para diseño de puentes, drenaje vial y obras de infraestructura.' },

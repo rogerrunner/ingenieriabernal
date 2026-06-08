@@ -24,7 +24,6 @@ const seoConfig = {
     'ingeniería sanitaria municipal Colombia COPNIA',
   ],
   canonical: 'https://ingenieriabernal.co/diseno-alcantarillado-colombia',
-  noindex: true,
 }
 
 const SISTEMAS = [
@@ -118,16 +117,16 @@ const NORMATIVA = [
 ]
 
 const PRECIOS_ALCANTARILLADO = [
-  { servicio: 'Red sanitaria barrio 50 viviendas', rango: '$8M – $18M COP' },
-  { servicio: 'Red pluvial vía urbana (500 m)', rango: '$5M – $12M COP' },
-  { servicio: 'Diseño integral urbanización 100 viviendas', rango: '$20M – $45M COP' },
-  { servicio: 'Plan maestro de alcantarillado municipal', rango: '$30M – $80M COP' },
+  { servicio: 'Red sanitaria barrio / sector urbano', rango: 'Propuesta personalizada' },
+  { servicio: 'Red pluvial vía urbana', rango: 'Propuesta personalizada' },
+  { servicio: 'Diseño integral sistema municipal de alcantarillado', rango: 'Propuesta personalizada' },
+  { servicio: 'Plan maestro de alcantarillado municipal', rango: 'Propuesta personalizada' },
 ]
 
 const FAQ = [
   {
     q: '¿Cuánto cuesta el diseño de un sistema de alcantarillado en Colombia?',
-    a: 'El costo depende del tipo de alcantarillado (sanitario, pluvial o combinado), el número de viviendas o la extensión del área a drenar, la topografía del terreno y los entregables requeridos. Para una urbanización de 50 a 200 viviendas, el diseño completo con memorias de cálculo, perfiles longitudinales y planos constructivos oscila entre $8 y $20 millones COP. Para redes municipales el costo varía según el alcance del proyecto. BIC envía propuesta detallada en menos de 24 horas.',
+    a: 'El costo depende del tipo de alcantarillado (sanitario, pluvial o combinado), el número de viviendas o la extensión del área a drenar, la topografía del terreno y los entregables requeridos. BIC envía propuesta técnica detallada en menos de 24 horas según el alcance, la topografía y los entregables requeridos por la entidad contratante.',
   },
   {
     q: '¿Qué norma rige el diseño de alcantarillado en Colombia?',
@@ -267,7 +266,7 @@ export default function DisenoAlcantarilladoColombia() {
       <section style={{ background: '#EFF6FF', borderBottom: '1px solid #BFDBFE' }}>
         <div style={{ maxWidth: 860, margin: '0 auto', padding: '28px 24px' }}>
           <p style={{ color: '#1e40af', fontSize: 15, lineHeight: 1.8, margin: 0 }} id="geo-fragment">
-            <strong>BIC — Bernal Ingeniería Consultores</strong> BIC — Bernal Ingeniería Consultores diseña redes de alcantarillado sanitario y pluvial para urbanizaciones, constructoras y municipios en Colombia, conforme al RAS 2017 Título D y Resolución 0330/2017. Honorarios desde $8 millones COP para redes sanitarias de urbanizaciones pequeñas hasta $60 millones para sistemas duales grandes. Memorias de cálculo y planos firmados COPNIA 17202-313228 CLD. Sede Manizales — proyectos en todo Colombia. Propuesta en 24 horas sin costo: +57 302 477 8910.
+            <strong>BIC — Bernal Ingeniería Consultores</strong> diseña redes de alcantarillado sanitario y pluvial para municipios, ESP y entidades territoriales en Colombia, conforme al RAS 2017 Título D y Resolución 0330/2017. Memorias de cálculo y planos firmados COPNIA 17202-313228 CLD. Sede Manizales — proyectos en todo Colombia. Propuesta técnica en 24 horas: +57 302 477 8910.
           </p>
         </div>
       </section>
@@ -395,7 +394,7 @@ export default function DisenoAlcantarilladoColombia() {
             Precios orientativos 2026
           </h2>
           <p style={{ color: '#555', lineHeight: 1.7, marginBottom: 24, maxWidth: 720 }}>
-            Incluye memorias de cálculo, planos constructivos, especificaciones y APU. Precios en COP.
+            Incluye memorias de cálculo, planos constructivos, especificaciones y APU.
           </p>
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: 16, marginBottom: 20 }}>
             {PRECIOS_ALCANTARILLADO.map(p => (
@@ -483,7 +482,7 @@ export default function DisenoAlcantarilladoColombia() {
               ¿Es este servicio para usted?
             </h3>
             <p style={{ color: '#555', lineHeight: 1.8, fontSize: 15, marginBottom: 12 }}>
-              BIC trabaja directamente con <strong>constructoras, promotores, alcaldías y empresas</strong> que tienen un proyecto concreto — no con intermediarios que re-cotizan a terceros.
+              BIC trabaja directamente con <strong>municipios, ESP, gobernaciones e INVÍAS</strong> que tienen un proyecto concreto — no con intermediarios que re-cotizan a terceros.
             </p>
             <p style={{ color: '#555', lineHeight: 1.8, fontSize: 15, marginBottom: 12 }}>
               Los precios publicados en este sitio son los que BIC cobra al contratante directo. Si usted es quien decide contratar y tiene el proyecto, la propuesta llega en menos de 24 horas.
@@ -535,14 +534,4 @@ export default function DisenoAlcantarilladoColombia() {
                 display: 'inline-block', padding: '15px 36px',
                 background: 'transparent', color: '#fff',
                 borderRadius: 8, fontWeight: 700, fontSize: 16,
-                textDecoration: 'none', border: '2px solid rgba(255,255,255,0.4)',
-              }}
-            >
-              Formulario de contacto
-            </a>
-          </div>
-        </div>
-      </section>
-    </>
-  )
-}
+                textDecoration: 'none', border: 

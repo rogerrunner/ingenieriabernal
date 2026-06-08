@@ -5,7 +5,7 @@ import SchemaMarkup from '@/components/SchemaMarkup'
 import { BlueprintBg, ThinLine, SectionLabel, Btn, Section, Tag } from '@/components/ui'
 
 const WA = '573024778910'
-const WA_MSG = encodeURIComponent('Hola, quiero cotizar Sistema Contra Incendios NSR-10 J y K')
+const WA_MSG = encodeURIComponent('Hola, necesitamos diseño de sistema contra incendios NSR-10 para un proyecto. ¿Pueden enviarnos una propuesta técnica con sus credenciales COPNIA?')
 
 const seoConfig = {
   title: 'Diseño Red Contra Incendio NSR-10 Colombia | BIC',
@@ -62,7 +62,7 @@ const SISTEMAS = [
 
 const PROYECTOS_TIPOS = [
   { tipo: 'Centros comerciales y grandes superficies', desc: 'Diseño CI completo para locales, área de parqueaderos y bodegas logísticas. Makarí Mall Dosquebradas como referencia ejecutada.' },
-  { tipo: 'Edificios residenciales multifamiliares', desc: 'Torres de apartamentos que requieren sistemas CI por altura (más de 4 pisos) o por área construida según la NSR-10.' },
+  { tipo: 'Hospitales y Centros de Salud Pública', desc: 'Establecimientos hospitalarios con zonas de alto riesgo, gases medicinales y requerimientos diferenciados por la Secretaría de Salud y el Cuerpo de Bomberos.' },
   { tipo: 'Plantas industriales y bodegas logísticas', desc: 'Almacenamiento de mercancías clasificadas, naves de producción y plantas de alimentos con niveles de peligro extra o especiales.' },
   { tipo: 'Hoteles, clínicas y hospitales', desc: 'Edificios de alta ocupación con rutas de evacuación críticas y exigencias reforzadas por la autoridad de bomberos y la entidad habilitadora.' },
   { tipo: 'Colegios y universidades', desc: 'Instalaciones educativas con aulas, laboratorios y cocinas que requieren sistemas de detección diferenciados por zona.' },
@@ -90,7 +90,7 @@ const FAQ_CI = [
   },
   {
     q: '¿Cuánto cuesta el diseño de una red contra incendio?',
-    a: 'El costo del diseño hidráulico de una red contra incendio según NSR-10 varía entre $8 millones y $25 millones COP según el área del proyecto y el sistema requerido (gabinetes, rociadores o mixto). BIC incluye memorias de cálculo y planos listos para trámite de licencia.',
+    a: 'El costo depende del área del proyecto, el número de sistemas requeridos (gabinetes BIE, rociadores, sistema diluvio) y el tipo de edificio. BIC incluye memorias de cálculo y planos firmados COPNIA, listos para trámite de licencia. Propuesta en 24 h sin costo.',
   },
 ]
 

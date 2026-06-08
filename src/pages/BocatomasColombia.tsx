@@ -9,15 +9,15 @@ const WA = '573024778910'
 const WA_MSG = encodeURIComponent('Hola, necesito cotizar el diseño de una bocatoma. ¿Pueden ayudarme con más información?')
 
 const seoConfig = {
-  title: 'Diseño de Bocatoma para tu Proyecto — Acueducto, Riego o Industria | BIC Colombia',
-  description: '¿Necesitas diseñar la bocatoma para tu acueducto veredal, sistema de riego o proyecto agroindustrial? BIC la diseña: HEC-RAS, Res. 0330, firma COPNIA. Propuesta en 24 h. Contrata directo.',
+  title: 'Diseño de Bocatoma para Acueductos Municipales, ESP y Distritos de Riego | COPNIA | BIC',
+  description: 'BIC diseña bocatomas para acueductos municipales, ESP y distritos de adecuación de tierras. Hidráulica fluvial HEC-RAS, Resolución 0330, concesión de aguas ante CAR. Firma COPNIA. Propuesta en 24 h.',
   keywords: [
     'diseño de bocatoma Colombia',
     'bocatoma lateral Colombia',
     'bocatoma frontal Colombia',
     'bocatoma de fondo Colombia',
     'bocatoma acueducto Colombia',
-    'diseño bocatoma acueducto rural',
+    'diseño bocatoma acueducto municipal ESP Colombia',
     'empresa bocatomas Colombia',
     'firma ingeniería bocatoma',
     'consultor bocatoma HEC-RAS',
@@ -145,8 +145,8 @@ const CLIENTES = [
   { tipo: 'Empresas de Servicios Públicos (ESP)', desc: 'Bocatomas para acueductos regionales, sistemas de distribución y agua industrial.' },
   { tipo: 'Distritos y Asociaciones de Riego', desc: 'Captaciones para canales de riego agrícola, sistemas de riego tecnificado y reservorios.' },
   { tipo: 'Empresas Mineras y Agroindustriales', desc: 'Captaciones para procesos industriales, sistemas de enfriamiento y uso en producción.' },
-  { tipo: 'Constructoras e Interventoras', desc: 'Diseños para proyectos de infraestructura donde la bocatoma es componente de una obra mayor.' },
-  { tipo: 'Propietarios Rurales y Fincas', desc: 'Captaciones para acueductos veredales, riego de cultivos y uso doméstico con permiso CAR.' },
+  { tipo: 'Proyectos de Infraestructura Hídrica SGR', desc: 'Bocatomas como componente de proyectos de agua potable financiados con regalías SGR o recursos MinVivienda. Diseños listos para MGA-Web y radicación OCAD.' },
+  { tipo: 'Gobernaciones y Entidades Territoriales', desc: 'Bocatomas para sistemas regionales de agua potable, distritos de riego departamentales y proyectos de adecuación de tierras con fuentes de financiación institucional.' },
 ]
 
 const NORMATIVA = [

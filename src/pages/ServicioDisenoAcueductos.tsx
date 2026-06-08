@@ -28,7 +28,6 @@ const seoConfig = {
     'ingeniero diseño acueducto Colombia COPNIA',
   ],
   canonical: 'https://ingenieriabernal.co/servicios/diseno-acueductos',
-  noindex: true,
 }
 
 const INCLUYE_DISENO = [
@@ -93,14 +92,14 @@ const NORMATIVA = [
 const PRECIOS_ACUEDUCTO = [
   {
     tipo: 'Acueducto veredal 50–200 usuarios',
-    rango: '$8M – $18M COP',
+    rango: 'Propuesta personalizada',
     include: 'Diseño completo (captación, conducción, PTAP básica, almacenamiento, red). Memorias, planos DWG y presupuesto APU.',
     tiempo: '4–6 semanas',
     color: '#17A2B8',
   },
   {
     tipo: 'Sistema municipal 200–500 usuarios',
-    rango: '$15M – $35M COP',
+    rango: 'Propuesta personalizada',
     include: 'Diseño con PTAP completa, modelación EPANET, planos constructivos para licitación y fichas técnicas MGA-Web.',
     tiempo: '6–8 semanas',
     color: '#003B6F',
@@ -151,7 +150,7 @@ const FAQ_ACUEDUCTOS = [
   },
   {
     q: '¿Cuánto cuesta el diseño de un acueducto rural en Colombia?',
-    a: 'El costo de un diseño de acueducto rural oscila entre $8 millones y $35 millones COP según el número de usuarios, la longitud de la red y la complejidad del sistema de tratamiento. Acueductos veredales de 50 a 200 usuarios se ubican entre $8M y $18M; sistemas municipales de 200 a 500 usuarios entre $15M y $35M. BIC entrega propuesta personalizada sin costo en 24 horas.',
+    a: 'El costo depende del número de usuarios, la extensión de la red, la fuente de abastecimiento y los entregables requeridos por la entidad financiadora (SGR, MinVivienda, PDA). BIC entrega propuesta técnica personalizada sin costo en 24 horas.',
   },
   {
     q: '¿Qué norma rige el diseño de acueductos en Colombia?',
@@ -688,12 +687,4 @@ export default function ServicioDisenoAcueductos() {
           </p>
           <Btn
             href={`https://wa.me/${WA}?text=${WA_MSG}`}
-            style={{ background: '#fff', color: '#17A2B8', fontSize: 15, padding: '14px 36px' }}
-          >
-            📱 Propuesta en 24 h — sin costo
-          </Btn>
-        </div>
-      </Section>
-    </>
-  )
-}
+            style

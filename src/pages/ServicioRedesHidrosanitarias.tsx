@@ -9,8 +9,8 @@ const WA = '573024778910'
 const WA_MSG = encodeURIComponent('Hola, tengo un proyecto de edificio comercial / hotel / centro comercial / planta industrial y necesito el diseño de redes hidrosanitarias para licencia de construcción. ¿Pueden cotizarlo?')
 
 const seoConfig = {
-  title: 'Redes Hidrosanitarias para Edificios Comerciales e Industriales — NSR-10 | BIC',
-  description: 'BIC diseña redes hidrosanitarias para edificios comerciales, hoteles, centros comerciales y plantas industriales en Colombia. NSR-10, RAS 2017, NTC 1500. Planos y memorias firmadas COPNIA 17202-313228 CLD para licencia de construcción. Propuesta en 24 horas.',
+  title: 'Diseño Redes Hidrosanitarias NSR-10 — Hospitales, Hoteles y Grandes Proyectos | BIC',
+  description: 'BIC diseña redes hidrosanitarias para hospitales, clínicas, hoteles, centros comerciales y grandes edificios industriales en Colombia. NSR-10, RAS 2017, NTC 1500. Memorias y planos COPNIA para licencia de construcción. Propuesta en 24 h.',
   keywords: [
     'diseño hidrosanitario edificio comercial Colombia',
     'redes hidrosanitarias hotel Colombia',
@@ -24,7 +24,7 @@ const seoConfig = {
     'hidrosanitario NSR-10',
     'diseño hidrosanitario comercial',
     'redes hidrosanitarias industriales',
-    'diseño hidrosanitario constructoras',
+    'diseño hidrosanitario hospital clínica Colombia',
     'planos hidrosanitarios COPNIA',
     'diseño hidrosanitario Manizales',
   ],
@@ -115,17 +115,17 @@ const CONTENIDO_DISENO = [
 const PRECIOS_REDES = [
   {
     tipo: 'Edificio comercial u hotel (5–15 pisos)',
-    rango: '$12M – $28M COP',
+    rango: 'Propuesta personalizada',
     detalle: 'Todos los sistemas (AP, ACS, AR, AL) con isometrías completas, memorias Hunter/Hazen-Williams y CI NSR-10 si aplica. Entrega en 3–5 semanas.',
   },
   {
     tipo: 'Centro comercial o planta industrial',
-    rango: '$20M – $50M COP',
+    rango: 'Propuesta personalizada',
     detalle: 'Redes completas + sistema CI obligatorio NSR-10 Capítulo K. Incluye diseño de bomba jockey y bomba principal. Entrega en 4–8 semanas.',
   },
   {
     tipo: 'Edificio residencial 5–10 pisos',
-    rango: '$6M – $15M COP',
+    rango: 'Propuesta personalizada',
     detalle: 'Todos los sistemas (AP, AR, AL) con isometrías y memorias completas. Entrega en 2–3 semanas.',
   },
 ]
