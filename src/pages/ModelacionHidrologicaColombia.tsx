@@ -378,6 +378,7 @@ export default function ModelacionHidrologicaColombia() {
           ctaSecondary={{ label: 'Ver gestión de riesgo', href: '/gestion-riesgo-hidrico' }}
       
         />
-      </>
-    )
+      </BlueprintBg>
+    </>
+  )
 }
