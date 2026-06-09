@@ -94,8 +94,8 @@ export default function EmpresaIndustriaColombia() {
 
   return (
     <>
-      <SEOHead {...seoConfig} />
-      <SchemaMarkup schema={schema} />
+      <SEOHead config={seoConfig} />
+      <SchemaMarkup type="service" />
 
       {/* Hero */}
       <BlueprintBg>
@@ -108,7 +108,7 @@ export default function EmpresaIndustriaColombia() {
             BIC elabora la ronda hídrica, el estudio de amenaza por inundación, la concesión de aguas y los diseños hidrosanitarios que necesita su empresa para avanzar ante la CAR, Planeación o la curaduría. COPNIA vigente. Director accesible. Metodología aceptada a nivel nacional.
           </p>
           <div style={{ display: 'flex', gap: 12, justifyContent: 'center', flexWrap: 'wrap' }}>
-            <Btn href={`https://wa.me/${WA}?text=${WA_MSG}`} target="_blank">
+            <Btn href={`https://wa.me/${WA}?text=${WA_MSG}`}>
               📱 Diagnóstico sin costo — WhatsApp
             </Btn>
             <Btn variant="outline" href="#situaciones">
@@ -126,7 +126,7 @@ export default function EmpresaIndustriaColombia() {
 
 
       {/* Situaciones */}
-      <Section id="situaciones" bg="light">
+      <Section bg="#F8FAFC">
         <div style={{ maxWidth: 900, margin: '0 auto' }}>
           <SectionLabel>¿Cuál es su situación?</SectionLabel>
           <h2 style={{ fontFamily: "'Montserrat', sans-serif", fontWeight: 800, color: '#003B6F', fontSize: 'clamp(1.3rem, 2.5vw, 1.8rem)', marginBottom: '2rem' }}>
@@ -148,7 +148,7 @@ export default function EmpresaIndustriaColombia() {
       </Section>
 
       {/* CARs */}
-      <Section bg="white">
+      <Section bg="#ffffff">
         <div style={{ maxWidth: 860, margin: '0 auto', textAlign: 'center' }}>
           <SectionLabel>Cobertura nacional</SectionLabel>
           <h2 style={{ fontFamily: "'Montserrat', sans-serif", fontWeight: 800, color: '#003B6F', fontSize: 'clamp(1.2rem, 2.5vw, 1.6rem)', marginBottom: '1rem' }}>
@@ -167,7 +167,7 @@ export default function EmpresaIndustriaColombia() {
       </Section>
 
       {/* FAQ */}
-      <Section bg="light">
+      <Section bg="#F8FAFC">
         <div style={{ maxWidth: 780, margin: '0 auto' }}>
           <SectionLabel>Preguntas frecuentes</SectionLabel>
           <h2 style={{ fontFamily: "'Montserrat', sans-serif", fontWeight: 800, color: '#003B6F', fontSize: 'clamp(1.3rem, 2.5vw, 1.7rem)', marginBottom: '1.5rem' }}>
@@ -183,7 +183,7 @@ export default function EmpresaIndustriaColombia() {
       </Section>
 
       {/* Form */}
-      <Section bg="white">
+      <Section bg="#ffffff">
         <div style={{ maxWidth: 780, margin: '0 auto' }}>
           <QuoteFormInline serviceId="decreto1807" />
         </div>
