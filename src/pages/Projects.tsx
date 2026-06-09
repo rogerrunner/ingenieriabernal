@@ -227,9 +227,6 @@ export default function Projects() {
     <>
       <SEOHead config={SEO_CONFIG} />
       <SchemaMarkup type="service"
-        serviceName="Portafolio Ingenieria Hidraulica BIC Colombia"
-        serviceDesc="Proyectos reales de ingenieria hidraulica, gestion del riesgo y diseno hidrosanitario. BIC COPNIA 17202-313228 CLD."
-        serviceUrl="/proyectos"
       />
 
       <section style={{ background: '#003B6F', padding: '120px 40px 64px', position: 'relative', overflow: 'hidden' }}>
