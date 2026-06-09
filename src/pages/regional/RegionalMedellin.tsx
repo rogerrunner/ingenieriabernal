@@ -30,28 +30,28 @@ const seoConfig = {
 
 const FAQ_ITEMS = [
   {
-    question: '¿BIC realiza modelación hidráulica e hidrológica para proyectos en Medellín y Antioquia?',
-    answer:
+    q: '¿BIC realiza modelación hidráulica e hidrológica para proyectos en Medellín y Antioquia?',
+    a:
       'Sí. BIC ejecuta modelación hidráulica HEC-RAS 1D y 2D y modelación hidrológica HEC-HMS para proyectos en Medellín y todo Antioquia. Los estudios se elaboran de forma remota con visitas técnicas cuando el proyecto lo requiere. La matrícula COPNIA 17202-313228 es válida en todo Colombia, incluida el área metropolitana de Medellín.',
   },
   {
-    question: '¿Cuánto cuesta un estudio de gestión del riesgo hídrico (Decreto 1807) para plan parcial en Medellín?',
-    answer:
+    q: '¿Cuánto cuesta un estudio de gestión del riesgo hídrico (Decreto 1807) para plan parcial en Medellín?',
+    a:
       'Según el área y la complejidad del sistema hídrico, los estudios para planes parciales en el área metropolitana de Medellín oscilan entre $18M y $60M COP. Incluye modelación HEC-RAS 2D, zonificación de amenaza y concepto técnico para radicación ante Planeación Municipal y el AMVA. BIC envía propuesta sin costo en menos de 24 horas.',
   },
   {
-    question: '¿BIC conoce los requisitos del AMVA y CORANTIOQUIA para estudios hídricos?',
-    answer:
+    q: '¿BIC conoce los requisitos del AMVA y CORANTIOQUIA para estudios hídricos?',
+    a:
       'Sí. BIC conoce los requisitos técnicos del Área Metropolitana del Valle de Aburrá (AMVA) y de CORANTIOQUIA para estudios de amenaza hídrica, concesiones de agua y vertimientos. Entregamos los estudios en el formato exigido para radicación ante estas entidades.',
   },
   {
-    question: '¿Pueden diseñar PTAP y PTAR para proyectos industriales en Antioquia?',
-    answer:
+    q: '¿Pueden diseñar PTAP y PTAR para proyectos industriales en Antioquia?',
+    a:
       'Sí. Diseñamos plantas de tratamiento de agua potable (PTAP) y plantas de tratamiento de aguas residuales (PTAR) para industrias, zonas francas, parques agroindustriales y conjuntos residenciales en Antioquia. Costos entre $10M y $40M COP según capacidad.',
   },
   {
-    question: '¿Formulan proyectos de agua y saneamiento para municipios de Antioquia con SGR?',
-    answer:
+    q: '¿Formulan proyectos de agua y saneamiento para municipios de Antioquia con SGR?',
+    a:
       'Sí. BIC formula proyectos de agua potable y saneamiento ante el SGR (MGA-Web) para municipios de Antioquia, desde la formulación técnica hasta el expediente completo para el OCAD departamental. Proyectos entre $6M y $15M COP en honorarios de consultoría.',
   },
 ]
