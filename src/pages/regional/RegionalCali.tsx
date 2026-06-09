@@ -30,28 +30,28 @@ const seoConfig = {
 
 const FAQ_ITEMS = [
   {
-    question: '¿BIC puede ejecutar modelación hidráulica e hidrológica para proyectos en Cali y el Valle del Cauca?',
-    answer:
+    q: '¿BIC puede ejecutar modelación hidráulica e hidrológica para proyectos en Cali y el Valle del Cauca?',
+    a:
       'Sí. BIC ejecuta modelación hidráulica HEC-RAS 1D y 2D y modelación hidrológica HEC-HMS para proyectos en todo Colombia, incluyendo Cali y el Valle del Cauca. Los estudios de manchas de inundación, caudales de diseño y amenaza hídrica se elaboran de forma remota con visitas técnicas cuando el proyecto lo requiere. La firma COPNIA 17202-313228 es válida en todo el país.',
   },
   {
-    question: '¿Cuánto cuesta un estudio de gestión del riesgo hídrico (Decreto 1807) para plan parcial en Cali?',
-    answer:
+    q: '¿Cuánto cuesta un estudio de gestión del riesgo hídrico (Decreto 1807) para plan parcial en Cali?',
+    a:
       'Los honorarios dependen del área y la complejidad hídrica del polígono. Para predios menores de 5 ha, el costo oscila entre $18M y $30M COP. Para polígonos de 5 a 20 ha con modelación HEC-RAS 2D completa, entre $30M y $60M COP. BIC envía propuesta técnica en menos de 24 horas, sin costo.',
   },
   {
-    question: '¿Diseñan PTAP y PTAR para proyectos industriales y urbanizaciones en el Valle del Cauca?',
-    answer:
+    q: '¿Diseñan PTAP y PTAR para proyectos industriales y urbanizaciones en el Valle del Cauca?',
+    a:
       'Sí. Diseñamos plantas de tratamiento de agua potable (PTAP) y plantas de tratamiento de aguas residuales (PTAR) para industrias, proyectos agroindustriales y conjuntos residenciales. Los costos para plantas industriales en el Valle van de $10M a $40M COP según la capacidad requerida.',
   },
   {
-    question: '¿Qué corporación ambiental regula los proyectos hídricos en Cali y el Valle del Cauca?',
-    answer:
+    q: '¿Qué corporación ambiental regula los proyectos hídricos en Cali y el Valle del Cauca?',
+    a:
       'La CVC (Corporación Autónoma Regional del Valle del Cauca) regula los permisos de concesión de aguas, vertimientos y conceptos de riesgo hídrico. BIC conoce los requisitos técnicos de la CVC y entrega los estudios en el formato exigido para radicación.',
   },
   {
-    question: '¿Pueden formular proyectos de agua y saneamiento para municipios del Valle del Cauca con recursos SGR?',
-    answer:
+    q: '¿Pueden formular proyectos de agua y saneamiento para municipios del Valle del Cauca con recursos SGR?',
+    a:
       'Sí. BIC formula proyectos de agua potable y saneamiento ante el Sistema General de Regalías (SGR) con MGA-Web para municipios de Valle del Cauca. Trabajamos desde la formulación hasta la estructuración del expediente para presentación ante el OCAD.',
   },
 ]
