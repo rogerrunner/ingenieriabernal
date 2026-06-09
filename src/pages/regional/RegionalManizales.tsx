@@ -30,28 +30,28 @@ const seoConfig = {
 
 const FAQ_ITEMS = [
   {
-    question: '¿BIC tiene experiencia en estudios de gestión del riesgo hídrico (Decreto 1807) en Manizales y Caldas?',
-    answer:
+    q: '¿BIC tiene experiencia en estudios de gestión del riesgo hídrico (Decreto 1807) en Manizales y Caldas?',
+    a:
       'Sí. BIC ha realizado estudios de gestión del riesgo para planes parciales y licencias de urbanismo en Caldas y el Eje Cafetero, con modelación HEC-RAS 2D y entrega ante curaduría y CORPOCALDAS. Somos la firma de referencia para desarrolladores que necesitan viabilidad ambiental en zonas de amenaza hídrica.',
   },
   {
-    question: '¿Cuánto cuesta un estudio de gestión del riesgo hídrico en Manizales?',
-    answer:
+    q: '¿Cuánto cuesta un estudio de gestión del riesgo hídrico en Manizales?',
+    a:
       'Depende del área y la complejidad del proyecto. Los estudios de gestión del riesgo hídrico (Decreto 1807) para planes parciales en Caldas oscilan entre $18M y $60M COP. Los estudios de riesgo hídrico para licencias residenciales parten de $8M COP. Cotiza sin costo en menos de 24 horas.',
   },
   {
-    question: '¿BIC trabaja con municipios y contratos financiados con regalías SGR en Caldas?',
-    answer:
+    q: '¿BIC trabaja con municipios y contratos financiados con regalías SGR en Caldas?',
+    a:
       'Sí. BIC formula y ejecuta proyectos de agua potable, saneamiento y gestión del riesgo ante el Sistema General de Regalías (SGR) para municipios de Caldas y el Eje Cafetero. Apoyamos desde la formulación MGA-Web hasta la ejecución técnica con firma COPNIA.',
   },
   {
-    question: '¿Diseñan acueductos y alcantarillados para urbanizaciones y constructoras grandes?',
-    answer:
+    q: '¿Diseñan acueductos y alcantarillados para urbanizaciones y constructoras grandes?',
+    a:
       'Sí. BIC diseña redes de acueducto y alcantarillado bajo RAS 2017 y Resolución 0330/2017 para urbanizaciones, condominios y proyectos de vivienda de interés social en Caldas. Los proyectos para constructoras medianas y grandes oscilan entre $12M y $35M COP según el número de unidades y longitudes de red.',
   },
   {
-    question: '¿BIC hace modelación HEC-RAS para POT y estudios de amenaza hídrica en municipios de Caldas?',
-    answer:
+    q: '¿BIC hace modelación HEC-RAS para POT y estudios de amenaza hídrica en municipios de Caldas?',
+    a:
       'Sí. Hemos apoyado la revisión y ajuste de POT en varios municipios de Caldas con modelación hidráulica HEC-RAS 1D y 2D, manchas de inundación y zonificación de amenaza. También hacemos estudios de torrencialidad para quebradas y ríos de montaña.',
   },
 ]
