@@ -3,7 +3,7 @@ import { BlueprintBg, Tag, ThinLine, SectionLabel, Btn, Section } from '../compo
 import SchemaMarkup from '../components/SchemaMarkup'
 
 const WA = '573024778910'
-const WEBHOOK_URL = import.meta.env.VITE_WEBHOOK_URL as string | undefined
+const WEBHOOK_URL = (import.meta as any).env?.VITE_WEBHOOK_URL as string | undefined
 
 const SERVICES = [
   'Diseño hidrosanitario y contra incendios (NSR-10)',
