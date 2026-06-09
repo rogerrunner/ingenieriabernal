@@ -8,8 +8,8 @@ const WA = '573024778910'
 const WA_MSG = encodeURIComponent('Hola, necesitamos diseño de sistema contra incendios NSR-10 para un proyecto. ¿Pueden enviarnos una propuesta técnica con sus credenciales COPNIA?')
 
 const seoConfig = {
-  title: 'Diseño Red Contra Incendio NSR-10 Colombia | BIC',
-  description: 'Diseño hidráulico de redes contra incendio NSR-10 Título J, NFPA 13 y NFPA 14. Memorias COPNIA incluidas. Manizales, Eje Cafetero y Colombia. Cotiza hoy.',
+  title: 'Diseño Sistema Contra Incendios NSR-10 Título J | Caldas · Eje Cafetero · Colombia | BIC',
+  description: 'Diseño red contraincendio NSR-10 Títulos J y K — rociadores NFPA 13, gabinetes BIE, columnas húmedas NFPA 14, cuarto de bombas NFPA 20. Memorias COPNIA firmadas. Manizales, Eje Cafetero, Caldas, Colombia. Propuesta en 24 h.',
   keywords: [
     'sistemas contra incendios NSR-10 Colombia',
     'diseño sistema contra incendio NSR-10',
