@@ -31,28 +31,28 @@ const seoConfig = {
 
 const FAQ_ITEMS = [
   {
-    question: '¿BIC tiene experiencia en estudios de gestión del riesgo hídrico (Decreto 1807) en Pereira y Risaralda?',
-    answer:
+    q: '¿BIC tiene experiencia en estudios de gestión del riesgo hídrico (Decreto 1807) en Pereira y Risaralda?',
+    a:
       'Sí. BIC ha realizado estudios de gestión del riesgo para planes parciales y licencias de urbanismo en Risaralda y el Eje Cafetero, con modelación HEC-RAS 2D y entrega ante curaduría y CARDER. Entre los proyectos de referencia de BIC en la región figura el diseño hidrosanitario y CI del Makarí Mall en Dosquebradas, uno de los centros comerciales más importantes del Eje Cafetero.',
   },
   {
-    question: '¿Cuánto cuesta un estudio de gestión del riesgo hídrico en Pereira?',
-    answer:
+    q: '¿Cuánto cuesta un estudio de gestión del riesgo hídrico en Pereira?',
+    a:
       'Depende del área y la complejidad. Los estudios de gestión del riesgo hídrico (Decreto 1807) para planes parciales en Risaralda oscilan entre $18M y $60M COP. Los estudios de riesgo para licencias residenciales parten de $8M COP. Cotiza sin costo en menos de 24 horas.',
   },
   {
-    question: '¿BIC trabaja con municipios de Risaralda que financian proyectos con regalías SGR?',
-    answer:
+    q: '¿BIC trabaja con municipios de Risaralda que financian proyectos con regalías SGR?',
+    a:
       'Sí. BIC formula y estructura proyectos de agua potable, saneamiento y gestión del riesgo ante el Sistema General de Regalías (SGR) para municipios de Risaralda y el Eje Cafetero. Apoyamos desde la formulación MGA-Web hasta la ejecución técnica con firma COPNIA.',
   },
   {
-    question: '¿Diseñan acueductos y alcantarillados para urbanizaciones en Pereira?',
-    answer:
+    q: '¿Diseñan acueductos y alcantarillados para urbanizaciones en Pereira?',
+    a:
       'Sí. BIC diseña redes de acueducto y alcantarillado bajo RAS 2017 y Resolución 0330/2017 para urbanizaciones, condominios y proyectos de vivienda en Risaralda. Los proyectos para constructoras medianas y grandes oscilan entre $12M y $40M COP según el número de unidades y longitudes de red.',
   },
   {
-    question: '¿BIC hace modelación HEC-RAS para POT y estudios de amenaza hídrica en municipios de Risaralda?',
-    answer:
+    q: '¿BIC hace modelación HEC-RAS para POT y estudios de amenaza hídrica en municipios de Risaralda?',
+    a:
       'Sí. Hemos apoyado revisiones de POT con modelación hidráulica HEC-RAS 1D y 2D, manchas de inundación y zonificación de amenaza para municipios del Eje Cafetero. También realizamos estudios de torrencialidad para quebradas de montaña, frecuentes en Risaralda.',
   },
 ]
