@@ -102,8 +102,8 @@ export default function AlcaldiaMunicipioColombia() {
 
   return (
     <>
-      <SEOHead {...seoConfig} />
-      <SchemaMarkup schema={schema} />
+      <SEOHead config={seoConfig} />
+      <SchemaMarkup type="service" />
 
       {/* Hero */}
       <BlueprintBg>
@@ -116,7 +116,7 @@ export default function AlcaldiaMunicipioColombia() {
             BIC presta consultoría hidráulica especializada a entes territoriales y operadores de servicios públicos en Colombia. Formulamos proyectos en MGA-Web, diseñamos acueductos y PTAP según RAS 2017, y elaboramos los estudios de riesgo hídrico que pide el Decreto 1807. Contrato verificable en SECOP. COPNIA vigente.
           </p>
           <div style={{ display: 'flex', gap: 12, justifyContent: 'center', flexWrap: 'wrap' }}>
-            <Btn href={`https://wa.me/${WA}?text=${WA_MSG}`} target="_blank">
+            <Btn href={`https://wa.me/${WA}?text=${WA_MSG}`}>
               📱 Consultar por WhatsApp
             </Btn>
             <Btn variant="outline" href="#servicios">
@@ -132,7 +132,7 @@ export default function AlcaldiaMunicipioColombia() {
       </BlueprintBg>
 
       {/* Referencias verificables */}
-      <Section bg="white">
+      <Section bg="#ffffff">
         <div style={{ maxWidth: 780, margin: '0 auto' }}>
           <SectionLabel>Experiencia verificable</SectionLabel>
           <h2 style={{ fontFamily: "'Montserrat', sans-serif", fontWeight: 800, color: '#003B6F', fontSize: 'clamp(1.2rem, 2.5vw, 1.6rem)', marginBottom: '1.25rem' }}>
@@ -157,7 +157,7 @@ export default function AlcaldiaMunicipioColombia() {
       </Section>
 
       {/* Servicios */}
-      <Section id="servicios" bg="light">
+      <Section bg="#F8FAFC">
         <div style={{ maxWidth: 900, margin: '0 auto' }}>
           <SectionLabel>Servicios para entidades públicas</SectionLabel>
           <h2 style={{ fontFamily: "'Montserrat', sans-serif", fontWeight: 800, color: '#003B6F', fontSize: 'clamp(1.3rem, 2.5vw, 1.8rem)', marginBottom: '2rem' }}>
@@ -180,7 +180,7 @@ export default function AlcaldiaMunicipioColombia() {
       </Section>
 
       {/* FAQ */}
-      <Section bg="white">
+      <Section bg="#ffffff">
         <div style={{ maxWidth: 780, margin: '0 auto' }}>
           <SectionLabel>Preguntas frecuentes</SectionLabel>
           <h2 style={{ fontFamily: "'Montserrat', sans-serif", fontWeight: 800, color: '#003B6F', fontSize: 'clamp(1.3rem, 2.5vw, 1.7rem)', marginBottom: '1.5rem' }}>
@@ -196,7 +196,7 @@ export default function AlcaldiaMunicipioColombia() {
       </Section>
 
       {/* Form */}
-      <Section bg="light">
+      <Section bg="#F8FAFC">
         <div style={{ maxWidth: 780, margin: '0 auto' }}>
           <QuoteFormInline serviceId="regalias" />
         </div>
