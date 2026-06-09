@@ -30,28 +30,28 @@ const seoConfig = {
 
 const FAQ_ITEMS = [
   {
-    question: '¿BIC es la firma de ingeniería hidráulica de referencia en el Eje Cafetero?',
-    answer:
+    q: '¿BIC es la firma de ingeniería hidráulica de referencia en el Eje Cafetero?',
+    a:
       'Sí. BIC tiene sede en Manizales y ha ejecutado proyectos hidráulicos en Caldas, Risaralda y Quindío durante más de 10 años. Somos especializados en gestión del riesgo hídrico (Decreto 1807), modelación HEC-RAS para POT y planes parciales, y diseño de infraestructura de agua potable y saneamiento para constructoras medianas y grandes.',
   },
   {
-    question: '¿Cuánto cuesta un estudio de gestión del riesgo hídrico en el Eje Cafetero?',
-    answer:
+    q: '¿Cuánto cuesta un estudio de gestión del riesgo hídrico en el Eje Cafetero?',
+    a:
       'Los estudios de gestión del riesgo hídrico para planes parciales y licencias de urbanismo en el Eje Cafetero oscilan entre $18M y $60M COP según el área, la cantidad de quebradas o ríos a modelar y la complejidad del terreno. La cotización es sin costo y la respuesta llega en menos de 24 horas.',
   },
   {
-    question: '¿Pueden diseñar PTAP o PTAR para proyectos industriales en el Eje Cafetero?',
-    answer:
+    q: '¿Pueden diseñar PTAP o PTAR para proyectos industriales en el Eje Cafetero?',
+    a:
       'Sí. Diseñamos plantas de tratamiento de agua potable (PTAP) y plantas de tratamiento de aguas residuales (PTAR) para industrias agrícolas, cafeteras, agroindustriales y conjuntos residenciales en Caldas, Risaralda y Quindío. Los costos van de $8M a $40M COP según la capacidad de la planta.',
   },
   {
-    question: '¿BIC trabaja con municipios del Eje Cafetero para proyectos con regalías SGR?',
-    answer:
+    q: '¿BIC trabaja con municipios del Eje Cafetero para proyectos con regalías SGR?',
+    a:
       'Sí. Formulamos y estructuramos proyectos de agua potable, saneamiento y gestión del riesgo ante el SGR con MGA-Web para municipios de los tres departamentos. Apoyamos desde la formulación hasta la supervisión técnica del contrato. Proyectos entre $6M y $15M COP en esta modalidad.',
   },
   {
-    question: '¿Atienden constructoras y promotores de urbanizaciones en Pereira, Armenia y Manizales?',
-    answer:
+    q: '¿Atienden constructoras y promotores de urbanizaciones en Pereira, Armenia y Manizales?',
+    a:
       'Sí. BIC trabaja directamente con constructoras y promotores que desarrollan urbanizaciones, condominios y proyectos de vivienda en las tres ciudades principales del Eje Cafetero. Entregamos memorias de cálculo, planos firmados COPNIA y toda la documentación requerida ante curaduría y corporaciones ambientales.',
   },
 ]
