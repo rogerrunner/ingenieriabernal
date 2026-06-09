@@ -258,11 +258,11 @@ const articlesD: Record<string, {
   },
 
   'decreto-1807-riesgo-inundacion-colombia': {
-    title: 'Decreto 1807 de 2014: guia completa para estudios de riesgo en Colombia (POT, licencias y planes parciales)',
+    title: 'Decreto 1807 de 2014 Colombia: ¿Qué Estudios Exige? Guía Completa | BIC',
     date: 'Mayo 2026',
     readTime: '14 min',
     category: 'Riesgo Hidrico',
-    metaDesc: 'Todo lo que necesitas saber sobre el Decreto 1807 de 2014 en Colombia: que estudios exige, como se elaboran, quien puede firmarlos, cuanto cuestan y como afectan las licencias de construccion y los planes parciales.',
+    metaDesc: 'Decreto 1807 de 2014: qué estudios exige para POT, licencias de construcción y planes parciales en Colombia. Metodología, costos reales y quién los firma. COPNIA. Propuesta en 24 h.',
     keywords: 'Decreto 1807 Colombia riesgo inundacion, estudios Decreto 1807 plan parcial Colombia, amenaza inundacion licencia construccion Colombia, riesgo hidrico POT Colombia',
     body: <>
       <p>El <strong>Decreto 1807 de 2014</strong> es, junto con la Ley 388 de 1997, el instrumento normativo que mas afecta a los promotores inmobiliarios, alcaldias y propietarios de predios en zonas de amenaza hidrica en Colombia. Desde su entrada en vigencia, obtener una licencia de construccion, aprobar un plan parcial o revisar un POT en zonas de expansion urbana exige estudios tecnicos detallados que van mucho mas alla de un simple certificado de usos del suelo. Esta guia explica, sin tecnicismos innecesarios pero con precision normativa, que exige el Decreto, a quien le aplica y como obtener los estudios correctamente.</p>
