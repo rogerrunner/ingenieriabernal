@@ -104,8 +104,8 @@ export default function PromotorUrbanizacionColombia() {
 
   return (
     <>
-      <SEOHead {...seoConfig} />
-      <SchemaMarkup schema={schema} />
+      <SEOHead config={seoConfig} />
+      <SchemaMarkup type="service" />
 
       {/* Hero */}
       <BlueprintBg>
@@ -118,7 +118,7 @@ export default function PromotorUrbanizacionColombia() {
             BIC entrega los estudios hidrológicos, hidráulicos y de diseño que Planeación, la CAR y la curaduría le exigen para avanzar su plan parcial o urbanización en Colombia. Director disponible, matrícula COPNIA vigente, resultados verificables.
           </p>
           <div style={{ display: 'flex', gap: 12, justifyContent: 'center', flexWrap: 'wrap' }}>
-            <Btn href={`https://wa.me/${WA}?text=${WA_MSG}`} target="_blank">
+            <Btn href={`https://wa.me/${WA}?text=${WA_MSG}`}>
               📱 Diagnóstico sin costo — WhatsApp
             </Btn>
             <Btn variant="outline" href="#propuesta">
@@ -136,7 +136,7 @@ export default function PromotorUrbanizacionColombia() {
 
 
       {/* Servicios */}
-      <Section id="propuesta" bg="light">
+      <Section bg="#F8FAFC">
         <div style={{ maxWidth: 900, margin: '0 auto' }}>
           <SectionLabel>Servicios para su proyecto</SectionLabel>
           <h2 style={{ fontFamily: "'Montserrat', sans-serif", fontWeight: 800, color: '#003B6F', fontSize: 'clamp(1.4rem, 3vw, 1.9rem)', marginBottom: '2rem' }}>
@@ -159,7 +159,7 @@ export default function PromotorUrbanizacionColombia() {
       </Section>
 
       {/* Proceso */}
-      <Section bg="white">
+      <Section bg="#ffffff">
         <div style={{ maxWidth: 860, margin: '0 auto' }}>
           <SectionLabel>Cómo trabajamos</SectionLabel>
           <h2 style={{ fontFamily: "'Montserrat', sans-serif", fontWeight: 800, color: '#003B6F', fontSize: 'clamp(1.3rem, 2.5vw, 1.7rem)', marginBottom: '2rem' }}>
@@ -178,7 +178,7 @@ export default function PromotorUrbanizacionColombia() {
       </Section>
 
       {/* FAQ */}
-      <Section bg="light">
+      <Section bg="#F8FAFC">
         <div style={{ maxWidth: 780, margin: '0 auto' }}>
           <SectionLabel>Preguntas frecuentes</SectionLabel>
           <h2 style={{ fontFamily: "'Montserrat', sans-serif", fontWeight: 800, color: '#003B6F', fontSize: 'clamp(1.3rem, 2.5vw, 1.7rem)', marginBottom: '1.5rem' }}>
@@ -194,7 +194,7 @@ export default function PromotorUrbanizacionColombia() {
       </Section>
 
       {/* Form */}
-      <Section bg="white">
+      <Section bg="#ffffff">
         <div style={{ maxWidth: 780, margin: '0 auto' }}>
           <QuoteFormInline serviceId="decreto1807" />
         </div>
