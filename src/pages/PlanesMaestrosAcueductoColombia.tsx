@@ -213,8 +213,8 @@ export default function PlanesMaestrosAcueductoColombia() {
 
   return (
     <>
-      <SEOHead {...seoConfig} />
-      <SchemaMarkup data={schemaData} />
+      <SEOHead config={seoConfig} />
+      <SchemaMarkup type="service" />
       <SpeakableSchema
         cssSelector="#pmaa-intro, #pmaa-que-es"
         url="https://ingenieriabernal.co/planes-maestros-acueducto-alcantarillado-colombia"
@@ -222,7 +222,7 @@ export default function PlanesMaestrosAcueductoColombia() {
 
       <BlueprintBg>
         {/* ── HERO ── */}
-        <Section id="pmaa-intro" className="pt-20 pb-12 text-center max-w-4xl mx-auto px-4">
+        <Section style={{ maxWidth: 896, margin: "0 auto", paddingLeft: 16, paddingRight: 16, paddingTop: 80, paddingBottom: 48, textAlign: "center" }}>
           <SectionLabel>Acueducto · Alcantarillado · Ley 142</SectionLabel>
           <h1 className="text-3xl md:text-5xl font-bold mt-3 mb-4 leading-tight">
             Plan Maestro de Acueducto<br className="hidden md:block" /> y Alcantarillado — Colombia
@@ -240,20 +240,17 @@ export default function PlanesMaestrosAcueductoColombia() {
           <div className="flex flex-wrap gap-4 justify-center">
             <Btn
               href={`https://wa.me/${WA}?text=${WA_MSG}`}
-              target="_blank"
-              rel="noopener noreferrer"
-              variant="primary"
             >
               Solicitar propuesta técnica →
             </Btn>
-            <Btn href="/servicios/diseno-acueductos" variant="secondary">
+            <Btn href="/servicios/diseno-acueductos" variant="outline">
               Ver diseño de acueductos
             </Btn>
           </div>
         </Section>
 
         {/* ── QUÉ ES ── */}
-        <Section id="pmaa-que-es" className="max-w-3xl mx-auto px-4 py-10">
+        <Section style={{ maxWidth: 768, margin: "0 auto", paddingLeft: 16, paddingRight: 16, paddingTop: 40, paddingBottom: 40 }}>
           <h2 className="text-2xl font-bold mb-4">¿Qué es un Plan Maestro de Acueducto y Alcantarillado?</h2>
           <p className="text-slate-300 leading-relaxed mb-4">
             El <strong>Plan Maestro de Acueducto y Alcantarillado (PMAA)</strong> es el instrumento técnico de planificación a largo plazo que define las obras de infraestructura, expansión y rehabilitación que requiere el sistema de agua potable y saneamiento de un municipio o ESP para garantizar la continuidad, cobertura y calidad del servicio durante un horizonte de <strong>25 años</strong>, conforme al <strong>RAS 2017 (Resolución 0330)</strong> y la <strong>Ley 142 de 1994</strong>.
@@ -267,7 +264,7 @@ export default function PlanesMaestrosAcueductoColombia() {
         </Section>
 
         {/* ── COMPONENTES ── */}
-        <Section className="max-w-6xl mx-auto px-4 py-10">
+        <Section style={{ maxWidth: 1152, margin: "0 auto", paddingLeft: 16, paddingRight: 16, paddingTop: 40, paddingBottom: 40 }}>
           <SectionLabel>Alcance técnico</SectionLabel>
           <h2 className="text-2xl font-bold mt-2 mb-8 text-center">Componentes del PMAA</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -282,7 +279,7 @@ export default function PlanesMaestrosAcueductoColombia() {
         </Section>
 
         {/* ── PARA QUIÉN ── */}
-        <Section className="max-w-5xl mx-auto px-4 py-10">
+        <Section style={{ maxWidth: 1024, margin: "0 auto", paddingLeft: 16, paddingRight: 16, paddingTop: 40, paddingBottom: 40 }}>
           <SectionLabel>Clientes objetivo</SectionLabel>
           <h2 className="text-2xl font-bold mt-2 mb-8 text-center">¿Para quién es el PMAA?</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
@@ -296,7 +293,7 @@ export default function PlanesMaestrosAcueductoColombia() {
         </Section>
 
         {/* ── MARCO NORMATIVO ── */}
-        <Section className="max-w-5xl mx-auto px-4 py-10">
+        <Section style={{ maxWidth: 1024, margin: "0 auto", paddingLeft: 16, paddingRight: 16, paddingTop: 40, paddingBottom: 40 }}>
           <SectionLabel>Marco normativo</SectionLabel>
           <h2 className="text-2xl font-bold mt-2 mb-8 text-center">Normativa que rige el PMAA en Colombia</h2>
           <div className="space-y-4">
@@ -312,7 +309,7 @@ export default function PlanesMaestrosAcueductoColombia() {
         </Section>
 
         {/* ── PRECIOS ── */}
-        <Section className="max-w-3xl mx-auto px-4 py-10">
+        <Section style={{ maxWidth: 768, margin: "0 auto", paddingLeft: 16, paddingRight: 16, paddingTop: 40, paddingBottom: 40 }}>
           <SectionLabel>Honorarios de referencia</SectionLabel>
           <h2 className="text-2xl font-bold mt-2 mb-2 text-center">Rango de Honorarios</h2>
           <p className="text-slate-400 text-center text-sm mb-6">
@@ -342,7 +339,7 @@ export default function PlanesMaestrosAcueductoColombia() {
         </Section>
 
         {/* ── FORMULARIO ── */}
-        <Section className="max-w-2xl mx-auto px-4 py-10">
+        <Section style={{ maxWidth: 672, margin: "0 auto", paddingLeft: 16, paddingRight: 16, paddingTop: 40, paddingBottom: 40 }}>
           <SectionLabel>Propuesta sin costo</SectionLabel>
           <h2 className="text-2xl font-bold mt-2 mb-2 text-center">Solicite su propuesta técnica</h2>
           <p className="text-slate-400 text-center text-sm mb-6">
@@ -352,7 +349,7 @@ export default function PlanesMaestrosAcueductoColombia() {
         </Section>
 
         {/* ── FAQ ── */}
-        <Section className="max-w-3xl mx-auto px-4 py-10">
+        <Section style={{ maxWidth: 768, margin: "0 auto", paddingLeft: 16, paddingRight: 16, paddingTop: 40, paddingBottom: 40 }}>
           <SectionLabel>Preguntas frecuentes</SectionLabel>
           <h2 className="text-2xl font-bold mt-2 mb-8 text-center">Preguntas frecuentes — PMAA</h2>
           <div className="space-y-5">
@@ -366,7 +363,7 @@ export default function PlanesMaestrosAcueductoColombia() {
         </Section>
 
         {/* ── CTA FINAL ── */}
-        <Section className="max-w-3xl mx-auto px-4 py-10 pb-20">
+        <Section style={{ maxWidth: 768, margin: "0 auto", paddingLeft: 16, paddingRight: 16, paddingTop: 40, paddingBottom: 80 }}>
           <CTABanner service="Plan Maestro de Acueducto y Alcantarillado (PMAA)" />
         </Section>
       </BlueprintBg>
