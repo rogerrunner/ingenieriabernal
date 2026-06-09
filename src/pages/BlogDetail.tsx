@@ -527,7 +527,7 @@ function ArticleBody({ body }: { body: React.ReactNode }) {
 
 export default function BlogDetail() {
   const [, params] = useRoute('/blog/:slug')
-  const slug = params?.slug || ''
+  const slug = (params as Record<string, string> | null)?.slug || ''
   const article = ARTICLES[slug]
 
   // SEO configuration for the article
