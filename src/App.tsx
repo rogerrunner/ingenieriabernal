@@ -61,6 +61,8 @@ const ConsultoriaIngenieriaCivilManizales = lazy(() => import('./pages/servicios
 const GestionRiesgoHidricoManizales = lazy(() => import('./pages/servicios/GestionRiesgoHidricoManizales'))
 const DisenoHidraulicoEjeCafetero = lazy(() => import('./pages/servicios/DisenoHidraulicoEjeCafetero'))
 const TopografiaManizales = lazy(() => import('./pages/servicios/TopografiaManizales'))
+const AcueductoRuralCaldas = lazy(() => import('./pages/servicios/AcueductoRuralCaldas'))
+const BombeoFincasCafe = lazy(() => import('./pages/servicios/BombeoFincasCafe'))
 const CiudadBogota = lazy(() => import('./pages/servicios/CiudadBogota'))
 const CiudadMedellin = lazy(() => import('./pages/servicios/CiudadMedellin'))
 const CiudadCali = lazy(() => import('./pages/servicios/CiudadCali'))
@@ -364,6 +366,8 @@ export default function App() {
           <Route path="/gestion-riesgo-hidrico-manizales" component={GestionRiesgoHidricoManizales} />
           <Route path="/diseno-hidraulico-eje-cafetero" component={DisenoHidraulicoEjeCafetero} />
           <Route path="/topografia-manizales" component={TopografiaManizales} />
+<Route path="/acueducto-rural-caldas" component={AcueductoRuralCaldas} />
+<Route path="/bombeo-fincas-cafe" component={BombeoFincasCafe} />
           <Route path="/ingeniero-hidraulico-manizales" component={IngenieroHidraulicoManizales} />
 
           <Route path="/calculadora-estudios-hidraulicos" component={CalculadoraHidraulica} />
