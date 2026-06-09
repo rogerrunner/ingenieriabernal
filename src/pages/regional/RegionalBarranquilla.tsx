@@ -31,28 +31,28 @@ const seoConfig = {
 
 const FAQ_ITEMS = [
   {
-    question: '¿BIC realiza estudios de gestión del riesgo hídrico (Decreto 1807) para proyectos en Barranquilla?',
-    answer:
+    q: '¿BIC realiza estudios de gestión del riesgo hídrico (Decreto 1807) para proyectos en Barranquilla?',
+    a:
       'Sí. BIC elabora estudios de amenaza, vulnerabilidad y riesgo por inundación para licencias de urbanismo, planes parciales y revisiones de POT en Barranquilla y el Atlántico, conforme al Decreto 1807/2014 y los lineamientos de la CRA (Corporación Autónoma Regional del Atlántico). Incluye modelación HEC-RAS 2D, manchas de inundación y concepto de aptitud urbanística.',
   },
   {
-    question: '¿Cuánto cuesta un estudio de inundación o riesgo hídrico en Barranquilla?',
-    answer:
+    q: '¿Cuánto cuesta un estudio de inundación o riesgo hídrico en Barranquilla?',
+    a:
       'Los estudios de gestión del riesgo hídrico (Decreto 1807) para planes parciales en el Atlántico oscilan entre $18M y $65M COP según el área y la complejidad hidráulica. Los estudios para licencias residenciales con predios cerca de arroyos urbanos parten de $8M COP. Cotiza sin costo en menos de 24 horas.',
   },
   {
-    question: '¿Cómo trabaja BIC con proyectos en Barranquilla si tiene sede en Manizales?',
-    answer:
+    q: '¿Cómo trabaja BIC con proyectos en Barranquilla si tiene sede en Manizales?',
+    a:
       'La mayoría de los proyectos en Barranquilla los desarrollamos con información remota: planos, levantamiento topográfico y cartografía que el cliente o un topógrafo local nos comparte. Para proyectos que requieren visita técnica coordinamos el desplazamiento. El estudio se entrega en formato digital. La distancia no afecta los plazos ni la calidad técnica — hemos trabajado con proyectos desde el Caribe hasta el Pacífico.',
   },
   {
-    question: '¿BIC puede firmar estudios y planos para trámites ante la CRA o la Curaduría de Barranquilla?',
-    answer:
+    q: '¿BIC puede firmar estudios y planos para trámites ante la CRA o la Curaduría de Barranquilla?',
+    a:
       'Sí. Rogerio Bernal cuenta con matrícula COPNIA No. 17202-313228 CLD como especialista en Ingeniería Hidráulica (UNAL), habilitado para firmar memorias de cálculo, planos hidrosanitarios y estudios hidráulicos ante la CRA, las curadurías urbanas de Barranquilla, la Secretaría de Planeación Distrital y cualquier entidad del Atlántico.',
   },
   {
-    question: '¿BIC trabaja con municipios del Atlántico que financian proyectos con regalías SGR?',
-    answer:
+    q: '¿BIC trabaja con municipios del Atlántico que financian proyectos con regalías SGR?',
+    a:
       'Sí. BIC formula y estructura proyectos de agua potable, alcantarillado y saneamiento básico ante el Sistema General de Regalías (SGR) para municipios del Atlántico. Apoyamos desde la formulación MGA-Web hasta los estudios técnicos con firma COPNIA requeridos por el OCAD.',
   },
 ]
