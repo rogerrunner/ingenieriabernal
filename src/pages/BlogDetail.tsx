@@ -401,6 +401,7 @@ const SERVICE_LINKS: Record<string, { label: string; href: string }> = {
   'regalias-acueducto-colombia':                     { label: 'Formulación Regalías MGA-Web',           href: '/servicios/regalias-mga' },
   'caso-estudio-acueducto-rural':                    { label: 'Acueducto y Alcantarillado',             href: '/servicios/diseno-acueductos' },
   'plan-mejoramiento-irca-colombia':                 { label: 'Acueducto y Alcantarillado',             href: '/servicios/diseno-acueductos' },
+  'decreto-1807-riesgo-inundacion-colombia':         { label: 'Gestión del Riesgo Hídrico — Decreto 1807',  href: '/gestion-riesgo-hidrico' },
   'contratar-consultoria-hidraulica-colombia':       { label: 'Ver todos nuestros servicios',           href: '/servicios' },
   // articlesE
   'bocatoma-caudal-riego-colombia':                  { label: 'Diseño de Bocatomas y Obras Hidráulicas', href: '/obras-hidraulicas-colombia' },
