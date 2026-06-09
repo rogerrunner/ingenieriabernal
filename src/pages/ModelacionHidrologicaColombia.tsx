@@ -160,7 +160,7 @@ export default function ModelacionHidrologicaColombia() {
   useEffect(() => { window.scrollTo(0, 0) }, [])
 
   const schemaData = {
-    faqItems: FAQ.map(f => ({ question: f.q, answer: f.a })),
+    faqItems: FAQ.map(f => ({ q: f.q, a: f.a })),
     priceItems: PRECIOS.map(p => ({
       name: p.servicio,
       minPrice: parseInt(p.rango.replace(/[^0-9]/g, '').slice(0, 2)) * 1_000_000,
@@ -189,7 +189,7 @@ export default function ModelacionHidrologicaColombia() {
               Para <strong>constructoras, municipios, industria y promotores</strong> que necesitan el componente hidrológico de su proyecto. Firma COPNIA. Sede Manizales — cobertura nacional.
             </p>
             <div style={{ display: 'flex', gap: 12, justifyContent: 'center', flexWrap: 'wrap' }}>
-              <Btn href={`https://wa.me/${WA}?text=${WA_MSG}`} target="_blank" variant="primary">
+              <Btn href={`https://wa.me/${WA}?text=${WA_MSG}`}>
                 Cotizar en WhatsApp
               </Btn>
               <Btn href="#cotizar" variant="outline">
@@ -356,7 +356,7 @@ export default function ModelacionHidrologicaColombia() {
         <ThinLine />
 
         {/* ── QUOTE FORM ── */}
-        <Section id="cotizar" style={{ paddingTop: 40, paddingBottom: 40 }}>
+        <Section style={{ paddingTop: 40, paddingBottom: 40 }}>
           <div style={{ maxWidth: 640, margin: '0 auto' }}>
             <SectionLabel>Propuesta Gratuita</SectionLabel>
             <h2 style={{ fontSize: 22, fontWeight: 700, margin: '8px 0 20px', color: '#1e3a5f' }}>
