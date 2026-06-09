@@ -70,9 +70,6 @@ export default function RegionalArmenia() {
 
       <SchemaMarkup
         type="service"
-        serviceName="Ingeniería Hidráulica en Armenia y Quindío — BIC"
-        serviceDesc="Consultoría en ingeniería hidráulica y sanitaria en Armenia, Quindío: estudios hidráulicos, redes hidrosanitarias NSR-10, diseño de acueductos, regalías MGA-Web y firma COPNIA para trámites ante EPA Armenia y CRQ."
-        serviceUrl="/regional/armenia"
         faqItems={FAQS.map(f => ({ q: f.q, a: f.a }))}
         priceSpecification={[
           { name: 'Redes hidrosanitarias NSR-10 (Armenia)', minPrice: 3500000, maxPrice: 15000000, priceCurrency: 'COP' },
@@ -242,7 +239,7 @@ export default function RegionalArmenia() {
             Sin intermediarios. Respondemos directamente con propuesta técnica y económica
             en menos de 24 horas. Entre más grande el proyecto, mejor podemos ayudarle.
           </p>
-          <QuoteFormInline ciudad="Armenia" />
+          <QuoteFormInline />
         </div>
       </Section>
     </>
