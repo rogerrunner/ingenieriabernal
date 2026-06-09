@@ -6,8 +6,8 @@ const WA = '573024778910'
 const WA_MSG = encodeURIComponent('Hola, quiero cotizar un Diseño Hidráulico en el Eje Cafetero')
 
 const seoConfig = {
-  title: 'Diseño Hidráulico Eje Cafetero — COPNIA | BIC',
-  description: 'Diseño hidráulico en Caldas, Risaralda y Quindío. Redes de acueducto, alcantarillado y estructuras. BIC cubre todo el Eje Cafetero. COPNIA. +57 302 477 8910',
+  title: 'Diseño Hidráulico Eje Cafetero — Caldas · Viterbo · Anserma · Manizales | BIC',
+  description: 'Diseño hidráulico en Caldas (Manizales, Viterbo, Anserma, Riosucio, Supía, Chinchiná), Risaralda y Quindío. Acueducto, alcantarillado, canales. COPNIA. Propuesta en 24 h.',
   keywords: [
     'diseño hidráulico Eje Cafetero',
     'diseño acueducto Caldas Risaralda Quindío',
@@ -60,7 +60,8 @@ const COBERTURA = [
   { ciudad: 'Manizales y área metropolitana', desc: 'Diseños para construcciones en suelo urbano, proyectos de expansión, planes parciales y obras de infraestructura municipal. Coordinación con Aguas de Manizales y Corpocaldas para cumplimiento normativo.' },
   { ciudad: 'Pereira y Dosquebradas', desc: 'Área metropolitana de Pereira con alta demanda de diseños hidrosanitarios para vivienda, industria y comercio. Coordinación con Aguas y Aguas de Pereira y CARDER.' },
   { ciudad: 'Armenia y municipios del Quindío', desc: 'Proyectos de reconstrucción y nuevas urbanizaciones en Armenia y el Quindío. Diseño de redes bajo los estándares de la CRQ y el Plan Departamental de Aguas del Quindío.' },
-  { ciudad: 'Municipios rurales del Eje Cafetero', desc: 'BIC diseña sistemas de acueducto y alcantarillado para cabeceras municipales y zonas rurales de Caldas, Risaralda y Quindío con financiación SGR, APSB o Presupuesto General de la Nación.' },
+  { ciudad: 'Viterbo, Anserma y Occidente de Caldas', desc: 'Diseños de acueducto, alcantarillado y canales para Viterbo, Anserma, Riosucio, Supía, La Merced, San José y Marmato. Zona cafetera con alta demanda de infraestructura hídrica para fincas, comunidades rurales y cabeceras municipales.' },
+{ ciudad: 'Municipios rurales del Eje Cafetero', desc: 'BIC diseña sistemas de acueducto y alcantarillado para cabeceras municipales y zonas rurales de Caldas, Risaralda y Quindío con financiación SGR, APSB o Presupuesto General de la Nación. Atendemos también Dosquebradas, La Virginia (Risaralda) y Cartago (Valle).' },
 ]
 
 const FAQ = [
