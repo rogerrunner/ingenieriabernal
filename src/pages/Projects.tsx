@@ -166,6 +166,78 @@ const PROJECTS = [
     skills: ['MS Project', 'AutoCAD', 'Excel', 'NSR-10'],
     norms: ['NSR-10', 'RAS 2017', 'NTC aplicables'],
   },
+  {
+    id: 'tesalia-huila',
+    title: 'Estudio Hidrologico e Hidraulico -- Municipio de Tesalia, Huila',
+    client: 'Municipio de Tesalia',
+    location: 'Tesalia, Huila',
+    year: '2023',
+    contract: 'Estudios detallados gestion del riesgo',
+    value: 'Proyecto municipal',
+    duration: '2023',
+    category: 'Riesgo Hidrico',
+    color: '#003B6F',
+    img: '/img/proyectos/gbp_expert/p04_dem_amenaza_tesalia_caldas.jpeg',
+    challenge: 'Modelar hidrologica e hidraulicamente el municipio de Tesalia para determinar zonas de amenaza por inundacion y torrencialidad, como insumo tecnico para la gestion del riesgo y la revision del POT municipal.',
+    solution: 'Levantamiento de informacion hidrologica, modelacion HEC-HMS para caudales de diseno y HEC-RAS 2D para llanuras de inundacion. Zonificacion de amenaza alta, media y baja. Cartografia de riesgo hidrico con perfiles TR 10, 50 y 100 anos.',
+    result: 'Informe tecnico con cartografia oficial de amenaza y riesgo entregado al municipio. Zonas de proteccion y retiro de cauce definidas. Insumo aprobado para revision del POT segun Decreto 1807 de 2014.',
+    skills: ['HEC-RAS 2D', 'HEC-HMS', 'ArcGIS', 'AutoCAD'],
+    norms: ['Dec. 1807/2014', 'RAS 2017', 'POMCA Rio Magdalena'],
+  },
+  {
+    id: 'chipre-morro-caliente-manizales',
+    title: 'Modelacion Hidraulica Cuenca Chipre -- Morro Caliente, Manizales',
+    client: 'Promotor privado / Municipio de Manizales',
+    location: 'Manizales, Caldas',
+    year: '2024',
+    contract: 'Estudios hidraulicos Decreto 1807',
+    value: 'Proyecto tecnico',
+    duration: '2024',
+    category: 'Riesgo Hidrico',
+    color: '#1A3A5C',
+    img: '/img/proyectos/gbp_expert/07_mapa_inundacion_profundidad_aereo.jpeg',
+    challenge: 'Modelar hidraulicamente la cuenca Chipre -- Morro Caliente en Manizales para determinar zonas inundables y de amenaza, cumpliendo los requisitos del Decreto 1807 de 2014 para tramites de licencia urbanistica y ordenamiento territorial.',
+    solution: 'Modelacion HEC-RAS 2D con DEM de alta resolucion. Caudales de diseno TR 10, 50 y 100 anos. Delimitacion de zonas de amenaza alta, media y baja. Cartografia de profundidades, velocidades y energia cinetica de la corriente.',
+    result: 'Estudios tecnicos con mapas oficiales de amenaza por inundacion para la cuenca Chipre -- Morro Caliente. Insumo tecnico aprobado para procesos de licencia urbanistica y expediente del POT en Manizales.',
+    skills: ['HEC-RAS 2D', 'HEC-HMS', 'ArcGIS', 'Civil 3D'],
+    norms: ['Dec. 1807/2014', 'POMCA Rio Chinchina', 'RAS 2017'],
+  },
+  {
+    id: 'viterbo-caldas',
+    title: 'Estudio Hidrologico -- Municipio de Viterbo, Caldas',
+    client: 'Municipio de Viterbo',
+    location: 'Viterbo, Caldas',
+    year: '2024',
+    contract: 'Estudio hidrologico municipal',
+    value: 'Proyecto municipal',
+    duration: '2024',
+    category: 'Riesgo Hidrico',
+    color: '#2D6A4F',
+    img: '/img/proyectos/gbp_expert/08_hec_ras_perfil_hidraulico_pasabocas.jpeg',
+    challenge: 'Caracterizar hidrologicamente las cuencas del municipio de Viterbo y calcular caudales maximos para distintos periodos de retorno, como base tecnica para proyectos de infraestructura y gestion del riesgo hídrico.',
+    solution: 'Analisis de precipitacion, construccion de curvas IDF, modelacion HEC-HMS para cuencas prioritarias del municipio. Calculo de caudales de diseno TR 2, 5, 10, 25, 50 y 100 anos. Analisis de frecuencias estadisticas con distribucion Gumbel y Log-Pearson III.',
+    result: 'Informe hidrologico completo con caudales de diseno y curvas IDF calibradas para Viterbo. Insumo tecnico disponible para diseno de puentes, alcantarillas, canales y proyectos de infraestructura del municipio.',
+    skills: ['HEC-HMS', 'ArcGIS', 'AutoCAD', 'HidroEsta'],
+    norms: ['RAS 2017', 'Dec. 1807/2014', 'IDEAM 2014'],
+  },
+  {
+    id: 'drenaje-la-joya',
+    title: 'Diseno Hidraulico Sistema de Drenaje -- La Joya',
+    client: 'Promotor privado',
+    location: 'Colombia',
+    year: '2023',
+    contract: 'Diseno red drenaje pluvial',
+    value: 'Proyecto privado',
+    duration: '2023',
+    category: 'Riesgo Hidrico',
+    color: '#17A2B8',
+    img: '/img/proyectos/gbp_expert/p08_inspeccion_quebrada_colombia.jpeg',
+    challenge: 'Disenar el sistema integral de drenaje pluvial para el proyecto La Joya, garantizando el manejo adecuado de escorrentias superficiales, la proteccion de la infraestructura y el cumplimiento del RAS 2017.',
+    solution: 'Calculo hidrologico de caudales de diseno, dimensionamiento hidraulico de colectores, sumideros y estructuras especiales. Diseno de red de drenaje pluvial con verificacion hidraulica en cada tramo. Planos constructivos y memorias de calculo.',
+    result: 'Sistema de drenaje pluvial completamente disenado con planos constructivos y memorias de calculo. Cumplimiento total RAS 2017. Proyecto listo para tramite de licencia de construccion e inicio de obras.',
+    skills: ['SewerGEMS', 'AutoCAD', 'Civil 3D', 'HEC-HMS'],
+    norms: ['RAS 2017', 'NSR-10', 'Dec. 1807/2014'],
+  },
 ]
 
 const CATEGORIES = ['Todos', 'Riesgo Hidrico', 'Acueducto', 'Contra Incendios', 'Internacional', 'Residencia']
@@ -315,7 +387,7 @@ export default function Projects() {
               Proyectos de ingenieria hidraulica ejecutados por BIC en Colombia
             </h2>
             <p style={{ fontFamily: "'Lato', sans-serif", fontSize: 14, color: '#475569', lineHeight: 1.75, maxWidth: 760 }}>
-              BIC -- Bernal Ingenieria Consultores (COPNIA 17202-313228 CLD) ha ejecutado mas de 50 proyectos de ingenieria hidraulica en Colombia, Ecuador y Mexico. Los proyectos incluyen gestion del riesgo por inundacion (Decreto 1807 de 2014), modelacion HEC-RAS 2D para planes parciales y licencias urbanisticas, diseno de sistemas de acueducto y alcantarillado RAS 2017, y redes hidrosanitarias NSR-10 para grandes edificaciones. Municipios con proyectos ejecutados: Manizales, Guatica (Risaralda), Belalcazar (Caldas), Santa Rosa de Cabal (Risaralda), Dosquebradas (Risaralda), La Dorada (Caldas), Villamaria (Caldas), Viterbo (Caldas), Puerto Boyaca y Guayaquil (Ecuador). Director tecnico: Ing. Rogerio Bernal Rios, especialista en ingenieria hidraulica -- Universidad Nacional de Colombia.
+              BIC -- Bernal Ingenieria Consultores (COPNIA 17202-313228 CLD) ha ejecutado mas de 50 proyectos de ingenieria hidraulica en Colombia, Ecuador y Mexico. Los proyectos incluyen gestion del riesgo por inundacion (Decreto 1807 de 2014), modelacion HEC-RAS 2D para planes parciales y licencias urbanisticas, diseno de sistemas de acueducto y alcantarillado RAS 2017, y redes hidrosanitarias NSR-10 para grandes edificaciones. Municipios con proyectos ejecutados: Manizales (cuenca Chipre -- Morro Caliente), Tesalia (Huila), Guatica (Risaralda), Belalcazar (Caldas), Santa Rosa de Cabal (Risaralda), Dosquebradas (Risaralda), La Dorada (Caldas), Villamaria (Caldas), Viterbo (Caldas) y Guayaquil (Ecuador). Director tecnico: Ing. Rogerio Bernal Rios, especialista en ingenieria hidraulica -- Universidad Nacional de Colombia.
             </p>
           </section>
 
