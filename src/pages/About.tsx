@@ -31,11 +31,21 @@ export default function About() {
   const { ref, inView } = useInView(0.05)
 
   useEffect(() => {
-    document.title = 'Rogerio Bernal Ríos — Director BIC, COPNIA | BIC'
+    document.title = 'Rogerio Bernal Ríos — Ingeniero Hidrólogo | Bernal Ingeniería Consultores'
+
     const meta = document.querySelector('meta[name="description"]')
     if (meta) meta.setAttribute('content',
-      'Rogerio Bernal Ríos — Director General de BIC. Ing. Civil Especialista en Hidráulica y Ambiental UNAL. COPNIA 17202-313228. 10+ años, Colombia, Ecuador y México.'
+      'Ingeniero hidrólogo egresado de la UNAL. Especialista en modelación hidráulica, PTARs, bocatomas y riesgo hídrico en Colombia. Más de 8 años de experiencia.'
     )
+
+    let keywords = document.querySelector('meta[name="keywords"]')
+    if (!keywords) {
+      keywords = document.createElement('meta')
+      keywords.setAttribute('name', 'keywords')
+      document.head.appendChild(keywords)
+    }
+    keywords.setAttribute('content', 'ingeniero hidrólogo Colombia, ingeniero hidráulico Manizales, modelación HEC-RAS Colombia, Rogerio Bernal')
+
     let canonical = document.querySelector("link[rel='canonical']")
     if (!canonical) {
       canonical = document.createElement('link')
@@ -43,6 +53,60 @@ export default function About() {
       document.head.appendChild(canonical)
     }
     canonical.setAttribute('href', 'https://ingenieriabernal.co/sobre-mi')
+
+    const schemaId = 'schema-person-rogerio'
+    if (!document.getElementById(schemaId)) {
+      const script = document.createElement('script')
+      script.id = schemaId
+      script.type = 'application/ld+json'
+      script.textContent = JSON.stringify({
+        '@context': 'https://schema.org',
+        '@type': 'Person',
+        name: 'Rogerio Bernal Ríos',
+        jobTitle: 'Ingeniero Hidrólogo',
+        description: 'Ingeniero especialista en hidrología e hidráulica con más de 8 años de experiencia. Fundador de Bernal Ingeniería Consultores. Egresado de la Universidad Nacional de Colombia.',
+        url: 'https://ingenieriabernal.co/sobre-mi',
+        image: 'https://ingenieriabernal.co/foto-rogerio.jpg',
+        worksFor: {
+          '@type': 'Organization',
+          name: 'Bernal Ingeniería Consultores',
+          url: 'https://ingenieriabernal.co',
+        },
+        alumniOf: {
+          '@type': 'CollegeOrUniversity',
+          name: 'Universidad Nacional de Colombia',
+          sameAs: 'https://unal.edu.co',
+        },
+        knowsAbout: [
+          'Modelación Hidráulica e Hidrológica',
+          'HEC-RAS 2D',
+          'HEC-HMS',
+          'Diseño de PTARs',
+          'Bocatomas y Captación Superficial',
+          'Zonificación de Riesgo Hídrico',
+          'Decreto 1807',
+          'Permisos de Vertimientos',
+          'Concesiones de Agua',
+          'Diseño de Acueductos y Alcantarillado',
+        ],
+        areaServed: 'Colombia',
+        address: {
+          '@type': 'PostalAddress',
+          addressLocality: 'Manizales',
+          addressRegion: 'Caldas',
+          addressCountry: 'CO',
+        },
+        sameAs: [
+          'https://www.linkedin.com/in/rogerio-bernal/',
+          'https://unal.edu.co',
+        ],
+      })
+      document.head.appendChild(script)
+    }
+
+    return () => {
+      document.getElementById(schemaId)?.remove()
+    }
   }, [])
 
   return (
