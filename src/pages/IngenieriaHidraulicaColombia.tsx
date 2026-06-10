@@ -238,7 +238,8 @@ export default function IngenieriaHidraulicaColombia() {
       '@type': 'BreadcrumbList',
       'itemListElement': [
         { '@type': 'ListItem', 'position': 1, 'name': 'Inicio', 'item': 'https://ingenieriabernal.co' },
-        { '@type': 'ListItem', 'position': 2, 'name': 'Ingeniería Hidráulica Colombia', 'item': 'https://ingenieriabernal.co/ingenieria-hidraulica-colombia' },
+        { '@type': 'ListItem', 'position': 2, 'name': 'Servicios', 'item': 'https://ingenieriabernal.co/servicios' },
+        { '@type': 'ListItem', 'position': 3, 'name': 'Ingeniería Hidráulica Colombia', 'item': 'https://ingenieriabernal.co/ingenieria-hidraulica-colombia' },
       ],
     })
     document.head.appendChild(el)

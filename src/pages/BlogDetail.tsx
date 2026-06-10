@@ -555,25 +555,28 @@ export default function BlogDetail() {
         'headline': article.title,
         'description': article.metaDesc,
         'keywords': article.keywords,
+        'articleSection': article.category,
         'url': `https://ingenieriabernal.co/blog/${slug}`,
-        'datePublished': article.date,
-        'dateModified': article.date,
+        'mainEntityOfPage': `https://ingenieriabernal.co/blog/${slug}`,
+        'datePublished': '2024-01-01',
+        'dateModified': '2026-01-01',
         'inLanguage': 'es-CO',
         'author': {
           '@type': 'Person',
-          '@id': 'https://ingenieriabernal.co/#rogerio',
           'name': 'Rogerio Bernal Ríos',
-          'url': 'https://ingenieriabernal.co',
-          'jobTitle': 'Ingeniero Civil — Especialista en Ingeniería Hidráulica y Ambiental',
+          'url': 'https://ingenieriabernal.co/sobre-mi',
+          'alumniOf': {
+            '@type': 'CollegeOrUniversity',
+            'name': 'Universidad Nacional de Colombia',
+          },
         },
         'publisher': {
-          '@type': 'LocalBusiness',
-          '@id': 'https://ingenieriabernal.co/#firma',
-          'name': 'BIC Bernal Ingeniería Consultores',
+          '@type': 'Organization',
+          'name': 'Bernal Ingeniería Consultores',
           'url': 'https://ingenieriabernal.co',
           'logo': {
             '@type': 'ImageObject',
-            'url': 'https://ingenieriabernal.co/favicon.svg',
+            'url': 'https://ingenieriabernal.co/logo.png',
           },
         },
         'isPartOf': {
@@ -581,12 +584,25 @@ export default function BlogDetail() {
           'name': 'Blog Técnico — BIC Bernal Ingeniería Consultores',
           'url': 'https://ingenieriabernal.co/blog',
         },
-        'mainEntityOfPage': {
-          '@type': 'WebPage',
-          '@id': `https://ingenieriabernal.co/blog/${slug}`,
-        },
       })
       document.head.appendChild(schema)
+
+      // BreadcrumbList JSON-LD
+      const existingBreadcrumb = document.getElementById('blog-breadcrumb-schema')
+      if (existingBreadcrumb) existingBreadcrumb.remove()
+      const breadcrumb = document.createElement('script')
+      breadcrumb.id = 'blog-breadcrumb-schema'
+      breadcrumb.type = 'application/ld+json'
+      breadcrumb.text = JSON.stringify({
+        '@context': 'https://schema.org',
+        '@type': 'BreadcrumbList',
+        'itemListElement': [
+          { '@type': 'ListItem', 'position': 1, 'name': 'Inicio', 'item': 'https://ingenieriabernal.co' },
+          { '@type': 'ListItem', 'position': 2, 'name': 'Blog', 'item': 'https://ingenieriabernal.co/blog' },
+          { '@type': 'ListItem', 'position': 3, 'name': article.title, 'item': `https://ingenieriabernal.co/blog/${slug}` },
+        ],
+      })
+      document.head.appendChild(breadcrumb)
 
       // FAQ JSON-LD (when article has faqItems)
       const existingFaq = document.getElementById('blog-faq-schema')
@@ -609,10 +625,9 @@ export default function BlogDetail() {
     }
 
     return () => {
-      const schema = document.getElementById('blog-schema')
-      if (schema) schema.remove()
-      const faqSchema = document.getElementById('blog-faq-schema')
-      if (faqSchema) faqSchema.remove()
+      document.getElementById('blog-schema')?.remove()
+      document.getElementById('blog-breadcrumb-schema')?.remove()
+      document.getElementById('blog-faq-schema')?.remove()
     }
   }, [article, slug])
 

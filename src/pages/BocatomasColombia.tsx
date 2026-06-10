@@ -159,7 +159,23 @@ const NORMATIVA = [
 ]
 
 export default function BocatomasColombia() {
-  useEffect(() => { window.scrollTo(0, 0) }, [])
+  useEffect(() => {
+    window.scrollTo(0, 0)
+    const bc = document.createElement('script')
+    bc.type = 'application/ld+json'
+    bc.id = 'schema-bocatomas-breadcrumb'
+    bc.textContent = JSON.stringify({
+      '@context': 'https://schema.org',
+      '@type': 'BreadcrumbList',
+      'itemListElement': [
+        { '@type': 'ListItem', 'position': 1, 'name': 'Inicio', 'item': 'https://ingenieriabernal.co' },
+        { '@type': 'ListItem', 'position': 2, 'name': 'Servicios', 'item': 'https://ingenieriabernal.co/servicios' },
+        { '@type': 'ListItem', 'position': 3, 'name': 'Diseño de Bocatomas Colombia', 'item': 'https://ingenieriabernal.co/bocatomas-colombia' },
+      ],
+    })
+    document.head.appendChild(bc)
+    return () => { document.getElementById('schema-bocatomas-breadcrumb')?.remove() }
+  }, [])
 
   return (
     <>

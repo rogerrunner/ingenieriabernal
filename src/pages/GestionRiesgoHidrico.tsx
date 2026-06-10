@@ -152,7 +152,8 @@ export default function GestionRiesgoHidrico() {
       '@type': 'BreadcrumbList',
       'itemListElement': [
         { '@type': 'ListItem', 'position': 1, 'name': 'Inicio', 'item': 'https://ingenieriabernal.co' },
-        { '@type': 'ListItem', 'position': 2, 'name': 'Gestión del Riesgo Hídrico', 'item': 'https://ingenieriabernal.co/gestion-riesgo-hidrico' },
+        { '@type': 'ListItem', 'position': 2, 'name': 'Servicios', 'item': 'https://ingenieriabernal.co/servicios' },
+        { '@type': 'ListItem', 'position': 3, 'name': 'Gestión del Riesgo Hídrico', 'item': 'https://ingenieriabernal.co/gestion-riesgo-hidrico-colombia' },
       ],
     })
     document.head.appendChild(el)

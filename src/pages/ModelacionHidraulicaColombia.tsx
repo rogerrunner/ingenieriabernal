@@ -232,9 +232,23 @@ export default function ModelacionHidraulicaColombia() {
     sf.id = 'schema-modelacion-faq'
     sf.textContent = JSON.stringify(FAQ_SCHEMA_MOD)
     document.head.appendChild(sf)
+    const bc = document.createElement('script')
+    bc.type = 'application/ld+json'
+    bc.id = 'schema-modelacion-breadcrumb'
+    bc.textContent = JSON.stringify({
+      '@context': 'https://schema.org',
+      '@type': 'BreadcrumbList',
+      'itemListElement': [
+        { '@type': 'ListItem', 'position': 1, 'name': 'Inicio', 'item': 'https://ingenieriabernal.co' },
+        { '@type': 'ListItem', 'position': 2, 'name': 'Servicios', 'item': 'https://ingenieriabernal.co/servicios' },
+        { '@type': 'ListItem', 'position': 3, 'name': 'Modelación Hidráulica Colombia', 'item': 'https://ingenieriabernal.co/modelacion-hidraulica-colombia' },
+      ],
+    })
+    document.head.appendChild(bc)
     return () => {
       document.getElementById('schema-modelacion-hidraulica')?.remove()
       document.getElementById('schema-modelacion-faq')?.remove()
+      document.getElementById('schema-modelacion-breadcrumb')?.remove()
     }
   }, [])
 
