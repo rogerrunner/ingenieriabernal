@@ -67,6 +67,8 @@ import DisenoAlcantarilladoColombia from './src/pages/DisenoAlcantarilladoColomb
 // Páginas de servicio adicionales
 import DisenoPTAPColombia from './src/pages/DisenoPTAPColombia'
 import DisenoPTARColombia from './src/pages/DisenoPTARColombia'
+import DisenoPTARManizales from './src/pages/DisenoPTARManizales'
+import PermisoVertimientosColombia from './src/pages/PermisoVertimientosColombia'
 import UrbanizacionColombia from './src/pages/UrbanizacionColombia'
 import LicenciaUrbanismo from './src/pages/LicenciaUrbanismo'
 import EncauzamientoRios from './src/pages/EncauzamientoRios'
@@ -106,6 +108,8 @@ const PAGES: Record<string, React.ComponentType> = {
   // Páginas de servicio adicionales
   'diseno-ptap-colombia': DisenoPTAPColombia,
   'diseno-ptar-colombia': DisenoPTARColombia,
+  'diseno-ptar-manizales': DisenoPTARManizales,
+  'permiso-vertimientos-colombia': PermisoVertimientosColombia,
   'urbanizacion-colombia': UrbanizacionColombia,
   'licencia-urbanismo': LicenciaUrbanismo,
   'encauzamiento-rios': EncauzamientoRios,
