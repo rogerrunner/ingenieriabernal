@@ -92,6 +92,10 @@ const ModelacionHidraulicaColombia = lazy(() => import('./pages/ModelacionHidrau
 const ModelacionHidrologicaColombia = lazy(() => import('./pages/ModelacionHidrologicaColombia'))
 const DisenoPTARColombia = lazy(() => import('./pages/DisenoPTARColombia'))
 const DisenoPTARManizales = lazy(() => import('./pages/DisenoPTARManizales'))
+const DisenoPTARMunicipalColombia = lazy(() => import('./pages/DisenoPTARMunicipalColombia'))
+const DisenoPTARIndustrialColombia = lazy(() => import('./pages/DisenoPTARIndustrialColombia'))
+const BocatomasEjeCafetero = lazy(() => import('./pages/BocatomasEjeCafetero'))
+const ConcesionAguasSuperficialesColombia = lazy(() => import('./pages/ConcesionAguasSuperficialesColombia'))
 const PermisoVertimientosColombia = lazy(() => import('./pages/PermisoVertimientosColombia'))
 const ConcesionAguasColombia = lazy(() => import('./pages/ConcesionAguasColombia'))
 const DisenoPTAPColombia = lazy(() => import('./pages/DisenoPTAPColombia'))
@@ -309,6 +313,10 @@ export default function App() {
           <Route path="/modelacion-hidrologica-colombia" component={ModelacionHidrologicaColombia} />
           <Route path="/diseno-ptar-colombia" component={DisenoPTARColombia} />
           <Route path="/diseno-ptar-manizales" component={DisenoPTARManizales} />
+          <Route path="/diseno-ptar-municipal-colombia" component={DisenoPTARMunicipalColombia} />
+          <Route path="/diseno-ptar-industrial-colombia" component={DisenoPTARIndustrialColombia} />
+          <Route path="/bocatomas-eje-cafetero" component={BocatomasEjeCafetero} />
+          <Route path="/concesion-aguas-superficiales-colombia" component={ConcesionAguasSuperficialesColombia} />
           <Route path="/permiso-vertimientos-colombia" component={PermisoVertimientosColombia} />
           <Route path="/concesion-aguas-colombia" component={ConcesionAguasColombia} />
           <Route path="/diseno-ptap-colombia" component={DisenoPTAPColombia} />

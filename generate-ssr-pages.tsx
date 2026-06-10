@@ -68,6 +68,10 @@ import DisenoAlcantarilladoColombia from './src/pages/DisenoAlcantarilladoColomb
 import DisenoPTAPColombia from './src/pages/DisenoPTAPColombia'
 import DisenoPTARColombia from './src/pages/DisenoPTARColombia'
 import DisenoPTARManizales from './src/pages/DisenoPTARManizales'
+import DisenoPTARMunicipalColombia from './src/pages/DisenoPTARMunicipalColombia'
+import DisenoPTARIndustrialColombia from './src/pages/DisenoPTARIndustrialColombia'
+import BocatomasEjeCafetero from './src/pages/BocatomasEjeCafetero'
+import ConcesionAguasSuperficialesColombia from './src/pages/ConcesionAguasSuperficialesColombia'
 import PermisoVertimientosColombia from './src/pages/PermisoVertimientosColombia'
 import UrbanizacionColombia from './src/pages/UrbanizacionColombia'
 import LicenciaUrbanismo from './src/pages/LicenciaUrbanismo'
@@ -109,6 +113,10 @@ const PAGES: Record<string, React.ComponentType> = {
   'diseno-ptap-colombia': DisenoPTAPColombia,
   'diseno-ptar-colombia': DisenoPTARColombia,
   'diseno-ptar-manizales': DisenoPTARManizales,
+  'diseno-ptar-municipal-colombia': DisenoPTARMunicipalColombia,
+  'diseno-ptar-industrial-colombia': DisenoPTARIndustrialColombia,
+  'bocatomas-eje-cafetero': BocatomasEjeCafetero,
+  'concesion-aguas-superficiales-colombia': ConcesionAguasSuperficialesColombia,
   'permiso-vertimientos-colombia': PermisoVertimientosColombia,
   'urbanizacion-colombia': UrbanizacionColombia,
   'licencia-urbanismo': LicenciaUrbanismo,
