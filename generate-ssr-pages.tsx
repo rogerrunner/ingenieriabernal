@@ -19,6 +19,33 @@ import React from 'react'
 const __dirname = dirname(fileURLToPath(import.meta.url))
 const distDir = join(__dirname, 'dist')
 
+// ─── Importar datos de artículos de blog ─────────────────────────────────────
+import articles1 from './src/data/articles1'
+import articlesA from './src/data/articlesA'
+import articlesB from './src/data/articlesB'
+import articlesC from './src/data/articlesC'
+import articlesD from './src/data/articlesD'
+import articlesE from './src/data/articlesE'
+import articlesF from './src/data/articlesF'
+import articlesG from './src/data/articlesG'
+import articlesH from './src/data/articlesH'
+import articlesI from './src/data/articlesI'
+import articlesJ from './src/data/articlesJ'
+import articlesK from './src/data/articlesK'
+import articlesL from './src/data/articlesL'
+import articlesM from './src/data/articlesM'
+import articlesN from './src/data/articlesN'
+import articlesO from './src/data/articlesO'
+import articlesP from './src/data/articlesP'
+import articlesQ from './src/data/articlesQ'
+import articlesR from './src/data/articlesR'
+import articlesS from './src/data/articlesS'
+import articlesT from './src/data/articlesT'
+import articlesU from './src/data/articlesU'
+import articlesV from './src/data/articlesV'
+import articlesW from './src/data/articlesW'
+import articlesX from './src/data/articlesX'
+
 // ─── Importar páginas de servicio ────────────────────────────────────────────
 // (imports directos con rutas relativas — tsx no siempre resuelve @ alias)
 import ServicioEstudiosHidrologicos from './src/pages/ServicioEstudiosHidrologicos'
@@ -153,3 +180,113 @@ console.log(`\n📊 Resultado SSG service pages:`)
 console.log(`   ✅ Inyectados: ${injected}`)
 console.log(`   ⚠️  Sin ruta:   ${skipped}`)
 console.log(`   ❌ Errores:    ${errors}`)
+
+// ─── SSG Blog Articles ────────────────────────────────────────────────────────
+type ArticleData = {
+  title: string; date: string; readTime: string; category: string
+  metaDesc: string; keywords: string; body: React.ReactNode
+  faqItems?: Array<{ q: string; a: string }>
+}
+
+const BLOG_ARTICLES: Record<string, ArticleData> = {
+  ...articles1,
+  ...articlesA,
+  ...articlesB,
+  ...articlesC,
+  ...articlesD,
+  ...articlesE,
+  ...articlesF,
+  ...articlesG,
+  ...articlesH,
+  ...articlesI,
+  ...articlesJ,
+  ...articlesK,
+  ...articlesL,
+  ...articlesM,
+  ...articlesN,
+  ...articlesO,
+  ...articlesP,
+  ...articlesQ,
+  ...articlesR,
+  ...articlesS,
+  ...articlesT,
+  ...articlesU,
+  ...articlesV,
+  ...articlesW,
+  ...articlesX,
+}
+
+let blogInjected = 0
+let blogSkipped = 0
+let blogErrors = 0
+
+console.log(`\n🔄 SSG blog articles — ${Object.keys(BLOG_ARTICLES).length} artículos...\n`)
+
+for (const [slug, article] of Object.entries(BLOG_ARTICLES)) {
+  const htmlFile = join(distDir, 'blog', slug, 'index.html')
+
+  if (!existsSync(htmlFile)) {
+    console.warn(`  ⚠️  Sin ruta estática: /blog/${slug}`)
+    blogSkipped++
+    continue
+  }
+
+  try {
+    let html = readFileSync(htmlFile, 'utf-8')
+
+    let pageHtml: string
+    try {
+      const children: React.ReactNode[] = [
+        React.createElement('h1', { itemProp: 'headline' }, article.title),
+        React.createElement('div', { itemProp: 'articleBody' }, article.body),
+      ]
+      if (article.faqItems?.length) {
+        children.push(
+          React.createElement('dl', { itemScope: true, itemType: 'https://schema.org/FAQPage' },
+            article.faqItems.flatMap((f, i) => [
+              React.createElement('dt', { key: `dt-${i}`, itemProp: 'name' }, f.q),
+              React.createElement('dd', { key: `dd-${i}`, itemProp: 'acceptedAnswer' }, f.a),
+            ])
+          )
+        )
+      }
+      pageHtml = renderToStaticMarkup(
+        React.createElement('article', {
+          'data-ssr': 'true',
+          style: { opacity: 1 },
+          itemScope: true,
+          itemType: 'https://schema.org/BlogPosting',
+        }, ...children)
+      )
+    } catch (renderErr) {
+      console.warn(`  ⚠️  Error render /blog/${slug}:`, (renderErr as Error).message?.slice(0, 100))
+      blogSkipped++
+      continue
+    }
+
+    const staticContent = `<div data-ssr="true" style="opacity:1">
+  <style>
+    [data-ssr] section[style*="opacity: 0"] { opacity: 1 !important; transform: none !important; }
+    [data-ssr] section[style*="opacity:0"] { opacity: 1 !important; transform: none !important; }
+  </style>
+  ${pageHtml}
+</div>`
+
+    html = html.replace(
+      /<div id="root"[^>]*>[\s\S]*?<\/div>/,
+      `<div id="root">${staticContent}</div>`
+    )
+
+    writeFileSync(htmlFile, html, 'utf-8')
+    console.log(`  ✅ /blog/${slug}`)
+    blogInjected++
+  } catch (err) {
+    console.error(`  ❌ Error /blog/${slug}:`, (err as Error).message?.slice(0, 120))
+    blogErrors++
+  }
+}
+
+console.log(`\n📊 Resultado SSG blog articles:`)
+console.log(`   ✅ Inyectados: ${blogInjected}`)
+console.log(`   ⚠️  Sin ruta:   ${blogSkipped}`)
+console.log(`   ❌ Errores:    ${blogErrors}`)
