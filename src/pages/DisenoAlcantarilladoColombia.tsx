@@ -534,4 +534,14 @@ export default function DisenoAlcantarilladoColombia() {
                 display: 'inline-block', padding: '15px 36px',
                 background: 'transparent', color: '#fff',
                 borderRadius: 8, fontWeight: 700, fontSize: 16,
-                textDecoration: 'none', border: 
+                textDecoration: 'none', border: '2px solid rgba(255,255,255,0.4)',
+              }}
+            >
+              Formulario de contacto
+            </a>
+          </div>
+        </div>
+      </section>
+    </>
+  )
+}
