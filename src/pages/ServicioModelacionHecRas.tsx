@@ -39,9 +39,9 @@ const INCLUYE = [
 
 const PARA_QUIEN = [
   { tipo: 'Alcaldías y oficinas de planeación', desc: 'Componente de amenaza hídrica para POT, EOT y planes de gestión del riesgo municipal exigido por el Decreto 1807/2014.' },
-  { tipo: 'Constructoras y curadores urbanos', desc: 'Estudios de riesgo obligatorios para planes parciales, licencias urbanísticas en zonas de expansión o suelo suburbano con cauces cercanos.' },
+  { tipo: 'Constructoras y Promotores de Proyectos en Zona Hídrica', desc: 'Estudios de riesgo obligatorios para planes parciales, licencias urbanísticas y proyectos de infraestructura en zonas de expansión o con cauces cercanos.' },
   { tipo: 'INVÍAS, gobernaciones y concesiones viales', desc: 'Diseño hidráulico de puentes, box-culverts, alcantarillas y obras de drenaje longitudinal y transversal.' },
-  { tipo: 'Interventores técnicos', desc: 'Revisión independiente de modelos hidráulicos entregados por consultores de diseño y verificación de cumplimiento normativo.' },
+  { tipo: 'Grandes Propietarios, Industria y Sector Energético', desc: 'Modelación hidráulica para proyectos privados con afectación hídrica: plantas industriales, proyectos agroindustriales, generación de energía y grandes desarrollos.' },
 ]
 
 const TIPOS_PROYECTO = [
