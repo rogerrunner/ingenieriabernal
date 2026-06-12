@@ -377,7 +377,7 @@ export default function ModelacionHidrologicaColombia() {
           ctaPrimary={{ label: 'WhatsApp directo', href: `https://wa.me/${WA}?text=${WA_MSG}` }}
           ctaSecondary={{ label: 'Ver gestión de riesgo', href: '/gestion-riesgo-hidrico' }}
         />
-      </main>
+      </BlueprintBg>
     </>
   )
 }
