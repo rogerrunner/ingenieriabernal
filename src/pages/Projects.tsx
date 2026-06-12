@@ -3,7 +3,7 @@ import { BlueprintBg, Tag, ThinLine, SectionLabel, Btn, Section, useInView } fro
 import SEOHead from '../components/SEOHead'
 import SchemaMarkup from '../components/SchemaMarkup'
 
-const PROJECTS = [
+export const PROJECTS = [
   {
     id: 'guatica-risaralda',
     title: 'Control de Erosion Hidrica -- Guatica, Risaralda',
