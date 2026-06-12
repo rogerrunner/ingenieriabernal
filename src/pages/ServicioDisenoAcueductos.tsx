@@ -687,4 +687,16 @@ export default function ServicioDisenoAcueductos() {
           </p>
           <Btn
             href={`https://wa.me/${WA}?text=${WA_MSG}`}
-            style
+            style={{ background: '#fff', color: '#17A2B8', fontSize: 15, padding: '14px 36px' }}
+            >
+              📱 Propuesta en 24 h — sin costo
+            </Btn>
+            <Btn variant="outline" href="/contacto" style={{ borderColor: '#fff', color: '#fff' }}>
+              Ver formulario de contacto
+            </Btn>
+          </div>
+        </div>
+      </Section>
+    </>
+  )
+}
