@@ -64,7 +64,6 @@ const PROYECTOS_TIPOS = [
   { tipo: 'Centros comerciales y grandes superficies', desc: 'Diseño CI completo para locales, área de parqueaderos y bodegas logísticas. Makarí Mall Dosquebradas como referencia ejecutada.' },
   { tipo: 'Hospitales y Centros de Salud Pública', desc: 'Establecimientos hospitalarios con zonas de alto riesgo, gases medicinales y requerimientos diferenciados por la Secretaría de Salud y el Cuerpo de Bomberos.' },
   { tipo: 'Plantas industriales y bodegas logísticas', desc: 'Almacenamiento de mercancías clasificadas, naves de producción y plantas de alimentos con niveles de peligro extra o especiales.' },
-  { tipo: 'Hoteles, clínicas y hospitales', desc: 'Edificios de alta ocupación con rutas de evacuación críticas y exigencias reforzadas por la autoridad de bomberos y la entidad habilitadora.' },
   { tipo: 'Colegios y universidades', desc: 'Instalaciones educativas con aulas, laboratorios y cocinas que requieren sistemas de detección diferenciados por zona.' },
 ]
 
