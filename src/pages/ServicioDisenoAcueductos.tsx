@@ -685,9 +685,10 @@ export default function ServicioDisenoAcueductos() {
             Indíquenos el municipio, la población a servir, la fuente disponible y la fuente de
             financiación. Le enviamos propuesta técnica y económica en 24 horas.
           </p>
-          <Btn
-            href={`https://wa.me/${WA}?text=${WA_MSG}`}
-            style={{ background: '#fff', color: '#17A2B8', fontSize: 15, padding: '14px 36px' }}
+          <div style={{ display: 'flex', gap: 12, justifyContent: 'center', flexWrap: 'wrap' }}>
+            <Btn
+              href={`https://wa.me/${WA}?text=${WA_MSG}`}
+              style={{ background: '#fff', color: '#17A2B8', fontSize: 15, padding: '14px 36px' }}
             >
               📱 Propuesta en 24 h — sin costo
             </Btn>
