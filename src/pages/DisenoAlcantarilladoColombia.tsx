@@ -54,7 +54,7 @@ const TIPOS = [
     icon: '🏘️',
     tipo: 'Alcantarillado para Urbanizaciones',
     desc: 'Diseño completo de redes de alcantarillado sanitario y pluvial para nuevos sectores urbanos y ampliaciones del sistema municipal existente. Incluye cálculo de caudales de aguas residuales domésticas, diseño de colectores, pozos de inspección, cajas de paso y descole al sistema municipal. Se verifica la pendiente mínima y la velocidad de autolimpieza (≥0,6 m/s) en todos los tramos.',
-    aplica: 'Constructoras, promotores inmobiliarios, urbanizadoras, conjuntos residenciales rurales.',
+    aplica: 'Constructoras y promotores de proyectos de vivienda o usos mixtos, municipios en expansión y ESP con ampliación de redes.',
   },
   {
     icon: '🏗️',
