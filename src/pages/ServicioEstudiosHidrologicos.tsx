@@ -145,7 +145,6 @@ const CLIENTES = [
   { tipo: 'Empresas de Infraestructura y Sector Energético', desc: 'Hidrología para EIA de proyectos hidroeléctricos, plantas industriales, minería y grandes desarrollos que requieren licencia ambiental ante la CAR o la ANLA.' },
   { tipo: 'Municipios y Secretarías de Planeación', desc: 'POT, PMGRD, proyectos de agua y saneamiento con SGR, estudios para OCAD.' },
   { tipo: 'Empresas de Servicios Públicos (ESP)', desc: 'Concesión de aguas, diseño de bocatomas, ampliación de acueductos.' },
-  { tipo: 'INVÍAS y Gobernaciones', desc: 'Hidrología para diseño de puentes, drenaje vial y obras de infraestructura.' },
 ]
 
 export default function ServicioEstudiosHidrologicos() {
