@@ -53,6 +53,27 @@ const NOINDEX_SLUGS = new Set([
   // Urbanismo / plan parcial — fuera del foco hidráulico prioritario
   'cuanto-cuesta-plan-parcial-colombia',
   'decreto-1807-plan-parcial-colombia',
+  // Precios/costos — atraen price shoppers y competencia
+  'cuanto-cuesta-consultoria-hidraulica-colombia',
+  'cuanto-cuesta-diseno-acueducto-colombia-2026',
+  'cuanto-cuesta-diseno-alcantarillado-colombia',
+  'cuanto-cuesta-estudio-hidrologico',
+  'cuanto-cuesta-estudio-riesgo-inundacion-colombia',
+  'cuanto-cuesta-licencia-urbanismo-colombia',
+  'cuanto-cuesta-ptap-colombia-2026',
+  'cuanto-cuesta-sistema-contra-incendios-nsr10-colombia',
+  'presupuesto-diseno-ptap-veredal-colombia-2026',
+  'diseno-ptap-municipio-costos',
+  'costo-estudio-hec-ras-colombia-2026',
+  // Interventoría — atraen intermediarios que re-cotizan el trabajo de BIC
+  'interventoria-hidraulica-colombia',
+  'interventoria-hidraulica-obligaciones-costos-colombia',
+  'interventoria-obras-hidraulicas-colombia',
+  // Geotecnia / taludes — servicio que BIC no ofrece
+  'estabilidad-taludes-eje-cafetero',
+  // PTAR construcción adicional
+  'requisitos-ptar-licencia-construccion',
+  'ptar-industrial-colombia',
 ])
 
 // ─── ARTICLE CONTENT ────────────────────────────────────────────────────────
