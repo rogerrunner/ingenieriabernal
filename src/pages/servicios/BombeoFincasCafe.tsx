@@ -277,4 +277,12 @@ export default function BombeoFincasCafe() {
           </p>
           <Btn
             href={`https://wa.me/${WA}?text=${WA_MSG}`}
-            style={{ background: '#fff'
+            style={{ background: '#fff', color: '#17A2B8', borderRadius: 8, fontWeight: 700, fontSize: 16 }}
+          >
+            📱 Propuesta en 24 h — sin costo
+          </Btn>
+        </div>
+      </Section>
+    </>
+  )
+}
