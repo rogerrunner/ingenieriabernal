@@ -1,7 +1,7 @@
 import { useEffect } from 'react'
 import SEOHead from '@/components/SEOHead'
-import QuoteFormInline from '@/components/QuoteFormInline'
 import { BlueprintBg, SectionLabel, Btn, Section, Tag } from '@/components/ui'
+import QuoteFormInline from '@/components/QuoteFormInline'
 
 const WA = '573024778910'
 const WA_MSG = encodeURIComponent('Hola, tenemos un proyecto de construcción o urbanización cerca a un río o quebrada y la alcaldía / CAR nos exigen estudios hidráulicos o de amenaza. ¿Pueden enviarnos alcance y propuesta técnica?')
@@ -407,7 +407,7 @@ export default function ConstruirCercaRioQuebrada() {
         </div>
       </Section>
 
-      {/* ── FORMULARIO DE COTIZACIÓN INLINE ── */}
+
       <Section>
         <QuoteFormInline />
       </Section>
@@ -432,4 +432,12 @@ export default function ConstruirCercaRioQuebrada() {
               style={{ display: 'inline-block', padding: '15px 36px', background: '#25D366', color: '#fff', borderRadius: 8, fontWeight: 700, fontSize: 16, textDecoration: 'none' }}>
               📱 Propuesta en 24 h — sin costo
             </a>
-            <a href="/contacto" style={{ display: 'inline-block', padding: '15px 36px', backgrou
+            <a href="/contacto" style={{ display: 'inline-block', padding: '15px 36px', background: 'transparent', color: '#fff', borderRadius: 8, fontWeight: 700, fontSize: 16, textDecoration: 'none', border: '2px solid rgba(255,255,255,0.4)' }}>
+              Formulario de contacto
+            </a>
+          </div>
+        </div>
+      </section>
+    </>
+  )
+}
