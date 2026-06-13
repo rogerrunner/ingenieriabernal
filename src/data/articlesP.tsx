@@ -890,4 +890,3 @@ const articlesP: Record<string, {
 }
 
 export default articlesP
-      
