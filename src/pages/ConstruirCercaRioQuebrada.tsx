@@ -1,5 +1,6 @@
 import { useEffect } from 'react'
 import SEOHead from '@/components/SEOHead'
+import QuoteFormInline from '@/components/QuoteFormInline'
 import { BlueprintBg, SectionLabel, Btn, Section, Tag } from '@/components/ui'
 
 const WA = '573024778910'
@@ -406,6 +407,11 @@ export default function ConstruirCercaRioQuebrada() {
         </div>
       </Section>
 
+      {/* ── FORMULARIO DE COTIZACIÓN INLINE ── */}
+      <Section>
+        <QuoteFormInline />
+      </Section>
+
       {/* ── CTA FINAL ── */}
       <section style={{ background: 'linear-gradient(135deg, #001A33 0%, #003B6F 100%)', padding: '72px 24px', textAlign: 'center', position: 'relative', overflow: 'hidden' }}>
         <BlueprintBg opacity={0.05} />
@@ -426,12 +432,4 @@ export default function ConstruirCercaRioQuebrada() {
               style={{ display: 'inline-block', padding: '15px 36px', background: '#25D366', color: '#fff', borderRadius: 8, fontWeight: 700, fontSize: 16, textDecoration: 'none' }}>
               📱 Propuesta en 24 h — sin costo
             </a>
-            <a href="/contacto" style={{ display: 'inline-block', padding: '15px 36px', background: 'transparent', color: '#fff', borderRadius: 8, fontWeight: 700, fontSize: 16, textDecoration: 'none', border: '2px solid rgba(255,255,255,0.4)' }}>
-              Formulario de contacto
-            </a>
-          </div>
-        </div>
-      </section>
-    </>
-  )
-}
+            <a href="/contacto" style={{ display: 'inline-block', padding: '15px 36px', background: 'transparent', color: '#fff', borderRadius: 8, fontWeight: 700, fontSize: 16, textD
