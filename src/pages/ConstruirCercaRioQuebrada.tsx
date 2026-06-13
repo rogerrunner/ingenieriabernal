@@ -4,7 +4,7 @@ import QuoteFormInline from '@/components/QuoteFormInline'
 import { BlueprintBg, SectionLabel, Btn, Section, Tag } from '@/components/ui'
 
 const WA = '573024778910'
-const WA_MSG = encodeURIComponent('Hola, quiero construir cerca a un río o quebrada y necesito orientación sobre los estudios y permisos requeridos.')
+const WA_MSG = encodeURIComponent('Hola, tenemos un proyecto de construcción o urbanización cerca a un río o quebrada y la alcaldía / CAR nos exigen estudios hidráulicos o de amenaza. ¿Pueden enviarnos alcance y propuesta técnica?')
 
 const seoConfig = {
   title: 'Construir cerca a Río o Quebrada Colombia | BIC',
@@ -432,4 +432,4 @@ export default function ConstruirCercaRioQuebrada() {
               style={{ display: 'inline-block', padding: '15px 36px', background: '#25D366', color: '#fff', borderRadius: 8, fontWeight: 700, fontSize: 16, textDecoration: 'none' }}>
               📱 Propuesta en 24 h — sin costo
             </a>
-            <a href="/contacto" style={{ display: 'inline-block', padding: '15px 36px', background: 'transparent', color: '#fff', borderRadius: 8, fontWeight: 700, fontSize: 16, textD
+            <a href="/contacto" style={{ display: 'inline-block', padding: '15px 36px', backgrou
