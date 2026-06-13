@@ -75,7 +75,7 @@ const articlesP: Record<string, {
       <h2>Limitaciones del Método Racional y cuándo usar HEC-HMS</h2>
       <p>El Método Racional asume lluvia uniforme en tiempo y espacio, lo cual es una simplificación válida solo para cuencas pequeñas. Para cuencas mayores de 25 km², o cuando se requiere modelar la hidrógrafa completa (no solo el pico), es necesario recurrir a modelos como <strong>HEC-HMS</strong> con métodos de pérdidas SCS o Green-Ampt. En proyectos de obras de protección que requieren verificación del tránsito de crecientes, la combinación HEC-HMS + HEC-RAS es el estándar profesional en Colombia.</p>
 
-      <p>En BIC Ingeniería realizamos <a href="/servicios/modelacion-hidraulica" style={{color:'#17A2B8', fontWeight:600}}>modelación hidráulica profesional</a> de quebradas y ríos en Colombia, incluyendo cálculo de caudales de diseño, modelación HEC-RAS 2D y diseño de obras de protección para proyectos en Putumayo, Eje Cafetero, Pacífico y todo el territorio nacional. Contáctenos para una propuesta técnica en 24 horas.</p>
+      <p>En BIC Ingeniería realizamos <a href="/modelacion-hidraulica-colombia" style={{color:'#17A2B8', fontWeight:600}}>modelación hidráulica profesional</a> de quebradas y ríos en Colombia, incluyendo cálculo de caudales de diseño, modelación HEC-RAS 2D y diseño de obras de protección para proyectos en Putumayo, Eje Cafetero, Pacífico y todo el territorio nacional. Contáctenos para una propuesta técnica en 24 horas.</p>
     </>,
   },
 
@@ -128,7 +128,7 @@ const articlesP: Record<string, {
         <li><strong>Normativa municipal:</strong> varios municipios con POMCA formulado tienen restricciones específicas sobre el tipo de obras permitidas en la ronda hídrica.</li>
       </ul>
 
-      <p>En BIC Ingeniería ofrecemos el diseño completo de sistemas de <a href="/servicios/modelacion-hidraulica" style={{color:'#17A2B8', fontWeight:600}}>modelación hidráulica y obras de protección de riberas</a> en Colombia, incluyendo modelación HEC-RAS 2D para verificación hidráulica, memorias de cálculo COPNIA y gestión del permiso de ocupación de cauce ante la CAR. Solicite su propuesta técnica.</p>
+      <p>En BIC Ingeniería ofrecemos el diseño completo de sistemas de <a href="/modelacion-hidraulica-colombia" style={{color:'#17A2B8', fontWeight:600}}>modelación hidráulica y obras de protección de riberas</a> en Colombia, incluyendo modelación HEC-RAS 2D para verificación hidráulica, memorias de cálculo COPNIA y gestión del permiso de ocupación de cauce ante la CAR. Solicite su propuesta técnica.</p>
     </>,
   },
 
@@ -176,7 +176,7 @@ const articlesP: Record<string, {
         <li>Se identifican áreas prioritarias para reasentamiento de población en zonas de riesgo no mitigable.</li>
       </ul>
 
-      <p>En BIC Ingeniería somos expertos en <a href="/servicios/modelacion-hidraulica" style={{color:'#17A2B8', fontWeight:600}}>modelación hidráulica HEC-RAS 2D para zonificación de amenaza</a> en municipios colombianos. Elaboramos los estudios requeridos por el Decreto 1807/2014 y el POMCA, con memorias de cálculo COPNIA y entregables listos para incorporar en el POT. Contáctenos para conocer costos y plazos.</p>
+      <p>En BIC Ingeniería somos expertos en <a href="/modelacion-hidraulica-colombia" style={{color:'#17A2B8', fontWeight:600}}>modelación hidráulica HEC-RAS 2D para zonificación de amenaza</a> en municipios colombianos. Elaboramos los estudios requeridos por el Decreto 1807/2014 y el POMCA, con memorias de cálculo COPNIA y entregables listos para incorporar en el POT. Contáctenos para conocer costos y plazos.</p>
     </>,
   },
 
@@ -573,7 +573,7 @@ const articlesP: Record<string, {
       </ul>
       <p>Para este caudal, una PTAP convencional incluiría: mezcla rápida, 2 unidades de floculación hidráulica, sedimentador de 150 m² de área superficial, 2 filtros de arena de 30 m² cada uno, cámara de contacto de cloro y tanque de almacenamiento de 24 horas.</p>
 
-      <p>En BIC Ingeniería diseñamos PTAP para municipios y acueductos comunitarios según la <a href="/servicios/diseno-ptap" style={{color:'#17A2B8', fontWeight:600}}>Resolución 0330 y el RAS 2017</a>, con todos los estudios requeridos para financiación SGR y trámite ante el Ministerio de Vivienda. Contacte para propuesta.</p>
+      <p>En BIC Ingeniería diseñamos PTAP para municipios y acueductos comunitarios según la <a href="/diseno-ptap-colombia" style={{color:'#17A2B8', fontWeight:600}}>Resolución 0330 y el RAS 2017</a>, con todos los estudios requeridos para financiación SGR y trámite ante el Ministerio de Vivienda. Contacte para propuesta.</p>
     </>,
   },
 
@@ -629,7 +629,7 @@ const articlesP: Record<string, {
       <h2>Sedimentadores de alta tasa (SAT)</h2>
       <p>Para instalaciones con espacio limitado, los <strong>sedimentadores de alta tasa con módulos laminares</strong> (tubos o placas inclinadas) permiten aumentar la tasa de desbordamiento a 120–200 m³/m²·día, reduciendo el área de sedimentadores hasta en un 70% respecto al diseño convencional. Son recomendados por la Resolución 0330 para ampliaciones de PTAP existentes o instalaciones con restricciones de espacio.</p>
 
-      <p>En BIC Ingeniería diseñamos floculadores, sedimentadores y sistemas completos de <a href="/servicios/diseno-ptap" style={{color:'#17A2B8', fontWeight:600}}>plantas de tratamiento de agua potable</a> para municipios en Colombia, aplicando los criterios de la Resolución 0330 y el RAS 2017. Solicite propuesta técnica hoy.</p>
+      <p>En BIC Ingeniería diseñamos floculadores, sedimentadores y sistemas completos de <a href="/diseno-ptap-colombia" style={{color:'#17A2B8', fontWeight:600}}>plantas de tratamiento de agua potable</a> para municipios en Colombia, aplicando los criterios de la Resolución 0330 y el RAS 2017. Solicite propuesta técnica hoy.</p>
     </>,
   },
 
@@ -685,7 +685,7 @@ const articlesP: Record<string, {
       <h2>Financiación: SGR y Ministerio de Vivienda</h2>
       <p>Las PTAP compactas pueden financiarse a través del Sistema General de Regalías (SGR) cuando el municipio presenta un proyecto formulado en MGA-Web. El Ministerio de Vivienda también financia sistemas de agua potable para municipios con IRCA alto (mayor de 35%) a través del programa de saneamiento para asentamientos y comunidades.</p>
 
-      <p>En BIC Ingeniería acompañamos municipios en el diseño, selección y formulación de proyectos de <a href="/servicios/diseno-ptap" style={{color:'#17A2B8', fontWeight:600}}>PTAP para zonas rurales y municipios de Colombia</a>, incluyendo los estudios de calidad del agua cruda, el diseño de la PTAP (compacta o convencional), la formulación en MGA-Web y los documentos para trámite ante el Ministerio. Solicite asesoría.</p>
+      <p>En BIC Ingeniería acompañamos municipios en el diseño, selección y formulación de proyectos de <a href="/diseno-ptap-colombia" style={{color:'#17A2B8', fontWeight:600}}>PTAP para zonas rurales y municipios de Colombia</a>, incluyendo los estudios de calidad del agua cruda, el diseño de la PTAP (compacta o convencional), la formulación en MGA-Web y los documentos para trámite ante el Ministerio. Solicite asesoría.</p>
     </>,
   },
 
@@ -890,3 +890,4 @@ const articlesP: Record<string, {
 }
 
 export default articlesP
+      
