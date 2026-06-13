@@ -158,6 +158,23 @@ const NORMATIVA = [
 export default function EstudiosRequeridosCAR() {
   useEffect(() => { window.scrollTo(0, 0) }, [])
 
+  useEffect(() => {
+    const sf = document.createElement('script')
+    sf.type = 'application/ld+json'
+    sf.id = 'schema-estudios-car-faq'
+    sf.textContent = JSON.stringify({
+      '@context': 'https://schema.org',
+      '@type': 'FAQPage',
+      mainEntity: FAQ.map(({ q, a }) => ({
+        '@type': 'Question',
+        name: q,
+        acceptedAnswer: { '@type': 'Answer', text: a },
+      })),
+    })
+    document.head.appendChild(sf)
+    return () => { document.getElementById('schema-estudios-car-faq')?.remove() }
+  }, [])
+
   return (
     <>
       <SEOHead config={seoConfig} />
