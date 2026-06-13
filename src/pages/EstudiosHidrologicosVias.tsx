@@ -1,7 +1,7 @@
 import { useEffect } from 'react'
 import SEOHead from '@/components/SEOHead'
-import QuoteFormInline from '@/components/QuoteFormInline'
 import { BlueprintBg, SectionLabel, Btn, Section, Tag } from '@/components/ui'
+import QuoteFormInline from '@/components/QuoteFormInline'
 
 const WA = '573024778910'
 const WA_MSG = encodeURIComponent('Hola, necesito estudios hidrológicos para un proyecto vial — drenaje transversal, alcantarillas o diseño hidráulico de vía. ¿Pueden ayudarme?')
@@ -369,7 +369,7 @@ export default function EstudiosHidrologicosVias() {
         </div>
       </Section>
 
-      {/* ── FORMULARIO DE COTIZACIÓN INLINE ── */}
+
       <Section>
         <QuoteFormInline />
       </Section>
@@ -394,4 +394,12 @@ export default function EstudiosHidrologicosVias() {
               style={{ display: 'inline-block', padding: '15px 36px', background: '#25D366', color: '#fff', borderRadius: 8, fontWeight: 700, fontSize: 16, textDecoration: 'none' }}>
               📱 Propuesta en 24 h — sin costo
             </a>
-            <a href="/contacto" style={{ display: 'inline-block', padding: '15px 36px', background: 'transparent', color: '#fff', borderRadius: 8, fontWeight: 700, fontSize: 16, textD
+            <a href="/contacto" style={{ display: 'inline-block', padding: '15px 36px', background: 'transparent', color: '#fff', borderRadius: 8, fontWeight: 700, fontSize: 16, textDecoration: 'none', border: '2px solid rgba(255,255,255,0.4)' }}>
+              Formulario de contacto
+            </a>
+          </div>
+        </div>
+      </section>
+    </>
+  )
+}
