@@ -151,14 +151,17 @@ export default function ConcesionAguasColombia() {
           <p style={{ color: 'rgba(255,255,255,0.82)', fontSize: 16, lineHeight: 1.8, marginBottom: 32, maxWidth: 760 }}>
             BIC Bernal Ingeniería Consultores elabora los estudios hidrológicos, aforos de caudales
             y análisis de oferta-demanda hídrica requeridos para tramitar concesiones de aguas
-            superficiales y subterráneas ante las Corporaciones Autónomas Regionales en Colombia.
+            superficiales ante CORPOCALDAS, CARDER, CRQ y las demás CAR del país. Con sede en Manizales,
+            atendemos proyectos en Viterbo, Anserma, Riosucio, Chinchiná, Supía, Palestina,
+            Santa Rosa de Cabal y toda la región cafetera. Si CORPOCALDAS ya le envió un requerimiento
+            formal, tiene plazo para responder — BIC inicia el estudio en 5 días hábiles.
           </p>
           <div style={{ display: 'flex', gap: 12, flexWrap: 'wrap', marginBottom: 28 }}>
             <Btn href={`https://wa.me/${WA}?text=${WA_MSG}`}>📱 Consultar sobre concesión de aguas</Btn>
             <Btn variant="outline" href="/bocatomas-colombia" dark>Ver diseño de bocatomas</Btn>
           </div>
           <div style={{ display: 'flex', gap: 8, flexWrap: 'wrap' }}>
-            {['Decreto 1076/2015','Aforo caudales','Oferta hídrica','Caudal ecológico','CORPOCALDAS','CARDER · CRQ'].map(t => (
+            {['Decreto 1076/2015','Aforo caudales','Caudal ecológico','CORPOCALDAS · Caldas','CARDER · Risaralda','Eje Cafetero · Viterbo'].map(t => (
               <Tag key={t} style={{ background: 'rgba(23,162,184,0.15)', color: '#7FDBEA', border: '1px solid rgba(23,162,184,0.3)', fontSize: 11 }}>{t}</Tag>
             ))}
           </div>
@@ -348,11 +351,12 @@ export default function ConcesionAguasColombia() {
             ¿Necesita tramitar una concesión<br />de aguas en Colombia?
           </h2>
           <p style={{ color: 'rgba(255,255,255,0.82)', fontSize: 16, lineHeight: 1.8, marginBottom: 16 }}>
-            Cuéntenos el tipo de fuente, el caudal que necesita y la CAR de su región.
-            BIC le envía propuesta técnica en menos de 24 horas.
+            Cuéntenos el tipo de fuente, el caudal que necesita y la CAR de su región. Si CORPOCALDAS,
+            CARDER o CRQ ya le envió requerimiento formal, el plazo corre — BIC le envía propuesta
+            técnica en menos de 24 horas.
           </p>
           <p style={{ color: '#17A2B8', fontWeight: 600, fontSize: 15, marginBottom: 32 }}>
-            Primera consulta sin costo · Atención en todo Colombia.
+            Atención directa al propietario o decisor · Propuesta en 24 h · Desde $4M COP
           </p>
           <div style={{ display: 'flex', gap: 14, justifyContent: 'center', flexWrap: 'wrap' }}>
             <a
