@@ -1,11 +1,11 @@
 import { useEffect } from 'react'
 import SEOHead from '@/components/SEOHead'
 import SpeakableSchema from '@/components/SpeakableSchema'
-import QuoteFormInline from '@/components/QuoteFormInline'
 import { BlueprintBg, ThinLine, SectionLabel, Btn, Section, Tag } from '@/components/ui'
+import QuoteFormInline from '@/components/QuoteFormInline'
 
 const WA = '573024778910'
-const WA_MSG = encodeURIComponent('Hola, necesitamos tramitar una concesión de aguas superficiales para un proyecto de infraestructura hídrica. ¿Pueden enviarnos una propuesta técnica?')
+const WA_MSG = encodeURIComponent('Hola, necesitamos tramitar una concesión de aguas o permiso de ocupación de cauce ante la CAR para nuestro proyecto — acueducto / riego / industria. ¿Pueden enviarnos propuesta técnica con alcance y honorarios?')
 
 const seoConfig = {
   title: 'Concesión de Aguas Superficiales — Municipios, ESP y Proyectos de Infraestructura | BIC',
@@ -327,7 +327,7 @@ export default function ConcesionAguasColombia() {
         </div>
       </Section>
 
-      {/* ── FORMULARIO DE COTIZACIÓN INLINE ── */}
+
       <Section>
         <QuoteFormInline />
       </Section>
@@ -372,4 +372,14 @@ export default function ConcesionAguasColombia() {
                 display: 'inline-block', padding: '15px 36px',
                 background: 'transparent', color: '#fff',
                 borderRadius: 8, fontWeight: 700, fontSize: 16,
-                textDecoration: 'none', border: '
+                textDecoration: 'none', border: '2px solid rgba(255,255,255,0.4)',
+              }}
+            >
+              Formulario de contacto
+            </a>
+          </div>
+        </div>
+      </section>
+    </>
+  )
+}
