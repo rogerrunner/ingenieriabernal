@@ -2,14 +2,15 @@ import { useEffect } from 'react'
 import SEOHead from '@/components/SEOHead'
 import SpeakableSchema from '@/components/SpeakableSchema'
 import SchemaMarkup from '@/components/SchemaMarkup'
+import QuoteFormInline from '@/components/QuoteFormInline'
 import { BlueprintBg, ThinLine, SectionLabel, Btn, Section, Tag } from '@/components/ui'
 
 const WA = '573024778910'
 const WA_MSG = encodeURIComponent('Hola, necesitamos diseño de sistema contra incendios NSR-10 para un proyecto. ¿Pueden enviarnos una propuesta técnica con sus credenciales COPNIA?')
 
 const seoConfig = {
-  title: 'Diseño Red Contra Incendio NSR-10 Colombia | BIC',
-  description: 'Diseño hidráulico de redes contra incendio NSR-10 Título J, NFPA 13 y NFPA 14. Memorias COPNIA incluidas. Manizales, Eje Cafetero y Colombia. Cotiza hoy.',
+  title: 'Diseño Sistema Contra Incendios NSR-10 Título J | Caldas · Eje Cafetero · Colombia | BIC',
+  description: 'Diseño red contraincendio NSR-10 Títulos J y K — rociadores NFPA 13, gabinetes BIE, columnas húmedas NFPA 14, cuarto de bombas NFPA 20. Memorias COPNIA firmadas. Manizales, Eje Cafetero, Caldas, Colombia. Propuesta en 24 h.',
   keywords: [
     'sistemas contra incendios NSR-10 Colombia',
     'diseño sistema contra incendio NSR-10',
@@ -64,6 +65,7 @@ const PROYECTOS_TIPOS = [
   { tipo: 'Centros comerciales y grandes superficies', desc: 'Diseño CI completo para locales, área de parqueaderos y bodegas logísticas. Makarí Mall Dosquebradas como referencia ejecutada.' },
   { tipo: 'Hospitales y Centros de Salud Pública', desc: 'Establecimientos hospitalarios con zonas de alto riesgo, gases medicinales y requerimientos diferenciados por la Secretaría de Salud y el Cuerpo de Bomberos.' },
   { tipo: 'Plantas industriales y bodegas logísticas', desc: 'Almacenamiento de mercancías clasificadas, naves de producción y plantas de alimentos con niveles de peligro extra o especiales.' },
+  { tipo: 'Hoteles, clínicas y hospitales', desc: 'Edificios de alta ocupación con rutas de evacuación críticas y exigencias reforzadas por la autoridad de bomberos y la entidad habilitadora.' },
   { tipo: 'Colegios y universidades', desc: 'Instalaciones educativas con aulas, laboratorios y cocinas que requieren sistemas de detección diferenciados por zona.' },
 ]
 
@@ -337,6 +339,11 @@ export default function ServicioContraIncendiosNSR10() {
         </div>
       </Section>
 
+      {/* ── FORMULARIO DE COTIZACIÓN INLINE ── */}
+      <Section>
+        <QuoteFormInline />
+      </Section>
+
       {/* ── CTA FINAL ── */}
       <Section bg="#17A2B8" style={{ padding: '64px 24px', textAlign: 'center' }}>
         <div style={{ maxWidth: 680, margin: '0 auto' }}>
@@ -355,12 +362,4 @@ export default function ServicioContraIncendiosNSR10() {
           </p>
           <Btn
             href={`https://wa.me/${WA}?text=${WA_MSG}`}
-            style={{ background: '#fff', color: '#17A2B8', fontSize: 15, padding: '14px 36px' }}
-          >
-            📱 Propuesta en 24 h — sin costo
-          </Btn>
-        </div>
-      </Section>
-    </>
-  )
-}
+            style={{ background: '#fff'
