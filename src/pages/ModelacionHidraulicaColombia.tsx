@@ -1,8 +1,8 @@
 import { useEffect } from 'react'
 import SEOHead from '@/components/SEOHead'
 import SpeakableSchema from '@/components/SpeakableSchema'
-import QuoteFormInline from '@/components/QuoteFormInline'
 import { BlueprintBg, ThinLine, SectionLabel, Btn, Section, Tag } from '@/components/ui'
+import QuoteFormInline from '@/components/QuoteFormInline'
 
 const WA = '573024778910'
 const WA_MSG = encodeURIComponent('Hola, necesitamos una modelación hidráulica HEC-RAS para nuestro proyecto — parcelación / urbanización / cruce vial / POT / trámite CAR. ¿Pueden enviarnos propuesta técnica con tiempo de entrega?')
@@ -233,23 +233,9 @@ export default function ModelacionHidraulicaColombia() {
     sf.id = 'schema-modelacion-faq'
     sf.textContent = JSON.stringify(FAQ_SCHEMA_MOD)
     document.head.appendChild(sf)
-    const bc = document.createElement('script')
-    bc.type = 'application/ld+json'
-    bc.id = 'schema-modelacion-breadcrumb'
-    bc.textContent = JSON.stringify({
-      '@context': 'https://schema.org',
-      '@type': 'BreadcrumbList',
-      'itemListElement': [
-        { '@type': 'ListItem', 'position': 1, 'name': 'Inicio', 'item': 'https://ingenieriabernal.co' },
-        { '@type': 'ListItem', 'position': 2, 'name': 'Servicios', 'item': 'https://ingenieriabernal.co/servicios' },
-        { '@type': 'ListItem', 'position': 3, 'name': 'Modelación Hidráulica Colombia', 'item': 'https://ingenieriabernal.co/modelacion-hidraulica-colombia' },
-      ],
-    })
-    document.head.appendChild(bc)
     return () => {
       document.getElementById('schema-modelacion-hidraulica')?.remove()
       document.getElementById('schema-modelacion-faq')?.remove()
-      document.getElementById('schema-modelacion-breadcrumb')?.remove()
     }
   }, [])
 
@@ -609,7 +595,7 @@ export default function ModelacionHidraulicaColombia() {
         </div>
       </Section>
 
-      {/* ── FORMULARIO DE COTIZACIÓN INLINE ── */}
+
       <Section>
         <QuoteFormInline />
       </Section>
@@ -664,4 +650,14 @@ export default function ModelacionHidraulicaColombia() {
             <p style={{ color: 'rgba(255,255,255,0.55)', fontSize: 12, marginBottom: 10, textTransform: 'uppercase', letterSpacing: '0.06em' }}>
               También disponible en:
             </p>
-    
+            <a href="/modelacion-hidraulica-putumayo" style={{
+              color: '#7FDBEA', fontWeight: 600, fontSize: 14, textDecoration: 'underline',
+            }}>
+              Modelación hidráulica en el Putumayo →
+            </a>
+          </div>
+        </div>
+      </section>
+    </>
+  )
+}
