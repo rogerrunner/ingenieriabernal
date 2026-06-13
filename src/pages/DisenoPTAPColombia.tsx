@@ -454,4 +454,10 @@ export default function DisenoPTAPColombia() {
               }}
             >
               Formulario de contacto
-      
+            </a>
+          </div>
+        </div>
+      </section>
+    </>
+  )
+}
