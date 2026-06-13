@@ -1,6 +1,7 @@
 import { useEffect } from 'react'
 import SEOHead from '@/components/SEOHead'
 import SchemaMarkup from '@/components/SchemaMarkup'
+import QuoteFormInline from '@/components/QuoteFormInline'
 import { BlueprintBg, SectionLabel, Btn, Section, Tag } from '@/components/ui'
 
 const WA = '573024778910'
@@ -592,6 +593,11 @@ export default function ObrasHidraulicasColombia() {
         </div>
       </Section>
 
+      {/* ── FORMULARIO DE COTIZACIÓN INLINE ── */}
+      <Section>
+        <QuoteFormInline />
+      </Section>
+
       {/* ── CTA FINAL ── */}
       <section style={{
         background: 'linear-gradient(135deg, #002A50, #004F96)',
@@ -613,14 +619,4 @@ export default function ObrasHidraulicasColombia() {
             style={{
               display: 'inline-block', padding: '14px 32px',
               background: '#25D366', color: '#fff',
-              borderRadius: 8, fontWeight: 700, fontSize: 16,
-              textDecoration: 'none',
-            }}
-          >
-            📱 Propuesta en 24 h — sin costo
-          </a>
-        </div>
-      </section>
-    </>
-  )
-}
+              borderRadius: 8, fontWeight: 700, fontSiz
