@@ -6,7 +6,7 @@ import { BlueprintBg, ThinLine, SectionLabel, Btn, Section, Tag, CTABanner } fro
 import QuoteFormInline from '@/components/QuoteFormInline'
 
 const WA = '573024778910'
-const WA_MSG = encodeURIComponent('Hola, necesito asesoría técnica para el diseño de una PTAP (estudio técnico / consultoría). ¿Pueden orientarme?')
+const WA_MSG = encodeURIComponent('Hola, somos [municipio / ESP / acueducto comunitario] y necesitamos diseño de PTAP para tratamiento de agua potable. ¿Pueden enviarnos propuesta técnica con tiempo de entrega y honorarios?')
 
 const seoConfig = {
   title: 'Consultoría para Diseño de PTAP en Colombia — Asesoría Técnica | BIC',
@@ -454,10 +454,4 @@ export default function DisenoPTAPColombia() {
               }}
             >
               Formulario de contacto
-            </a>
-          </div>
-        </div>
-      </section>
-    </>
-  )
-}
+      
