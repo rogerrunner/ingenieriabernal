@@ -1,6 +1,7 @@
 import { useEffect } from 'react'
 import SEOHead from '@/components/SEOHead'
 import SchemaMarkup from '@/components/SchemaMarkup'
+import QuoteFormInline from '@/components/QuoteFormInline'
 import { BlueprintBg, SectionLabel, Btn, Section, Tag } from '@/components/ui'
 
 const WA = '573024778910'
@@ -455,6 +456,11 @@ export default function EstudiosTorrencialidad() {
         </div>
       </Section>
 
+      {/* ── FORMULARIO DE COTIZACIÓN INLINE ── */}
+      <Section>
+        <QuoteFormInline />
+      </Section>
+
       {/* ── CTA FINAL ── */}
       <section style={{
         background: 'linear-gradient(135deg, #0D1B2A 0%, #243042 100%)',
@@ -496,14 +502,4 @@ export default function EstudiosTorrencialidad() {
                 display: 'inline-block', padding: '15px 36px',
                 background: 'transparent', color: '#fff',
                 borderRadius: 8, fontWeight: 700, fontSize: 16,
-                textDecoration: 'none', border: '2px solid rgba(255,255,255,0.4)',
-              }}
-            >
-              Formulario de contacto
-            </a>
-          </div>
-        </div>
-      </section>
-    </>
-  )
-}
+                textDecoration: 'none', border: '
