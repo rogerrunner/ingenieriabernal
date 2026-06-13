@@ -1,8 +1,8 @@
 import { useEffect } from 'react'
 import SEOHead from '@/components/SEOHead'
 import SchemaMarkup from '@/components/SchemaMarkup'
-import QuoteFormInline from '@/components/QuoteFormInline'
 import { BlueprintBg, SectionLabel, Btn, Section, Tag } from '@/components/ui'
+import QuoteFormInline from '@/components/QuoteFormInline'
 
 const WA = '573024778910'
 const WA_MSG = encodeURIComponent('Hola, tengo un predio o proyecto en zona de inundación y necesito obras de protección hidráulica o un estudio de amenaza. ¿Pueden asesorarme?')
@@ -593,7 +593,7 @@ export default function ObrasHidraulicasColombia() {
         </div>
       </Section>
 
-      {/* ── FORMULARIO DE COTIZACIÓN INLINE ── */}
+
       <Section>
         <QuoteFormInline />
       </Section>
@@ -619,4 +619,14 @@ export default function ObrasHidraulicasColombia() {
             style={{
               display: 'inline-block', padding: '14px 32px',
               background: '#25D366', color: '#fff',
-              borderRadius: 8, fontWeight: 700, fontSiz
+              borderRadius: 8, fontWeight: 700, fontSize: 16,
+              textDecoration: 'none',
+            }}
+          >
+            📱 Propuesta en 24 h — sin costo
+          </a>
+        </div>
+      </section>
+    </>
+  )
+}
