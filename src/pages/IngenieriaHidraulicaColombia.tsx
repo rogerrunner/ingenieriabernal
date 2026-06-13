@@ -6,7 +6,7 @@ import QuoteFormInline from '@/components/QuoteFormInline'
 import { BlueprintBg, SectionLabel, Btn, Section, Tag } from '@/components/ui'
 
 const WA = '573024778910'
-const WA_MSG = encodeURIComponent('Hola, necesito consultoría en ingeniería hidráulica para un proyecto en Colombia')
+const WA_MSG = encodeURIComponent('Hola, somos [municipio / constructora / propietario] y necesitamos consultoría en ingeniería hidráulica para nuestro proyecto. ¿Pueden enviarnos propuesta técnica con alcance y honorarios?')
 
 const seoConfig = {
   title: 'Empresa de Ingeniería Hidráulica en Colombia — Contrata BIC | COPNIA 2026',
@@ -569,6 +569,4 @@ export default function IngenieriaHidraulicaColombia() {
             href={`https://wa.me/${WA}?text=${WA_MSG}`}
             target="_blank" rel="noopener noreferrer"
             style={{
-              display: 'inline-block', padding: '14px 36px',
-              background: '#fff', color: '#17A2B8',
-              borderRadius: 8, fontWeight: 700, fontSiz
+              display: 'inline-block', padding: '14px 36px
