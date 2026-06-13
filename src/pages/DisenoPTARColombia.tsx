@@ -6,7 +6,7 @@ import { BlueprintBg, ThinLine, SectionLabel, Btn, Section, Tag, CTABanner } fro
 import QuoteFormInline from '@/components/QuoteFormInline'
 
 const WA = '573024778910'
-const WA_MSG = encodeURIComponent('Hola, necesito asesoría técnica para el diseño de una PTAR (estudio técnico / consultoría). ¿Pueden orientarme?')
+const WA_MSG = encodeURIComponent('Hola, somos [municipio / industria / ESP] y necesitamos el diseño de una PTAR para tratamiento de vertimientos residuales / industriales. ¿Pueden enviarnos propuesta técnica con alcance del estudio?')
 
 const seoConfig = {
   title: 'Consultoría para Diseño de PTAR en Colombia — Asesoría Técnica | BIC',
@@ -214,7 +214,23 @@ export default function DisenoPTARColombia() {
     s.id = 'schema-ptar-faq'
     s.textContent = JSON.stringify(FAQ_SCHEMA)
     document.head.appendChild(s)
-    return () => { document.getElementById('schema-ptar-faq')?.remove() }
+    const bc = document.createElement('script')
+    bc.type = 'application/ld+json'
+    bc.id = 'schema-ptar-breadcrumb'
+    bc.textContent = JSON.stringify({
+      '@context': 'https://schema.org',
+      '@type': 'BreadcrumbList',
+      'itemListElement': [
+        { '@type': 'ListItem', 'position': 1, 'name': 'Inicio', 'item': 'https://ingenieriabernal.co' },
+        { '@type': 'ListItem', 'position': 2, 'name': 'Servicios', 'item': 'https://ingenieriabernal.co/servicios' },
+        { '@type': 'ListItem', 'position': 3, 'name': 'Diseño de PTAR Colombia', 'item': 'https://ingenieriabernal.co/diseno-ptar-colombia' },
+      ],
+    })
+    document.head.appendChild(bc)
+    return () => {
+      document.getElementById('schema-ptar-faq')?.remove()
+      document.getElementById('schema-ptar-breadcrumb')?.remove()
+    }
   }, [])
 
   return (
@@ -636,11 +652,4 @@ export default function DisenoPTARColombia() {
                 textDecoration: 'none', border: '2px solid rgba(255,255,255,0.4)',
               }}
             >
-              Formulario de contacto
-            </a>
-          </div>
-        </div>
-      </section>
-    </>
-  )
-}
+              Formulario de conta
