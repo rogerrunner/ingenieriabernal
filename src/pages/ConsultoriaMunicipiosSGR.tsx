@@ -5,9 +5,7 @@ import { BlueprintBg, ThinLine, SectionLabel, Btn, Section, Tag } from '@/compon
 import QuoteFormInline from '@/components/QuoteFormInline'
 
 const WA = '573024778910'
-const WA_MSG = encodeURIComponent(
-  'Hola, soy de una alcaldía/entidad pública y necesito consultoría en ingeniería hidráulica para un proyecto. ¿Me dan información?'
-)
+const WA_MSG = encodeURIComponent('Hola, soy de una alcaldía / entidad pública y necesitamos apoyo técnico para formular o ejecutar un proyecto de agua y saneamiento para regalías SGR. ¿Pueden enviarnos propuesta con alcance y honorarios?')
 
 const seoConfig = {
   title: 'Consultoría Hidráulica para Municipios y SGR 2026 — Desde $8M | BIC Colombia',
