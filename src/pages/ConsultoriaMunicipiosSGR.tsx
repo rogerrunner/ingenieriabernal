@@ -167,8 +167,10 @@ export default function ConsultoriaMunicipiosSGR() {
           }}>
             BIC Bernal Ingeniería Consultores es la firma consultora especializada en proyectos
             hidráulicos para el sector público colombiano. Diseñamos acueductos, formulamos proyectos
-            SGR en MGA-Web, modelamos riesgos de inundación y acompañamos a alcaldías y gobernaciones
-            desde el estudio técnico hasta la aprobación OCAD. COPNIA vigente. Contrato verificable en SECOP.
+            SGR en MGA-Web y acompañamos a alcaldías desde el estudio técnico hasta la aprobación OCAD.
+            Con sede en Manizales, atendemos municipios de Caldas (Viterbo, Anserma, Riosucio, Palestina,
+            Belalcázar), Risaralda (Guática, Marsella, Santa Rosa de Cabal) y Quindío. Si tiene plazo de
+            OCAD próximo o ventana SGR abierta, el tiempo es crítico — propuesta técnica en 48 horas.
           </p>
           <div style={{ display: 'flex', gap: 16, flexWrap: 'wrap' }}>
             <Btn href={`https://wa.me/${WA}?text=${WA_MSG}`} primary>
@@ -179,7 +181,7 @@ export default function ConsultoriaMunicipiosSGR() {
             </Btn>
           </div>
           <div style={{ display: 'flex', gap: 12, flexWrap: 'wrap', marginTop: 32 }}>
-            {['COPNIA 17202-313228', 'UNAL Egresados', 'SECOP verificable', 'Cobertura nacional'].map(t => (
+            {['COPNIA 17202-313228', 'UNAL Egresados', 'SECOP verificable', 'Caldas · Risaralda · Quindío'].map(t => (
               <Tag key={t} light>{t}</Tag>
             ))}
           </div>
@@ -391,11 +393,12 @@ export default function ConsultoriaMunicipiosSGR() {
       <Section bg="linear-gradient(135deg,#001A33,#002A50)">
         <div style={{ maxWidth: 700, margin: '0 auto', padding: '0 24px', textAlign: 'center' }}>
           <h2 style={{ fontFamily: "'Playfair Display',serif", fontWeight: 700, color: '#fff', fontSize: 'clamp(24px,4vw,36px)', marginBottom: 16 }}>
-            ¿Su municipio tiene un proyecto hidráulico pendiente?
+            ¿Su municipio tiene plazo de OCAD o ventana SGR abierta?
           </h2>
           <p style={{ fontFamily: "'Lato',sans-serif", color: 'rgba(255,255,255,0.8)', fontSize: 16, lineHeight: 1.7, marginBottom: 36 }}>
             Cuéntenos el proyecto — formulación SGR, diseño de acueducto, estudio de inundación,
-            interventoría — y le enviamos una propuesta técnica con alcance y valor en 48 horas.
+            interventoría — y le enviamos propuesta técnica con alcance y honorarios en 48 horas.
+            Atención directa a secretarías de planeación y alcaldes. Sin intermediarios.
           </p>
           <div style={{ display: 'flex', gap: 16, justifyContent: 'center', flexWrap: 'wrap' }}>
             <Btn href={`https://wa.me/${WA}?text=${WA_MSG}`} primary>
