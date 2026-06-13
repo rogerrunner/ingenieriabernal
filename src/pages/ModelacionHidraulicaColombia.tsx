@@ -5,7 +5,7 @@ import QuoteFormInline from '@/components/QuoteFormInline'
 import { BlueprintBg, ThinLine, SectionLabel, Btn, Section, Tag } from '@/components/ui'
 
 const WA = '573024778910'
-const WA_MSG = encodeURIComponent('Hola, necesito cotizar una modelación hidráulica en Colombia. ¿Pueden ayudarme?')
+const WA_MSG = encodeURIComponent('Hola, necesitamos una modelación hidráulica HEC-RAS para nuestro proyecto — parcelación / urbanización / cruce vial / POT / trámite CAR. ¿Pueden enviarnos propuesta técnica con tiempo de entrega?')
 
 const seoConfig = {
   title: 'Modelación Hidráulica para tu Proyecto — HEC-RAS 2D, HEC-HMS | Empresa BIC Colombia',
@@ -664,5 +664,4 @@ export default function ModelacionHidraulicaColombia() {
             <p style={{ color: 'rgba(255,255,255,0.55)', fontSize: 12, marginBottom: 10, textTransform: 'uppercase', letterSpacing: '0.06em' }}>
               También disponible en:
             </p>
-            <a href="/modelacion-hidraulica-putumayo" style={{
-              color: '#7FDBEA', fontWeight: 600, fontSize: 14, 
+    
