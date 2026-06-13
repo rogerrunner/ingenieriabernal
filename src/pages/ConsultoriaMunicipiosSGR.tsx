@@ -1,12 +1,12 @@
 ﻿import { useEffect } from 'react'
 import SEOHead from '@/components/SEOHead'
 import SchemaMarkup from '@/components/SchemaMarkup'
-import QuoteFormInline from '@/components/QuoteFormInline'
 import { BlueprintBg, ThinLine, SectionLabel, Btn, Section, Tag } from '@/components/ui'
+import QuoteFormInline from '@/components/QuoteFormInline'
 
 const WA = '573024778910'
 const WA_MSG = encodeURIComponent(
-  'Hola, soy de una alcaldía / entidad pública y necesitamos apoyo técnico para formular o ejecutar un proyecto de agua y saneamiento para regalías SGR. ¿Pueden enviarnos propuesta con alcance y honorarios?'
+  'Hola, soy de una alcaldía/entidad pública y necesito consultoría en ingeniería hidráulica para un proyecto. ¿Me dan información?'
 )
 
 const seoConfig = {
@@ -173,7 +173,7 @@ export default function ConsultoriaMunicipiosSGR() {
             desde el estudio técnico hasta la aprobación OCAD. COPNIA vigente. Contrato verificable en SECOP.
           </p>
           <div style={{ display: 'flex', gap: 16, flexWrap: 'wrap' }}>
-            <Btn href={`https://wa.me/${WA}?text=${WA_MSG}`}>
+            <Btn href={`https://wa.me/${WA}?text=${WA_MSG}`} primary>
               Solicitar propuesta técnica
             </Btn>
             <Btn href="mailto:robernalri@unal.edu.co">
@@ -259,7 +259,7 @@ export default function ConsultoriaMunicipiosSGR() {
             ))}
           </div>
           <div style={{ textAlign: 'center', marginTop: 40 }}>
-            <Btn href={`https://wa.me/${WA}?text=${WA_MSG}`}>
+            <Btn href={`https://wa.me/${WA}?text=${WA_MSG}`} primary>
               Solicitar propuesta para mi municipio
             </Btn>
           </div>
@@ -348,7 +348,7 @@ export default function ConsultoriaMunicipiosSGR() {
             ))}
           </div>
           <div style={{ textAlign: 'center', marginTop: 36 }}>
-            <Btn href={`https://wa.me/${WA}?text=${WA_MSG}`}>
+            <Btn href={`https://wa.me/${WA}?text=${WA_MSG}`} primary>
               Solicitar propuesta con APU para SECOP
             </Btn>
           </div>
@@ -384,7 +384,7 @@ export default function ConsultoriaMunicipiosSGR() {
 
       <ThinLine />
 
-      {/* ── FORMULARIO DE COTIZACIÓN INLINE ── */}
+
       <Section>
         <QuoteFormInline />
       </Section>
@@ -400,6 +400,15 @@ export default function ConsultoriaMunicipiosSGR() {
             interventoría — y le enviamos una propuesta técnica con alcance y valor en 48 horas.
           </p>
           <div style={{ display: 'flex', gap: 16, justifyContent: 'center', flexWrap: 'wrap' }}>
-            <Btn href={`https://wa.me/${WA}?text=${WA_MSG}`}>
+            <Btn href={`https://wa.me/${WA}?text=${WA_MSG}`} primary>
               WhatsApp +57 302 477 8910
-  
+            </Btn>
+            <Btn href="mailto:robernalri@unal.edu.co" style={{ color: '#fff', borderColor: 'rgba(255,255,255,0.5)' }}>
+              robernalri@unal.edu.co
+            </Btn>
+          </div>
+        </div>
+      </Section>
+    </>
+  )
+}
