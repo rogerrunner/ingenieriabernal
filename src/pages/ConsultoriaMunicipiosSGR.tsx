@@ -1,6 +1,7 @@
 ﻿import { useEffect } from 'react'
 import SEOHead from '@/components/SEOHead'
 import SchemaMarkup from '@/components/SchemaMarkup'
+import QuoteFormInline from '@/components/QuoteFormInline'
 import { BlueprintBg, ThinLine, SectionLabel, Btn, Section, Tag } from '@/components/ui'
 
 const WA = '573024778910'
@@ -172,7 +173,7 @@ export default function ConsultoriaMunicipiosSGR() {
             desde el estudio técnico hasta la aprobación OCAD. COPNIA vigente. Contrato verificable en SECOP.
           </p>
           <div style={{ display: 'flex', gap: 16, flexWrap: 'wrap' }}>
-            <Btn href={`https://wa.me/${WA}?text=${WA_MSG}`} primary>
+            <Btn href={`https://wa.me/${WA}?text=${WA_MSG}`}>
               Solicitar propuesta técnica
             </Btn>
             <Btn href="mailto:robernalri@unal.edu.co">
@@ -258,7 +259,7 @@ export default function ConsultoriaMunicipiosSGR() {
             ))}
           </div>
           <div style={{ textAlign: 'center', marginTop: 40 }}>
-            <Btn href={`https://wa.me/${WA}?text=${WA_MSG}`} primary>
+            <Btn href={`https://wa.me/${WA}?text=${WA_MSG}`}>
               Solicitar propuesta para mi municipio
             </Btn>
           </div>
@@ -347,7 +348,7 @@ export default function ConsultoriaMunicipiosSGR() {
             ))}
           </div>
           <div style={{ textAlign: 'center', marginTop: 36 }}>
-            <Btn href={`https://wa.me/${WA}?text=${WA_MSG}`} primary>
+            <Btn href={`https://wa.me/${WA}?text=${WA_MSG}`}>
               Solicitar propuesta con APU para SECOP
             </Btn>
           </div>
@@ -383,6 +384,11 @@ export default function ConsultoriaMunicipiosSGR() {
 
       <ThinLine />
 
+      {/* ── FORMULARIO DE COTIZACIÓN INLINE ── */}
+      <Section>
+        <QuoteFormInline />
+      </Section>
+
       {/* ── CTA FINAL ── */}
       <Section bg="linear-gradient(135deg,#001A33,#002A50)">
         <div style={{ maxWidth: 700, margin: '0 auto', padding: '0 24px', textAlign: 'center' }}>
@@ -394,15 +400,7 @@ export default function ConsultoriaMunicipiosSGR() {
             interventoría — y le enviamos una propuesta técnica con alcance y valor en 48 horas.
           </p>
           <div style={{ display: 'flex', gap: 16, justifyContent: 'center', flexWrap: 'wrap' }}>
-            <Btn href={`https://wa.me/${WA}?text=${WA_MSG}`} primary>
+            <Btn href={`https://wa.me/${WA}?text=${WA_MSG}`}>
               WhatsApp +57 302 477 8910
             </Btn>
-            <Btn href="mailto:robernalri@unal.edu.co" style={{ color: '#fff', borderColor: 'rgba(255,255,255,0.5)' }}>
-              robernalri@unal.edu.co
-            </Btn>
-          </div>
-        </div>
-      </Section>
-    </>
-  )
-}
+            <Btn href="mailto:robernalri@unal.edu.co" st
