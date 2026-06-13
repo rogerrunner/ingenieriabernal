@@ -1,8 +1,8 @@
 import { useEffect } from 'react'
 import SEOHead from '@/components/SEOHead'
 import SchemaMarkup from '@/components/SchemaMarkup'
-import QuoteFormInline from '@/components/QuoteFormInline'
 import { BlueprintBg, ThinLine, SectionLabel, Btn, Section, Tag } from '@/components/ui'
+import QuoteFormInline from '@/components/QuoteFormInline'
 
 const WA = '573024778910'
 const WA_MSG = encodeURIComponent('Hola, necesitamos propuesta para diseño de alcantarillado en Colombia. Es para municipio / ESP / urbanización / parcelación. ¿Pueden enviarnos una propuesta técnica?')
@@ -55,7 +55,7 @@ const TIPOS = [
     icon: '🏘️',
     tipo: 'Alcantarillado para Urbanizaciones',
     desc: 'Diseño completo de redes de alcantarillado sanitario y pluvial para nuevos sectores urbanos y ampliaciones del sistema municipal existente. Incluye cálculo de caudales de aguas residuales domésticas, diseño de colectores, pozos de inspección, cajas de paso y descole al sistema municipal. Se verifica la pendiente mínima y la velocidad de autolimpieza (≥0,6 m/s) en todos los tramos.',
-    aplica: 'Constructoras, promotores inmobiliarios, urbanizadoras, conjuntos residenciales rurales.',
+    aplica: 'Constructoras y promotores de proyectos de vivienda o usos mixtos, municipios en expansión y ESP con ampliación de redes.',
   },
   {
     icon: '🏗️',
@@ -495,7 +495,7 @@ export default function DisenoAlcantarilladoColombia() {
         </div>
       </Section>
 
-      {/* ── FORMULARIO DE COTIZACIÓN INLINE ── */}
+
       <Section>
         <QuoteFormInline />
       </Section>
@@ -540,4 +540,14 @@ export default function DisenoAlcantarilladoColombia() {
                 display: 'inline-block', padding: '15px 36px',
                 background: 'transparent', color: '#fff',
                 borderRadius: 8, fontWeight: 700, fontSize: 16,
-                textDecoration: 'none',
+                textDecoration: 'none', border: '2px solid rgba(255,255,255,0.4)',
+              }}
+            >
+              Formulario de contacto
+            </a>
+          </div>
+        </div>
+      </section>
+    </>
+  )
+}
