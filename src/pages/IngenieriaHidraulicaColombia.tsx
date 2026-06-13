@@ -2,8 +2,8 @@ import { useEffect } from 'react'
 import SEOHead from '@/components/SEOHead'
 import SpeakableSchema from '@/components/SpeakableSchema'
 import SchemaMarkup from '@/components/SchemaMarkup'
-import QuoteFormInline from '@/components/QuoteFormInline'
 import { BlueprintBg, SectionLabel, Btn, Section, Tag } from '@/components/ui'
+import QuoteFormInline from '@/components/QuoteFormInline'
 
 const WA = '573024778910'
 const WA_MSG = encodeURIComponent('Hola, somos [municipio / constructora / propietario] y necesitamos consultoría en ingeniería hidráulica para nuestro proyecto. ¿Pueden enviarnos propuesta técnica con alcance y honorarios?')
@@ -239,8 +239,7 @@ export default function IngenieriaHidraulicaColombia() {
       '@type': 'BreadcrumbList',
       'itemListElement': [
         { '@type': 'ListItem', 'position': 1, 'name': 'Inicio', 'item': 'https://ingenieriabernal.co' },
-        { '@type': 'ListItem', 'position': 2, 'name': 'Servicios', 'item': 'https://ingenieriabernal.co/servicios' },
-        { '@type': 'ListItem', 'position': 3, 'name': 'Ingeniería Hidráulica Colombia', 'item': 'https://ingenieriabernal.co/ingenieria-hidraulica-colombia' },
+        { '@type': 'ListItem', 'position': 2, 'name': 'Ingeniería Hidráulica Colombia', 'item': 'https://ingenieriabernal.co/ingenieria-hidraulica-colombia' },
       ],
     })
     document.head.appendChild(el)
@@ -549,7 +548,7 @@ export default function IngenieriaHidraulicaColombia() {
         </div>
       </Section>
 
-      {/* ── FORMULARIO DE COTIZACIÓN INLINE ── */}
+
       <Section>
         <QuoteFormInline />
       </Section>
@@ -569,4 +568,16 @@ export default function IngenieriaHidraulicaColombia() {
             href={`https://wa.me/${WA}?text=${WA_MSG}`}
             target="_blank" rel="noopener noreferrer"
             style={{
-              display: 'inline-block', padding: '14px 36px
+              display: 'inline-block', padding: '14px 36px',
+              background: '#fff', color: '#17A2B8',
+              borderRadius: 8, fontWeight: 700, fontSize: 16,
+              textDecoration: 'none',
+            }}
+          >
+            📱 Propuesta en 24 h — sin costo
+          </a>
+        </div>
+      </section>
+    </>
+  )
+}
