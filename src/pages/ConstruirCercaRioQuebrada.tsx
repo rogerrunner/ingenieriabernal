@@ -199,9 +199,11 @@ export default function ConstruirCercaRioQuebrada() {
           </p>
           <p style={{ color: 'rgba(255,255,255,0.82)', fontSize: 16, lineHeight: 1.8, marginBottom: 32, maxWidth: 760 }}>
             En Colombia no se puede construir junto a un cauce sin demostrar que el predio no está en zona
-            de amenaza alta por inundación ni dentro de la ronda hídrica. BIC elabora el estudio técnico completo
-            — con modelación HEC-RAS 2D e informe firmado por especialista COPNIA — que acepta la curaduría
-            y la CAR en cualquier municipio del país.
+            de amenaza alta por inundación ni dentro de la ronda hídrica. BIC elabora el estudio técnico
+            completo — modelación HEC-RAS 2D, mapa Decreto 1807, informe COPNIA — que acepta la curaduría
+            y la CAR. Atendemos en Manizales, Pereira, Armenia, Chinchiná, Dosquebradas, Santa Rosa de Cabal,
+            La Virginia y cualquier municipio del Eje Cafetero. Si la curaduría ya le pidió el estudio,
+            el plazo para responder corre — consulta gratis en 24 horas.
           </p>
           <div style={{ display: 'flex', gap: 12, flexWrap: 'wrap', marginBottom: 28 }}>
             <Btn href={`https://wa.me/${WA}?text=${WA_MSG}`}>📱 Consultar mi caso por WhatsApp</Btn>
@@ -438,11 +440,11 @@ export default function ConstruirCercaRioQuebrada() {
             ¿Su predio está cerca a un río o quebrada?
           </h2>
           <p style={{ color: 'rgba(255,255,255,0.82)', fontSize: 16, lineHeight: 1.8, marginBottom: 16 }}>
-            Cuéntenos la situación: municipio, qué quiere construir y si la curaduría ya le pidió algo.
-            BIC le dice qué necesita y cuánto cuesta en menos de 24 horas.
+            Municipio, qué quiere construir y si la curaduría ya le pidió el estudio de ronda hídrica o amenaza.
+            Si ya recibió el requerimiento, el plazo corre — BIC le confirma el alcance y el valor exacto en 24 horas.
           </p>
           <p style={{ color: '#17A2B8', fontWeight: 600, fontSize: 15, marginBottom: 32 }}>
-            Primera consulta sin costo · Propuesta técnica en 24 horas · Especialistas COPNIA vigentes
+            Atención directa al propietario o promotor · Sin intermediarios · Propuesta en 24 horas
           </p>
           <div style={{ display: 'flex', gap: 14, justifyContent: 'center', flexWrap: 'wrap' }}>
             <a href={`https://wa.me/${WA}?text=${WA_MSG}`} target="_blank" rel="noopener noreferrer"
