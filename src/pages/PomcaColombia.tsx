@@ -1,7 +1,7 @@
 import { useEffect } from 'react'
 import SEOHead from '@/components/SEOHead'
-import QuoteFormInline from '@/components/QuoteFormInline'
 import { BlueprintBg, ThinLine, SectionLabel, Btn, Section, Tag } from '@/components/ui'
+import QuoteFormInline from '@/components/QuoteFormInline'
 
 const WA = '573024778910'
 const WA_MSG = encodeURIComponent('Hola, necesito información sobre formulación de POMCA en Colombia. ¿Pueden ayudarme?')
@@ -479,7 +479,7 @@ export default function PomcaColombia() {
         </div>
       </Section>
 
-      {/* ── FORMULARIO DE COTIZACIÓN INLINE ── */}
+
       <Section>
         <QuoteFormInline />
       </Section>
@@ -524,4 +524,14 @@ export default function PomcaColombia() {
                 display: 'inline-block', padding: '15px 36px',
                 background: 'transparent', color: '#fff',
                 borderRadius: 8, fontWeight: 700, fontSize: 16,
-                textDecoration: 'none', border: '
+                textDecoration: 'none', border: '2px solid rgba(255,255,255,0.4)',
+              }}
+            >
+              Formulario de contacto
+            </a>
+          </div>
+        </div>
+      </section>
+    </>
+  )
+}
