@@ -310,4 +310,40 @@
   <!-- LATAM expansion -->
   <url><loc>https://ingenieriabernal.co/consultoria-hidraulica-ecuador</loc><lastmod>2026-06-05</lastmod><changefreq>monthly</changefreq><priority>0.85</priority></url>
   <url><loc>https://ingenieriabernal.co/consultoria-hidraulica-mexico</loc><lastmod>2026-06-05</lastmod><changefreq>monthly</changefreq><priority>0.85</priority></url>
+  <url>
+    <loc>https://ingenieriabernal.co/diseno-ptar-manizales</loc>
+    <lastmod>2026-06-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ingenieriabernal.co/diseno-ptar-municipal-colombia</loc>
+    <lastmod>2026-06-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ingenieriabernal.co/diseno-ptar-industrial-colombia</loc>
+    <lastmod>2026-06-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ingenieriabernal.co/bocatomas-eje-cafetero</loc>
+    <lastmod>2026-06-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ingenieriabernal.co/concesion-aguas-superficiales-colombia</loc>
+    <lastmod>2026-06-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ingenieriabernal.co/acueducto-rural-caldas</loc>
+    <lastmod>2026-06-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
 </urlset>
