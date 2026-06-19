@@ -55,6 +55,14 @@ import RegionalCali from './src/pages/regional/RegionalCali'
 import RegionalPereira from './src/pages/regional/RegionalPereira'
 import RegionalArmenia from './src/pages/regional/RegionalArmenia'
 import RegionalEjeCafetero from './src/pages/regional/RegionalEjeCafetero'
+import AcueductoRuralCaldas from './src/pages/servicios/AcueductoRuralCaldas'
+import DisenoPTARManizales from './src/pages/DisenoPTARManizales'
+import DisenoPTARMunicipalColombia from './src/pages/DisenoPTARMunicipalColombia'
+import DisenoPTARIndustrialColombia from './src/pages/DisenoPTARIndustrialColombia'
+import EmpresaIndustriaColombia from './src/pages/EmpresaIndustriaColombia'
+import BocatomasEjeCafetero from './src/pages/BocatomasEjeCafetero'
+import ConcesionAguasSuperficialesColombia from './src/pages/ConcesionAguasSuperficialesColombia'
+import PermisoVertimientosColombia from './src/pages/PermisoVertimientosColombia'
 
 // ─── Mapa de rutas a componentes ─────────────────────────────────────────────
 const PAGES: Record<string, React.ComponentType> = {
@@ -94,6 +102,15 @@ const PAGES: Record<string, React.ComponentType> = {
   'regional/pereira': RegionalPereira,
   'regional/armenia': RegionalArmenia,
   'regional/eje-cafetero': RegionalEjeCafetero,
+  // Páginas nuevas 2026-06
+  'acueducto-rural-caldas': AcueductoRuralCaldas,
+  'diseno-ptar-manizales': DisenoPTARManizales,
+  'diseno-ptar-municipal-colombia': DisenoPTARMunicipalColombia,
+  'diseno-ptar-industrial-colombia': DisenoPTARIndustrialColombia,
+  'empresa-industria-colombia': EmpresaIndustriaColombia,
+  'bocatomas-eje-cafetero': BocatomasEjeCafetero,
+  'concesion-aguas-superficiales-colombia': ConcesionAguasSuperficialesColombia,
+  'permiso-vertimientos-colombia': PermisoVertimientosColombia,
 }
 
 let injected = 0
