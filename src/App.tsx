@@ -395,4 +395,28 @@ export default function App() {
 
           {/* ── PÁGINAS GEOGRÁFICAS DE SERVICIO — mayo 2026 ── */}
           <Route path="/modelacion-hidraulica-putumayo" component={ServicioModelacionHidraulicaPutumayo} />
-          <Route path="/acueducto-quindio" component={ServicioAcue
+          <Route path="/acueducto-quindio" component={ServicioAcueductoQuindio} />
+          <Route path="/geotecnia-pereira" component={ServicioEstudioSuelosPereira} />
+          <Route path="/ptap-municipios-colombia" component={ServicioPTAPColombia} />
+          <Route path="/aguas-lluvias-manizales" component={ServicioAguasLluviasManizales} />
+
+          <Route path="/servicios/estudio-basico" component={EstudioBasico} />
+          <Route path="/proyectos/:id" component={ProjectDetail} />
+
+          {/* ── PÁGINAS TRAMITE-INTENT SEO — junio 2026 ── */}
+          <Route path="/tramitar-permiso-vertimiento-colombia" component={TramitePermisoVertimientoColombia} />
+          <Route path="/concesion-aguas-superficiales-tramite" component={ConcesionAguasSuperficialesTramite} />
+          <Route path="/diseno-acueducto-entrega-esp" component={DisenoAcueductoEntregaESP} />
+          <Route path="/estudio-detallado-inundacion-decreto-1807" component={EstudioDetalladoInundacionDecreto1807} />
+          <Route path="/diseno-ptar-tramite-permiso-vertimiento" component={DisenoPTARTramitePermisoVertimiento} />
+          <Route path="/redes-hidrosanitarias-licencia-construccion" component={RedesHidrosanitariasLicenciaConstruccion} />
+          <Route path="/blog/:slug" component={BlogDetail} />
+          <Route component={NotFound} />
+        </Switch>
+        </Suspense>
+      </main>
+      <Footer />
+      <FloatingQuoteButton />
+    </>
+  )
+}
