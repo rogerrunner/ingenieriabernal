@@ -60,8 +60,9 @@ const EstudioSuelosEjeCafetero = lazy(() => import('./pages/servicios/EstudioSue
 const ConsultoriaIngenieriaCivilManizales = lazy(() => import('./pages/servicios/ConsultoriaIngenieriaCivilManizales'))
 const GestionRiesgoHidricoManizales = lazy(() => import('./pages/servicios/GestionRiesgoHidricoManizales'))
 const DisenoHidraulicoEjeCafetero = lazy(() => import('./pages/servicios/DisenoHidraulicoEjeCafetero'))
-const BombeoFincasCafe = lazy(() => import('./pages/servicios/BombeoFincasCafe'))
 const TopografiaManizales = lazy(() => import('./pages/servicios/TopografiaManizales'))
+const AcueductoRuralCaldas = lazy(() => import('./pages/servicios/AcueductoRuralCaldas'))
+const BombeoFincasCafe = lazy(() => import('./pages/servicios/BombeoFincasCafe'))
 const CiudadBogota = lazy(() => import('./pages/servicios/CiudadBogota'))
 const CiudadMedellin = lazy(() => import('./pages/servicios/CiudadMedellin'))
 const CiudadCali = lazy(() => import('./pages/servicios/CiudadCali'))
@@ -90,6 +91,13 @@ const IngenieriaManizalesNacional = lazy(() => import('./pages/IngenieriaManizal
 const ModelacionHidraulicaColombia = lazy(() => import('./pages/ModelacionHidraulicaColombia'))
 const ModelacionHidrologicaColombia = lazy(() => import('./pages/ModelacionHidrologicaColombia'))
 const DisenoPTARColombia = lazy(() => import('./pages/DisenoPTARColombia'))
+const DisenoPTARManizales = lazy(() => import('./pages/DisenoPTARManizales'))
+const DisenoPTARMunicipalColombia = lazy(() => import('./pages/DisenoPTARMunicipalColombia'))
+const DisenoPTARIndustrialColombia = lazy(() => import('./pages/DisenoPTARIndustrialColombia'))
+const EmpresaIndustriaColombia = lazy(() => import('./pages/EmpresaIndustriaColombia'))
+const BocatomasEjeCafetero = lazy(() => import('./pages/BocatomasEjeCafetero'))
+const ConcesionAguasSuperficialesColombia = lazy(() => import('./pages/ConcesionAguasSuperficialesColombia'))
+const PermisoVertimientosColombia = lazy(() => import('./pages/PermisoVertimientosColombia'))
 const ConcesionAguasColombia = lazy(() => import('./pages/ConcesionAguasColombia'))
 const DisenoPTAPColombia = lazy(() => import('./pages/DisenoPTAPColombia'))
 const DisenoAlcantarilladoColombia = lazy(() => import('./pages/DisenoAlcantarilladoColombia'))
@@ -305,6 +313,13 @@ export default function App() {
           <Route path="/modelacion-hidraulica-colombia" component={ModelacionHidraulicaColombia} />
           <Route path="/modelacion-hidrologica-colombia" component={ModelacionHidrologicaColombia} />
           <Route path="/diseno-ptar-colombia" component={DisenoPTARColombia} />
+          <Route path="/diseno-ptar-manizales" component={DisenoPTARManizales} />
+          <Route path="/diseno-ptar-municipal-colombia" component={DisenoPTARMunicipalColombia} />
+          <Route path="/diseno-ptar-industrial-colombia" component={DisenoPTARIndustrialColombia} />
+          <Route path="/empresa-industria-colombia" component={EmpresaIndustriaColombia} />
+          <Route path="/bocatomas-eje-cafetero" component={BocatomasEjeCafetero} />
+          <Route path="/concesion-aguas-superficiales-colombia" component={ConcesionAguasSuperficialesColombia} />
+          <Route path="/permiso-vertimientos-colombia" component={PermisoVertimientosColombia} />
           <Route path="/concesion-aguas-colombia" component={ConcesionAguasColombia} />
           <Route path="/diseno-ptap-colombia" component={DisenoPTAPColombia} />
           <Route path="/diseno-alcantarillado-colombia" component={DisenoAlcantarilladoColombia} />
@@ -364,8 +379,9 @@ export default function App() {
           <Route path="/consultoria-ingenieria-civil-manizales" component={ConsultoriaIngenieriaCivilManizales} />
           <Route path="/gestion-riesgo-hidrico-manizales" component={GestionRiesgoHidricoManizales} />
           <Route path="/diseno-hidraulico-eje-cafetero" component={DisenoHidraulicoEjeCafetero} />
-          <Route path="/bombeo-fincas-cafe" component={BombeoFincasCafe} />
           <Route path="/topografia-manizales" component={TopografiaManizales} />
+<Route path="/acueducto-rural-caldas" component={AcueductoRuralCaldas} />
+<Route path="/bombeo-fincas-cafe" component={BombeoFincasCafe} />
           <Route path="/ingeniero-hidraulico-manizales" component={IngenieroHidraulicoManizales} />
 
           <Route path="/calculadora-estudios-hidraulicos" component={CalculadoraHidraulica} />
@@ -380,13 +396,4 @@ export default function App() {
 
           <Route path="/servicios/estudio-basico" component={EstudioBasico} />
           <Route path="/proyectos/:id" component={ProjectDetail} />
-          <Route path="/blog/:slug" component={BlogDetail} />
-          <Route component={NotFound} />
-        </Switch>
-        </Suspense>
-      </main>
-      <Footer />
-      <FloatingQuoteButton />
-    </>
-  )
-}
+          <Route path="/blog/:slug" componen
