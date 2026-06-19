@@ -19,6 +19,33 @@ import React from 'react'
 const __dirname = dirname(fileURLToPath(import.meta.url))
 const distDir = join(__dirname, 'dist')
 
+// ─── Importar datos de artículos de blog ─────────────────────────────────────
+import articles1 from './src/data/articles1'
+import articlesA from './src/data/articlesA'
+import articlesB from './src/data/articlesB'
+import articlesC from './src/data/articlesC'
+import articlesD from './src/data/articlesD'
+import articlesE from './src/data/articlesE'
+import articlesF from './src/data/articlesF'
+import articlesG from './src/data/articlesG'
+import articlesH from './src/data/articlesH'
+import articlesI from './src/data/articlesI'
+import articlesJ from './src/data/articlesJ'
+import articlesK from './src/data/articlesK'
+import articlesL from './src/data/articlesL'
+import articlesM from './src/data/articlesM'
+import articlesN from './src/data/articlesN'
+import articlesO from './src/data/articlesO'
+import articlesP from './src/data/articlesP'
+import articlesQ from './src/data/articlesQ'
+import articlesR from './src/data/articlesR'
+import articlesS from './src/data/articlesS'
+import articlesT from './src/data/articlesT'
+import articlesU from './src/data/articlesU'
+import articlesV from './src/data/articlesV'
+import articlesW from './src/data/articlesW'
+import articlesX from './src/data/articlesX'
+
 // ─── Importar páginas de servicio ────────────────────────────────────────────
 // (imports directos con rutas relativas — tsx no siempre resuelve @ alias)
 import ServicioEstudiosHidrologicos from './src/pages/ServicioEstudiosHidrologicos'
@@ -40,6 +67,12 @@ import DisenoAlcantarilladoColombia from './src/pages/DisenoAlcantarilladoColomb
 // Páginas de servicio adicionales
 import DisenoPTAPColombia from './src/pages/DisenoPTAPColombia'
 import DisenoPTARColombia from './src/pages/DisenoPTARColombia'
+import DisenoPTARManizales from './src/pages/DisenoPTARManizales'
+import DisenoPTARMunicipalColombia from './src/pages/DisenoPTARMunicipalColombia'
+import DisenoPTARIndustrialColombia from './src/pages/DisenoPTARIndustrialColombia'
+import BocatomasEjeCafetero from './src/pages/BocatomasEjeCafetero'
+import ConcesionAguasSuperficialesColombia from './src/pages/ConcesionAguasSuperficialesColombia'
+import PermisoVertimientosColombia from './src/pages/PermisoVertimientosColombia'
 import UrbanizacionColombia from './src/pages/UrbanizacionColombia'
 import LicenciaUrbanismo from './src/pages/LicenciaUrbanismo'
 import EncauzamientoRios from './src/pages/EncauzamientoRios'
@@ -55,14 +88,13 @@ import RegionalCali from './src/pages/regional/RegionalCali'
 import RegionalPereira from './src/pages/regional/RegionalPereira'
 import RegionalArmenia from './src/pages/regional/RegionalArmenia'
 import RegionalEjeCafetero from './src/pages/regional/RegionalEjeCafetero'
-import AcueductoRuralCaldas from './src/pages/servicios/AcueductoRuralCaldas'
-import DisenoPTARManizales from './src/pages/DisenoPTARManizales'
-import DisenoPTARMunicipalColombia from './src/pages/DisenoPTARMunicipalColombia'
-import DisenoPTARIndustrialColombia from './src/pages/DisenoPTARIndustrialColombia'
-import EmpresaIndustriaColombia from './src/pages/EmpresaIndustriaColombia'
-import BocatomasEjeCafetero from './src/pages/BocatomasEjeCafetero'
-import ConcesionAguasSuperficialesColombia from './src/pages/ConcesionAguasSuperficialesColombia'
-import PermisoVertimientosColombia from './src/pages/PermisoVertimientosColombia'
+// Páginas tramite-intent junio 2026
+import TramitePermisoVertimientoColombia from './src/pages/TramitePermisoVertimientoColombia'
+import ConcesionAguasSuperficialesTramite from './src/pages/ConcesionAguasSuperficialesTramite'
+import DisenoAcueductoEntregaESP from './src/pages/DisenoAcueductoEntregaESP'
+import EstudioDetalladoInundacionDecreto1807 from './src/pages/EstudioDetalladoInundacionDecreto1807'
+import DisenoPTARTramitePermisoVertimiento from './src/pages/DisenoPTARTramitePermisoVertimiento'
+import RedesHidrosanitariasLicenciaConstruccion from './src/pages/RedesHidrosanitariasLicenciaConstruccion'
 
 // ─── Mapa de rutas a componentes ─────────────────────────────────────────────
 const PAGES: Record<string, React.ComponentType> = {
@@ -87,6 +119,12 @@ const PAGES: Record<string, React.ComponentType> = {
   // Páginas de servicio adicionales
   'diseno-ptap-colombia': DisenoPTAPColombia,
   'diseno-ptar-colombia': DisenoPTARColombia,
+  'diseno-ptar-manizales': DisenoPTARManizales,
+  'diseno-ptar-municipal-colombia': DisenoPTARMunicipalColombia,
+  'diseno-ptar-industrial-colombia': DisenoPTARIndustrialColombia,
+  'bocatomas-eje-cafetero': BocatomasEjeCafetero,
+  'concesion-aguas-superficiales-colombia': ConcesionAguasSuperficialesColombia,
+  'permiso-vertimientos-colombia': PermisoVertimientosColombia,
   'urbanizacion-colombia': UrbanizacionColombia,
   'licencia-urbanismo': LicenciaUrbanismo,
   'encauzamiento-rios': EncauzamientoRios,
@@ -102,15 +140,13 @@ const PAGES: Record<string, React.ComponentType> = {
   'regional/pereira': RegionalPereira,
   'regional/armenia': RegionalArmenia,
   'regional/eje-cafetero': RegionalEjeCafetero,
-  // Páginas nuevas 2026-06
-  'acueducto-rural-caldas': AcueductoRuralCaldas,
-  'diseno-ptar-manizales': DisenoPTARManizales,
-  'diseno-ptar-municipal-colombia': DisenoPTARMunicipalColombia,
-  'diseno-ptar-industrial-colombia': DisenoPTARIndustrialColombia,
-  'empresa-industria-colombia': EmpresaIndustriaColombia,
-  'bocatomas-eje-cafetero': BocatomasEjeCafetero,
-  'concesion-aguas-superficiales-colombia': ConcesionAguasSuperficialesColombia,
-  'permiso-vertimientos-colombia': PermisoVertimientosColombia,
+  // Páginas tramite-intent junio 2026
+  'tramitar-permiso-vertimiento-colombia': TramitePermisoVertimientoColombia,
+  'concesion-aguas-superficiales-tramite': ConcesionAguasSuperficialesTramite,
+  'diseno-acueducto-entrega-esp': DisenoAcueductoEntregaESP,
+  'estudio-detallado-inundacion-decreto-1807': EstudioDetalladoInundacionDecreto1807,
+  'diseno-ptar-tramite-permiso-vertimiento': DisenoPTARTramitePermisoVertimiento,
+  'redes-hidrosanitarias-licencia-construccion': RedesHidrosanitariasLicenciaConstruccion,
 }
 
 let injected = 0
@@ -170,3 +206,78 @@ console.log(`\n📊 Resultado SSG service pages:`)
 console.log(`   ✅ Inyectados: ${injected}`)
 console.log(`   ⚠️  Sin ruta:   ${skipped}`)
 console.log(`   ❌ Errores:    ${errors}`)
+
+// ─── SSG Blog Articles ────────────────────────────────────────────────────────
+type ArticleData = {
+  title: string; date: string; readTime: string; category: string
+  metaDesc: string; keywords: string; body: React.ReactNode
+  faqItems?: Array<{ q: string; a: string }>
+}
+
+const BLOG_ARTICLES: Record<string, ArticleData> = {
+  ...articles1,
+  ...articlesA,
+  ...articlesB,
+  ...articlesC,
+  ...articlesD,
+  ...articlesE,
+  ...articlesF,
+  ...articlesG,
+  ...articlesH,
+  ...articlesI,
+  ...articlesJ,
+  ...articlesK,
+  ...articlesL,
+  ...articlesM,
+  ...articlesN,
+  ...articlesO,
+  ...articlesP,
+  ...articlesQ,
+  ...articlesR,
+  ...articlesS,
+  ...articlesT,
+  ...articlesU,
+  ...articlesV,
+  ...articlesW,
+  ...articlesX,
+}
+
+let blogInjected = 0
+let blogSkipped = 0
+let blogErrors = 0
+
+console.log(`\n🔄 SSG blog articles — ${Object.keys(BLOG_ARTICLES).length} artículos...\n`)
+
+for (const [slug, article] of Object.entries(BLOG_ARTICLES)) {
+  const htmlFile = join(distDir, 'blog', slug, 'index.html')
+
+  if (!existsSync(htmlFile)) {
+    console.warn(`  ⚠️  Sin ruta estática: /blog/${slug}`)
+    blogSkipped++
+    continue
+  }
+
+  try {
+    let html = readFileSync(htmlFile, 'utf-8')
+
+    let pageHtml: string
+    try {
+      const children: React.ReactNode[] = [
+        React.createElement('h1', { itemProp: 'headline' }, article.title),
+        React.createElement('div', { itemProp: 'articleBody' }, article.body),
+      ]
+      if (article.faqItems?.length) {
+        children.push(
+          React.createElement('dl', { itemScope: true, itemType: 'https://schema.org/FAQPage' },
+            article.faqItems.flatMap((f, i) => [
+              React.createElement('dt', { key: `dt-${i}`, itemProp: 'name' }, f.q),
+              React.createElement('dd', { key: `dd-${i}`, itemProp: 'acceptedAnswer' }, f.a),
+            ])
+          )
+        )
+      }
+      pageHtml = renderToStaticMarkup(
+        React.createElement('article', {
+          'data-ssr': 'true',
+          style: { opacity: 1 },
+          itemScop
