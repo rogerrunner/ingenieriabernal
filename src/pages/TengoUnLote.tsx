@@ -26,7 +26,6 @@ const seoConfig = {
     'firma ingeniería lote construcción Eje Cafetero',
   ],
   canonical: 'https://ingenieriabernal.co/tengo-un-lote-colombia',
-  noindex: true,
 }
 
 const ESTUDIOS = [
