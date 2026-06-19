@@ -29,7 +29,6 @@ const seoConfig = {
     'cargas y beneficios urbanismo Colombia',
   ],
   canonical: 'https://ingenieriabernal.co/plan-parcial-colombia',
-  noindex: true,
 }
 
 const ENTREGABLES_RIESGO = [
