@@ -60,9 +60,9 @@ const EstudioSuelosEjeCafetero = lazy(() => import('./pages/servicios/EstudioSue
 const ConsultoriaIngenieriaCivilManizales = lazy(() => import('./pages/servicios/ConsultoriaIngenieriaCivilManizales'))
 const GestionRiesgoHidricoManizales = lazy(() => import('./pages/servicios/GestionRiesgoHidricoManizales'))
 const DisenoHidraulicoEjeCafetero = lazy(() => import('./pages/servicios/DisenoHidraulicoEjeCafetero'))
-const TopografiaManizales = lazy(() => import('./pages/servicios/TopografiaManizales'))
-const AcueductoRuralCaldas = lazy(() => import('./pages/servicios/AcueductoRuralCaldas'))
 const BombeoFincasCafe = lazy(() => import('./pages/servicios/BombeoFincasCafe'))
+const AcueductoRuralCaldas = lazy(() => import('./pages/servicios/AcueductoRuralCaldas'))
+const TopografiaManizales = lazy(() => import('./pages/servicios/TopografiaManizales'))
 const CiudadBogota = lazy(() => import('./pages/servicios/CiudadBogota'))
 const CiudadMedellin = lazy(() => import('./pages/servicios/CiudadMedellin'))
 const CiudadCali = lazy(() => import('./pages/servicios/CiudadCali'))
@@ -379,9 +379,9 @@ export default function App() {
           <Route path="/consultoria-ingenieria-civil-manizales" component={ConsultoriaIngenieriaCivilManizales} />
           <Route path="/gestion-riesgo-hidrico-manizales" component={GestionRiesgoHidricoManizales} />
           <Route path="/diseno-hidraulico-eje-cafetero" component={DisenoHidraulicoEjeCafetero} />
+          <Route path="/acueducto-rural-caldas" component={AcueductoRuralCaldas} />
+          <Route path="/bombeo-fincas-cafe" component={BombeoFincasCafe} />
           <Route path="/topografia-manizales" component={TopografiaManizales} />
-<Route path="/acueducto-rural-caldas" component={AcueductoRuralCaldas} />
-<Route path="/bombeo-fincas-cafe" component={BombeoFincasCafe} />
           <Route path="/ingeniero-hidraulico-manizales" component={IngenieroHidraulicoManizales} />
 
           <Route path="/calculadora-estudios-hidraulicos" component={CalculadoraHidraulica} />
@@ -396,4 +396,13 @@ export default function App() {
 
           <Route path="/servicios/estudio-basico" component={EstudioBasico} />
           <Route path="/proyectos/:id" component={ProjectDetail} />
-          <Route path="/blog/:slug" componen
+          <Route path="/blog/:slug" component={BlogDetail} />
+          <Route component={NotFound} />
+        </Switch>
+        </Suspense>
+      </main>
+      <Footer />
+      <FloatingQuoteButton />
+    </>
+  )
+}
