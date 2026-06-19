@@ -280,4 +280,39 @@ for (const [slug, article] of Object.entries(BLOG_ARTICLES)) {
         React.createElement('article', {
           'data-ssr': 'true',
           style: { opacity: 1 },
-          itemScop
+          itemScope: true,
+          itemType: 'https://schema.org/BlogPosting',
+        }, ...children)
+      )
+    } catch (renderErr) {
+      console.warn(`  ⚠️  Error render /blog/${slug}:`, (renderErr as Error).message?.slice(0, 100))
+      blogSkipped++
+      continue
+    }
+
+    const staticContent = `<div data-ssr="true" style="opacity:1">
+  <style>
+    [data-ssr] section[style*="opacity: 0"] { opacity: 1 !important; transform: none !important; }
+    [data-ssr] section[style*="opacity:0"] { opacity: 1 !important; transform: none !important; }
+  </style>
+  ${pageHtml}
+</div>`
+
+    html = html.replace(
+      /<div id="root"[^>]*>[\s\S]*?<\/div>/,
+      `<div id="root">${staticContent}</div>`
+    )
+
+    writeFileSync(htmlFile, html, 'utf-8')
+    console.log(`  ✅ /blog/${slug}`)
+    blogInjected++
+  } catch (err) {
+    console.error(`  ❌ Error /blog/${slug}:`, (err as Error).message?.slice(0, 120))
+    blogErrors++
+  }
+}
+
+console.log(`\n📊 Resultado SSG blog articles:`)
+console.log(`   ✅ Inyectados: ${blogInjected}`)
+console.log(`   ⚠️  Sin ruta:   ${blogSkipped}`)
+console.log(`   ❌ Errores:    ${blogErrors}`)
