@@ -112,6 +112,12 @@ const ServicioAguasLluviasManizales = lazy(() => import('./pages/ServicioAguasLl
 const HydraulicEngineerEnglish = lazy(() => import('./pages/HydraulicEngineerEnglish'))
 const EstudioBasico = lazy(() => import('./pages/servicios/EstudioBasico'))
 const ProjectDetail = lazy(() => import('./pages/ProjectDetail'))
+const TramitePermisoVertimientoColombia = lazy(() => import('./pages/TramitePermisoVertimientoColombia'))
+const ConcesionAguasSuperficialesTramite = lazy(() => import('./pages/ConcesionAguasSuperficialesTramite'))
+const DisenoAcueductoEntregaESP = lazy(() => import('./pages/DisenoAcueductoEntregaESP'))
+const EstudioDetalladoInundacionDecreto1807 = lazy(() => import('./pages/EstudioDetalladoInundacionDecreto1807'))
+const DisenoPTARTramitePermisoVertimiento = lazy(() => import('./pages/DisenoPTARTramitePermisoVertimiento'))
+const RedesHidrosanitariasLicenciaConstruccion = lazy(() => import('./pages/RedesHidrosanitariasLicenciaConstruccion'))
 
 function ScrollToTop() {
   const [location] = useLocation()
@@ -389,20 +395,4 @@ export default function App() {
 
           {/* ── PÁGINAS GEOGRÁFICAS DE SERVICIO — mayo 2026 ── */}
           <Route path="/modelacion-hidraulica-putumayo" component={ServicioModelacionHidraulicaPutumayo} />
-          <Route path="/acueducto-quindio" component={ServicioAcueductoQuindio} />
-          <Route path="/geotecnia-pereira" component={ServicioEstudioSuelosPereira} />
-          <Route path="/ptap-municipios-colombia" component={ServicioPTAPColombia} />
-          <Route path="/aguas-lluvias-manizales" component={ServicioAguasLluviasManizales} />
-
-          <Route path="/servicios/estudio-basico" component={EstudioBasico} />
-          <Route path="/proyectos/:id" component={ProjectDetail} />
-          <Route path="/blog/:slug" component={BlogDetail} />
-          <Route component={NotFound} />
-        </Switch>
-        </Suspense>
-      </main>
-      <Footer />
-      <FloatingQuoteButton />
-    </>
-  )
-}
+          <Route path="/acueducto-quindio" component={ServicioAcue
