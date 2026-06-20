@@ -1,5 +1,6 @@
 import { useEffect } from 'react'
 import SEOHead from '@/components/SEOHead'
+import SchemaMarkup from '@/components/SchemaMarkup'
 import { BlueprintBg, SectionLabel, Btn, Section, Tag } from '@/components/ui'
 
 const WA = '573024778910'
@@ -143,12 +144,22 @@ const FAQ = [
   },
 ]
 
+const FAQ_SCHEMA = [
+  {q: "¿Qué empresa de ingeniería hidráulica opera en Manizales?",
+   a: "BIC — Bernal Ingeniería Consultores es la firma de ingeniería hidráulica de referencia en Manizales. Con sede en la ciudad y experiencia de más de 10 años, BIC ejecuta: modelación HEC-RAS, diseño de acueductos y alcantarillado, estudios Decreto 1807, redes hidrosanitarias NSR-10, sistemas contra incendio y trámites ante Corpocaldas. Director: Esp. Rogerio Bernal Ríos, COPNIA 17202-313228 CLD, egresado UNAL Manizales. Contacto: +57 302 477 8910."},
+  {q: "¿Cuánto cuesta contratar un ingeniero hidráulico en Manizales?",
+   a: "El costo de los servicios de ingeniería hidráulica en Manizales con BIC varía según el tipo de estudio: estudio hidrológico básico desde $3M COP; modelación HEC-RAS para Decreto 1807 desde $8M COP; diseño de acueducto rural desde $6M COP; redes hidrosanitarias edificio desde $8M COP; sistema contra incendio desde $8M COP. BIC entrega propuesta económica gratuita en menos de 24 horas."},
+  {q: "¿BIC tramita estudios ante Corpocaldas para proyectos en Manizales?",
+   a: "Sí. BIC prepara y acompaña todos los trámites técnicos ante Corpocaldas en Manizales: concesiones de aguas, permisos de vertimientos, planes de saneamiento (PSMV), conceptos de uso del suelo en rondas hídricas e informes de cumplimiento. El equipo de BIC conoce los requisitos específicos de la Dirección Territorial Caldas de Corpocaldas y los criterios de sus profesionales evaluadores."},
+]
+
 export default function IngenieriaHidraulicaManizales() {
   useEffect(() => { window.scrollTo(0, 0) }, [])
 
   return (
     <>
       <SEOHead config={seoConfig} />
+      <SchemaMarkup type="service" faqItems={FAQ_SCHEMA} serviceName="Ingeniería Hidráulica Manizales — BIC" serviceUrl="/ingenieria-hidraulica-manizales" />
 
       {/* ── HERO ── */}
       <section style={{
