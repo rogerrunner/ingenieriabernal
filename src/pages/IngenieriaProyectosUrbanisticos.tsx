@@ -1,5 +1,6 @@
 import { useEffect } from 'react'
 import SEOHead from '@/components/SEOHead'
+import SchemaMarkup from '@/components/SchemaMarkup'
 import { BlueprintBg, SectionLabel, Btn, Section, Tag } from '@/components/ui'
 
 const WA = '573024778910'
@@ -158,12 +159,22 @@ const NORMATIVA = [
   { codigo: 'NTC 1500', descripcion: 'Código Colombiano de Fontanería — estándar técnico para instalaciones hidrosanitarias' },
 ]
 
+const FAQ_SCHEMA = [
+  {q: "¿Qué estudios de ingeniería hidráulica requiere un proyecto urbanístico en Colombia?",
+   a: "Un proyecto urbanístico en Colombia requiere, según la norma y el POT municipal: estudio de amenaza y riesgo hídrico (Decreto 1807/2014) si el predio está en zona de amenaza hídrica; diseño de redes de acueducto y alcantarillado RAS 2017; diseño de drenaje pluvial (aguas lluvias); diseño de redes hidrosanitarias y sistema contra incendio para las edificaciones (NSR-10 Títulos J y K); y concepto de Corpocaldas o la CAR competente si hay fuentes hídricas en la ronda. BIC elabora todos estos componentes."},
+  {q: "¿BIC acompaña proyectos urbanísticos desde el estudio de factibilidad hasta la entrega a la ESP?",
+   a: "Sí. BIC puede acompañar el proyecto urbanístico desde la fase de diagnóstico (revisión POT, verificación de amenazas, estudio hidrológico de factibilidad) hasta la entrega de las redes al operador de servicios públicos (ESP). El proceso incluye: diagnóstico predial, diseños fase I y II, trámites ante Curaduría y CAR, supervisión de construcción de redes, y entrega de as-builts (planos récord de obra) para la escrituración de las redes a la ESP."},
+  {q: "¿Qué diferencia hay entre el diseño urbanístico del arquitecto y el diseño de ingeniería de BIC?",
+   a: "El diseño urbanístico del arquitecto define la distribución de lotes, vías, zonas verdes y perfiles viales según el POT. El diseño de ingeniería hidráulica de BIC calcula y diseña las redes técnicas que hacen funcionar el urbanismo: caudales de agua potable, velocidades y pendientes del alcantarillado, capacidad del drenaje pluvial para aguaceros de Tr 10 años, y sistema CI si aplica. Sin el diseño de ingeniería firmado COPNIA no hay licencia de urbanismo ni aprobación de la ESP."},
+]
+
 export default function IngenieriaProyectosUrbanisticos() {
   useEffect(() => { window.scrollTo(0, 0) }, [])
 
   return (
     <>
       <SEOHead config={seoConfig} />
+      <SchemaMarkup type="service" faqItems={FAQ_SCHEMA} serviceName="Ingeniería para Proyectos Urbanísticos Colombia" serviceUrl="/ingenieria-proyectos-urbanisticos" />
 
       {/* ── HERO ── */}
       <section style={{ background: 'linear-gradient(135deg, #001A33 0%, #002A50 55%, #003B6F 100%)', paddingTop: 120, paddingBottom: 80, position: 'relative', overflow: 'hidden' }}>
