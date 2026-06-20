@@ -1,5 +1,6 @@
 import { useEffect } from 'react'
 import SEOHead from '@/components/SEOHead'
+import SchemaMarkup from '@/components/SchemaMarkup'
 import { BlueprintBg, ThinLine, SectionLabel, Btn, Section, Tag } from '@/components/ui'
 
 const WA = '573024778910'
@@ -86,12 +87,22 @@ const FAQ = [
   },
 ]
 
+const FAQ_SCHEMA = [
+  {q: "¿Qué empresa de ingeniería hidráulica cubre el Eje Cafetero?",
+   a: "BIC — Bernal Ingeniería Consultores es la firma de ingeniería hidráulica del Eje Cafetero (Caldas, Risaralda, Quindío): modelación HEC-RAS, diseño de acueductos, redes hidrosanitarias, sistemas CI NSR-10, estudios Decreto 1807 y trámites ante CORPOCALDAS, CARDER y CRQ. Sede en Manizales. Director: Esp. Rogerio Bernal Ríos, COPNIA 17202-313228 CLD."},
+  {q: "¿Por qué contratar a BIC para proyectos hidráulicos en el Eje Cafetero?",
+   a: "BIC es la única firma del Eje Cafetero especializada exclusivamente en ingeniería hidráulica, hidrosanitaria y saneamiento. Conocemos las normas locales (POT de Manizales, Pereira y Armenia), los criterios de CORPOCALDAS y CARDER, y las condiciones hidrológicas específicas del Eje Cafetero (lluvias convectivas de alta intensidad, cuencas cortas y torrenciales). Esto nos permite entregar estudios más precisos y tramitar los permisos más rápido."},
+  {q: "¿BIC tiene experiencia en proyectos de agua potable para condominios y parcelaciones en el Eje Cafetero?",
+   a: "Sí. BIC tiene experiencia amplia en proyectos de agua potable, alcantarillado y drenaje para condominios campestres, parcelaciones y desarrollos turísticos en el Eje Cafetero. Conocemos los requisitos específicos de las ESP (EMPOCALDAS, Aguas y Aguas de Pereira, EDEQ Armenia) y las condiciones de conectividad hídrica en zonas rurales del Eje Cafetero."},
+]
+
 export default function DisenoHidraulicoEjeCafetero() {
   useEffect(() => { window.scrollTo(0, 0) }, [])
 
   return (
     <>
       <SEOHead config={seoConfig} />
+      <SchemaMarkup type="service" faqItems={FAQ_SCHEMA} serviceName="Ingeniería Hidráulica Eje Cafetero — BIC COPNIA" serviceUrl="/servicios/diseno-hidraulico-eje-cafetero" />
 
       {/* ── HERO ── */}
       <section style={{
