@@ -1,5 +1,6 @@
 ﻿import { useEffect } from 'react'
 import SEOHead from '@/components/SEOHead'
+import SchemaMarkup from '@/components/SchemaMarkup'
 import { BlueprintBg, ThinLine, SectionLabel, Btn, Section, Tag } from '@/components/ui'
 
 const WA = '573024778910'
@@ -101,6 +102,15 @@ const PROYECTOS = [
   },
 ]
 
+const FAQ_SCHEMA = [
+  {q: "¿BIC hace proyectos de ingeniería hidráulica en Medellín?",
+   a: "Sí. BIC realiza estudios hidráulicos y diseños en Medellín en modalidad remota: modelación HEC-RAS para Decreto 1807, diseño hidrosanitario y CI NSR-10 para Curadurías de Medellín, estudios de inundabilidad para proyectos ante el AMVA. La matrícula COPNIA 17202-313228 CLD del Ing. Rogerio Bernal Ríos es válida en todo Antioquia y Colombia. Propuesta en 24 h."},
+  {q: "¿Qué normas de acueducto y alcantarillado aplican en Medellín?",
+   a: "En Medellín, el diseño de redes de acueducto y alcantarillado debe cumplir: RAS 2017 (Resolución 0330 MVCT), Manual de Construcción de EPM (Empresas Públicas de Medellín), NSR-10 Títulos J y K para instalaciones hidrosanitarias y CI en edificaciones, y las Normas Urbanísticas del POT de Medellín. BIC conoce las normas de EPM y las condiciones de conexión específicas del Valle de Aburrá."},
+  {q: "¿BIC tiene experiencia en proyectos hidráulicos en el Valle de Aburrá?",
+   a: "Sí. BIC ha realizado estudios hidrológicos, modelación HEC-RAS y diseños hidrosanitarios para proyectos en Medellín, Bello, Envigado e Itagüí. La proximidad geográfica con el Eje Cafetero (3 horas) facilita visitas de campo cuando el proyecto lo requiere. BIC conoce el régimen hidrológico de las quebradas del Valle de Aburrá y los criterios del AMVA para estudios de riesgo hídrico."},
+]
+
 export default function CiudadMedellin() {
   useEffect(() => {
     window.scrollTo(0, 0)
@@ -115,6 +125,7 @@ export default function CiudadMedellin() {
   return (
     <>
       <SEOHead config={seoConfig} />
+      <SchemaMarkup type="service" faqItems={FAQ_SCHEMA} serviceName="Ingeniería Hidráulica Medellín — BIC COPNIA" serviceUrl="/servicios/ciudad-medellin" />
 
       {/* ── HERO ── */}
       <section style={{
