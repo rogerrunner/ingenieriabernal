@@ -1,5 +1,6 @@
 ﻿import { useEffect } from 'react'
 import SEOHead from '@/components/SEOHead'
+import SchemaMarkup from '@/components/SchemaMarkup'
 import { BlueprintBg, ThinLine, SectionLabel, Btn, Section, Tag } from '@/components/ui'
 
 const WA = '573024778910'
@@ -101,6 +102,15 @@ const PROYECTOS = [
   },
 ]
 
+const FAQ_SCHEMA = [
+  {q: "¿BIC hace proyectos hidráulicos en Cali?",
+   a: "Sí. BIC realiza estudios hidrológicos, modelación HEC-RAS y diseños hidráulicos en Cali en modalidad remota. Conocemos las condiciones hidrológicas del valle del Cauca y los requisitos de CVC (Corporación Autónoma Regional del Valle del Cauca) para estudios de riesgo hídrico. La firma COPNIA del Ing. Rogerio Bernal Ríos (17202-313228 CLD) es válida ante las Curadurías de Cali. Propuesta en 24 h."},
+  {q: "¿Qué CAR regula los permisos hídricos en Cali?",
+   a: "En Cali y el Valle del Cauca opera la CVC (Corporación Autónoma Regional del Valle del Cauca). CVC otorga concesiones de aguas, permisos de vertimientos y licencias ambientales. BIC prepara los estudios técnicos hidrológicos e hidráulicos para tramitar permisos ante CVC, coordinando con profesionales locales cuando el trámite requiere presencia en sus oficinas en Cali."},
+  {q: "¿BIC diseña redes CI NSR-10 para edificios en Cali?",
+   a: "Sí. BIC diseña sistemas contra incendio NSR-10 (rociadores NFPA 13, gabinetes manguera, bomba CI) para edificios residenciales, hoteles y comercios en Cali. Los planos y memorias de cálculo con firma COPNIA son válidos ante las Curadurías de Cali para la licencia de construcción. BIC entrega en formato DWG y PDF con carta de responsabilidad del ingeniero."},
+]
+
 export default function CiudadCali() {
   useEffect(() => {
     window.scrollTo(0, 0)
@@ -115,6 +125,7 @@ export default function CiudadCali() {
   return (
     <>
       <SEOHead config={seoConfig} />
+      <SchemaMarkup type="service" faqItems={FAQ_SCHEMA} serviceName="Ingeniería Hidráulica Cali — BIC COPNIA" serviceUrl="/servicios/ciudad-cali" />
 
       {/* ── HERO ── */}
       <section style={{
