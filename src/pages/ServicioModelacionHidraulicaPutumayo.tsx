@@ -1,5 +1,6 @@
 import { useEffect } from 'react'
 import SEOHead from '@/components/SEOHead'
+import SchemaMarkup from '@/components/SchemaMarkup'
 import { BlueprintBg, ThinLine, SectionLabel, Btn, Section, Tag } from '@/components/ui'
 
 const WA = '573024778910'
@@ -95,6 +96,15 @@ const FAQ = [
   },
 ]
 
+const FAQ_SCHEMA = [
+  {q: "¿BIC hace modelación hidráulica HEC-RAS para proyectos en el Putumayo?",
+   a: "Sí. BIC realiza modelación hidráulica HEC-RAS en modalidad remota para proyectos en el departamento del Putumayo: Mocoa, Puerto Asís, Valle del Guamuez y municipios del piedemonte amazónico. Los estudios incluyen análisis de crecientes de ríos amazónicos (alto régimen de sedimentos), modelación de inundaciones para planes parciales y licencias, y estudios de riesgo hídrico para proyectos de infraestructura en zona de desbordamiento. BIC trabaja con imágenes satelitales y datos IDEAM para la calibración del modelo."},
+  {q: "¿Qué CAR regula los permisos hídricos en el Putumayo?",
+   a: "En el departamento del Putumayo, la autoridad ambiental regional es CORPOAMAZONIA (Corporación para el Desarrollo Sostenible del Sur de la Amazonia), con sede en Mocoa. CORPOAMAZONIA otorga las concesiones de aguas, permisos de vertimientos y licencias ambientales para proyectos en Putumayo, Amazonas y Vaupés. BIC prepara los estudios técnicos hidrológicos e hidráulicos para los trámites ante CORPOAMAZONIA."},
+  {q: "¿Cuánto cuesta un estudio hidrológico para proyectos en el Putumayo?",
+   a: "El costo de un estudio hidrológico o modelación HEC-RAS para el Putumayo es similar al de otras regiones de Colombia, con un posible sobrecosto de $2M–$5M COP si se requiere visita de campo presencial. BIC puede ejecutar la mayoría de los estudios en modalidad remota usando información de IDEAM, imágenes satelitales Sentinel y modelos de elevación SRTM. Rango orientativo: modelación HEC-RAS básica desde $10M COP; estudio de inundabilidad con cartografía desde $18M COP. Propuesta en 24 h."},
+]
+
 export default function ServicioModelacionHidraulicaPutumayo() {
   useEffect(() => {
     window.scrollTo(0, 0)
@@ -109,6 +119,7 @@ export default function ServicioModelacionHidraulicaPutumayo() {
   return (
     <>
       <SEOHead config={seoConfig} />
+      <SchemaMarkup type="service" faqItems={FAQ_SCHEMA} serviceName="Modelación Hidráulica HEC-RAS Putumayo" serviceUrl="/servicios/modelacion-hidraulica-putumayo" />
 
       {/* ── HERO ── */}
       <section style={{
