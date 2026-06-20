@@ -1,5 +1,6 @@
 ﻿import { useEffect } from 'react'
 import SEOHead from '@/components/SEOHead'
+import SchemaMarkup from '@/components/SchemaMarkup'
 import { BlueprintBg, ThinLine, SectionLabel, Btn, Section, Tag } from '@/components/ui'
 
 const WA = '573024778910'
@@ -101,6 +102,15 @@ const PROYECTOS = [
   },
 ]
 
+const FAQ_SCHEMA = [
+  {q: "¿BIC hace proyectos de ingeniería hidráulica en Bogotá?",
+   a: "Sí. BIC realiza estudios y diseños hidráulicos en Bogotá en modalidad remota: modelación HEC-RAS, diseño hidrosanitario y CI NSR-10, estudios Decreto 1807 para curadurías bogotanas, concesiones de aguas ante CAR Cundinamarca. El Ing. Rogerio Bernal Ríos atiende proyectos en Bogotá con la misma calidad técnica y firma COPNIA (17202-313228 CLD) que es válida en todo Colombia. Propuesta en 24 h: +57 302 477 8910."},
+  {q: "¿El COPNIA 17202-313228 CLD de BIC es válido en Bogotá?",
+   a: "Sí. La matrícula profesional COPNIA es válida en todo el territorio nacional, incluyendo Bogotá. El sufijo 'CLD' indica que fue expedida en Caldas, pero no restringe el ejercicio a ese departamento. Todos los documentos firmados por el Ing. Rogerio Bernal Ríos con esta matrícula son válidos ante cualquier Curaduría Urbana de Bogotá y ante cualquier entidad pública o privada del país."},
+  {q: "¿Cuáles son los requisitos de redes hidrosanitarias de la Curaduría de Bogotá?",
+   a: "La Curaduría Urbana de Bogotá exige para la licencia de construcción: memorias de cálculo hidráulico de redes de agua potable, aguas residuales y aguas lluvias conforme a NSR-10 Título J y Manual de Normas Técnicas de EAAB-ESP; diseño del sistema contra incendio cuando aplica NSR-10 Título K y NFPA 13; y carta de responsabilidad del ingeniero diseñador. BIC cumple todos estos requisitos y entrega los documentos en formato digital con firma COPNIA."},
+]
+
 export default function CiudadBogota() {
   useEffect(() => {
     window.scrollTo(0, 0)
@@ -115,6 +125,7 @@ export default function CiudadBogota() {
   return (
     <>
       <SEOHead config={seoConfig} />
+      <SchemaMarkup type="service" faqItems={FAQ_SCHEMA} serviceName="Ingeniería Hidráulica Bogotá — BIC COPNIA" serviceUrl="/servicios/ciudad-bogota" />
 
       {/* ── HERO ── */}
       <section style={{
