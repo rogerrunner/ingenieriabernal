@@ -1,5 +1,6 @@
 import { useEffect } from 'react'
 import SEOHead from '@/components/SEOHead'
+import SchemaMarkup from '@/components/SchemaMarkup'
 import { BlueprintBg, SectionLabel, Btn, Section, Tag, CTABanner } from '@/components/ui'
 
 const WA = '573024778910'
@@ -242,12 +243,28 @@ const RELACIONADOS = [
   { href: '/servicios/diseno-acueductos', label: '🔧 Acueducto y alcantarillado' },
 ]
 
+const FAQ_ITEMS_SCHEMA = [
+  {
+    q: '¿Qué estudios hidráulicos exige una licencia de urbanismo en Colombia?',
+    a: 'Para licencia de urbanismo se requieren: estudio de amenaza y riesgo hídrico Decreto 1807/2014 si el predio está en zona de amenaza, concepto de aptitud del terreno, diseño de redes RAS 2017, y memoria de cálculo hidrológico. BIC elabora todos con firma COPNIA.',
+  },
+  {
+    q: '¿Cuánto vale el estudio hidráulico para licencia de urbanismo?',
+    a: 'Estudios básicos de drenaje sin riesgo hídrico: $5M a $12M COP. Con Decreto 1807 (modelación HEC-RAS 2D): $15M a $35M COP. BIC ofrece propuesta detallada en 24 horas.',
+  },
+  {
+    q: '¿BIC elabora estudios para licencias de urbanismo en Manizales y Pereira?',
+    a: 'Sí. BIC elabora los estudios técnicos para curadurías de Manizales, Pereira y Armenia: amenaza Decreto 1807, concepto hidrológico, diseño de redes y memorias COPNIA. Hemos apoyado exitosamente docenas de trámites en el Eje Cafetero.',
+  },
+]
+
 export default function LicenciaUrbanismo() {
   useEffect(() => { window.scrollTo(0, 0) }, [])
 
   return (
     <>
       <SEOHead config={seoConfig} />
+      <SchemaMarkup type="service" faqItems={FAQ_ITEMS_SCHEMA} serviceName="Estudios Técnicos para Licencia de Urbanismo Colombia" serviceUrl="/licencia-de-urbanismo" />
 
       <CTABanner service="Licencia de Urbanismo — Estudios Técnicos Colombia" />
 
