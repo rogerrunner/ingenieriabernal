@@ -1,5 +1,6 @@
 import { useEffect } from 'react'
 import SEOHead from '@/components/SEOHead'
+import SchemaMarkup from '@/components/SchemaMarkup'
 import { BlueprintBg, ThinLine, SectionLabel, Btn, Section } from '@/components/ui'
 import QuoteFormInline from '@/components/QuoteFormInline'
 
@@ -97,6 +98,15 @@ const DIFERENCIADORES = [
   },
 ]
 
+const FAQ_SCHEMA = [
+  {q: "¿BIC hace proyectos de ingeniería hidráulica en Ecuador?",
+   a: "Sí. BIC — Bernal Ingeniería Consultores realiza consultoría en ingeniería hidráulica para proyectos en Ecuador en modalidad remota: estudios hidrológicos con datos INAMHI (Instituto Nacional de Meteorología e Hidrología), modelación HEC-RAS 2D para proyectos de gestión del riesgo hídrico, diseño de sistemas de agua potable y saneamiento conforme a normas INEN y SENAGUA, y estudios para permisos ante el Ministerio del Ambiente, Agua y Transición Ecológica (MAATE). Experiencia en Sierra, Costa y Amazonía ecuatoriana."},
+  {q: "¿Cuál es la normativa de diseño de agua potable en Ecuador?",
+   a: "En Ecuador, el diseño de sistemas de agua potable se rige por las Normas INEN (NTE INEN 1108 calidad del agua potable), las Normas para Estudio y Diseño de Sistemas de Agua Potable y Disposición de Aguas Residuales de la Subsecretaría de Agua Potable y Saneamiento (ex-MIDUVI), y los lineamientos técnicos de SENAGUA para concesiones. BIC adapta sus diseños a las normas ecuatorianas y tiene experiencia colaborando con ingenieros locales para la firma de planos en Ecuador."},
+  {q: "¿Cómo se tramita una concesión de aguas en Ecuador?",
+   a: "En Ecuador, las concesiones de uso y aprovechamiento del agua las otorga la Secretaría Nacional del Agua (SENAGUA) a través de sus Demarcaciones Hidrográficas. El trámite requiere: solicitud formal, estudio técnico de la fuente (caudal disponible, balance hídrico), diseño de la obra de captación, descripción del uso y caudal solicitado. BIC elabora los estudios técnicos hidrológicos e hidráulicos para el trámite de concesión ante SENAGUA. El proceso puede tardar entre 6 y 18 meses."},
+]
+
 export default function LatamEcuador() {
   useEffect(() => {
     window.scrollTo(0, 0)
@@ -111,6 +121,7 @@ export default function LatamEcuador() {
   return (
     <>
       <SEOHead config={seoConfig} />
+      <SchemaMarkup type="service" faqItems={FAQ_SCHEMA} serviceName="Consultoría Ingeniería Hidráulica Ecuador" serviceUrl="/consultoria-hidraulica-ecuador" />
 
       {/* ── HERO ── */}
       <section style={{
