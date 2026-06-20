@@ -1,5 +1,6 @@
 import { useEffect } from 'react'
 import SEOHead from '@/components/SEOHead'
+import SchemaMarkup from '@/components/SchemaMarkup'
 import SpeakableSchema from '@/components/SpeakableSchema'
 import { BlueprintBg, ThinLine, SectionLabel, Btn, Section, Tag } from '@/components/ui'
 
@@ -42,12 +43,22 @@ const PARA_QUIEN = [
   { tipo: 'Operadores de sistemas de agua y saneamiento', desc: 'Monitoreo de calidad del agua, elaboración de informes de calidad para la Secretaría de Salud, gestión del IRCA y formulación de planes de mejoramiento de la prestación del servicio.' },
 ]
 
+const FAQ_SCHEMA = [
+  {q: "¿Qué empresa hace el IRCA y estudio de calidad del agua en Colombia?",
+   a: "BIC — Bernal Ingeniería Consultores realiza el cálculo del IRCA (Índice de Riesgo de Calidad del Agua) y estudios de calidad para acueductos municipales y sistemas de abastecimiento rural en Colombia. El proceso incluye toma de muestras, laboratorio fisicoquímico y microbiológico, cálculo IRCA por período y recomendaciones de mejora conforme al Decreto 1575 de 2007 y Resolución 2115. Cobertura: todo Colombia desde Manizales."},
+  {q: "¿Qué incluye un estudio de impacto ambiental para proyectos de infraestructura hídrica en Colombia?",
+   a: "Un estudio de impacto ambiental (EIA) para proyectos hídricos en Colombia incluye: diagnóstico del área de influencia directa e indirecta, caracterización física (hidrología, calidad del agua, geomorfología), biótica (flora, fauna acuática y terrestre) y socioeconómica, evaluación de impactos (matrices de Leopold), plan de manejo ambiental (PMA) con medidas de prevención, mitigación y compensación, y plan de monitoreo y seguimiento. BIC prepara el componente hídrico e hidrológico del EIA y coordina con especialistas en biodiversidad si es necesario."},
+  {q: "¿BIC tramita permisos ambientales ante las CAR del Eje Cafetero?",
+   a: "Sí. BIC prepara y radica los estudios técnicos requeridos para permisos ambientales ante CORPOCALDAS (Caldas), CARDER (Risaralda) y CRQ (Quindío): concesiones de aguas, permisos de vertimientos, planes de saneamiento y manejo de vertimientos (PSMV), y conceptos de aprovechamiento forestal. BIC también acompaña ante CVC, CORNARE, CAR Cundinamarca y otras corporaciones autónomas regionales del país."},
+]
+
 export default function ServicioAmbiental() {
   useEffect(() => { window.scrollTo(0, 0) }, [])
 
   return (
     <>
       <SEOHead config={seoConfig} />
+      <SchemaMarkup type="service" faqItems={FAQ_SCHEMA} serviceName="Estudios Ambientales y Trámites CAR Colombia" serviceUrl="/servicios/ambiental" />
       <SpeakableSchema name="Estudios Ambientales e IRCA Colombia — COPNIA | BIC" />
 
       {/* ── HERO ── */}
