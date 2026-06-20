@@ -6,9 +6,10 @@ const WA = '573024778910'
 const WA_MSG = encodeURIComponent('Hola, quiero cotizar Sistema Contra Incendio NSR-10')
 
 const seoConfig = {
-  title: 'Diseño Sistemas Contra Incendio Colombia — NSR-10 Título J | BIC',
-  description: 'Diseño de sistemas contra incendio para edificaciones en Colombia. NSR-10 Título J, NFPA 13/14. Redes sprinklers, hidrantes, BIE. COPNIA. Solicita cotización.',
+  title: 'Diseño Hidrosanitario y Sistema Contra Incendio para Edificios Colombia | NSR-10 NFPA | BIC',
+  description: 'BIC diseña redes hidrosanitarias y sistemas contra incendio para edificios en Colombia: NSR-10 Título J, NFPA 13/14/20. Sprinklers, hidrantes BIE, cuarto de bombas. Memorias COPNIA para licencia de construcción. Propuesta en 24 h.',
   keywords: [
+    'diseño hidrosanitario y contra incendio edificio Colombia',
     'sistemas contra incendio NSR-10 Colombia',
     'diseño sistema contra incendio Colombia',
     'NSR-10 Título J sistemas contra incendio',
@@ -21,6 +22,7 @@ const seoConfig = {
     'sistema CI bodega logística',
     'memoria sistema contra incendio licencia',
     'NFPA 13 Colombia',
+    'diseño hidrosanitario edificio comercial Colombia',
   ],
   canonical: 'https://ingenieriabernal.co/servicios/sistemas-contra-incendio',
 }
@@ -427,12 +429,4 @@ export default function ServicioSistemasContraIncendio() {
           </p>
           <Btn
             href={`https://wa.me/${WA}?text=${WA_MSG}`}
-            style={{ background: '#fff', color: '#17A2B8', fontSize: 15, padding: '14px 36px' }}
-          >
-            📱 Propuesta en 24 h — sin costo
-          </Btn>
-        </div>
-      </Section>
-    </>
-  )
-}
+            style=

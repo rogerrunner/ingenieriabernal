@@ -1,8 +1,8 @@
 import { useEffect } from 'react'
 import SEOHead from '@/components/SEOHead'
 import SpeakableSchema from '@/components/SpeakableSchema'
-import { BlueprintBg, ThinLine, SectionLabel, Btn, Section, Tag } from '@/components/ui'
 import QuoteFormInline from '@/components/QuoteFormInline'
+import { BlueprintBg, ThinLine, SectionLabel, Btn, Section, Tag } from '@/components/ui'
 
 const WA = '573024778910'
 const WA_MSG = encodeURIComponent('Hola, necesitamos una modelación hidráulica HEC-RAS para nuestro proyecto — parcelación / urbanización / cruce vial / POT / trámite CAR. ¿Pueden enviarnos propuesta técnica con tiempo de entrega?')
@@ -25,6 +25,11 @@ const seoConfig = {
     'amenaza torrencial quebradas Colombia',
     'modelación hidráulica Putumayo',
     'licencia urbanismo inundación',
+    'modelación hidráulica laguna Colombia',
+    'modelación hidráulica estuario Colombia',
+    'modelación hidráulica zona costera Colombia',
+    'HEC-RAS 2D laguna embalse Colombia',
+    'modelación hidráulica eje cafetero Colombia',
   ],
   canonical: 'https://ingenieriabernal.co/modelacion-hidraulica-colombia',
 }
@@ -45,13 +50,17 @@ const ESTUDIOS = [
   { ico: '🚰', nombre: 'Hidrología para acueductos', desc: 'Caudales de captación, análisis de estiaje y variabilidad estacional. Estudio de rendimiento hídrico de la fuente para concesión de aguas.' },
   { ico: '🌉', nombre: 'Hidrología para infraestructura', desc: 'Diseño de puentes, box culverts, alcantarillas y estructuras de cruce. Caudales de diseño conforme a normas INVIAS.' },
   { ico: '🏞️', nombre: 'Sedimentación y transporte de sólidos', desc: 'Modelos de balance sedimentario en reservorios y bocatomas. Estimación de vida útil y estrategias de manejo.' },
+  { ico: '🌊', nombre: 'Modelación de lagunas y embalses', desc: 'Análisis batimétrico, modelación hidrodinámica 2D de la circulación interna, sedimentación y tiempo de residencia. Para proyectos de agua potable, piscicultura, turismo y EIA.' },
+  { ico: '🌅', nombre: 'Modelación de estuarios y zonas costeras', desc: 'Modelos 2D con condición de frontera de marea (TPXO) para estuarios, deltas y zonas con influencia mareal. Para licencias ambientales de proyectos portuarios, acuícolas e infraestructura costera.' },
+  { ico: '🏖️', nombre: 'Modelación hidráulica en ríos navegables y grandes cauces', desc: 'Modelación de ríos de llanura (Magdalena, Cauca, Meta) con gran sección, flujo subcrítico y compuertas. Para estudios de navegabilidad, extracción de materiales y protección de riberas.' },
 ]
 
 const REGIONES = [
-  { region: 'Cuencas andinas', depts: 'Caldas, Risaralda, Quindío, Antioquia, Nariño', nota: 'Alta variabilidad altitudinal, ríos encañonados y quebradas torrenciales.' },
+  { region: 'Cuencas andinas — quebradas y ríos de montaña', depts: 'Caldas, Risaralda, Quindío, Antioquia, Nariño', nota: 'Alta variabilidad altitudinal, ríos encañonados y quebradas torrenciales.' },
   { region: 'Piedemonte amazónico', depts: 'Putumayo, Caquetá', nota: 'Alta variabilidad pluviométrica, llanuras inundables, cuencas sin registros históricos — trabajamos con imágenes satelitales y DEM disponibles.' },
-  { region: 'Llanuras orientales', depts: 'Meta, Casanare', nota: 'Crecientes de larga duración, modelación de planos de inundación extensos.' },
-  { region: 'Costa Pacífico y Caribe', depts: 'Nariño, Chocó, Atlántico', nota: 'Cuencas cortas y de alta respuesta, influencia mareal en tramos bajos.' },
+  { region: 'Llanuras orientales — ríos trenzados y planos de inundación', depts: 'Meta, Casanare', nota: 'Crecientes de larga duración, modelación de planos de inundación extensos.' },
+  { region: 'Lagunas, humedales y embalses', depts: 'Todo Colombia', nota: 'Modelación batimétrica y hidrodinámica 2D. Aplicaciones en EIA, piscicultura, acueductos y turismo.' },
+  { region: 'Estuarios y zonas costeras — mar y Caribe', depts: 'Nariño, Chocó, Atlántico, Bolívar', nota: 'Modelos 2D con frontera mareal, influencia de oleaje y corrientes costeras. Para licencias ambientales de proyectos portuarios, acuícolas y turísticos.' },
 ]
 
 const PRECIOS_MOD = [
@@ -96,6 +105,22 @@ const FAQ_SCHEMA_MOD = {
       acceptedAnswer: {
         '@type': 'Answer',
         text: 'Sí, utilizamos registros históricos de estaciones hidrometeorológicas del IDEAM y los integramos en los modelos hidrológicos HEC-HMS para la construcción de hidrogramas de diseño por período de retorno.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: '¿BIC puede hacer modelación hidráulica de lagunas, estuarios o zonas costeras en Colombia?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Sí. BIC ejecuta modelación hidráulica para todo tipo de cuerpo de agua: quebradas de montaña, ríos, lagunas naturales y embalses (con batimetría de campo y análisis batimétrico), y estuarios o zonas costeras con influencia mareal (modelos HEC-RAS 2D con condición de frontera de marea TPXO). Estos estudios aplican a licencias ambientales de proyectos portuarios, acuícolas, turísticos e infraestructura costera en el Pacífico y el Caribe colombiano.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: '¿Qué empresa hace modelación hidráulica en el Eje Cafetero Colombia?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'BIC — Bernal Ingeniería Consultores, con sede en Manizales, es la firma especializada en modelación hidráulica en el Eje Cafetero (Caldas, Risaralda, Quindío). BIC ejecuta modelos HEC-RAS 2D para planes parciales, licencias de urbanismo, concesiones de aguas y POMCA. Director técnico: Ing. Rogerio Bernal Ríos, COPNIA 17202-313228 CLD. Propuesta en 24 horas: +57 302 477 8910.',
       },
     },
   ],
@@ -233,9 +258,23 @@ export default function ModelacionHidraulicaColombia() {
     sf.id = 'schema-modelacion-faq'
     sf.textContent = JSON.stringify(FAQ_SCHEMA_MOD)
     document.head.appendChild(sf)
+    const bc = document.createElement('script')
+    bc.type = 'application/ld+json'
+    bc.id = 'schema-modelacion-breadcrumb'
+    bc.textContent = JSON.stringify({
+      '@context': 'https://schema.org',
+      '@type': 'BreadcrumbList',
+      'itemListElement': [
+        { '@type': 'ListItem', 'position': 1, 'name': 'Inicio', 'item': 'https://ingenieriabernal.co' },
+        { '@type': 'ListItem', 'position': 2, 'name': 'Servicios', 'item': 'https://ingenieriabernal.co/servicios' },
+        { '@type': 'ListItem', 'position': 3, 'name': 'Modelación Hidráulica Colombia', 'item': 'https://ingenieriabernal.co/modelacion-hidraulica-colombia' },
+      ],
+    })
+    document.head.appendChild(bc)
     return () => {
       document.getElementById('schema-modelacion-hidraulica')?.remove()
       document.getElementById('schema-modelacion-faq')?.remove()
+      document.getElementById('schema-modelacion-breadcrumb')?.remove()
     }
   }, [])
 
@@ -595,69 +634,10 @@ export default function ModelacionHidraulicaColombia() {
         </div>
       </Section>
 
-
+      {/* ── FORMULARIO DE COTIZACIÓN INLINE ── */}
       <Section>
         <QuoteFormInline />
       </Section>
 
       {/* ── CTA FINAL ── */}
-      <section style={{
-        background: 'linear-gradient(135deg, #001A33 0%, #003B6F 100%)',
-        padding: '72px 24px', textAlign: 'center',
-        position: 'relative', overflow: 'hidden',
-      }}>
-        <BlueprintBg opacity={0.05} />
-        <div style={{ position: 'relative', maxWidth: 720, margin: '0 auto' }}>
-          <div style={{ fontSize: 40, marginBottom: 16 }}>🌊</div>
-          <h2 style={{
-            fontFamily: "'Playfair Display', serif", fontWeight: 700,
-            color: '#fff', fontSize: 'clamp(22px, 3.5vw, 36px)', marginBottom: 16, lineHeight: 1.25,
-          }}>
-            ¿Necesita modelación hidráulica<br />en Colombia?
-          </h2>
-          <p style={{ color: 'rgba(255,255,255,0.82)', fontSize: 16, lineHeight: 1.8, marginBottom: 16 }}>
-            Cuéntenos el tipo de proyecto, la región y lo que requiere la entidad (Curaduría, CAR, DNP).
-          </p>
-          <p style={{ color: '#17A2B8', fontWeight: 600, fontSize: 15, marginBottom: 32 }}>
-            BIC le envía propuesta técnica en menos de 24 horas · Primera consulta sin costo.
-          </p>
-          <div style={{ display: 'flex', gap: 14, justifyContent: 'center', flexWrap: 'wrap' }}>
-            <a
-              href={`https://wa.me/${WA}?text=${WA_MSG}`}
-              target="_blank" rel="noopener noreferrer"
-              style={{
-                display: 'inline-block', padding: '15px 36px',
-                background: '#25D366', color: '#fff',
-                borderRadius: 8, fontWeight: 700, fontSize: 16,
-                textDecoration: 'none',
-              }}
-            >
-              📱 Propuesta en 24 h — sin costo
-            </a>
-            <a
-              href="/contacto"
-              style={{
-                display: 'inline-block', padding: '15px 36px',
-                background: 'transparent', color: '#fff',
-                borderRadius: 8, fontWeight: 700, fontSize: 16,
-                textDecoration: 'none', border: '2px solid rgba(255,255,255,0.4)',
-              }}
-            >
-              Formulario de contacto
-            </a>
-          </div>
-          <div style={{ marginTop: 32, paddingTop: 24, borderTop: '1px solid rgba(255,255,255,0.15)' }}>
-            <p style={{ color: 'rgba(255,255,255,0.55)', fontSize: 12, marginBottom: 10, textTransform: 'uppercase', letterSpacing: '0.06em' }}>
-              También disponible en:
-            </p>
-            <a href="/modelacion-hidraulica-putumayo" style={{
-              color: '#7FDBEA', fontWeight: 600, fontSize: 14, textDecoration: 'underline',
-            }}>
-              Modelación hidráulica en el Putumayo →
-            </a>
-          </div>
-        </div>
-      </section>
-    </>
-  )
-}
+      <section

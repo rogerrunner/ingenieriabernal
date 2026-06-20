@@ -9,8 +9,8 @@ const WA = '573024778910'
 const WA_MSG = encodeURIComponent('Hola, necesitamos un estudio de gestión del riesgo hídrico por inundación (Decreto 1807). ¿Podemos agendar una llamada técnica?')
 
 const seoConfig = {
-  title: 'Estudios Detallados Riesgo Hídrico por Inundación — POT, SGR y Decreto 1807 | BIC',
-  description: 'BIC elabora estudios detallados de gestión del riesgo hídrico por inundación para revisión de POT/EOT, proyectos SGR y cumplimiento Decreto 1807/2014. HEC-RAS 2D, cartografía SIG. Para municipios, secretarías de planeación y gobernaciones. COPNIA. Cotiza hoy.',
+  title: '¿Necesita Estudio Riesgo Hídrico para su Plan Parcial o Licencia? — Decreto 1807 | BIC',
+  description: 'BIC elabora el estudio de gestión del riesgo hídrico que exige su Curaduría: modelación HEC-RAS 2D, cartografía amenaza inundación 1:2.000 y concepto de aptitud urbanística. Para planes parciales, licencias de construcción y POT. Firma COPNIA. Propuesta en 24 h.',
   keywords: [
     'estudios detallados riesgo inundación Decreto 1807 Colombia',
     'estudio amenaza inundación POT municipio Colombia',
@@ -84,8 +84,8 @@ const PARA_QUIEN = [
     desc: 'Análisis de riesgo hídrico como insumo técnico para la expedición de licencias ambientales, conceptos de viabilidad de POMCA y planes de ordenación y manejo de cuencas hidrográficas.',
   },
   {
-    tipo: 'Grandes Promotores, Fiduciarias y Fondos de Capital',
-    desc: 'Estudios de riesgo hídrico para due diligence de proyectos inmobiliarios, agroindustriales y de infraestructura privada en zonas con amenaza por inundación. Insumo técnico para estructuración financiera y aprobación ante entidades crediticias.',
+    tipo: 'Gobernaciones y Secretarías de Infraestructura',
+    desc: 'Estudios de riesgo por inundación para proyectos de infraestructura pública (hospitales, colegios, vías) en zonas ribereñas. Cumplimiento de condicionantes ambientales de las CAR y soporte para radicación ante OCAD/SGR.',
   },
   {
     tipo: 'Concesiones Viales e INVÍAS',
@@ -152,7 +152,8 @@ export default function GestionRiesgoHidrico() {
       '@type': 'BreadcrumbList',
       'itemListElement': [
         { '@type': 'ListItem', 'position': 1, 'name': 'Inicio', 'item': 'https://ingenieriabernal.co' },
-        { '@type': 'ListItem', 'position': 2, 'name': 'Gestión del Riesgo Hídrico', 'item': 'https://ingenieriabernal.co/gestion-riesgo-hidrico' },
+        { '@type': 'ListItem', 'position': 2, 'name': 'Servicios', 'item': 'https://ingenieriabernal.co/servicios' },
+        { '@type': 'ListItem', 'position': 3, 'name': 'Gestión del Riesgo Hídrico', 'item': 'https://ingenieriabernal.co/gestion-riesgo-hidrico-colombia' },
       ],
     })
     document.head.appendChild(el)
@@ -571,6 +572,4 @@ export default function GestionRiesgoHidrico() {
           </div>
         </div>
       </Section>
-    </>
-  )
-}
+    <
