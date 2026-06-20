@@ -1,5 +1,6 @@
 import { useEffect } from 'react'
 import SEOHead from '@/components/SEOHead'
+import SchemaMarkup from '@/components/SchemaMarkup'
 import { BlueprintBg, ThinLine, SectionLabel, Btn, Section, Tag } from '@/components/ui'
 
 const WA = '573024778910'
@@ -82,6 +83,15 @@ const FAQ = [
   },
 ]
 
+const FAQ_SCHEMA = [
+  {q: "¿Qué empresa hace estudio de suelos NSR-10 en Pereira?",
+   a: "BIC — Bernal Ingeniería Consultores coordina y entrega estudios de suelos NSR-10 en Pereira (Risaralda) para licencias de construcción en la Curaduría 1 y 2 de Pereira. El estudio incluye: apiques o sondeos SPT según NSR-10 Título H, clasificación SUCS de suelos, capacidad portante, concepto de cimentación y, si aplica, análisis de estabilidad de taludes para terrenos en pendiente. Firma COPNIA. Pereira y el Eje Cafetero es zona de amenaza sísmica alta, lo que exige cumplimiento estricto de NSR-10."},
+  {q: "¿Cuánto cuesta un estudio de suelos en Pereira?",
+   a: "El costo de un estudio de suelos NSR-10 en Pereira varía según el tipo de proyecto: vivienda unifamiliar (2 apiques + laboratorio): $2M–$4M COP; edificio 4-8 pisos (3-5 sondeos SPT): $5M–$10M COP; edificio 9-20 pisos o proyecto con cimentación profunda: $8M–$20M COP; urbanización (muestreo representativo): $10M–$25M COP. Los precios incluyen trabajo de campo, ensayos de laboratorio, informe técnico y firma COPNIA para la Curaduría."},
+  {q: "¿El estudio de suelos en Pereira incluye análisis sísmico?",
+   a: "El informe de suelos NSR-10 en Pereira debe incluir el análisis de la amenaza sísmica local según el Título A de la NSR-10, la clasificación del perfil de suelo (A, B, C, D o E) para la determinación del espectro de diseño sísmico, y las recomendaciones de cimentación considerando la sismicidad de la región. Pereira está en zona de amenaza sísmica alta según el mapa del INGEOMINAS, lo que hace obligatorio este análisis en todos los proyectos de construcción."},
+]
+
 export default function ServicioEstudioSuelosPereira() {
   useEffect(() => {
     window.scrollTo(0, 0)
@@ -96,6 +106,7 @@ export default function ServicioEstudioSuelosPereira() {
   return (
     <>
       <SEOHead config={seoConfig} />
+      <SchemaMarkup type="service" faqItems={FAQ_SCHEMA} serviceName="Estudio de Suelos NSR-10 Pereira — COPNIA BIC" serviceUrl="/estudio-de-suelos-pereira" />
 
       {/* ── HERO ── */}
       <section style={{
