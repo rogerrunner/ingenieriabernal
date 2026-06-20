@@ -1,5 +1,6 @@
 import { useEffect } from 'react'
 import SEOHead from '@/components/SEOHead'
+import SchemaMarkup from '@/components/SchemaMarkup'
 import SpeakableSchema from '@/components/SpeakableSchema'
 import { BlueprintBg, ThinLine, SectionLabel, Btn, Section, Tag } from '@/components/ui'
 import QuoteFormInline from '@/components/QuoteFormInline'
@@ -122,12 +123,22 @@ const ARTICULOS = [
   { href: '/blog/aforo-caudales-colombia', title: 'Aforo de Caudales en Colombia' },
 ]
 
+const FAQ_SCHEMA = [
+  {q: "¿Qué diferencia hay entre concesión de aguas y permiso de vertimientos en Colombia?",
+   a: "La concesión de aguas es el derecho otorgado por la CAR para captar agua de una fuente superficial o subterránea (río, quebrada, pozo) para un uso específico (consumo humano, riego, industria). El permiso de vertimientos autoriza descargar aguas residuales tratadas a un cuerpo hídrico receptor. Ambos trámites los otorga la corporación autónoma regional con jurisdicción en el predio. BIC prepara los estudios técnicos para los dos tipos de permiso."},
+  {q: "¿Qué CAR otorga la concesión de aguas en Caldas, Risaralda y Quindío?",
+   a: "En Caldas, la concesión la otorga CORPOCALDAS. En Risaralda, CARDER. En Quindío, CRQ (Corporación Autónoma Regional del Quindío). En todos los casos BIC prepara el expediente técnico completo: estudio de oferta hídrica, diseño de bocatoma o captación, Plan de Uso Eficiente del Agua (PUEAA) y balance hídrico, y lo radica ante la corporación correspondiente."},
+  {q: "¿Cuánto demora la concesión de aguas ante la CAR en Colombia?",
+   a: "El tiempo de respuesta de la corporación autónoma regional para una concesión de aguas varía entre 3 y 12 meses según la corporación y la carga de expedientes. CORPOCALDAS y CARDER tienen tiempos típicos de 4-8 meses una vez radicado el expediente completo. BIC prepara el expediente técnico en 4-8 semanas para minimizar las solicitudes de información adicional que retrasan el trámite."},
+]
+
 export default function ConcesionAguasColombia() {
   useEffect(() => { window.scrollTo(0, 0) }, [])
 
   return (
     <>
       <SEOHead config={seoConfig} />
+      <SchemaMarkup type="service" faqItems={FAQ_SCHEMA} serviceName="Concesión de Aguas Superficiales y Subterráneas Colombia" serviceUrl="/concesion-aguas-colombia" />
       <SpeakableSchema name="Concesión de Aguas en Colombia — Trámite ante CAR | BIC Ingeniería" />
 
       {/* ── HERO ── */}
