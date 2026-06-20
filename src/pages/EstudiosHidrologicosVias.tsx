@@ -1,5 +1,6 @@
 import { useEffect } from 'react'
 import SEOHead from '@/components/SEOHead'
+import SchemaMarkup from '@/components/SchemaMarkup'
 import { BlueprintBg, SectionLabel, Btn, Section, Tag } from '@/components/ui'
 import QuoteFormInline from '@/components/QuoteFormInline'
 
@@ -151,6 +152,15 @@ const NORMATIVA = [
   { codigo: 'IGAC Cartografía', descripcion: 'Cartografía oficial de Colombia (escala 1:25.000) para delimitación de cuencas de drenaje' },
 ]
 
+const FAQ_SCHEMA = [
+  {q: "¿Qué estudios hidrológicos se requieren para el diseño de vías en Colombia?",
+   a: "Para el diseño de vías en Colombia (primarias, secundarias y terciarias), el Manual de Diseño Geométrico INVIAS exige estudios hidrológicos para el diseño de obras de drenaje: cunetas, alcantarillas, boxculverts, puentes y disipadores de energía. El estudio incluye análisis de precipitación (curvas IDF), delimitación de cuencas hidrográficas, cálculo de caudales de diseño por métodos racional o SCS-CN para períodos de retorno de 25 a 100 años según la jerarquía vial, y verificación hidráulica de las obras existentes o propuestas."},
+  {q: "¿BIC hace estudios hidrológicos para proyectos viales en el Eje Cafetero?",
+   a: "Sí. BIC realiza estudios hidrológicos e hidráulicos para proyectos viales en Caldas, Risaralda, Quindío y otras regiones de Colombia. Los estudios incluyen cálculo de caudales de diseño, dimensionamiento de alcantarillas y boxculverts, modelación de puentes en HEC-RAS, análisis de sedimentos y evaluación de riesgo por inundación vial. Experiencia en vías terciarias rurales, secundarias departamentales y proyectos de mejoramiento de vías."},
+  {q: "¿Cuánto cuesta un estudio hidrológico para una vía en Colombia?",
+   a: "El costo del estudio hidrológico para vías varía según la longitud y complejidad: tramo vial hasta 10 km con cuencas pequeñas: $6M–$15M COP; tramo de 10–30 km con varias cuencas: $12M–$28M COP; proyecto con modelación HEC-RAS en zonas de inundación o estudio de puentes: $18M–$45M COP. BIC entrega propuesta gratuita en 24 horas con el alcance según las características de su proyecto vial."},
+]
+
 export default function EstudiosHidrologicosVias() {
   useEffect(() => { window.scrollTo(0, 0) }, [])
 
@@ -174,6 +184,7 @@ export default function EstudiosHidrologicosVias() {
   return (
     <>
       <SEOHead config={seoConfig} />
+      <SchemaMarkup type="service" faqItems={FAQ_SCHEMA} serviceName="Estudios Hidrológicos para Vías Colombia" serviceUrl="/estudios-hidrologicos-vias" />
 
       {/* ── HERO ── */}
       <section style={{ background: 'linear-gradient(135deg, #001A33 0%, #002A50 55%, #003B6F 100%)', paddingTop: 120, paddingBottom: 80, position: 'relative', overflow: 'hidden' }}>
