@@ -1,13 +1,14 @@
 import { useEffect } from 'react'
 import SEOHead from '@/components/SEOHead'
+import SchemaMarkup from '@/components/SchemaMarkup'
 import { BlueprintBg, ThinLine, SectionLabel, Btn, Section, Tag } from '@/components/ui'
 
 const WA = '573024778910'
 const WA_MSG = encodeURIComponent('Hola, quiero cotizar una Modelación Hidráulica en Manizales')
 
 const seoConfig = {
-  title: 'Modelación Hidráulica Manizales — HEC-RAS | BIC',
-  description: 'Modelación hidráulica HEC-RAS 1D y 2D en Manizales. Inundaciones, socavación y diseño de obras. COPNIA vigente. Cotiza hoy. +57 302 477 8910',
+  title: 'Empresa Modelación Hidráulica HEC-RAS Manizales — Decreto 1807, Planes Parciales | BIC COPNIA',
+  description: '¿Necesita modelación HEC-RAS en Manizales para su plan parcial, licencia de urbanismo o trámite Corpocaldas? BIC lo hace: HEC-RAS 2D, Decreto 1807, manchas de inundación. Firma COPNIA. Propuesta en 24 h. Desde $8M COP.',
   keywords: [
     'modelación hidráulica Manizales',
     'HEC-RAS 1D 2D Manizales',
@@ -102,6 +103,18 @@ const FAQ = [
     q: '¿Qué períodos de retorno usa BIC en sus modelos?',
     a: 'El estándar para estudios de inundabilidad en Colombia (Decreto 1807/2014) establece períodos de retorno de 10, 25, 50 y 100 años para la zonificación de amenaza en alta, media y baja. Para diseño de obras hidráulicas, el período de retorno depende del tipo de obra: alcantarillas (10–25 años), canales urbanos (25–50 años), defensas ribereñas (100 años). BIC define los períodos de retorno apropiados según el objetivo del estudio y la normativa aplicable.',
   },
+  {
+    q: '¿Qué empresa hace modelación hidráulica HEC-RAS en Manizales?',
+    a: 'BIC — Bernal Ingeniería Consultores, con sede en Manizales (COPNIA 17202-313228 CLD), es la firma especializada en modelación hidráulica HEC-RAS 1D y 2D en Caldas. Ejecuta estudios de inundabilidad para el Decreto 1807, planes parciales, POT y trámites ante Corpocaldas. Dirigido por el Esp. Rogerio Bernal Ríos, egresado UNAL Manizales. Propuesta técnica en 24 horas: +57 302 477 8910.',
+  },
+  {
+    q: '¿Cuánto cuesta una modelación hidráulica HEC-RAS en Manizales?',
+    a: 'El costo de una modelación hidráulica HEC-RAS en Manizales depende del alcance. Para tramos urbanos puntuales (1–3 km de cauce) con topografía disponible: $8M a $15M COP. Para estudios 2D completos con mapas de inundación y concepto para plan parcial o licencia de urbanismo: $15M a $30M COP. BIC entrega propuesta técnica y económica en menos de 24 horas, sin costo.',
+  },
+  {
+    q: '¿BIC tramita los estudios hidráulicos ante Corpocaldas para licencias en Manizales?',
+    a: 'Sí. BIC prepara los estudios de amenaza y riesgo hídrico conforme a la metodología exigida por Corpocaldas (Decreto 1807/2014) y los acompaña durante la revisión ante la corporación y las curadurías de Manizales. Hemos apoyado exitosamente trámites de licencias de urbanismo y construcción en Manizales, Villamaría, Chinchiná y otros municipios de Caldas.',
+  },
 ]
 
 export default function ModelacionHidraulicaManizales() {
@@ -110,6 +123,7 @@ export default function ModelacionHidraulicaManizales() {
   return (
     <>
       <SEOHead config={seoConfig} />
+      <SchemaMarkup type="service" faqItems={FAQ} serviceName="Modelación Hidráulica HEC-RAS Manizales" serviceUrl="/modelacion-hidraulica-manizales" />
 
       {/* ── HERO ── */}
       <section style={{
