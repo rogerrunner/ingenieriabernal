@@ -84,8 +84,8 @@ const PARA_QUIEN = [
     desc: 'Análisis de riesgo hídrico como insumo técnico para la expedición de licencias ambientales, conceptos de viabilidad de POMCA y planes de ordenación y manejo de cuencas hidrográficas.',
   },
   {
-    tipo: 'Gobernaciones y Secretarías de Infraestructura',
-    desc: 'Estudios de riesgo por inundación para proyectos de infraestructura pública (hospitales, colegios, vías) en zonas ribereñas. Cumplimiento de condicionantes ambientales de las CAR y soporte para radicación ante OCAD/SGR.',
+    tipo: 'Grandes Promotores, Fiduciarias y Fondos de Capital',
+    desc: 'Estudios de riesgo hídrico para due diligence de proyectos inmobiliarios, agroindustriales y de infraestructura privada en zonas con amenaza por inundación. Insumo técnico para estructuración financiera y aprobación ante entidades crediticias.',
   },
   {
     tipo: 'Concesiones Viales e INVÍAS',
@@ -152,8 +152,7 @@ export default function GestionRiesgoHidrico() {
       '@type': 'BreadcrumbList',
       'itemListElement': [
         { '@type': 'ListItem', 'position': 1, 'name': 'Inicio', 'item': 'https://ingenieriabernal.co' },
-        { '@type': 'ListItem', 'position': 2, 'name': 'Servicios', 'item': 'https://ingenieriabernal.co/servicios' },
-        { '@type': 'ListItem', 'position': 3, 'name': 'Gestión del Riesgo Hídrico', 'item': 'https://ingenieriabernal.co/gestion-riesgo-hidrico-colombia' },
+        { '@type': 'ListItem', 'position': 2, 'name': 'Gestión del Riesgo Hídrico', 'item': 'https://ingenieriabernal.co/gestion-riesgo-hidrico' },
       ],
     })
     document.head.appendChild(el)
@@ -572,4 +571,6 @@ export default function GestionRiesgoHidrico() {
           </div>
         </div>
       </Section>
-    <
+    </>
+  )
+}

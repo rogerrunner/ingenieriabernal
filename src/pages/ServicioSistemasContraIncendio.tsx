@@ -9,7 +9,6 @@ const seoConfig = {
   title: 'Diseño Hidrosanitario y Sistema Contra Incendio para Edificios Colombia | NSR-10 NFPA | BIC',
   description: 'BIC diseña redes hidrosanitarias y sistemas contra incendio para edificios en Colombia: NSR-10 Título J, NFPA 13/14/20. Sprinklers, hidrantes BIE, cuarto de bombas. Memorias COPNIA para licencia de construcción. Propuesta en 24 h.',
   keywords: [
-    'diseño hidrosanitario y contra incendio edificio Colombia',
     'sistemas contra incendio NSR-10 Colombia',
     'diseño sistema contra incendio Colombia',
     'NSR-10 Título J sistemas contra incendio',
@@ -429,4 +428,12 @@ export default function ServicioSistemasContraIncendio() {
           </p>
           <Btn
             href={`https://wa.me/${WA}?text=${WA_MSG}`}
-            style=
+            style={{ background: '#fff', color: '#17A2B8', fontSize: 15, padding: '14px 36px' }}
+          >
+            📱 Propuesta en 24 h — sin costo
+          </Btn>
+        </div>
+      </Section>
+    </>
+  )
+}
