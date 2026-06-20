@@ -1,5 +1,6 @@
 ﻿import { useEffect } from 'react'
 import SEOHead from '@/components/SEOHead'
+import SchemaMarkup from '@/components/SchemaMarkup'
 import { BlueprintBg, ThinLine, SectionLabel, Btn, Section, Tag } from '@/components/ui'
 
 const WA = '573024778910'
@@ -101,6 +102,15 @@ const PROYECTOS = [
   },
 ]
 
+const FAQ_SCHEMA = [
+  {q: "¿BIC hace proyectos de ingeniería hidráulica en Ibagué?",
+   a: "Sí. BIC atiende proyectos hidráulicos en Ibagué y el departamento del Tolima en modalidad remota: modelación HEC-RAS, diseño hidrosanitario y CI NSR-10, estudios Decreto 1807 para curadurías, y trámites ante CORTOLIMA (Corporación Autónoma Regional del Tolima). La firma COPNIA 17202-313228 CLD del Ing. Rogerio Bernal Ríos es válida en todo Tolima y Colombia."},
+  {q: "¿Qué CAR opera en Ibagué y el Tolima?",
+   a: "En Ibagué y el departamento del Tolima opera CORTOLIMA (Corporación Autónoma Regional del Tolima). CORTOLIMA otorga concesiones de aguas, permisos de vertimientos y licencias ambientales para proyectos hídricos en el Tolima. BIC elabora los estudios técnicos para tramitar estos permisos ante CORTOLIMA."},
+  {q: "¿Por qué contratar BIC para proyectos en Ibagué si no tienen sede allá?",
+   a: "BIC opera en modalidad remota para todo Colombia. El 95% de los estudios y diseños hidráulicos (hidrología, modelación HEC-RAS, diseños hidrosanitarios) no requieren presencia física en el lugar del proyecto. BIC usa información cartográfica IGAC, datos IDEAM y planos del cliente en AutoCAD para elaborar los estudios técnicos. Si se requiere visita de campo, BIC la cotiza por separado. La calidad técnica y la firma COPNIA son iguales para cualquier ciudad de Colombia."},
+]
+
 export default function CiudadIbague() {
   useEffect(() => {
     window.scrollTo(0, 0)
@@ -115,6 +125,7 @@ export default function CiudadIbague() {
   return (
     <>
       <SEOHead config={seoConfig} />
+      <SchemaMarkup type="service" faqItems={FAQ_SCHEMA} serviceName="Ingeniería Hidráulica Ibagué — BIC COPNIA" serviceUrl="/servicios/ciudad-ibague" />
 
       {/* ── HERO ── */}
       <section style={{
