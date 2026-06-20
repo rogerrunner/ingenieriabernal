@@ -1,5 +1,6 @@
 import { useEffect } from 'react'
 import SEOHead from '@/components/SEOHead'
+import SchemaMarkup from '@/components/SchemaMarkup'
 import { BlueprintBg, ThinLine, SectionLabel, Btn, Section, Tag } from '@/components/ui'
 
 const WA = '573024778910'
@@ -135,12 +136,22 @@ const FAQ = [
   },
 ]
 
+const FAQ_SCHEMA = [
+  {q: "¿Qué memorias de ingeniería hidráulica pide la Curaduría de Manizales?",
+   a: "La Curaduría Urbana de Manizales exige: memorias de cálculo de redes hidrosanitarias (agua potable, aguas residuales, aguas lluvias) firmadas por ingeniero COPNIA; diseño del sistema contra incendio (si aplica NSR-10 Título K); y estudio de riesgo hídrico Decreto 1807 si el predio está en zona de amenaza. BIC elabora todos estos documentos con firma COPNIA 17202-313228 CLD."},
+  {q: "¿BIC puede entregar las memorias rápido para no perder la vigencia de la licencia en Manizales?",
+   a: "Sí. BIC tiene capacidad para hacer entregas aceleradas en Manizales cuando el cliente tiene urgencia por vigencia de licencia o plazo de contrato. Los tiempos mínimos son: redes hidrosanitarias edificio hasta 8 pisos en 10-15 días hábiles; sistema contra incendio en 10-20 días hábiles; ambos en paralelo en 15-25 días. Consulte disponibilidad: +57 302 477 8910."},
+  {q: "¿Qué documentos entrega BIC para la licencia de construcción en Manizales?",
+   a: "BIC entrega para la Curaduría de Manizales: (1) memorias de cálculo hidráulico en formato PDF con firma digital COPNIA; (2) planos en formato DWG (AutoCAD) y PDF, firmados y sellados; (3) carta de responsabilidad del ingeniero de diseño; y (4) si aplica el Decreto 1807: informe de amenaza y riesgo hídrico con mapas georreferenciados en SHP y PDF. Todos los documentos cumplen el formato exigido por la Curaduría."},
+]
+
 export default function LicenciaConstruccionManizales() {
   useEffect(() => { window.scrollTo(0, 0) }, [])
 
   return (
     <>
       <SEOHead config={seoConfig} />
+      <SchemaMarkup type="service" faqItems={FAQ_SCHEMA} serviceName="Memorias de Ingeniería para Licencia Construcción Manizales" serviceUrl="/licencia-construccion-manizales" />
 
       {/* ── HERO ── */}
       <section style={{
