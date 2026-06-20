@@ -1,5 +1,6 @@
 import { useEffect } from 'react'
 import SEOHead from '@/components/SEOHead'
+import SchemaMarkup from '@/components/SchemaMarkup'
 import { BlueprintBg, ThinLine, SectionLabel, Btn, Section, Tag } from '@/components/ui'
 
 const WA = '573024778910'
@@ -105,12 +106,22 @@ const FAQ = [
   },
 ]
 
+const FAQ_SCHEMA = [
+  {q: "¿BIC hace estudio de suelos en Pereira?",
+   a: "BIC coordina estudios de suelos NSR-10 en Pereira y entrega el informe completo con firma COPNIA para la Curaduría Urbana de Pereira. El estudio incluye: trabajo de campo (apiques o sondeos SPT), ensayos de laboratorio, clasificación de suelos SUCS, análisis de capacidad portante, concepto de cimentación y análisis sísmico conforme a NSR-10. Pereira es zona de amenaza sísmica alta."},
+  {q: "¿Cuánto demora el estudio de suelos en Pereira?",
+   a: "El estudio de suelos en Pereira demora típicamente: trabajo de campo 1-3 días; laboratorio 5-10 días hábiles; elaboración del informe y firma 3-5 días. Total estimado: 2-4 semanas desde la inspección del predio. Para proyectos urgentes consulte disponibilidad: +57 302 477 8910."},
+  {q: "¿El estudio de suelos es obligatorio para construir en Pereira?",
+   a: "Sí. El estudio de suelos (exploración geotécnica) es obligatorio según NSR-10 Título H para todo proyecto de construcción en Colombia, incluyendo Pereira. La Curaduría Urbana de Pereira exige el informe de mecánica de suelos con firma COPNIA para expedir la licencia de construcción, independientemente del tipo y tamaño del proyecto."},
+]
+
 export default function EstudioSuelosPereira() {
   useEffect(() => { window.scrollTo(0, 0) }, [])
 
   return (
     <>
       <SEOHead config={seoConfig} />
+      <SchemaMarkup type="service" faqItems={FAQ_SCHEMA} serviceName="Estudio de Suelos NSR-10 Pereira" serviceUrl="/servicios/estudio-suelos-pereira" />
 
       {/* ── HERO ── */}
       <section style={{
