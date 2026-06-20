@@ -1,5 +1,6 @@
 import { useEffect } from 'react'
 import SEOHead from '@/components/SEOHead'
+import SchemaMarkup from '@/components/SchemaMarkup'
 import { BlueprintBg, ThinLine, SectionLabel, Btn, Section, Tag } from '@/components/ui'
 
 const WA = '573024778910'
@@ -90,12 +91,22 @@ const FAQ = [
   },
 ]
 
+const FAQ_SCHEMA = [
+  {q: "¿Qué empresa hace el estudio de inundabilidad Decreto 1807 en Pereira?",
+   a: "BIC — Bernal Ingeniería Consultores elabora estudios de inundabilidad Decreto 1807/2014 en Pereira (Risaralda) para licencias urbanísticas y planes parciales: modelación HEC-RAS 2D, manchas de inundación Tr 10–100 años, concepto de aptitud urbanística y coordinación con CARDER. Director: Ing. Rogerio Bernal Ríos, COPNIA 17202-313228 CLD. Propuesta en 24 h."},
+  {q: "¿BIC tramita el estudio de inundabilidad ante CARDER en Pereira?",
+   a: "BIC elabora los estudios técnicos y los entrega listos para que el cliente los presente ante CARDER (Corporación Autónoma Regional de Risaralda) y la Curaduría de Pereira. En algunos casos, el plan parcial o la licencia en Pereira requiere también concepto de aptitud emitido por CARDER. BIC prepara los informes con el formato y los anexos que exige CARDER Pereira."},
+  {q: "¿Cuánto cuesta un estudio de inundabilidad en Pereira?",
+   a: "El costo del estudio de inundabilidad Decreto 1807 en Pereira varía entre $8M y $35M COP dependiendo del tamaño del área a modelar, el número de quebradas a incluir y la escala de los mapas requeridos por la Curaduría de Pereira. BIC entrega propuesta gratuita en 24 horas."},
+]
+
 export default function EstudioInundabilidadPereira() {
   useEffect(() => { window.scrollTo(0, 0) }, [])
 
   return (
     <>
       <SEOHead config={seoConfig} />
+      <SchemaMarkup type="service" faqItems={FAQ_SCHEMA} serviceName="Estudio de Inundabilidad Decreto 1807 Pereira" serviceUrl="/servicios/estudio-inundabilidad-pereira" />
 
       {/* ── HERO ── */}
       <section style={{
