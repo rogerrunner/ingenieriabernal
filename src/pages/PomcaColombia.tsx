@@ -1,5 +1,6 @@
 import { useEffect } from 'react'
 import SEOHead from '@/components/SEOHead'
+import SchemaMarkup from '@/components/SchemaMarkup'
 import { BlueprintBg, ThinLine, SectionLabel, Btn, Section, Tag } from '@/components/ui'
 import QuoteFormInline from '@/components/QuoteFormInline'
 
@@ -177,6 +178,15 @@ const ARTICULOS = [
   { href: '/blog/estudio-amenaza-inundacion', title: 'Estudio de amenaza por inundación en Colombia: paso a paso' },
 ]
 
+const FAQ_SCHEMA = [
+  {q: "¿Qué es un POMCA y qué rol juega BIC en su elaboración?",
+   a: "El POMCA (Plan de Ordenación y Manejo de Cuencas Hidrográficas) es el instrumento de planificación que define el uso sostenible del agua en una cuenca hidrográfica en Colombia, conforme al Decreto 1076 de 2015. Las CAR son las entidades formuladoras. BIC apoya a las CAR y a los consorcios consultores en la componente hídrica del POMCA: caracterización hidrológica de la cuenca, modelación de caudales, índice de escasez hídrica, balance hídrico y cartografía de amenaza por inundación y avenidas torrenciales."},
+  {q: "¿Cómo afecta el POMCA a un proyecto de urbanización o industria en Colombia?",
+   a: "Un predio incluido en la zona de manejo y protección de una cuenca con POMCA vigente puede tener restricciones de uso del suelo que limiten la urbanización, la agricultura intensiva o la industria. Antes de comprar o desarrollar un lote, es importante verificar si está en zona de ordenación del POMCA y qué usos permite. BIC puede revisar el POMCA aplicable a su predio y orientar sobre los estudios técnicos necesarios para el trámite de permisos ante la CAR correspondiente."},
+  {q: "¿BIC hace estudios hidrológicos para POMCAs en Colombia?",
+   a: "Sí. BIC participa como subcontratista especialista en hidrología e hidráulica en la formulación de POMCAs para CAR de diferentes regiones de Colombia. Los estudios incluyen: levantamiento de información hidrometeorológica (IDEAM), calibración de modelos lluvia-escorrentía HEC-HMS, balances hídricos mensuales, cálculo de índices de escasez y uso del agua, y modelación de eventos extremos para mapas de amenaza por inundación y avenida torrencial."},
+]
+
 export default function PomcaColombia() {
   useEffect(() => {
     window.scrollTo(0, 0)
@@ -200,6 +210,7 @@ export default function PomcaColombia() {
   return (
     <>
       <SEOHead config={seoConfig} />
+      <SchemaMarkup type="service" faqItems={FAQ_SCHEMA} serviceName="POMCA Colombia — Estudios Hidrológicos para Cuencas" serviceUrl="/pomca-colombia" />
 
       {/* ── HERO ── */}
       <section style={{
