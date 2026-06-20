@@ -1,5 +1,6 @@
 import { useEffect } from 'react'
 import SEOHead from '@/components/SEOHead'
+import SchemaMarkup from '@/components/SchemaMarkup'
 import { BlueprintBg, SectionLabel, Btn, Section, Tag, CTABanner } from '@/components/ui'
 
 const WA = '573024778910'
@@ -199,12 +200,28 @@ const RELACIONADOS = [
   { href: '/servicios/diseno-acueductos', label: '🔧 Acueducto y alcantarillado' },
 ]
 
+const FAQ_ITEMS_SCHEMA = [
+  {
+    q: '¿Qué estudios hidráulicos necesita una urbanización en Colombia?',
+    a: 'Una urbanización requiere: estudio hidrológico para drenaje pluvial, estudio de amenaza hídrica Decreto 1807 si hay fuentes cercanas, diseño de acueducto y alcantarillado RAS 2017, y memorias COPNIA para curaduría. BIC cubre todos los componentes.',
+  },
+  {
+    q: '¿Cuánto cuesta la ingeniería hidráulica para una urbanización en Colombia?',
+    a: 'El paquete hidráulico completo (acueducto, alcantarillado, estudio inundabilidad) oscila entre $18M y $55M COP según área y complejidad. Proyectos menores a 2 ha pueden partir desde $12M COP. BIC entrega propuesta en 24 horas.',
+  },
+  {
+    q: '¿Qué empresa hace la ingeniería hidráulica de urbanizaciones en el Eje Cafetero?',
+    a: 'BIC diseña acueductos, alcantarillados y drenaje pluvial para constructoras y promotores en Caldas, Risaralda y Quindío. Entregamos memorias, planos y concepto COPNIA aceptados por curadurías de Manizales, Pereira y Armenia. +57 302 477 8910.',
+  },
+]
+
 export default function UrbanizacionColombia() {
   useEffect(() => { window.scrollTo(0, 0) }, [])
 
   return (
     <>
       <SEOHead config={seoConfig} />
+      <SchemaMarkup type="service" faqItems={FAQ_ITEMS_SCHEMA} serviceName="Ingeniería Hidráulica para Urbanizaciones Colombia" serviceUrl="/urbanizacion-colombia" />
 
       <CTABanner service="Diseño para Urbanizaciones y Parcelaciones Colombia" />
 
