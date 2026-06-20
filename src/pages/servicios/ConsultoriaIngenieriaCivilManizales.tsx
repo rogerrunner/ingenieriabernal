@@ -1,5 +1,6 @@
 import { useEffect } from 'react'
 import SEOHead from '@/components/SEOHead'
+import SchemaMarkup from '@/components/SchemaMarkup'
 import { BlueprintBg, ThinLine, SectionLabel, Btn, Section, Tag } from '@/components/ui'
 
 const WA = '573024778910'
@@ -87,12 +88,22 @@ const FAQ = [
   },
 ]
 
+const FAQ_SCHEMA = [
+  {q: "¿Qué es BIC Bernal Ingeniería Consultores en Manizales?",
+   a: "BIC es una firma de consultoría en ingeniería civil hidráulica y saneamiento con sede en Manizales, Caldas. Fundada por el Ing. Rogerio Bernal Ríos, Especialista en Ingeniería Hidráulica por la Universidad Nacional de Colombia Manizales, con más de 10 años de experiencia. BIC es la firma de referencia del Eje Cafetero para estudios hidrológicos, modelación HEC-RAS, diseño de acueductos, redes contra incendio NSR-10 y trámites ante Corpocaldas. COPNIA 17202-313228 CLD."},
+  {q: "¿BIC hace consultorías de ingeniería civil en Manizales para el sector privado?",
+   a: "Sí. El 90% del portafolio de BIC en Manizales es sector privado: urbanizadores, constructoras, industriales, ESP privadas, propietarios de predios con quebradas, hoteles, edificios de oficinas y condominios campestres. BIC trabaja directamente con el propietario o el gerente del proyecto, sin intermediarios, y entrega soluciones técnicas precisas y económicas para cada caso."},
+  {q: "¿BIC participa en licitaciones públicas en Manizales o Caldas?",
+   a: "BIC participa selectivamente en licitaciones públicas en Manizales y Caldas (Alcaldías, ESP municipales, EMPOCALDAS, INVIAS) principalmente como consultor de estudios y diseños para acueductos, alcantarillados y gestión del riesgo hídrico. La mayor parte del trabajo de BIC es por contratación directa con el sector privado, lo que permite mayor agilidad y personalización del servicio."},
+]
+
 export default function ConsultoriaIngenieriaCivilManizales() {
   useEffect(() => { window.scrollTo(0, 0) }, [])
 
   return (
     <>
       <SEOHead config={seoConfig} />
+      <SchemaMarkup type="service" faqItems={FAQ_SCHEMA} serviceName="Consultoría Ingeniería Civil Manizales — BIC" serviceUrl="/servicios/consultoria-ingenieria-civil-manizales" />
 
       {/* ── HERO ── */}
       <section style={{
