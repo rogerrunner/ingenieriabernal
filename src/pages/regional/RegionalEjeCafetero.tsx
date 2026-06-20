@@ -364,12 +364,7 @@ export default function RegionalEjeCafetero() {
       </Section>
 
       {/* ── CTA BANNER ── */}
-      <CTABanner
-        heading="¿Tienes un proyecto en Caldas, Risaralda o Quindío?"
-        sub="Habla directamente con el especialista COPNIA. Cotización en 24 h, sin intermediarios."
-        ctaLabel="Cotizar ahora por WhatsApp"
-        ctaHref={`https://wa.me/${WA}?text=${WA_MSG}`}
-      />
+      <CTABanner service="Ingeniería Hidráulica Eje Cafetero — Caldas, Risaralda y Quindío" />
     </>
   )
 }
