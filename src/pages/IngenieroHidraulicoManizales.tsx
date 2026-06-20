@@ -1,5 +1,6 @@
 ﻿import { useEffect } from 'react'
 import SEOHead from '@/components/SEOHead'
+import SchemaMarkup from '@/components/SchemaMarkup'
 import { BlueprintBg, ThinLine, SectionLabel, Btn, Section } from '@/components/ui'
 
 const WA = '573024778910'
@@ -56,6 +57,15 @@ const SERVICIOS = [
   { nombre: 'Estudios Hidrológicos para POMCA y Licencias', href: '/servicios/estudios-hidrologicos', desc: 'Análisis de cuencas, curvas IDF, caudales de diseño y períodos de retorno exigidos por CORPOCALDAS y autoridades ambientales.' },
 ]
 
+const FAQ_SCHEMA = [
+  {q: "¿Cómo contratar un ingeniero hidráulico COPNIA en Manizales?",
+   a: "Para contratar un ingeniero hidráulico con matrícula COPNIA vigente en Manizales, contacte a BIC — Bernal Ingeniería Consultores: Ing. Rogerio Bernal Ríos, COPNIA 17202-313228 CLD, Especialista en Ingeniería Hidráulica (UNAL Manizales). BIC atiende proyectos de modelación HEC-RAS, diseño de acueductos y alcantarillado, redes contra incendio NSR-10 y trámites ante Corpocaldas. Primera consulta sin costo: +57 302 477 8910."},
+  {q: "¿Qué estudios puede firmar un ingeniero hidráulico COPNIA en Manizales?",
+   a: "Un ingeniero hidráulico con matrícula COPNIA puede firmar: estudios hidrológicos e hidráulicos, modelación HEC-RAS para Decreto 1807 y planes parciales, diseño de acueductos y alcantarillados RAS 2017, diseño de PTAP y PTAR, redes hidrosanitarias y contra incendio NSR-10, memorias de cálculo para licencias de construcción en curaduría urbana, y estudios técnicos para permisos ante Corpocaldas. La firma COPNIA del ingeniero responsable es requisito legal en todos estos documentos."},
+  {q: "¿Cuánto cobra un ingeniero hidráulico en Manizales por un diseño?",
+   a: "Los honorarios de un ingeniero hidráulico en Manizales varían según el tipo de diseño. Rangos orientativos de BIC: estudio hidrológico básico desde $3M COP; modelación HEC-RAS para plan parcial desde $8M COP; diseño acueducto veredal desde $6M COP; diseño hidrosanitario edificio desde $8M COP; sistema contra incendio desde $8M COP. BIC entrega propuesta gratuita en 24 horas con el alcance detallado y el cronograma de entrega."},
+]
+
 export default function IngenieroHidraulicoManizales() {
   useEffect(() => {
     window.scrollTo(0, 0)
@@ -70,6 +80,7 @@ export default function IngenieroHidraulicoManizales() {
   return (
     <>
       <SEOHead config={seoConfig} />
+      <SchemaMarkup type="service" faqItems={FAQ_SCHEMA} serviceName="Ingeniero Hidráulico Manizales — COPNIA BIC" serviceUrl="/ingeniero-hidraulico-manizales" />
 
       {/* ── HERO ── */}
       <section style={{
