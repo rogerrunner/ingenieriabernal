@@ -1,5 +1,6 @@
 import { useEffect } from 'react'
 import SEOHead from '@/components/SEOHead'
+import SchemaMarkup from '@/components/SchemaMarkup'
 import { BlueprintBg, SectionLabel, Btn, Section, Tag } from '@/components/ui'
 
 const WA = '573024778910'
@@ -155,12 +156,22 @@ const REGIONES = [
   { region: 'Resto de Colombia', desc: 'Nariño, Tolima, Boyacá, Meta, Santanderes y la Orinoquía — consulte el alcance de BIC en su departamento' },
 ]
 
+const FAQ_SCHEMA = [
+  {q: "¿BIC trabaja solo en Manizales o en todo Colombia?",
+   a: "BIC opera desde Manizales en modalidad 100% remota para proyectos en todo el territorio nacional. Ha ejecutado estudios en Bogotá, Medellín, Barranquilla, Bucaramanga, Santa Marta, Boyacá, los Llanos Orientales, el Caribe y los Llanos. Las visitas de campo presenciales se cotizan aparte si el cliente las requiere. La entrega de memorias, planos y modelos se hace de forma digital. Contacto nacional: +57 302 477 8910."},
+  {q: "¿Qué servicios de ingeniería hidráulica presta BIC en Manizales?",
+   a: "En Manizales, BIC presta todos sus servicios con ventaja de proximidad: modelación HEC-RAS para Decreto 1807 y planes parciales, diseño de acueductos y alcantarillados RAS 2017, redes hidrosanitarias y contra incendio NSR-10, estudios de riesgo hídrico para POT, trámites ante Corpocaldas (concesiones, vertimientos), formulación de proyectos SGR en MGA-Web, y diseño de PTAP y PTAR. BIC conoce el mapa de cuencas de Manizales y los criterios de Corpocaldas para optimizar cada trámite."},
+  {q: "¿Cuál es la experiencia de BIC en proyectos de ingeniería hidráulica?",
+   a: "BIC fue fundada por el Ing. Rogerio Bernal Ríos, Especialista en Ingeniería Hidráulica por la Universidad Nacional de Colombia Manizales, con más de 10 años de experiencia en consultoría. El portafolio incluye: diseño de acueductos rurales para ESP municipales en Caldas y Risaralda, estudios hidrológicos para planes parciales en Manizales y Pereira, sistemas contra incendio para edificios comerciales en el Eje Cafetero, y formulación de proyectos SGR para municipios del Eje Cafetero. Matrícula COPNIA 17202-313228 CLD."},
+]
+
 export default function IngenieriaManizalesNacional() {
   useEffect(() => { window.scrollTo(0, 0) }, [])
 
   return (
     <>
       <SEOHead config={seoConfig} />
+      <SchemaMarkup type="service" faqItems={FAQ_SCHEMA} serviceName="Ingeniería Hidráulica Manizales y Colombia — BIC" serviceUrl="/ingenieria-manizales-nacional" />
 
       {/* ── HERO ── */}
       <section style={{ background: 'linear-gradient(135deg, #001A33 0%, #002A50 55%, #003B6F 100%)', paddingTop: 120, paddingBottom: 80, position: 'relative', overflow: 'hidden' }}>
