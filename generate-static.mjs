@@ -291,6 +291,8 @@ const routes = [
   // LATAM
   { path: 'consultoria-hidraulica-ecuador', title: 'Consultoría en Ingeniería Hidráulica Ecuador — HEC-RAS, SENAGUA | BIC', desc: 'BIC ofrece estudios hidrológicos, modelación HEC-RAS 2D, diseño de acueductos y gestión del riesgo hídrico para proyectos en Ecuador. Propuesta en 24 h.', url: 'https://ingenieriabernal.co/consultoria-hidraulica-ecuador' },
   { path: 'consultoria-hidraulica-mexico', title: 'Consultoría en Ingeniería Hidráulica México — HEC-RAS, CONAGUA | BIC', desc: 'BIC ofrece estudios hidrológicos, modelación HEC-RAS 2D, diseño de sistemas hidráulicos y gestión del riesgo hídrico para proyectos en México. Propuesta en 24 h.', url: 'https://ingenieriabernal.co/consultoria-hidraulica-mexico' },
+  // Diseño hidrosanitario + CI edificio
+  { path: 'diseno-hidrosanitario-sistema-contra-incendio-edificio-colombia', title: 'Diseño Hidrosanitario + Sistema Contra Incendio Edificio Colombia — NSR-10 | BIC COPNIA', desc: '¿Necesita el diseño hidrosanitario completo con sistema contra incendio NSR-10 para su edificio en Colombia? BIC diseña AP, AR, AL y CI (rociadores NFPA 13, gabinetes, detección) en un solo paquete. Firma COPNIA. Propuesta en 24 h.', url: 'https://ingenieriabernal.co/diseno-hidrosanitario-sistema-contra-incendio-edificio-colombia' },
 ];
 
 // Slugs de blog que NO deben indexarse (atraen audiencia incorrecta)
