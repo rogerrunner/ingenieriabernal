@@ -1,5 +1,6 @@
 import { useEffect } from 'react'
 import SEOHead from '@/components/SEOHead'
+import SchemaMarkup from '@/components/SchemaMarkup'
 import { BlueprintBg, ThinLine, SectionLabel, Btn, Section, Tag } from '@/components/ui'
 
 const WA = '573024778910'
@@ -100,12 +101,22 @@ const FAQ = [
   },
 ]
 
+const FAQ_SCHEMA = [
+  {q: "¿BIC hace interventoría de obras hidráulicas en Manizales?",
+   a: "Sí. BIC realiza interventoría técnica de obras hidráulicas en Manizales y el Eje Cafetero: verificación de diseños vs. obra real, control de calidad de materiales (tuberías, accesorios, morteros), revisión de presiones y caudales, supervisión de pruebas hidráulicas y elaboración de informes de interventoría para ESP y curadurías. Director: Ing. Rogerio Bernal Ríos, COPNIA 17202-313228 CLD."},
+  {q: "¿Cuándo se requiere interventoría en obras hidráulicas en Colombia?",
+   a: "La interventoría de obras de infraestructura hídrica es obligatoria para contratos con entidades públicas (art. 32 Ley 80/1993 y Decreto 1082/2015). Para proyectos privados, la interventoría hidráulica es recomendable cuando el proyecto involucra redes de acueducto o alcantarillado que se entregarán a una ESP, cuando la obra tiene alta complejidad técnica o cuando el propietario no tiene capacidad interna de supervisión técnica."},
+  {q: "¿Cuánto cuesta la interventoría hidráulica en Manizales?",
+   a: "El costo de la interventoría hidráulica en Manizales se calcula como un porcentaje del presupuesto de obra o por honorarios mensuales según la duración: para obras de $100M–$500M COP, el porcentaje típico de interventoría es 5-8%; para obras de $500M–$2.000M COP, 3-5%. Para interventorías por tiempo, BIC cotiza honorarios mensuales según dedicación y número de frentes de obra. Propuesta en 24 h."},
+]
+
 export default function InterventoriaHidraulicaManizales() {
   useEffect(() => { window.scrollTo(0, 0) }, [])
 
   return (
     <>
       <SEOHead config={seoConfig} />
+      <SchemaMarkup type="service" faqItems={FAQ_SCHEMA} serviceName="Interventoría Hidráulica Manizales — BIC COPNIA" serviceUrl="/servicios/interventoria-hidraulica-manizales" />
 
       {/* ── HERO ── */}
       <section style={{
