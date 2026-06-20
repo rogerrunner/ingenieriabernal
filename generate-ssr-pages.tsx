@@ -95,6 +95,7 @@ import DisenoAcueductoEntregaESP from './src/pages/DisenoAcueductoEntregaESP'
 import EstudioDetalladoInundacionDecreto1807 from './src/pages/EstudioDetalladoInundacionDecreto1807'
 import DisenoPTARTramitePermisoVertimiento from './src/pages/DisenoPTARTramitePermisoVertimiento'
 import RedesHidrosanitariasLicenciaConstruccion from './src/pages/RedesHidrosanitariasLicenciaConstruccion'
+import DisenoHidrosanitarioCIEdificio from './src/pages/DisenoHidrosanitarioCIEdificio'
 
 // ─── Mapa de rutas a componentes ─────────────────────────────────────────────
 const PAGES: Record<string, React.ComponentType> = {
@@ -147,6 +148,7 @@ const PAGES: Record<string, React.ComponentType> = {
   'estudio-detallado-inundacion-decreto-1807': EstudioDetalladoInundacionDecreto1807,
   'diseno-ptar-tramite-permiso-vertimiento': DisenoPTARTramitePermisoVertimiento,
   'redes-hidrosanitarias-licencia-construccion': RedesHidrosanitariasLicenciaConstruccion,
+  'diseno-hidrosanitario-sistema-contra-incendio-edificio-colombia': DisenoHidrosanitarioCIEdificio,
 }
 
 let injected = 0
