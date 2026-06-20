@@ -25,7 +25,7 @@ const seoConfig = {
     'ingeniería sanitaria Pereira Armenia Manizales',
     'estudio hidrológico Eje Cafetero',
   ],
-  canonical: 'https://ingenieriabernal.co/regional/eje-cafetero',
+  canonical: 'https://ingenieriabernal.co/ingenieria-eje-cafetero',
 }
 
 const FAQ_ITEMS = [
@@ -341,15 +341,15 @@ export default function RegionalEjeCafetero() {
         </h2>
         <div style={{ display: 'flex', flexDirection: 'column', gap: 24, maxWidth: 800 }}>
           {FAQ_ITEMS.map(faq => (
-            <div key={faq.question} style={{
+            <div key={faq.q} style={{
               background: '#fff', borderRadius: 10,
               border: '1px solid #E0E8F0', padding: '24px 28px',
             }}>
               <h3 style={{ color: '#001A33', fontSize: 16, fontWeight: 700, marginBottom: 10 }}>
-                {faq.question}
+                {faq.q}
               </h3>
               <p style={{ color: '#444', fontSize: 15, lineHeight: 1.7, margin: 0 }}>
-                {faq.answer}
+                {faq.a}
               </p>
             </div>
           ))}

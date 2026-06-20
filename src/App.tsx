@@ -292,7 +292,7 @@ export default function App() {
           <Route path="/ingenieria-manizales" component={ManizalesRegional} />
           <Route path="/ingenieria-bucaramanga" component={Bucaramanga} />
           <Route path="/ingenieria-barranquilla" component={Barranquilla} />
-          <Route path="/ingenieria-eje-cafetero" component={EjeCafetero} />
+          <Route path="/ingenieria-eje-cafetero" component={RegionalEjeCafetero} />
           <Route path="/ingenieria-antioquia" component={Antioquia} />
 
           {/* ── PÁGINAS DE SERVICIO NACIONALES ── */}
