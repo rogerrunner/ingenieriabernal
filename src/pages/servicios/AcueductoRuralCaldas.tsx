@@ -1,5 +1,6 @@
 import { useEffect } from 'react'
 import SEOHead from '@/components/SEOHead'
+import SchemaMarkup from '@/components/SchemaMarkup'
 import { BlueprintBg, ThinLine, SectionLabel, Btn, Section, Tag } from '@/components/ui'
 
 const WA = '573024778910'
@@ -91,12 +92,22 @@ const FAQ = [
   },
 ]
 
+const FAQ_SCHEMA = [
+  {q: "¿BIC diseña acueductos rurales en Caldas?",
+   a: "Sí. BIC diseña acueductos rurales en Caldas para comunidades veredales, ESP municipales y operadores rurales: bocatoma o captación, línea de conducción, planta de tratamiento compacta (PTAP), tanque de almacenamiento y red de distribución. Todos los diseños bajo RAS 2017, con memorias de cálculo y planos para contratación de obra. Firma COPNIA 17202-313228 CLD. Cobertura: todos los municipios de Caldas."},
+  {q: "¿BIC tiene experiencia en proyectos de acueducto con cofinanciación del SGR en Caldas?",
+   a: "Sí. BIC ha participado en la formulación y estructuración de proyectos de agua potable y saneamiento básico para el Sistema General de Regalías (SGR) en municipios de Caldas, incluyendo la elaboración de los estudios técnicos requeridos por el OCAD departamental y el acompañamiento en la radicación y sustentación del proyecto."},
+  {q: "¿Cuánto cuesta el diseño de un acueducto rural en Caldas?",
+   a: "El costo del diseño de un acueducto rural en Caldas depende del número de usuarios y la longitud de las redes: acueducto veredal hasta 50 usuarios (2-5 km de red): $6M–$15M COP; acueducto de 50-200 usuarios (5-15 km de red): $12M–$28M COP; acueducto mayor con PTAP y red extensa: $20M–$50M COP. BIC puede incluir el diseño de la PTAP y el trámite de concesión de aguas ante Corpocaldas en el mismo contrato."},
+]
+
 export default function AcueductoRuralCaldas() {
   useEffect(() => { window.scrollTo(0, 0) }, [])
 
   return (
     <>
       <SEOHead config={seoConfig} />
+      <SchemaMarkup type="service" faqItems={FAQ_SCHEMA} serviceName="Diseño Acueductos Rurales Caldas — BIC" serviceUrl="/servicios/acueducto-rural-caldas" />
 
       {/* HERO */}
       <section style={{
