@@ -1,5 +1,6 @@
 import { useEffect, useRef, useMemo } from 'react'
 import SEOHead from '@/components/SEOHead'
+import SchemaMarkup from '@/components/SchemaMarkup'
 import { BlueprintBg, ThinLine, SectionLabel, Btn, Section, Tag } from '@/components/ui'
 
 // ──────────────────────────────────────────────────────────────────
@@ -100,6 +101,15 @@ const PAQUETES = [
   },
 ]
 
+const FAQ_SCHEMA = [
+  {q: "¿Qué es el estudio básico de ingeniería hidráulica de BIC?",
+   a: "El estudio básico de BIC es el punto de partida para proyectos de cualquier tipo: diagnóstico hidrológico rápido de la cuenca, identificación de amenazas hídricas del predio, revisión del POT y las restricciones de uso del suelo, y recomendaciones sobre qué estudios o trámites se necesitan. Es gratuito para proyectos de más de $5M COP y tarda menos de 48 horas. Contacto: +57 302 477 8910."},
+  {q: "¿Para qué proyectos es útil el diagnóstico previo de BIC?",
+   a: "El diagnóstico previo de BIC es útil antes de: comprar un lote con quebradas o en zona de inundación, iniciar un plan parcial o licencia de urbanismo, diseñar un acueducto rural o urbano, tramitar una concesión de aguas o permiso de vertimientos, o formular un proyecto de agua potable ante el SGR. El diagnóstico orienta sobre los estudios requeridos, los costos y plazos, evitando sorpresas durante el trámite."},
+  {q: "¿Cuánto cuesta el estudio básico o diagnóstico inicial de BIC?",
+   a: "El diagnóstico inicial de BIC es gratuito para proyectos con presupuesto de consultoría de $5M COP o más. Para proyectos de menor escala o para propietarios de predios que quieren una consulta puntual, BIC ofrece asesoría técnica por $300.000–$600.000 COP por hora de consultoría. En la primera llamada o correo electrónico, BIC establece si el diagnóstico aplica gratuitamente para su proyecto."},
+]
+
 export default function EstudioBasico() {
   useEffect(() => {
     const s = document.createElement('script')
@@ -134,6 +144,7 @@ export default function EstudioBasico() {
   return (
     <>
       <SEOHead config={seoConfig} />
+      <SchemaMarkup type="service" faqItems={FAQ_SCHEMA} serviceName="Diagnóstico Previo Ingeniería Hidráulica — BIC" serviceUrl="/servicios/estudio-basico" />
 
       {/* ── HERO ── */}
       <section style={{
