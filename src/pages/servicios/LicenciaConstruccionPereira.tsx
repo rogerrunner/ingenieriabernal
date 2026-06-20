@@ -1,5 +1,6 @@
 import { useEffect } from 'react'
 import SEOHead from '@/components/SEOHead'
+import SchemaMarkup from '@/components/SchemaMarkup'
 import { BlueprintBg, ThinLine, SectionLabel, Btn, Section, Tag } from '@/components/ui'
 
 const WA = '573024778910'
@@ -80,12 +81,22 @@ const FAQ = [
   },
 ]
 
+const FAQ_SCHEMA = [
+  {q: "¿Qué memorias de ingeniería hidráulica exige la Curaduría de Pereira?",
+   a: "Las Curadurías 1 y 2 de Pereira exigen: memorias de cálculo de redes hidrosanitarias (AP, AR, AL) y sistema contra incendio cuando aplica NSR-10 Título K, firmadas por ingeniero con matrícula COPNIA vigente. BIC elabora todas las memorias y planos en formato DWG para radicación ante las curadurías de Pereira. Director: Ing. Rogerio Bernal Ríos, COPNIA 17202-313228 CLD."},
+  {q: "¿BIC diseña redes hidrosanitarias para edificios en Pereira?",
+   a: "Sí. BIC diseña redes hidrosanitarias y sistemas contra incendio para edificios residenciales, hoteles y edificios comerciales en Pereira. Los diseños se entregan con memorias de cálculo y planos en AutoCAD para radicación ante la Curaduría y Aguas y Aguas de Pereira. BIC opera en modalidad remota — no requiere presencia en Pereira para la mayoría de los proyectos."},
+  {q: "¿Cuánto demora BIC en entregar las memorias para licencia en Pereira?",
+   a: "El plazo estándar desde la recepción de planos arquitectónicos definitivos es: redes hidrosanitarias edificio hasta 8 pisos — 15 a 25 días hábiles; sistema contra incendio — 10 a 20 días hábiles; paquete completo (AP+AR+AL+CI) — 20 a 35 días hábiles. Para proyectos urgentes, consulte disponibilidad: +57 302 477 8910."},
+]
+
 export default function LicenciaConstruccionPereira() {
   useEffect(() => { window.scrollTo(0, 0) }, [])
 
   return (
     <>
       <SEOHead config={seoConfig} />
+      <SchemaMarkup type="service" faqItems={FAQ_SCHEMA} serviceName="Memorias Ingeniería Hidráulica para Licencia Construcción Pereira" serviceUrl="/servicios/licencia-construccion-pereira" />
 
       {/* ── HERO ── */}
       <section style={{
