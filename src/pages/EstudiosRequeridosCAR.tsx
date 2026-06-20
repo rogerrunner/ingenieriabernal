@@ -1,5 +1,6 @@
 import { useEffect } from 'react'
 import SEOHead from '@/components/SEOHead'
+import SchemaMarkup from '@/components/SchemaMarkup'
 import { BlueprintBg, SectionLabel, Btn, Section, Tag } from '@/components/ui'
 import QuoteFormInline from '@/components/QuoteFormInline'
 
@@ -155,6 +156,15 @@ const NORMATIVA = [
   { codigo: 'POMCA de la cuenca', descripcion: 'Plan de Ordenación y Manejo de la Cuenca — define prioridades y restricciones de uso del recurso hídrico' },
 ]
 
+const FAQ_SCHEMA = [
+  {q: "¿Qué estudios técnicos pide la CAR para tramitar permisos ambientales en Colombia?",
+   a: "Los estudios que requieren las Corporaciones Autónomas Regionales (CAR) en Colombia varían según el permiso: para concesión de aguas: estudio de oferta hídrica, análisis de disponibilidad de agua, diseño de bocatoma y PUEAA (Plan de Uso Eficiente del Agua); para permiso de vertimientos: caracterización del efluente, diseño de PTAR, modelación de calidad del agua del receptor; para aprovechamiento forestal: inventario dasométrico y plan de manejo; para obras en rondas: estudio geomorfológico e hidráulico. BIC elabora los estudios hidrológicos e hidráulicos para todos estos trámites."},
+  {q: "¿Qué CAR opera en Caldas, Risaralda y Quindío?",
+   a: "En Caldas opera CORPOCALDAS (Corporación Autónoma Regional de Caldas), con sede en Manizales. En Risaralda opera CARDER (Corporación Autónoma Regional de Risaralda), con sede en Pereira. En Quindío opera CRQ (Corporación Autónoma Regional del Quindío), con sede en Armenia. BIC conoce los procedimientos y requisitos específicos de las tres corporaciones y tramita expedientes ante las tres de manera habitual."},
+  {q: "¿Cuánto tiempo demoran los trámites ante la CAR en Colombia?",
+   a: "Los tiempos de respuesta de las CAR en Colombia según el tipo de permiso son aproximadamente: concesión de aguas: 4-12 meses; permiso de vertimientos: 6-12 meses; licencia ambiental (EIA): 12-24 meses; concepto técnico de uso del suelo: 2-4 meses. Los tiempos varían según la corporación y la carga de expedientes. Una buena preparación del expediente técnico reduce las solicitudes de información adicional y acelera el proceso. BIC acompaña desde la radicación hasta la resolución."},
+]
+
 export default function EstudiosRequeridosCAR() {
   useEffect(() => { window.scrollTo(0, 0) }, [])
 
@@ -178,6 +188,7 @@ export default function EstudiosRequeridosCAR() {
   return (
     <>
       <SEOHead config={seoConfig} />
+      <SchemaMarkup type="service" faqItems={FAQ_SCHEMA} serviceName="Estudios Técnicos para Trámites CAR Colombia" serviceUrl="/me-pidieron-estudios-en-la-car" />
 
       {/* ── HERO ── */}
       <section style={{ background: 'linear-gradient(135deg, #001A33 0%, #002A50 55%, #003B6F 100%)', paddingTop: 120, paddingBottom: 80, position: 'relative', overflow: 'hidden' }}>
