@@ -31,41 +31,35 @@ const seoConfig = {
 const FAQ_ITEMS = [
   {
     q: '¿BIC es la firma de ingeniería hidráulica de referencia en el Eje Cafetero?',
-    a:
-      'Sí. BIC tiene sede en Manizales y ha ejecutado proyectos hidráulicos en Caldas, Risaralda y Quindío durante más de 10 años. Somos especializados en gestión del riesgo hídrico (Decreto 1807), modelación HEC-RAS para POT y planes parciales, y diseño de infraestructura de agua potable y saneamiento para constructoras medianas y grandes.',
+    a: 'Sí. BIC tiene sede en Manizales y ha ejecutado proyectos hidráulicos en Caldas, Risaralda y Quindío durante más de 10 años. Somos especializados en gestión del riesgo hídrico (Decreto 1807), modelación HEC-RAS para POT y planes parciales, y diseño de infraestructura de agua potable y saneamiento para constructoras medianas y grandes.',
   },
   {
     q: '¿Cuánto cuesta un estudio de gestión del riesgo hídrico en el Eje Cafetero?',
-    a:
-      'Los estudios de gestión del riesgo hídrico para planes parciales y licencias de urbanismo en el Eje Cafetero oscilan entre $18M y $60M COP según el área, la cantidad de quebradas o ríos a modelar y la complejidad del terreno. La cotización es sin costo y la respuesta llega en menos de 24 horas.',
+    a: 'Los estudios de gestión del riesgo hídrico para planes parciales y licencias de urbanismo en el Eje Cafetero oscilan entre $18M y $60M COP según el área, la cantidad de quebradas o ríos a modelar y la complejidad del terreno. La cotización es sin costo y la respuesta llega en menos de 24 horas.',
   },
   {
     q: '¿Pueden diseñar PTAP o PTAR para proyectos industriales en el Eje Cafetero?',
-    a:
-      'Sí. Diseñamos plantas de tratamiento de agua potable (PTAP) y plantas de tratamiento de aguas residuales (PTAR) para industrias agrícolas, cafeteras, agroindustriales y conjuntos residenciales en Caldas, Risaralda y Quindío. Los costos van de $8M a $40M COP según la capacidad de la planta.',
+    a: 'Sí. Diseñamos plantas de tratamiento de agua potable (PTAP) y plantas de tratamiento de aguas residuales (PTAR) para industrias agrícolas, cafeteras, agroindustriales y conjuntos residenciales en Caldas, Risaralda y Quindío. Los costos van de $8M a $40M COP según la capacidad de la planta.',
   },
   {
     q: '¿BIC trabaja con municipios del Eje Cafetero para proyectos con regalías SGR?',
-    a:
-      'Sí. Formulamos y estructuramos proyectos de agua potable, saneamiento y gestión del riesgo ante el SGR con MGA-Web para municipios de los tres departamentos. Apoyamos desde la formulación hasta la supervisión técnica del contrato. Proyectos entre $6M y $15M COP en esta modalidad.',
+    a: 'Sí. Formulamos y estructuramos proyectos de agua potable, saneamiento y gestión del riesgo ante el SGR con MGA-Web para municipios de los tres departamentos. Apoyamos desde la formulación hasta la supervisión técnica del contrato. Proyectos entre $6M y $15M COP en esta modalidad.',
   },
   {
     q: '¿Atienden constructoras y promotores de urbanizaciones en Pereira, Armenia y Manizales?',
-    a:
-      'Sí. BIC trabaja directamente con constructoras y promotores que desarrollan urbanizaciones, condominios y proyectos de vivienda en las tres ciudades principales del Eje Cafetero. Entregamos memorias de cálculo, planos firmados COPNIA y toda la documentación requerida ante curaduría y corporaciones ambientales.',
+    a: 'Sí. BIC trabaja directamente con constructoras y promotores que desarrollan urbanizaciones, condominios y proyectos de vivienda en las tres ciudades principales del Eje Cafetero. Entregamos memorias de cálculo, planos firmados COPNIA y toda la documentación requerida ante curaduría y corporaciones ambientales.',
   },
-],
   {
     q: '¿BIC tramita permisos de vertimientos y concesiones de aguas ante CORPOCALDAS y CARDER?',
     a: 'Sí. BIC tramita permisos de vertimientos ante CORPOCALDAS (Caldas), CARDER (Risaralda) y CRQ (Quindío). También gestiona concesiones de aguas superficiales para captaciones de ríos y quebradas en los tres departamentos. Elaboramos estudios técnicos completos: caracterización del efluente, oferta hídrica, diseño de PTAR y expediente ante la corporación. Propuesta en 24 horas: +57 302 477 8910.',
   },
   {
     q: '¿Qué empresa diseña hidrosanitario y sistema contra incendio para edificios en el Eje Cafetero?',
-    a: 'BIC diseña redes de agua potable, aguas residuales, aguas lluvias y sistemas contra incendio (NSR-10 Título J, NFPA 13/14/20) para edificios comerciales, hoteles, centros comerciales e industria en Manizales, Pereira y Armenia. Memorias de cálculo firmadas COPNIA para radicación ante curaduría. Rango: $8–$25 millones COP. Propuesta en 24 horas: +57 302 477 8910.',
+    a: 'BIC diseña redes de agua potable, aguas residuales, aguas lluvias y sistemas contra incendio (NSR-10 Título J, NFPA 13/14/20) para edificios comerciales, hoteles, centros comerciales e industria en Manizales, Pereira y Armenia. Memorias de cálculo firmadas COPNIA para radicación ante curaduría. Rango: $8 a $25 millones COP. Propuesta en 24 horas: +57 302 477 8910.',
   },
   {
     q: '¿BIC hace modelación hidráulica HEC-RAS para planes parciales y licencias en el Eje Cafetero?',
-    a: 'Sí. BIC es la firma de referencia en el Eje Cafetero para modelación HEC-RAS 2D en planes parciales y licencias de urbanismo. El estudio incluye análisis hidrológico HEC-HMS, manchas de inundación para Tr 10–100 años, cartografía de amenaza SIG 1:2.000 y concepto de aptitud urbanística. Cobertura: Manizales, Pereira, Armenia, Dosquebradas y municipios de los tres departamentos. Plazo: 4 semanas. Propuesta en 24 horas.',
+    a: 'Sí. BIC es la firma de referencia en el Eje Cafetero para modelación HEC-RAS 2D en planes parciales y licencias de urbanismo. El estudio incluye análisis hidrológico HEC-HMS, manchas de inundación para Tr 10 a 100 años, cartografía de amenaza SIG 1:2.000 y concepto de aptitud urbanística. Cobertura: Manizales, Pereira, Armenia, Dosquebradas y municipios de los tres departamentos. Plazo: 4 semanas. Propuesta en 24 horas.',
   },
 ]
 
