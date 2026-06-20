@@ -1,5 +1,6 @@
 import { useEffect } from 'react'
 import SEOHead from '@/components/SEOHead'
+import SchemaMarkup from '@/components/SchemaMarkup'
 import { BlueprintBg, SectionLabel, Btn, Section, Tag, CTABanner } from '@/components/ui'
 import QuoteFormInline from '@/components/QuoteFormInline'
 
@@ -151,6 +152,21 @@ const NORMATIVA = [
   { codigo: 'Decreto 1575/2007', descripcion: 'Sistema de Protección y Control de la Calidad del Agua — estándares de potabilidad del agua de consumo' },
 ]
 
+const FAQ_ITEMS_SCHEMA = [
+  {
+    q: '¿Qué son las memorias hidrosanitarias para licencia de construcción?',
+    a: 'Las memorias hidrosanitarias son el documento técnico que contiene los cálculos hidráulicos de las redes de agua potable, aguas residuales, aguas lluvias y sistema contra incendio de un edificio. Son obligatorias para radicación ante curaduría en Colombia y deben estar firmadas por ingeniero con matrícula COPNIA vigente.',
+  },
+  {
+    q: '¿Cuánto cuestan las memorias hidrosanitarias en Colombia?',
+    a: 'Las memorias hidrosanitarias para licencia de construcción (redes de agua, sanitario, lluvias y CI) cuestan entre $6M y $20M COP según el tipo y tamaño de la edificación. Para vivienda multifamiliar de 4 a 10 pisos: $8M a $15M COP. BIC entrega propuesta en 24 horas.',
+  },
+  {
+    q: '¿BIC elabora memorias hidrosanitarias para curadurías del Eje Cafetero?',
+    a: 'Sí. BIC elabora memorias de cálculo hidrosanitario para radicación ante curadurías de Manizales, Pereira y Armenia. Incluye redes de agua potable (fría y caliente), aguas residuales, pluviales y sistema contra incendio NSR-10 si aplica. Firma COPNIA 17202-313228. Entrega en 3 a 6 semanas.',
+  },
+]
+
 export default function MemoriasHidrosanitarias() {
   useEffect(() => { window.scrollTo(0, 0) }, [])
 
@@ -174,6 +190,7 @@ export default function MemoriasHidrosanitarias() {
   return (
     <>
       <SEOHead config={seoConfig} />
+      <SchemaMarkup type="service" faqItems={FAQ_ITEMS_SCHEMA} serviceName="Memorias Hidrosanitarias para Licencias de Construcción Colombia" serviceUrl="/memorias-hidrosanitarias-colombia" />
 
       <CTABanner service="Memorias Hidrosanitarias para Licencia de Construcción" />
 
