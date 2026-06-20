@@ -1,5 +1,6 @@
 import { useEffect } from 'react'
 import SEOHead from '@/components/SEOHead'
+import SchemaMarkup from '@/components/SchemaMarkup'
 import { BlueprintBg, ThinLine, SectionLabel, Btn, Section, Tag } from '@/components/ui'
 
 const WA = '573024778910'
@@ -108,12 +109,22 @@ const FAQ = [
   },
 ]
 
+const FAQ_SCHEMA = [
+  {q: "¿Qué empresa hace estudios hidrológicos en Manizales?",
+   a: "BIC — Bernal Ingeniería Consultores realiza estudios hidrológicos en Manizales: análisis de precipitación, caudales de diseño HEC-HMS, modelación HEC-RAS e informes técnicos para Corpocaldas y Curaduría. Director: Ing. Rogerio Bernal Ríos, COPNIA 17202-313228 CLD, UNAL Manizales. Propuesta en 24 h: +57 302 477 8910."},
+  {q: "¿Cuánto cuesta un estudio hidrológico en Manizales?",
+   a: "El costo de un estudio hidrológico en Manizales varía según el alcance: estudio básico para quebrada pequeña desde $3M COP; modelación HEC-RAS para Decreto 1807 desde $8M COP; estudio de oferta hídrica para concesión desde $6M COP. BIC entrega propuesta gratuita en 24 horas con el alcance ajustado a su proyecto."},
+  {q: "¿El estudio hidrológico de BIC en Manizales es válido ante Corpocaldas?",
+   a: "Sí. Los estudios hidrológicos e hidráulicos de BIC en Manizales son firmados por el Ing. Rogerio Bernal Ríos con matrícula COPNIA 17202-313228 CLD (Caldas), lo que los hace válidos ante Corpocaldas, la Curaduría Urbana de Manizales y cualquier entidad pública del departamento."},
+]
+
 export default function EstudioHidrologicoManizales() {
   useEffect(() => { window.scrollTo(0, 0) }, [])
 
   return (
     <>
       <SEOHead config={seoConfig} />
+      <SchemaMarkup type="service" faqItems={FAQ_SCHEMA} serviceName="Estudios Hidrológicos Manizales — BIC COPNIA" serviceUrl="/servicios/estudio-hidrologico-manizales" />
 
       {/* ── HERO ── */}
       <section style={{
