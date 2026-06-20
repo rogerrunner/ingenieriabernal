@@ -1,5 +1,6 @@
 import { useEffect } from 'react'
 import SEOHead from '@/components/SEOHead'
+import SchemaMarkup from '@/components/SchemaMarkup'
 import { BlueprintBg, ThinLine, SectionLabel, Btn, Section, Tag } from '@/components/ui'
 
 const WA = '573024778910'
@@ -78,12 +79,22 @@ const FAQ = [
   },
 ]
 
+const FAQ_SCHEMA = [
+  {q: "¿Qué empresa hace el estudio de gestión del riesgo hídrico en Manizales?",
+   a: "BIC elabora estudios de gestión del riesgo hídrico en Manizales conforme al Decreto 1807/2014: modelación HEC-RAS 2D, cartografía de amenaza a 1:1.000 o 1:2.000, concepto de aptitud urbanística y coordinación con Corpocaldas. Director: Ing. Rogerio Bernal Ríos, COPNIA 17202-313228 CLD, UNAL Manizales. Desde $10M COP."},
+  {q: "¿La Curaduría de Manizales exige estudio de riesgo hídrico para todos los proyectos?",
+   a: "La Curaduría Urbana de Manizales exige el estudio de riesgo hídrico Decreto 1807 para predios que se encuentran en zonas de amenaza hídrica según el POT de Manizales (en rondas de quebradas, en zonas clasificadas de amenaza alta o media por inundación o avenida torrencial). BIC verifica si su predio requiere el estudio antes de cotizar."},
+  {q: "¿El estudio de gestión del riesgo hídrico de BIC sirve para el Decreto 1807 en Manizales?",
+   a: "Sí. Los estudios de gestión del riesgo hídrico de BIC en Manizales cumplen los lineamientos del Decreto 1807/2014, la Resolución 0248 de 2016 del MVCT y la guía técnica de estudios de detalle del MVCT. El Ing. Rogerio Bernal Ríos firma los documentos con matrícula COPNIA 17202-313228 CLD."},
+]
+
 export default function GestionRiesgoHidricoManizales() {
   useEffect(() => { window.scrollTo(0, 0) }, [])
 
   return (
     <>
       <SEOHead config={seoConfig} />
+      <SchemaMarkup type="service" faqItems={FAQ_SCHEMA} serviceName="Gestión del Riesgo Hídrico Manizales — Decreto 1807" serviceUrl="/servicios/gestion-riesgo-hidrico-manizales" />
 
       {/* ── HERO ── */}
       <section style={{
