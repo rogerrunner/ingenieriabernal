@@ -1,5 +1,6 @@
 import { useEffect } from 'react'
 import SEOHead from '@/components/SEOHead'
+import SchemaMarkup from '@/components/SchemaMarkup'
 import { BlueprintBg, ThinLine, SectionLabel, Btn, Section, Tag } from '@/components/ui'
 
 const WA = '573024778910'
@@ -99,12 +100,22 @@ const FAQ = [
   },
 ]
 
+const FAQ_SCHEMA = [
+  {q: "¿BIC hace estudios topográficos en Manizales?",
+   a: "BIC coordina levantamientos topográficos en Manizales con equipos GPS diferencial y estación total. Los estudios topográficos se entregan en AutoCAD (DWG) con curvas de nivel a 0.5 m o 1 m, georreferenciados en MAGNA-SIRGAS Colombia Oeste. BIC integra la topografía con los estudios hidrológicos e hidráulicos para proyectos Decreto 1807 o diseño de redes."},
+  {q: "¿Cuánto cuesta un levantamiento topográfico en Manizales?",
+   a: "El costo de un levantamiento topográfico en Manizales varía según el área y la complejidad del terreno: predio urbano hasta 2.000 m²: $1.5M–$3.5M COP; predio entre 2.000 y 10.000 m²: $3M–$7M COP; área rural hasta 5 ha: $5M–$12M COP; área rural mayor a 5 ha: cotización específica. BIC incluye entrega en DWG + PDF, georreferenciado y carteras de campo. Propuesta en 24 h."},
+  {q: "¿La topografía de BIC Manizales es válida para la Curaduría y Corpocaldas?",
+   a: "Sí. Los levantamientos topográficos coordinados por BIC en Manizales son georreferenciados en el sistema MAGNA-SIRGAS Colombia Oeste y cumplen los requerimientos técnicos de la Curaduría Urbana de Manizales y Corpocaldas para trámites de licencias de construcción, estudios de riesgo hídrico y permisos ambientales."},
+]
+
 export default function TopografiaManizales() {
   useEffect(() => { window.scrollTo(0, 0) }, [])
 
   return (
     <>
       <SEOHead config={seoConfig} />
+      <SchemaMarkup type="service" faqItems={FAQ_SCHEMA} serviceName="Levantamiento Topográfico Manizales" serviceUrl="/servicios/topografia-manizales" />
 
       {/* ── HERO ── */}
       <section style={{
