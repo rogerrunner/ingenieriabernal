@@ -1,5 +1,6 @@
 import { useEffect } from 'react'
 import SEOHead from '@/components/SEOHead'
+import SchemaMarkup from '@/components/SchemaMarkup'
 import { BlueprintBg, ThinLine, SectionLabel, Btn, Section, Tag } from '@/components/ui'
 import QuoteFormInline from '@/components/QuoteFormInline'
 
@@ -43,12 +44,22 @@ const PARA_QUIEN = [
   { tipo: 'Alcaldías y empresas de servicios públicos (ESP)', desc: 'Diseños para proyectos de inversión municipal, expansión de redes existentes, optimización de sistemas y cumplimiento de planes de saneamiento. Formulación en MGA-Web si se requiere SGR.' },
 ]
 
+const FAQ_SCHEMA = [
+  {q: "¿Qué incluye el diseño de un sistema de acueducto y alcantarillado en Colombia?",
+   a: "El diseño completo de acueducto y alcantarillado en Colombia bajo el RAS 2017 (Resolución 0330 MVCT) incluye: estudio de demanda y dotaciones, cálculo del caudal de diseño, diseño de la red de distribución (agua potable), diseño del sistema de recolección de aguas residuales (alcantarillado sanitario), diseño del alcantarillado pluvial, diseño de conexiones domiciliarias y memorias de cálculo con planos en AutoCAD para entrega a la ESP o radicación ante la Curaduría. BIC elabora el diseño completo con firma COPNIA."},
+  {q: "¿BIC diseña acueductos y alcantarillados para conjuntos residenciales y urbanizaciones en Colombia?",
+   a: "Sí. BIC diseña sistemas de acueducto y alcantarillado para urbanizaciones, conjuntos residenciales, condominios campestres y parcelaciones en Colombia. El diseño incluye: conexión al acueducto del operador local, red de distribución interna, red de alcantarillado sanitario, sistema de tratamiento de aguas residuales (PTAR) si no hay alcantarillado municipal, y red de aguas lluvias. BIC entrega los diseños con memorias de cálculo y planos para radicación ante la ESP y la Curaduría."},
+  {q: "¿Cuánto cuesta el diseño de acueducto y alcantarillado para una urbanización en Colombia?",
+   a: "El costo del diseño de acueducto y alcantarillado para una urbanización en Colombia varía según el tamaño: proyecto de 20-60 viviendas: $8M–$18M COP; proyecto de 60-200 viviendas: $15M–$30M COP; proyecto de más de 200 viviendas o con PTAR incluida: $25M–$50M COP. BIC puede dividir la entrega en etapas si el cliente necesita radicar diseños parciales para la licencia de urbanismo. Propuesta en 24 horas."},
+]
+
 export default function ServicioAcueductoAlcantarillado() {
   useEffect(() => { window.scrollTo(0, 0) }, [])
 
   return (
     <>
       <SEOHead config={seoConfig} />
+      <SchemaMarkup type="service" faqItems={FAQ_SCHEMA} serviceName="Diseño Acueducto y Alcantarillado Colombia" serviceUrl="/servicio-acueducto-alcantarillado" />
 
       {/* ── HERO ── */}
       <section style={{
