@@ -1,5 +1,6 @@
 ﻿import { useEffect } from 'react'
 import SEOHead from '@/components/SEOHead'
+import SchemaMarkup from '@/components/SchemaMarkup'
 import { BlueprintBg, ThinLine, SectionLabel, Btn, Section, Tag } from '@/components/ui'
 
 const WA = '573024778910'
@@ -101,6 +102,15 @@ const PROYECTOS = [
   },
 ]
 
+const FAQ_SCHEMA = [
+  {q: "¿BIC hace estudios hidráulicos en Bucaramanga?",
+   a: "Sí. BIC realiza estudios hidrológicos, modelación HEC-RAS y diseños hidrosanitarios en Bucaramanga y el área metropolitana en modalidad remota. Conocemos los criterios de la CDMB (Corporación Autónoma Regional para la Defensa de la Meseta de Bucaramanga) para estudios de inundabilidad. La matrícula COPNIA 17202-313228 CLD es válida en todo Santander y Colombia."},
+  {q: "¿Qué CAR opera en Bucaramanga?",
+   a: "En Bucaramanga y el Área Metropolitana de Bucaramanga opera la CDMB (Corporación Autónoma Regional para la Defensa de la Meseta de Bucaramanga). En el resto de Santander opera la CAS (Corporación Autónoma Regional de Santander). BIC prepara estudios técnicos para trámites ante ambas corporaciones."},
+  {q: "¿BIC tiene experiencia en proyectos en la región Santander?",
+   a: "BIC ha realizado estudios hidráulicos para proyectos en Santander, incluyendo modelación de quebradas urbanas en Bucaramanga y estudios de inundabilidad para proyectos residenciales en el Área Metropolitana. La modalidad remota permite atender proyectos en Santander con la misma calidad técnica y en los mismos plazos que para proyectos en el Eje Cafetero."},
+]
+
 export default function CiudadBucaramanga() {
   useEffect(() => {
     window.scrollTo(0, 0)
@@ -115,6 +125,7 @@ export default function CiudadBucaramanga() {
   return (
     <>
       <SEOHead config={seoConfig} />
+      <SchemaMarkup type="service" faqItems={FAQ_SCHEMA} serviceName="Ingeniería Hidráulica Bucaramanga — BIC COPNIA" serviceUrl="/servicios/ciudad-bucaramanga" />
 
       {/* ── HERO ── */}
       <section style={{
