@@ -1,5 +1,6 @@
 import { useEffect } from 'react'
 import SEOHead from '@/components/SEOHead'
+import SchemaMarkup from '@/components/SchemaMarkup'
 import { BlueprintBg, SectionLabel, Btn, Section, Tag } from '@/components/ui'
 import QuoteFormInline from '@/components/QuoteFormInline'
 
@@ -155,6 +156,15 @@ const NORMATIVA = [
   { codigo: 'POMCA de la cuenca', descripcion: 'Plan de Ordenación y Manejo de la Cuenca — determina los usos permitidos y la zonificación ambiental' },
 ]
 
+const FAQ_SCHEMA = [
+  {q: "¿Qué estudios necesito para construir cerca de una quebrada o río en Colombia?",
+   a: "Para construir cerca de un río o quebrada en Colombia, la Curaduría exige un estudio de amenaza y riesgo hídrico (Decreto 1807/2014) que incluye: modelación hidráulica HEC-RAS para determinar la mancha de inundación para Tr 10, 25, 50 y 100 años; concepto geotécnico si hay riesgo de socavación o erosión de orillas; verificación de la ronda hídrica (zona de protección no edificable) conforme al POT municipal. BIC elabora el estudio completo con firma COPNIA."},
+  {q: "¿Cuál es la ronda hídrica legal de una quebrada en Colombia?",
+   a: "Según el Decreto-Ley 2811 de 1974 y la Ley 99 de 1993, la ronda hídrica de una corriente permanente es mínimo 30 metros medidos desde la cota de inundación máxima ordinaria a cada lado. En zonas urbanas, el POT municipal puede definir un retiro diferente. Corpocaldas, CARDER y otras CAR pueden exigir retiros mayores según el concepto del estudio hidráulico. BIC determina el retiro exacto requerido para su predio."},
+  {q: "¿BIC puede tramitar el permiso de construcción en zona de amenaza hídrica ante la CAR?",
+   a: "BIC elabora el estudio técnico Decreto 1807 con todos los requisitos para la Curaduría y, si aplica, prepara el informe de evaluación de riesgo para la CAR (Corpocaldas, CARDER, CRQ u otra). En algunos municipios, construir en zona de amenaza media requiere también concepto de aptitud por parte de la corporación autónoma regional antes de que la Curaduría pueda expedir la licencia. BIC acompaña todo el proceso."},
+]
+
 export default function ConstruirCercaRioQuebrada() {
   useEffect(() => { window.scrollTo(0, 0) }, [])
 
@@ -178,6 +188,7 @@ export default function ConstruirCercaRioQuebrada() {
   return (
     <>
       <SEOHead config={seoConfig} />
+      <SchemaMarkup type="service" faqItems={FAQ_SCHEMA} serviceName="Construir cerca de Río o Quebrada Colombia — Decreto 1807" serviceUrl="/construir-cerca-rio-quebrada-colombia" />
 
       {/* ── HERO ── */}
       <section style={{
