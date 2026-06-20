@@ -1,5 +1,6 @@
 import { useEffect } from 'react'
 import SEOHead from '@/components/SEOHead'
+import SchemaMarkup from '@/components/SchemaMarkup'
 import { BlueprintBg, ThinLine, SectionLabel, Btn, Section, Tag } from '@/components/ui'
 
 const WA = '573024778910'
@@ -82,6 +83,15 @@ const FAQ = [
   },
 ]
 
+const FAQ_SCHEMA = [
+  {q: "¿Qué empresa diseña acueductos rurales en el Quindío?",
+   a: "BIC — Bernal Ingeniería Consultores diseña acueductos rurales y veredales en el Quindío (Armenia, Montenegro, Calarcá, Quimbaya, La Tebaida y municipios del eje cafetero quindiano). BIC elabora los diseños bajo RAS 2017 con memorias de cálculo, planos en AutoCAD y especificaciones técnicas para contratación de obra. Firma COPNIA 17202-313228 CLD. Propuesta en 24 h: +57 302 477 8910."},
+  {q: "¿BIC tramita permisos de acueducto ante la CRQ (Quindío)?",
+   a: "Sí. BIC prepara los estudios técnicos para concesiones de aguas y permisos ante la CRQ (Corporación Autónoma Regional del Quindío) en Armenia: estudio de oferta hídrica de la fuente de abastecimiento, diseño de bocatoma, plan de uso eficiente y ahorro del agua (PUEAA) y demás requerimientos del trámite. BIC acompaña desde la formulación del expediente hasta la resolución de la CRQ."},
+  {q: "¿Qué estudios requiere el acueducto de un condominio campestre en el Quindío?",
+   a: "Un condominio campestre en el Quindío con fuente de agua propia (quebrada o pozo) necesita: concesión de aguas ante la CRQ, diseño de bocatoma o captación, diseño del sistema de tratamiento (PTAP compacta si es para consumo humano), diseño de la red de distribución interna con tanque elevado o de compensación, y diseño del alcantarillado con PTAR si no hay sistema municipal. BIC elabora el diagnóstico previo gratuito para determinar qué estudios aplican a su predio específico."},
+]
+
 export default function ServicioAcueductoQuindio() {
   useEffect(() => {
     window.scrollTo(0, 0)
@@ -96,6 +106,7 @@ export default function ServicioAcueductoQuindio() {
   return (
     <>
       <SEOHead config={seoConfig} />
+      <SchemaMarkup type="service" faqItems={FAQ_SCHEMA} serviceName="Diseño Acueductos y Alcantarillados Quindío" serviceUrl="/servicio-acueducto-quindio" />
 
       {/* ── HERO ── */}
       <section style={{
