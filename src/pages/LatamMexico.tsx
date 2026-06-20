@@ -1,5 +1,6 @@
 import { useEffect } from 'react'
 import SEOHead from '@/components/SEOHead'
+import SchemaMarkup from '@/components/SchemaMarkup'
 import { BlueprintBg, ThinLine, SectionLabel, Btn, Section } from '@/components/ui'
 import QuoteFormInline from '@/components/QuoteFormInline'
 
@@ -98,6 +99,15 @@ const DIFERENCIADORES = [
   },
 ]
 
+const FAQ_SCHEMA = [
+  {q: "¿BIC hace proyectos de ingeniería hidráulica en México?",
+   a: "Sí. BIC ofrece consultoría en ingeniería hidráulica para proyectos en México en modalidad remota: estudios hidrológicos con datos CONAGUA y SMN, modelación HEC-RAS para Atlas de Riesgo municipal y proyectos de infraestructura hídrica, diseño de sistemas de agua potable y saneamiento conforme a NOM y CONAGUA, y estudios para trámites ante SEMARNAT y la Comisión Nacional del Agua. Experiencia en proyectos en el Bajío, Occidente y Golfo de México."},
+  {q: "¿Cuál es la normativa de diseño hidráulico en México?",
+   a: "En México, el diseño de sistemas hidráulicos se rige por: las Normas Oficiales Mexicanas (NOM) de CONAGUA y SEMARNAT para calidad del agua; los manuales de agua potable, alcantarillado y saneamiento de la CONAGUA; las normas técnicas complementarias para diseño y construcción de estructuras hidráulicas de la CDMX y estados; y los lineamientos del Programa de Desarrollo Hídrico por cuenca. BIC trabaja con consultores locales para la adaptación a normativa estatal cuando se requiere."},
+  {q: "¿Cómo tramitar una concesión de aguas ante CONAGUA en México?",
+   a: "En México, las concesiones para uso del agua se tramitan ante la Comisión Nacional del Agua (CONAGUA) a través del Sistema Integral de Gestión del Agua (SIGCA). El trámite requiere: estudio técnico de la fuente o acuífero, volumen anual concesionado, uso declarado (municipal, agrícola, industrial), coordenadas de la obra de toma y comprobante de propiedad del predio. BIC elabora el estudio técnico hidrológico e hidráulico para el trámite de concesión. El proceso puede tardar de 6 a 24 meses según el estado y la cuenca."},
+]
+
 export default function LatamMexico() {
   useEffect(() => {
     window.scrollTo(0, 0)
@@ -112,6 +122,7 @@ export default function LatamMexico() {
   return (
     <>
       <SEOHead config={seoConfig} />
+      <SchemaMarkup type="service" faqItems={FAQ_SCHEMA} serviceName="Consultoría Ingeniería Hidráulica México" serviceUrl="/consultoria-hidraulica-mexico" />
 
       {/* ── HERO ── */}
       <section style={{
