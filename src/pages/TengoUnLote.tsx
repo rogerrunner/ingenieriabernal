@@ -1,5 +1,6 @@
 import { useEffect } from 'react'
 import SEOHead from '@/components/SEOHead'
+import SchemaMarkup from '@/components/SchemaMarkup'
 import { BlueprintBg, SectionLabel, Btn, Section, Tag } from '@/components/ui'
 
 const WA = '573024778910'
@@ -154,12 +155,28 @@ const NORMATIVA = [
   { codigo: 'RAS 2017', descripcion: 'Reglamento Técnico de Agua y Saneamiento — criterios de diseño para acueducto y alcantarillado' },
 ]
 
+const FAQ_ITEMS_SCHEMA = [
+  {
+    q: '¿Qué estudios necesito para desarrollar mi lote en Colombia?',
+    a: 'Para desarrollar un lote en Colombia necesitas: estudio de suelos NSR-10, estudio hidrológico y de drenaje, estudio de amenaza y riesgo hídrico (Decreto 1807) si hay ríos o quebradas cerca, y diseño de redes de acueducto y alcantarillado. BIC puede hacer el diagnóstico inicial sin costo y decirte exactamente qué se requiere.',
+  },
+  {
+    q: '¿Cómo saber si mi lote tiene riesgo de inundación en Colombia?',
+    a: 'Para saber si tu lote tiene riesgo de inundación debes verificar la cartografía de amenaza del POT municipal y, si está en zona de amenaza media o alta, realizar un estudio Decreto 1807 con modelación hidráulica HEC-RAS 2D. BIC puede revisar la situación de tu predio gratuitamente y orientarte sobre los estudios requeridos.',
+  },
+  {
+    q: '¿Cuánto cuestan todos los estudios para un lote urbanizable en el Eje Cafetero?',
+    a: 'El paquete completo de estudios técnicos para desarrollar un lote urbanizable (suelos, hidráulico, riesgo hídrico y redes) oscila entre $25M y $70M COP dependiendo del área y la categoría de amenaza. BIC ofrece paquetes integrados con descuento. Propuesta detallada en 24 horas: +57 302 477 8910.',
+  },
+]
+
 export default function TengoUnLote() {
   useEffect(() => { window.scrollTo(0, 0) }, [])
 
   return (
     <>
       <SEOHead config={seoConfig} />
+      <SchemaMarkup type="service" faqItems={FAQ_ITEMS_SCHEMA} serviceName="Estudios Técnicos para Desarrollar un Lote Colombia" serviceUrl="/tengo-un-lote-colombia" />
 
       {/* ── HERO ── */}
       <section style={{ background: 'linear-gradient(135deg, #001A33 0%, #002A50 55%, #003B6F 100%)', paddingTop: 120, paddingBottom: 80, position: 'relative', overflow: 'hidden' }}>
