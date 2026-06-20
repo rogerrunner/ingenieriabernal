@@ -1,5 +1,6 @@
 import { useEffect } from 'react'
 import SEOHead from '@/components/SEOHead'
+import SchemaMarkup from '@/components/SchemaMarkup'
 import QuoteFormInline from '@/components/QuoteFormInline'
 import { BlueprintBg, ThinLine, SectionLabel, Btn, Section, Tag } from '@/components/ui'
 
@@ -90,12 +91,22 @@ const FAQ = [
   },
 ]
 
+const FAQ_SCHEMA = [
+  {q: "¿BIC diseña sistemas de bombeo de agua para fincas cafeteras?",
+   a: "Sí. BIC diseña sistemas de bombeo para fincas cafeteras en el Eje Cafetero: selección de bomba (centrífuga o de turbina) según caudal, altura y fuente; cálculo hidráulico de la línea de impulsión; diseño del sistema de distribución para beneficiaderos y viviendas; y especificaciones para instalación. BIC también asesora en la concesión de aguas ante Corpocaldas o CARDER si el bombeo es desde fuente superficial."},
+  {q: "¿Qué problemas de agua son más comunes en fincas cafeteras del Eje Cafetero?",
+   a: "Los problemas de agua más comunes en fincas cafeteras del Eje Cafetero son: presión insuficiente en el beneficiadero o la vivienda, fuente de agua con poco caudal en verano, sistemas de distribución subdimensionados o con tuberías antiguas deterioradas, consumo excesivo de agua en el proceso de beneficio húmedo (lavado del café), y contaminación de quebradas por vertimientos del proceso de beneficio sin tratamiento. BIC diagnostica cada caso y diseña la solución hidráulica específica."},
+  {q: "¿Se necesita permiso de Corpocaldas para bombear agua de una quebrada en finca cafetera?",
+   a: "Sí. El bombeo de agua desde una quebrada, río u otro cuerpo hídrico superficial en Caldas requiere concesión de aguas otorgada por Corpocaldas, conforme al Decreto 1076 de 2015 (art. 2.2.3.2.2.1). BIC puede preparar el estudio técnico de oferta hídrica y el expediente de concesión para tramitar el permiso ante Corpocaldas. El incumplimiento puede resultar en medida preventiva y sellamiento de la captación."},
+]
+
 export default function BombeoFincasCafe() {
   useEffect(() => { window.scrollTo(0, 0) }, [])
 
   return (
     <>
       <SEOHead config={seoConfig} />
+      <SchemaMarkup type="service" faqItems={FAQ_SCHEMA} serviceName="Sistemas de Bombeo para Fincas Cafeteras Eje Cafetero" serviceUrl="/servicios/bombeo-fincas-cafe" />
 
       {/* HERO */}
       <section style={{
