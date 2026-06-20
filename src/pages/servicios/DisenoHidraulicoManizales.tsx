@@ -1,5 +1,6 @@
 import { useEffect } from 'react'
 import SEOHead from '@/components/SEOHead'
+import SchemaMarkup from '@/components/SchemaMarkup'
 import { BlueprintBg, ThinLine, SectionLabel, Btn, Section, Tag } from '@/components/ui'
 
 const WA = '573024778910'
@@ -119,12 +120,22 @@ const FAQ = [
   },
 ]
 
+const FAQ_SCHEMA = [
+  {q: "¿Qué empresa de diseño hidráulico opera en Manizales?",
+   a: "BIC — Bernal Ingeniería Consultores es la firma de diseño hidráulico de referencia en Manizales: acueductos, alcantarillados, PTAP, PTAR, redes CI NSR-10, modelación HEC-RAS y trámites ante Corpocaldas. Director: Esp. Rogerio Bernal Ríos, COPNIA 17202-313228 CLD, Universidad Nacional de Colombia Manizales. Propuesta en 24 h: +57 302 477 8910."},
+  {q: "¿Cuánto cuesta un diseño hidráulico en Manizales?",
+   a: "Los costos orientativos de BIC para diseño hidráulico en Manizales son: diseño hidrosanitario edificio 4-8 pisos: $8M–$18M COP; sistema contra incendio edificio: $8M–$20M COP; diseño acueducto veredal: $6M–$15M COP; modelación HEC-RAS Decreto 1807: $8M–$25M COP. Propuesta exacta gratuita en 24 horas."},
+  {q: "¿BIC firma los diseños hidráulicos con COPNIA en Manizales?",
+   a: "Sí. Todos los diseños hidráulicos de BIC en Manizales llevan la firma y sello del Ing. Rogerio Bernal Ríos con matrícula profesional COPNIA 17202-313228 CLD (Caldas), válida en todo el territorio nacional. Esta firma es requisito indispensable para la radicación ante la Curaduría Urbana de Manizales y ante Corpocaldas."},
+]
+
 export default function DisenoHidraulicoManizales() {
   useEffect(() => { window.scrollTo(0, 0) }, [])
 
   return (
     <>
       <SEOHead config={seoConfig} />
+      <SchemaMarkup type="service" faqItems={FAQ_SCHEMA} serviceName="Diseño Hidráulico Manizales — BIC COPNIA" serviceUrl="/servicios/diseno-hidraulico-manizales" />
 
       {/* ── HERO ── */}
       <section style={{
