@@ -410,6 +410,7 @@ export default function App() {
           <Route path="/estudio-detallado-inundacion-decreto-1807" component={EstudioDetalladoInundacionDecreto1807} />
           <Route path="/diseno-ptar-tramite-permiso-vertimiento" component={DisenoPTARTramitePermisoVertimiento} />
           <Route path="/redes-hidrosanitarias-licencia-construccion" component={RedesHidrosanitariasLicenciaConstruccion} />
+          <Route path="/diseno-hidrosanitario-sistema-contra-incendio-edificio-colombia" component={DisenoHidrosanitarioCIEdificio} />
           <Route path="/blog/:slug" component={BlogDetail} />
           <Route component={NotFound} />
         </Switch>
