@@ -1,5 +1,6 @@
 import { useEffect } from 'react'
 import SEOHead from '@/components/SEOHead'
+import SchemaMarkup from '@/components/SchemaMarkup'
 import { BlueprintBg, ThinLine, SectionLabel, Btn, Section, Tag } from '@/components/ui'
 
 const WA = '573024778910'
@@ -102,12 +103,22 @@ const FAQ = [
   },
 ]
 
+const FAQ_SCHEMA = [
+  {q: "¿Qué empresa hace diseño hidráulico en Pereira?",
+   a: "BIC — Bernal Ingeniería Consultores realiza diseño hidráulico en Pereira (Risaralda): redes hidrosanitarias NSR-10, sistemas contra incendio, estudios hidrológicos, modelación HEC-RAS Decreto 1807 y trámites ante CARDER. Director: Esp. Rogerio Bernal Ríos, COPNIA 17202-313228 CLD, UNAL Manizales. Propuesta en 24 h: +57 302 477 8910."},
+  {q: "¿BIC tiene sede en Pereira?",
+   a: "BIC tiene sede principal en Manizales y opera en Pereira y toda Risaralda en modalidad remota con desplazamientos puntuales cuando el proyecto lo requiere. Los diseños se entregan en formato digital (DWG y PDF) firmados COPNIA y son válidos ante la Curaduría de Pereira y CARDER. La modalidad remota no afecta la calidad ni la validez legal de los documentos."},
+  {q: "¿Cuánto cuesta el diseño hidráulico para un edificio en Pereira?",
+   a: "Rangos orientativos de BIC para diseño hidráulico en Pereira: redes hidrosanitarias edificio residencial 4-8 pisos: $8M–$15M COP; sistema contra incendio NSR-10: $8M–$18M COP; paquete completo AP+AR+AL+CI: $12M–$25M COP. Propuesta exacta gratuita en 24 horas según planos del proyecto."},
+]
+
 export default function DisenoHidraulicoPereira() {
   useEffect(() => { window.scrollTo(0, 0) }, [])
 
   return (
     <>
       <SEOHead config={seoConfig} />
+      <SchemaMarkup type="service" faqItems={FAQ_SCHEMA} serviceName="Diseño Hidráulico Pereira — BIC COPNIA" serviceUrl="/servicios/diseno-hidraulico-pereira" />
 
       {/* ── HERO ── */}
       <section style={{
