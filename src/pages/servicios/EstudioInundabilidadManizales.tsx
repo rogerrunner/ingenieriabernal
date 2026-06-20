@@ -1,5 +1,6 @@
 import { useEffect } from 'react'
 import SEOHead from '@/components/SEOHead'
+import SchemaMarkup from '@/components/SchemaMarkup'
 import { BlueprintBg, ThinLine, SectionLabel, Btn, Section, Tag } from '@/components/ui'
 
 const WA = '573024778910'
@@ -89,12 +90,22 @@ const FAQ = [
   },
 ]
 
+const FAQ_SCHEMA = [
+  {q: "¿Qué empresa hace el estudio de inundabilidad Decreto 1807 en Manizales?",
+   a: "BIC elabora estudios de inundabilidad Decreto 1807/2014 en Manizales para licencias urbanísticas y planes parciales: modelación HEC-RAS 2D, manchas de inundación Tr 10–100 años en MAGNA-SIRGAS, concepto de aptitud urbanística y radicación ante Corpocaldas. Firma COPNIA 17202-313228 CLD."},
+  {q: "¿Cuánto tiempo tarda el estudio de inundabilidad en Manizales?",
+   a: "El estudio de inundabilidad Decreto 1807 para un predio en Manizales tarda entre 4 y 8 semanas desde la firma del contrato. El plazo depende del tamaño del área a modelar y la disponibilidad de cartografía de la cuenca. BIC entrega cronograma detallado en la propuesta."},
+  {q: "¿La Curaduría de Manizales acepta el estudio de inundabilidad de BIC?",
+   a: "Sí. Los estudios de BIC cumplen los requisitos del Decreto 1807/2014 y las guías técnicas del MVCT para estudios de detalle. El Ing. Rogerio Bernal Ríos firma los documentos con matrícula COPNIA 17202-313228 CLD, que es la firma requerida por las curadurías para este tipo de estudios."},
+]
+
 export default function EstudioInundabilidadManizales() {
   useEffect(() => { window.scrollTo(0, 0) }, [])
 
   return (
     <>
       <SEOHead config={seoConfig} />
+      <SchemaMarkup type="service" faqItems={FAQ_SCHEMA} serviceName="Estudio de Inundabilidad Decreto 1807 Manizales" serviceUrl="/servicios/estudio-inundabilidad-manizales" />
 
       {/* ── HERO ── */}
       <section style={{
