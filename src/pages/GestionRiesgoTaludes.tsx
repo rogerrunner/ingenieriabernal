@@ -1,5 +1,6 @@
 import { useEffect } from 'react'
 import SEOHead from '@/components/SEOHead'
+import SchemaMarkup from '@/components/SchemaMarkup'
 import { BlueprintBg, SectionLabel, Btn, Section, Tag, CTABanner } from '@/components/ui'
 import QuoteFormInline from '@/components/QuoteFormInline'
 
@@ -156,12 +157,22 @@ const NORMATIVA = [
   { codigo: 'Decreto 2157/2017', descripcion: 'Obligatoriedad de planes de emergencia y contingencia para empresas con más de 200 trabajadores' },
 ]
 
+const FAQ_SCHEMA = [
+  {q: "¿Qué es un estudio de gestión del riesgo por taludes en Colombia?",
+   a: "El estudio de gestión del riesgo por taludes o movimientos en masa analiza la estabilidad de laderas para predios en zonas de amenaza alta o media, requerido por el Decreto 1807/2014 para licencias urbanísticas. Incluye: reconocimiento geológico-geotécnico de campo, clasificación de suelos (SUCS), análisis de estabilidad de taludes (Bishop, Fellenius), mapas de amenaza a escala 1:1.000 o 1:2.000, y propuesta de medidas de mitigación (muros de contención, drenajes, revegetalización). BIC realiza la componente hídrica e hidráulica del estudio; coordina con geólogo o geotecnista para la componente de suelos."},
+  {q: "¿Cuánto cuesta un estudio de riesgo por movimientos en masa en Colombia?",
+   a: "El costo de un estudio de riesgo por movimientos en masa (taludes) para una licencia urbanística en Colombia está entre $6M y $20M COP dependiendo del tamaño del predio, la complejidad de la ladera y la escala de los mapas requeridos por la Curaduría. Para proyectos que también tienen amenaza hídrica (quebradas cerca), BIC puede elaborar el estudio integral de riesgo hídrico + taludes en un solo contrato con costos entre $12M y $35M COP. Propuesta en 24 horas."},
+  {q: "¿BIC hace estudios de riesgo por taludes en el Eje Cafetero?",
+   a: "BIC realiza la componente hidrológica e hidráulica de los estudios de riesgo por movimientos en masa en el Eje Cafetero (Caldas, Risaralda, Quindío) y coordina con geotecnistas COPNIA para la componente de suelos. Manizales, Pereira y Armenia tienen alta concentración de laderas en categorías de amenaza media y alta según los POT municipales, lo que genera demanda frecuente de estos estudios para urbanizaciones y proyectos de vivienda."},
+]
+
 export default function GestionRiesgoTaludes() {
   useEffect(() => { window.scrollTo(0, 0) }, [])
 
   return (
     <>
       <SEOHead config={seoConfig} />
+      <SchemaMarkup type="service" faqItems={FAQ_SCHEMA} serviceName="Gestión del Riesgo por Taludes Colombia" serviceUrl="/gestion-riesgo-taludes" />
 
       <CTABanner service="Gestión del Riesgo de Taludes Colombia" />
 
