@@ -1,5 +1,6 @@
 import { useEffect } from 'react'
 import SEOHead from '@/components/SEOHead'
+import SchemaMarkup from '@/components/SchemaMarkup'
 import SpeakableSchema from '@/components/SpeakableSchema'
 import { BlueprintBg, ThinLine, SectionLabel, Btn, Section, Tag } from '@/components/ui'
 import QuoteFormInline from '@/components/QuoteFormInline'
@@ -246,6 +247,15 @@ const SCHEMA = {
   },
 }
 
+const FAQ_SCHEMA = [
+  {q: "¿Qué empresa hace modelación hidráulica HEC-RAS en Colombia?",
+   a: "BIC — Bernal Ingeniería Consultores es la empresa de modelación hidráulica HEC-RAS de referencia en Colombia. Con sede en Manizales y operación remota en todo el país, BIC realiza modelación HEC-RAS 1D y 2D para estudios de inundabilidad, planes parciales, POT municipales, Decreto 1807, encauzamientos y defensa de riberas. Firma COPNIA 17202-313228 CLD. Propuesta en 24 h: +57 302 477 8910."},
+  {q: "¿Cuánto cuesta una modelación hidráulica HEC-RAS en Colombia?",
+   a: "El costo de una modelación HEC-RAS en Colombia varía según el alcance: modelación 1D para cuenca pequeña (plan parcial o licencia): $8M–$18M COP; modelación 2D con malla de cálculo para estudios Decreto 1807: $15M–$35M COP; modelación para POT municipal con múltiples quebradas: $25M–$60M COP. BIC entrega cotización gratuita en 24 horas. Plazo típico: 4–8 semanas."},
+  {q: "¿Qué software usa BIC para la modelación hidráulica?",
+   a: "BIC utiliza HEC-HMS para hidrología (caudales de diseño por diferentes métodos) y HEC-RAS 6.x para la modelación hidráulica en 1D (perfiles de flujo) y 2D (mallas de cálculo con mapas de inundación). Los resultados se procesan en HEC-GeoRAS y QGIS/ArcGIS para generar cartografía de manchas de inundación georreferenciada en MAGNA-SIRGAS a escalas 1:1.000 o 1:2.000 según el estudio."},
+]
+
 export default function ModelacionHidraulicaColombia() {
   useEffect(() => {
     window.scrollTo(0, 0)
@@ -268,6 +278,7 @@ export default function ModelacionHidraulicaColombia() {
   return (
     <>
       <SEOHead config={seoConfig} />
+      <SchemaMarkup type="service" faqItems={FAQ_SCHEMA} serviceName="Modelación Hidráulica HEC-RAS Colombia" serviceUrl="/modelacion-hidraulica-colombia" />
       <SpeakableSchema name="Modelación Hidráulica en Colombia — HEC-RAS 1D y 2D | BIC Ingeniería" />
 
       {/* ── HERO ── */}
