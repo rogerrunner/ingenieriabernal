@@ -1,5 +1,6 @@
 import { useEffect } from 'react'
 import SEOHead from '@/components/SEOHead'
+import SchemaMarkup from '@/components/SchemaMarkup'
 import { BlueprintBg, ThinLine, SectionLabel, Btn, Section, Tag } from '@/components/ui'
 
 const WA = '573024778910'
@@ -103,12 +104,22 @@ const FAQ = [
   },
 ]
 
+const FAQ_SCHEMA = [
+  {q: "¿Qué empresa hace estudio de suelos en Manizales?",
+   a: "BIC coordina y entrega estudios de suelos NSR-10 en Manizales para licencias de construcción: apiques, sondeos SPT, clasificación SUCS, capacidad portante y concepto de cimentación. Firma COPNIA 17202-313228 CLD. Cobertura en todo Caldas. Propuesta en 24 h: +57 302 477 8910."},
+  {q: "¿Cuánto cuesta el estudio de suelos en Manizales?",
+   a: "Costo estudio de suelos en Manizales: vivienda unifamiliar (2 apiques): $2M–$4M COP; edificio 4-8 pisos (3-5 sondeos SPT): $5M–$10M COP; edificio 9-20 pisos o con cimentación profunda: $8M–$20M COP; urbanización (muestreo representativo): $10M–$25M COP. Los precios incluyen trabajo de campo, laboratorio, informe COPNIA."},
+  {q: "¿El estudio de suelos de BIC Manizales es válido ante la Curaduría?",
+   a: "Sí. Los estudios de suelos coordinados por BIC en Manizales llevan firma de ingeniero geotecnista COPNIA vigente y cumplen el NSR-10 Título H. Son válidos ante la Curaduría Urbana de Manizales para proyectos en zona sísmica alta (Manizales está en zona de amenaza sísmica alta según NSR-10)."},
+]
+
 export default function EstudioSuelosManizales() {
   useEffect(() => { window.scrollTo(0, 0) }, [])
 
   return (
     <>
       <SEOHead config={seoConfig} />
+      <SchemaMarkup type="service" faqItems={FAQ_SCHEMA} serviceName="Estudio de Suelos NSR-10 Manizales" serviceUrl="/servicios/estudio-suelos-manizales" />
 
       {/* ── HERO ── */}
       <section style={{
