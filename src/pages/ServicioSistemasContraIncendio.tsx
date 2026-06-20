@@ -1,5 +1,6 @@
 import { useEffect } from 'react'
 import SEOHead from '@/components/SEOHead'
+import SchemaMarkup from '@/components/SchemaMarkup'
 import { BlueprintBg, ThinLine, SectionLabel, Btn, Section, Tag } from '@/components/ui'
 
 const WA = '573024778910'
@@ -57,12 +58,32 @@ const liStyle: React.CSSProperties = {
   paddingLeft: 20, position: 'relative', marginBottom: 6,
 }
 
+const FAQ_ITEMS_SCHEMA = [
+  {
+    q: '¿Cuánto cuesta el diseño de sistema contra incendio NSR-10 en Colombia?',
+    a: 'El costo del diseño de sistema contra incendio NSR-10 (Título J) depende del tipo y área. Edificios residenciales o comerciales: $8M a $25M COP. Hoteles, centros comerciales con rociadores NFPA 13: $15M a $45M COP. BIC entrega propuesta en 24 horas.',
+  },
+  {
+    q: '¿Qué empresa diseña sistemas contra incendio NSR-10 en el Eje Cafetero?',
+    a: 'BIC — Bernal Ingeniería Consultores (COPNIA 17202-313228) diseña sistemas contra incendio NSR-10 Título J para edificios en Manizales, Pereira y Armenia. Incluye red húmeda/seca, rociadores NFPA 13, gabinetes y detección. Memorias firmadas COPNIA para curaduría.',
+  },
+  {
+    q: '¿Qué incluye el diseño de sistema CI NSR-10 Título J?',
+    a: 'Incluye: cálculo hidráulico de la red, selección de bomba NFPA 20, diseño de rociadores automáticos NFPA 13, red de gabinetes NFPA 14, sistema de detección y alarma, y memoria de cálculo firmada COPNIA para radicación ante curaduría.',
+  },
+  {
+    q: '¿Cuánto vale el diseño hidrosanitario más sistema contra incendio para un edificio en Colombia?',
+    a: 'El paquete completo hidrosanitario (agua potable, sanitario, lluvias) más sistema contra incendio para un edificio de 5 a 15 pisos oscila entre $12M y $35M COP según área y complejidad. BIC propone los dos servicios juntos con descuento por paquete.',
+  },
+]
+
 export default function ServicioSistemasContraIncendio() {
   useEffect(() => { window.scrollTo(0, 0) }, [])
 
   return (
     <>
       <SEOHead config={seoConfig} />
+      <SchemaMarkup type="service" faqItems={FAQ_ITEMS_SCHEMA} serviceName="Diseño Sistema Contra Incendio NSR-10 Colombia" serviceUrl="/servicios/sistemas-contra-incendio" />
 
       {/* ── HERO ── */}
       <section style={{
