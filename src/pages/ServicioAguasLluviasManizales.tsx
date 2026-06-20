@@ -1,5 +1,6 @@
 import { useEffect } from 'react'
 import SEOHead from '@/components/SEOHead'
+import SchemaMarkup from '@/components/SchemaMarkup'
 import { BlueprintBg, ThinLine, SectionLabel, Btn, Section, Tag } from '@/components/ui'
 
 const WA = '573024778910'
@@ -95,6 +96,15 @@ const FAQ = [
   },
 ]
 
+const FAQ_SCHEMA = [
+  {q: "¿Qué empresa diseña sistemas de manejo de aguas lluvias en Manizales?",
+   a: "BIC — Bernal Ingeniería Consultores diseña sistemas de manejo de aguas lluvias en Manizales para proyectos residenciales, comerciales e industriales. El diseño incluye: análisis de curvas IDF para Manizales (IDEAM), cálculo de caudales de escorrentía por el método racional o SCS-CN, diseño de cunetas, sumideros, bajantes y colectores, separación de redes pluvial y sanitaria, y conexión a la red de alcantarillado pluvial de Aguas de Manizales o sistema de infiltración si no hay red disponible. Firma COPNIA."},
+  {q: "¿Cuándo es obligatorio el diseño de alcantarillado pluvial separado en Colombia?",
+   a: "El RAS 2017 (Resolución 0330 del MVCT) exige sistema separado (sanitario y pluvial) en todos los nuevos proyectos de urbanización y edificaciones con área mayor a 1.000 m² cubiertos. La Curaduría urbana exige los planos del sistema de aguas lluvias como parte del paquete de memorias hidrosanitarias para otorgar la licencia de construcción. BIC diseña el sistema de aguas lluvias integrado con la red sanitaria y el sistema contra incendio si aplica."},
+  {q: "¿BIC diseña sistemas de aprovechamiento de aguas lluvias para edificios en Colombia?",
+   a: "Sí. BIC diseña sistemas de cosecha y aprovechamiento de aguas lluvias para edificios en Colombia: captación en cubierta, filtro de primera escorrentía, tanque de almacenamiento, red de distribución secundaria (usos no potables: inodoros, riego, lavado de zonas duras) y análisis de eficiencia hídrica del sistema. Estos sistemas pueden obtener puntos en certificaciones sostenibles LEED o EDGE. BIC lo integra al diseño hidrosanitario general del edificio."},
+]
+
 export default function ServicioAguasLluviasManizales() {
   useEffect(() => {
     window.scrollTo(0, 0)
@@ -109,6 +119,7 @@ export default function ServicioAguasLluviasManizales() {
   return (
     <>
       <SEOHead config={seoConfig} />
+      <SchemaMarkup type="service" faqItems={FAQ_SCHEMA} serviceName="Diseño Aguas Lluvias Manizales — Drenaje Pluvial" serviceUrl="/servicio-aguas-lluvias-manizales" />
 
       {/* ── HERO ── */}
       <section style={{
