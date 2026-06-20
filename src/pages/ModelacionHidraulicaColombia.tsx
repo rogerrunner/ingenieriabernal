@@ -107,6 +107,7 @@ const FAQ_SCHEMA_MOD = {
         '@type': 'Answer',
         text: 'Sí, utilizamos registros históricos de estaciones hidrometeorológicas del IDEAM y los integramos en los modelos hidrológicos HEC-HMS para la construcción de hidrogramas de diseño por período de retorno.',
       },
+    },
     {
       '@type': 'Question',
       name: '¿BIC puede hacer modelación hidráulica de lagunas, estuarios o zonas costeras en Colombia?',
