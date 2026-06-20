@@ -1,5 +1,6 @@
 import { useEffect } from 'react'
 import SEOHead from '@/components/SEOHead'
+import SchemaMarkup from '@/components/SchemaMarkup'
 import { BlueprintBg, SectionLabel, Btn, Section, Tag } from '@/components/ui'
 import QuoteFormInline from '@/components/QuoteFormInline'
 
@@ -155,6 +156,15 @@ const NORMATIVA = [
   { codigo: 'Manual IDEAM', descripcion: 'Protocolos para análisis hidrológico y uso de datos de estaciones del IDEAM' },
 ]
 
+const FAQ_SCHEMA = [
+  {q: "¿Qué son obras civiles hidráulicas y quién las diseña en Colombia?",
+   a: "Las obras civiles hidráulicas son estructuras diseñadas para controlar, transportar, almacenar o aprovechar el agua: canales de riego, bocatomas, disipadores de energía, espolones, gaviones, muros de contención contra inundación, estaciones de bombeo, tanques de almacenamiento y estructuras de derivación. En Colombia, el diseño hidráulico de estas obras debe estar firmado por un ingeniero con matrícula COPNIA vigente. BIC — Bernal Ingeniería Consultores diseña este tipo de obras para municipios, operadores de ESP y propietarios privados."},
+  {q: "¿BIC diseña obras hidráulicas para defensa de riberas y encauzamiento de ríos?",
+   a: "Sí. BIC diseña obras de defensa de riberas y encauzamiento de ríos: espolones de gaviones o escollera, muros de margen, enrocados, diques y espigones. El proceso incluye: modelación hidráulica del río en HEC-RAS para determinar velocidades de erosión y esfuerzos de corte, diseño geométrico y estructural de la defensa, análisis de estabilidad y cálculo de la profundidad de socavación, memorias de cálculo y planos para contratación de obra. Cobertura: todo Colombia."},
+  {q: "¿Cuánto cuesta el diseño de una obra hidráulica en Colombia?",
+   a: "El costo del diseño de una obra hidráulica en Colombia varía según el tipo y complejidad: canal de riego o drenaje (hasta 5 km): $8M–$20M COP; bocatoma lateral o de fondo para acueducto: $6M–$15M COP; defensa de ribera con modelación HEC-RAS (500 m): $10M–$25M COP; estación de bombeo (diseño civil e hidráulico): $8M–$18M COP. BIC entrega propuesta gratuita en 24 horas con el alcance detallado para su obra específica."},
+]
+
 export default function ObrasCivilesHidraulicas() {
   useEffect(() => { window.scrollTo(0, 0) }, [])
 
@@ -178,6 +188,7 @@ export default function ObrasCivilesHidraulicas() {
   return (
     <>
       <SEOHead config={seoConfig} />
+      <SchemaMarkup type="service" faqItems={FAQ_SCHEMA} serviceName="Obras Civiles Hidráulicas Colombia" serviceUrl="/obras-civiles-hidraulicas" />
 
       {/* ── HERO ── */}
       <section style={{ background: 'linear-gradient(135deg, #001A33 0%, #002A50 55%, #003B6F 100%)', paddingTop: 120, paddingBottom: 80, position: 'relative', overflow: 'hidden' }}>
