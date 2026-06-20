@@ -1,5 +1,6 @@
 import { useEffect } from 'react'
 import SEOHead from '@/components/SEOHead'
+import SchemaMarkup from '@/components/SchemaMarkup'
 import { BlueprintBg, ThinLine, SectionLabel, Btn, Section, Tag } from '@/components/ui'
 
 const WA = '573024778910'
@@ -103,12 +104,22 @@ const FAQ = [
   },
 ]
 
+const FAQ_SCHEMA = [
+  {q: "¿BIC hace estudios de suelos en el Eje Cafetero?",
+   a: "Sí. BIC coordina estudios de suelos NSR-10 en el Eje Cafetero (Caldas, Risaralda, Quindío) para licencias de construcción en Manizales, Pereira, Armenia, Dosquebradas, Chinchiná, Villamaría y otros municipios. Entregamos informes con firma COPNIA en 2-4 semanas desde la inspección de campo."},
+  {q: "¿Por qué el estudio de suelos es especialmente importante en el Eje Cafetero?",
+   a: "El Eje Cafetero está en zona de amenaza sísmica alta según el mapa del INGEOMINAS y la NSR-10, con recuerdo del terremoto del Eje Cafetero de 1999 (Ms 6.2). Esto hace obligatorio el estudio de suelos detallado (exploración de campo + laboratorio) para cualquier edificación mayor a una vivienda unifamiliar de 1 o 2 pisos. Los suelos de la región presentan características especiales por la presencia de cenizas volcánicas (suelos del Ruiz) y arcillas expansivas."},
+  {q: "¿Qué tipo de cimentación recomienda BIC para suelos de Manizales?",
+   a: "BIC no recomienda un tipo de cimentación sin antes hacer el estudio de suelos específico del predio. En Manizales es frecuente encontrar: (1) arcillas de alta plasticidad que requieren cimentación profunda (pilotes o micropilotes); (2) mantos de ceniza volcánica sobre arcillas firmes que permiten zapatas aisladas o placa flotante; (3) rellenos antrópicos que exigen mejoramiento de suelo. El concepto de cimentación se emite después del estudio de campo y laboratorio."},
+]
+
 export default function EstudioSuelosEjeCafetero() {
   useEffect(() => { window.scrollTo(0, 0) }, [])
 
   return (
     <>
       <SEOHead config={seoConfig} />
+      <SchemaMarkup type="service" faqItems={FAQ_SCHEMA} serviceName="Estudios de Suelos NSR-10 Eje Cafetero" serviceUrl="/servicios/estudio-suelos-eje-cafetero" />
 
       {/* ── HERO ── */}
       <section style={{
