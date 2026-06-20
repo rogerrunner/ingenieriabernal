@@ -44,6 +44,15 @@ const PARA_QUIEN = [
   { tipo: 'Entidades públicas con regalías indirectas', desc: 'Universidades públicas, hospitales y otras entidades beneficiarias de regalías para ciencia, tecnología e innovación que formulan proyectos con componente hídrico o ambiental.' },
 ]
 
+const FAQ_SCHEMA = [
+  {q: "¿BIC formula proyectos MGA para municipios pequeños de Caldas o Risaralda?",
+   a: "Sí. BIC formula y estructura proyectos de agua potable y saneamiento en MGA-Web para municipios de Caldas, Risaralda y Quindío, incluyendo municipios de menos de 10.000 habitantes. El equipo de BIC conoce los requisitos del OCAD regional del Eje Cafetero y acompaña la sustentación ante el OCAD. Costo de la consultoría: $6M–$20M COP."},
+  {q: "¿Cuánto tiempo tarda formular un proyecto SGR de agua potable?",
+   a: "La formulación completa en MGA-Web para un proyecto de acueducto o saneamiento básico tarda entre 8 y 16 semanas. El plazo depende de si se requieren estudios técnicos previos (topografía, suelos, hidrología) y de la complejidad del proyecto. BIC puede hacer los estudios técnicos y la formulación MGA en un mismo contrato."},
+  {q: "¿Qué proyectos de agua potable se pueden financiar con regalías SGR en Colombia?",
+   a: "Con el Sistema General de Regalías (SGR), los municipios pueden financiar: construcción o ampliación de sistemas de acueducto rural o urbano, diseño y construcción de PTAP (planta de tratamiento de agua potable), alcantarillado sanitario y pluvial, y PTAR (planta de tratamiento de aguas residuales). Los proyectos deben formularse en MGA-Web y ser aprobados por el OCAD departamental o regional."},
+]
+
 export default function ServicioRegaliasMga() {
   useEffect(() => { window.scrollTo(0, 0) }, [])
 
