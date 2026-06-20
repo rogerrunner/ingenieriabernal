@@ -139,9 +139,9 @@ export default function RegionalEjeCafetero() {
     <>
       <SEOHead config={seoConfig} />
       <SchemaMarkup
+        type="service"
         faqItems={FAQ_ITEMS}
-        priceSpecs={PRICE_SPECS}
-        serviceLocation="Eje Cafetero, Caldas, Risaralda, Quindío, Colombia"
+        priceSpecification={PRICE_SPECS}
       />
 
       {/* ── HERO ── */}
