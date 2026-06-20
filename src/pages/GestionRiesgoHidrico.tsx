@@ -9,7 +9,7 @@ const WA = '573024778910'
 const WA_MSG = encodeURIComponent('Hola, necesitamos un estudio de gestión del riesgo hídrico por inundación (Decreto 1807). ¿Podemos agendar una llamada técnica?')
 
 const seoConfig = {
-  title: '¿Necesita Estudio Riesgo Hídrico para su Plan Parcial o Licencia? — Decreto 1807 | BIC',
+  title: 'Estudio Gestión Riesgo Hídrico Decreto 1807 Colombia — Plan Parcial y Licencia | BIC COPNIA',
   description: 'BIC elabora el estudio de gestión del riesgo hídrico que exige su Curaduría: modelación HEC-RAS 2D, cartografía amenaza inundación 1:2.000 y concepto de aptitud urbanística. Para planes parciales, licencias de construcción y POT. Firma COPNIA. Propuesta en 24 h.',
   keywords: [
     'estudios detallados riesgo inundación Decreto 1807 Colombia',
