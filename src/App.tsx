@@ -415,4 +415,45 @@ export default function App() {
           <Route path="/diseno-hidrosanitario-sistema-contra-incendio-edificio-colombia" component={DisenoHidrosanitarioCIEdificio} />
 
           {/* ── MUNICIPIOS CALDAS — ESCALADO JUNIO 2026 ── */}
-          <Route path="/ingenieria-hidraulica-viterbo-caldas"
+          <Route path="/ingenieria-hidraulica-viterbo-caldas" component={LandingViterboCaldas} />
+
+          <Route path="/ingenieria-hidraulica-chinchina">{() => <CityPage
+            city="Chinchina" dept="Caldas" pageKey="chinchina"
+            intro="Municipio cafetero a 25 km de Manizales con alta actividad agroindustrial y desarrollo residencial activo. Zona de demanda real verificada: propietarios y promotores en Chinchina consultan a BIC en junio 2026. Alta necesidad de estudios de riesgo hidrico para predios en borde de quebrada y disenos hidrosanitarios para bodegas y procesadoras de cafe."
+            services={['Estudios riesgo hidrico Decreto 1807 quebradas cafeteras','Diseno hidrosanitario para bodegas y procesadoras','Sistemas contra incendio NSR-10 Titulo K','Diseno acueducto y alcantarillado parcelaciones','Permiso de vertimiento CORPOCALDAS','Gestion del riesgo predios con cauce']}
+          />}</Route>
+
+          <Route path="/ingenieria-hidraulica-neira-caldas">{() => <CityPage
+            city="Neira" dept="Caldas" pageKey="neira"
+            intro="Municipio cafetero en el corredor Manizales-Salamina con desarrollo parcelario activo. Alta demanda de disenos de acueducto rural, PTAP para parcelaciones campestres y estudios de riesgo hidrico para predios con quebradas del piedemonte caldense."
+            services={['Diseno acueducto y alcantarillado rural RAS 2017','PTAP parcelaciones campestres','Estudios riesgo hidrico Decreto 1807','Ronda hidrica y delimitacion cauces','Diseno hidrosanitario edificaciones rurales','Formulacion proyectos SGR agua y saneamiento']}
+          />}</Route>
+
+          <Route path="/ingenieria-hidraulica-villamaria-caldas">{() => <CityPage
+            city="Villamaria" dept="Caldas" pageKey="villamaria"
+            intro="Municipio contiguo a Manizales con el mayor crecimiento de licencias de construccion del departamento. El corredor Manizales-Villamaria concentra urbanizaciones cerradas, condominios campestres y conjuntos VIS activos. Todos los proyectos exigen estudio de riesgo hidrico Decreto 1807 y diseno hidrosanitario NSR-10."
+            services={['Estudios riesgo hidrico para urbanizaciones y planes parciales','Diseno hidrosanitario y CI edificios multifamiliar','Acueducto y alcantarillado Decreto 1807','Ronda hidrica para predios con cauces','Diseno PTAP condominios campestres','Sistemas CI NSR-10 conjuntos residenciales']}
+          />}</Route>
+
+          <Route path="/ingenieria-hidraulica-salamina-caldas">{() => <CityPage
+            city="Salamina" dept="Caldas" pageKey="salamina"
+            intro="Patrimonio arquitectonico de Colombia con turismo activo y nuevas inversiones hoteleras. El corredor Salamina-La Merced y el turismo rural generan demanda de disenos hidrosanitarios para hoteles, PTAP para condominios y estudios de riesgo hidrico para predios en montana caldense norte."
+            services={['Diseno hidrosanitario y CI para hoteles y posadas','PTAP y PTAR para turismo rural','Estudios riesgo hidrico zonas de montana','Acueducto y alcantarillado veredal','Ronda hidrica y permisos CORPOCALDAS','Formulacion proyectos SGR']}
+          />}</Route>
+
+          <Route path="/ingenieria-hidraulica-aguadas-caldas">{() => <CityPage
+            city="Aguadas" dept="Caldas" pageKey="aguadas"
+            intro="Municipio del norte de Caldas con vocacion cafetera y turistica. Aguadas hace parte del Paisaje Cultural Cafetero UNESCO con actividad activa de parcelaciones en montana y fincas en desarrollo agropecuario y ecoturistico. Alta necesidad de disenos de acueducto rural y estudios de riesgo hidrico para cuencas de alta pendiente."
+            services={['Diseno acueducto y captaciones ladera RAS 2017','PTAP fincas y parcelaciones cafeteras','Estudios riesgo hidrico cuencas alta pendiente','Ronda hidrica delimitacion quebradas','PTAR turismo rural y agroturismo','Formulacion proyectos SGR norte Caldas']}
+          />}</Route>
+
+          <Route path="/blog/:slug" component={BlogDetail} />
+          <Route component={NotFound} />
+        </Switch>
+        </Suspense>
+      </main>
+      <Footer />
+      <FloatingQuoteButton />
+    </>
+  )
+}
