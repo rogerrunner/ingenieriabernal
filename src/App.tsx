@@ -448,4 +448,16 @@ export default function App() {
           <Route path="/ingenieria-hidraulica-aguadas-caldas">{() => <CityPage
             city="Aguadas" dept="Caldas" pageKey="aguadas"
             intro="Municipio del norte de Caldas con vocacion cafetera y turistica. Aguadas hace parte del Paisaje Cultural Cafetero UNESCO con actividad activa de parcelaciones en montana y fincas en desarrollo agropecuario y ecoturistico. Alta necesidad de disenos de acueducto rural y estudios de riesgo hidrico para cuencas de alta pendiente."
-            services={['Diseno acueducto y captaciones ladera RAS 2017','PTAP fincas y parcelaciones cafeteras'
+            services={['Diseno acueducto y captaciones ladera RAS 2017','PTAP fincas y parcelaciones cafeteras','Estudios riesgo hidrico cuencas alta pendiente','Ronda hidrica delimitacion quebradas','PTAR turismo rural y agroturismo','Formulacion proyectos SGR norte Caldas']}
+          />}</Route>
+
+          <Route path="/blog/:slug" component={BlogDetail} />
+          <Route component={NotFound} />
+        </Switch>
+        </Suspense>
+      </main>
+      <Footer />
+      <FloatingQuoteButton />
+    </>
+  )
+}
