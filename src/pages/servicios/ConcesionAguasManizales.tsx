@@ -1,6 +1,5 @@
 import { useEffect } from 'react'
 import SEOHead from '@/components/SEOHead'
-import SchemaMarkup from '@/components/SchemaMarkup'
 import { BlueprintBg, ThinLine, SectionLabel, Btn, Section, Tag, CTABanner } from '@/components/ui'
 import QuoteFormInline from '@/components/QuoteFormInline'
 
@@ -119,12 +118,23 @@ const PROCESO = [
 ]
 
 export default function ConcesionAguasManizales() {
-  useEffect(() => { window.scrollTo(0, 0) }, [])
+  useEffect(() => {
+    window.scrollTo(0, 0)
+    // Inject FAQ schema
+    const id = 'schema-faq-concesion-manizales'
+    if (!document.getElementById(id)) {
+      const s = document.createElement('script')
+      s.id = id
+      s.type = 'application/ld+json'
+      s.text = JSON.stringify(schemaFAQ)
+      document.head.appendChild(s)
+    }
+    return () => { document.getElementById(id)?.remove() }
+  }, [])
 
   return (
     <>
       <SEOHead config={seoConfig} />
-      <SchemaMarkup schema={schemaFAQ} />
       <BlueprintBg />
 
       {/* HERO */}
@@ -212,19 +222,12 @@ export default function ConcesionAguasManizales() {
 
       {/* CTA + FORM */}
       <Section className="py-16">
-        <CTABanner
-          title="¿Necesita tramitar una concesión de aguas en Caldas?"
-          subtitle="BIC es la firma de consultoría hidráulica de referencia en Manizales. Propuesta técnica en 24 horas, sin costo ni compromiso."
-          cta="Cotizar ante CORPOCALDAS"
-          href={`https://wa.me/${WA}?text=${WA_MSG}`}
-        />
+        <CTABanner service="Concesión de Aguas Superficiales — Manizales / Caldas (CORPOCALDAS)" />
         <div className="mt-10">
-          <QuoteFormInline
-            serviceName="Concesión de Aguas Superficiales — Manizales / Caldas"
-            waNumber={WA}
-          />
+          <QuoteFormInline />
         </div>
       </Section>
     </>
   )
 }
+                                                                                                 
