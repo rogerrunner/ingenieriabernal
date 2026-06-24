@@ -62,6 +62,8 @@ const GestionRiesgoHidricoManizales = lazy(() => import('./pages/servicios/Gesti
 const DisenoHidraulicoEjeCafetero = lazy(() => import('./pages/servicios/DisenoHidraulicoEjeCafetero'))
 const BombeoFincasCafe = lazy(() => import('./pages/servicios/BombeoFincasCafe'))
 const AcueductoRuralCaldas = lazy(() => import('./pages/servicios/AcueductoRuralCaldas'))
+const ConcesionAguasManizales = lazy(() => import('./pages/servicios/ConcesionAguasManizales'))
+const PermisoVertimientosManizales = lazy(() => import('./pages/servicios/PermisoVertimientosManizales'))
 const TopografiaManizales = lazy(() => import('./pages/servicios/TopografiaManizales'))
 const CiudadBogota = lazy(() => import('./pages/servicios/CiudadBogota'))
 const CiudadMedellin = lazy(() => import('./pages/servicios/CiudadMedellin'))
@@ -389,6 +391,8 @@ export default function App() {
           <Route path="/diseno-hidraulico-eje-cafetero" component={DisenoHidraulicoEjeCafetero} />
           <Route path="/acueducto-rural-caldas" component={AcueductoRuralCaldas} />
           <Route path="/bombeo-fincas-cafe" component={BombeoFincasCafe} />
+          <Route path="/concesion-aguas-superficiales-manizales" component={ConcesionAguasManizales} />
+          <Route path="/permiso-vertimientos-manizales" component={PermisoVertimientosManizales} />
           <Route path="/topografia-manizales" component={TopografiaManizales} />
           <Route path="/ingeniero-hidraulico-manizales" component={IngenieroHidraulicoManizales} />
 
@@ -444,16 +448,4 @@ export default function App() {
           <Route path="/ingenieria-hidraulica-aguadas-caldas">{() => <CityPage
             city="Aguadas" dept="Caldas" pageKey="aguadas"
             intro="Municipio del norte de Caldas con vocacion cafetera y turistica. Aguadas hace parte del Paisaje Cultural Cafetero UNESCO con actividad activa de parcelaciones en montana y fincas en desarrollo agropecuario y ecoturistico. Alta necesidad de disenos de acueducto rural y estudios de riesgo hidrico para cuencas de alta pendiente."
-            services={['Diseno acueducto y captaciones ladera RAS 2017','PTAP fincas y parcelaciones cafeteras','Estudios riesgo hidrico cuencas alta pendiente','Ronda hidrica delimitacion quebradas','PTAR turismo rural y agroturismo','Formulacion proyectos SGR norte Caldas']}
-          />}</Route>
-
-          <Route path="/blog/:slug" component={BlogDetail} />
-          <Route component={NotFound} />
-        </Switch>
-        </Suspense>
-      </main>
-      <Footer />
-      <FloatingQuoteButton />
-    </>
-  )
-}
+            services={['Diseno acueducto y captaciones ladera RAS 2017','PTAP fincas y parcelaciones cafeteras'
