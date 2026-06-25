@@ -91,6 +91,9 @@ import articlesX from './src/data/articlesX'
 import ServicioEstudiosHidrologicos from './src/pages/ServicioEstudiosHidrologicos'
 import ServicioModelacionHecRas from './src/pages/ServicioModelacionHecRas'
 import ServicioDisenoAcueductos from './src/pages/ServicioDisenoAcueductos'
+import ServicioPermisoVertimiento from './src/pages/ServicioPermisoVertimiento'
+import ServicioRiesgoHidrico1807 from './src/pages/ServicioRiesgoHidrico1807'
+import ServicioConcesionAguas from './src/pages/ServicioConcesionAguas'
 import ServicioRedesHidrosanitarias from './src/pages/ServicioRedesHidrosanitarias'
 import ServicioSistemasContraIncendio from './src/pages/ServicioSistemasContraIncendio'
 import ServicioInterventoria from './src/pages/ServicioInterventoria'
@@ -143,6 +146,9 @@ const PAGES: Record<string, React.ComponentType> = {
   'servicios/estudios-hidrologicos': ServicioEstudiosHidrologicos,
   'servicios/modelacion-hec-ras': ServicioModelacionHecRas,
   'servicios/diseno-acueductos': ServicioDisenoAcueductos,
+  'servicios/permiso-de-vertimiento': ServicioPermisoVertimiento,
+  'servicios/estudio-riesgo-hidrico-decreto-1807': ServicioRiesgoHidrico1807,
+  'servicios/concesion-de-aguas': ServicioConcesionAguas,
   'servicios/redes-hidrosanitarias': ServicioRedesHidrosanitarias,
   'servicios/sistemas-contra-incendio': ServicioSistemasContraIncendio,
   'servicios/interventoria': ServicioInterventoria,

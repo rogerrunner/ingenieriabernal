@@ -36,6 +36,9 @@ const ServicioGeotecnia = lazy(() => import('./pages/ServicioGeotecnia'))
 const ServicioAmbiental = lazy(() => import('./pages/ServicioAmbiental'))
 const IngenieriaHidraulicaColombia = lazy(() => import('./pages/IngenieriaHidraulicaColombia'))
 const GestionRiesgoHidrico = lazy(() => import('./pages/GestionRiesgoHidrico'))
+const ServicioPermisoVertimiento = lazy(() => import('./pages/ServicioPermisoVertimiento'))
+const ServicioRiesgoHidrico1807 = lazy(() => import('./pages/ServicioRiesgoHidrico1807'))
+const ServicioConcesionAguas = lazy(() => import('./pages/ServicioConcesionAguas'))
 const ServicioDisenoAcueductos = lazy(() => import('./pages/ServicioDisenoAcueductos'))
 const ServicioContraIncendiosNSR10 = lazy(() => import('./pages/ServicioContraIncendiosNSR10'))
 const RegionalManizales = lazy(() => import('./pages/regional/RegionalManizales'))
@@ -452,6 +455,11 @@ export default function App() {
             intro="Municipio del norte de Caldas con vocacion cafetera y turistica. Aguadas hace parte del Paisaje Cultural Cafetero UNESCO con actividad activa de parcelaciones en montana y fincas en desarrollo agropecuario y ecoturistico. Alta necesidad de disenos de acueducto rural y estudios de riesgo hidrico para cuencas de alta pendiente."
             services={['Diseno acueducto y captaciones ladera RAS 2017','PTAP fincas y parcelaciones cafeteras','Estudios riesgo hidrico cuencas alta pendiente','Ronda hidrica delimitacion quebradas','PTAR turismo rural y agroturismo','Formulacion proyectos SGR norte Caldas']}
           />}</Route>
+
+          {/* ── PÁGINAS TRÁMITE AMBIENTAL — junio 2026 ── */}
+          <Route path="/servicios/permiso-de-vertimiento" component={ServicioPermisoVertimiento} />
+          <Route path="/servicios/estudio-riesgo-hidrico-decreto-1807" component={ServicioRiesgoHidrico1807} />
+          <Route path="/servicios/concesion-de-aguas" component={ServicioConcesionAguas} />
 
           <Route path="/blog/:slug" component={BlogDetail} />
           <Route component={NotFound} />
