@@ -115,6 +115,7 @@ const HydraulicEngineerEnglish = lazy(() => import('./pages/HydraulicEngineerEng
 const EstudioBasico = lazy(() => import('./pages/servicios/EstudioBasico'))
 const ProjectDetail = lazy(() => import('./pages/ProjectDetail'))
 const TramitePermisoVertimientoColombia = lazy(() => import('./pages/TramitePermisoVertimientoColombia'))
+const PermisoOcupacionCauceColombia = lazy(() => import('./pages/PermisoOcupacionCauceColombia'))
 const ConcesionAguasSuperficialesTramite = lazy(() => import('./pages/ConcesionAguasSuperficialesTramite'))
 const DisenoAcueductoEntregaESP = lazy(() => import('./pages/DisenoAcueductoEntregaESP'))
 const EstudioDetalladoInundacionDecreto1807 = lazy(() => import('./pages/EstudioDetalladoInundacionDecreto1807'))
@@ -410,6 +411,7 @@ export default function App() {
           <Route path="/proyectos/:id" component={ProjectDetail} />
 
           {/* ── PÁGINAS TRAMITE-INTENT SEO — junio 2026 ── */}
+          <Route path="/permiso-ocupacion-cauce-colombia" component={PermisoOcupacionCauceColombia} />
           <Route path="/tramitar-permiso-vertimiento-colombia" component={TramitePermisoVertimientoColombia} />
           <Route path="/concesion-aguas-superficiales-tramite" component={ConcesionAguasSuperficialesTramite} />
           <Route path="/diseno-acueducto-entrega-esp" component={DisenoAcueductoEntregaESP} />
@@ -447,17 +449,4 @@ export default function App() {
 
           <Route path="/ingenieria-hidraulica-aguadas-caldas">{() => <CityPage
             city="Aguadas" dept="Caldas" pageKey="aguadas"
-            intro="Municipio del norte de Caldas con vocacion cafetera y turistica. Aguadas hace parte del Paisaje Cultural Cafetero UNESCO con actividad activa de parcelaciones en montana y fincas en desarrollo agropecuario y ecoturistico. Alta necesidad de disenos de acueducto rural y estudios de riesgo hidrico para cuencas de alta pendiente."
-            services={['Diseno acueducto y captaciones ladera RAS 2017','PTAP fincas y parcelaciones cafeteras','Estudios riesgo hidrico cuencas alta pendiente','Ronda hidrica delimitacion quebradas','PTAR turismo rural y agroturismo','Formulacion proyectos SGR norte Caldas']}
-          />}</Route>
-
-          <Route path="/blog/:slug" component={BlogDetail} />
-          <Route component={NotFound} />
-        </Switch>
-        </Suspense>
-      </main>
-      <Footer />
-      <FloatingQuoteButton />
-    </>
-  )
-}
+            intro="Municipio del norte de Caldas con vocacion cafetera y turistica. Aguadas hace parte del Paisaje Cultural Cafetero UNESCO con actividad activa de parcelaciones en montana y fincas en desarrollo agropecuario y ecoturistico. Alta necesidad de
