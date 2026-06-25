@@ -300,11 +300,11 @@ const articlesJ: Record<string, {
   },
 
   'que-es-concesion-de-aguas-colombia': {
-    title: '¿Qué es una concesión de aguas en Colombia y para qué sirve?',
+    title: 'Concesión de Aguas Superficiales Colombia 2026: requisitos, plazos y cómo tramitarla ante la CAR',
     date: 'Mayo 2026',
     readTime: '10 min',
     category: 'Trámites y Normativa',
-    metaDesc: 'Explicación clara de qué es una concesión de aguas en Colombia, quién la otorga, para qué sirve, plazos y cómo tramitarla. Guía para no ingenieros.',
+    metaDesc: 'Qué documentos exige la CAR, cuánto demora el trámite y cómo evitar que devuelvan el expediente. Guía técnica completa para tramitar concesión de aguas superficiales en Colombia 2026.',
     keywords: 'concesión de aguas Colombia qué es, tramitar concesión aguas CAR Colombia, permiso uso agua Colombia, Decreto 1076 2015 concesión aguas, concesión aguas acueducto Colombia',
     body: <>
       <p>Si usted es alcalde, promotor de un acueducto comunitario, agricultor con riego o desarrollador de un proyecto urbanístico en Colombia, y necesita captar agua de un río, quebrada o pozo, necesita una <strong>concesión de aguas</strong>. Muchas personas confunden este trámite con otras licencias ambientales o simplemente lo desconocen, lo que lleva a operar sistemas hídricos sin permiso legal —con consecuencias que van desde multas hasta la demolición de la captación. Esta guía lo explica todo en lenguaje sencillo.</p>
@@ -380,10 +380,4 @@ const articlesJ: Record<string, {
 
       <QuoteFormInline serviceId="acueducto-alcantarillado" />
 
-      <p>En <strong>BIC – Bernal Ingeniería Consultores</strong> elaboramos los estudios técnicos requeridos para tramitar la concesión de aguas ante la CAR: aforo hidrológico, estudio de aprovechamiento, memoria de cálculo del caudal de diseño y descripción técnica de la captación. Acompañamos el trámite desde la radicación hasta la resolución de otorgamiento. Contáctenos en <strong>ingenieriabernal.co</strong> o al <strong>+57 302 477 8910</strong> para una asesoría inicial sin costo.</p>
-    </>,
-  },
-
-}
-
-export default articlesJ
+      <p>En <strong>BIC – Bernal Ingeniería Consultores</strong> elaboramos los estudios técnicos requeridos para tramitar la concesión de aguas ante la CAR: aforo hidrológico, estudio de aprovechamiento, memoria de cálculo del caudal de diseño y descripción técnica de la captación. Acompañamos el trámite desde la radicación hasta la resolución de otorgamiento. Contáctenos en <strong>ingenieriabernal.co</strong> o al <strong>+57 302 477 8910</strong> para una asesor

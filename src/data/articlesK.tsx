@@ -211,11 +211,11 @@ const articlesK: Record<string, {
   },
 
   'diferencia-bocatoma-captacion-aguas-colombia': {
-    title: 'Bocatoma vs captación de aguas en Colombia: diferencias y tipos',
+    title: 'Tipos de Bocatomas Colombia 2026: cuál elegir y cómo diseñarla según RAS 2017',
     date: 'Mayo 2026',
     readTime: '11 min',
     category: 'Diseño de Acueductos',
-    metaDesc: 'Conoce los tipos de bocatomas y sistemas de captación de aguas superficiales en Colombia según el RAS 2017: bocatomas laterales, de fondo, diques, pozos ribereños y más.',
+    metaDesc: 'Bocatoma lateral, de fondo, dique derivador o pozo ribereño: criterios técnicos para elegir y diseñar cada tipo en acueductos rurales Colombia según RAS 2017 Resolución 0330. BIC diseña bocatomas en Caldas y Eje Cafetero.',
     keywords: 'tipos bocatoma Colombia RAS 2017, bocatoma lateral fondo Colombia, captación aguas superficiales Colombia, diseño bocatoma acueducto Colombia, concesión aguas bocatoma CAR',
     body: <>
       <p>Cuando se diseña un acueducto en Colombia, la <strong>bocatoma</strong> es el primer elemento del sistema: la estructura que capta el agua de la fuente natural y la introduce al sistema de conducción. Existen varios tipos de bocatomas y sistemas de captación, cada uno apropiado para condiciones específicas de caudal, topografía y régimen del río. Esta guía explica las diferencias, los criterios de selección y los aspectos clave del diseño y los trámites legales según el RAS 2017.</p>
@@ -325,10 +325,4 @@ const articlesK: Record<string, {
 
       <QuoteFormInline serviceId="acueducto-alcantarillado" />
 
-      <p>Si necesita un ingeniero hidráulico para cualquiera de las 8 situaciones descritas, contáctenos en <strong>ingenieriabernal.co</strong> o al <strong>+57 302 477 8910</strong>. Atendemos todo Colombia con respuesta en menos de 24 horas.</p>
-    </>,
-  },
-
-}
-
-export default articlesK
+      <p>Si necesita un ingeniero hidráulico para cualquiera de las 8 situaciones descritas, contáctenos en <strong>ingenieriabernal.co</strong> o al <strong>+57 302 477 8910</strong>. Atendemos todo Colombia con respuest

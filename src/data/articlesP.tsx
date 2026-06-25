@@ -467,11 +467,11 @@ const articlesP: Record<string, {
   },
 
   'estudio-suelos-edificio-multifamiliar-requisitos-nsr10': {
-    title: 'Estudio de Suelos para Edificio Multifamiliar: Requisitos NSR-10',
+    title: 'Estudio de Suelos Edificio Multifamiliar Colombia 2026: sondeos NSR-10 y costos reales',
     date: 'Mayo 2026',
     readTime: '9 min',
     category: 'Geotecnia',
-    metaDesc: 'Requisitos del estudio de suelos para edificios multifamiliares en Colombia según NSR-10 Título H: número de sondeos, profundidad de exploración, informe geotécnico y nivel freático.',
+    metaDesc: 'Cuántos sondeos exige NSR-10 Título H para edificios multifamiliares en Colombia, a qué profundidad y qué incluye el informe geotécnico. Cotización en 24 h — BIC Bernal Ingeniería Consultores.',
     keywords: 'estudio suelos edificio Colombia, NSR-10 cimentaciones, sondeos geotécnicos edificio, nivel freático construcción Colombia',
     body: <>
       <p>Todo edificio multifamiliar en Colombia requiere, como condición previa para la expedición de la licencia de construcción, un <strong>estudio de suelos o estudio geotécnico</strong> elaborado por un ingeniero civil o geotécnico con tarjeta profesional COPNIA vigente. El NSR-10 Título H (Estudios Geotécnicos) es la norma que regula todos los requisitos de este estudio.</p>
@@ -885,8 +885,3 @@ const articlesP: Record<string, {
 
       <p>En BIC Ingeniería diseñamos redes de alcantarillado pluvial para urbanizaciones, colegios y municipios aplicando los criterios del <a href="/servicios/redes-hidrosanitarias" style={{color:'#17A2B8', fontWeight:600}}>RAS 2017 Título D y la Resolución 0330</a>. Incluimos modelación hidráulica en SWMM cuando el sistema requiere verificación de capacidad ante eventos extremos. Solicite propuesta técnica.</p>
     </>,
-  },
-
-}
-
-export default articlesP

@@ -5,11 +5,11 @@ const articlesC: Record<string, {
 }> = {
 
   'ras-2000-colombia': {
-    title: 'RAS 2000: el reglamento técnico que todo ingeniero de agua potable en Colombia debe dominar',
+    title: 'RAS 2000 Colombia 2026: guía técnica de diseño de acueductos y alcantarillados según Resolución 0330',
     date: 'Abril 2026',
     readTime: '11 min',
     category: 'Normativa',
-    metaDesc: 'Resumen técnico del RAS 2000 (Reglamento Técnico del Sector de Agua Potable y Saneamiento): títulos, niveles de complejidad, criterios de diseño y novedades de la Resolución 0330 de 2017.',
+    metaDesc: 'Niveles de complejidad, caudales de diseño, materiales y criterios de calidad del agua según RAS 2000 y Resolución 0330 de 2017. Referencia técnica obligatoria para diseñadores de acueductos y alcantarillados en Colombia.',
     keywords: 'RAS 2000 Colombia reglamento técnico agua, Resolución 0330 2017 Colombia acueducto, niveles complejidad RAS 2000, RAS 2017 Colombia acueducto diseño',
     body: <>
       <p>El <strong>Reglamento Técnico del Sector de Agua Potable y Saneamiento Básico (RAS 2000)</strong>, actualizado y vigente mediante la <strong>Resolución 0330 de 2017</strong> del Ministerio de Vivienda, Ciudad y Territorio, es la norma técnica colombiana de cumplimiento obligatorio para el diseño, construcción, supervisión, operación y mantenimiento de los sistemas de agua potable y saneamiento básico del país. Todo profesional que trabaje en infraestructura hídrica en Colombia debe conocerlo con profundidad: es la referencia que verifican las Corporaciones Autónomas, las Curadurías, el Ministerio de Vivienda y el DNP en cualquier proyecto del sector.</p>
@@ -302,10 +302,4 @@ const articlesC: Record<string, {
         <li><strong>Metodología:</strong> Debe demostrar comprensión del alcance del proyecto, un enfoque técnico claro (no genérico) y productos verificables. Una metodología copiada de propuestas anteriores sin adaptación al proyecto específico es fácilmente detectada por los evaluadores técnicos.</li>
         <li><strong>Cronograma:</strong> Realista, con la ruta crítica identificada y los hitos de entrega claramente definidos. Un cronograma con fechas imposibles de cumplir puede generar desconfianza o incumplimientos contractuales.</li>
       </ul>
-      <p><strong>BIC participa activamente en contratación pública con resultados comprobados en el Eje Cafetero. Si necesita un socio técnico para fortalecer su propuesta o busca asociarse para un proceso específico, contáctenos.</strong> <strong>Contáctenos: ingenieriabernal.co | WhatsApp +57 302 477 8910</strong></p>
-    </>,
-  },
-
-}
-
-export default articlesC
+      <p><strong>BIC participa activamente en contratación pública con resultados comprobados en el Eje Cafetero. Si necesita un socio técnico para fortalecer su propuesta o busca asociarse para un proceso específico, contáctenos.</strong> <strong>Contáctenos: ingenieriabernal.co | WhatsApp +57 302 477 8910</strong><
