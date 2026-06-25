@@ -16,23 +16,23 @@
   <!-- Páginas de servicio nacional -->
   <url><loc>https://ingenieriabernal.co/ingenieria-hidraulica-colombia</loc><lastmod>2026-04-25</lastmod><changefreq>monthly</changefreq><priority>0.95</priority></url>
   <url><loc>https://ingenieriabernal.co/gestion-riesgo-hidrico</loc><lastmod>2026-04-15</lastmod><changefreq>monthly</changefreq><priority>0.95</priority></url>
-  <url><loc>https://ingenieriabernal.co/licencia-de-urbanismo</loc><lastmod>2026-04-25</lastmod><changefreq>monthly</changefreq><priority>0.75</priority></url>
+  <!-- /licencia-de-urbanismo — noindex en componente, excluida del sitemap -->
   <url><loc>https://ingenieriabernal.co/obras-hidraulicas-colombia</loc><lastmod>2026-04-25</lastmod><changefreq>monthly</changefreq><priority>0.90</priority></url>
-  <url><loc>https://ingenieriabernal.co/urbanizacion-colombia</loc><lastmod>2026-04-25</lastmod><changefreq>monthly</changefreq><priority>0.75</priority></url>
+  <!-- /urbanizacion-colombia — noindex en componente, excluida del sitemap -->
   <url><loc>https://ingenieriabernal.co/bocatomas-colombia</loc><lastmod>2026-05-13</lastmod><changefreq>weekly</changefreq><priority>1.0</priority></url>
   <url><loc>https://ingenieriabernal.co/diseno-canal-riego-colombia</loc><lastmod>2026-04-23</lastmod><changefreq>monthly</changefreq><priority>0.92</priority></url>
   <url><loc>https://ingenieriabernal.co/encauzamiento-rios-colombia</loc><lastmod>2026-04-23</lastmod><changefreq>monthly</changefreq><priority>0.92</priority></url>
-  <url><loc>https://ingenieriabernal.co/plan-parcial-colombia</loc><lastmod>2026-05-13</lastmod><changefreq>monthly</changefreq><priority>0.75</priority></url>
+  <!-- /plan-parcial-colombia — noindex en componente, excluida del sitemap -->
   <url><loc>https://ingenieriabernal.co/ingenieria-hidraulica-manizales</loc><lastmod>2026-04-23</lastmod><changefreq>monthly</changefreq><priority>0.94</priority></url>
   <url><loc>https://ingenieriabernal.co/estudios-torrencialidad-colombia</loc><lastmod>2026-04-24</lastmod><changefreq>monthly</changefreq><priority>0.94</priority></url>
   <url><loc>https://ingenieriabernal.co/construir-cerca-rio-quebrada-colombia</loc><lastmod>2026-04-25</lastmod><changefreq>monthly</changefreq><priority>0.93</priority></url>
-  <url><loc>https://ingenieriabernal.co/ingenieria-proyectos-urbanisticos-colombia</loc><lastmod>2026-04-25</lastmod><changefreq>monthly</changefreq><priority>0.93</priority></url>
+  <!-- /ingenieria-proyectos-urbanisticos-colombia — noindex en componente, excluida del sitemap -->
   <url><loc>https://ingenieriabernal.co/obras-civiles-hidraulicas-colombia</loc><lastmod>2026-04-25</lastmod><changefreq>monthly</changefreq><priority>0.93</priority></url>
   <url><loc>https://ingenieriabernal.co/estudios-hidrologicos-vias-colombia</loc><lastmod>2026-04-25</lastmod><changefreq>monthly</changefreq><priority>0.93</priority></url>
   <url><loc>https://ingenieriabernal.co/memorias-hidrosanitarias-colombia</loc><lastmod>2026-04-25</lastmod><changefreq>monthly</changefreq><priority>0.93</priority></url>
   <url><loc>https://ingenieriabernal.co/me-pidieron-estudios-en-la-car</loc><lastmod>2026-04-25</lastmod><changefreq>monthly</changefreq><priority>0.94</priority></url>
-  <url><loc>https://ingenieriabernal.co/tengo-un-lote-colombia</loc><lastmod>2026-04-25</lastmod><changefreq>monthly</changefreq><priority>0.94</priority></url>
-  <url><loc>https://ingenieriabernal.co/gestion-riesgo-taludes-colombia</loc><lastmod>2026-04-25</lastmod><changefreq>monthly</changefreq><priority>0.93</priority></url>
+  <!-- /tengo-un-lote-colombia — noindex en componente, excluida del sitemap -->
+  <!-- /gestion-riesgo-taludes-colombia — noindex en componente, excluida del sitemap -->
   <url><loc>https://ingenieriabernal.co/ingenieria-hidraulica-colombia-desde-manizales</loc><lastmod>2026-04-25</lastmod><changefreq>monthly</changefreq><priority>0.92</priority></url>
   <url><loc>https://ingenieriabernal.co/modelacion-hidraulica-colombia</loc><lastmod>2026-05-27</lastmod><changefreq>monthly</changefreq><priority>0.95</priority></url>
   <url><loc>https://ingenieriabernal.co/modelacion-hidrologica-colombia</loc><lastmod>2026-05-27</lastmod><changefreq>monthly</changefreq><priority>0.95</priority></url>
@@ -120,7 +120,7 @@
   <!-- Landing pages locales — Manizales -->
   <url><loc>https://ingenieriabernal.co/estudio-de-inundabilidad-manizales</loc><lastmod>2026-04-15</lastmod><changefreq>monthly</changefreq><priority>0.92</priority></url>
   <!-- /estudio-de-suelos-manizales — noindex, excluida del sitemap -->
-  <url><loc>https://ingenieriabernal.co/licencia-de-construccion-manizales</loc><lastmod>2026-05-13</lastmod><changefreq>weekly</changefreq><priority>1.0</priority></url>
+  <!-- /licencia-de-construccion-manizales — noindex en componente, excluida del sitemap -->
   <!-- /estudio-de-suelos-pereira — noindex, excluida del sitemap -->
   <url><loc>https://ingenieriabernal.co/diseno-hidraulico-manizales</loc><lastmod>2026-05-13</lastmod><changefreq>weekly</changefreq><priority>1.0</priority></url>
   <url><loc>https://ingenieriabernal.co/modelacion-hidraulica-manizales</loc><lastmod>2026-04-15</lastmod><changefreq>monthly</changefreq><priority>0.95</priority></url>
@@ -128,7 +128,7 @@
   <url><loc>https://ingenieriabernal.co/interventoria-hidraulica-manizales</loc><lastmod>2026-04-15</lastmod><changefreq>monthly</changefreq><priority>0.88</priority></url>
   <url><loc>https://ingenieriabernal.co/diseno-hidraulico-pereira</loc><lastmod>2026-05-13</lastmod><changefreq>weekly</changefreq><priority>1.0</priority></url>
   <url><loc>https://ingenieriabernal.co/estudio-de-inundabilidad-pereira</loc><lastmod>2026-04-15</lastmod><changefreq>monthly</changefreq><priority>0.88</priority></url>
-  <url><loc>https://ingenieriabernal.co/licencia-de-construccion-pereira</loc><lastmod>2026-04-15</lastmod><changefreq>monthly</changefreq><priority>0.88</priority></url>
+  <!-- /licencia-de-construccion-pereira — noindex en componente, excluida del sitemap -->
   <!-- /estudio-de-suelos-eje-cafetero — noindex, excluida del sitemap -->
   <url><loc>https://ingenieriabernal.co/consultoria-ingenieria-civil-manizales</loc><lastmod>2026-04-15</lastmod><changefreq>monthly</changefreq><priority>0.88</priority></url>
   <url><loc>https://ingenieriabernal.co/gestion-riesgo-hidrico-manizales</loc><lastmod>2026-04-15</lastmod><changefreq>monthly</changefreq><priority>0.95</priority></url>
@@ -294,24 +294,24 @@
 
   <!-- Batch Q — Buyer-intent: costos y documentos -->
   <url><loc>https://ingenieriabernal.co/blog/documentos-diseno-hidrosanitario-colombia</loc><lastmod>2026-05-23</lastmod><changefreq>monthly</changefreq><priority>0.85</priority></url>
-  <url><loc>https://ingenieriabernal.co/blog/decreto-1807-plan-parcial-colombia</loc><lastmod>2026-05-23</lastmod><changefreq>monthly</changefreq><priority>0.85</priority></url>
+  <!-- /blog/decreto-1807-plan-parcial-colombia — noindex en NOINDEX_SLUGS, excluida del sitemap -->
 
   <!-- Batch R — Buyer-intent: costo plan parcial -->
-  <url><loc>https://ingenieriabernal.co/blog/cuanto-cuesta-plan-parcial-colombia</loc><lastmod>2026-05-23</lastmod><changefreq>monthly</changefreq><priority>0.90</priority></url>
+  <!-- /blog/cuanto-cuesta-plan-parcial-colombia — noindex en NOINDEX_SLUGS, excluida del sitemap -->
 
   <!-- Batch Junio 2026 — Páginas cliente ideal + blog intención comercial -->
-  <url><loc>https://ingenieriabernal.co/promotor-urbanizacion-colombia</loc><lastmod>2026-06-05</lastmod><changefreq>monthly</changefreq><priority>0.90</priority></url>
+  <!-- /promotor-urbanizacion-colombia — noindex en componente, excluida del sitemap -->
   <url><loc>https://ingenieriabernal.co/empresa-industria-colombia</loc><lastmod>2026-06-05</lastmod><changefreq>monthly</changefreq><priority>0.90</priority></url>
   <url><loc>https://ingenieriabernal.co/alcaldia-municipio-colombia</loc><lastmod>2026-06-05</lastmod><changefreq>monthly</changefreq><priority>0.90</priority></url>
-  <url><loc>https://ingenieriabernal.co/blog/cuanto-cuesta-estudio-riesgo-inundacion-colombia</loc><lastmod>2026-06-05</lastmod><changefreq>monthly</changefreq><priority>0.90</priority></url>
+  <!-- /blog/cuanto-cuesta-estudio-riesgo-inundacion-colombia — noindex en NOINDEX_SLUGS, excluida del sitemap -->
   <url><loc>https://ingenieriabernal.co/blog/que-estudios-pide-la-car-para-construir-cerca-rio-colombia</loc><lastmod>2026-06-05</lastmod><changefreq>monthly</changefreq><priority>0.90</priority></url>
   <url><loc>https://ingenieriabernal.co/blog/componente-hidrico-plan-parcial-colombia-guia</loc><lastmod>2026-06-05</lastmod><changefreq>monthly</changefreq><priority>0.90</priority></url>
   <url><loc>https://ingenieriabernal.co/blog/como-conseguir-contratos-ingenieria-hidraulica-municipios-colombia</loc><lastmod>2026-06-05</lastmod><changefreq>monthly</changefreq><priority>0.85</priority></url>
   <!-- Blog articles X — gaps comerciales: licencias, CAR, drenaje, precios -->
-  <url><loc>https://ingenieriabernal.co/blog/cuanto-cuesta-licencia-urbanismo-colombia</loc><lastmod>2026-06-05</lastmod><changefreq>monthly</changefreq><priority>0.90</priority></url>
+  <!-- /blog/cuanto-cuesta-licencia-urbanismo-colombia — noindex en NOINDEX_SLUGS, excluida del sitemap -->
   <url><loc>https://ingenieriabernal.co/blog/permiso-ocupacion-cauce-colombia</loc><lastmod>2026-06-05</lastmod><changefreq>monthly</changefreq><priority>0.88</priority></url>
   <url><loc>https://ingenieriabernal.co/blog/diseno-sistema-drenaje-pluvial-urbanizacion-colombia</loc><lastmod>2026-06-05</lastmod><changefreq>monthly</changefreq><priority>0.88</priority></url>
-  <url><loc>https://ingenieriabernal.co/blog/cuanto-cuesta-consultoria-hidraulica-colombia</loc><lastmod>2026-06-05</lastmod><changefreq>monthly</changefreq><priority>0.92</priority></url>
+  <!-- /blog/cuanto-cuesta-consultoria-hidraulica-colombia — noindex en NOINDEX_SLUGS, excluida del sitemap -->
 
   <!-- Batch Junio 2026 — Artículos servicio BIC faltantes del sitemap -->
   <url><loc>https://ingenieriabernal.co/blog/decreto-1807-riesgo-inundacion-colombia</loc><lastmod>2026-06-11</lastmod><changefreq>monthly</changefreq><priority>0.88</priority></url>
@@ -337,4 +337,4 @@
   <url><loc>https://ingenieriabernal.co/estudio-detallado-inundacion-decreto-1807</loc><lastmod>2026-06-19</lastmod><changefreq>monthly</changefreq><priority>0.90</priority></url>
   <url><loc>https://ingenieriabernal.co/diseno-ptar-tramite-permiso-vertimiento</loc><lastmod>2026-06-19</lastmod><changefreq>monthly</changefreq><priority>0.90</priority></url>
   <url><loc>https://ingenieriabernal.co/redes-hidrosanitarias-licencia-construccion</loc><lastmod>2026-06-19</lastmod><changefreq>monthly</changefreq><priority>0.90</priority></url>
-</urlset>
+</urlset>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   
