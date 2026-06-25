@@ -73,7 +73,7 @@ const articlesY: Record<string, {
         <h3>8. Aforo del cuerpo receptor (cuando aplica)</h3>
         <p>CORPOCALDAS puede exigir un aforo del cuerpo de agua receptor para verificar la capacidad de autodepuración del cauce. Esto aplica especialmente cuando el caudal del vertimiento supera el 10% del caudal mínimo del cuerpo receptor (Q95 o caudal de estiaje), o cuando el tramo receptor tiene declaratoria de ordenación por saturación de carga contaminante. El aforo debe realizarse en época de verano (caudal mínimo) y presentarse con metodología hidráulica validada.</p>
 
-        <QuoteFormInline serviceId="permisos-ambientales" />
+        <QuoteFormInline serviceId="permiso" />
 
         <h2>Vertimiento puntual vs. vertimiento difuso: diferencias en el trámite</h2>
         <p>El <strong>vertimiento puntual</strong> es aquel que se descarga al cuerpo de agua por un punto de salida definido y geolocalizable (tubo, canal, desagüe). Es el más común en industrias, predios residenciales y proyectos de infraestructura. El trámite descrito arriba aplica a este tipo.</p>
@@ -164,7 +164,7 @@ const articlesY: Record<string, {
           <li>Mantener actualizados los documentos legales (cámara de comercio, poderes, certificados) para que no venzan durante el trámite.</li>
         </ul>
 
-        <QuoteFormInline serviceId="concesion-aguas" />
+        <QuoteFormInline serviceId="concesion" />
 
         <h2>Concesión provisional vs. concesión definitiva</h2>
         <p>La <strong>concesión definitiva</strong> es el instrumento normal: se otorga por 10 años renovables, establece el caudal exacto autorizado y las condiciones de medición. La <strong>concesión provisional</strong> es una autorización temporal que algunas CARs otorgan por 1 o 2 años mientras completan el estudio técnico, especialmente en proyectos de acueductos rurales con urgencia de abastecimiento demostrada. No todas las CARs la otorgan de manera sistemática, y en CORPOCALDAS se concede solo con justificación expresa de urgencia. La concesión provisional no reemplaza la definitiva — el solicitante debe continuar el trámite ordinario mientras usa el recurso con la autorización temporal.</p>
