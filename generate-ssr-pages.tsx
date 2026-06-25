@@ -369,4 +369,7 @@ for (const [slug, article] of Object.entries(BLOG_ARTICLES)) {
   }
 }
 
-console.log(`\n📊 Resultado SSG blog articles
+console.log(`\n📊 Resultado SSG blog articles:`)
+console.log(`   ✅ Inyectados: ${blogInjected}`)
+console.log(`   ⚠️  Sin ruta:   ${blogSkipped}`)
+console.log(`   ❌ Errores:    ${blogErrors}`)
