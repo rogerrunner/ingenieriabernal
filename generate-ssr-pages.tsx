@@ -130,6 +130,7 @@ import RegionalArmenia from './src/pages/regional/RegionalArmenia'
 import RegionalEjeCafetero from './src/pages/regional/RegionalEjeCafetero'
 // Páginas tramite-intent junio 2026
 import TramitePermisoVertimientoColombia from './src/pages/TramitePermisoVertimientoColombia'
+import PermisoOcupacionCauceColombia from './src/pages/PermisoOcupacionCauceColombia'
 import ConcesionAguasSuperficialesTramite from './src/pages/ConcesionAguasSuperficialesTramite'
 import DisenoAcueductoEntregaESP from './src/pages/DisenoAcueductoEntregaESP'
 import EstudioDetalladoInundacionDecreto1807 from './src/pages/EstudioDetalladoInundacionDecreto1807'
@@ -182,6 +183,7 @@ const PAGES: Record<string, React.ComponentType> = {
   'regional/armenia': RegionalArmenia,
   'regional/eje-cafetero': RegionalEjeCafetero,
   // Páginas tramite-intent junio 2026
+  'permiso-ocupacion-cauce-colombia': PermisoOcupacionCauceColombia,
   'tramitar-permiso-vertimiento-colombia': TramitePermisoVertimientoColombia,
   'concesion-aguas-superficiales-tramite': ConcesionAguasSuperficialesTramite,
   'diseno-acueducto-entrega-esp': DisenoAcueductoEntregaESP,
@@ -369,7 +371,4 @@ for (const [slug, article] of Object.entries(BLOG_ARTICLES)) {
   }
 }
 
-console.log(`\n📊 Resultado SSG blog articles:`)
-console.log(`   ✅ Inyectados: ${blogInjected}`)
-console.log(`   ⚠️  Sin ruta:   ${blogSkipped}`)
-console.log(`   ❌ Errores:    ${blogErrors}`)
+console.log(`\n📊 Resultado SSG blog articles
