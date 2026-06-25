@@ -95,7 +95,6 @@ import DisenoAcueductoEntregaESP from './src/pages/DisenoAcueductoEntregaESP'
 import EstudioDetalladoInundacionDecreto1807 from './src/pages/EstudioDetalladoInundacionDecreto1807'
 import DisenoPTARTramitePermisoVertimiento from './src/pages/DisenoPTARTramitePermisoVertimiento'
 import RedesHidrosanitariasLicenciaConstruccion from './src/pages/RedesHidrosanitariasLicenciaConstruccion'
-import DisenoHidrosanitarioCIEdificio from './src/pages/DisenoHidrosanitarioCIEdificio'
 
 // ─── Mapa de rutas a componentes ─────────────────────────────────────────────
 const PAGES: Record<string, React.ComponentType> = {
@@ -148,7 +147,6 @@ const PAGES: Record<string, React.ComponentType> = {
   'estudio-detallado-inundacion-decreto-1807': EstudioDetalladoInundacionDecreto1807,
   'diseno-ptar-tramite-permiso-vertimiento': DisenoPTARTramitePermisoVertimiento,
   'redes-hidrosanitarias-licencia-construccion': RedesHidrosanitariasLicenciaConstruccion,
-  'diseno-hidrosanitario-sistema-contra-incendio-edificio-colombia': DisenoHidrosanitarioCIEdificio,
 }
 
 let injected = 0
@@ -305,16 +303,9 @@ for (const [slug, article] of Object.entries(BLOG_ARTICLES)) {
       `<div id="root">${staticContent}</div>`
     )
 
-    writeFileSync(htmlFile, html, 'utf-8')
-    console.log(`  ✅ /blog/${slug}`)
-    blogInjected++
-  } catch (err) {
-    console.error(`  ❌ Error /blog/${slug}:`, (err as Error).message?.slice(0, 120))
-    blogErrors++
-  }
-}
-
-console.log(`\n📊 Resultado SSG blog articles:`)
-console.log(`   ✅ Inyectados: ${blogInjected}`)
-console.log(`   ⚠️  Sin ruta:   ${blogSkipped}`)
-console.log(`   ❌ Errores:    ${blogErrors}`)
+    // ── Inyectar meta robots noindex en <head> para slugs bloqueados ──────────
+    // El X-Robots-Tag global en Vercel dice "index,follow" para todas las rutas.
+    // El SEOHead.tsx agrega noindex vía JS (useEffect), pero Googlebot puede
+    // indexar en el primer crawl antes de ejecutar JS. Inyectarlo en el HTML
+    // estático garantiza que ambos: header Y meta coincidan antes del JS.
+    if (NOI
