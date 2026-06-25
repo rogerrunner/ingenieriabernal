@@ -12,6 +12,46 @@
 
 import { renderToStaticMarkup } from 'react-dom/server'
 import { readFileSync, writeFileSync, existsSync } from 'fs'
+
+// ── NOINDEX_SLUGS: copiado de BlogDetail.tsx para uso en SSR build ──────────
+// Esta constante DEBE mantenerse sincronizada con NOINDEX_SLUGS en BlogDetail.tsx
+const NOINDEX_SLUGS_SSR = new Set([
+  'indice-edificabilidad-colombia-calculo-ejemplo',
+  'ras-2000-colombia',
+  'diferencias-ptar-ptap',
+  'ronda-hidrica-colombia',
+  'nsr-10-sistemas-contra-incendios',
+  'clasificacion-suelos-sucs-colombia-ejemplos',
+  'estudio-suelos-edificio-multifamiliar-requisitos-nsr10',
+  'estudio-suelos-torres-edificios-colombia',
+  'ensayo-spt-interpretacion-capacidad-portante',
+  'procesos-potabilizacion-agua-colombia-resolucion-0330',
+  'que-es-concesion-de-aguas-colombia',
+  'normas-tecnicas-diseno-acueductos-colombia-ras-2017',
+  'redes-hidrosanitarias-colombia',
+  'diferencia-bocatoma-captacion-aguas-colombia',
+  'cuanto-cuesta-ptar-aguas-residuales-colombia',
+  'cuanto-cuesta-plan-parcial-colombia',
+  'decreto-1807-plan-parcial-colombia',
+  'cuanto-cuesta-consultoria-hidraulica-colombia',
+  'cuanto-cuesta-diseno-acueducto-colombia-2026',
+  'cuanto-cuesta-diseno-alcantarillado-colombia',
+  'cuanto-cuesta-estudio-hidrologico',
+  'cuanto-cuesta-estudio-riesgo-inundacion-colombia',
+  'cuanto-cuesta-licencia-urbanismo-colombia',
+  'cuanto-cuesta-ptap-colombia-2026',
+  'cuanto-cuesta-sistema-contra-incendios-nsr10-colombia',
+  'presupuesto-diseno-ptap-veredal-colombia-2026',
+  'diseno-ptap-municipio-costos',
+  'costo-estudio-hec-ras-colombia-2026',
+  'interventoria-hidraulica-colombia',
+  'interventoria-hidraulica-obligaciones-costos-colombia',
+  'interventoria-obras-hidraulicas-colombia',
+  'estabilidad-taludes-eje-cafetero',
+  'requisitos-ptar-licencia-construccion',
+  'ptar-industrial-colombia',
+])
+
 import { join, dirname } from 'path'
 import { fileURLToPath } from 'url'
 import React from 'react'
@@ -95,6 +135,7 @@ import DisenoAcueductoEntregaESP from './src/pages/DisenoAcueductoEntregaESP'
 import EstudioDetalladoInundacionDecreto1807 from './src/pages/EstudioDetalladoInundacionDecreto1807'
 import DisenoPTARTramitePermisoVertimiento from './src/pages/DisenoPTARTramitePermisoVertimiento'
 import RedesHidrosanitariasLicenciaConstruccion from './src/pages/RedesHidrosanitariasLicenciaConstruccion'
+import DisenoHidrosanitarioCIEdificio from './src/pages/DisenoHidrosanitarioCIEdificio'
 
 // ─── Mapa de rutas a componentes ─────────────────────────────────────────────
 const PAGES: Record<string, React.ComponentType> = {
@@ -147,6 +188,7 @@ const PAGES: Record<string, React.ComponentType> = {
   'estudio-detallado-inundacion-decreto-1807': EstudioDetalladoInundacionDecreto1807,
   'diseno-ptar-tramite-permiso-vertimiento': DisenoPTARTramitePermisoVertimiento,
   'redes-hidrosanitarias-licencia-construccion': RedesHidrosanitariasLicenciaConstruccion,
+  'diseno-hidrosanitario-sistema-contra-incendio-edificio-colombia': DisenoHidrosanitarioCIEdificio,
 }
 
 let injected = 0
@@ -303,9 +345,31 @@ for (const [slug, article] of Object.entries(BLOG_ARTICLES)) {
       `<div id="root">${staticContent}</div>`
     )
 
-    // ── Inyectar meta robots noindex en <head> para slugs bloqueados ──────────
-    // El X-Robots-Tag global en Vercel dice "index,follow" para todas las rutas.
-    // El SEOHead.tsx agrega noindex vía JS (useEffect), pero Googlebot puede
-    // indexar en el primer crawl antes de ejecutar JS. Inyectarlo en el HTML
-    // estático garantiza que ambos: header Y meta coincidan antes del JS.
-    if (NOI
+    // ── Inyectar meta robots noindex en <head> para slugs bloqueados ──
+    // El X-Robots-Tag global en vercel.json dice "index,follow" para todas las rutas.
+    // El SEOHead.tsx agrega noindex vía useEffect (JS), pero Googlebot puede
+    // indexar en el primer crawl sin JS. Inyectarlo aquí garantiza que el HTML
+    // estático ya tenga noindex antes de que el JS se ejecute.
+    if (NOINDEX_SLUGS_SSR.has(slug)) {
+      // Reemplazar el meta robots si ya existe
+      if (html.includes('<meta name="robots"')) {
+        html = html.replace(/<meta name="robots"[^>]*>/g, '<meta name="robots" content="noindex, follow">')
+      } else {
+        // Insertar antes de </head> si no existe
+        html = html.replace('</head>', '<meta name="robots" content="noindex, follow"></head>')
+      }
+    }
+
+    writeFileSync(htmlFile, html, 'utf-8')
+    console.log(`  ✅ /blog/${slug}${NOINDEX_SLUGS_SSR.has(slug) ? ' [noindex]' : ''}`)
+    blogInjected++
+  } catch (err) {
+    console.error(`  ❌ Error /blog/${slug}:`, (err as Error).message?.slice(0, 120))
+    blogErrors++
+  }
+}
+
+console.log(`\n📊 Resultado SSG blog articles:`)
+console.log(`   ✅ Inyectados: ${blogInjected}`)
+console.log(`   ⚠️  Sin ruta:   ${blogSkipped}`)
+console.log(`   ❌ Errores:    ${blogErrors}`)
