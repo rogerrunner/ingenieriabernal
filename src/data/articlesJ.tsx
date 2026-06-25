@@ -380,4 +380,10 @@ const articlesJ: Record<string, {
 
       <QuoteFormInline serviceId="acueducto-alcantarillado" />
 
-      <p>En <strong>BIC – Bernal Ingeniería Consultores</strong> elaboramos los estudios técnicos requeridos para tramitar la concesión de aguas ante la CAR: aforo hidrológico, estudio de aprovechamiento, memoria de cálculo del caudal de diseño y descripción técnica de la captación. Acompañamos el trámite desde la radicación hasta la resolución de otorgamiento. Contáctenos en <strong>ingenieriabernal.co</strong> o al <strong>+57 302 477 8910</strong> para una asesor
+      <p>En <strong>BIC – Bernal Ingeniería Consultores</strong> elaboramos los estudios técnicos requeridos para tramitar la concesión de aguas ante la CAR: aforo hidrológico, estudio de aprovechamiento, memoria de cálculo del caudal de diseño y descripción técnica de la captación. Acompañamos el trámite desde la radicación hasta la resolución de otorgamiento. Contáctenos en <strong>ingenieriabernal.co</strong> o al <strong>+57 302 477 8910</strong> para una asesoría inicial sin costo.</p>
+    </>,
+  },
+
+}
+
+export default articlesJ

@@ -302,4 +302,10 @@ const articlesC: Record<string, {
         <li><strong>Metodología:</strong> Debe demostrar comprensión del alcance del proyecto, un enfoque técnico claro (no genérico) y productos verificables. Una metodología copiada de propuestas anteriores sin adaptación al proyecto específico es fácilmente detectada por los evaluadores técnicos.</li>
         <li><strong>Cronograma:</strong> Realista, con la ruta crítica identificada y los hitos de entrega claramente definidos. Un cronograma con fechas imposibles de cumplir puede generar desconfianza o incumplimientos contractuales.</li>
       </ul>
-      <p><strong>BIC participa activamente en contratación pública con resultados comprobados en el Eje Cafetero. Si necesita un socio técnico para fortalecer su propuesta o busca asociarse para un proceso específico, contáctenos.</strong> <strong>Contáctenos: ingenieriabernal.co | WhatsApp +57 302 477 8910</strong><
+      <p><strong>BIC participa activamente en contratación pública con resultados comprobados en el Eje Cafetero. Si necesita un socio técnico para fortalecer su propuesta o busca asociarse para un proceso específico, contáctenos.</strong> <strong>Contáctenos: ingenieriabernal.co | WhatsApp +57 302 477 8910</strong></p>
+    </>,
+  },
+
+}
+
+export default articlesC

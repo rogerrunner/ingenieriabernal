@@ -885,3 +885,8 @@ const articlesP: Record<string, {
 
       <p>En BIC Ingeniería diseñamos redes de alcantarillado pluvial para urbanizaciones, colegios y municipios aplicando los criterios del <a href="/servicios/redes-hidrosanitarias" style={{color:'#17A2B8', fontWeight:600}}>RAS 2017 Título D y la Resolución 0330</a>. Incluimos modelación hidráulica en SWMM cuando el sistema requiere verificación de capacidad ante eventos extremos. Solicite propuesta técnica.</p>
     </>,
+  },
+
+}
+
+export default articlesP

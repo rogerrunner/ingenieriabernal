@@ -325,4 +325,10 @@ const articlesK: Record<string, {
 
       <QuoteFormInline serviceId="acueducto-alcantarillado" />
 
-      <p>Si necesita un ingeniero hidráulico para cualquiera de las 8 situaciones descritas, contáctenos en <strong>ingenieriabernal.co</strong> o al <strong>+57 302 477 8910</strong>. Atendemos todo Colombia con respuest
+      <p>Si necesita un ingeniero hidráulico para cualquiera de las 8 situaciones descritas, contáctenos en <strong>ingenieriabernal.co</strong> o al <strong>+57 302 477 8910</strong>. Atendemos todo Colombia con respuesta en menos de 24 horas.</p>
+    </>,
+  },
+
+}
+
+export default articlesK
