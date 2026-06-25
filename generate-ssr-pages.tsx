@@ -133,6 +133,7 @@ import RegionalArmenia from './src/pages/regional/RegionalArmenia'
 import RegionalEjeCafetero from './src/pages/regional/RegionalEjeCafetero'
 // Páginas tramite-intent junio 2026
 import TramitePermisoVertimientoColombia from './src/pages/TramitePermisoVertimientoColombia'
+import PermisoOcupacionCauceColombia from './src/pages/PermisoOcupacionCauceColombia'
 import ConcesionAguasSuperficialesTramite from './src/pages/ConcesionAguasSuperficialesTramite'
 import DisenoAcueductoEntregaESP from './src/pages/DisenoAcueductoEntregaESP'
 import EstudioDetalladoInundacionDecreto1807 from './src/pages/EstudioDetalladoInundacionDecreto1807'
@@ -189,6 +190,7 @@ const PAGES: Record<string, React.ComponentType> = {
   'regional/eje-cafetero': RegionalEjeCafetero,
   // Páginas tramite-intent junio 2026
   'tramitar-permiso-vertimiento-colombia': TramitePermisoVertimientoColombia,
+  'permiso-ocupacion-cauce-colombia': PermisoOcupacionCauceColombia,
   'concesion-aguas-superficiales-tramite': ConcesionAguasSuperficialesTramite,
   'diseno-acueducto-entrega-esp': DisenoAcueductoEntregaESP,
   'estudio-detallado-inundacion-decreto-1807': EstudioDetalladoInundacionDecreto1807,
