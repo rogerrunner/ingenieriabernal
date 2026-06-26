@@ -25,6 +25,7 @@ import articlesU from '../data/articlesU'
 import articlesV from '../data/articlesV'
 import articlesW from '../data/articlesW'
 import articlesX from '../data/articlesX'
+import articlesY from '../data/articlesY'
 import SEOHead from '../components/SEOHead'
 import { BlueprintBg, Tag, ThinLine, SectionLabel, Btn, Section } from '../components/ui'
 import { SEOConfig } from '../lib/seo'
@@ -50,14 +51,10 @@ const NOINDEX_SLUGS = new Set([
   'diferencia-bocatoma-captacion-aguas-colombia',
   // PTAR construcción — atrae compradores de equipos / constructoras, no municipios
   'cuanto-cuesta-ptar-aguas-residuales-colombia',
-  'requisitos-ptar-licencia-construccion',
-  'ptar-industrial-colombia',
   // Urbanismo / plan parcial — fuera del foco hidráulico prioritario
   'cuanto-cuesta-plan-parcial-colombia',
   'decreto-1807-plan-parcial-colombia',
-  // Geotecnia / taludes — servicio que BIC no ofrece
-  'estabilidad-taludes-eje-cafetero',
-  // Precios/costos — atraen price shoppers y competencia buscando tarifas de referencia
+  // Precios/costos — atraen price shoppers y competencia
   'cuanto-cuesta-consultoria-hidraulica-colombia',
   'cuanto-cuesta-diseno-acueducto-colombia-2026',
   'cuanto-cuesta-diseno-alcantarillado-colombia',
@@ -73,6 +70,11 @@ const NOINDEX_SLUGS = new Set([
   'interventoria-hidraulica-colombia',
   'interventoria-hidraulica-obligaciones-costos-colombia',
   'interventoria-obras-hidraulicas-colombia',
+  // Geotecnia / taludes — servicio que BIC no ofrece
+  'estabilidad-taludes-eje-cafetero',
+  // PTAR construcción adicional
+  'requisitos-ptar-licencia-construccion',
+  'ptar-industrial-colombia',
 ])
 
 // ─── ARTICLE CONTENT ────────────────────────────────────────────────────────
@@ -375,10 +377,14 @@ const ARTICLES: Record<string, {
   ...articlesV,
   ...articlesW,
   ...articlesX,
+  ...articlesY,
 }
 
 // ─── SERVICE LINKS PER ARTICLE ──────────────────────────────────────────────
 const SERVICE_LINKS: Record<string, { label: string; href: string }> = {
+  // articlesY
+  'documentos-permiso-vertimiento-corpocaldas-2026':           { label: 'Permiso de Vertimiento — Trámite ante CAR',       href: '/empresa-industria-colombia' },
+  'cuanto-demora-concesion-aguas-superficiales-colombia-2026': { label: 'Concesión de Aguas — Estudio Hidrológico',         href: '/servicios/estudios-hidrologicos' },
   'cuanto-cuesta-estudio-riesgo-inundacion-colombia': { label: 'Estudio de Riesgo por Inundación — Decreto 1807', href: '/gestion-riesgo-hidrico' },
   'que-estudios-pide-la-car-para-construir-cerca-rio-colombia': { label: 'Estudios requeridos por la CAR', href: '/me-pidieron-estudios-en-la-car' },
   'componente-hidrico-plan-parcial-colombia-guia': { label: 'Plan Parcial — Componente Hídrico', href: '/plan-parcial-colombia' },
@@ -421,7 +427,6 @@ const SERVICE_LINKS: Record<string, { label: string; href: string }> = {
   'regalias-acueducto-colombia':                     { label: 'Formulación Regalías MGA-Web',           href: '/servicios/regalias-mga' },
   'caso-estudio-acueducto-rural':                    { label: 'Acueducto y Alcantarillado',             href: '/servicios/diseno-acueductos' },
   'plan-mejoramiento-irca-colombia':                 { label: 'Acueducto y Alcantarillado',             href: '/servicios/diseno-acueductos' },
-  'decreto-1807-riesgo-inundacion-colombia':         { label: 'Gestión del Riesgo Hídrico — Decreto 1807',  href: '/gestion-riesgo-hidrico' },
   'contratar-consultoria-hidraulica-colombia':       { label: 'Ver todos nuestros servicios',           href: '/servicios' },
   // articlesE
   'bocatoma-caudal-riego-colombia':                  { label: 'Diseño de Bocatomas y Obras Hidráulicas', href: '/obras-hidraulicas-colombia' },
@@ -548,7 +553,7 @@ function ArticleBody({ body }: { body: React.ReactNode }) {
 
 export default function BlogDetail() {
   const [, params] = useRoute('/blog/:slug')
-  const slug = (params as Record<string, string> | null)?.slug || ''
+  const slug = params?.slug || ''
   const article = ARTICLES[slug]
 
   // SEO configuration for the article
@@ -575,28 +580,25 @@ export default function BlogDetail() {
         'headline': article.title,
         'description': article.metaDesc,
         'keywords': article.keywords,
-        'articleSection': article.category,
         'url': `https://ingenieriabernal.co/blog/${slug}`,
-        'mainEntityOfPage': `https://ingenieriabernal.co/blog/${slug}`,
-        'datePublished': '2024-01-01',
-        'dateModified': '2026-01-01',
+        'datePublished': article.date,
+        'dateModified': article.date,
         'inLanguage': 'es-CO',
         'author': {
           '@type': 'Person',
+          '@id': 'https://ingenieriabernal.co/#rogerio',
           'name': 'Rogerio Bernal Ríos',
-          'url': 'https://ingenieriabernal.co/sobre-mi',
-          'alumniOf': {
-            '@type': 'CollegeOrUniversity',
-            'name': 'Universidad Nacional de Colombia',
-          },
+          'url': 'https://ingenieriabernal.co',
+          'jobTitle': 'Ingeniero Civil — Especialista en Ingeniería Hidráulica y Ambiental',
         },
         'publisher': {
-          '@type': 'Organization',
-          'name': 'Bernal Ingeniería Consultores',
+          '@type': 'LocalBusiness',
+          '@id': 'https://ingenieriabernal.co/#firma',
+          'name': 'BIC Bernal Ingeniería Consultores',
           'url': 'https://ingenieriabernal.co',
           'logo': {
             '@type': 'ImageObject',
-            'url': 'https://ingenieriabernal.co/logo.png',
+            'url': 'https://ingenieriabernal.co/favicon.svg',
           },
         },
         'isPartOf': {
@@ -604,25 +606,12 @@ export default function BlogDetail() {
           'name': 'Blog Técnico — BIC Bernal Ingeniería Consultores',
           'url': 'https://ingenieriabernal.co/blog',
         },
+        'mainEntityOfPage': {
+          '@type': 'WebPage',
+          '@id': `https://ingenieriabernal.co/blog/${slug}`,
+        },
       })
       document.head.appendChild(schema)
-
-      // BreadcrumbList JSON-LD
-      const existingBreadcrumb = document.getElementById('blog-breadcrumb-schema')
-      if (existingBreadcrumb) existingBreadcrumb.remove()
-      const breadcrumb = document.createElement('script')
-      breadcrumb.id = 'blog-breadcrumb-schema'
-      breadcrumb.type = 'application/ld+json'
-      breadcrumb.text = JSON.stringify({
-        '@context': 'https://schema.org',
-        '@type': 'BreadcrumbList',
-        'itemListElement': [
-          { '@type': 'ListItem', 'position': 1, 'name': 'Inicio', 'item': 'https://ingenieriabernal.co' },
-          { '@type': 'ListItem', 'position': 2, 'name': 'Blog', 'item': 'https://ingenieriabernal.co/blog' },
-          { '@type': 'ListItem', 'position': 3, 'name': article.title, 'item': `https://ingenieriabernal.co/blog/${slug}` },
-        ],
-      })
-      document.head.appendChild(breadcrumb)
 
       // FAQ JSON-LD (when article has faqItems)
       const existingFaq = document.getElementById('blog-faq-schema')
@@ -645,9 +634,10 @@ export default function BlogDetail() {
     }
 
     return () => {
-      document.getElementById('blog-schema')?.remove()
-      document.getElementById('blog-breadcrumb-schema')?.remove()
-      document.getElementById('blog-faq-schema')?.remove()
+      const schema = document.getElementById('blog-schema')
+      if (schema) schema.remove()
+      const faqSchema = document.getElementById('blog-faq-schema')
+      if (faqSchema) faqSchema.remove()
     }
   }, [article, slug])
 
@@ -721,4 +711,25 @@ export default function BlogDetail() {
             <p style={{ color: 'rgba(255,255,255,0.65)', fontSize: 14, margin: '0 0 20px' }}>
               BIC opera en todo Colombia. Primera consulta sin costo. Respuesta en menos de 24 horas.
             </p>
-            <div s
+            <div style={{ display: 'flex', gap: 12, justifyContent: 'center', flexWrap: 'wrap' }}>
+              <a
+                href={`https://wa.me/${WA}?text=${encodeURIComponent('Hola, leí el artículo en ingenieriabernal.co y necesito consultoría técnica.')}`}
+                target="_blank" rel="noreferrer"
+                style={{
+                  display: 'inline-flex', alignItems: 'center', gap: 8,
+                  padding: '12px 28px', borderRadius: '2px', textDecoration: 'none',
+                  fontFamily: "'Montserrat', sans-serif", fontWeight: 600, fontSize: 13,
+                  letterSpacing: '0.04em', background: '#25D366', color: '#fff',
+                  boxShadow: '0 4px 12px rgba(37,211,102,0.35)',
+                }}
+              >
+                📱 Propuesta en 24 h — sin costo
+              </a>
+              <Btn href="/blog" variant="outline" dark>← Todos los artículos</Btn>
+            </div>
+          </div>
+        </div>
+      </Section>
+    </>
+  )
+}
