@@ -1,357 +1,249 @@
 import { useEffect } from 'react'
 import SEOHead from '@/components/SEOHead'
-import SpeakableSchema from '@/components/SpeakableSchema'
-import SchemaMarkup from '@/components/SchemaMarkup'
-import { BlueprintBg, ThinLine, SectionLabel, Btn, Section, Tag } from '@/components/ui'
 import QuoteFormInline from '@/components/QuoteFormInline'
+import { BlueprintBg, ThinLine, SectionLabel, Btn, Section, Tag, CTABanner } from '@/components/ui'
 
 const WA = '573024778910'
-const WA_MSG = encodeURIComponent('Hola, necesitamos diseño de sistema contra incendios NSR-10 para un proyecto. ¿Pueden enviarnos una propuesta técnica con sus credenciales COPNIA?')
+const WA_MSG = encodeURIComponent(
+  'Hola, necesito tramitar una concesión de aguas superficiales ante la CAR. ¿BIC puede elaborar el estudio hidrológico y el PUEAA?'
+)
 
 const seoConfig = {
-  title: 'Contratar Diseño Sistema Contra Incendios NSR-10 Colombia | NFPA 13 · Desde $5M COP | BIC COPNIA',
-  description: 'Diseño sistema contra incendios NSR-10 Colombia para municipios y entidades. COPNIA-UNAL, sin subcontratistas, trato directo. Rociadores NFPA 13, gabinetes, bombas CI. Desde $5M COP. Propuesta 24 h.',
+  title: 'Concesión de Aguas Superficiales Colombia 2026 — Trámite ante CAR | BIC',
+  description: 'BIC tramita concesiones de aguas superficiales ante CORPOCALDAS, CARDER y CRQ: estudio hidrológico, PUEAA Decreto 1090/2018, aforo y expediente completo. Para riego, acueducto rural e industria. COPNIA vigente. Cotización en 24 h.',
   keywords: [
-    'sistemas contra incendios NSR-10 Colombia',
-    'diseño sistema contra incendio NSR-10',
-    'NSR-10 Título J contra incendios',
-    'NSR-10 Título K protección especial',
-    'rociadores automáticos NFPA 13 Colombia',
-    'red hidrantes NFPA 14 Colombia',
-    'diseño CI centro comercial Colombia',
-    'diseño CI edificio Colombia',
-    'memoria CI licencia construcción',
-    'diseño sistema extinción Colombia',
-    'NFPA Colombia ingeniería',
-    'sistema detección incendio NFPA 72',
+    'concesión de aguas superficiales Colombia 2026',
+    'tramitar concesión aguas CORPOCALDAS',
+    'concesión aguas superficiales CAR Colombia',
+    'PUEAA Plan Uso Eficiente Ahorro Agua Colombia',
+    'concesión aguas riego Colombia',
+    'concesión aguas acueducto rural Colombia',
+    'Decreto 1076 concesión aguas Colombia',
+    'estudio hidrológico concesión aguas Colombia',
+    'FUN formulario concesión aguas Colombia',
+    'concesión aguas CARDER Risaralda',
+    'concesión aguas CRQ Quindío',
   ],
-  canonical: 'https://ingenieriabernal.co/servicios/contra-incendios-nsr10',
+  canonical: 'https://ingenieriabernal.co/servicios/concesion-de-aguas',
 }
 
-const SISTEMAS = [
+const schemaFAQ = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: [
+    {
+      '@type': 'Question',
+      name: '¿Qué es la concesión de aguas superficiales y quién la necesita en Colombia?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'La concesión de aguas superficiales es la autorización que otorga la CAR para captar agua de un río, quebrada, canal o laguna para uso doméstico, agrícola, pecuario, industrial o de acueducto. La necesita cualquier persona natural o jurídica que use aguas superficiales sin contar con conexión a un acueducto autorizado o que capture directamente de fuente hídrica para riego, beneficio de café, ganadería, industria o abastecimiento comunitario. Se tramita ante la CAR del departamento donde está ubicada la fuente: CORPOCALDAS, CARDER o CRQ en el Eje Cafetero.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: '¿Qué documentos exige CORPOCALDAS para la concesión de aguas?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'CORPOCALDAS exige: (1) Formulario Único Nacional (FUN) de solicitud de concesión, (2) Plan de Uso Eficiente y Ahorro del Agua (PUEAA) conforme al Decreto 1090 de 2018, (3) estudio hidrológico que acredite disponibilidad de caudal respetando el caudal ecológico (mínimo 25% del caudal medio mensual multianual según Decreto 3930), (4) aforo in situ del punto de captación, (5) plano de localización con coordenadas Magna-Sirgas del punto de captación, (6) descripción del uso del agua y obras de captación propuestas, y (7) documentos de identidad y título de tenencia del predio. BIC elabora el expediente completo y acompaña la radicación.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: '¿Qué es el PUEAA y por qué es obligatorio para la concesión de aguas?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'El Plan de Uso Eficiente y Ahorro del Agua (PUEAA) es un documento técnico obligatorio desde el Decreto 1090 de 2018 para todos los que soliciten concesión de aguas. Debe describir: el sistema de captación y distribución, el caudal requerido con justificación técnica, las pérdidas estimadas y su reducción, las medidas de uso eficiente y ahorro del agua, y el programa de seguimiento. La CAR evalúa el PUEAA como parte del proceso de aprobación de la concesión. BIC elabora el PUEAA conforme a la guía del MADS y al formato específico de cada CAR.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: '¿Cuánto tiempo demora la concesión de aguas ante CORPOCALDAS?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'El plazo legal es de 30 días hábiles para caudales menores a 0.1 m³/s (Decreto 1076/2015). En la práctica, CORPOCALDAS resuelve entre 4 y 8 meses cuando el expediente entra completo. Si hay correcciones o requerimientos, el trámite puede extenderse a 12-18 meses. El tiempo de preparación del expediente en BIC es 3 a 6 semanas según disponibilidad de información hidrológica de la fuente. Cotización en 24 h: WA +57 302 477 8910.',
+      },
+    },
+  ],
+}
+
+const USOS = [
   {
-    icon: '🚿',
-    titulo: 'Rociadores automáticos — NFPA 13',
-    desc: 'Diseño hidráulico del sistema de rociadores: clasificación de peligro (ordinario, extra), densidad de aplicación, área de operación, presiones residuales y caudales de diseño. Selección de rociadores (colgantes, laterales, ocultos) y trazado de ramales, alimentadores y tubería principal según NFPA 13 y NSR-10 Título J.',
+    icon: '🌱',
+    titulo: 'Riego agrícola y cafetero',
+    desc: 'Captación para sistemas de riego tecnificado en fincas cafeteras, ganaderas y hortofrutícolas. PUEAA con balance hídrico del cultivo y plan de riego.',
   },
   {
-    icon: '🏗️',
-    titulo: 'Red de hidrantes internos y externos — NFPA 14',
-    desc: 'Diseño de la red de gabinetes de manguera (BIE) para uso de bomberos. Cálculo de caudal de diseño (250 GPM por gabinete simultáneo), presiones mínimas en boca de salida (100 psi) y trazado de tuberías. Hidrantes externos según exigencias de bomberos y curadurías. Cumplimiento NFPA 14 y NSR-10 Título J.',
-  },
-  {
-    icon: '⚡',
-    titulo: 'Sistema de detección y alarma — NFPA 72',
-    desc: 'Diseño de la red de detectores de humo y/o calor, pulsadores manuales, sirenas y panel de control de incendio conforme a NFPA 72. Integración con la central de monitoreo y los sistemas de evacuación del edificio. Cálculo de cobertura de detectores según el uso del espacio.',
-  },
-  {
-    icon: '💧',
-    titulo: 'Cuarto de bombas — NFPA 20',
-    desc: 'Diseño del cuarto de bombas CI: bomba principal (eléctrica o diésel), bomba jockey de mantenimiento de presión y bomba de reserva. Cálculo de capacidad (GPM) y presión (PSI), selección de equipos certificados FM o UL, y trazado de tuberías de succión y descarga conforme a NFPA 20.',
+    icon: '🏘️',
+    titulo: 'Acueducto rural y veredal',
+    desc: 'Abastecimiento comunitario de acueductos veredales, parcelaciones y condominios campestres sin conexión a acueducto municipal.',
   },
   {
     icon: '🏭',
-    titulo: 'Sistemas especiales de extinción — NSR-10 Título K',
-    desc: 'Para cocinas industriales (sistemas Ansul), áreas de servidores (CO₂ o gases limpios FK-5-1-12, Novec 1230) y bodegas de materias peligrosas. Diseño conforme a NFPA 17A, NFPA 2001 y el Título K de la NSR-10. Integración con el sistema de detección general del edificio.',
+    titulo: 'Uso industrial y agroindustrial',
+    desc: 'Beneficiaderos de café, plantas de proceso, piscicultura y extractivas que requieren agua superficial para sus procesos productivos.',
   },
   {
-    icon: '📐',
-    titulo: 'Memorias, planos y especificaciones',
-    desc: 'Entrega completa: memoria hidráulica de diseño con cálculos en hoja de cálculo y modelación hydraulic, planos isométricos de tuberías CI (DWG y PDF), especificaciones técnicas de materiales y equipos, lista de cantidades y presupuesto APU. Documentación lista para radicación en curadurías urbanas y Subsecretaría de Despacho del Sector CI (SDSCJ).',
+    icon: '🏗️',
+    titulo: 'Obras y campamentos',
+    desc: 'Captación temporal para campamentos de obra vial, minería e ingeniería con alta demanda de agua en zonas sin infraestructura de acueducto.',
   },
 ]
 
-const PROYECTOS_TIPOS = [
-  { tipo: 'Centros comerciales y grandes superficies', desc: 'Diseño CI completo para locales, área de parqueaderos y bodegas logísticas. Makarí Mall Dosquebradas como referencia ejecutada.' },
-  { tipo: 'Hospitales y Centros de Salud Pública', desc: 'Establecimientos hospitalarios con zonas de alto riesgo, gases medicinales y requerimientos diferenciados por la Secretaría de Salud y el Cuerpo de Bomberos.' },
-  { tipo: 'Plantas industriales y bodegas logísticas', desc: 'Almacenamiento de mercancías clasificadas, naves de producción y plantas de alimentos con niveles de peligro extra o especiales.' },
-  { tipo: 'Colegios y universidades', desc: 'Instalaciones educativas con aulas, laboratorios y cocinas que requieren sistemas de detección diferenciados por zona.' },
-]
-
-const NORMATIVA_CI = [
-  { norma: 'NSR-10 Título J', aplica: 'Protección contra incendios — sistemas activos generales' },
-  { norma: 'NSR-10 Título K', aplica: 'Sistemas especiales de extinción (CO₂, gases limpios, espuma)' },
-  { norma: 'NFPA 13', aplica: 'Instalación de sistemas de rociadores automáticos' },
-  { norma: 'NFPA 14', aplica: 'Instalación de sistemas de tuberías verticales y mangueras' },
-  { norma: 'NFPA 20', aplica: 'Instalación de bombas centrífugas estacionarias para protección contra incendios' },
-  { norma: 'NFPA 72', aplica: 'Código nacional de alarmas de incendio y señalización' },
-  { norma: 'NFPA 17A', aplica: 'Sistemas de extinción por agentes húmedos (cocinas industriales)' },
-  { norma: 'NFPA 2001', aplica: 'Sistemas de extinción por agentes limpios (salas eléctricas, servidores)' },
-]
-
-const FAQ_CI = [
+const PROCESO = [
   {
-    q: '¿Qué norma rige el diseño de redes contra incendio en Colombia?',
-    a: 'En Colombia el diseño de redes contra incendio está regulado por la NSR-10 Títulos J y K, complementada con NFPA 13 (rociadores), NFPA 14 (gabinetes) y NFPA 20 (bombas contra incendio).',
+    paso: '01',
+    titulo: 'Visita de campo y aforo',
+    desc: 'Reconocimiento del punto de captación propuesto, aforo del caudal disponible (método molinete o sección-velocidad) y registro fotográfico georeferenciado. Verificación de caudal ecológico requerido.',
   },
   {
-    q: '¿Cuándo se requiere una red contra incendio según la NSR-10?',
-    a: 'La NSR-10 exige red contra incendio en edificaciones de uso comercial, industrial u hotelero con área mayor a 500 m², edificios de más de 4 pisos, y cualquier instalación que maneje materiales peligrosos o de alta carga combustible.',
+    paso: '02',
+    titulo: 'Estudio hidrológico',
+    desc: 'Análisis de caudales medios mensuales de la fuente con datos IDEAM o generación sintética. Verificación de disponibilidad de caudal para el uso solicitado respetando el caudal ecológico (Decreto 3930/2010). Generación del balance hídrico.',
   },
   {
-    q: '¿Cuánto cuesta el diseño de una red contra incendio?',
-    a: 'El costo depende del área del proyecto, el número de sistemas requeridos (gabinetes BIE, rociadores, sistema diluvio) y el tipo de edificio. BIC incluye memorias de cálculo y planos firmados COPNIA, listos para trámite de licencia. Propuesta en 24 h sin costo.',
+    paso: '03',
+    titulo: 'Plan de Uso Eficiente y Ahorro del Agua (PUEAA)',
+    desc: 'Elaboración del PUEAA conforme al Decreto 1090 de 2018 y al formato exigido por la CAR: descripción de la obra de captación, caudal justificado técnicamente, pérdidas estimadas, medidas de ahorro y programa de seguimiento con indicadores.',
+  },
+  {
+    paso: '04',
+    titulo: 'Elaboración del expediente técnico',
+    desc: 'Diligenciamiento del Formulario Único Nacional (FUN), informe técnico con estudio hidrológico, PUEAA, planos de la obra de captación georeferenciados y todos los anexos requeridos por la CAR. Revisión de requisitos ante CORPOCALDAS, CARDER o CRQ según localización.',
+  },
+  {
+    paso: '05',
+    titulo: 'Radicación y seguimiento ante la CAR',
+    desc: 'Radicación del expediente ante la CAR correspondiente y seguimiento durante el proceso de evaluación. BIC atiende requerimientos técnicos adicionales de la corporación y gestiona la resolución de otorgamiento o las correcciones necesarias.',
   },
 ]
 
-export default function ServicioContraIncendiosNSR10() {
-  useEffect(() => { window.scrollTo(0, 0) }, [])
+export default function ServicioConcesionAguas() {
+  useEffect(() => {
+    window.scrollTo(0, 0)
+    const id = 'schema-faq-concesion-aguas'
+    if (!document.getElementById(id)) {
+      const s = document.createElement('script')
+      s.id = id
+      s.type = 'application/ld+json'
+      s.text = JSON.stringify(schemaFAQ)
+      document.head.appendChild(s)
+    }
+    return () => { document.getElementById(id)?.remove() }
+  }, [])
 
   return (
     <>
       <SEOHead config={seoConfig} />
-      <SpeakableSchema name="Diseño Red Contra Incendio NSR-10 Colombia | BIC" />
-      <SchemaMarkup
-        type="service"
-        serviceName="Diseño Red Contra Incendio NSR-10 — NFPA 13/14/20"
-        serviceDesc={seoConfig.description}
-        serviceUrl="/servicios/contra-incendios-nsr10"
-        faqItems={FAQ_CI}
-      />
+      <BlueprintBg />
 
-      {/* ── HERO ── */}
-      <section style={{
-        background: 'linear-gradient(135deg, #001A33 0%, #002A50 60%, #003B6F 100%)',
-        paddingTop: 120, paddingBottom: 80,
-        position: 'relative', overflow: 'hidden',
-      }}>
-        <BlueprintBg opacity={0.07} />
-        <div style={{ maxWidth: 900, margin: '0 auto', padding: '0 24px', position: 'relative' }}>
-          <SectionLabel light>Servicio especializado</SectionLabel>
-          <h1 style={{
-            fontFamily: "'Playfair Display', serif", fontWeight: 700, color: '#fff',
-            fontSize: 'clamp(28px, 5vw, 44px)', lineHeight: 1.2, marginBottom: 24,
-          }}>
-            Sistemas Contra Incendios NSR-10<br />
-            <span style={{ color: '#17A2B8' }}>Títulos J y K · NFPA para Colombia</span>
-          </h1>
-          <p style={{
-            fontFamily: "'Lato', sans-serif", color: 'rgba(255,255,255,0.82)',
-            fontSize: 17, lineHeight: 1.75, maxWidth: 720, marginBottom: 36,
-          }}>
-            BIC Bernal Ingeniería Consultores diseña sistemas contra incendios completos conforme a
-            la NSR-10 Títulos J y K y las normas NFPA para edificios residenciales, centros
-            comerciales, plantas industriales, hoteles, clínicas y bodegas en Colombia. Entregamos
-            memorias hidráulicas, planos isométricos, especificaciones de equipos y presupuestos
-            APU listos para radicación en curadurías urbanas. Rogerio Bernal Ríos, Especialista en
-            Ingeniería Hidráulica y Ambiental (UNAL, COPNIA 17202-313228), ha diseñado los sistemas
-            CI del Makarí Mall en Dosquebradas y múltiples proyectos en el Eje Cafetero y Colombia.
-          </p>
-          <div style={{ display: 'flex', gap: 12, flexWrap: 'wrap' }}>
-            <Btn href={`https://wa.me/${WA}?text=${WA_MSG}`}>
-              Solicitar cotización
-            </Btn>
-            <Btn variant="outline" href="/servicios" dark>
-              Ver todos los servicios
-            </Btn>
-          </div>
-        </div>
-      </section>
-
-      {/* ── TAGS ── */}
-      <div style={{ background: '#0A2540', padding: '14px 24px', borderBottom: '1px solid rgba(23,162,184,0.15)' }}>
-        <div style={{ maxWidth: 900, margin: '0 auto', display: 'flex', gap: 8, flexWrap: 'wrap', alignItems: 'center' }}>
-          <span style={{ fontFamily: "'Montserrat', sans-serif", fontSize: 11, color: 'rgba(255,255,255,0.5)', marginRight: 4 }}>Normativa:</span>
-          {['NSR-10 Título J', 'NSR-10 Título K', 'NFPA 13', 'NFPA 14', 'NFPA 20', 'NFPA 72'].map(t => (
-            <Tag key={t}>{t}</Tag>
-          ))}
-        </div>
-      </div>
-
-      {/* ── SISTEMAS QUE DISEÑAMOS ── */}
-      <Section bg="#F8FAFC" style={{ padding: '80px 24px' }}>
-        <div style={{ maxWidth: 900, margin: '0 auto' }}>
-          <SectionLabel>Alcance del servicio</SectionLabel>
-          <h2 style={{
-            fontFamily: "'Playfair Display', serif", fontWeight: 700, color: '#001A33',
-            fontSize: 'clamp(22px, 4vw, 32px)', marginBottom: 8,
-          }}>Sistemas que diseñamos</h2>
-          <ThinLine mb={40} />
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: 24 }}>
-            {SISTEMAS.map((s) => (
-              <div key={s.titulo} style={{
-                background: '#fff', border: '1px solid #E2E8F0', borderRadius: 4,
-                padding: 28, borderTop: '3px solid #17A2B8',
-              }}>
-                <div style={{ fontSize: 28, marginBottom: 12 }}>{s.icon}</div>
-                <h3 style={{
-                  fontFamily: "'Montserrat', sans-serif", fontWeight: 700, color: '#001A33',
-                  fontSize: 14, marginBottom: 10,
-                }}>{s.titulo}</h3>
-                <p style={{
-                  fontFamily: "'Lato', sans-serif", color: '#475569', fontSize: 14, lineHeight: 1.65,
-                }}>{s.desc}</p>
-              </div>
-            ))}
-          </div>
+      {/* HERO */}
+      <Section className="pt-28 pb-16 text-center">
+        <Tag>CORPOCALDAS · CARDER · CRQ — Eje Cafetero y Colombia</Tag>
+        <h1 className="text-4xl md:text-5xl font-extrabold text-white mt-4 mb-6 leading-tight">
+          Concesión de Aguas Superficiales<br />
+          <span className="text-blue-400">Trámite ante CAR Colombia 2026</span>
+        </h1>
+        <p className="text-lg text-slate-300 max-w-2xl mx-auto mb-8">
+          BIC tramita concesiones de aguas superficiales ante{' '}
+          <strong>CORPOCALDAS, CARDER y CRQ</strong>: estudio hidrológico,
+          aforo del punto de captación, <strong>PUEAA</strong> (Decreto 1090/2018)
+          y expediente completo para radicación. Para riego, acueducto rural e industria.
+          Cotización en 24 horas. COPNIA vigente.
+        </p>
+        <div className="flex flex-wrap justify-center gap-4">
+          <Btn href={`https://wa.me/${WA}?text=${WA_MSG}`} target="_blank">
+            Cotizar concesión de aguas
+          </Btn>
+          <Btn href="tel:+573024778910" variant="outline">
+            +57 302 477 8910
+          </Btn>
         </div>
       </Section>
 
-      {/* ── MARCO NORMATIVO ── */}
-      <Section bg="#fff" style={{ padding: '72px 24px' }}>
-        <div style={{ maxWidth: 900, margin: '0 auto' }}>
-          <SectionLabel>Marco normativo</SectionLabel>
-          <h2 style={{
-            fontFamily: "'Playfair Display', serif", fontWeight: 700, color: '#001A33',
-            fontSize: 'clamp(22px, 4vw, 32px)', marginBottom: 8,
-          }}>Normativa aplicable a sistemas CI en Colombia</h2>
-          <ThinLine mb={40} />
-          <div style={{ overflowX: 'auto' }}>
-            <table style={{ width: '100%', borderCollapse: 'collapse', fontFamily: "'Lato', sans-serif" }}>
-                            <caption style={{position:'absolute',left:'-9999px'}}>Normativa NSR-10 sistemas contra incendios</caption>
-              <thead>
-                <tr style={{ background: '#003B6F', color: '#fff' }}>
-                  <th style={{ padding: '12px 16px', textAlign: 'left', fontFamily: "'Montserrat', sans-serif", fontSize: 13 }}>Norma</th>
-                  <th style={{ padding: '12px 16px', textAlign: 'left', fontFamily: "'Montserrat', sans-serif", fontSize: 13 }}>Aplicación</th>
-                </tr>
-              </thead>
-              <tbody>
-                {NORMATIVA_CI.map((n, i) => (
-                  <tr key={n.norma} style={{ background: i % 2 === 0 ? '#F8FAFC' : '#fff', borderBottom: '1px solid #E2E8F0' }}>
-                    <td style={{ padding: '12px 16px', fontWeight: 700, color: '#17A2B8', fontSize: 14, whiteSpace: 'nowrap' }}>{n.norma}</td>
-                    <td style={{ padding: '12px 16px', color: '#475569', fontSize: 14 }}>{n.aplica}</td>
-                  </tr>
-                ))}
-              </tbody>
-            </table>
-          </div>
-        </div>
-      </Section>
+      <ThinLine />
 
-      {/* ── PARA QUIÉN ── */}
-      <Section bg="#F8FAFC" style={{ padding: '72px 24px' }}>
-        <div style={{ maxWidth: 900, margin: '0 auto' }}>
-          <SectionLabel>Clientes objetivo</SectionLabel>
-          <h2 style={{
-            fontFamily: "'Playfair Display', serif", fontWeight: 700, color: '#001A33',
-            fontSize: 'clamp(22px, 4vw, 32px)', marginBottom: 8,
-          }}>Tipos de proyectos que atendemos</h2>
-          <ThinLine mb={40} />
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(260px, 1fr))', gap: 20 }}>
-            {PROYECTOS_TIPOS.map((p) => (
-              <div key={p.tipo} style={{
-                padding: 24, background: '#fff',
-                borderLeft: '3px solid #17A2B8', borderRadius: '0 4px 4px 0',
-                border: '1px solid #E2E8F0', borderLeftWidth: 3,
-              }}>
-                <h3 style={{
-                  fontFamily: "'Montserrat', sans-serif", fontWeight: 700, color: '#002A50',
-                  fontSize: 14, marginBottom: 8,
-                }}>{p.tipo}</h3>
-                <p style={{
-                  fontFamily: "'Lato', sans-serif", color: '#475569', fontSize: 14, lineHeight: 1.6,
-                }}>{p.desc}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </Section>
-
-      {/* ── FAQ ── */}
-      <Section bg="#fff" style={{ padding: '72px 24px' }}>
-        <div style={{ maxWidth: 860, margin: '0 auto' }}>
-          <SectionLabel>Preguntas frecuentes</SectionLabel>
-          <h2 style={{
-            fontFamily: "'Playfair Display', serif", fontWeight: 700, color: '#001A33',
-            fontSize: 'clamp(22px, 4vw, 32px)', marginBottom: 8,
-          }}>Preguntas sobre sistemas contra incendios NSR-10</h2>
-          <ThinLine mb={40} />
-          {[
-            {
-              q: '¿Cuándo es obligatorio el sistema contra incendios según la NSR-10?',
-              a: 'La NSR-10 Título J establece que los sistemas CI son obligatorios según el uso, el área construida y la altura del edificio. En términos generales: edificios de uso comercial con más de 1.500 m² de área total, edificios residenciales de más de 4 pisos de altura, edificios industriales o de almacenamiento con materiales combustibles, hoteles con más de 4 pisos, y centros hospitalarios o educativos de más de 3.000 m². La curaduría urbana es la entidad que verifica el cumplimiento durante el trámite de licencia de construcción.',
-            },
-            {
-              q: '¿Qué diferencia hay entre NSR-10 Título J y Título K?',
-              a: 'El Título J de la NSR-10 regula los sistemas activos de protección contra incendios de uso general: rociadores automáticos, red de hidrantes con mangueras, sistemas de detección y alarma, y cuartos de bombas. El Título K regula los sistemas especiales de extinción que usan agentes distintos al agua: CO₂, gases limpios (FM-200, Novec 1230) y espuma para áreas con riesgos específicos como salas de servidores, equipos eléctricos de alta tensión y bodegas con líquidos inflamables. Un proyecto puede requerir cumplimiento de ambos títulos.',
-            },
-            {
-              q: '¿Qué es la densidad de diseño en un sistema de rociadores?',
-              a: 'La densidad de diseño es la cantidad de agua (en mm/min o GPM/ft²) que debe aplicarse sobre un área determinada de operación del sistema de rociadores para controlar el incendio. La NFPA 13 establece curvas de densidad/área según la clasificación del peligro del edificio: peligro ordinario Grupo 1 y 2 para uso comercial típico, y peligro extra Grupo 1 y 2 para almacenamiento de alto riesgo. Una densidad más alta o un área de operación mayor resulta en tuberías de mayor diámetro y mayor capacidad del cuarto de bombas.',
-            },
-            {
-              q: '¿Por qué la curaduría exige memoria firmada por especialista para el sistema CI?',
-              a: 'La NSR-10 exige que las memorias de diseño de sistemas contra incendios sean elaboradas y firmadas por un ingeniero civil o mecánico con tarjeta profesional COPNIA vigente y experiencia acreditable en el área. El sistema CI es un sistema de seguridad vital: un error de diseño puede resultar en fallo del sistema durante un incendio real o en activación accidental que cause daños millonarios. Las curadurías urbanas rechazan los expedientes de licencia de construcción que no incluyan la memoria CI firmada por especialista.',
-            },
-            {
-              q: '¿Cuánto tiempo tarda el diseño de un sistema CI y cuál es el costo aproximado?',
-              a: 'El plazo típico es de 2 a 5 semanas según la complejidad: un edificio residencial de 8 pisos puede resolverse en 2-3 semanas; un centro comercial con múltiples usos y sistemas especiales puede requerir 4-6 semanas. El costo varía según el área del proyecto, el número de sistemas a diseñar y si se requieren sistemas especiales (Título K). Para obtener un presupuesto ajustado, comparta los planos arquitectónicos y el uso del edificio — respondemos con propuesta en menos de 24 horas.',
-            },
-          ].map(({ q, a }) => (
-            <details key={q} style={{
-              borderBottom: '1px solid #E2E8F0', paddingBottom: 20, marginBottom: 20,
-            }}>
-              <summary style={{
-                fontFamily: "'Montserrat', sans-serif", fontWeight: 700, color: '#002A50',
-                fontSize: 15, cursor: 'pointer', paddingBottom: 12, listStyle: 'none',
-              }}>
-                {q}
-              </summary>
-              <p style={{
-                fontFamily: "'Lato', sans-serif", color: '#475569', fontSize: 15,
-                lineHeight: 1.75, marginTop: 8,
-              }}>{a}</p>
-            </details>
+      {/* USOS */}
+      <Section className="py-16">
+        <SectionLabel>¿Para qué usos?</SectionLabel>
+        <h2 className="text-2xl font-bold text-white mb-10 text-center">
+          Concesiones de aguas que tramitamos
+        </h2>
+        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+          {USOS.map((u) => (
+            <div key={u.titulo} className="bg-slate-800/50 rounded-xl p-5 border border-slate-700">
+              <div className="text-3xl mb-3">{u.icon}</div>
+              <h3 className="text-white font-semibold mb-2">{u.titulo}</h3>
+              <p className="text-slate-400 text-sm">{u.desc}</p>
+            </div>
           ))}
         </div>
       </Section>
 
-      {/* ── ARTÍCULOS RELACIONADOS ── */}
-      <Section bg="#F8FAFC" style={{ padding: '48px 24px' }}>
-        <div className="container" style={{ maxWidth: 860 }}>
-          <p style={{ fontFamily: "'Montserrat', sans-serif", fontWeight: 700, color: '#003B6F', fontSize: 13, letterSpacing: '0.08em', textTransform: 'uppercase', marginBottom: 20 }}>
-            Artículos relacionados
-          </p>
-          <div style={{ display: 'flex', gap: 16, flexWrap: 'wrap' }}>
-            <a href="/blog/nsr-10-sistemas-contra-incendios" style={{ flex: '1 1 260px', background: '#fff', border: '1px solid #E2E8F0', borderRadius: 4, padding: '18px 20px', textDecoration: 'none' }}>
-              <span style={{ fontFamily: "'Playfair Display', serif", fontWeight: 700, color: '#003B6F', fontSize: 15, display: 'block', lineHeight: 1.3 }}>NSR-10 Títulos J y K: Todo sobre Sistemas Contra Incendios en Colombia</span>
-              <span style={{ fontFamily: "'Lato', sans-serif", color: '#17A2B8', fontSize: 12, marginTop: 8, display: 'block' }}>Leer artículo →</span>
-            </a>
-            <a href="/blog/costos-obras-hidraulicas-colombia-2026" style={{ flex: '1 1 260px', background: '#fff', border: '1px solid #E2E8F0', borderRadius: 4, padding: '18px 20px', textDecoration: 'none' }}>
-              <span style={{ fontFamily: "'Playfair Display', serif", fontWeight: 700, color: '#003B6F', fontSize: 15, display: 'block', lineHeight: 1.3 }}>Costos de Obras Hidráulicas en Colombia 2026</span>
-              <span style={{ fontFamily: "'Lato', sans-serif", color: '#17A2B8', fontSize: 12, marginTop: 8, display: 'block' }}>Leer artículo →</span>
-            </a>
-          </div>
+      <ThinLine />
+
+      {/* PROCESO */}
+      <Section className="py-16">
+        <SectionLabel>Proceso</SectionLabel>
+        <h2 className="text-2xl font-bold text-white mb-10 text-center">
+          ¿Cómo tramitamos la concesión de aguas?
+        </h2>
+        <div className="space-y-6 max-w-3xl mx-auto">
+          {PROCESO.map((p) => (
+            <div key={p.paso} className="flex gap-5 bg-slate-800/40 rounded-xl p-5 border border-slate-700">
+              <div className="text-3xl font-black text-blue-500 flex-shrink-0 w-10">{p.paso}</div>
+              <div>
+                <h3 className="text-white font-semibold mb-1">{p.titulo}</h3>
+                <p className="text-slate-400 text-sm">{p.desc}</p>
+              </div>
+            </div>
+          ))}
         </div>
       </Section>
 
-      {/* ── SERVICIOS RELACIONADOS ── */}
-      <Section bg="#EFF6FB" style={{ padding: '48px 24px' }}>
-        <div style={{ maxWidth: 860, margin: '0 auto' }}>
-          <p style={{ fontFamily: "'Montserrat', sans-serif", fontWeight: 700, color: '#003B6F', fontSize: 13, letterSpacing: '0.08em', textTransform: 'uppercase', marginBottom: 20 }}>
-            Servicios relacionados
-          </p>
-          <div style={{ display: 'flex', gap: 16, flexWrap: 'wrap' }}>
-            <a href="/servicios/contra-incendios-nsr10" style={{ flex: '1 1 220px', background: '#fff', border: '1px solid #E2E8F0', borderRadius: 4, padding: '18px 20px', textDecoration: 'none' }}>
-              <span style={{ fontFamily: "'Playfair Display', serif", fontWeight: 700, color: '#003B6F', fontSize: 14, display: 'block', lineHeight: 1.35 }}>Sistemas contra incendio para edificios residenciales, centros comerciales e industria</span>
-              <span style={{ fontFamily: "'Lato', sans-serif", color: '#17A2B8', fontSize: 12, marginTop: 8, display: 'block' }}>Ver servicio →</span>
-            </a>
-            <a href="/servicios/redes-hidrosanitarias" style={{ flex: '1 1 220px', background: '#fff', border: '1px solid #E2E8F0', borderRadius: 4, padding: '18px 20px', textDecoration: 'none' }}>
-              <span style={{ fontFamily: "'Playfair Display', serif", fontWeight: 700, color: '#003B6F', fontSize: 14, display: 'block', lineHeight: 1.35 }}>Diseño integral de redes hidrosanitarias — agua fría, caliente y residuales</span>
-              <span style={{ fontFamily: "'Lato', sans-serif", color: '#17A2B8', fontSize: 12, marginTop: 8, display: 'block' }}>Ver servicio →</span>
-            </a>
-            <a href="/servicios/interventoria" style={{ flex: '1 1 220px', background: '#fff', border: '1px solid #E2E8F0', borderRadius: 4, padding: '18px 20px', textDecoration: 'none' }}>
-              <span style={{ fontFamily: "'Playfair Display', serif", fontWeight: 700, color: '#003B6F', fontSize: 14, display: 'block', lineHeight: 1.35 }}>Interventoría técnica especializada — revisión de diseños CI ante curadurías</span>
-              <span style={{ fontFamily: "'Lato', sans-serif", color: '#17A2B8', fontSize: 12, marginTop: 8, display: 'block' }}>Ver servicio →</span>
-            </a>
-          </div>
+      <ThinLine />
+
+      {/* FAQ */}
+      <Section className="py-16" id="geo-fragment">
+        <SectionLabel>Preguntas frecuentes</SectionLabel>
+        <h2 className="text-2xl font-bold text-white mb-10 text-center">
+          Concesión de aguas superficiales — FAQ
+        </h2>
+        <div className="max-w-3xl mx-auto space-y-6">
+          {schemaFAQ.mainEntity.map((faq) => (
+            <div key={faq.name} className="bg-slate-800/40 rounded-xl p-6 border border-slate-700">
+              <h3 className="text-white font-semibold mb-2">{faq.name}</h3>
+              <p className="text-slate-300 text-sm">{faq.acceptedAnswer.text}</p>
+            </div>
+          ))}
         </div>
       </Section>
 
+      <ThinLine />
 
-      <Section>
-        <QuoteFormInline />
-      </Section>
 
-      {/* ── ANTI-INTERMEDIARIO ── */}
-      <Section style={{ background: '#001A33', padding: '48px 24px' }}>
+      {/* ANTI-INTERMEDIARIO */}
+      <Section style={{ background: 'rgba(0,0,0,0.25)', padding: '48px 24px' }}>
         <div style={{ maxWidth: 760, margin: '0 auto', textAlign: 'center' }}>
-          <h2 style={{ fontFamily: "'Playfair Display', serif", fontWeight: 700, fontSize: 'clamp(18px, 2.5vw, 26px)', color: '#fff', marginBottom: 16 }}>
-            Trato directo con el ingeniero que firma — sin intermediarios
-          </h2>
-          <p style={{ fontFamily: "'Lato', sans-serif", color: 'rgba(255,255,255,0.82)', fontSize: 15, lineHeight: 1.85, maxWidth: 680, margin: '0 auto' }}>
-            BIC trabaja directamente con <strong style={{ color: '#17A2B8' }}>constructoras, promotores, gerentes de proyecto
-            y propietarios</strong> que necesitan el diseño del sistema CI para tramitar la licencia de construcción
-            ante la curaduría urbana o el RETIE — no con intermediarios que re-cotizan el servicio.
-            El Ing. Rogerio Bernal Ríos (COPNIA 17202-313228 CLD) revisa el proyecto, dimensiona el sistema
-            y firma los planos. Si usted decide y tiene el proyecto, la propuesta lle
+          <h2 className="text-xl font-bold text-white mb-4">Trato directo con el decisor técnico — sin intermediarios</h2>
+          <p className="text-slate-300 text-sm leading-relaxed">
+            BIC trabaja directamente con <strong className="text-cyan-400">hoteles, haciendas, industrias, acueductos veredales
+            y proyectos privados</strong> que necesitan la concesión de aguas superficiales para su operación o proyecto.
+            No con intermediarios que re-cotizan el trámite. El Ing. Rogerio Bernal Ríos (COPNIA 17202-313228 CLD)
+            elabora el expediente técnico y gestiona el trámite ante la CAR competente.
+            Si usted tiene el proyecto y decide, enviamos propuesta en menos de 24 horas.
+          </p>
+        </div>
+      </Section>
+
+      <ThinLine />
+
+      {/* CTA */}
+      <Section className="py-16">
+        <CTABanner service="Concesión de Aguas Superficiales — Trámite ante CAR (CORPOCALDAS / CARDER / CRQ)" />
+        <div className="mt-10">
+          <QuoteFormInline serviceId="concesion" />
+        </div>
+      </Section>
+    </>
+  )
+}

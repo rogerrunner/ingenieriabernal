@@ -225,7 +225,30 @@ export default function ServicioRiesgoHidrico1807() {
 
       <ThinLine />
 
+
       {/* ANTI-INTERMEDIARIO */}
       <Section style={{ background: 'rgba(0,0,0,0.25)', padding: '48px 24px' }}>
         <div style={{ maxWidth: 760, margin: '0 auto', textAlign: 'center' }}>
-          <h2 className="text-xl font-bold text-white mb-4">Trato directo con el deciso
+          <h2 className="text-xl font-bold text-white mb-4">Trato directo con el decisor técnico — sin intermediarios</h2>
+          <p className="text-slate-300 text-sm leading-relaxed">
+            BIC atiende directamente a <strong className="text-cyan-400">promotores inmobiliarios, urbanizadores, propietarios de predios
+            y constructoras</strong> que necesitan el estudio de riesgo hídrico para su plan parcial, licencia de urbanismo
+            o revisión de POT. No trabajamos con intermediarios que re-cotizan el servicio a un tercero.
+            El Ing. Rogerio Bernal Ríos (COPNIA 17202-313228 CLD) revisa su caso y firma el estudio.
+            Si usted es quien decide contratar y tiene el predio, la propuesta llega en menos de 24 horas.
+          </p>
+        </div>
+      </Section>
+
+      <ThinLine />
+
+      {/* CTA */}
+      <Section className="py-16">
+        <CTABanner service="Estudio Riesgo Hídrico Decreto 1807 — Modelación HEC-RAS 2D" />
+        <div className="mt-10">
+          <QuoteFormInline serviceId="decreto1807" />
+        </div>
+      </Section>
+    </>
+  )
+}

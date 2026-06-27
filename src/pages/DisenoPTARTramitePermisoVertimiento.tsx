@@ -285,6 +285,7 @@ export default function DisenoPTARTramitePermisoVertimiento() {
         </div>
       </Section>
 
+      
       {/* ── ANTI-INTERMEDIARIO ── */}
       <Section style={{ background: '#001A33', padding: '56px 24px' }}>
         <div style={{ maxWidth: 820, margin: '0 auto', textAlign: 'center' }}>
@@ -302,7 +303,9 @@ export default function DisenoPTARTramitePermisoVertimiento() {
         </div>
       </Section>
 
-      {/* ── FAQ ── */}
+      <ThinLine />
+
+{/* ── FAQ ── */}
       <Section style={{ background: '#f8f9fa' }}>
         <div style={{ maxWidth: 880, margin: '0 auto', padding: '0 24px' }}>
           <SectionLabel>Preguntas frecuentes</SectionLabel>
@@ -359,4 +362,25 @@ export default function DisenoPTARTramitePermisoVertimiento() {
           <div style={{ fontSize: 40, marginBottom: 16 }}>⚙️</div>
           <h2 style={{
             fontFamily: "'Playfair Display', serif", fontWeight: 700,
-            color: '#fff', font
+            color: '#fff', fontSize: 'clamp(22px, 3.5vw, 36px)', marginBottom: 16, lineHeight: 1.25,
+          }}>
+            ¿Necesita el diseño de la PTAR<br />para el permiso de vertimiento?
+          </h2>
+          <p style={{ color: 'rgba(255,255,255,0.82)', fontSize: 16, lineHeight: 1.8, marginBottom: 32 }}>
+            Cuéntenos el tipo de aguas residuales, el caudal estimado y la CAR competente.
+            BIC le envía propuesta técnica con el tipo de PTAR recomendado en menos de 24 horas.
+          </p>
+          <div style={{ display: 'flex', gap: 14, justifyContent: 'center', flexWrap: 'wrap' }}>
+            <a href={`https://wa.me/${WA}?text=${WA_MSG}`} target="_blank" rel="noopener noreferrer"
+              style={{ display: 'inline-block', padding: '15px 36px', background: '#25D366', color: '#fff', borderRadius: 8, fontWeight: 700, fontSize: 16, textDecoration: 'none' }}>
+              📱 Propuesta en 24 h — sin costo
+            </a>
+            <a href="/contacto" style={{ display: 'inline-block', padding: '15px 36px', background: 'transparent', color: '#fff', borderRadius: 8, fontWeight: 700, fontSize: 16, textDecoration: 'none', border: '2px solid rgba(255,255,255,0.4)' }}>
+              Formulario de contacto
+            </a>
+          </div>
+        </div>
+      </section>
+    </>
+  )
+}
