@@ -8,6 +8,9 @@ import EstudiosHidraulicosPereira from './pages/EstudiosHidraulicosPereira'
 import EstudiosHidraulicosArmenia from './pages/EstudiosHidraulicosArmenia'
 import EstudiosHidraulicosIbague from './pages/EstudiosHidraulicosIbague'
 import EstudiosHidraulicosLaDorada from './pages/EstudiosHidraulicosLaDorada'
+import EstudiosHidraulicosCaliNorteValle from './pages/EstudiosHidraulicosCaliNorteValle'
+import EstudiosHidraulicosManizales from './pages/EstudiosHidraulicosManizales'
+import EstudiosHidraulicosVillamariaChinchina from './pages/EstudiosHidraulicosVillamariaChinchina'
 import EstudiosRiesgoHidricoMunicipiosColombia from './pages/EstudiosRiesgoHidricoMunicipiosColombia'
 import EstudioDecreto1807LicenciaConstruccion from './pages/EstudioDecreto1807LicenciaConstruccion'
 import ConcesionAguasCortolima from './pages/ConcesionAguasCortolima'
@@ -479,6 +482,9 @@ export default function App() {
           <Route path="/estudios-hidraulicos-armenia" component={EstudiosHidraulicosArmenia} />
           <Route path="/estudios-hidraulicos-ibague" component={EstudiosHidraulicosIbague} />
           <Route path="/estudios-hidraulicos-la-dorada" component={EstudiosHidraulicosLaDorada} />
+          <Route path="/estudios-hidraulicos-cali-norte-valle" component={EstudiosHidraulicosCaliNorteValle} />
+          <Route path="/estudios-hidraulicos-manizales" component={EstudiosHidraulicosManizales} />
+          <Route path="/estudios-hidraulicos-villamaria-chinchina" component={EstudiosHidraulicosVillamariaChinchina} />
           <Route path="/estudios-riesgo-hidrico-municipios-colombia" component={EstudiosRiesgoHidricoMunicipiosColombia} />
           <Route path="/estudio-decreto-1807-licencia-construccion" component={EstudioDecreto1807LicenciaConstruccion} />
           <Route path="/concesion-aguas-cortolima" component={ConcesionAguasCortolima} />
