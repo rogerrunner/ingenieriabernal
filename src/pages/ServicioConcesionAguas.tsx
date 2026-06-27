@@ -5,7 +5,7 @@ import { BlueprintBg, ThinLine, SectionLabel, Btn, Section, Tag, CTABanner } fro
 
 const WA = '573024778910'
 const WA_MSG = encodeURIComponent(
-  'Hola, necesito tramitar una concesión de aguas superficiales ante la CAR. ¿BIC puede elaborar el estudio hidrológico y el PUEAA?'
+  'Hola, soy propietario/empresario y necesito tramitar una concesión de aguas superficiales. Tengo el predio y la fuente hídrica. Quiero cotizar directamente con BIC, sin intermediarios.'
 )
 
 const seoConfig = {
@@ -221,16 +221,18 @@ export default function ServicioConcesionAguas() {
       <ThinLine />
 
 
-      {/* ANTI-INTERMEDIARIO */}
-      <Section style={{ background: 'rgba(0,0,0,0.25)', padding: '48px 24px' }}>
-        <div style={{ maxWidth: 760, margin: '0 auto', textAlign: 'center' }}>
-          <h2 className="text-xl font-bold text-white mb-4">Trato directo con el decisor técnico — sin intermediarios</h2>
-          <p className="text-slate-300 text-sm leading-relaxed">
-            BIC trabaja directamente con <strong className="text-cyan-400">hoteles, haciendas, industrias, acueductos veredales
-            y proyectos privados</strong> que necesitan la concesión de aguas superficiales para su operación o proyecto.
-            No con intermediarios que re-cotizan el trámite. El Ing. Rogerio Bernal Ríos (COPNIA 17202-313228 CLD)
-            elabora el expediente técnico y gestiona el trámite ante la CAR competente.
-            Si usted tiene el proyecto y decide, enviamos propuesta en menos de 24 horas.
+            {/* ANTI-INTERMEDIARIO ENHANCED */}
+      <Section style={{ background: 'rgba(0,0,0,0.30)', padding: '52px 24px' }}>
+        <div style={{ maxWidth: 780, margin: '0 auto', textAlign: 'center' }}>
+          <h2 className="text-xl font-bold text-white mb-4">Solo con quien tiene el proyecto y puede contratar directamente</h2>
+          <p className="text-slate-300 text-sm leading-relaxed mb-5">
+            BIC trabaja directamente con <strong className="text-cyan-400">hoteles, haciendas, industrias, acueductos veredales, parcelaciones y proyectos privados</strong> que necesitan la concesión de aguas — propietarios o empresarios con el predio, la fuente hídrica y la capacidad para contratar.
+            No cotizamos a intermediarios que re-venden el trámite, ni atendemos consultas de ingenieros que buscan comparar precios o transferir el trabajo a sus clientes.
+            El Ing. Rogerio Bernal Ríos (COPNIA 17202-313228 CLD) elabora el expediente y lo lleva ante la CAR.
+            Si usted decide y tiene el proyecto, enviamos propuesta en menos de 24 horas.
+          </p>
+          <p className="text-xs text-slate-500">
+            ¿Es usted otro profesional buscando hacer cotización comparativa? No es el canal — contáctenos cuando tenga el cliente final.
           </p>
         </div>
       </Section>

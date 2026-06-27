@@ -221,16 +221,19 @@ export default function ServicioConcesionAguas() {
       <ThinLine />
 
 
-      {/* ANTI-INTERMEDIARIO */}
-      <Section style={{ background: 'rgba(0,0,0,0.25)', padding: '48px 24px' }}>
-        <div style={{ maxWidth: 760, margin: '0 auto', textAlign: 'center' }}>
-          <h2 className="text-xl font-bold text-white mb-4">Trato directo con el decisor técnico — sin intermediarios</h2>
-          <p className="text-slate-300 text-sm leading-relaxed">
-            BIC trabaja directamente con <strong className="text-cyan-400">hoteles, haciendas, industrias, acueductos veredales
-            y proyectos privados</strong> que necesitan la concesión de aguas superficiales para su operación o proyecto.
-            No con intermediarios que re-cotizan el trámite. El Ing. Rogerio Bernal Ríos (COPNIA 17202-313228 CLD)
-            elabora el expediente técnico y gestiona el trámite ante la CAR competente.
-            Si usted tiene el proyecto y decide, enviamos propuesta en menos de 24 horas.
+            {/* ── ANTI-INTERMEDIARIO ENHANCED ── */}
+      <Section style={{ background: '#001A33', padding: '52px 24px' }}>
+        <div style={{ maxWidth: 780, margin: '0 auto', textAlign: 'center' }}>
+          <h2 style={{ fontFamily: "'Playfair Display', serif", fontWeight: 700, fontSize: 'clamp(18px, 2.5vw, 26px)', color: '#fff', marginBottom: 16 }}>
+            El ingeniero que firma trabaja directo con quien decide
+          </h2>
+          <p style={{ fontFamily: "'Lato', sans-serif", color: 'rgba(255,255,255,0.82)', fontSize: 15, lineHeight: 1.85, maxWidth: 700, margin: '0 auto 12px' }}>
+            BIC diseña sistemas CI para <strong style={{ color: '#17A2B8' }}>constructoras, promotores, gerentes de proyecto, propietarios de edificios y centros comerciales</strong> que necesitan el sistema aprobado ante Curaduría o RETIE — clientes con el proyecto activo y la decisión de contratar.
+            No atendemos colegas ingenieros que buscan actualizar metodologías o presupuestar para sus propios clientes, ni intermediarios que re-cotizan el servicio.
+            El Ing. Rogerio Bernal Ríos (COPNIA 17202-313228 CLD) revisa y firma. Si usted tiene el proyecto y el capital, la propuesta llega en 24 horas.
+          </p>
+          <p style={{ fontFamily: "'Lato', sans-serif", color: 'rgba(255,255,255,0.4)', fontSize: 12 }}>
+            ¿Colega ingeniero buscando asesoría o precio de referencia? No es el canal indicado.
           </p>
         </div>
       </Section>

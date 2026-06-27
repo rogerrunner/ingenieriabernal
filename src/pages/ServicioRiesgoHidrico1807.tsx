@@ -5,7 +5,7 @@ import { BlueprintBg, ThinLine, SectionLabel, Btn, Section, Tag, CTABanner } fro
 
 const WA = '573024778910'
 const WA_MSG = encodeURIComponent(
-  'Hola, necesito un estudio de riesgo hídrico por inundación según el Decreto 1807 de 2014. ¿Pueden elaborarlo con modelación HEC-RAS 2D?'
+  'Hola, soy propietario/promotor y necesito un estudio de riesgo hídrico Decreto 1807. Tengo el predio y quiero cotizar directamente con el ingeniero que firma. ¿Cuánto cuesta y cuánto demora?'
 )
 
 const seoConfig = {
@@ -226,16 +226,17 @@ export default function ServicioRiesgoHidrico1807() {
       <ThinLine />
 
 
-      {/* ANTI-INTERMEDIARIO */}
-      <Section style={{ background: 'rgba(0,0,0,0.25)', padding: '48px 24px' }}>
-        <div style={{ maxWidth: 760, margin: '0 auto', textAlign: 'center' }}>
-          <h2 className="text-xl font-bold text-white mb-4">Trato directo con el decisor técnico — sin intermediarios</h2>
-          <p className="text-slate-300 text-sm leading-relaxed">
-            BIC atiende directamente a <strong className="text-cyan-400">promotores inmobiliarios, urbanizadores, propietarios de predios
-            y constructoras</strong> que necesitan el estudio de riesgo hídrico para su plan parcial, licencia de urbanismo
-            o revisión de POT. No trabajamos con intermediarios que re-cotizan el servicio a un tercero.
-            El Ing. Rogerio Bernal Ríos (COPNIA 17202-313228 CLD) revisa su caso y firma el estudio.
-            Si usted es quien decide contratar y tiene el predio, la propuesta llega en menos de 24 horas.
+            {/* ANTI-INTERMEDIARIO ENHANCED */}
+      <Section style={{ background: 'rgba(0,0,0,0.30)', padding: '52px 24px' }}>
+        <div style={{ maxWidth: 780, margin: '0 auto', textAlign: 'center' }}>
+          <h2 className="text-xl font-bold text-white mb-4">Trabajamos solo con quien decide y tiene el proyecto</h2>
+          <p className="text-slate-300 text-sm leading-relaxed mb-5">
+            BIC atiende directamente a <strong className="text-cyan-400">promotores inmobiliarios, urbanizadores, constructoras, dueños de tierra e industriales</strong> que necesitan el estudio de riesgo hídrico para avanzar su licencia o plan parcial — personas con el predio y la decisión de contratar.
+            No trabajamos con intermediarios que re-cotizan a terceros, ni respondemos consultas de colegas ingenieros que buscan actualizar metodologías o que cotizan el estudio para sus propios clientes.
+            El Ing. Rogerio Bernal Ríos (COPNIA 17202-313228 CLD) revisa su caso y firma el estudio. Si usted tiene el predio y el capital para el cierre, la propuesta llega en menos de 24 horas.
+          </p>
+          <p className="text-xs text-slate-500">
+            ¿Es usted ingeniero o consultor buscando asesoría técnica o comparación de precios? Este no es el canal adecuado.
           </p>
         </div>
       </Section>

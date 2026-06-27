@@ -286,19 +286,19 @@ export default function DisenoPTARTramitePermisoVertimiento() {
       </Section>
 
       
-      {/* ── ANTI-INTERMEDIARIO ── */}
-      <Section style={{ background: '#001A33', padding: '56px 24px' }}>
-        <div style={{ maxWidth: 820, margin: '0 auto', textAlign: 'center' }}>
+            {/* ── ANTI-INTERMEDIARIO ENHANCED ── */}
+      <Section style={{ background: '#001A33', padding: '60px 24px' }}>
+        <div style={{ maxWidth: 840, margin: '0 auto', textAlign: 'center' }}>
           <h2 style={{ fontFamily: "'Playfair Display', serif", fontWeight: 700, fontSize: 'clamp(20px, 2.8vw, 30px)', color: '#fff', marginBottom: 20 }}>
-            Trato directo con el director técnico — sin intermediarios
+            Diseño directo con quien tiene el proyecto y el capital para contratar
           </h2>
-          <p style={{ fontFamily: "'Lato', sans-serif", color: 'rgba(255,255,255,0.82)', fontSize: 15, lineHeight: 1.85, maxWidth: 700, margin: '0 auto' }}>
-            BIC trabaja directamente con <strong style={{ color: '#17A2B8' }}>urbanizadores, hoteles, industrias, haciendas
-            y propietarios privados</strong> que tienen un proyecto concreto y necesitan el diseño de su sistema de tratamiento
-            de aguas residuales — no con intermediarios que re-cotizan el servicio a un tercero.
-            El Ing. Rogerio Bernal Ríos (COPNIA 17202-313228 CLD, especialista UNAL) firma directamente
-            las memorias y planos. Los precios publicados son los que BIC cobra al contratante directo.
-            Si usted decide contratar y tiene el proyecto, la propuesta llega en menos de 24 horas.
+          <p style={{ fontFamily: "'Lato', sans-serif", color: 'rgba(255,255,255,0.82)', fontSize: 15, lineHeight: 1.85, maxWidth: 720, margin: '0 auto 14px' }}>
+            BIC diseña sistemas PTAR para <strong style={{ color: '#17A2B8' }}>urbanizadores, hoteles, industrias, haciendas y propietarios privados</strong> con un proyecto concreto — personas que tienen el predio, la necesidad real y la decisión de contratar directamente.
+            No cotizamos a intermediarios que re-venden el servicio, ni respondemos consultas de ingenieros que quieren comparar precios o transferir el proyecto a sus propios clientes.
+            El Ing. Rogerio Bernal Ríos (COPNIA 17202-313228 CLD, especialista UNAL) firma directamente. Si usted tiene el proyecto y el capital, la propuesta llega en menos de 24 horas.
+          </p>
+          <p style={{ fontFamily: "'Lato', sans-serif", color: 'rgba(255,255,255,0.35)', fontSize: 12 }}>
+            ¿Colega ingeniero buscando asesoría técnica o cotización comparativa? No es el canal — contáctenos cuando tenga el contratante final.
           </p>
         </div>
       </Section>
