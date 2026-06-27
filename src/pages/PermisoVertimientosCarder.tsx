@@ -4,7 +4,7 @@ import { BlueprintBg, ThinLine, SectionLabel, Section, CTABanner } from '@/compo
 import QuoteFormInline from '@/components/QuoteFormInline'
 
 const WA = '573024778910'
-const WA_MSG = encodeURIComponent('Hola, necesito tramitar permiso de vertimientos ante CARDER en Risaralda. Pueden ayudarme?')
+const WA_MSG = encodeURIComponent('Hola, soy propietario/empresario y necesito tramitar un permiso de vertimiento ante la CARDER. Tengo el proyecto activo y quiero cotizar directamente.')
 
 const seoConfig = {
   title: 'Permiso de Vertimientos CARDER Risaralda — Expediente Tecnico y PTAR | BIC',
@@ -97,6 +97,25 @@ export default function PermisoVertimientosCarder() {
         </div>
       </Section>
       <ThinLine />
+
+      {/* ── ANTI-INTERMEDIARIO ENHANCED ── */}
+      <Section style={{ background: '#001A33', padding: '48px 24px' }}>
+        <div style={{ maxWidth: 760, margin: '0 auto', textAlign: 'center' }}>
+          <h2 style={{ fontFamily: "'Playfair Display', serif", fontWeight: 700, fontSize: 'clamp(17px, 2.3vw, 24px)', color: '#fff', marginBottom: 14 }}>
+            Solo con quien tiene el proyecto y puede contratar directamente
+          </h2>
+          <p style={{ fontFamily: "'Lato', sans-serif", color: 'rgba(255,255,255,0.80)', fontSize: 14, lineHeight: 1.8, maxWidth: 680, margin: '0 auto 10px' }}>
+            BIC trabaja directamente con <strong style={{ color: '#17A2B8' }}>industriales, hoteleros, haciendas y propietarios privados</strong> que requieren el permiso de vertimiento — no con intermediarios que re-cotizan ni con ingenieros que buscan precios de referencia para sus propios clientes.
+            Si usted es el contratante directo y tiene el proyecto activo, la propuesta llega en 24 horas.
+          </p>
+          <p style={{ fontFamily: "'Lato', sans-serif", color: 'rgba(255,255,255,0.30)', fontSize: 11 }}>
+            ¿Colega ingeniero buscando asesoría o cotización comparativa? No es el canal.
+          </p>
+        </div>
+      </Section>
+
+      <ThinLine />
+
       <Section>
         <h2 style={{ fontSize: 'clamp(22px, 4vw, 32px)', fontWeight: 800, textAlign: 'center', marginBottom: 12 }}>Propuesta para tramite ante CARDER</h2>
         <p style={{ fontSize: 16, color: '#64748B', textAlign: 'center', maxWidth: 540, margin: '0 auto 36px' }}>Sin compromiso. Respuesta en 24 horas.</p>

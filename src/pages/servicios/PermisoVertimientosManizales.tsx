@@ -219,6 +219,25 @@ export default function PermisoVertimientosManizales() {
 
       <ThinLine />
 
+
+      {/* ── ANTI-INTERMEDIARIO ENHANCED ── */}
+      <Section style={{ background: '#001A33', padding: '48px 24px' }}>
+        <div style={{ maxWidth: 760, margin: '0 auto', textAlign: 'center' }}>
+          <h2 style={{ fontFamily: "'Playfair Display', serif", fontWeight: 700, fontSize: 'clamp(17px, 2.3vw, 24px)', color: '#fff', marginBottom: 14 }}>
+            Solo con quien tiene el proyecto y puede contratar directamente
+          </h2>
+          <p style={{ fontFamily: "'Lato', sans-serif", color: 'rgba(255,255,255,0.80)', fontSize: 14, lineHeight: 1.8, maxWidth: 680, margin: '0 auto 10px' }}>
+            BIC trabaja directamente con <strong style={{ color: '#17A2B8' }}>industriales, hoteleros, haciendas y propietarios privados</strong> que requieren el permiso de vertimiento — no con intermediarios que re-cotizan ni con ingenieros que buscan precios de referencia para sus propios clientes.
+            Si usted es el contratante directo y tiene el proyecto activo, la propuesta llega en 24 horas.
+          </p>
+          <p style={{ fontFamily: "'Lato', sans-serif", color: 'rgba(255,255,255,0.30)', fontSize: 11 }}>
+            ¿Colega ingeniero buscando asesoría o cotización comparativa? No es el canal.
+          </p>
+        </div>
+      </Section>
+
+      <ThinLine />
+
       {/* CTA */}
       <Section className="py-16">
         <CTABanner service="Permiso de Vertimientos — Manizales / Caldas (CORPOCALDAS)" />
