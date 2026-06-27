@@ -4,6 +4,10 @@ import { useLocation } from 'wouter'
 import Nav from './components/Nav'
 import Footer from './components/Footer'
 import FloatingQuoteButton from './components/FloatingQuoteButton'
+import EstudiosHidraulicosPereira from './pages/EstudiosHidraulicosPereira'
+import EstudiosHidraulicosArmenia from './pages/EstudiosHidraulicosArmenia'
+import EstudiosHidraulicosIbague from './pages/EstudiosHidraulicosIbague'
+import EstudiosHidraulicosLaDorada from './pages/EstudiosHidraulicosLaDorada'
 import ConcesionAguasCorpocaldas from './pages/ConcesionAguasCorpocaldas'
 import ConcesionAguasCarder from './pages/ConcesionAguasCarder'
 import PermisoVertimientosCorpocaldas from './pages/PermisoVertimientosCorpocaldas'
@@ -467,6 +471,10 @@ export default function App() {
           <Route path="/servicios/concesion-de-aguas" component={ServicioConcesionAguas} />
 
           <Route path="/blog/:slug" component={BlogDetail} />
+          <Route path="/estudios-hidraulicos-pereira" component={EstudiosHidraulicosPereira} />
+          <Route path="/estudios-hidraulicos-armenia" component={EstudiosHidraulicosArmenia} />
+          <Route path="/estudios-hidraulicos-ibague" component={EstudiosHidraulicosIbague} />
+          <Route path="/estudios-hidraulicos-la-dorada" component={EstudiosHidraulicosLaDorada} />
           <Route path="/concesion-aguas-corpocaldas" component={ConcesionAguasCorpocaldas} />
           <Route path="/concesion-aguas-carder" component={ConcesionAguasCarder} />
           <Route path="/permiso-vertimientos-corpocaldas" component={PermisoVertimientosCorpocaldas} />
