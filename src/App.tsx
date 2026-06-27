@@ -8,6 +8,7 @@ import EstudiosHidraulicosPereira from './pages/EstudiosHidraulicosPereira'
 import EstudiosHidraulicosArmenia from './pages/EstudiosHidraulicosArmenia'
 import EstudiosHidraulicosIbague from './pages/EstudiosHidraulicosIbague'
 import EstudiosHidraulicosLaDorada from './pages/EstudiosHidraulicosLaDorada'
+import EstudiosRiesgoHidricoMunicipiosColombia from './pages/EstudiosRiesgoHidricoMunicipiosColombia'
 import EstudioDecreto1807LicenciaConstruccion from './pages/EstudioDecreto1807LicenciaConstruccion'
 import ConcesionAguasCortolima from './pages/ConcesionAguasCortolima'
 import ConcesionAguasCvc from './pages/ConcesionAguasCvc'
@@ -478,6 +479,7 @@ export default function App() {
           <Route path="/estudios-hidraulicos-armenia" component={EstudiosHidraulicosArmenia} />
           <Route path="/estudios-hidraulicos-ibague" component={EstudiosHidraulicosIbague} />
           <Route path="/estudios-hidraulicos-la-dorada" component={EstudiosHidraulicosLaDorada} />
+          <Route path="/estudios-riesgo-hidrico-municipios-colombia" component={EstudiosRiesgoHidricoMunicipiosColombia} />
           <Route path="/estudio-decreto-1807-licencia-construccion" component={EstudioDecreto1807LicenciaConstruccion} />
           <Route path="/concesion-aguas-cortolima" component={ConcesionAguasCortolima} />
           <Route path="/concesion-aguas-cvc" component={ConcesionAguasCvc} />
