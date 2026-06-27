@@ -85,6 +85,23 @@ const PREGUNTAS = [
 export default function PromotorUrbanizacionColombia() {
   useEffect(() => {
     document.title = seoConfig.title
+    const howto = document.createElement('script')
+    howto.type = 'application/ld+json'
+    howto.id = 'schema-promotor-howto'
+    howto.textContent = JSON.stringify({
+      '@context': 'https://schema.org',
+      '@type': 'HowTo',
+      name: 'Como contratar el componente hidraulico de un plan parcial o urbanizacion en Colombia',
+      description: 'Pasos para obtener los estudios tecnicos hidraulicos que exigen la CAR y la Curaduria para aprobar un plan parcial o urbanizacion en Colombia.',
+      step: [
+        { '@type': 'HowToStep', position: 1, name: 'Revision preliminar del predio', text: 'BIC revisa el POT del municipio, la clasificacion del predio y la presencia de cauces o zonas de amenaza hidrica. En 24 horas entrega un pre-diagnostico gratuito con los estudios requeridos y una estimacion de costos.' },
+        { '@type': 'HowToStep', position: 2, name: 'Propuesta tecnica y economica', text: 'Con base en el pre-diagnostico, BIC elabora la propuesta tecnica detallada con alcance, cronograma y valor fijo por cada estudio. Sin sorpresas ni costos adicionales.' },
+        { '@type': 'HowToStep', position: 3, name: 'Ejecucion de estudios y tramites CAR', text: 'BIC ejecuta la modelacion hidrologica e hidraulica (HEC-HMS, HEC-RAS 2D), el diseno de redes y la documentacion tecnica para cada tramite ante la CAR. Informes de avance semanales.' },
+        { '@type': 'HowToStep', position: 4, name: 'Entrega y acompanamiento ante Curaduria', text: 'BIC entrega el informe tecnico completo con memorias de calculo, planos y modelos digitales. Acompaña al promotor en la radicacion ante la Curaduria y responde las observaciones tecnicas sin costo adicional.' },
+      ]
+    })
+    document.head.appendChild(howto)
+    return () => { document.getElementById('schema-promotor-howto')?.remove() }
   }, [])
 
   const schema = {

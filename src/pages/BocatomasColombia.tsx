@@ -159,7 +159,26 @@ const NORMATIVA = [
 ]
 
 export default function BocatomasColombia() {
-  useEffect(() => { window.scrollTo(0, 0) }, [])
+  useEffect(() => {
+    window.scrollTo(0, 0)
+    const howto = document.createElement('script')
+    howto.type = 'application/ld+json'
+    howto.id = 'schema-bocatoma-howto'
+    howto.textContent = JSON.stringify({
+      '@context': 'https://schema.org',
+      '@type': 'HowTo',
+      name: 'Como disenar una bocatoma y obtener la concesion de aguas en Colombia',
+      description: 'Pasos para el diseno hidraulico de una bocatoma y la gestion de concesion de aguas y permiso de ocupacion de cauce ante la CAR.',
+      step: [
+        { '@type': 'HowToStep', position: 1, name: 'Estudio hidrologico del caudal disponible', text: 'BIC calcula el caudal disponible en la fuente en condiciones de estiaje y en creciente. Base para dimensionar la bocatoma y cuantificar el caudal a concesionar.' },
+        { '@type': 'HowToStep', position: 2, name: 'Diseno hidraulico de la bocatoma', text: 'BIC diseña la estructura: tipo, cota de umbral, dimensiones del vertedero o azud, camara de recoleccion, rejilla y canal de conduccion. Memoria de calculo y planos firmados COPNIA.' },
+        { '@type': 'HowToStep', position: 3, name: 'Tramite de concesion de aguas y ocupacion de cauce', text: 'BIC elabora el expediente tecnico para la concesion de aguas y el permiso de ocupacion de cauce, y gestiona los dos tramites en paralelo ante la CAR competente.' },
+        { '@type': 'HowToStep', position: 4, name: 'Acompanamiento a la construccion', text: 'BIC puede acompañar la construccion como director o residente, verificando que la ejecucion corresponda al diseno aprobado por la CAR.' },
+      ]
+    })
+    document.head.appendChild(howto)
+    return () => { document.getElementById('schema-bocatoma-howto')?.remove() }
+  }, [])
 
   return (
     <>

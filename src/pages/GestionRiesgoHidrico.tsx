@@ -142,6 +142,26 @@ const FAQS = [
 export default function GestionRiesgoHidrico() {
 
   useEffect(() => {
+    const howto = document.createElement('script')
+    howto.type = 'application/ld+json'
+    howto.id = 'schema-gr-howto'
+    howto.textContent = JSON.stringify({
+      '@context': 'https://schema.org',
+      '@type': 'HowTo',
+      name: 'Como obtener el estudio de gestion del riesgo hidrico para licencia de construccion en Colombia',
+      description: 'Pasos para cumplir el Decreto 1807 de 2014 y obtener el concepto favorable de amenaza hidrica para licencia de construccion o urbanismo en Colombia.',
+      step: [
+        { '@type': 'HowToStep', position: 1, name: 'Revision del POT y clasificacion del predio', text: 'BIC verifica si el predio del proyecto esta clasificado con amenaza hidrica media o alta en el POT municipal. Si lo esta, el Decreto 1807 exige el estudio detallado de riesgo como condicion para la licencia de construccion o urbanismo.' },
+        { '@type': 'HowToStep', position: 2, name: 'Levantamiento topobatimetrico', text: 'BIC realiza el levantamiento topografico y batimetrico del cauce aferente al predio, capturando la geometria del cauce y la llanura de inundacion. Base para la modelacion hidraulica.' },
+        { '@type': 'HowToStep', position: 3, name: 'Modelacion hidrologica e hidraulica HEC-RAS 2D', text: 'Con HEC-HMS se calculan los caudales de diseno para TR 25, 50 y 100 anos. Con HEC-RAS 2D se simula la mancha de inundacion y se generan los mapas de profundidad, velocidad y amenaza a escala 1:2000 o 1:5000.' },
+        { '@type': 'HowToStep', position: 4, name: 'Informe tecnico y radicacion en Curaduria', text: 'BIC entrega el informe tecnico completo con memorias de calculo, modelos digitales y planos. El informe esta listo para primera revision ante la Curaduria urbana o la CAR competente, sin observaciones.' },
+      ]
+    })
+    document.head.appendChild(howto)
+    return () => { document.getElementById('schema-gr-howto')?.remove() }
+  }, [])
+
+  useEffect(() => {
     const id = 'bc-gestion-riesgo'
     document.getElementById(id)?.remove()
     const el = document.createElement('script')
