@@ -43,6 +43,28 @@ export default function About() {
       document.head.appendChild(canonical)
     }
     canonical.setAttribute('href', 'https://ingenieriabernal.co/sobre-mi')
+
+    // Schema Person para AEO/SGE
+    const schemaId = 'schema-person-rogerio'
+    if (!document.getElementById(schemaId)) {
+      const sp = document.createElement('script')
+      sp.id = schemaId
+      sp.type = 'application/ld+json'
+      sp.textContent = JSON.stringify({
+        '@context': 'https://schema.org',
+        '@type': 'Person',
+        name: 'Rogerio Bernal Rios',
+        jobTitle: 'Ingeniero Hidrologo',
+        description: 'Ingeniero especialista en hidrologia e hidraulica con mas de 8 anos de experiencia. Fundador de Bernal Ingenieria Consultores. Egresado UNAL.',
+        url: 'https://ingenieriabernal.co/sobre-mi',
+        worksFor: { '@type': 'Organization', name: 'Bernal Ingenieria Consultores', url: 'https://ingenieriabernal.co' },
+        alumniOf: { '@type': 'EducationalOrganization', name: 'Universidad Nacional de Colombia', url: 'https://unal.edu.co' },
+        knowsAbout: ['HEC-RAS', 'HEC-HMS', 'Modelacion Hidraulica', 'PTARs', 'Bocatomas', 'Gestion Riesgo Hidrico', 'Decreto 1807'],
+        address: { '@type': 'PostalAddress', addressLocality: 'Manizales', addressRegion: 'Caldas', addressCountry: 'CO' },
+      })
+      document.head.appendChild(sp)
+    }
+
   }, [])
 
   return (
