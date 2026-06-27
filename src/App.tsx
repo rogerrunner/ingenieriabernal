@@ -13,6 +13,9 @@ import EstudiosHidraulicosManizales from './pages/EstudiosHidraulicosManizales'
 import EstudiosHidraulicosVillamariaChinchina from './pages/EstudiosHidraulicosVillamariaChinchina'
 import EstudiosHidraulicosDosquebradasSantaRosa from './pages/EstudiosHidraulicosDosquebradasSantaRosa'
 import EstudiosHidraulicosRiosucioSupiaAnserma from './pages/EstudiosHidraulicosRiosucioSupiaAnserma'
+import EstudiosHidraulicosBogota from './pages/EstudiosHidraulicosBogota'
+import EstudiosHidraulicosMedellin from './pages/EstudiosHidraulicosMedellin'
+import EstudiosHidraulicosBucaramanga from './pages/EstudiosHidraulicosBucaramanga'
 import EstudiosRiesgoHidricoMunicipiosColombia from './pages/EstudiosRiesgoHidricoMunicipiosColombia'
 import EstudioDecreto1807LicenciaConstruccion from './pages/EstudioDecreto1807LicenciaConstruccion'
 import ConcesionAguasCortolima from './pages/ConcesionAguasCortolima'
@@ -489,6 +492,9 @@ export default function App() {
           <Route path="/estudios-hidraulicos-villamaria-chinchina" component={EstudiosHidraulicosVillamariaChinchina} />
           <Route path="/estudios-hidraulicos-dosquebradas-santa-rosa" component={EstudiosHidraulicosDosquebradasSantaRosa} />
           <Route path="/estudios-hidraulicos-riosucio-supia-anserma" component={EstudiosHidraulicosRiosucioSupiaAnserma} />
+          <Route path="/estudios-hidraulicos-bogota" component={EstudiosHidraulicosBogota} />
+          <Route path="/estudios-hidraulicos-medellin" component={EstudiosHidraulicosMedellin} />
+          <Route path="/estudios-hidraulicos-bucaramanga" component={EstudiosHidraulicosBucaramanga} />
           <Route path="/estudios-riesgo-hidrico-municipios-colombia" component={EstudiosRiesgoHidricoMunicipiosColombia} />
           <Route path="/estudio-decreto-1807-licencia-construccion" component={EstudioDecreto1807LicenciaConstruccion} />
           <Route path="/concesion-aguas-cortolima" component={ConcesionAguasCortolima} />
