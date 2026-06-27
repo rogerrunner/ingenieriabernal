@@ -139,7 +139,26 @@ const CLIENTES = [
 ]
 
 export default function EncauzamientoRios() {
-  useEffect(() => { window.scrollTo(0, 0) }, [])
+  useEffect(() => {
+    window.scrollTo(0, 0)
+    const howto = document.createElement('script')
+    howto.type = 'application/ld+json'
+    howto.id = 'schema-encauzamiento-howto'
+    howto.textContent = JSON.stringify({
+      '@context': 'https://schema.org',
+      '@type': 'HowTo',
+      name: 'Como disenar obras de encauzamiento y proteccion de riberas en Colombia',
+      description: 'Pasos para el diseno hidraulico de obras de encauzamiento, proteccion de riberas y control de erosion fluvial con aprobacion de la CAR.',
+      step: [
+        { '@type': 'HowToStep', position: 1, name: 'Modelacion hidraulica del cauce con HEC-RAS', text: 'BIC modela el tramo de rio o quebrada con HEC-RAS 2D, determinando el caudal de diseno, la mancha de inundacion actual y el comportamiento hidraulico esperado con y sin las obras de encauzamiento.' },
+        { '@type': 'HowToStep', position: 2, name: 'Diseno de la obra de encauzamiento o proteccion', text: 'Segun la problematica y el caudal de diseno, BIC diseña la solucion: gaviones, muros de contencion, espolones, enrocados, colchonetas Reno o combinaciones. Verificacion de estabilidad al volteo y al deslizamiento.' },
+        { '@type': 'HowToStep', position: 3, name: 'Tramite de permiso de ocupacion de cauce ante la CAR', text: 'Toda obra dentro del cauce o la ronda hidrica requiere permiso de ocupacion de cauce. BIC elabora el expediente tecnico y lo gestiona ante la CAR competente (CORPOCALDAS, CARDER, CVC, etc.) en paralelo con el diseno.' },
+        { '@type': 'HowToStep', position: 4, name: 'Planos y especificaciones para construccion', text: 'BIC entrega planos de planta, perfil y detalles constructivos en AutoCAD, memorias de calculo y especificaciones tecnicas para licitacion o contratacion directa de la obra.' },
+      ]
+    })
+    document.head.appendChild(howto)
+    return () => { document.getElementById('schema-encauzamiento-howto')?.remove() }
+  }, [])
 
   return (
     <>

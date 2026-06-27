@@ -68,6 +68,23 @@ const REDES = [
 export default function DisenoHidrosanitarioCIEdificio() {
   useEffect(() => {
     window.scrollTo(0, 0)
+    const howto = document.createElement('script')
+    howto.type = 'application/ld+json'
+    howto.id = 'schema-hidrosanitario-howto'
+    howto.textContent = JSON.stringify({
+      '@context': 'https://schema.org',
+      '@type': 'HowTo',
+      name: 'Como disenar las redes hidrosanitarias y sistema contra incendio de un edificio en Colombia',
+      description: 'Pasos para el diseno de instalaciones hidraulicas, sanitarias y contra incendio conforme a la NSR-10 Titulos J y K para edificios residenciales, comerciales e industriales en Colombia.',
+      step: [
+        { '@type': 'HowToStep', position: 1, name: 'Revision de la arquitectura y la norma aplicable', text: 'BIC revisa los planos arquitectonicos y determina la norma aplicable: NSR-10 Titulo J (hidrosanitario), Titulo K (contra incendio), NTC 1500 (codigo de fontaneria), NTC 2301 (hidrantes) y NFPA 13 (rociadores). Define el uso del edificio y el riesgo de incendio.' },
+        { '@type': 'HowToStep', position: 2, name: 'Diseno de la red hidraulica y sanitaria', text: 'BIC dimensiona la red de agua fria y caliente, los colectores sanitarios y pluviales, las trampas de grasa y el punto de conexion a la red publica. Calculo de presiones, velocidades y caudales por aparato segun dotacion NSR-10 J.' },
+        { '@type': 'HowToStep', position: 3, name: 'Diseno del sistema contra incendio', text: 'BIC diseña la red de gabinetes BIE, los rociadores automaticos NFPA 13 (si aplica), la reserva de agua contra incendio y la bomba CI. Memoria de calculo con caudal y presion en el punto mas desfavorable.' },
+        { '@type': 'HowToStep', position: 4, name: 'Planos y memorias para licencia de construccion', text: 'BIC entrega planos de cada piso, isometricos de la red y memorias de calculo firmadas COPNIA, listos para radicacion ante la Curaduria urbana. Acompaña las observaciones tecnicas sin costo adicional.' },
+      ]
+    })
+    document.head.appendChild(howto)
+    return () => { document.getElementById('schema-hidrosanitario-howto')?.remove() }
   }, [])
 
   return (

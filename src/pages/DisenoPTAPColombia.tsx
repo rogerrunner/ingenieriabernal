@@ -162,6 +162,26 @@ const SCHEMA = {
 
 export default function DisenoPTAPColombia() {
   useEffect(() => {
+    const howto = document.createElement('script')
+    howto.type = 'application/ld+json'
+    howto.id = 'schema-ptap-howto'
+    howto.textContent = JSON.stringify({
+      '@context': 'https://schema.org',
+      '@type': 'HowTo',
+      name: 'Como disenar una planta de tratamiento de agua potable PTAP en Colombia',
+      description: 'Pasos para el diseno de una PTAP que cumpla la Resolucion 0330 de 2017 y los criterios del RAS para municipios o ESP en Colombia.',
+      step: [
+        { '@type': 'HowToStep', position: 1, name: 'Analisis de calidad del agua cruda', text: 'BIC revisa los parametros fisicoquimicos y microbiologicos del agua cruda de la fuente. Si no hay analisis previo, coordina la toma de muestras en laboratorio certificado. La calidad del agua cruda define la tecnologia de tratamiento necesaria.' },
+        { '@type': 'HowToStep', position: 2, name: 'Seleccion de la tecnologia de potabilizacion', text: 'Segun la calidad del agua y el caudal de diseno, BIC recomienda: PTAP convencional (coagulacion, floculacion, sedimentacion, filtracion, desinfeccion), filtracion directa, filtracion lenta, o desinfeccion UV. Incluye analisis de costos de operacion.' },
+        { '@type': 'HowToStep', position: 3, name: 'Diseno hidraulico y memoria de calculo RAS 2017', text: 'BIC diseña cada unidad de la PTAP con memoria de calculo conforme al RAS 2017 (Resolucion 0330), planos de detalle en AutoCAD y especificaciones tecnicas para licitacion o construccion directa.' },
+        { '@type': 'HowToStep', position: 4, name: 'Tramite de concesion de aguas y aprobacion ante la ESP', text: 'BIC gestiona la concesion de aguas ante la CAR y elabora el expediente tecnico para aprobacion ante la ESP o la Superservicios, incluyendo el plan de control de calidad del agua potable.' },
+      ]
+    })
+    document.head.appendChild(howto)
+    return () => { document.getElementById('schema-ptap-howto')?.remove() }
+  }, [])
+
+  useEffect(() => {
     window.scrollTo(0, 0)
     const s = document.createElement('script')
     s.type = 'application/ld+json'
