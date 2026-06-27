@@ -6,7 +6,7 @@ import { BlueprintBg, ThinLine, SectionLabel, Btn, Section, Tag, CTABanner } fro
 import QuoteFormInline from '@/components/QuoteFormInline'
 
 const WA = '573024778910'
-const WA_MSG = encodeURIComponent('Hola, necesito tramitar una concesión de aguas superficiales ante la CAR. ¿Qué estudios son necesarios y pueden cotizar el servicio?')
+const WA_MSG = encodeURIComponent('Hola, soy propietario/empresario y necesito tramitar una concesión de aguas superficiales. Tengo el predio y la fuente hídrica. Quiero cotizar directamente con BIC.')
 
 const seoConfig = {
   title: 'Concesión de Aguas Superficiales: Cómo Obtenerla y Qué Estudios Exige la CAR',
@@ -321,6 +321,25 @@ export default function ConcesionAguasSuperficialesTramite() {
       </Section>
 
       {/* ── FORMULARIO ── */}
+      {/* ── ANTI-INTERMEDIARIO ENHANCED ── */}
+      <Section style={{ background: '#001A33', padding: '44px 24px' }}>
+        <div style={{ maxWidth: 740, margin: '0 auto', textAlign: 'center' }}>
+          <h2 style={{ fontFamily: "'Playfair Display', serif", fontWeight: 700, fontSize: 'clamp(16px, 2.2vw, 22px)', color: '#fff', marginBottom: 12 }}>
+            Solo con quien tiene el predio y puede contratar directamente
+          </h2>
+          <p style={{ fontFamily: "'Lato', sans-serif", color: 'rgba(255,255,255,0.80)', fontSize: 14, lineHeight: 1.8, maxWidth: 660, margin: '0 auto 8px' }}>
+            BIC tramita concesiones para <strong style={{ color: '#17A2B8' }}>propietarios, empresarios y proyectos privados</strong> que necesitan el permiso de captación — no con intermediarios ni con ingenieros buscando referencias de precio.
+            Si usted es el contratante directo y tiene el proyecto activo, la propuesta llega en 24 horas.
+          </p>
+          <p style={{ fontFamily: "'Lato', sans-serif", color: 'rgba(255,255,255,0.30)', fontSize: 11 }}>
+            ¿Colega buscando precio o asesoría? No es el canal.
+          </p>
+        </div>
+      </Section>
+
+      <ThinLine />
+
+
       <Section>
         <QuoteFormInline />
       </Section>

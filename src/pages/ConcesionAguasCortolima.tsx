@@ -4,7 +4,7 @@ import { BlueprintBg, ThinLine, SectionLabel, Section, CTABanner } from '@/compo
 import QuoteFormInline from '@/components/QuoteFormInline'
 
 const WA = '573024778910'
-const WA_MSG = encodeURIComponent('Hola, necesito acompanamiento para tramitar concesion de aguas ante CORTOLIMA en el Tolima. Pueden cotizar?')
+const WA_MSG = encodeURIComponent('Hola, soy propietario/empresario y necesito tramitar una concesión de aguas ante CORTOLIMA. Tengo el predio y quiero cotizar directamente.')
 
 const seoConfig = {
   title: 'Concesion de Aguas Superficiales CORTOLIMA Tolima — Tramite COPNIA | BIC',
@@ -87,6 +87,25 @@ export default function ConcesionAguasCortolima() {
         <p style={{ fontSize: 16, color: '#64748B', textAlign: 'center', maxWidth: 540, margin: '0 auto 36px' }}>Sin compromiso. Respuesta en 24 horas.</p>
         <QuoteFormInline />
       </Section>
+      {/* ── ANTI-INTERMEDIARIO ENHANCED ── */}
+      <Section style={{ background: '#001A33', padding: '44px 24px' }}>
+        <div style={{ maxWidth: 740, margin: '0 auto', textAlign: 'center' }}>
+          <h2 style={{ fontFamily: "'Playfair Display', serif", fontWeight: 700, fontSize: 'clamp(16px, 2.2vw, 22px)', color: '#fff', marginBottom: 12 }}>
+            Solo con quien tiene el predio y puede contratar directamente
+          </h2>
+          <p style={{ fontFamily: "'Lato', sans-serif", color: 'rgba(255,255,255,0.80)', fontSize: 14, lineHeight: 1.8, maxWidth: 660, margin: '0 auto 8px' }}>
+            BIC tramita concesiones para <strong style={{ color: '#17A2B8' }}>propietarios, empresarios y proyectos privados</strong> que necesitan el permiso de captación — no con intermediarios ni con ingenieros buscando referencias de precio.
+            Si usted es el contratante directo y tiene el proyecto activo, la propuesta llega en 24 horas.
+          </p>
+          <p style={{ fontFamily: "'Lato', sans-serif", color: 'rgba(255,255,255,0.30)', fontSize: 11 }}>
+            ¿Colega buscando precio o asesoría? No es el canal.
+          </p>
+        </div>
+      </Section>
+
+      <ThinLine />
+
+
       <Section style={{ background: '#F8FAFC' }}>
         <div style={{ display: 'flex', flexWrap: 'wrap', gap: 12 }}>
           {[

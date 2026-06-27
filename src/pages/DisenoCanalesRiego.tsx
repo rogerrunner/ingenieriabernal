@@ -6,7 +6,7 @@ import { BlueprintBg, SectionLabel, Btn, Section, Tag } from '@/components/ui'
 import QuoteFormInline from '@/components/QuoteFormInline'
 
 const WA = '573024778910'
-const WA_MSG = encodeURIComponent('Hola, necesito cotizar el diseño de un canal de riego o conducción. ¿Pueden asesorarme?')
+const WA_MSG = encodeURIComponent('Hola, soy propietario/empresario y necesito diseño de canales de riego para mi predio. Quiero cotizar directamente con BIC, sin intermediarios.')
 
 const seoConfig = {
   title: 'Diseño Canal de Riego Colombia — Cálculo Hidráulico COPNIA | BIC',
@@ -424,6 +424,25 @@ export default function DisenoCanalesRiego() {
           </div>
         </div>
       </Section>
+
+
+      {/* ── ANTI-INTERMEDIARIO ENHANCED ── */}
+      <Section style={{ background: '#001A33', padding: '52px 24px' }}>
+        <div style={{ maxWidth: 780, margin: '0 auto', textAlign: 'center' }}>
+          <h2 style={{ fontFamily: "'Playfair Display', serif", fontWeight: 700, fontSize: 'clamp(18px, 2.5vw, 26px)', color: '#fff', marginBottom: 16 }}>
+            Diseño directo con el propietario o promotor del distrito de riego
+          </h2>
+          <p style={{ fontFamily: "'Lato', sans-serif", color: 'rgba(255,255,255,0.82)', fontSize: 15, lineHeight: 1.85, maxWidth: 700, margin: '0 auto 12px' }}>
+            BIC diseña canales para <strong style={{ color: '#17A2B8' }}>haciendas, fincas cafeteras, propietarios agroindustriales y distritos de adecuación de tierras privados</strong> — no con intermediarios que re-cotizan el diseño ni con ingenieros que buscan comparar precios o aprender metodologías.
+            El Ing. Rogerio Bernal Ríos (COPNIA 17202-313228 CLD) firma los planos. Si usted tiene el predio y el proyecto, la propuesta llega en 24 horas.
+          </p>
+          <p style={{ fontFamily: "'Lato', sans-serif", color: 'rgba(255,255,255,0.35)', fontSize: 12 }}>
+            ¿Colega buscando asesoría técnica o cotización comparativa? No es el canal indicado.
+          </p>
+        </div>
+      </Section>
+
+      <ThinLine />
 
 
       <Section>

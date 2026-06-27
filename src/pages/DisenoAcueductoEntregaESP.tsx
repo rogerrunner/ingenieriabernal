@@ -6,7 +6,7 @@ import { BlueprintBg, ThinLine, SectionLabel, Btn, Section, Tag, CTABanner } fro
 import QuoteFormInline from '@/components/QuoteFormInline'
 
 const WA = '573024778910'
-const WA_MSG = encodeURIComponent('Hola, necesito el diseño de un acueducto para entrega a la ESP o empresa de servicios públicos. ¿Qué requisitos del RAS 2017 aplican y pueden cotizar el servicio?')
+const WA_MSG = encodeURIComponent('Hola, soy promotor/propietario y necesito diseño de acueducto para entrega a ESP o comunidad. Tengo el proyecto aprobado y quiero cotizar directamente con BIC.')
 
 const seoConfig = {
   title: 'Diseño de Acueducto para Entrega a ESP: Memorias, Planos y Requisitos RAS 2017',
@@ -336,6 +336,26 @@ export default function DisenoAcueductoEntregaESP() {
           </div>
         </div>
       </Section>
+
+      {/* ── ANTI-INTERMEDIARIO ENHANCED ── */}
+      <Section style={{ background: '#001A33', padding: '52px 24px' }}>
+        <div style={{ maxWidth: 780, margin: '0 auto', textAlign: 'center' }}>
+          <h2 style={{ fontFamily: "'Playfair Display', serif", fontWeight: 700, fontSize: 'clamp(18px, 2.5vw, 26px)', color: '#fff', marginBottom: 16 }}>
+            Diseño directo con el promotor, urbanizador o gestor del proyecto
+          </h2>
+          <p style={{ fontFamily: "'Lato', sans-serif", color: 'rgba(255,255,255,0.82)', fontSize: 15, lineHeight: 1.85, maxWidth: 700, margin: '0 auto 12px' }}>
+            BIC diseña acueductos para <strong style={{ color: '#17A2B8' }}>parcelaciones, condominios, acueductos veredales y urbanizaciones</strong> cuyos promotores requieren entregarlo a una ESP o a la comunidad — propietarios con el proyecto aprobado y el capital para contratar.
+            No cotizamos a intermediarios ni atendemos ingenieros que buscan actualizar metodologías o comparar precios para sus propios proyectos.
+            El Ing. Rogerio Bernal Ríos (COPNIA 17202-313228 CLD) firma directamente. Si usted tiene el proyecto, la propuesta llega en 24 horas.
+          </p>
+          <p style={{ fontFamily: "'Lato', sans-serif", color: 'rgba(255,255,255,0.35)', fontSize: 12 }}>
+            ¿Colega ingeniero buscando precio de referencia o asesoría técnica? No es el canal.
+          </p>
+        </div>
+      </Section>
+
+      <ThinLine />
+
 
       <Section>
         <QuoteFormInline />
