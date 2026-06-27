@@ -177,6 +177,192 @@ const articlesZ: Record<string, {
     ],
   },
 
+  'permiso-ocupacion-cauce-colombia-guia-2026': {
+    title: 'Permiso de Ocupacion de Cauce en Colombia: guia completa 2026',
+    date: 'Junio 2026',
+    readTime: '8 min',
+    category: 'Tramites CAR',
+    metaDesc: 'Guia practica del permiso de ocupacion de cauce en Colombia: cuando se necesita, documentos, costos ($12M-$40M COP) y tiempos reales. CORPOCALDAS, CARDER, CVC, CORTOLIMA.',
+    keywords: 'permiso ocupacion de cauce Colombia, tramite permiso ocupacion cauce CAR, permiso ocupacion cauce puente Colombia, permiso ocupacion cauce urbanizacion, costo permiso ocupacion cauce',
+    body: (
+      <>
+        <p>
+          El permiso de ocupacion de cauce es la autorizacion que otorga la CAR competente para construir o modificar
+          obras dentro del cauce de un rio o quebrada, o en su ronda hidrica. Es diferente a la concesion de aguas
+          (que autoriza el uso del recurso hidrico) y se requiere cuando hay una <strong>intervencion fisica del cauce</strong>:
+          puentes, bocatomas, muros de contencion, box culverts, canales de drenaje o cualquier encauzamiento en proyectos
+          de urbanizacion.
+        </p>
+
+        <h2>Cuando es obligatorio el permiso de ocupacion de cauce</h2>
+        <p>El articulo 132 del Decreto 1076 de 2015 establece que se requiere permiso de ocupacion de cauce para:</p>
+        <ul>
+          <li><strong>Puentes y pasos vehiculares o peatonales</strong> sobre cauces naturales, sin importar la longitud del vano.</li>
+          <li><strong>Muros de gavion, escollera o concreto</strong> dentro de la ronda hidrica o en el cauce activo.</li>
+          <li><strong>Box culverts y alcantarillas</strong> que cruzan o encauzan quebradas en proyectos de urbanizacion.</li>
+          <li><strong>Bocatomas y captaciones</strong> — la obra fisica requiere el permiso de ocupacion; el uso del agua requiere la concesion.</li>
+          <li><strong>Obras de proteccion de ribera</strong> y estructuras de disipacion de energia hidraulica.</li>
+        </ul>
+        <p>
+          Los proyectos de urbanizacion que encauzan quebradas o instalan colectores pluviales dentro de la ronda hidrica
+          deben tramitar el permiso de ocupacion ante la CAR como requisito previo a la licencia de urbanismo.
+          La Curaduría verifica que el permiso este vigente antes de expedir la licencia.
+        </p>
+
+        <h2>Documentos requeridos por las CAR en Colombia</h2>
+        <p>
+          Aunque cada CAR tiene su propio formulario, los documentos tecnicos exigidos son equivalentes en
+          CORPOCALDAS, CARDER, CRQ, CORTOLIMA y CVC:
+        </p>
+        <ul>
+          <li><strong>Memoria de calculo hidrologica</strong> — caudales de diseno para TR 2, 5, 10, 25, 50 y 100 anos.</li>
+          <li><strong>Memoria de calculo hidraulica</strong> — modelacion HEC-RAS (1D o 2D segun complejidad) del tramo afectado y de la obra proyectada.</li>
+          <li><strong>Planos topograficos y batimetricos</strong> — levantamiento del cauce en el tramo de intervencion.</li>
+          <li><strong>Diseno de la obra</strong> — planos estructurales o hidraulicos de la intervencion firmados por ingeniero COPNIA.</li>
+          <li><strong>Descripcion del proyecto</strong> — memoria descriptiva del uso del suelo, finalidad de la obra y medidas de manejo ambiental.</li>
+          <li><strong>Certificado de tradicion</strong> del predio o autorizacion del propietario.</li>
+        </ul>
+        <p>
+          BIC prepara todos los documentos tecnicos, acompana la radicacion y responde los requerimientos de
+          informacion adicional de la CAR sin costo extra.
+        </p>
+
+        <h2>Cuanto cuesta el permiso de ocupacion de cauce en Colombia</h2>
+        <p>El costo se divide en dos componentes:</p>
+        <ul>
+          <li>
+            <strong>Estudios tecnicos (BIC):</strong> entre $12M y $40M COP segun la complejidad de la obra y el cauce.
+            Una bocatoma pequena con caudal menor de 10 L/s cuesta entre $12M y $18M. Un encauzamiento de quebrada
+            en un plan parcial de mas de 5 ha puede costar entre $25M y $40M.
+          </li>
+          <li>
+            <strong>Derechos de tramite (CAR):</strong> los define cada corporacion segun el caudal o la longitud
+            de la intervencion. Generalmente entre $500.000 y $3.000.000 COP.
+          </li>
+        </ul>
+        <p>BIC entrega propuesta con valor exacto en 24 horas sin costo.</p>
+
+        <h2>Cuanto tarda el tramite</h2>
+        <p>
+          La preparacion del expediente tecnico tarda entre 6 y 14 semanas. El tramite ante la CAR
+          (desde la radicacion hasta la resolucion) tarda entre 4 y 10 meses segun la CAR y la complejidad
+          de la solicitud. CORPOCALDAS y CARDER tienen tiempos historicamente de 5 a 7 meses para expedientes bien preparados.
+        </p>
+        <p>
+          BIC hace seguimiento permanente al expediente y atiende los requerimientos de la CAR dentro de los
+          plazos legales, evitando el archivo del expediente por silencio administrativo.
+        </p>
+
+        <h2>Diferencia entre permiso de ocupacion de cauce y concesion de aguas</h2>
+        <p>
+          Son dos tramites distintos ante la misma CAR. La <strong>concesion de aguas</strong> autoriza <em>usar</em> el
+          recurso hidrico (captar agua para consumo, riego o uso industrial). El <strong>permiso de ocupacion de cauce</strong>
+          autoriza <em>construir</em> una obra fisica en el cauce o en su ronda. En proyectos de captacion como bocatomas,
+          se tramitan los dos en paralelo. BIC gestiona ambos tramites con un solo equipo tecnico.
+        </p>
+
+        <p><strong>Contacto:</strong> WhatsApp +57 302 477 8910 | ingenieriabernal.co | Propuesta en 24 horas.</p>
+      </>
+    ),
+    faqItems: [
+      { q: 'Que es el permiso de ocupacion de cauce y cuando se necesita?', a: 'Es la autorizacion de la CAR para construir obras dentro del cauce o la ronda hidrica de un rio o quebrada. Se necesita para puentes, bocatomas, muros de contencion, box culverts y encauzamientos en urbanizaciones.' },
+      { q: 'Cuanto cuesta tramitar el permiso de ocupacion de cauce?', a: 'Los estudios tecnicos cuestan entre $12M y $40M COP segun complejidad. Los derechos ante la CAR son adicionales ($500K-$3M COP). BIC da propuesta exacta en 24 horas.' },
+      { q: 'Cuanto tarda el permiso de ocupacion de cauce?', a: 'Preparacion del expediente: 6-14 semanas. Tramite ante la CAR: 4-10 meses. BIC hace seguimiento permanente hasta la resolucion.' },
+    ],
+  },
+
+  'estudio-hidraulico-plan-parcial-colombia-2026': {
+    title: 'Estudio hidraulico para plan parcial en Colombia: que incluye y cuanto cuesta 2026',
+    date: 'Junio 2026',
+    readTime: '9 min',
+    category: 'Planes Parciales',
+    metaDesc: 'Todo lo que debe incluir el componente hidraulico de un plan parcial en Colombia: modelacion HEC-RAS 2D, ronda hidrica, drenaje pluvial, permisos CAR. Costos reales 2026.',
+    keywords: 'estudio hidraulico plan parcial Colombia, componente hidraulico plan parcial, modelacion HEC-RAS plan parcial, ronda hidrica plan parcial Colombia, costo estudio hidraulico urbanizacion Colombia',
+    body: (
+      <>
+        <p>
+          El componente hidraulico es el requisito tecnico mas complejo y determinante en la viabilidad de un plan parcial
+          en Colombia cuando el predio tiene cauces, rondas hidricas o zonas de ladera. Sin el concepto favorable de la CAR
+          competente sobre el manejo hidrico del proyecto, la licencia de urbanismo no puede expedirse.
+          Esta guia explica que debe incluir el estudio, cuanto cuesta y como afecta el diseno del plan parcial.
+        </p>
+
+        <h2>Que es el componente hidraulico de un plan parcial</h2>
+        <p>
+          Es el conjunto de estudios tecnicos que determina como el proyecto de urbanizacion maneja el agua:
+          delimitacion de rondas hidricas, calculo de caudales de diseno para el drenaje pluvial, modelacion
+          de inundabilidad de los cauces aferentes, diseno de canales y colectores, y tramites de permisos
+          ante la CAR (concesiones, vertimientos, ocupacion de cauce).
+        </p>
+
+        <h2>Que estudios incluye el componente hidraulico de un plan parcial</h2>
+        <ul>
+          <li>
+            <strong>Estudio hidrologico</strong> — calculo de caudales de diseno con TR 2, 5, 10, 25, 50 y 100 anos
+            usando HEC-HMS. Base para el diseno del sistema de drenaje pluvial y para la modelacion hidraulica.
+          </li>
+          <li>
+            <strong>Modelacion hidraulica HEC-RAS 2D</strong> — simulacion de la llanura de inundacion de los cauces
+            que atraviesan o colindan con el predio. Define la ronda hidrica reglamentaria y determina las zonas
+            aptas para urbanizar.
+          </li>
+          <li>
+            <strong>Estudio Decreto 1807</strong> — si el predio tiene amenaza hidrica media o alta, la Curaduría
+            exige este estudio como requisito previo a la licencia de urbanismo. BIC lo integra al componente
+            hidraulico para no duplicar la modelacion.
+          </li>
+          <li>
+            <strong>Diseno del sistema de drenaje pluvial</strong> — calculo y diseno de colectores, cunetas,
+            canales de drenaje y estructuras de control de caudales pico para el area urbanizable.
+          </li>
+          <li>
+            <strong>Tramites CAR</strong> — concesion de aguas (si hay captacion), permiso de vertimientos
+            (si hay descarga al cauce) y permiso de ocupacion de cauce (si hay intervenciones fisicas en el cauce).
+          </li>
+        </ul>
+
+        <h2>Como afecta el componente hidraulico al diseno del plan parcial</h2>
+        <p>
+          La ronda hidrica calculada en HEC-RAS define el area de cesion obligatoria al municipio — no puede construirse
+          en ella. Los colectores pluviales deben diseñarse para el caudal de diseno TR 10 (RAS 2000) y las estructuras
+          de control para TR 100. Un plan parcial bien estudiado maximiza el area neta urbanizable respetando estas restricciones.
+        </p>
+        <p>
+          BIC trabaja en coordinacion directa con el arquitecto y el urbanista del plan parcial para que el componente
+          hidraulico no restrinja el aprovechamiento sino que lo optimice.
+        </p>
+
+        <h2>Cuanto cuesta el componente hidraulico de un plan parcial</h2>
+        <p>El costo depende principalmente del area del predio y la cantidad de cauces:</p>
+        <ul>
+          <li><strong>Plan parcial 2-5 ha, un cauce:</strong> $15M a $25M COP (estudios tecnicos, sin tramites CAR).</li>
+          <li><strong>Plan parcial 5-20 ha, uno o dos cauces:</strong> $25M a $45M COP.</li>
+          <li><strong>Plan parcial mayor de 20 ha o predios con tributarios multiples:</strong> desde $45M COP.</li>
+          <li><strong>Tramites CAR adicionales</strong> (ocupacion de cauce, concesion, vertimientos): $12M a $25M COP por tramite.</li>
+        </ul>
+        <p>
+          BIC entrega propuesta desglosada con valor exacto en 24 horas. El componente hidraulico se puede contratar
+          de forma independiente del resto del plan parcial.
+        </p>
+
+        <h2>Cuanto tiempo toma el componente hidraulico</h2>
+        <p>
+          Los estudios tecnicos (hidrologico, hidraulico, Decreto 1807, diseno de drenaje) tardan entre 6 y 14 semanas.
+          Los tramites ante la CAR se inician en paralelo y pueden extenderse de 4 a 8 meses. BIC coordina los cronogramas
+          para que el expediente tecnico y los permisos CAR esten listos al tiempo que el equipo de urbanismo completa
+          las memorias del plan parcial.
+        </p>
+
+        <p><strong>Contacto:</strong> WhatsApp +57 302 477 8910 | ingenieriabernal.co | Propuesta en 24 horas.</p>
+      </>
+    ),
+    faqItems: [
+      { q: 'Que incluye el componente hidraulico de un plan parcial en Colombia?', a: 'Estudio hidrologico, modelacion HEC-RAS 2D, estudio Decreto 1807, diseno de drenaje pluvial y tramites CAR (concesion, vertimientos, ocupacion de cauce).' },
+      { q: 'Cuanto cuesta el estudio hidraulico de un plan parcial?', a: 'Entre $15M y $45M COP segun el area y la cantidad de cauces. Los tramites CAR adicionales cuestan $12M-$25M por tramite. BIC da propuesta en 24 horas.' },
+      { q: 'BIC puede hacer el componente hidraulico del plan parcial por separado?', a: 'Si. BIC contrata el componente hidraulico de forma independiente y trabaja en coordinacion con el equipo de urbanismo y arquitectura del promotor.' },
+    ],
+  },
+
 }
 
 export default articlesZ
