@@ -8,6 +8,8 @@ import EstudiosHidraulicosPereira from './pages/EstudiosHidraulicosPereira'
 import EstudiosHidraulicosArmenia from './pages/EstudiosHidraulicosArmenia'
 import EstudiosHidraulicosIbague from './pages/EstudiosHidraulicosIbague'
 import EstudiosHidraulicosLaDorada from './pages/EstudiosHidraulicosLaDorada'
+import ConcesionAguasCortolima from './pages/ConcesionAguasCortolima'
+import ConcesionAguasCvc from './pages/ConcesionAguasCvc'
 import ConcesionAguasCorpocaldas from './pages/ConcesionAguasCorpocaldas'
 import ConcesionAguasCarder from './pages/ConcesionAguasCarder'
 import PermisoVertimientosCorpocaldas from './pages/PermisoVertimientosCorpocaldas'
@@ -475,6 +477,8 @@ export default function App() {
           <Route path="/estudios-hidraulicos-armenia" component={EstudiosHidraulicosArmenia} />
           <Route path="/estudios-hidraulicos-ibague" component={EstudiosHidraulicosIbague} />
           <Route path="/estudios-hidraulicos-la-dorada" component={EstudiosHidraulicosLaDorada} />
+          <Route path="/concesion-aguas-cortolima" component={ConcesionAguasCortolima} />
+          <Route path="/concesion-aguas-cvc" component={ConcesionAguasCvc} />
           <Route path="/concesion-aguas-corpocaldas" component={ConcesionAguasCorpocaldas} />
           <Route path="/concesion-aguas-carder" component={ConcesionAguasCarder} />
           <Route path="/permiso-vertimientos-corpocaldas" component={PermisoVertimientosCorpocaldas} />
