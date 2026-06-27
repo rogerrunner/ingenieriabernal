@@ -88,6 +88,26 @@ const NORMATIVA = [
 
 export default function DisenoAcueductoEntregaESP() {
   useEffect(() => {
+    const howto = document.createElement('script')
+    howto.type = 'application/ld+json'
+    howto.id = 'schema-acueducto-howto'
+    howto.textContent = JSON.stringify({
+      '@context': 'https://schema.org',
+      '@type': 'HowTo',
+      name: 'Como disenar un acueducto para entrega a ESP en Colombia',
+      description: 'Pasos para disenar una red de acueducto que cumpla la Resolucion 0330 de 2017 y pueda ser entregada a la empresa de servicios publicos del municipio.',
+      step: [
+        { '@type': 'HowToStep', position: 1, name: 'Diagnostico de la fuente y caudal concesionado', text: 'BIC verifica el caudal disponible en la fuente hidrica y la concesion de aguas vigente. Si no hay concesion, gestiona el tramite ante la CAR antes de iniciar el diseno.' },
+        { '@type': 'HowToStep', position: 2, name: 'Diseno de la red con EPANET', text: 'BIC modela la red de distribucion con EPANET, dimensionando diametros, presiones y caudales para la dotacion neta de la Resolucion 0330. Incluye bocatoma, PTAP, linea de conduccion y red de distribucion.' },
+        { '@type': 'HowToStep', position: 3, name: 'Memoria tecnica y planos para la ESP', text: 'BIC entrega la memoria de calculo, planos en AutoCAD y el informe tecnico en el formato requerido por la ESP o la Superintendencia de Servicios Publicos para la aprobacion del diseno.' },
+        { '@type': 'HowToStep', position: 4, name: 'Acompanamiento a la construccion y entrega formal', text: 'BIC puede supervisar la construccion y acompanar la entrega formal del sistema a la ESP, incluyendo las pruebas hidraulicas y la documentacion de obra.' },
+      ]
+    })
+    document.head.appendChild(howto)
+    return () => { document.getElementById('schema-acueducto-howto')?.remove() }
+  }, [])
+
+  useEffect(() => {
     window.scrollTo(0, 0)
     const s = document.createElement('script')
     s.type = 'application/ld+json'

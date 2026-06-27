@@ -208,6 +208,26 @@ const ARTICULOS = [
 
 export default function DisenoPTARColombia() {
   useEffect(() => {
+    const howto = document.createElement('script')
+    howto.type = 'application/ld+json'
+    howto.id = 'schema-ptar-howto'
+    howto.textContent = JSON.stringify({
+      '@context': 'https://schema.org',
+      '@type': 'HowTo',
+      name: 'Como disenar una planta de tratamiento de aguas residuales PTAR en Colombia',
+      description: 'Pasos para el diseno de una PTAR que cumpla el RAS 2017 y el permiso de vertimientos de la CAR en Colombia.',
+      step: [
+        { '@type': 'HowToStep', position: 1, name: 'Caracterizacion del vertimiento y caudal de diseno', text: 'BIC determina el caudal de diseno (QMH, QMD, QMM) y la carga organica del vertimiento. Si no hay aforo previo, BIC puede coordinar la toma de muestras para la caracterizacion del agua residual.' },
+        { '@type': 'HowToStep', position: 2, name: 'Seleccion de la tecnologia de tratamiento', text: 'Segun el caudal, la carga organica y la capacidad de operacion del cliente, BIC recomienda la tecnologia mas adecuada: laguna de estabilizacion, reactor UASB, filtro anaerobio de flujo ascendente (FAFA), PTAR compacta o humedal artificial.' },
+        { '@type': 'HowToStep', position: 3, name: 'Diseno hidraulico y memoria de calculo', text: 'BIC diseña cada unidad de tratamiento con memoria de calculo, dimensiones, tiempos de retencion y eficiencias esperadas. Verifica que el efluente cumpla los limites permisibles del permiso de vertimientos.' },
+        { '@type': 'HowToStep', position: 4, name: 'Tramite del permiso de vertimientos', text: 'BIC elabora y gestiona el expediente del permiso de vertimientos ante la CAR (CORPOCALDAS, CARDER, CVC, CORTOLIMA, etc.), incluyendo el plan de monitoreo y el programa de reduccion de la carga contaminante.' },
+      ]
+    })
+    document.head.appendChild(howto)
+    return () => { document.getElementById('schema-ptar-howto')?.remove() }
+  }, [])
+
+  useEffect(() => {
     window.scrollTo(0, 0)
     const s = document.createElement('script')
     s.type = 'application/ld+json'

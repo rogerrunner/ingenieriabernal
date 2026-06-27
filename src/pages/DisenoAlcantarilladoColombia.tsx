@@ -204,6 +204,26 @@ export default function DisenoAlcantarilladoColombia() {
   useEffect(() => { window.scrollTo(0, 0) }, [])
 
   useEffect(() => {
+    const howto = document.createElement('script')
+    howto.type = 'application/ld+json'
+    howto.id = 'schema-alcantarillado-howto'
+    howto.textContent = JSON.stringify({
+      '@context': 'https://schema.org',
+      '@type': 'HowTo',
+      name: 'Como disenar una red de alcantarillado sanitario y pluvial en Colombia',
+      description: 'Pasos para el diseno de redes de alcantarillado que cumplan la Resolucion 0330 de 2017 para urbanizaciones, parcelaciones o municipios en Colombia.',
+      step: [
+        { '@type': 'HowToStep', position: 1, name: 'Definicion del area de drenaje y caudales de diseno', text: 'BIC delimita las cuencas hidrograficas del proyecto, calcula los caudales sanitarios y pluviales de diseno con las curvas IDF del IDEAM, y determina el periodo de retorno segun la categoria de la via o la importancia del proyecto.' },
+        { '@type': 'HowToStep', position: 2, name: 'Diseno hidraulico con SewerGEMS o SWMM', text: 'BIC dimensiona los colectores sanitarios y pluviales con SewerGEMS o SWMM, verificando velocidades autocleantes, llenados maximos y presiones. Incluye pozos de inspeccion, sumideros y estructuras de entrega.' },
+        { '@type': 'HowToStep', position: 3, name: 'Planos y memorias de calculo', text: 'BIC entrega planos de planta y perfil en AutoCAD Civil 3D con cotas de instalacion, memorias de calculo hidraulico y el informe tecnico en el formato requerido por la ESP o la Curaduria.' },
+        { '@type': 'HowToStep', position: 4, name: 'Tramite de permiso de vertimientos ante la CAR', text: 'Cuando la red descarga a una fuente hidrica, BIC gestiona en paralelo el permiso de vertimientos ante la CAR correspondiente (CORPOCALDAS, CARDER, CVC, CORTOLIMA, etc.), evitando retrasos en la licencia ambiental.' },
+      ]
+    })
+    document.head.appendChild(howto)
+    return () => { document.getElementById('schema-alcantarillado-howto')?.remove() }
+  }, [])
+
+  useEffect(() => {
     const s = document.createElement('script')
     s.type = 'application/ld+json'
     s.text = JSON.stringify(FAQ_SCHEMA)
