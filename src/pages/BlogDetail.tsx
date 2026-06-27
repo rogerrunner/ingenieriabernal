@@ -26,6 +26,7 @@ import articlesV from '../data/articlesV'
 import articlesW from '../data/articlesW'
 import articlesX from '../data/articlesX'
 import articlesY from '../data/articlesY'
+import articlesZ from '../data/articlesZ'
 import SEOHead from '../components/SEOHead'
 import { BlueprintBg, Tag, ThinLine, SectionLabel, Btn, Section } from '../components/ui'
 import { SEOConfig } from '../lib/seo'
@@ -378,11 +379,15 @@ const ARTICLES: Record<string, {
   ...articlesW,
   ...articlesX,
   ...articlesY,
+  ...articlesZ,
 }
 
 // ─── SERVICE LINKS PER ARTICLE ──────────────────────────────────────────────
 const SERVICE_LINKS: Record<string, { label: string; href: string }> = {
   // articlesY
+  'como-tramitar-concesion-aguas-superficiales-corpocaldas-2026': { label: 'Concesion de Aguas ante CORPOCALDAS', href: '/concesion-aguas-corpocaldas' },
+  'decreto-1807-colombia-estudios-riesgo-hidrico-cuanto-cuesta-2026': { label: 'Estudios Decreto 1807 — Precio y Tramite', href: '/precio-estudios-hidraulicos-colombia' },
+  // articlesZ
   'documentos-permiso-vertimiento-corpocaldas-2026':           { label: 'Permiso de Vertimiento — Trámite ante CAR',       href: '/empresa-industria-colombia' },
   'cuanto-demora-concesion-aguas-superficiales-colombia-2026': { label: 'Concesión de Aguas — Estudio Hidrológico',         href: '/servicios/estudios-hidrologicos' },
   'cuanto-cuesta-estudio-riesgo-inundacion-colombia': { label: 'Estudio de Riesgo por Inundación — Decreto 1807', href: '/gestion-riesgo-hidrico' },

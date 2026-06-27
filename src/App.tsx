@@ -4,6 +4,10 @@ import { useLocation } from 'wouter'
 import Nav from './components/Nav'
 import Footer from './components/Footer'
 import FloatingQuoteButton from './components/FloatingQuoteButton'
+import ConcesionAguasCorpocaldas from './pages/ConcesionAguasCorpocaldas'
+import ConcesionAguasCarder from './pages/ConcesionAguasCarder'
+import PermisoVertimientosCorpocaldas from './pages/PermisoVertimientosCorpocaldas'
+import PermisoVertimientosCarder from './pages/PermisoVertimientosCarder'
 import PrecioEstudiosHidraulicosColombia from './pages/PrecioEstudiosHidraulicosColombia'
 import Home from './pages/Home'
 import NotFound from './pages/NotFound'
@@ -463,6 +467,10 @@ export default function App() {
           <Route path="/servicios/concesion-de-aguas" component={ServicioConcesionAguas} />
 
           <Route path="/blog/:slug" component={BlogDetail} />
+          <Route path="/concesion-aguas-corpocaldas" component={ConcesionAguasCorpocaldas} />
+          <Route path="/concesion-aguas-carder" component={ConcesionAguasCarder} />
+          <Route path="/permiso-vertimientos-corpocaldas" component={PermisoVertimientosCorpocaldas} />
+          <Route path="/permiso-vertimientos-carder" component={PermisoVertimientosCarder} />
           <Route path="/precio-estudios-hidraulicos-colombia" component={PrecioEstudiosHidraulicosColombia} />
           <Route component={NotFound} />
         </Switch>
