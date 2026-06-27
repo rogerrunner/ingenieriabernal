@@ -4,7 +4,7 @@ import { BlueprintBg, ThinLine, SectionLabel, Section, CTABanner } from '@/compo
 import QuoteFormInline from '@/components/QuoteFormInline'
 
 const WA = '573024778910'
-const WA_MSG = encodeURIComponent('Hola, necesito acompanamiento para tramitar concesion de aguas ante CARDER en Risaralda. Pueden cotizar?')
+const WA_MSG = encodeURIComponent('Hola, soy propietario/empresario y necesito tramitar una concesión de aguas ante la CARDER. Tengo el predio y quiero cotizar directamente con BIC.')
 
 const seoConfig = {
   title: 'Concesion de Aguas Superficiales CARDER Risaralda — Tramite COPNIA | BIC',
@@ -113,6 +113,26 @@ export default function ConcesionAguasCarder() {
         <p style={{ fontSize: 16, color: '#64748B', textAlign: 'center', maxWidth: 540, margin: '0 auto 36px' }}>Respuesta en 24 horas habiles. Sin compromiso.</p>
         <QuoteFormInline />
       </Section>
+
+      {/* ── ANTI-INTERMEDIARIO ENHANCED ── */}
+      <Section style={{ background: '#001A33', padding: '52px 24px' }}>
+        <div style={{ maxWidth: 780, margin: '0 auto', textAlign: 'center' }}>
+          <h2 style={{ fontFamily: "'Playfair Display', serif", fontWeight: 700, fontSize: 'clamp(18px, 2.5vw, 26px)', color: '#fff', marginBottom: 16 }}>
+            Solo con quien tiene el predio y puede contratar directamente
+          </h2>
+          <p style={{ fontFamily: "'Lato', sans-serif", color: 'rgba(255,255,255,0.82)', fontSize: 15, lineHeight: 1.85, maxWidth: 700, margin: '0 auto 12px' }}>
+            BIC tramita concesiones de aguas para <strong style={{ color: '#17A2B8' }}>hoteles, haciendas, acueductos veredales, industrias y parcelaciones</strong> con el predio y la fuente hídrica — propietarios con la decisión de contratar directamente.
+            No cotizamos a intermediarios ni respondemos consultas de colegas ingenieros que buscan precios de referencia o asesoría técnica para sus propios proyectos.
+            Si usted es el contratante directo, la propuesta llega en menos de 24 horas.
+          </p>
+          <p style={{ fontFamily: "'Lato', sans-serif", color: 'rgba(255,255,255,0.35)', fontSize: 12 }}>
+            ¿Colega ingeniero o consultor buscando cotización comparativa? No es el canal.
+          </p>
+        </div>
+      </Section>
+
+      <ThinLine />
+
 
       <Section style={{ background: '#F8FAFC' }}>
         <h2 style={{ fontSize: 20, fontWeight: 700, marginBottom: 20 }}>Tramites relacionados</h2>

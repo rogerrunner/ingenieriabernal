@@ -6,7 +6,7 @@ import { BlueprintBg, ThinLine, SectionLabel, Btn, Section, Tag, CTABanner } fro
 import QuoteFormInline from '@/components/QuoteFormInline'
 
 const WA = '573024778910'
-const WA_MSG = encodeURIComponent('Hola, somos [municipio / ESP / acueducto comunitario] y necesitamos diseño de PTAP para tratamiento de agua potable. ¿Pueden enviarnos propuesta técnica con tiempo de entrega y honorarios?')
+const WA_MSG = encodeURIComponent('Hola, soy propietario/empresario y necesito diseño de una planta de tratamiento de agua potable (PTAP). Tengo el proyecto activo y quiero cotizar directamente con BIC.')
 
 const seoConfig = {
   title: 'Consultoría para Diseño de PTAP en Colombia — Asesoría Técnica | BIC',
@@ -424,6 +424,26 @@ export default function DisenoPTAPColombia() {
         </div>
       </Section>
       {/* ── FORMULARIO COTIZACIÓN INLINE ── */}
+      {/* ── ANTI-INTERMEDIARIO ENHANCED ── */}
+      <Section style={{ background: '#001A33', padding: '52px 24px' }}>
+        <div style={{ maxWidth: 780, margin: '0 auto', textAlign: 'center' }}>
+          <h2 style={{ fontFamily: "'Playfair Display', serif", fontWeight: 700, fontSize: 'clamp(18px, 2.5vw, 26px)', color: '#fff', marginBottom: 16 }}>
+            Diseño directo con quien tiene el proyecto y el capital
+          </h2>
+          <p style={{ fontFamily: "'Lato', sans-serif", color: 'rgba(255,255,255,0.82)', fontSize: 15, lineHeight: 1.85, maxWidth: 700, margin: '0 auto 12px' }}>
+            BIC diseña PTAP para <strong style={{ color: '#17A2B8' }}>acueductos veredales, parcelaciones, hoteles rurales e industrias</strong> que necesitan agua potable de fuente propia — propietarios con el proyecto activo y la decisión de contratar.
+            No cotizamos a intermediarios ni atendemos ingenieros que buscan comparar precios o metodologías para sus propios clientes.
+            El Ing. Rogerio Bernal Ríos (COPNIA 17202-313228 CLD) firma directamente. Si usted tiene el proyecto y el capital, la propuesta llega en 24 horas.
+          </p>
+          <p style={{ fontFamily: "'Lato', sans-serif", color: 'rgba(255,255,255,0.35)', fontSize: 12 }}>
+            ¿Colega ingeniero buscando asesoría técnica o precio de referencia? No es el canal indicado.
+          </p>
+        </div>
+      </Section>
+
+      <ThinLine />
+
+
       <Section>
         <QuoteFormInline />
       </Section>

@@ -6,7 +6,7 @@ import { BlueprintBg, ThinLine, SectionLabel, Btn, Section, CTABanner } from '@/
 import QuoteFormInline from '@/components/QuoteFormInline'
 
 const WA = '573024778910'
-const WA_MSG = encodeURIComponent('Hola, necesito el diseño hidrosanitario y sistema contra incendio NSR-10 para mi edificio en Colombia. ¿Pueden cotizar?')
+const WA_MSG = encodeURIComponent('Hola, soy promotor/constructor y necesito diseño de redes hidrosanitarias y contra incendios NSR-10 para mi proyecto. Quiero cotizar directamente con el ingeniero que firma.')
 
 const seoConfig = {
   title: 'Diseño Hidrosanitario y Sistema Contra Incendio Edificio Colombia — NSR-10 J/K',
@@ -187,6 +187,25 @@ export default function DisenoHidrosanitarioCIEdificio() {
       <ThinLine />
 
       {/* ── FORM ── */}
+      {/* ── ANTI-INTERMEDIARIO ENHANCED ── */}
+      <Section style={{ background: '#001A33', padding: '48px 24px' }}>
+        <div style={{ maxWidth: 760, margin: '0 auto', textAlign: 'center' }}>
+          <h2 style={{ fontFamily: "'Playfair Display', serif", fontWeight: 700, fontSize: 'clamp(17px, 2.3vw, 24px)', color: '#fff', marginBottom: 14 }}>
+            El ingeniero que firma trabaja directo con el promotor o constructor
+          </h2>
+          <p style={{ fontFamily: "'Lato', sans-serif", color: 'rgba(255,255,255,0.80)', fontSize: 14, lineHeight: 1.8, maxWidth: 680, margin: '0 auto 10px' }}>
+            BIC diseña redes hidrosanitarias y CI para <strong style={{ color: '#17A2B8' }}>constructoras, promotores, propietarios de edificios y desarrolladores</strong> que necesitan los planos para licencia o entrega ESP — no con intermediarios que re-cotizan el diseño ni con ingenieros que buscan actualizar conocimientos.
+            Si usted tiene el proyecto activo y decide contratar, la propuesta llega en 24 horas.
+          </p>
+          <p style={{ fontFamily: "'Lato', sans-serif", color: 'rgba(255,255,255,0.30)', fontSize: 11 }}>
+            ¿Colega buscando precio de referencia? No es el canal.
+          </p>
+        </div>
+      </Section>
+
+      <ThinLine />
+
+
       <Section bg="#f8fafc">
         <div style={{ maxWidth: 760, margin: '0 auto', padding: '64px 24px' }}>
           <SectionLabel>Solicite cotización</SectionLabel>
