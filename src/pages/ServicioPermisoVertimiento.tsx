@@ -4,9 +4,7 @@ import QuoteFormInline from '@/components/QuoteFormInline'
 import { BlueprintBg, ThinLine, SectionLabel, Btn, Section, Tag, CTABanner } from '@/components/ui'
 
 const WA = '573024778910'
-const WA_MSG = encodeURIComponent(
-  'Hola, necesito tramitar un permiso de vertimiento ante la CAR. ¿Pueden asesorarme y elaborar el expediente completo?'
-)
+const WA_MSG = encodeURIComponent('Hola, soy propietario/empresario y necesito tramitar un permiso de vertimiento. Tengo el proyecto activo y quiero cotizar directamente con BIC, sin intermediarios.')
 
 const seoConfig = {
   title: 'Permiso de Vertimiento Colombia 2026 — Trámite ante CAR CORPOCALDAS | BIC',
@@ -246,6 +244,26 @@ export default function ServicioPermisoVertimiento() {
               <p className="text-slate-300 text-sm">{faq.acceptedAnswer.text}</p>
             </div>
           ))}
+        </div>
+      </Section>
+
+      <ThinLine />
+
+
+      {/* ── ANTI-INTERMEDIARIO ENHANCED ── */}
+      <Section style={{ background: '#001A33', padding: '52px 24px' }}>
+        <div style={{ maxWidth: 780, margin: '0 auto', textAlign: 'center' }}>
+          <h2 style={{ fontFamily: "'Playfair Display', serif", fontWeight: 700, fontSize: 'clamp(18px, 2.5vw, 26px)', color: '#fff', marginBottom: 16 }}>
+            El permiso lo gestiona el ingeniero que firma — directo con quien tiene el proyecto
+          </h2>
+          <p style={{ fontFamily: "'Lato', sans-serif", color: 'rgba(255,255,255,0.82)', fontSize: 15, lineHeight: 1.85, maxWidth: 700, margin: '0 auto 12px' }}>
+            BIC tramita permisos de vertimiento para <strong style={{ color: '#17A2B8' }}>industrias, hoteles, haciendas, urbanizaciones y propietarios privados</strong> con el proyecto activo — personas con el predio y la decisión de contratar directamente.
+            No atendemos colegas ingenieros que buscan comparar precios o cotizar el trámite para sus propios clientes, ni intermediarios que re-venden el servicio.
+            El Ing. Rogerio Bernal Ríos (COPNIA 17202-313228 CLD) elabora el expediente y gestiona el permiso ante la CAR. Si usted tiene el proyecto y el capital, la propuesta llega en 24 horas.
+          </p>
+          <p style={{ fontFamily: "'Lato', sans-serif", color: 'rgba(255,255,255,0.35)', fontSize: 12 }}>
+            ¿Colega ingeniero buscando precio de referencia o asesoría técnica? No es el canal indicado.
+          </p>
         </div>
       </Section>
 

@@ -6,7 +6,7 @@ import { BlueprintBg, ThinLine, SectionLabel, Btn, Section, Tag, CTABanner } fro
 import QuoteFormInline from '@/components/QuoteFormInline'
 
 const WA = '573024778910'
-const WA_MSG = encodeURIComponent('Hola, necesito asesoría para tramitar un permiso de vertimientos ante la CAR. ¿Pueden orientarme?')
+const WA_MSG = encodeURIComponent('Hola, soy propietario/empresario y necesito tramitar un permiso de vertimiento en Colombia. Tengo el proyecto activo y quiero cotizar directamente con BIC.')
 
 const seoConfig = {
   title: 'Permiso de Vertimientos Colombia | Trámite CAR CORPOCALDAS CRQ | BIC',
@@ -490,20 +490,21 @@ export default function PermisoVertimientosColombia() {
         </div>
       </Section>
 
-      {/* ── ANTI-INTERMEDIARIO ── */}
-      <Section>
-        <div style={{ maxWidth: 800, margin: '0 auto', padding: '0 24px' }}>
-          <div style={{ background: '#fff', border: '2px solid #e2e8f0', borderRadius: 14, padding: '28px 32px', borderLeft: '5px solid #17A2B8' }}>
-            <h3 style={{ fontFamily: "'Playfair Display', serif", fontWeight: 700, fontSize: 20, color: '#001A33', marginBottom: 14 }}>
-              ¿Es este servicio para usted?
-            </h3>
-            <p style={{ color: '#555', lineHeight: 1.8, fontSize: 15, marginBottom: 12 }}>
-              BIC trabaja directamente con <strong>constructoras, promotores, alcaldías y empresas</strong> que tienen un vertimiento concreto que necesita permiso — no con intermediarios.
-            </p>
-            <p style={{ color: '#555', lineHeight: 1.8, fontSize: 15, margin: 0 }}>
-              Los precios publicados son los que BIC cobra al contratante directo. Si usted es quien decide contratar y tiene el proyecto, la propuesta llega en menos de 24 horas.
-            </p>
-          </div>
+      {/* ── ANTI-INTERMEDIARIO ENHANCED ── */}
+{/* ── ANTI-INTERMEDIARIO ENHANCED ── */}
+      <Section style={{ background: '#001A33', padding: '52px 24px' }}>
+        <div style={{ maxWidth: 780, margin: '0 auto', textAlign: 'center' }}>
+          <h2 style={{ fontFamily: "'Playfair Display', serif", fontWeight: 700, fontSize: 'clamp(18px, 2.5vw, 26px)', color: '#fff', marginBottom: 16 }}>
+            Solo con quien tiene el proyecto activo y el capital para contratar
+          </h2>
+          <p style={{ fontFamily: "'Lato', sans-serif", color: 'rgba(255,255,255,0.82)', fontSize: 15, lineHeight: 1.85, maxWidth: 700, margin: '0 auto 12px' }}>
+            BIC trabaja directamente con <strong style={{ color: '#17A2B8' }}>industrias, hoteles, haciendas, urbanizaciones y propietarios privados</strong> que requieren el permiso de vertimiento ante la CAR — personas con el sistema de tratamiento o el predio y la decisión de contratar.
+            No cotizamos a intermediarios ni atendemos ingenieros que buscan actualizar metodologías o comparar precios para sus propios clientes.
+            El Ing. Rogerio Bernal Ríos (COPNIA 17202-313228 CLD) firma el expediente. Si usted decide y tiene el proyecto, la propuesta llega en 24 horas.
+          </p>
+          <p style={{ fontFamily: "'Lato', sans-serif", color: 'rgba(255,255,255,0.35)', fontSize: 12 }}>
+            ¿Colega ingeniero buscando asesoría técnica o precio de referencia? No es el canal.
+          </p>
         </div>
       </Section>
 

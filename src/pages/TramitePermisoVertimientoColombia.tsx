@@ -6,7 +6,7 @@ import { BlueprintBg, ThinLine, SectionLabel, Btn, Section, Tag, CTABanner } fro
 import QuoteFormInline from '@/components/QuoteFormInline'
 
 const WA = '573024778910'
-const WA_MSG = encodeURIComponent('Hola, necesito tramitar un permiso de vertimiento ante la CAR. ¿Pueden orientarme sobre los estudios requeridos y cotizar el servicio?')
+const WA_MSG = encodeURIComponent('Hola, soy propietario/empresario y necesito tramitar un permiso de vertimiento ante la CAR. Tengo el proyecto activo y quiero cotizar directamente con el ingeniero que firma, sin intermediarios.')
 
 const seoConfig = {
   title: 'Permiso de Vertimiento en Colombia: Qué Estudios se Requieren y Cómo Tramitarlo',
@@ -125,7 +125,26 @@ export default function TramitePermisoVertimientoColombia() {
         faqItems={FAQ}
       />
 
-      <CTABanner service="Trámite de permiso de vertimiento — estudios técnicos y gestión ante CAR" />
+      
+
+      {/* ── ANTI-INTERMEDIARIO ENHANCED ── */}
+      <Section style={{ background: '#001A33', padding: '52px 24px' }}>
+        <div style={{ maxWidth: 780, margin: '0 auto', textAlign: 'center' }}>
+          <h2 style={{ fontFamily: "'Playfair Display', serif", fontWeight: 700, fontSize: 'clamp(18px, 2.5vw, 26px)', color: '#fff', marginBottom: 16 }}>
+            Tramitamos el permiso directamente con quien tiene el proyecto
+          </h2>
+          <p style={{ fontFamily: "'Lato', sans-serif", color: 'rgba(255,255,255,0.82)', fontSize: 15, lineHeight: 1.85, maxWidth: 700, margin: '0 auto 12px' }}>
+            BIC trabaja con <strong style={{ color: '#17A2B8' }}>industriales, hoteleros, agroindustriales, urbanizadores y propietarios privados</strong> que necesitan el permiso de vertimiento ante CORPOCALDAS, CARDER o CRQ — no con intermediarios que re-cotizan el trámite ni con ingenieros que buscan precios de referencia para sus clientes.
+            El Ing. Rogerio Bernal Ríos (COPNIA 17202-313228 CLD) revisa el caso, diseña el sistema de tratamiento si es necesario y tramita el permiso. Si usted es el contratante directo, la propuesta llega en menos de 24 horas.
+          </p>
+          <p style={{ fontFamily: "'Lato', sans-serif", color: 'rgba(255,255,255,0.35)', fontSize: 12 }}>
+            ¿Colega consultor cotizando para su cliente? No es el canal — contáctenos cuando tenga al contratante directo.
+          </p>
+        </div>
+      </Section>
+
+      <ThinLine />
+<CTABanner service="Trámite de permiso de vertimiento — estudios técnicos y gestión ante CAR" />
 
       {/* ── HERO ── */}
       <section style={{
