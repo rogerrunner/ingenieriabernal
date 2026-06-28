@@ -225,13 +225,7 @@ export default function ServicioRiesgoHidrico1807() {
 
       <ThinLine />
 
-      {/* CTA */}
-      <Section className="py-16">
-        <CTABanner service="Estudio Riesgo Hídrico Decreto 1807 — Modelación HEC-RAS 2D" />
-        <div className="mt-10">
-          <QuoteFormInline serviceId="decreto1807" />
-        </div>
-      </Section>
-    </>
-  )
-}
+      {/* ANTI-INTERMEDIARIO */}
+      <Section style={{ background: 'rgba(0,0,0,0.25)', padding: '48px 24px' }}>
+        <div style={{ maxWidth: 760, margin: '0 auto', textAlign: 'center' }}>
+          <h2 className="text-xl font-bold text-white mb-4">Trato directo con el deciso
