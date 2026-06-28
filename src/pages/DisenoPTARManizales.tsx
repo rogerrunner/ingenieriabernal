@@ -474,6 +474,9 @@ export default function DisenoPTARManizales() {
             <p style={{ color: '#555', lineHeight: 1.8, fontSize: 15, margin: 0 }}>
               Los precios publicados son los que BIC cobra al contratante directo. Si usted es quien decide contratar y tiene el proyecto, la propuesta llega en menos de 24 horas.
             </p>
+          <p style={{ color: 'rgba(255,255,255,0.35)', fontSize: 12, marginTop: 10 }}>
+            ¿Colega ingeniero buscando precio de referencia o asesoría técnica? No es el canal.
+          </p>
           </div>
         </div>
       </Section>

@@ -431,6 +431,9 @@ export default function DisenoPTARMunicipalColombia() {
             <p style={{ color: '#555', lineHeight: 1.8, fontSize: 15, margin: 0 }}>
               Si usted es la alcaldía, la ESP o el gerente del proyecto, la propuesta técnica llega en menos de 24 horas sin costo.
             </p>
+          <p style={{ color: 'rgba(255,255,255,0.35)', fontSize: 12, marginTop: 10 }}>
+            ¿Colega ingeniero buscando precio de referencia o asesoría técnica? No es el canal.
+          </p>
           </div>
         </div>
       </Section>

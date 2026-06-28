@@ -215,6 +215,9 @@ export default function DisenoDistritosRiegoColombia() {
                 del proyecto, el análisis de alternativas, el presupuesto con APU y el cronograma
                 de ejecución. La primera consulta técnica es sin costo.
               </p>
+          <p style={{ color: 'rgba(255,255,255,0.35)', fontSize: 12, marginTop: 10 }}>
+            ¿Colega ingeniero buscando precio de referencia o asesoría técnica? No es el canal.
+          </p>
             </div>
           </div>
         </div>

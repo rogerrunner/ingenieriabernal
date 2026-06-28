@@ -206,6 +206,9 @@ export default function DisenoCanalesHidraulicosColombia() {
                 radicación ante la CAR, el MVCT, el MADR o la entidad financiadora. La primera
                 consulta técnica es sin costo.
               </p>
+          <p style={{ color: 'rgba(255,255,255,0.35)', fontSize: 12, marginTop: 10 }}>
+            ¿Colega ingeniero buscando precio de referencia o asesoría técnica? No es el canal.
+          </p>
             </div>
           </div>
         </div>
