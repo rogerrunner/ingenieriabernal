@@ -9,9 +9,10 @@ const WA_MSG = encodeURIComponent(
 )
 
 const seoConfig = {
-  title: 'Estudio Riesgo Hídrico Decreto 1807 Colombia 2026 — HEC-RAS 2D | BIC',
-  description: 'BIC elabora estudios de riesgo hídrico Decreto 1807 con modelación HEC-RAS 2D: estudio básico y detallado para POT, licencias urbanísticas y planes parciales. Mapas de amenaza 1:2.000, concepto de aptitud urbanística firmado COPNIA. Cotización en 24 h.',
+  title: 'Decreto 1807 de 2014 — Estudio Riesgo Hídrico Colombia | BIC COPNIA',
+  description: 'BIC elabora el estudio de riesgo hídrico del Decreto 1807 de 2014 para Curadurías Urbanas, licencias urbanísticas y POT: modelación HEC-RAS 2D, mapa amenaza 1:2.000, concepto aptitud firmado COPNIA. Cotización 24 h.',
   keywords: [
+    'decreto 1807 de 2014',
     'estudio riesgo hídrico Decreto 1807 Colombia 2026',
     'estudio amenaza inundación licencia construcción Colombia',
     'HEC-RAS 2D estudio inundación Colombia',
