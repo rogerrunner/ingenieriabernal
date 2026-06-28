@@ -9,7 +9,7 @@ const WA = '573024778910'
 const WA_MSG = encodeURIComponent('Hola, soy promotor/constructor y necesito diseño de redes hidrosanitarias y contra incendios NSR-10 para mi proyecto. Quiero cotizar directamente con el ingeniero que firma.')
 
 const seoConfig = {
-  title: 'Diseño Hidrosanitario y Sistema Contra Incendio Edificio Colombia — NSR-10 J/K',
+  title: 'Diseño Hidrosanitario Edificio Colombia — RAS 2000 Título D · NSR-10 J/K | BIC',
   description: 'Diseño hidrosanitario completo (agua potable, aguas residuales, aguas lluvias) y sistema contra incendio NSR-10 Título K para edificios en Colombia. Memorias de cálculo y planos firmados COPNIA para licencia de construcción.',
   canonical: 'https://ingenieriabernal.co/diseno-hidrosanitario-sistema-contra-incendio-edificio-colombia',
   noindex: false,
