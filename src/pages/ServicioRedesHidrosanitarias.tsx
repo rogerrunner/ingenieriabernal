@@ -9,7 +9,7 @@ const WA = '573024778910'
 const WA_MSG = encodeURIComponent('Hola, tengo un proyecto de edificio comercial / hotel / centro comercial / planta industrial y necesito el diseño de redes hidrosanitarias para licencia de construcción. ¿Pueden cotizarlo?')
 
 const seoConfig = {
-  title: 'Diseño Redes Hidrosanitarias NSR-10 — Hospitales, Hoteles y Grandes Proyectos | BIC',
+  title: 'Redes Hidrosanitarias Colombia — Diseño NSR-10 J/K · Memorias COPNIA | BIC',
   description: 'BIC diseña redes hidrosanitarias para hospitales, clínicas, hoteles, centros comerciales y grandes edificios industriales en Colombia. NSR-10, RAS 2017, NTC 1500. Memorias y planos COPNIA para licencia de construcción. Propuesta en 24 h.',
   keywords: [
     'diseño hidrosanitario edificio comercial Colombia',
