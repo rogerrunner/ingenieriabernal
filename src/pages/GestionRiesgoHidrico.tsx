@@ -9,8 +9,8 @@ const WA = '573024778910'
 const WA_MSG = encodeURIComponent('Hola, necesitamos un estudio de gestión del riesgo hídrico por inundación (Decreto 1807). ¿Podemos agendar una llamada técnica?')
 
 const seoConfig = {
-  title: 'Contratar Estudio Gestión del Riesgo Hídrico Decreto 1807 Colombia | Municipios y ESP | BIC COPNIA',
-  description: 'Estudio riesgo hídrico Decreto 1807 para municipios, ESP e INVÍAS en Colombia. COPNIA-UNAL, sin subcontratistas. HEC-RAS 2D, cartografía SIG 1:2.000. Desde $18M COP. Propuesta 24 h.',
+  title: 'Gestión del Riesgo Hídrico Decreto 1807 Colombia — Estudio Básico y Detallado | BIC COPNIA',
+  description: 'Estudio de gestión del riesgo hídrico Decreto 1807 de 2014: básico (POT/EOT) y detallado (licencias urbanísticas). HEC-RAS 2D, cartografía SIG 1:2.000 firmada COPNIA. Municipios, ESP e INVÍAS. Desde $18M COP.',
   keywords: [
     'estudios detallados riesgo inundación Decreto 1807 Colombia',
     'estudio amenaza inundación POT municipio Colombia',
@@ -549,68 +549,4 @@ export default function GestionRiesgoHidrico() {
               <span style={{ fontFamily: "'Lato', sans-serif", color: '#17A2B8', fontSize: 12, marginTop: 8, display: 'block' }}>Ver servicio →</span>
             </a>
             <a href="/servicios/geotecnia" style={{ flex: '1 1 220px', background: '#fff', border: '1px solid #E2E8F0', borderRadius: 4, padding: '18px 20px', textDecoration: 'none' }}>
-              <span style={{ fontFamily: "'Playfair Display', serif", fontWeight: 700, color: '#003B6F', fontSize: 14, display: 'block', lineHeight: 1.35 }}>Estudios geotécnicos y de suelos para obras de mitigación y defensas fluviales</span>
-              <span style={{ fontFamily: "'Lato', sans-serif", color: '#17A2B8', fontSize: 12, marginTop: 8, display: 'block' }}>Ver servicio →</span>
-            </a>
-          </div>
-        </div>
-      </Section>
-
-      {/* ── ANTI-INTERMEDIARIO ── */}
-      <Section style={{ background: '#f8f9fa' }}>
-        <div style={{ maxWidth: 800, margin: '0 auto', padding: '0 24px' }}>
-          <div style={{ background: '#fff', border: '2px solid #e2e8f0', borderRadius: 14, padding: '28px 32px', borderLeft: '5px solid #17A2B8' }}>
-            <h3 style={{ fontFamily: "'Playfair Display', serif", fontWeight: 700, fontSize: 20, color: '#001A33', marginBottom: 14 }}>
-              ¿Es este servicio para usted?
-            </h3>
-            <p style={{ color: '#555', lineHeight: 1.8, fontSize: 15, marginBottom: 12 }}>
-              BIC trabaja directamente con <strong>alcaldías, promotores de planes parciales, concesiones viales y ESP</strong> que necesitan el estudio de riesgo hídrico para avanzar su proyecto — no con intermediarios que re-cotizan a terceros.
-            </p>
-            <p style={{ color: '#555', lineHeight: 1.8, fontSize: 15, marginBottom: 12 }}>
-              Los precios publicados en este sitio son los que BIC cobra al contratante directo. Si usted es quien decide contratar y tiene el proyecto, la propuesta llega en menos de 24 horas.
-            </p>
-            <p style={{ color: '#555', lineHeight: 1.8, fontSize: 15, margin: 0 }}>
-              Si está averiguando precios para re-cotizar a un tercero, este servicio probablemente no es el correcto para esa gestión. BIC prioriza relaciones directas con el decisor del proyecto.
-            </p>
-          </div>
-        </div>
-      </Section>
-
-      {/* ── FORMULARIO COTIZACIÓN INLINE ── */}
-      <Section>
-        <QuoteFormInline />
-      </Section>
-
-      {/* ── CTA FINAL ── */}
-      <Section bg="#17A2B8" style={{ padding: '64px 24px', textAlign: 'center' }}>
-        <div style={{ maxWidth: 680, margin: '0 auto' }}>
-          <h2 style={{
-            fontFamily: "'Playfair Display', serif", fontWeight: 700, color: '#fff',
-            fontSize: 'clamp(22px, 4vw, 34px)', marginBottom: 16,
-          }}>
-            ¿Necesita estudio de riesgo hídrico para su proyecto?
-          </h2>
-          <p style={{
-            fontFamily: "'Lato', sans-serif", color: 'rgba(255,255,255,0.9)',
-            fontSize: 16, lineHeight: 1.7, marginBottom: 32,
-          }}>
-            Indíquenos la ubicación del predio, los cauces cercanos y la entidad a la que debe
-            entregar el informe. Le respondemos con propuesta técnica y presupuesto en menos de
-            24 horas. Primera consulta sin costo.
-          </p>
-          <div style={{ display: 'flex', gap: 12, justifyContent: 'center', flexWrap: 'wrap' }}>
-            <Btn
-              href={`https://wa.me/${WA}?text=${WA_MSG}`}
-              style={{ background: '#fff', color: '#17A2B8', fontSize: 15, padding: '14px 36px' }}
-            >
-              📱 Propuesta en 24 h — sin costo
-            </Btn>
-            <Btn variant="outline" href="/contacto" style={{ borderColor: '#fff', color: '#fff' }}>
-              Ver formulario de contacto
-            </Btn>
-          </div>
-        </div>
-      </Section>
-    </>
-  )
-}
+              <span style={{ fontFamily: "'Playfair Display', serif", fontWeight: 700, color: '#003B6F', fontSize: 14, display: 'block', lineHeight: 1.35 }}>Est
