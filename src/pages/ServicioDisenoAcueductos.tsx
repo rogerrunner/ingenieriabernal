@@ -659,6 +659,9 @@ export default function ServicioDisenoAcueductos() {
             <p style={{ color: '#555', lineHeight: 1.8, fontSize: 15, margin: 0 }}>
               Si está averiguando precios para re-cotizar a un tercero, este servicio probablemente no es el correcto para esa gestión. BIC prioriza relaciones directas con el decisor del proyecto.
             </p>
+          <p style={{ color: 'rgba(255,255,255,0.35)', fontSize: 12, marginTop: 10 }}>
+            ¿Colega ingeniero buscando precio de referencia? No es el canal.
+          </p>
           </div>
         </div>
       </Section>

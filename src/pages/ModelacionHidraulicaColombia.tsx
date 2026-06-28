@@ -351,6 +351,9 @@ export default function ModelacionHidraulicaColombia() {
               }}>
                 <span style={{ color: '#17A2B8', fontWeight: 900, flexShrink: 0, marginTop: 1 }}>›</span>
                 <p style={{ color: '#444', fontSize: 13, lineHeight: 1.65, margin: 0 }}>{item}</p>
+          <p style={{ color: 'rgba(255,255,255,0.35)', fontSize: 12, marginTop: 10 }}>
+            ¿Colega ingeniero buscando precio de referencia? No es el canal.
+          </p>
               </div>
             ))}
           </div>
