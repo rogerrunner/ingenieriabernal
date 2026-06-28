@@ -887,6 +887,4 @@ const articlesP: Record<string, {
     </>,
   },
 
-}
-
-export default articlesP
+  'componente-hidrico-plan-p
