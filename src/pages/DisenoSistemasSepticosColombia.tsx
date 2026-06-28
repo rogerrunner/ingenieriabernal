@@ -210,6 +210,9 @@ export default function DisenoSistemasSepticosColombia() {
                 COPNIA, y asesoría en el trámite del permiso de vertimiento ante la CAR competente.
                 Primera consulta técnica sin costo.
               </p>
+          <p style={{ color: 'rgba(255,255,255,0.35)', fontSize: 12, marginTop: 10 }}>
+            ¿Colega ingeniero buscando precio de referencia o asesoría técnica? No es el canal.
+          </p>
             </div>
           </div>
         </div>
