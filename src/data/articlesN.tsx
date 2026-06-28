@@ -674,6 +674,4 @@ const articlesN: Record<string, {
     </>
   },
 
-}
-
-export default articlesN
+  'decreto-1807-de-2014-colo
