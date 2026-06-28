@@ -11,6 +11,7 @@ const WA_MSG = encodeURIComponent(
 )
 
 const seoConfig = {
+  noindex: true,
   title: 'Contratar Plan Maestro Acueducto Alcantarillado Colombia — PMAA Ley 142 | Desde $25M COP | BIC COPNIA',
   description:
     'Elaboración y actualización de PMAA para municipios y ESP en Colombia. Ley 142/1994, RAS 2017, EPANET, SewerGEMS. COPNIA-UNAL, sin subcontratistas, trato directo. Desde $25M COP. Propuesta sin costo.',
