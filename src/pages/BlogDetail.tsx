@@ -72,6 +72,8 @@ const NOINDEX_SLUGS = new Set([
   'interventoria-obras-hidraulicas-colombia',
   // Geotecnia / taludes — servicio que BIC no ofrece
   'estabilidad-taludes-eje-cafetero',
+  // Contratación pública — atrae consultoras competidoras estudiando Ley 80, no clientes BIC
+  'contratacion-publica-ingenieria-colombia',
   // PTAR construcción adicional
   'requisitos-ptar-licencia-construccion',
   'ptar-industrial-colombia',
