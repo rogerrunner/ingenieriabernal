@@ -457,6 +457,9 @@ export default function ConstruirCercaRioQuebrada() {
           <p style={{ color: '#17A2B8', fontWeight: 600, fontSize: 15, marginBottom: 32 }}>
             Atención directa al propietario o promotor · Sin intermediarios · Propuesta en 24 horas
           </p>
+          <p style={{ color: 'rgba(255,255,255,0.35)', fontSize: 12, marginTop: 10 }}>
+            ¿Colega ingeniero buscando precio de referencia o asesoría técnica? No es el canal.
+          </p>
           <div style={{ display: 'flex', gap: 14, justifyContent: 'center', flexWrap: 'wrap' }}>
             <a href={`https://wa.me/${WA}?text=${WA_MSG}`} target="_blank" rel="noopener noreferrer"
               style={{ display: 'inline-block', padding: '15px 36px', background: '#25D366', color: '#fff', borderRadius: 8, fontWeight: 700, fontSize: 16, textDecoration: 'none' }}>
