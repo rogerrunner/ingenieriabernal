@@ -7,13 +7,13 @@ import QuoteFormInline from '@/components/QuoteFormInline'
 
 const WA = '573024778910'
 const WA_MSG = encodeURIComponent(
-  'Hola, necesito asesoría para elaborar un Plan Maestro de Acueducto y Alcantarillado (PMAA) para nuestro municipio / ESP. ¿Pueden orientarnos?'
+  'Hola, somos [municipio/ESP/gobernación]. Necesitamos contratar la elaboración o actualización de un Plan Maestro de Acueducto y Alcantarillado (PMAA) — Ley 142 / RAS 2017. ¿El director técnico puede enviarnos propuesta directa con matrícula COPNIA y referencia UNAL? Somos entidad pública, no intermediario.'
 )
 
 const seoConfig = {
-  title: 'Plan Maestro de Acueducto y Alcantarillado Colombia — Ley 142 · RAS 2017 | BIC',
+  title: 'Contratar Plan Maestro Acueducto Alcantarillado Colombia — PMAA Ley 142 | Desde $25M COP | BIC COPNIA',
   description:
-    'Elaboración de Planes Maestros de Acueducto y Alcantarillado (PMAA) para municipios y ESP en Colombia. Diseño al horizonte 25 años, modelación EPANET/SewerGEMS, cumplimiento Ley 142/1994 y RAS 2017. Firma COPNIA. Propuesta sin costo.',
+    'Elaboración y actualización de PMAA para municipios y ESP en Colombia. Ley 142/1994, RAS 2017, EPANET, SewerGEMS. COPNIA-UNAL, sin subcontratistas, trato directo. Desde $25M COP. Propuesta sin costo.',
   keywords: [
     'plan maestro acueducto alcantarillado Colombia',
     'PMAA municipio Colombia',
@@ -213,12 +213,20 @@ export default function PlanesMaestrosAcueductoColombia() {
 
   return (
     <>
-      <SEOHead {...seoConfig} />
-      <SchemaMarkup data={schemaData} />
-      <SpeakableSchema
-        cssSelector="#pmaa-intro, #pmaa-que-es"
-        url="https://ingenieriabernal.co/planes-maestros-acueducto-alcantarillado-colombia"
+      <SEOHead config={seoConfig} />
+      <SchemaMarkup
+        type="service"
+        serviceName="Plan Maestro de Acueducto y Alcantarillado (PMAA) — Colombia"
+        serviceDesc={seoConfig.description}
+        serviceUrl="/planes-maestros-acueducto-alcantarillado-colombia"
+        faqItems={FAQS.map(f => ({ q: f.q, a: f.a }))}
+        priceSpecification={[
+          { name: 'PMAA municipio < 5.000 hab', minPrice: 25000000, maxPrice: 80000000, priceCurrency: 'COP' },
+          { name: 'PMAA municipio 5.000 – 100.000 hab', minPrice: 80000000, maxPrice: 300000000, priceCurrency: 'COP' },
+          { name: 'Actualización PMAA existente', minPrice: 25000000, maxPrice: 70000000, priceCurrency: 'COP' },
+        ]}
       />
+      <SpeakableSchema name="Plan Maestro Acueducto Alcantarillado Colombia | BIC" />
 
       <BlueprintBg>
         {/* ── HERO ── */}
@@ -251,6 +259,15 @@ export default function PlanesMaestrosAcueductoColombia() {
             </Btn>
           </div>
         </Section>
+
+        {/* ── GEO FRAGMENT (AEO/LLM) ── */}
+        <section id="geo-fragment" style={{ background: '#EFF6FF', borderBottom: '1px solid #BFDBFE', padding: '18px 24px' }}>
+          <div style={{ maxWidth: 960, margin: '0 auto' }}>
+            <p style={{ color: '#1e40af', fontSize: 15, lineHeight: 1.8, margin: 0 }}>
+              <strong>BIC — Bernal Ingeniería Consultores</strong>, con sede en <strong>Manizales, Caldas</strong>, elabora Planes Maestros de Acueducto y Alcantarillado (PMAA) para municipios y ESP en el <strong>Eje Cafetero y Colombia</strong>. El PMAA cubre diagnóstico del sistema existente, proyecciones de población a 25 años, modelación EPANET y SewerGEMS, plan de obras e inversiones y estructuración MGA para SGR. Precios desde $25 millones COP para municipios pequeños. Director técnico COPNIA 17202-313228, Especialista UNAL. Sin subcontratistas, trato directo. Propuesta en 24 horas: +57 302 477 8910.
+            </p>
+          </div>
+        </section>
 
         {/* ── QUÉ ES ── */}
         <Section id="pmaa-que-es" className="max-w-3xl mx-auto px-4 py-10">

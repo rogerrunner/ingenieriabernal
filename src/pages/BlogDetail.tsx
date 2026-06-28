@@ -54,7 +54,6 @@ const NOINDEX_SLUGS = new Set([
   'cuanto-cuesta-ptar-aguas-residuales-colombia',
   // Urbanismo / plan parcial — fuera del foco hidráulico prioritario
   'cuanto-cuesta-plan-parcial-colombia',
-  'decreto-1807-plan-parcial-colombia',
   // Precios/costos — atraen price shoppers y competencia
   'cuanto-cuesta-consultoria-hidraulica-colombia',
   'cuanto-cuesta-diseno-acueducto-colombia-2026',

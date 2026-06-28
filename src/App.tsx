@@ -99,6 +99,8 @@ const ObrasHidraulicasColombia = lazy(() => import('./pages/ObrasHidraulicasColo
 const UrbanizacionColombia = lazy(() => import('./pages/UrbanizacionColombia'))
 const BocatomasColombia = lazy(() => import('./pages/BocatomasColombia'))
 const DisenoCanalesRiego = lazy(() => import('./pages/DisenoCanalesRiego'))
+const DisenoCanalesHidraulicosColombia = lazy(() => import('./pages/DisenoCanalesHidraulicosColombia'))
+const DisenoSistemasSepticosColombia = lazy(() => import('./pages/DisenoSistemasSepticosColombia'))
 const EncauzamientoRios = lazy(() => import('./pages/EncauzamientoRios'))
 const PlanParcialColombia = lazy(() => import('./pages/PlanParcialColombia'))
 const IngenieriaHidraulicaManizales = lazy(() => import('./pages/IngenieriaHidraulicaManizales'))
@@ -332,6 +334,8 @@ export default function App() {
           <Route path="/urbanizacion-colombia" component={UrbanizacionColombia} />
           <Route path="/bocatomas-colombia" component={BocatomasColombia} />
           <Route path="/diseno-canal-riego-colombia" component={DisenoCanalesRiego} />
+          <Route path="/diseno-canales-hidraulicos-colombia" component={DisenoCanalesHidraulicosColombia} />
+          <Route path="/diseno-sistemas-septicos-colombia" component={DisenoSistemasSepticosColombia} />
           <Route path="/encauzamiento-rios-colombia" component={EncauzamientoRios} />
           <Route path="/plan-parcial-colombia" component={PlanParcialColombia} />
           <Route path="/ingenieria-hidraulica-manizales" component={IngenieriaHidraulicaManizales} />

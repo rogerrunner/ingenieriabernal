@@ -9,8 +9,8 @@ const WA = '573024778910'
 const WA_MSG = encodeURIComponent('Hola, necesitamos un estudio de gestión del riesgo hídrico por inundación (Decreto 1807). ¿Podemos agendar una llamada técnica?')
 
 const seoConfig = {
-  title: 'Estudio Riesgo Hídrico Decreto 1807 Colombia 2026 — Modelación HEC-RAS 2D | BIC',
-  description: 'BIC elabora el estudio de gestión del riesgo hídrico que exige su Curaduría: modelación HEC-RAS 2D, cartografía amenaza inundación 1:2.000 y concepto de aptitud urbanística. Para planes parciales, licencias de construcción y POT. Firma COPNIA. Propuesta en 24 h.',
+  title: 'Contratar Estudio Gestión del Riesgo Hídrico Decreto 1807 Colombia | Municipios y ESP | BIC COPNIA',
+  description: 'Estudio riesgo hídrico Decreto 1807 para municipios, ESP e INVÍAS en Colombia. COPNIA-UNAL, sin subcontratistas. HEC-RAS 2D, cartografía SIG 1:2.000. Desde $18M COP. Propuesta 24 h.',
   keywords: [
     'estudios detallados riesgo inundación Decreto 1807 Colombia',
     'estudio amenaza inundación POT municipio Colombia',
