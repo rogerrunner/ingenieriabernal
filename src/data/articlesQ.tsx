@@ -167,11 +167,11 @@ const articlesQ: Record<string, {
   // ─── BLOG #15: Decreto 1807 para plan parcial ───────────────────────────────
 
   'decreto-1807-plan-parcial-colombia': {
-    title: 'Contratar Estudio Decreto 1807 para Plan Parcial Colombia 2026 — Riesgo Hídrico | BIC COPNIA',
+    title: 'Decreto 1807 de 2014 para Plan Parcial Colombia — Estudio Riesgo Hídrico HEC-RAS 2D | BIC',
     date: 'Mayo 2026',
     readTime: '8 min',
     category: 'Gestión del Riesgo Hídrico',
-    metaDesc: 'Estudio Decreto 1807 para plan parcial Colombia: básico y detallado con modelación HEC-RAS 2D. Para municipios y promotores. COPNIA-UNAL, sin subcontratistas. Desde $18M COP.',
+    metaDesc: 'Elaboramos el estudio Decreto 1807 de 2014 para su plan parcial: básico y detallado con HEC-RAS 2D, concepto de aptitud urbanística firmado COPNIA. Promotores y municipios. Desde $18M COP. Propuesta en 24 h.',
     keywords: 'Decreto 1807 plan parcial Colombia, estudio detallado gestión del riesgo Decreto 1807, amenaza inundación plan parcial Colombia, Decreto 1807 2014 Colombia ingeniería',
     body: <>
       <p>El <strong>Decreto 1807 de 2014</strong> es la norma que más impacto práctico tiene sobre los planes parciales y las licencias de urbanismo en zonas de expansión con amenaza hídrica en Colombia. Sin embargo, muchos promotores y constructoras llegan a la etapa de concertación con Planeación sin tener claro exactamente qué exige este decreto, cuándo aplica y qué debe contener el estudio. Este artículo resuelve esas preguntas con precisión.</p>
@@ -244,8 +244,3 @@ const articlesQ: Record<string, {
         a: 'El estudio básico lo realiza el municipio a escala territorial para el POT, usando información secundaria. El estudio detallado lo encarga el promotor del plan parcial a escala de predio, con modelación HEC-RAS, topobatimetría de campo y cartografía 1:2.000. El estudio detallado es el que Planeación exige antes de emitir concepto sobre el plan parcial.',
       },
     ],
-  },
-
-}
-
-export default articlesQ
