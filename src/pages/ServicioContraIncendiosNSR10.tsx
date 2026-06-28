@@ -343,30 +343,15 @@ export default function ServicioContraIncendiosNSR10() {
         <QuoteFormInline />
       </Section>
 
-      {/* ── CTA FINAL ── */}
-      <Section bg="#17A2B8" style={{ padding: '64px 24px', textAlign: 'center' }}>
-        <div style={{ maxWidth: 680, margin: '0 auto' }}>
-          <h2 style={{
-            fontFamily: "'Playfair Display', serif", fontWeight: 700, color: '#fff',
-            fontSize: 'clamp(22px, 4vw, 34px)', marginBottom: 16,
-          }}>
-            ¿Su proyecto necesita sistema CI NSR-10?
+      {/* ── ANTI-INTERMEDIARIO ── */}
+      <Section style={{ background: '#001A33', padding: '48px 24px' }}>
+        <div style={{ maxWidth: 760, margin: '0 auto', textAlign: 'center' }}>
+          <h2 style={{ fontFamily: "'Playfair Display', serif", fontWeight: 700, fontSize: 'clamp(18px, 2.5vw, 26px)', color: '#fff', marginBottom: 16 }}>
+            Trato directo con el ingeniero que firma — sin intermediarios
           </h2>
-          <p style={{
-            fontFamily: "'Lato', sans-serif", color: 'rgba(255,255,255,0.9)',
-            fontSize: 16, lineHeight: 1.7, marginBottom: 32,
-          }}>
-            Comparta el uso del edificio, el número de pisos, el área construida y la ciudad.
-            Le enviamos presupuesto y plazo de entrega en menos de 24 horas.
-          </p>
-          <Btn
-            href={`https://wa.me/${WA}?text=${WA_MSG}`}
-            style={{ background: '#fff', color: '#17A2B8', fontSize: 15, padding: '14px 36px' }}
-          >
-            📱 Propuesta en 24 h — sin costo
-          </Btn>
-        </div>
-      </Section>
-    </>
-  )
-}
+          <p style={{ fontFamily: "'Lato', sans-serif", color: 'rgba(255,255,255,0.82)', fontSize: 15, lineHeight: 1.85, maxWidth: 680, margin: '0 auto' }}>
+            BIC trabaja directamente con <strong style={{ color: '#17A2B8' }}>constructoras, promotores, gerentes de proyecto
+            y propietarios</strong> que necesitan el diseño del sistema CI para tramitar la licencia de construcción
+            ante la curaduría urbana o el RETIE — no con intermediarios que re-cotizan el servicio.
+            El Ing. Rogerio Bernal Ríos (COPNIA 17202-313228 CLD) revisa el proyecto, dimensiona el sistema
+            y firma los planos. Si usted decide y tiene el proyecto, la propuesta lle
